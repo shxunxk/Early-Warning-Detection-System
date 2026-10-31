@@ -16,7 +16,7 @@ explain every score.
 - **Early Warning Signal Detection** — 21 configurable signals across 8 scenarios
 - **Customer Warning Score Calculation** — composite 0–100 score with explainable tier assignment
 
-**Setting:** UAE bank, 600 customers (420 individual, 180 SME), AED currency, as-of date 2026-09-30.
+**Setting:** Indian bank, 600 customers (420 individual, 180 MSME), INR currency, as-of date 2026-09-30.
 
 ---
 
@@ -26,7 +26,7 @@ explain every score.
 
 | Table | Rows | Grain | Key Columns |
 |---|---|---|---|
-| `customers` | 600 | 1 per customer | customer_id, type (INDIVIDUAL/SME), segment, emirate, salary_transfer_flag, declared_income/turnover |
+| `customers` | 600 | 1 per customer | customer_id, type (INDIVIDUAL/SME), segment, region, salary_transfer_flag, declared_income/turnover |
 | `facilities` | 1,037 | 1 per loan/card | facility_id, product_code (PF/AF/HF/CC/TL/WC/EF), type (INSTALMENT/REVOLVING), sanctioned_amount, outstanding_balance, instalment_amount |
 | `repayments` | 19,252 | 1 per instalment due | due_date, amount_due, payment_date, amount_paid, days_late, repayment_status |
 | `delinquency` | 19,508 | facility × month-end | days_past_due, dpd_bucket, overdue_amount, max_dpd_12m, ifrs9_stage |
@@ -46,7 +46,7 @@ explain every score.
 15 behaviour archetypes with expected_risk_band and expected_data_sufficiency.
 Key archetypes to detect: REPAYMENT_DETERIORATION (23), INCOME_DECLINE (44),
 OVER_LEVERAGED (25), ROLL_FORWARD (12), SME_CASHFLOW_STRESS (27).
-Two planted risk clusters: CLU-SME-CONSTR-NORTH, CLU-RET-HOSP-DXB.
+Two planted risk clusters: CLU-SME-CONSTR-NCR, CLU-RET-HOSP-BLR.
 
 ### 2.4 Built-in Traps (must handle)
 
@@ -286,8 +286,8 @@ activity irregularity, payer concentration.
 **Method:** HDBSCAN clustering on behaviour features, then measure segment deterioration
 rate, lift vs portfolio, exposure at risk, spread breadth, and momentum.
 
-**Planted clusters to detect:** CLU-SME-CONSTR-NORTH (construction SMEs, Sharjah/Ajman,
-Mar–May 2026), CLU-RET-HOSP-DXB (hospitality employees, Dubai, Apr–Jun 2026).
+**Planted clusters to detect:** CLU-SME-CONSTR-NCR (construction MSMEs, Delhi NCR/Pune,
+Mar–May 2026), CLU-RET-HOSP-BLR (hospitality employees, Bengaluru, Apr–Jun 2026).
 
 ---
 
@@ -436,7 +436,7 @@ individually fine, together concerning.
 
 **Input:** Customer behaviour features + segment attributes (industry, region).
 
-**Validation:** Should identify the planted clusters (construction-Sharjah, hospitality-Dubai).
+**Validation:** Should identify the planted clusters (construction-Pune, hospitality-Bengaluru).
 
 ### 6.6 SHAP — Explainability
 
@@ -458,7 +458,7 @@ reason code generation.
 | Contradiction detection | Would need hand-coded rules | LLM cross-checks signals: "RBDI says low risk but CFSI says high stress → silent stress case" |
 | Exception judgment | Binary rules (mitigate if score > threshold) | Contextual: "Salary delay was verified by employer letter, and the customer has 24 months of clean history — this is a genuine exception" |
 | Analyst Q&A | Not possible | "Why is CIF100150 flagged?" → grounded answer from the signal profile |
-| Portfolio narratives | Cluster ID + numbers | "12 construction SMEs in Sharjah are showing correlated cash-flow stress, potentially indicating a regional slowdown in the construction sector" |
+| Portfolio narratives | Cluster ID + numbers | "12 construction MSMEs in Pune are showing correlated cash-flow stress, potentially indicating a regional slowdown in the construction sector" |
 
 ### 7.2 LLM Components
 
@@ -470,7 +470,7 @@ reason code generation.
 
 **Prompt structure:**
 ```
-You are a credit risk analyst at a UAE bank.
+You are a credit risk analyst at an Indian bank.
 
 Given the following Early Warning signals for customer {customer_id} ({customer_type}):
 
@@ -514,7 +514,7 @@ Tasks:
 
 **Purpose:** Provides a human-readable explanation of why a missed payment is or isn't mitigated.
 
-Example output: *"Missed payment on 2025-06-30 coincides with Eid Al Adha (lunar holiday,
+Example output: *"Missed payment on 2025-06-07 coincides with Bakrid (moon-sighting holiday,
 not adjusted in payment schedules). Customer has 18 consecutive on-time payments prior.
 Payment recovered within 3 days. Verified holiday period evidence on file. Assessment:
 genuine exception — tier downgraded from Medium to Low."*
@@ -710,9 +710,9 @@ openpyxl>=3.1
 
 ### Phase 6: Polish & Demo Scenarios (8–9 hours)
 - [ ] Demo: Silent Stress case (income declining, still paying)
-- [ ] Demo: Temporary exception (Eid holiday delay, mitigated)
+- [ ] Demo: Temporary exception (Bakrid holiday delay, mitigated)
 - [ ] Demo: SME seasonal (normal dip, NOT flagged)
-- [ ] Demo: Portfolio cluster (construction SMEs, Sharjah)
+- [ ] Demo: Portfolio cluster (construction MSMEs, Pune)
 - [ ] Demo: Thin-file customer (low confidence, not high risk)
 - [ ] Performance tuning, edge case handling
 
@@ -728,10 +728,10 @@ flags the contradiction: "Customer is still meeting obligations but income has d
 significantly — this is a silent stress case requiring proactive RM outreach."
 
 ### Demo 2: Temporary Exception (Not a Real Risk)
-**Customer:** ISOLATED_EXCEPTION archetype, one missed payment near Eid.
+**Customer:** ISOLATED_EXCEPTION archetype, one missed payment near Bakrid.
 **What the system shows:** RS01 fires (1 late instalment), but RS05 mitigates it (isolated
 delay + recovery + holiday calendar match). Exception Judge explains: "Payment due 30 Jun
-fell during Eid Al Adha (lunar holiday, not pre-adjusted). Customer paid within 3 days.
+fell during Bakrid (moon-sighting holiday, not pre-adjusted). Customer paid within 3 days.
 18 prior on-time payments. Assessment: genuine exception."
 
 ### Demo 3: Seasonal SME (False Alarm Avoided)
@@ -743,10 +743,10 @@ with the tourism sector's annual seasonal pattern. Year-over-year comparison sho
 material change."
 
 ### Demo 4: Portfolio Risk Cluster
-**Cluster:** CLU-SME-CONSTR-NORTH — construction SMEs in Sharjah/Ajman.
+**Cluster:** CLU-SME-CONSTR-NCR — construction MSMEs in Delhi NCR/Pune.
 **What the system shows:** HDBSCAN identifies a cluster of ~10 SMEs showing correlated
 cash-flow stress (declining receipts, rising WC utilisation) starting Mar 2026. Portfolio
-Narrator: "Emerging concentration risk in Sharjah/Ajman construction sector — 10 SMEs
+Narrator: "Emerging concentration risk in the Delhi NCR/Pune construction sector — 10 MSMEs
 showing coordinated cash-flow deterioration since March 2026."
 
 ### Demo 5: Thin-File Customer (Low Confidence, Not High Risk)

@@ -56,7 +56,7 @@ flowchart LR
 
 | Module | Signals | How the "temporary vs sustained" question is handled |
 |---|---|---|
-| S1/S5 Repayment (RBDI) | RS01 irregular months in last 6 · RS02 DPD rising month-ends · RS03 current DPD (bucket-scaled) · RS04 partials · RS06 recent cure | Counted per **month**, not per instalment (3 facilities ≠ 3× risk). Delays ≤ grace days or caused by a lunar holiday are excused |
+| S1/S5 Repayment (RBDI) | RS01 irregular months in last 6 · RS02 DPD rising month-ends · RS03 current DPD (bucket-scaled) · RS04 partials · RS06 recent cure | Counted per **month**, not per instalment (3 facilities ≠ 3× risk). Delays ≤ grace days or caused by a moon-sighting holiday are excused |
 | S4 Exceptions | RS05 mitigant: exactly 1 irregular month in 12, ≥ 6 clean before, now current; stronger if evidence is verified | Guardrail: no mitigation if cash-flow or exposure modules are > 50% |
 | S2/S6 Cash flow (CFSI) | RS07 inflow change (individual: last 3 vs prior 3 months; **SME: year-on-year**, which removes seasonality) · RS08 consecutive declines · RS09 salary stopped · RS10 balance erosion · RS11 returned payments | Salary signals are **not evaluated** when salary isn't credited to this bank |
 | S3 Exposure (LPI) | RS12 utilisation · RS13 utilisation spike · RS14 debt burden (individuals) · RS15 new credit velocity · RS16 exposure outpacing income | — |
@@ -74,7 +74,7 @@ flowchart LR
 |---|---|
 | Upload & Validate | Source picker (sample clean / sample dirty / upload), row counts accepted vs rejected, issues table by severity, relationship summary |
 | Portfolio | Tier mix, exposure at risk, emerging-cluster table (segment, n, at-risk rate, lift, momentum), roll-rate matrix, eval vs ground truth (confusion matrix, High/Critical catch rate, thin-file false-positive rate) |
-| Watchlist | Customer ID, name, products, outstanding, score, tier, confidence, trajectory, top indicators, DPD bucket, monitoring status. Filters: product, segment, tier, DPD bucket, portfolio, emirate, category. Sorted by tier, then exposure × roll probability |
+| Watchlist | Customer ID, name, products, outstanding, score, tier, confidence, trajectory, top indicators, DPD bucket, monitoring status. Filters: product, segment, tier, DPD bucket, portfolio, region, category. Sorted by tier, then exposure × roll probability |
 | Customer | Score breakdown (points per signal), fired signals with value vs threshold and reason, mitigation note, module indices, roll probability; charts: DPD, inflows, balance, utilisation; repayments, facilities, evidence; **AI summary** button |
 | Review | Alert queue (Watch+), frozen original score/tier/evidence, decision (4 options) + mandatory reason + analyst name, full decision history; reclassifying never alters the frozen alert |
 | Rules | Editable signal table (enabled, threshold, severe, weight) and bands → instant re-score with before/after tier counts; download JSON |
@@ -104,7 +104,7 @@ flowchart LR
 | 4 | Point-in-time for past dates is approximate (repayment status as of today, filtered by payment date ≤ as_of) | Good enough for trajectory | Partial-payment history before as_of not reconstructable | Store payment events, not settled status |
 | 5 | Severe anchors default to 2× threshold where not set | Avoids tuning 21 pairs by hand | Some strengths miscalibrated | Tune on ground-truth eval |
 | 6 | Debt burden not evaluated for SMEs | Salary-based ratio is meaningless for businesses | SME over-leverage caught only via utilisation and new credit | Add debt-service coverage from receipts |
-| 7 | Clusters on category × emirate and product × emirate only | Matches the planted clusters and is explainable | Misses other combinations | Generic segment search |
+| 7 | Clusters on category × region and product × region only | Matches the planted clusters and is explainable | Misses other combinations | Generic segment search |
 | 8 | Roll probability is the empirical rate per bucket × product group, not adjusted per customer | Transparent; real transition data | Same probability for all customers in a bucket | Logistic adjustment with RBDI/CFSI |
 | 9 | Template text is the default summary; LLM is opt-in | No runtime dependency during judging | LLM feature invisible if Ollama is off | Pre-pull the model before the demo |
 | 10 | Weights from the rules file, untuned | Configurable by design | Some tiers off vs ground truth | Iterate with the eval panel |
@@ -141,7 +141,7 @@ template mode until a model is pulled.
 | Low-risk customers flagged Amber or Red (false alarms) | **0.0%** |
 | Trap customers flagged (isolated exception, seasonal SME, thin file, salary elsewhere, cured) | **0 / 130** |
 | Predicted tier within one tier of planted band | 97.5% |
-| Planted cluster found | Construction & Contracting · Sharjah: 60% at risk vs 13.8% portfolio, lift 4.3 |
+| Planted cluster found | Construction & Contracting · Pune: 50% at risk vs 15.5% portfolio, lift 3.2 |
 | Review | 130 alerts frozen; decision then reclassification recorded; original Red/100 unchanged |
 | Rules editor | Disabling one signal moved 11 customers to Green; rules version tag changes |
 
@@ -160,6 +160,6 @@ template mode until a model is pulled.
   signal yet** (the generator planted a late onset that never produced a missed payment
   before the as-of date). The engine is right to leave them Green; the ground-truth label is
   optimistic. The other half are pay-cut income declines, where only one moderate signal fires.
-- Hospitality-in-Dubai cluster is not flagged as emerging: its customers mostly reach Watch,
+- Hospitality-in-Bengaluru cluster is not flagged as emerging: its customers mostly reach Watch,
   and the cluster test counts Amber/Red only.
 - LLM summary path is implemented and grounded but **not exercised** (no model pulled).

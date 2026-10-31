@@ -57,7 +57,7 @@ erDiagram
         varchar employment_or_business_category
         varchar customer_segment
         varchar portfolio
-        varchar emirate
+        varchar region
         date customer_since
         char onboarding_risk_grade "A-E"
         char salary_transfer_flag "Y | N"
@@ -212,7 +212,7 @@ How the Sentinel feature spec (`ews_final_features.txt`) maps onto the tables.
 | S5 Roll-forward | Roll Risk | delinquency | dpd_bucket month-to-month transitions |
 | S6 SME stress | SME Index | financials, exposure | business_receipts (YoY / deseasonalised), returned_payments_count, WC utilisation |
 | S7 Missing history | DCS | all | months on book, missing months, bureau no-hit (bureau_* NULL) |
-| S8 Clusters | Cluster Alert | customer_scores + customers | segment = product × industry × emirate × segment |
+| S8 Clusters | Cluster Alert | customer_scores + customers | segment = product × industry × region × segment |
 
 ## 5. Gaps against the Sentinel minimum schema
 
@@ -220,12 +220,12 @@ How the Sentinel feature spec (`ews_final_features.txt`) maps onto the tables.
 |---|---|---|
 | `transactions` (row-level) | monthly aggregates in `financials` | Enough for Level 1. Features needing daily data (salary credit day, max gap, active days) are dropped or approximated. Raw transactions can be added to the generator later if wanted. |
 | `enquiries` (dated) | `exposure.bureau_enquiries_3m` | Use the rolling count. |
-| `sme_extra.gst_turnover`, `supplier_payments` | `declared_annual_turnover`, `total_outflows` | F6.7 compares declared turnover with receipts; F6.6 uses WC utilisation. UAE VAT returns could be added as a synthetic table. |
+| `sme_extra.gst_turnover`, `supplier_payments` | `declared_annual_turnover`, `total_outflows` | F6.7 compares declared turnover with receipts; F6.6 uses WC utilisation. GST returns could be added as a synthetic table. |
 | `od_utilisation` | WC facility in `exposure.revolving_utilisation_pct` | Covered. |
 | `labels.deteriorated_30/60/90` | `_ground_truth/customer_labels.csv` (as-of only) | For LightGBM training, derive point-in-time labels from the 24 monthly snapshots: features at month t, label = DPD ≥ 30 within t+1..t+3. |
-| branch, channel, vintage | emirate, payment_channel, disbursement_date | Vintage derived from disbursement_date. |
+| branch, channel, vintage | region, payment_channel, disbursement_date | Vintage derived from disbursement_date. |
 | Parquet storage | CSV / Excel / JSON | Ingest any of the three formats, persist to DuckDB (or Parquet) inside the app. |
-| Currency in ₹, Republic Day | AED, UAE holidays | Cosmetic; reason-code templates use the `currency` rule parameter. |
+| Currency in ₹, Republic Day | INR, Indian holiday calendar | Matches; currency and holidays come from the `currency` rule parameter and the `bank_holidays` table, not code. |
 
 ## 6. Conventions
 

@@ -38,7 +38,8 @@ Start the app with `uv run streamlit run app.py` and open http://localhost:8501.
 | Amber | 🟧 orange | 45–69 | Action required; contact the customer |
 | Red | 🟥 red | 70–100, or a hard trigger | Escalate to credit committee / collections |
 
-- **Money** is in AED. **Dates** are ISO (YYYY-MM-DD).
+- **Money** is in INR, shown in crore and lakh (for example ₹236.0 Cr, ₹4.5 L); exact
+  amounts use Indian digit grouping (₹1,06,00,000). **Dates** are ISO (YYYY-MM-DD).
 - **The as-of date** (2026-09-30) is the "today" of the analysis. Every "last N months" window counts back from it.
 - **Tables** can be sorted by clicking a column header, searched with the 🔍 icon,
   expanded with ⛶, and downloaded as CSV with ⬇. These buttons appear when you hover over a
@@ -71,11 +72,11 @@ and an AI-written briefing.
 ### 3.1 Headline metrics (two rows)
 | Metric | Meaning |
 |---|---|
-| **Red today** / **Amber today** | Customers in each tier now; the grey tag below is their outstanding balance (AED M) |
+| **Red today** / **Amber today** | Customers in each tier now; the grey tag below is their outstanding balance |
 | **Open alerts** | Published alerts with no analyst decision yet (the review backlog) |
 | **New 30+ DPD · 1m** | Expected number of customers, currently below 30 DPD, who will reach 30+ DPD **next month**: the sum of their forecast probabilities |
 | **New 30+ DPD · 3m** | The same for the **next quarter** (3 months) |
-| **At-risk AED · 3m** | Expected exposure at risk next quarter: Σ outstanding × P(30+ DPD within 3 months), in AED millions |
+| **At-risk exposure · 3m** | Expected exposure at risk next quarter: Σ outstanding × P(30+ DPD within 3 months) |
 
 Hover the ⓘ icons for definitions. Forecast tiles show *n/a* if LightGBM isn't available.
 
@@ -132,7 +133,7 @@ The forecast is **advisory** and never changes the rule-based score or tier.
 ### 4.1 Loading data
 | Element | Type | Behaviour |
 |---|---|---|
-| **Bundled dataset** | Dropdown | *Synthetic Gulf Bank · 600 customers (clean)*; *Synthetic Gulf Bank · dirty (validation test)* (72 deliberate defects); *Northern Emirates Commercial Bank · 1,200 customers, SME-heavy (clean)*; *Northern Emirates Commercial Bank · dirty (validation test)*. The accuracy panel on Portfolio uses the matching ground truth for each clean dataset. Alerts on Home and Review are scoped to the loaded dataset's customers |
+| **Bundled dataset** | Dropdown | *Synthetic Bharat Commercial Bank · 600 customers (clean)*; *Synthetic Bharat Commercial Bank · dirty (validation test)* (72 deliberate defects); *Northern Plains Commercial Bank · 1,200 customers, MSME-heavy (clean)*; *Northern Plains Commercial Bank · dirty (validation test)*. The accuracy panel on Portfolio uses the matching ground truth for each clean dataset. Alerts on Home and Review are scoped to the loaded dataset's customers |
 | **Load bundled dataset** | Primary button | Loads and validates the selected dataset, then refreshes every page. Results are cached, so switching back is instant |
 | **…or upload files** | File drop zone | Accepts multiple `.csv`, `.xlsx` or `.json` files (200 MB each). Tables are recognised by file or sheet name (e.g. `customers.csv`, a workbook with a `repayments` sheet, `loans.json` → facilities) |
 | **Validate uploaded files** | Button (appears after files are chosen) | Reads, maps headers, validates and replaces the current dataset. The sidebar then shows *Upload (N files)* |
@@ -200,7 +201,7 @@ Issues table columns:
 |---|---|
 | **Customers** | Customers scored |
 | **Red / Amber / Watch** | Customers in each tier (Green = the rest) |
-| **Outstanding at Amber/Red** | Sum of current on-us outstanding balance for Amber and Red customers, in AED millions |
+| **Outstanding at Amber/Red** | Sum of current on-us outstanding balance for Amber and Red customers |
 
 ### 5.2 Tier mix by portfolio
 - **Chart:** horizontal stacked bar, one bar per portfolio (Consumer Banking, Business Banking).
@@ -224,8 +225,8 @@ Issues table columns:
 
 | Column | Meaning |
 |---|---|
-| `segment` | Segment values, e.g. *Construction & Contracting · Sharjah* |
-| `dimensions` | Which attributes define it: `category × emirate`, `primary_product × emirate`, `category`, `segment × portfolio` |
+| `segment` | Segment values, e.g. *Construction & Contracting · Pune* |
+| `dimensions` | Which attributes define it: `category × region`, `primary_product × region`, `category`, `segment × portfolio` |
 | `customers` | Customers in the segment (minimum 5) |
 | `at_risk` | Amber or Red customers in it |
 | `at_risk_rate` | at_risk ÷ customers, % |
@@ -233,7 +234,7 @@ Issues table columns:
 | `lift` | at_risk_rate ÷ portfolio_rate (2.0 = twice as risky as average) |
 | `wilson_low` | Conservative (95% lower-bound) estimate of the segment rate, % |
 | `momentum_pp` | Change in at-risk share vs 3 months ago, percentage points; positive = getting worse |
-| `exposure_at_risk` | Outstanding balance of the segment's Amber/Red customers, AED |
+| `exposure_at_risk` | Outstanding balance of the segment's Amber/Red customers |
 | **Emerging** | ☑ when the segment meets the emerging rule |
 
 ### 5.5 Roll-rate matrix
@@ -276,7 +277,7 @@ Two rows of multi-select filters. Empty means no filter, and filters combine wit
 | **Customer segment** | Mass, Mass Affluent, Affluent, Micro, Small, Medium | — |
 | **Portfolio** | Consumer Banking, Business Banking | — |
 | **Delinquency status** | DPD bucket: Current, 1-30, 31-60, 61-90, 91-180, 180+ | — |
-| **Emirate** | Region | — |
+| **Region** | City or state, e.g. Mumbai, Delhi NCR, Bengaluru | — |
 | **Trajectory** | Stable, Deteriorating, Improving, Recovering, New | — |
 | **Confidence** | High, Medium, Low | — |
 
@@ -290,7 +291,7 @@ The caption under the filters shows the number of matching customers and the sor
 | `customer_id` | CIF number |
 | `customer_name` | Synthetic name |
 | `products` | Active products, comma-separated |
-| **Outstanding (AED)** | Current on-us outstanding balance |
+| **Outstanding (₹)** | Current on-us outstanding balance |
 | **Score** | Risk score as a 0–100 progress bar |
 | **P(30+ DPD) 3m** | Forecast probability of reaching 30+ DPD within 3 months (blank for customers already 30+ DPD) |
 | `tier` | Green / Watch / Amber / Red |
@@ -320,7 +321,7 @@ capabilities 3 and 4).
 |---|---|
 | **Customer** dropdown | All customers, highest score first, shown as `ID · name · tier score`. Type to search. Defaults to the last opened customer |
 | **Name + tier badge** | Customer name with a coloured tier pill |
-| Caption line | ID · type (INDIVIDUAL/SME) · employer sector or industry · segment · emirate · active products |
+| Caption line | ID · type (INDIVIDUAL/SME) · employer sector or industry · segment · region · active products |
 
 ### 7.2 Headline metrics
 | Metric | Meaning |
@@ -330,7 +331,7 @@ capabilities 3 and 4).
 | **Trajectory** | Stable / Deteriorating / Improving / Recovering / New |
 | **Current DPD** | Days past due now (worst facility) |
 | **Roll-forward prob.** | Historical probability that a facility in this customer's current bucket and portfolio moves to a worse bucket next month (from the roll-rate matrix) |
-| **Outstanding** | On-us outstanding balance, AED |
+| **Outstanding** | On-us outstanding balance |
 
 ### 7.3 Banners
 | Banner | When it appears |
@@ -387,9 +388,9 @@ Shown for customers below 30 DPD.
 | Chart | Shows |
 |---|---|
 | **Max days past due (month-end)** | Red area chart of the worst facility's DPD at each month-end over 24 months. A rising area is deterioration; a drop to zero is a cure |
-| **Income / inflows / average balance (AED)** | Monthly lines: `income` (salary credit, or business receipts for SMEs), `total_inflows`, `average_balance`. Gaps are missing months; there's no income line if salary isn't credited to this bank |
+| **Income / inflows / average balance (₹)** | Monthly lines: `income` (salary credit, or business receipts for SMEs), `total_inflows`, `average_balance`. Gaps are missing months; there's no income line if salary isn't credited to this bank |
 | **Revolving utilisation %** (captioned *"…and bureau score"*, see §13) | Monthly card / working-capital utilisation. Above 85% is high; above 100% is over limit |
-| **Obligations: on-us vs other lenders (AED / month)** | Stacked area: `onus_monthly_obligation` (this bank) and `bureau_external_monthly_obligation` (other lenders). A growing top layer means new borrowing elsewhere |
+| **Obligations: on-us vs other lenders (₹ / month)** | Stacked area: `onus_monthly_obligation` (this bank) and `bureau_external_monthly_obligation` (other lenders). A growing top layer means new borrowing elsewhere |
 
 ### 7.8 Detail tabs
 | Tab | Contents |
@@ -513,13 +514,13 @@ About 7 minutes:
    - Open the **🔮 Likely to hit 30+ DPD** tab and pick a *Green* or *Watch* customer:
      silent stress the rules haven't caught yet.
 1. **Upload & Validate**
-   - Load the **dirty** set: 516 rows rejected, 42 warnings. Filter to `ORPHAN_REFERENCE` and `INVALID_DATE`.
+   - Load the **dirty** set: 641 rows rejected, 42 warnings. Filter to `ORPHAN_REFERENCE` and `INVALID_DATE`.
    - Reload the **clean** set.
 2. **Portfolio**
    - Read the tier counts and outstanding at Amber/Red.
-   - Point to the **Construction & Contracting · Sharjah** cluster (lift ~4.3).
+   - Point to the **Construction & Contracting · Pune** cluster (lift ~3.2).
    - Read one roll-rate cell, e.g. 1-30 → Current.
-   - Show accuracy: 75.8% caught, 0% false alarms, 0/130 traps.
+   - Show accuracy: 59.7% caught, 0.2% false alarms, 1/153 traps.
 3. **Watchlist**
    - Filter **Business Banking + Amber**, then open the top customer.
 4. **Customer**
@@ -554,7 +555,7 @@ rm data/app/sentinel.duckdb
 | **Roll-forward / cure** | Moving to a worse / better DPD bucket |
 | **On-us / off-us** | This bank's facilities / other lenders' (from the credit bureau) |
 | **Utilisation** | Revolving balance ÷ limit for cards and working-capital lines |
-| **Debt burden ratio (DBR)** | Total monthly obligations ÷ monthly income (UAE guideline: 50%) |
+| **Debt burden ratio (DBR)** | Total monthly obligations ÷ monthly income (FOIR; guideline 50%) |
 | **Signal** | One configurable rule (e.g. RS07 Sustained inflow decline) |
 | **Strength** | 0–1 measure of how far past its threshold a signal is |
 | **Points** | weight × strength; the sum gives the raw score |
