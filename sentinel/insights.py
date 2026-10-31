@@ -37,6 +37,54 @@ def customer_roll_prob(t: dict, as_of, p_worse: pd.DataFrame) -> pd.Series:
     return last.groupby("customer_id").p_roll.max()
 
 
+def recovery_profiles(t: dict, as_of) -> pd.Series:
+    """Classify each customer's delinquency pattern: Quick-Recover, Repeat, Worsening, or Clean."""
+    dl = t["delinquency"][t["delinquency"].snapshot_date <= pd.Timestamp(as_of)].copy()
+    dl = dl.sort_values(["customer_id", "snapshot_date"])
+    per = dl.groupby(["customer_id", "snapshot_date"]).days_past_due.max().reset_index()
+    per = per.sort_values(["customer_id", "snapshot_date"])
+    last12 = per[per.snapshot_date > pd.Timestamp(as_of) - pd.DateOffset(months=12)]
+
+    def _classify(grp):
+        dpd = grp.days_past_due.values
+        if (dpd <= 0).all():
+            return "Clean"
+        episodes = []
+        in_ep = False
+        peak = 0
+        length = 0
+        for v in dpd:
+            if v > 0:
+                if not in_ep:
+                    in_ep = True
+                    peak = v
+                    length = 1
+                else:
+                    peak = max(peak, v)
+                    length += 1
+            else:
+                if in_ep:
+                    episodes.append((peak, length))
+                    in_ep = False
+                    peak = 0
+                    length = 0
+        if in_ep:
+            episodes.append((peak, length))
+        if len(episodes) == 0:
+            return "Clean"
+        if len(episodes) == 1 and episodes[0][1] <= 1 and dpd[-1] <= 0:
+            return "Quick-Recover"
+        if len(episodes) >= 2:
+            if episodes[-1][0] > episodes[-2][0]:
+                return "Worsening"
+            return "Repeat"
+        if len(episodes) == 1 and episodes[0][1] > 1:
+            return "Worsening" if dpd[-1] > 0 else "Repeat"
+        return "Quick-Recover"
+
+    return last12.groupby("customer_id").apply(_classify)
+
+
 def wilson_low(k, n, z=1.96):
     p = k / n
     den = 1 + z**2 / n

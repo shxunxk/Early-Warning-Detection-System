@@ -14,7 +14,7 @@ import altair as alt
 import pandas as pd
 import streamlit as st
 
-from sentinel import ingest, insights, llm, metrics, scoring, store
+from sentinel import ingest, insights, llm, metrics, ml, scoring, store
 
 ROOT = Path(__file__).parent
 SOURCES = {"Sample portfolio (clean)": ROOT / "data/sample/csv",
@@ -23,7 +23,8 @@ RULES_PATH = ROOT / "data/sample/rules/risk_signal_definitions.json"
 TRUTH_PATH = ROOT / "data/_ground_truth/customer_labels.csv"
 TIER_COLORS = {"Green": "#2e7d32", "Watch": "#f9a825", "Amber": "#ef6c00", "Red": "#c62828"}
 TIERS = list(TIER_COLORS)
-PAGES = ["Upload & Validate", "Portfolio", "Watchlist", "Customer", "Review", "Rules"]
+PAGES = ["Upload & Validate", "Portfolio", "Watchlist", "Customer", "Review", "Rules",
+         "What-If Simulator", "AI Assistant"]
 
 st.set_page_config(page_title="Sentinel EWS", page_icon="🛡️", layout="wide")
 ss = st.session_state
@@ -79,12 +80,19 @@ def build_view(t, rules, data_key):
     v["trajectory"] = scoring.trajectory(now, prev)
     v["prev_score"] = prev.risk_score
     v["roll_prob"] = roll.reindex(v.index).fillna(0)
+    v["recovery_profile"] = insights.recovery_profiles(t, as_of).reindex(v.index).fillna("Clean")
     v["exposure_at_risk"] = v.outstanding * v.roll_prob
     v["top_indicators"] = v.reasons.map(lambda r: " · ".join(x.split(":")[0] for x in r[:3]))
     status = store.latest_status()
     v["review_status"] = v.index.map(lambda c: status.get(c, "—"))
     prev_risk = prev.tier.isin(["Amber", "Red"])
-    return v, m_now, prev_risk, as_of
+    # ML second opinion: train on prior-period metrics → current Amber/Red.
+    ml_model, ml_features = ml.train_model(m_prev, now)
+    if ml_model is not None:
+        v["ml_prob"] = ml.predict_proba(ml_model, m_now, ml_features).reindex(v.index)
+    else:
+        v["ml_prob"] = pd.Series(dtype=float, index=v.index)
+    return v, m_now, prev_risk, as_of, ml_model, ml_features
 
 
 def ensure_data():
@@ -98,7 +106,7 @@ def ensure_data():
 
 
 ensure_data()
-view, M, PREV_RISK, AS_OF = build_view(ss.tables, ss.rules, ss.data_key)
+view, M, PREV_RISK, AS_OF, ML_MODEL, ML_FEATURES = build_view(ss.tables, ss.rules, ss.data_key)
 
 # ======================================================================================
 # Sidebar
@@ -271,10 +279,13 @@ elif page == "Watchlist":
         w = w[w.products.fillna("").apply(lambda s: any(p in s for p in prod))]
     w = w.sort_values(["tier_rank", "risk_score", "exposure_at_risk"], ascending=False)
     st.caption(f"{len(w)} customers · sorted by tier, score, exposure at risk")
-    table = w.reset_index()[["customer_id", "customer_name", "products", "outstanding",
-                             "risk_score", "tier", "confidence", "trajectory", "top_indicators",
-                             "dpd_bucket", "monitoring_status", "review_status",
-                             "customer_segment", "portfolio"]]
+    cols = ["customer_id", "customer_name", "products", "outstanding",
+            "risk_score", "tier", "confidence", "trajectory", "top_indicators",
+            "roll_prob", "recovery_profile", "dpd_bucket",
+            "monitoring_status", "review_status", "customer_segment", "portfolio"]
+    if "ml_prob" in w.columns and w.ml_prob.notna().any():
+        cols.insert(cols.index("roll_prob") + 1, "ml_prob")
+    table = w.reset_index()[cols]
     ev = st.dataframe(
         table, hide_index=True, use_container_width=True, height=520, on_select="rerun",
         selection_mode="single-row",
@@ -283,7 +294,9 @@ elif page == "Watchlist":
             "risk_score": st.column_config.ProgressColumn("Score", min_value=0, max_value=100,
                                                           format="%d"),
             "top_indicators": st.column_config.TextColumn("Contributing indicators",
-                                                          width="large")})
+                                                          width="large"),
+            "roll_prob": st.column_config.NumberColumn("Roll Prob (30d)", format="%.0%%"),
+            "ml_prob": st.column_config.NumberColumn("ML P(det.)", format="%.0%%")})
     rows = ev.selection.rows if ev and ev.selection else []
     if rows:
         cid = table.iloc[rows[0]].customer_id
@@ -309,7 +322,7 @@ elif page == "Customer":
     st.markdown(f"### {r.customer_name} &nbsp; {tier_badge(r.tier)}", unsafe_allow_html=True)
     st.caption(f"{cid} · {r.customer_type} · {r.employment_or_business_category} · "
                f"{r.customer_segment} · {r.emirate} · {r.products}")
-    k = st.columns(6)
+    k = st.columns(7)
     k[0].metric("Risk score", f"{r.risk_score:.0f}", f"{r.risk_score - r.prev_score:+.0f} vs 3m",
                 delta_color="inverse")
     k[1].metric("Confidence", r.confidence, f"DCS {r.dcs:.0f}", delta_color="off")
@@ -317,6 +330,7 @@ elif page == "Customer":
     k[3].metric("Current DPD", f"{r.current_dpd:.0f}")
     k[4].metric("Roll-forward prob.", f"{100 * r.roll_prob:.0f}%")
     k[5].metric("Outstanding", f"AED {r.outstanding:,.0f}")
+    k[6].metric("Recovery profile", r.recovery_profile)
     if r.insufficient_evidence:
         st.info("Insufficient evidence: limited history or data. Missing information is not "
                 "treated as risk; tier capped at Watch unless hard evidence appears.")
@@ -382,6 +396,24 @@ elif page == "Customer":
                        + (f" · numbers verified against evidence · {out['prompt_tokens']} in / "
                           f"{out['output_tokens']} out tokens · {out['seconds']} s"
                           if out.get("model") else ""))
+
+    # ML second opinion
+    if ML_MODEL is not None and pd.notna(r.get("ml_prob")):
+        st.subheader("ML second opinion")
+        mc1, mc2 = st.columns([1, 2])
+        mc1.metric("P(deterioration 90d)", f"{100 * r.ml_prob:.0f}%")
+        sv = ml.shap_values(ML_MODEL, M, ML_FEATURES, cid)
+        if sv:
+            mc2.caption("SHAP top drivers (positive = pushes toward at-risk)")
+            shap_df = pd.DataFrame({"feature": sv["features"], "SHAP value": sv["values"],
+                                    "metric value": sv["raw_values"]})
+            mc2.altair_chart(alt.Chart(shap_df).mark_bar().encode(
+                x=alt.X("SHAP value:Q"), y=alt.Y("feature:N", sort="-x"),
+                color=alt.condition("datum['SHAP value'] > 0",
+                                    alt.value("#c62828"), alt.value("#2e7d32"))),
+                use_container_width=True)
+            with mc2.expander("SHAP detail"):
+                st.dataframe(shap_df, hide_index=True, use_container_width=True)
 
     t = ss.tables
     st.subheader("History")
@@ -521,3 +553,171 @@ elif page == "Rules":
         st.dataframe(pd.DataFrame({"before": ss.rules_before, "after": after,
                                    "change": after - ss.rules_before}).T,
                      use_container_width=True)
+
+# ======================================================================================
+# 7. What-If Simulator
+# ======================================================================================
+elif page == "What-If Simulator":
+    st.header("What-If Simulator")
+    st.write("Adjust a customer's key metrics and see how the risk score and tier change "
+             "in real time. Only Stage 2 (scoring) re-runs — metrics are not recomputed.")
+    ids = view.sort_values("risk_score", ascending=False).index.tolist()
+    default = ids.index(ss.get("customer", ids[0])) if ss.get("customer") in ids else 0
+    cid = st.selectbox("Customer", ids, index=default, key="sim_customer",
+                       format_func=lambda c: f"{c} · {view.at[c, 'customer_name']} · "
+                                             f"{view.at[c, 'tier']} {view.at[c, 'risk_score']:.0f}")
+    original = M.loc[cid].copy()
+    st.divider()
+    st.subheader("Adjust metrics")
+    c1, c2, c3 = st.columns(3)
+    with c1:
+        st.caption("**Repayment behaviour**")
+        wi_late = st.slider("Late/missed months (6m)", 0, 6,
+                            int(original.get("late_or_missed_instalments", 0) or 0),
+                            key="wi_late")
+        wi_dpd = st.slider("Current DPD", 0, 180,
+                           int(original.get("current_dpd", 0) or 0), key="wi_dpd")
+        wi_partial = st.slider("Partial payment months (6m)", 0, 6,
+                               int(original.get("partial_payments", 0) or 0), key="wi_partial")
+    with c2:
+        st.caption("**Cash flow**")
+        inflow_val = original.get("inflow_change_3m_vs_prior_3m_pct", 0)
+        wi_inflow = st.slider("Inflow change (3m vs prior 3m) %", -80, 50,
+                              int(inflow_val if pd.notna(inflow_val) else 0), key="wi_inflow")
+        bal_val = original.get("avg_balance_change_pct", 0)
+        wi_balance = st.slider("Avg balance change %", -90, 50,
+                               int(bal_val if pd.notna(bal_val) else 0), key="wi_balance")
+        wi_salary_miss = st.slider("Months without salary (3m)", 0, 3,
+                                   int(original.get("months_without_salary", 0) or 0),
+                                   key="wi_salary")
+    with c3:
+        st.caption("**Exposure & leverage**")
+        util_val = original.get("revolving_utilisation_pct", 0)
+        wi_util = st.slider("Revolving utilisation %", 0, 120,
+                            int(util_val if pd.notna(util_val) else 0), key="wi_util")
+        dbr_val = original.get("debt_burden_ratio_pct", 0)
+        wi_dbr = st.slider("Debt burden ratio %", 0, 100,
+                           int(dbr_val if pd.notna(dbr_val) else 0), key="wi_dbr")
+        newf_val = original.get("new_facilities_or_enquiries", 0)
+        wi_newf = st.slider("New facilities / enquiries (6m)", 0, 10,
+                            int(newf_val if pd.notna(newf_val) else 0), key="wi_newf")
+
+    modified = M.copy()
+    modified.loc[cid, "late_or_missed_instalments"] = wi_late
+    modified.loc[cid, "current_dpd"] = wi_dpd
+    modified.loc[cid, "partial_payments"] = wi_partial
+    modified.loc[cid, "inflow_change_3m_vs_prior_3m_pct"] = wi_inflow
+    modified.loc[cid, "avg_balance_change_pct"] = wi_balance
+    modified.loc[cid, "months_without_salary"] = wi_salary_miss
+    modified.loc[cid, "revolving_utilisation_pct"] = wi_util
+    modified.loc[cid, "debt_burden_ratio_pct"] = wi_dbr
+    modified.loc[cid, "new_facilities_or_enquiries"] = wi_newf
+    modified.loc[cid, "_consecutive_missed_months"] = max(0, wi_late)
+
+    wi_score = scoring.score(modified, ss.rules, ss.tables["customers"])
+    orig_row = view.loc[cid]
+    wi_row = wi_score.loc[cid]
+
+    st.divider()
+    st.subheader("Result comparison")
+    c1, c2 = st.columns(2)
+    with c1:
+        st.markdown(f"**Original** &nbsp; {tier_badge(orig_row.tier)}", unsafe_allow_html=True)
+        st.metric("Score", f"{orig_row.risk_score:.0f}")
+        st.metric("Confidence", orig_row.confidence)
+        for reason in orig_row.reasons[:5]:
+            st.markdown(f"- {reason}")
+    with c2:
+        st.markdown(f"**What-If** &nbsp; {tier_badge(wi_row.tier)}", unsafe_allow_html=True)
+        delta = wi_row.risk_score - orig_row.risk_score
+        st.metric("Score", f"{wi_row.risk_score:.0f}", f"{delta:+.0f}",
+                  delta_color="inverse")
+        st.metric("Confidence", wi_row.confidence)
+        for reason in wi_row.reasons[:5]:
+            st.markdown(f"- {reason}")
+    if wi_row.trigger:
+        st.error(f"Hard trigger active: {wi_row.trigger}")
+
+    with st.expander("Signal-by-signal comparison"):
+        orig_sigs = pd.DataFrame(orig_row.evidence["signals"])[
+            ["id", "name", "value", "strength", "points"]].rename(
+            columns={"value": "orig_value", "strength": "orig_str", "points": "orig_pts"})
+        wi_sigs = pd.DataFrame(wi_row.evidence["signals"])[
+            ["id", "value", "strength", "points"]].rename(
+            columns={"value": "wi_value", "strength": "wi_str", "points": "wi_pts"})
+        cmp = orig_sigs.merge(wi_sigs, on="id")
+        cmp["delta_pts"] = cmp.wi_pts - cmp.orig_pts
+        st.dataframe(cmp[cmp.delta_pts.abs() > 0.01], hide_index=True, use_container_width=True)
+
+# ======================================================================================
+# 8. AI Assistant
+# ======================================================================================
+elif page == "AI Assistant":
+    st.header("AI Assistant")
+    models = llm.available_models()
+    model = llm.pick_model(models)
+    if not model:
+        st.warning("No local LLM available. Start Ollama with a supported model "
+                   "(e.g. `ollama pull qwen3:4b-instruct`) to enable the AI Assistant.")
+        st.stop()
+    st.caption(f"Using **{model}** via Ollama · responses grounded in customer evidence")
+    ids = view.sort_values("risk_score", ascending=False).index.tolist()
+    default = ids.index(ss.get("customer", ids[0])) if ss.get("customer") in ids else 0
+    chat_cid = st.selectbox("Customer context", ids, index=default, key="chat_cid",
+                            format_func=lambda c: f"{c} · {view.at[c, 'customer_name']} · "
+                                                  f"{view.at[c, 'tier']}")
+    r = view.loc[chat_cid]
+    evd = r.evidence
+    st.markdown(f"**{r.customer_name}** · {tier_badge(r.tier)} · Score {r.risk_score:.0f}",
+                unsafe_allow_html=True)
+
+    if "chat_messages" not in ss or ss.get("chat_context_cid") != chat_cid:
+        ss.chat_messages = []
+        ss.chat_context_cid = chat_cid
+
+    for msg in ss.chat_messages:
+        with st.chat_message(msg["role"]):
+            st.write(msg["content"])
+
+    if prompt := st.chat_input("Ask about this customer's risk…"):
+        ss.chat_messages.append({"role": "user", "content": prompt})
+        with st.chat_message("user"):
+            st.write(prompt)
+
+        facts = llm.facts_for(evd, r.reasons, r.recommended_action)
+        facts["customer_name"] = r.customer_name
+        facts["customer_type"] = r.customer_type
+        facts["products"] = r.products
+        facts["outstanding"] = f"AED {r.outstanding:,.0f}"
+        facts["trajectory"] = r.trajectory
+        facts["recovery_profile"] = r.recovery_profile
+        facts["roll_forward_prob"] = f"{100 * r.roll_prob:.0f}%"
+
+        import json as _json
+        sys_prompt = (llm.SYSTEM + " Answer the analyst's question using ONLY the facts below. "
+                      "If you don't know, say so.\n\nFACTS:\n" + _json.dumps(facts, indent=1))
+        history = "\n".join(f"{m['role'].upper()}: {m['content']}"
+                            for m in ss.chat_messages[-6:])
+        full_prompt = history + f"\nASSISTANT:"
+
+        with st.chat_message("assistant"):
+            with st.spinner(f"Thinking ({model})…"):
+                import urllib.request
+                body = _json.dumps(dict(model=model, system=sys_prompt, prompt=full_prompt,
+                                        stream=False, think=False,
+                                        options=dict(temperature=0.2, num_predict=400))).encode()
+                req = urllib.request.Request(f"{llm.OLLAMA}/api/generate", data=body,
+                                             headers={"Content-Type": "application/json"})
+                try:
+                    with urllib.request.urlopen(req, timeout=120) as resp:
+                        import re
+                        res = _json.load(resp)
+                    text = re.sub(r"<think>.*?</think>", "", res.get("response", ""),
+                                  flags=re.S).strip()
+                    ok, bad = llm.grounded(text, facts, r.reasons)
+                    if not ok:
+                        text += f"\n\n⚠️ _Some numbers could not be verified against evidence: {bad}_"
+                except Exception as e:
+                    text = f"Error communicating with LLM: {e}"
+            st.write(text)
+        ss.chat_messages.append({"role": "assistant", "content": text})

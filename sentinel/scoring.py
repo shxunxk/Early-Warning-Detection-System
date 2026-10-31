@@ -88,14 +88,19 @@ def score(metrics: pd.DataFrame, rules: dict, customers: pd.DataFrame) -> pd.Dat
     red, amber = names.index("Red"), names.index("Amber")
     t_red = dpd >= 90
     t_amb = (dpd >= 30) & (tier_idx < amber)
-    tier_idx = np.where(t_red, red, np.where(t_amb, amber, tier_idx))
+    consec = metrics.get("_consecutive_missed_months", pd.Series(0, index=out.index)).reindex(
+        out.index).fillna(0)
+    t_consec = (consec >= 2) & (tier_idx < amber)
+    tier_idx = np.where(t_red, red, np.where(t_amb | t_consec, np.maximum(tier_idx, amber),
+                                              tier_idx))
     triggers[t_red] = "DPD >= 90"
     triggers[t_amb & ~t_red] = "DPD >= 30"
+    triggers[t_consec & ~t_red & ~t_amb] = "2+ consecutive missed months"
 
     dcs = metrics.data_completeness_score.reindex(out.index)
     out["dcs"] = dcs
     out["confidence"] = np.select([dcs >= 75, dcs >= 40], ["High", "Medium"], "Low")
-    hard = (dpd > 0) | (strength_df.get("RS01", 0).fillna(0) > 0)
+    hard = (dpd > 0) | (strength_df.get("RS01", 0).fillna(0) > 0) | (consec >= 2)
     cap = (out.confidence == "Low") & ~hard & (tier_idx > names.index("Watch"))
     tier_idx = np.where(cap, names.index("Watch"), tier_idx)
     out["insufficient_evidence"] = (out.confidence == "Low") & ~hard

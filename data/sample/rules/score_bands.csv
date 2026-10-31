@@ -1,5 +1,5 @@
 band,min_score,max_score,monitoring_status,recommended_action
-Green,0,24,NORMAL,No action; routine monitoring
-Watch,25,44,WATCHLIST,RM review; soft-touch customer contact
-Amber,45,69,ACTION_REQUIRED,Contact customer; assess restructuring or limit freeze
-Red,70,100,ESCALATE,Escalate to credit committee / collections; review provisioning
+Green,0,29,NORMAL,No action; routine monitoring
+Watch,30,59,WATCHLIST,RM review; soft-touch customer contact
+Amber,60,79,ACTION_REQUIRED,Contact customer; assess restructuring or limit freeze
+Red,80,100,ESCALATE,Escalate to credit committee / collections; review provisioning

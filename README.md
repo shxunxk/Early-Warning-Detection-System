@@ -34,6 +34,11 @@ tiers, M5 Pro):
 Every summary's numbers are checked against the evidence; failures fall back to template text.
 Summaries are cached per customer, rules version and model.
 
+For a module-by-module description of the implementation (validation checks, metric
+definitions, scoring pipeline, signals, LLM grounding, results and limitations) see
+**[docs/IMPLEMENTATION.md](docs/IMPLEMENTATION.md)**. For every screen element, what it
+means and a demo walkthrough, see **[docs/UI_GUIDE.md](docs/UI_GUIDE.md)**.
+
 ## Pages
 | Page | What it shows |
 |---|---|
