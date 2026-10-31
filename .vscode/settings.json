@@ -1,8 +1,0 @@
-{
-    "code-runner.executorMap": {
-        "python": "python -u"
-    },
-    "code-runner.respectShebang": false,
-    "code-runner.runInTerminal": true,
-    "code-runner.fileDirectoryAsCwd": true
-}
