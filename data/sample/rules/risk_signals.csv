@@ -1,0 +1,22 @@
+signal_id,name,category,scenario,metric,lookback_months,operator,threshold,weight,severity,description
+RS01,Repeated late or missed instalments,REPAYMENT,S1,late_or_missed_instalments,6,>=,2,20,HIGH,"Count of instalments paid after due date + grace, partial or unpaid."
+RS02,Worsening days past due,REPAYMENT,S5,dpd_increase_month_ends,3,>=,2,15,HIGH,Number of consecutive month-ends where max DPD rose.
+RS03,Currently in arrears,REPAYMENT,S5,current_dpd,0,>=,1,15,MEDIUM,"Scaled by DPD bucket: 1-30 = 50%, 31-60 = 75%, 61+ = 100% of weight."
+RS04,Partial payments,REPAYMENT,S1,partial_payments,6,>=,2,10,MEDIUM,Instalments where less than 95% of the amount due was paid.
+RS05,Isolated delay with recovery,MITIGANT,S4,isolated_delay_recovered,12,==,1,-10,INFO,"Exactly one irregular instalment, preceded by 6+ on-time and fully regularised; stronger mitigation if verified evidence exists."
+RS06,Recent cure,REPAYMENT,S5,months_since_cure,12,<=,3,8,LOW,Arrears cleared within the last 3 months; watch for relapse.
+RS07,Sustained inflow decline,CASH_FLOW,S2,inflow_change_3m_vs_prior_3m_pct,6,<=,-20,15,HIGH,Average salary/business receipts of the last 3 months vs the 3 before.
+RS08,Consecutive monthly inflow declines,CASH_FLOW,S2,consecutive_inflow_declines,4,>=,3,8,MEDIUM,Months in a row with lower receipts. For SMEs compare year-on-year to avoid flagging normal seasonality.
+RS09,Salary stopped,CASH_FLOW,S2,months_without_salary,3,>=,2,15,HIGH,Salary-transfer customers only; ignore if salary_transfer_flag = N.
+RS10,Balance erosion,CASH_FLOW,S6,avg_balance_change_pct,6,<=,-40,8,MEDIUM,Latest 3-month average balance vs the 3 months before.
+RS11,Returned payments / bounced cheques,CASH_FLOW,S6,returned_payments,3,>=,2,10,HIGH,Failed direct debits and returned cheques.
+RS12,High revolving utilisation,EXPOSURE,S3,revolving_utilisation_pct,0,>=,85,8,MEDIUM,On-us card / working-capital balance as % of limit.
+RS13,Utilisation spike,EXPOSURE,S3,utilisation_change_pp,6,>=,25,8,MEDIUM,Percentage-point rise in revolving utilisation.
+RS14,Debt burden above limit,EXPOSURE,S3,debt_burden_ratio_pct,0,>=,50,12,HIGH,(On-us + bureau monthly obligations) / monthly income. UAE cap is 50%.
+RS15,New credit accumulation,EXPOSURE,S3,new_facilities_or_enquiries,6,>=,3,8,MEDIUM,New on-us facilities + new bureau facilities + bureau enquiries.
+RS16,Exposure growing faster than income,EXPOSURE,S3,exposure_growth_minus_income_growth_pp,6,>=,25,8,MEDIUM,"Total outstanding growth minus income growth, in percentage points."
+RS17,Delinquency at other lenders,BUREAU,S1,bureau_external_max_dpd,0,>=,30,12,HIGH,Off-us arrears often precede on-us arrears.
+RS18,Bureau score drop,BUREAU,S1,bureau_score_change,6,<=,-50,6,MEDIUM,Points lost over the lookback.
+DQ01,Insufficient history,DATA_QUALITY,S7,months_of_history,0,<,6,0,INFO,Confidence flag only. Never adds risk points.
+DQ02,Missing financial months,DATA_QUALITY,S7,missing_financial_months,12,>=,1,0,INFO,Gaps in the account feed. Confidence flag only.
+DQ03,Bureau no-hit,DATA_QUALITY,S7,bureau_no_hit,0,==,1,0,INFO,No bureau record. Confidence flag only.
