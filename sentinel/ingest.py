@@ -66,7 +66,8 @@ ALIASES = {
     "paid_amount": "amount_paid", "paid_date": "payment_date", "emi": "instalment_amount",
     "limit": "sanctioned_amount", "sanctioned_limit": "sanctioned_amount",
     "outstanding": "outstanding_balance", "status": "repayment_status",
-    "segment": "customer_segment", "region": "emirate",
+    "segment": "customer_segment",
+    "emirate": "region", "city": "region", "state": "region", "location": "region",
 }
 NAME_HINTS = {  # file name fragment -> table
     "customer": "customers", "facilit": "facilities", "loan": "facilities",

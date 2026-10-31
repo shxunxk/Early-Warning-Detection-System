@@ -69,12 +69,13 @@ rm data/app/sentinel.duckdb
 |---|---|
 | **Home** | Morning briefing: Red/Amber today, **forecast of new 30+ DPD customers next month and quarter**, exposure at risk, open alerts, an AI-written briefing, and red-flag tabs (likely to hit 30+ DPD, newly escalated, hard triggers, emerging segments, recovering), outlook charts and a model card |
 | **Upload & Validate** | Load CSV / Excel / JSON (or the bundled clean/dirty samples); about 21 validation checks; accepted vs rejected rows; relationship coverage; filterable issues list |
-| **Portfolio** | Tier mix, trajectory, **emerging risk clusters** (segment lift with a Wilson test), **roll-rate matrix**, accuracy vs planted ground truth |
-| **Watchlist** | Filterable list (tier, product, segment, portfolio, DPD bucket, emirate, trajectory, confidence) with score, tier, forecast, confidence, contributing indicators and monitoring/review status; CSV export |
+| **Portfolio Dashboard** | Tier mix, trajectory, **emerging risk clusters** (segment lift with a Wilson test), **roll-rate matrix**, pre-delinquent vs delinquent split, score movers, intervention workload, priority matrix, accuracy vs planted ground truth |
+| **Watchlist** | Filterable list (tier, product, segment, portfolio, DPD bucket, region, trajectory, confidence, SMA category) with score, tier, composite priority, forecast, confidence, contributing indicators, recommended intervention and monitoring/review status; CSV export |
 | **Customer** | Score breakdown (points per signal), reasons vs thresholds, module indices, **delinquency forecast with SHAP drivers** and silent-stress warning, ML second opinion, AI summary, history charts, repayment/facility/exposure/evidence tabs |
+| **Investigation** | Single-customer workspace: correlated deterioration patterns, recommended interventions by urgency, module indices, 12-month score and indicator history, and a case file for interventions, ownership and analyst notes |
 | **Review** | Publish frozen alerts; record append-only analyst decisions (Continue Monitoring · Requires Investigation · False Positive · Escalate for Review) with mandatory reason |
 | **Rules** | Edit thresholds, severe levels, weights and bands; instant portfolio re-score with before/after counts; download rules JSON |
-| **What-If Simulator** | Adjust a customer's metrics (arrears, inflows, utilisation…) and see the score and tier change; only moved sliders are applied |
+| **RBI Reporting** | SMA distribution and mix by portfolio, SMA migration matrix, SMA trend, EWS compliance tiles (TAT, escalation, resolution), SMA-2/NPA detail; Excel and CSV download |
 | **AI Assistant** | Chat about a selected customer; answers are grounded in that customer's evidence |
 
 Every element is explained in **[docs/UI_GUIDE.md](docs/UI_GUIDE.md)**.
@@ -99,7 +100,7 @@ flowchart LR
         LLM["llm<br/>summaries · briefing<br/>number check"]
         STO["store<br/>frozen alerts<br/>append-only decisions"]
     end
-    UI["app.py · Streamlit<br/>Home · Upload · Portfolio · Watchlist<br/>Customer · Review · Rules<br/>What-If · AI Assistant"]
+    UI["app.py · Streamlit<br/>Home · Upload · Portfolio Dashboard · Watchlist<br/>Customer · Investigation · Review · Rules<br/>RBI Reporting · AI Assistant"]
     DB[("DuckDB<br/>data/app/sentinel.duckdb")]
     OLL(["Ollama<br/>qwen3:4b-instruct"])
 
@@ -116,7 +117,7 @@ flowchart LR
 **Design principles**
 - **Two-stage compute.** Heavy metrics are computed once per dataset and as-of date
   (~0.4 s, cached). Scoring from metrics plus rules is cheap (~0.5 s) and re-runs on every
-  rules edit or What-If change.
+  rules edit.
 - **Point-in-time.** Every metric uses only data dated on or before the as-of date, so the
   same code scores today, scores 3 months ago (trajectory) and builds ML training data.
 - **Missing ≠ zero.** Missing data marks a signal "not evaluated" and lowers confidence; it
@@ -168,7 +169,8 @@ metrics at as-of date
 | Data quality (S7) | Short history · Missing months · Bureau no-hit (weight 0: confidence only) |
 
 **Built-in fairness to temporary events:**
-- delays within 3 grace days, or across a lunar (Eid) bank holiday, are excused;
+- delays within 3 grace days, or across a moon-sighting bank holiday (Eid-ul-Fitr, Bakrid,
+  Muharram, Milad-un-Nabi), are excused;
 - repayment signals count **months**, not instalments (several facilities ≠ several times the risk);
 - seasonal businesses are compared year-on-year.
 
