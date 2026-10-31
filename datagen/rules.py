@@ -15,38 +15,44 @@ PARAMETERS = dict(
     score_direction="HIGHER_IS_RISKIER",
     grace_days=3,
     excuse_lunar_holiday_delays=True,
+    trajectory_lookback_months=3,
     min_history_months=6,
     min_repayment_records=4,
     stale_data_months=2,
 )
 
 SCORE_BANDS = [
-    dict(band="Low", min_score=0, max_score=29, monitoring_status="CONTINUE_MONITORING",
+    dict(band="Green", min_score=0, max_score=24, monitoring_status="NORMAL",
          recommended_action="No action; routine monitoring"),
-    dict(band="Medium", min_score=30, max_score=54, monitoring_status="WATCHLIST",
+    dict(band="Watch", min_score=25, max_score=44, monitoring_status="WATCHLIST",
          recommended_action="RM review; soft-touch customer contact"),
-    dict(band="High", min_score=55, max_score=74, monitoring_status="ACTION_REQUIRED",
-         recommended_action="Contact customer; assess restructuring or payment plan"),
-    dict(band="Critical", min_score=75, max_score=100, monitoring_status="ESCALATE",
-         recommended_action="Escalate to credit risk / collections; review limits"),
+    dict(band="Amber", min_score=45, max_score=69, monitoring_status="ACTION_REQUIRED",
+         recommended_action="Contact customer; assess restructuring or limit freeze"),
+    dict(band="Red", min_score=70, max_score=100, monitoring_status="ESCALATE",
+         recommended_action="Escalate to credit committee / collections; review provisioning"),
 ]
 
 OVERRIDES = [
-    dict(override_id="OV01", condition="current_dpd >= 90", minimum_band="Critical",
+    dict(override_id="OV01", condition="current_dpd >= 90", minimum_band="Red",
          description="90+ DPD is non-performing regardless of other signals"),
-    dict(override_id="OV02", condition="current_dpd >= 60", minimum_band="High",
-         description="60+ DPD is at least High"),
-    dict(override_id="OV03", condition="data_sufficiency == 'INSUFFICIENT'",
-         minimum_band=None,
-         description="Do not raise the band for missing data; flag LOW confidence instead"),
+    dict(override_id="OV02", condition="current_dpd >= 30", minimum_band="Amber",
+         description="30+ DPD is at least Amber"),
+    dict(override_id="OV03", condition="confidence == 'Low' and no hard evidence",
+         maximum_band="Watch",
+         description="Missing data alone never escalates beyond Watch (insufficient evidence)"),
 ]
+
+# Value at which a signal reaches full strength (threshold = half strength).
+SEVERE = dict(RS01=3, RS02=3, RS03=60, RS04=4, RS05=1, RS06=1, RS07=-45, RS08=5, RS09=3,
+              RS10=-70, RS11=5, RS12=100, RS13=50, RS14=70, RS15=6, RS16=60, RS17=90,
+              RS18=-120, DQ01=0, DQ02=3, DQ03=1)
 
 # metric names describe what the engine must compute; lookback is in months.
 SIGNALS = [
     # ---------------------------------------------------------------- repayment (S1, S4, S5)
     dict(signal_id="RS01", name="Repeated late or missed instalments", category="REPAYMENT",
          scenario="S1", metric="late_or_missed_instalments", lookback_months=6,
-         operator=">=", threshold=2, weight=20, severity="HIGH",
+         operator=">=", threshold=2, weight=30, severity="HIGH",
          description="Count of instalments paid after due date + grace, partial or unpaid."),
     dict(signal_id="RS02", name="Worsening days past due", category="REPAYMENT",
          scenario="S5", metric="dpd_increase_month_ends", lookback_months=3,
@@ -72,7 +78,7 @@ SIGNALS = [
     # ---------------------------------------------------------------- cash flow (S2, S6)
     dict(signal_id="RS07", name="Sustained inflow decline", category="CASH_FLOW",
          scenario="S2", metric="inflow_change_3m_vs_prior_3m_pct", lookback_months=6,
-         operator="<=", threshold=-20, weight=15, severity="HIGH",
+         operator="<=", threshold=-20, weight=20, severity="HIGH",
          description="Average salary/business receipts of the last 3 months vs the 3 before."),
     dict(signal_id="RS08", name="Consecutive monthly inflow declines", category="CASH_FLOW",
          scenario="S2", metric="consecutive_inflow_declines", lookback_months=4,
@@ -85,7 +91,7 @@ SIGNALS = [
          description="Salary-transfer customers only; ignore if salary_transfer_flag = N."),
     dict(signal_id="RS10", name="Balance erosion", category="CASH_FLOW",
          scenario="S6", metric="avg_balance_change_pct", lookback_months=6,
-         operator="<=", threshold=-40, weight=8, severity="MEDIUM",
+         operator="<=", threshold=-40, weight=10, severity="MEDIUM",
          description="Latest 3-month average balance vs the 3 months before."),
     dict(signal_id="RS11", name="Returned payments / bounced cheques", category="CASH_FLOW",
          scenario="S6", metric="returned_payments", lookback_months=3,
@@ -94,23 +100,23 @@ SIGNALS = [
     # ---------------------------------------------------------------- exposure (S3)
     dict(signal_id="RS12", name="High revolving utilisation", category="EXPOSURE",
          scenario="S3", metric="revolving_utilisation_pct", lookback_months=0,
-         operator=">=", threshold=85, weight=8, severity="MEDIUM",
+         operator=">=", threshold=85, weight=12, severity="MEDIUM",
          description="On-us card / working-capital balance as % of limit."),
     dict(signal_id="RS13", name="Utilisation spike", category="EXPOSURE",
          scenario="S3", metric="utilisation_change_pp", lookback_months=6,
-         operator=">=", threshold=25, weight=8, severity="MEDIUM",
+         operator=">=", threshold=25, weight=10, severity="MEDIUM",
          description="Percentage-point rise in revolving utilisation."),
     dict(signal_id="RS14", name="Debt burden above limit", category="EXPOSURE",
          scenario="S3", metric="debt_burden_ratio_pct", lookback_months=0,
-         operator=">=", threshold=50, weight=12, severity="HIGH",
+         operator=">=", threshold=50, weight=15, severity="HIGH",
          description="(On-us + bureau monthly obligations) / monthly income. UAE cap is 50%."),
     dict(signal_id="RS15", name="New credit accumulation", category="EXPOSURE",
          scenario="S3", metric="new_facilities_or_enquiries", lookback_months=6,
-         operator=">=", threshold=3, weight=8, severity="MEDIUM",
+         operator=">=", threshold=3, weight=12, severity="MEDIUM",
          description="New on-us facilities + new bureau facilities + bureau enquiries."),
     dict(signal_id="RS16", name="Exposure growing faster than income", category="EXPOSURE",
          scenario="S3", metric="exposure_growth_minus_income_growth_pp", lookback_months=6,
-         operator=">=", threshold=25, weight=8, severity="MEDIUM",
+         operator=">=", threshold=25, weight=10, severity="MEDIUM",
          description="Total outstanding growth minus income growth, in percentage points."),
     # ---------------------------------------------------------------- bureau
     dict(signal_id="RS17", name="Delinquency at other lenders", category="BUREAU",
@@ -141,10 +147,12 @@ def definitions() -> dict:
     return dict(
         version="1.0",
         generated_on=date.today().isoformat(),
-        notes="Default configuration. Weights are points on a 0-100 scale; the engine caps "
-              "the total at 100 and applies overrides after scoring.",
+        notes="Weights are points on a 0-100 scale (higher = riskier). A signal earns half its "
+              "weight at `threshold` and full weight at `severe`; the total is capped at 100 "
+              "and overrides apply after scoring.",
         parameters=PARAMETERS,
-        signals=SIGNALS,
+        signals=[{**sig, "severe": SEVERE[sig["signal_id"]], "enabled": True}
+                 for sig in SIGNALS],
         score_bands=SCORE_BANDS,
         overrides=OVERRIDES,
     )

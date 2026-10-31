@@ -5,3 +5,5 @@ __pycache__/
 
 # Regenerable: uv run python datagen/generate.py
 data/sample/json/
+data/app/
+.claude/

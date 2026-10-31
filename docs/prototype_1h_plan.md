@@ -1,6 +1,6 @@
 # Sentinel EWS: 1-hour prototype plan and trade-offs
 
-Status: **awaiting validation, no code written yet.**
+Status: **built, 12:48–13:05 (see §8 for results and deviations).**
 Goal: in 60 minutes, a working Streamlit app that demonstrates **all 5 Level 1 capabilities**
 plus as many differentiators as fit. Every shortcut is listed in §5 so it can be revisited.
 Parent design: `docs/app_architecture.md`.
@@ -126,3 +126,40 @@ flowchart LR
 4. Eval panel
 
 The 5 Level 1 capabilities are never cut.
+
+## 8. Build results
+
+All done criteria (§6) met and verified in the browser, except the local LLM, which runs in
+template mode until a model is pulled.
+
+| Check | Result |
+|---|---|
+| Ingest: clean sample in CSV, JSON and Excel | 67,897 records, 0 issues in each format |
+| Ingest: dirty sample | 516 rows rejected (errors), 42 warnings, all 15 injected defect types detected |
+| Metrics + scoring time (600 customers) | 0.4 s metrics, 0.5 s scoring; rules edits re-score live |
+| Planted High/Critical customers flagged Amber or Red | **75.8%** |
+| Low-risk customers flagged Amber or Red (false alarms) | **0.0%** |
+| Trap customers flagged (isolated exception, seasonal SME, thin file, salary elsewhere, cured) | **0 / 130** |
+| Predicted tier within one tier of planted band | 97.5% |
+| Planted cluster found | Construction & Contracting · Sharjah: 60% at risk vs 13.8% portfolio, lift 4.3 |
+| Review | 130 alerts frozen; decision then reclassification recorded; original Red/100 unchanged |
+| Rules editor | Disabling one signal moved 11 customers to Green; rules version tag changes |
+
+### Deviations from the plan
+- **Signal weights tuned once** against the eval panel (RS01 30, RS07 20, RS12 12, RS14 15,
+  RS15 12, RS10/RS13/RS16 10; RS01 severe 3). Catch rate went from 54% to 76% with no new
+  false alarms.
+- **Hard trigger lowered** from DPD ≥ 60 to DPD ≥ 30 → at least Amber (matches Sentinel spec).
+- **Repayment signals count months, not instalments**, so customers with several facilities
+  aren't over-penalised.
+- **Streamlit navigation** from the watchlist uses a button callback (widget state can't be
+  set after render).
+
+### Known gaps found during verification
+- About 24% of planted High/Critical customers are missed. Roughly half have **no observable
+  signal yet** (the generator planted a late onset that never produced a missed payment
+  before the as-of date). The engine is right to leave them Green; the ground-truth label is
+  optimistic. The other half are pay-cut income declines, where only one moderate signal fires.
+- Hospitality-in-Dubai cluster is not flagged as emerging: its customers mostly reach Watch,
+  and the cluster test counts Amber/Red only.
+- LLM summary path is implemented and grounded but **not exercised** (no model pulled).
