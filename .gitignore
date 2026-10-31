@@ -5,3 +5,6 @@ __pycache__/
 
 # Regenerable: uv run python datagen/generate.py
 data/sample/json/
+.claude/
+FINAL_ARCHITECTURE.md/
+PLAN_AND_ARCHITECTURE.md/
