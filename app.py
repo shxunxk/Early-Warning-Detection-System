@@ -61,12 +61,9 @@ def get_roll(data_key: str, as_of: str, _t):
 
 @st.cache_resource(show_spinner="Training delinquency forecast (point-in-time, ~5 s)…")
 def get_forecast(data_key: str, params_json: str, _t):
-    """Forecast models + validation, or None if LightGBM is unavailable / data too thin."""
+    """Train and validate the forecast models against the selected portfolio history."""
     p = json.loads(params_json)
-    try:
-        return forecast.train(forecast.build_panel(_t, p, p["as_of_date"]))
-    except Exception:  # noqa: BLE001 - forecasting is optional; the rest of the app still works
-        return None
+    return forecast.train(forecast.build_panel(_t, p, p["as_of_date"]))
 
 
 @st.cache_data(show_spinner=False)
@@ -124,24 +121,106 @@ def build_view(t, rules, data_key):
     else:
         v["ml_prob"] = pd.Series(dtype=float, index=v.index)
     # Delinquency forecast: P(30+ DPD) next month / next quarter for customers below 30 DPD.
-    pred = get_predictions(data_key, pj, t, m_now)
+    try:
+        pred = get_predictions(data_key, pj, t, m_now)
+    except Exception as exc:
+        ss.forecast_error = f"{type(exc).__name__}: {exc}"
+        pred = None
+    else:
+        ss.forecast_error = None
     for col in ("p_1m", "p_3m", "forecast_drivers"):
         v[col] = pred[col].reindex(v.index) if pred is not None else None
     return v, m_now, prev_risk, as_of, ml_model, ml_features
 
 
 def ensure_data():
-    if "tables" not in ss:
-        name = next(iter(SOURCES))
-        ss.tables, ss.issues, ss.summary = load_folder(str(SOURCES[name][0]))
-        ss.source = ss.data_key = name
-        ss.truth = SOURCES[name][1]
     if "rules" not in ss:
         ss.rules = scoring.load_rules(RULES_PATH)
 
 
+def accept_upload(files):
+    raw = {}
+    digest = hashlib.sha256()
+    for uploaded_file in sorted(files, key=lambda item: item.name):
+        payload = uploaded_file.getvalue()
+        raw.update(ingest.read_any(uploaded_file.name, payload))
+        digest.update(uploaded_file.name.encode("utf-8"))
+        digest.update(b"\0")
+        digest.update(payload)
+
+    required_tables = [
+        table for table in ingest.TABLES
+        if table != "exception_evidence" and table not in raw
+    ]
+    if required_tables:
+        ss.upload_error = (
+            "Upload all required portfolio tables before continuing. Missing or "
+            f"unrecognized files for: {', '.join(required_tables)}."
+        )
+        return
+
+    tables, issues, summary = ingest.validate(raw)
+    empty_core_tables = [
+        table for table in ("customers", "facilities", "repayments", "delinquency",
+                            "exposure", "financials")
+        if table not in tables or tables[table].empty
+    ]
+    if empty_core_tables:
+        ss.upload_error = (
+            "The uploaded dataset has no accepted rows for: "
+            f"{', '.join(empty_core_tables)}. Fix the validation errors and upload again."
+        )
+        ss.upload_issues = issues
+        return
+
+    ss.pop("upload_error", None)
+    ss.pop("upload_issues", None)
+    ss.tables = tables
+    ss.issues = issues
+    ss.summary = summary
+    ss.source = f"Uploaded dataset ({len(files)} files)"
+    ss.truth = None
+    ss.data_key = f"upload-{digest.hexdigest()}"
+    ss.dataset_uploaded = True
+    latest_snapshot = pd.to_datetime(
+        tables["delinquency"]["snapshot_date"], errors="coerce"
+    ).max()
+    if pd.notna(latest_snapshot):
+        ss.rules = copy.deepcopy(ss.rules)
+        ss.rules["parameters"]["as_of_date"] = latest_snapshot.date().isoformat()
+    ss.page = "Home"
+    ss.pop("forecast_error", None)
+
+
+def render_upload_form():
+    st.header("Upload & Validate")
+    st.write(
+        "Upload customers, facilities, repayments, delinquency, exposure, financials, "
+        "and bank holidays as CSV, Excel (one sheet per table), or JSON. Exception "
+        "evidence is optional. Predictions are trained from and displayed for this dataset."
+    )
+    files = st.file_uploader(
+        "Upload files",
+        type=["csv", "xlsx", "json"],
+        accept_multiple_files=True,
+        key="portfolio_upload",
+    )
+    if ss.get("upload_error"):
+        st.error(ss.upload_error)
+        if "upload_issues" in ss:
+            st.dataframe(ss.upload_issues, hide_index=True, use_container_width=True)
+    if files:
+        st.button(
+            "Validate dataset and continue",
+            type="primary",
+            on_click=accept_upload,
+            args=(files,),
+        )
+
+
 ensure_data()
-view, M, PREV_RISK, AS_OF, ML_MODEL, ML_FEATURES = build_view(ss.tables, ss.rules, ss.data_key)
+if not ss.get("dataset_uploaded", False):
+    ss.page = "Upload & Validate"
 
 # ======================================================================================
 # Sidebar
@@ -151,12 +230,24 @@ with st.sidebar:
     st.caption("Early Warning System · prototype")
     page = st.radio("Navigate", PAGES, key="page")
     st.divider()
-    st.markdown(f"**Data:** {ss.source}")
-    st.markdown(f"**As-of date:** {AS_OF.date()}")
+    st.markdown(
+        f"**Data:** {ss.source if ss.get('dataset_uploaded', False) else 'Upload required'}"
+    )
+    st.markdown(f"**As-of date:** {ss.rules['parameters']['as_of_date']}")
     st.markdown(f"**Rules version:** `{rules_key(ss.rules)}`")
     models = llm.available_models()
     st.markdown(f"**Local LLM:** {'🟢 ' + llm.pick_model(models) if models else '⚪ off (template text)'}")
     st.caption("Score 0–100 · higher = riskier")
+
+if not ss.get("dataset_uploaded", False):
+    st.title("Upload a dataset to begin")
+    st.info("The dashboard and model predictions are enabled after the uploaded data validates.")
+    render_upload_form()
+    st.stop()
+
+view, M, PREV_RISK, AS_OF, ML_MODEL, ML_FEATURES = build_view(
+    ss.tables, ss.rules, ss.data_key
+)
 
 
 def tier_badge(t):
@@ -191,6 +282,22 @@ if page == "Home":
     st.header("Early warning briefing")
     st.caption(f"As of {AS_OF.date()} · {ss.source} · {len(view)} customers monitored")
     has_fc = view.p_3m.notna().any()
+    if ss.get("forecast_error"):
+        st.error(
+            "The LightGBM forecast could not be trained or run for this uploaded dataset: "
+            f"{ss.forecast_error}"
+        )
+    elif has_fc:
+        st.caption(
+            "LightGBM was trained on the uploaded portfolio's historical snapshots and "
+            "scored eligible customers from that same dataset at the as-of date."
+        )
+    else:
+        st.warning(
+            "No LightGBM predictions are available for this upload. Check that the "
+            "dataset has enough monthly history and includes customers currently below "
+            "30 DPD to score."
+        )
     alerts_df = store.alerts()
     alerts_df = alerts_df[alerts_df.customer_id.isin(view.index)]  # this dataset only
     open_alerts = int(alerts_df.latest_decision.isna().sum()) if len(alerts_df) else 0
@@ -384,32 +491,7 @@ if page == "Home":
                        "treat totals as a floor.")
 
 elif page == "Upload & Validate":
-    st.header("Upload & Validate")
-    st.write("Load the 8 portfolio tables as CSV, Excel (one sheet per table) or JSON. "
-             "Rows with errors are rejected; warnings are normalised and kept.")
-    c1, c2 = st.columns([1, 1])
-    with c1:
-        names = list(SOURCES)
-        choice = st.selectbox("Bundled dataset", names,
-                              index=names.index(ss.source) if ss.source in names else 0)
-        if st.button("Load bundled dataset", type="primary"):
-            ss.tables, ss.issues, ss.summary = load_folder(str(SOURCES[choice][0]))
-            ss.source = ss.data_key = choice
-            ss.truth = SOURCES[choice][1]
-            st.rerun()
-    with c2:
-        files = st.file_uploader("…or upload files", type=["csv", "xlsx", "json"],
-                                 accept_multiple_files=True)
-        if files and st.button("Validate uploaded files"):
-            raw = {}
-            for f in files:
-                raw.update(ingest.read_any(f.name, f.getvalue()))
-            ss.tables, ss.issues, ss.summary = ingest.validate(raw)
-            ss.source = f"Upload ({len(files)} files)"
-            ss.truth = None
-            ss.data_key = ss.source + hashlib.md5(b"".join(f.getvalue()[:2000] for f in files)
-                                                  ).hexdigest()
-            st.rerun()
+    render_upload_form()
 
     s, i = ss.summary, ss.issues
     k = st.columns(4)
