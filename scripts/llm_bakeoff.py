@@ -11,7 +11,7 @@ from pathlib import Path
 import pandas as pd
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
-from sentinel import ingest, llm, metrics, scoring  # noqa: E402
+from src import ingest, llm, metrics, scoring  # noqa: E402
 
 ap = argparse.ArgumentParser()
 ap.add_argument("models", nargs="+")
