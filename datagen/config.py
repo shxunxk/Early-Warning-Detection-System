@@ -215,3 +215,91 @@ SME_NAME_PARTS = (
                                        "Digital Services FZE"],
     },
 )
+
+# --------------------------------------------------------------------------------------
+# Portfolio profiles: alternative institutions generated with the same engine.
+# Each profile overrides module-level constants above (applied by generate.py --profile).
+# --------------------------------------------------------------------------------------
+ID_START = 100001
+
+PROFILES = {
+    "default": dict(
+        label="Synthetic Gulf Bank: diversified retail-led portfolio",
+    ),
+    "northern_sme": dict(
+        label="Northern Emirates Commercial Bank: SME-heavy mid-market portfolio, "
+              "stressed 2026 (freight costs, retail pay cuts, weak summer trading)",
+        BANK_NAME="Northern Emirates Commercial Bank (synthetic)",
+        DEFAULT_CUSTOMERS=1200,
+        SEED=2026,
+        ID_START=500001,
+        SME_SHARE=0.45,
+        EMIRATES={"Sharjah": 0.30, "Ajman": 0.15, "Ras Al Khaimah": 0.15, "Dubai": 0.22,
+                  "Abu Dhabi": 0.08, "Fujairah": 0.06, "Umm Al Quwain": 0.04},
+        CONSTRUCTION_EMIRATES={"Sharjah": 0.35, "Ajman": 0.20, "Ras Al Khaimah": 0.20,
+                               "Dubai": 0.20, "Fujairah": 0.05},
+        # Mid-market: lower salaries, more retail/hospitality/construction employees.
+        EMPLOYER_SECTORS={
+            "Government": (0.12, 19000, 0.40),
+            "Banking & Finance": (0.05, 22000, 0.50),
+            "Oil & Gas": (0.03, 26000, 0.45),
+            "Healthcare": (0.10, 14000, 0.50),
+            "Education": (0.09, 12000, 0.40),
+            "Retail Trade": (0.17, 7000, 0.45),
+            "Hospitality & Tourism": (0.12, 8000, 0.50),
+            "Construction": (0.12, 8500, 0.55),
+            "Aviation": (0.03, 16000, 0.45),
+            "IT & Telecom": (0.06, 17000, 0.45),
+            "Self-Employed Professional": (0.11, 18000, 0.60),
+        },
+        SME_INDUSTRIES={
+            "General Trading": (0.20, "flat", 0.12),
+            "Construction & Contracting": (0.16, "construction", 0.22),
+            "Restaurants & Hospitality": (0.12, "hospitality", 0.08),
+            "Retail": (0.12, "retail", 0.08),
+            "Logistics & Transport": (0.16, "flat", 0.12),
+            "Healthcare Services": (0.06, "flat", 0.07),
+            "Real Estate Services": (0.05, "flat", 0.18),
+            "Manufacturing": (0.10, "flat", 0.10),
+            "IT & Professional Services": (0.03, "flat", 0.14),
+        },
+        SME_SIZE={"Micro": (0.55, 50_000, 200_000), "Small": (0.37, 200_000, 1_200_000),
+                  "Medium": (0.08, 1_200_000, 4_000_000)},
+        INDIVIDUAL_ARCHETYPES={
+            "STABLE": dict(weight=0.41, scenarios=[], band="Low"),
+            "LEGACY_NPL": dict(weight=0.03, scenarios=[5], band="Critical"),
+            "ISOLATED_EXCEPTION": dict(weight=0.09, scenarios=[4], band="Low"),
+            "CHRONIC_LATE_PAYER": dict(weight=0.05, scenarios=[1], band="Medium"),
+            "REPAYMENT_DETERIORATION": dict(weight=0.08, scenarios=[1, 5], band="High"),
+            "INCOME_DECLINE": dict(weight=0.07, scenarios=[2], band="Medium"),
+            "OVER_LEVERAGED": dict(weight=0.07, scenarios=[3], band="Medium"),
+            "ROLL_FORWARD": dict(weight=0.05, scenarios=[5], band="High"),
+            "CURED": dict(weight=0.05, scenarios=[5], band="Low"),
+            "THIN_FILE": dict(weight=0.05, scenarios=[7], band="Low"),
+            "SALARY_ELSEWHERE": dict(weight=0.05, scenarios=[7], band="Low"),
+        },
+        SME_ARCHETYPES={
+            "SME_STABLE": dict(weight=0.33, scenarios=[], band="Low"),
+            "SME_LEGACY_NPL": dict(weight=0.07, scenarios=[5, 6], band="Critical"),
+            "SME_SEASONAL": dict(weight=0.13, scenarios=[6], band="Low"),
+            "SME_CASHFLOW_STRESS": dict(weight=0.17, scenarios=[2, 6], band="High"),
+            "SME_OVER_LEVERAGED": dict(weight=0.11, scenarios=[3, 6], band="Medium"),
+            "SME_REPAYMENT_DETERIORATION": dict(weight=0.10, scenarios=[1, 5, 6], band="High"),
+            "SME_THIN_FILE": dict(weight=0.09, scenarios=[7], band="Low"),
+        },
+        CLUSTERS=[
+            dict(cluster_id="CLU-SME-LOGI-NORTH", customer_type="SME",
+                 industry="Logistics & Transport", emirates=["Sharjah", "Ras Al Khaimah"],
+                 share=0.55, archetype="SME_CASHFLOW_STRESS", onset_months=(15, 18),
+                 note="Hauliers in Sharjah/RAK squeezed by freight rates and fuel costs"),
+            dict(cluster_id="CLU-RET-TRADE-NORTH", customer_type="INDIVIDUAL",
+                 sector="Retail Trade", emirates=["Sharjah", "Ajman"],
+                 share=0.40, archetype="INCOME_DECLINE", onset_months=(17, 20),
+                 note="Retail-trade employees in Sharjah/Ajman facing pay cuts"),
+            dict(cluster_id="CLU-SME-REST-AJM", customer_type="SME",
+                 industry="Restaurants & Hospitality", emirates=["Ajman", "Sharjah"],
+                 share=0.50, archetype="SME_REPAYMENT_DETERIORATION", onset_months=(18, 20),
+                 note="Ajman/Sharjah restaurants falling behind after a weak summer"),
+        ],
+    ),
+}

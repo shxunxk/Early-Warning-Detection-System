@@ -22,13 +22,13 @@ PARAMETERS = dict(
 )
 
 SCORE_BANDS = [
-    dict(band="Green", min_score=0, max_score=24, monitoring_status="NORMAL",
+    dict(band="Green", min_score=0, max_score=29, monitoring_status="NORMAL",
          recommended_action="No action; routine monitoring"),
-    dict(band="Watch", min_score=25, max_score=44, monitoring_status="WATCHLIST",
+    dict(band="Watch", min_score=30, max_score=59, monitoring_status="WATCHLIST",
          recommended_action="RM review; soft-touch customer contact"),
-    dict(band="Amber", min_score=45, max_score=69, monitoring_status="ACTION_REQUIRED",
+    dict(band="Amber", min_score=60, max_score=79, monitoring_status="ACTION_REQUIRED",
          recommended_action="Contact customer; assess restructuring or limit freeze"),
-    dict(band="Red", min_score=70, max_score=100, monitoring_status="ESCALATE",
+    dict(band="Red", min_score=80, max_score=100, monitoring_status="ESCALATE",
          recommended_action="Escalate to credit committee / collections; review provisioning"),
 ]
 

@@ -17,10 +17,20 @@ import streamlit as st
 from sentinel import forecast, ingest, insights, llm, metrics, ml, scoring, store
 
 ROOT = Path(__file__).parent
-SOURCES = {"Sample portfolio (clean)": ROOT / "data/sample/csv",
-           "Sample portfolio (dirty, for validation)": ROOT / "data/dirty/csv"}
+# Bundled portfolios: label -> (folder of CSVs, ground-truth labels or None).
+SOURCES = {
+    "Synthetic Gulf Bank · 600 customers (clean)":
+        (ROOT / "data/sample/csv", ROOT / "data/_ground_truth/customer_labels.csv"),
+    "Synthetic Gulf Bank · dirty (validation test)":
+        (ROOT / "data/dirty/csv", None),
+    "Northern Emirates Commercial Bank · 1,200 customers, SME-heavy (clean)":
+        (ROOT / "data/northern_sme/sample/csv",
+         ROOT / "data/northern_sme/_ground_truth/customer_labels.csv"),
+    "Northern Emirates Commercial Bank · dirty (validation test)":
+        (ROOT / "data/northern_sme/dirty/csv", None),
+}
+SOURCES = {k: v for k, v in SOURCES.items() if v[0].exists()}
 RULES_PATH = ROOT / "data/sample/rules/risk_signal_definitions.json"
-TRUTH_PATH = ROOT / "data/_ground_truth/customer_labels.csv"
 TIER_COLORS = {"Green": "#2e7d32", "Watch": "#f9a825", "Amber": "#ef6c00", "Red": "#c62828"}
 TIERS = list(TIER_COLORS)
 PAGES = ["Home", "Upload & Validate", "Portfolio", "Watchlist", "Customer", "Review", "Rules",
@@ -123,9 +133,9 @@ def build_view(t, rules, data_key):
 def ensure_data():
     if "tables" not in ss:
         name = next(iter(SOURCES))
-        ss.tables, ss.issues, ss.summary = load_folder(str(SOURCES[name]))
-        ss.source = name
-        ss.data_key = name
+        ss.tables, ss.issues, ss.summary = load_folder(str(SOURCES[name][0]))
+        ss.source = ss.data_key = name
+        ss.truth = SOURCES[name][1]
     if "rules" not in ss:
         ss.rules = scoring.load_rules(RULES_PATH)
 
@@ -182,6 +192,7 @@ if page == "Home":
     st.caption(f"As of {AS_OF.date()} · {ss.source} · {len(view)} customers monitored")
     has_fc = view.p_3m.notna().any()
     alerts_df = store.alerts()
+    alerts_df = alerts_df[alerts_df.customer_id.isin(view.index)]  # this dataset only
     open_alerts = int(alerts_df.latest_decision.isna().sum()) if len(alerts_df) else 0
     red = view.tier == "Red"
     amber = view.tier == "Amber"
@@ -378,10 +389,13 @@ elif page == "Upload & Validate":
              "Rows with errors are rejected; warnings are normalised and kept.")
     c1, c2 = st.columns([1, 1])
     with c1:
-        choice = st.selectbox("Bundled dataset", list(SOURCES))
+        names = list(SOURCES)
+        choice = st.selectbox("Bundled dataset", names,
+                              index=names.index(ss.source) if ss.source in names else 0)
         if st.button("Load bundled dataset", type="primary"):
-            ss.tables, ss.issues, ss.summary = load_folder(str(SOURCES[choice]))
+            ss.tables, ss.issues, ss.summary = load_folder(str(SOURCES[choice][0]))
             ss.source = ss.data_key = choice
+            ss.truth = SOURCES[choice][1]
             st.rerun()
     with c2:
         files = st.file_uploader("…or upload files", type=["csv", "xlsx", "json"],
@@ -392,6 +406,7 @@ elif page == "Upload & Validate":
                 raw.update(ingest.read_any(f.name, f.getvalue()))
             ss.tables, ss.issues, ss.summary = ingest.validate(raw)
             ss.source = f"Upload ({len(files)} files)"
+            ss.truth = None
             ss.data_key = ss.source + hashlib.md5(b"".join(f.getvalue()[:2000] for f in files)
                                                   ).hexdigest()
             st.rerun()
@@ -480,9 +495,10 @@ elif page == "Portfolio":
                                         text=alt.Text("pct:Q", format=".1f")),
         use_container_width=True)
 
-    if TRUTH_PATH.exists() and ss.source.startswith("Sample portfolio (clean)"):
+    truth = ss.get("truth")
+    if truth is not None and truth.exists():
         st.subheader("Accuracy vs planted ground truth")
-        ev = insights.evaluate(view, pd.read_csv(TRUTH_PATH))
+        ev = insights.evaluate(view, pd.read_csv(truth))
         k = st.columns(4)
         k[0].metric("High/Critical caught (Amber+)", f"{ev['catch_rate']}%")
         k[1].metric("False alarms on low-risk", f"{ev['false_alarm_rate']}%")
@@ -727,6 +743,7 @@ elif page == "Review":
         n = store.publish_alerts(view, run_id, AS_OF)
         st.success(f"{n} new alerts frozen")
     al = store.alerts()
+    al = al[al.customer_id.isin(view.index)]  # alerts for the loaded dataset only
     if al.empty:
         st.info("No alerts yet. Publish a run first.")
         st.stop()

@@ -182,7 +182,7 @@ class Generator:
         n_sme = int(round(self.n * C.SME_SHARE))
         for i in range(self.n):
             ctype = "SME" if i >= self.n - n_sme else "INDIVIDUAL"
-            self.customers.append(self._new_customer(f"CIF{100001 + i}", ctype))
+            self.customers.append(self._new_customer(f"CIF{C.ID_START + i}", ctype))
         self.rng.shuffle(self.customers)
         self._apply_clusters()
         for c in self.customers:
@@ -340,6 +340,13 @@ class Generator:
             onset = onset if onset is not None else self.ri(14, 20)
             s = self.ramp(onset + 2, 0.08, 0.08, 0.55)
             us = us + self.ramp(onset, 0.2, 0.2, 1.0)
+        elif a in ("LEGACY_NPL", "SME_LEGACY_NPL"):
+            # Defaulted in the past year and never cured: the NPL stock still in collections
+            # (older unsecured defaults would normally have been written off at ~180 DPD).
+            onset = onset if onset is not None else (
+                self.ri(14, 19) if a == "LEGACY_NPL" else self.ri(8, 16))
+            s = self.ramp(onset, 0.6, 0.1, 0.95)
+            us = us + self.ramp(onset - 2, 0.4, 0.2, 1.0)
         if a not in ("ISOLATED_EXCEPTION", "CURED"):
             c.onset = onset
         c.stress = s
@@ -370,6 +377,8 @@ class Generator:
                     inc[o:] *= (1 - self.u(0.05, 0.09)) ** (m[o:] - o + 1)
             elif c.archetype == "REPAYMENT_DETERIORATION":
                 inc[c.onset:] *= 0.99 ** (m[c.onset:] - c.onset + 1)
+            elif c.archetype == "LEGACY_NPL":
+                inc[c.onset:] *= self.u(0.0, 0.5)  # job lost or income collapsed
         else:
             industry = c.attrs["employment_or_business_category"]
             _, profile, vol = C.SME_INDUSTRIES[industry]
@@ -384,6 +393,8 @@ class Generator:
                 inc[o:] *= np.maximum((1 - g) ** (m[o:] - o + 1), 0.35)
             elif c.archetype == "SME_REPAYMENT_DETERIORATION":
                 inc[o:] *= 0.98 ** (m[o:] - o + 1)
+            elif c.archetype == "SME_LEGACY_NPL":
+                inc[o:] *= self.u(0.15, 0.45)
         inc = np.round(inc, 2)
         inc[: c.first_month] = np.nan
         c.income = inc
@@ -569,6 +580,12 @@ class Generator:
                 return ("MISS", 0, 0, False)  # TEMPORARY_HARDSHIP
             if m == e + 1 and kind == "TEMPORARY_HARDSHIP" and applies:
                 return ("ON_TIME", 0, 1, True)
+
+        if a in ("LEGACY_NPL", "SME_LEGACY_NPL") and m >= c.onset:
+            # Occasional token payments under collections pressure; arrears never cleared.
+            if rng.random() < 0.75:
+                return ("MISS", 0, 0, False)
+            return ("PARTIAL", self.ri(0, 20), self.u(0.1, 0.4), False)
 
         if a == "CHRONIC_LATE_PAYER":
             if rng.random() < 0.72:

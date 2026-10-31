@@ -240,7 +240,16 @@ leaves the machine.
 
 ## 7. Data
 
-Fully **synthetic** portfolio of a UAE bank (AED). No real customers or PII.
+Two fully **synthetic** UAE bank portfolios (AED); no real customers or PII. Both appear in
+the **Upload & Validate → Bundled dataset** dropdown (each with a *dirty* variant for testing
+validation) and are processed entirely on the local machine (load + score + forecast < 10 s).
+
+| Dataset | Profile | Customers | NPL (90+ DPD, by value) | Planted clusters |
+|---|---|---|---|---|
+| **Synthetic Gulf Bank** (`data/sample`) | Diversified, retail-led, Dubai/Abu Dhabi | 600 (30% SME) | 0.2% (early-warning focus, no legacy defaults) | Construction SMEs Sharjah/Ajman; hospitality staff Dubai |
+| **Northern Emirates Commercial Bank** (`data/northern_sme`) | SME-heavy mid-market lender in Sharjah / Ajman / RAK, stressed 2026 | 1,200 (45% SME) | 5.6% (retail 3.4%, SME 5.9%) with a legacy NPL stock in collections | Hauliers Sharjah/RAK (freight and fuel costs); retail-trade staff Sharjah/Ajman (pay cuts); restaurants Ajman/Sharjah (weak summer) |
+
+The tables below describe the Gulf Bank sample; the Northern dataset uses the same schema at about twice the volume.
 
 | Table | Rows | Grain |
 |---|---|---|
@@ -264,6 +273,7 @@ Fully **synthetic** portfolio of a UAE bank (AED). No real customers or PII.
 
 ```bash
 uv run python datagen/generate.py   # regenerate (deterministic, seed 42)
+uv run python datagen/generate.py --profile northern_sme --out data/northern_sme
 uv run python datagen/checks.py     # 41 consistency checks
 ```
 
@@ -317,7 +327,7 @@ sentinel/
   store.py                   DuckDB alerts and decisions
 datagen/                     synthetic data generator, rules source, dirty variant, checks
 scripts/llm_bakeoff.py       compare local LLMs on grounding, latency and tokens
-data/                        sample, dirty, ground truth, rules (app DB in data/app/)
+data/                        Gulf Bank sample/dirty/ground truth/rules; data/northern_sme/ second portfolio
 docs/                        architecture, implementation and UI guides
 sql/schema.sql               DuckDB DDL for inputs and outputs
 FINAL_ARCHITECTURE.md        team architecture document
@@ -353,5 +363,3 @@ models.ipynb                 model exploration notebook
 - **Point-in-time history** for past dates approximates partial payments.
 - **Operations:** single user, no authentication; the app database is local; no automated
   test suite (data checks and the accuracy panel only).
-- **Generated rules:** `datagen/rules.py` still holds the earlier bands, so regenerating the
-  data would revert the score bands to 25/45/70.

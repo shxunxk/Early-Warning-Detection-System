@@ -132,7 +132,7 @@ The forecast is **advisory** and never changes the rule-based score or tier.
 ### 4.1 Loading data
 | Element | Type | Behaviour |
 |---|---|---|
-| **Bundled dataset** | Dropdown | *Sample portfolio (clean)*: the 600-customer synthetic portfolio. *Sample portfolio (dirty, for validation)*: the same data with 72 deliberate defects |
+| **Bundled dataset** | Dropdown | *Synthetic Gulf Bank · 600 customers (clean)*; *Synthetic Gulf Bank · dirty (validation test)* (72 deliberate defects); *Northern Emirates Commercial Bank · 1,200 customers, SME-heavy (clean)*; *Northern Emirates Commercial Bank · dirty (validation test)*. The accuracy panel on Portfolio uses the matching ground truth for each clean dataset. Alerts on Home and Review are scoped to the loaded dataset's customers |
 | **Load bundled dataset** | Primary button | Loads and validates the selected dataset, then refreshes every page. Results are cached, so switching back is instant |
 | **…or upload files** | File drop zone | Accepts multiple `.csv`, `.xlsx` or `.json` files (200 MB each). Tables are recognised by file or sheet name (e.g. `customers.csv`, a workbook with a `repayments` sheet, `loans.json` → facilities) |
 | **Validate uploaded files** | Button (appears after files are chosen) | Reads, maps headers, validates and replaces the current dataset. The sidebar then shows *Upload (N files)* |

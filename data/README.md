@@ -10,6 +10,22 @@ statement 4). No real customers, PII or bank data. Setting: a UAE bank, amounts 
 - **Regenerate:** `uv run python datagen/generate.py [--customers N] [--seed S]`
 - **Verify:** `uv run python datagen/checks.py` (41 consistency checks; clean set passes all)
 
+## Second portfolio: Northern Emirates Commercial Bank
+
+`data/northern_sme/` has the same schema, generated with
+`uv run python datagen/generate.py --profile northern_sme --out data/northern_sme`
+(profile in `datagen/config.py → PROFILES`; summary in `data/northern_sme/PROFILE.md`).
+
+| | Gulf Bank (default) | Northern Emirates |
+|---|---|---|
+| Customers / SME share | 600 / 30% | 1,200 / 45% |
+| Footprint | Dubai, Abu Dhabi led | Sharjah, Ajman, RAK led |
+| Median salary | ~AED 16k | ~AED 12k (mid-market) |
+| Customer IDs | `CIF1xxxxx` | `CIF5xxxxx` |
+| NPL by value | 0.2% | 5.6% (retail 3.4%, SME 5.9%) |
+| Extra archetypes | — | `LEGACY_NPL`, `SME_LEGACY_NPL`: defaulted 5–20 months before as-of, token payments only; retail defaults are recent (median ~210 DPD, i.e. before typical write-off), SME workouts older (median ~330 DPD) |
+| Clusters | Construction (Sharjah/Ajman), hospitality staff (Dubai) | Logistics (Sharjah/RAK), retail-trade staff (Sharjah/Ajman), restaurants (Ajman/Sharjah) |
+
 ## Layout
 
 ```
