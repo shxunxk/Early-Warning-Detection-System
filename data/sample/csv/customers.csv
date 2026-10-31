@@ -1,601 +1,601 @@
-customer_id,customer_name,customer_type,date_of_birth,employment_type,employment_or_business_category,customer_segment,portfolio,emirate,customer_since,onboarding_risk_grade,salary_transfer_flag,declared_monthly_income,declared_annual_turnover,years_in_business,legal_form,relationship_manager_id
-CIF100001,Hassan Brown,INDIVIDUAL,1995-02-15,SALARIED,Education,Mass Affluent,Consumer Banking,Abu Dhabi,2023-01-02,B,Y,20700.0,,,,RM-10
-CIF100002,Omar Santos,INDIVIDUAL,1985-06-07,SALARIED,Hospitality & Tourism,Mass Affluent,Consumer Banking,Dubai,2026-08-03,C,Y,16800.0,,,,RM-11
-CIF100003,Zainab Qureshi,INDIVIDUAL,1973-03-11,SELF_EMPLOYED,Self-Employed Professional,Mass Affluent,Consumer Banking,Sharjah,2022-02-04,C,N,26000.0,,,,RM-01
-CIF100004,Zainab Al Suwaidi,INDIVIDUAL,1976-10-06,SALARIED,Healthcare,Mass,Consumer Banking,Abu Dhabi,2018-01-05,C,N,11900.0,,,,
-CIF100005,Ayesha Rahman,INDIVIDUAL,1994-10-24,SALARIED,Aviation,Mass,Consumer Banking,Dubai,2017-02-06,A,Y,11700.0,,,,
-CIF100006,Huda Taylor,INDIVIDUAL,1976-06-20,SALARIED,Government,Mass Affluent,Consumer Banking,Abu Dhabi,2020-05-07,A,Y,28400.0,,,,RM-07
-CIF100007,Grace Al Ketbi,INDIVIDUAL,1981-08-16,SALARIED,Education,Mass,Consumer Banking,Sharjah,2020-04-08,B,Y,7400.0,,,,
-CIF100008,Rahul Mathew,INDIVIDUAL,1971-01-24,SALARIED,Healthcare,Mass,Consumer Banking,Dubai,2017-08-09,C,Y,9700.0,,,,
-CIF100009,Omar Wilson,INDIVIDUAL,1990-01-03,SALARIED,Healthcare,Mass Affluent,Consumer Banking,Dubai,2023-09-10,B,Y,22600.0,,,,RM-09
-CIF100010,David Menon,INDIVIDUAL,1983-09-18,SALARIED,Education,Mass,Consumer Banking,Dubai,2018-02-11,D,Y,13600.0,,,,
-CIF100011,Hana Reddy,INDIVIDUAL,1965-04-21,SALARIED,Oil & Gas,Affluent,Consumer Banking,Sharjah,2015-09-12,C,N,59300.0,,,,RM-01
-CIF100012,Meera Qureshi,INDIVIDUAL,1985-11-01,SALARIED,Oil & Gas,Mass Affluent,Consumer Banking,Dubai,2016-02-13,B,Y,37400.0,,,,RM-09
-CIF100013,Deepa Al Suwaidi,INDIVIDUAL,1980-03-10,SALARIED,Education,Mass Affluent,Consumer Banking,Abu Dhabi,2020-07-14,D,Y,15500.0,,,,RM-03
-CIF100014,Joseph Khan,INDIVIDUAL,1997-12-12,SALARIED,Healthcare,Mass Affluent,Consumer Banking,Dubai,2021-05-15,D,Y,23600.0,,,,RM-10
-CIF100015,Samir Reddy,INDIVIDUAL,1984-07-15,SALARIED,Education,Mass Affluent,Consumer Banking,Dubai,2022-12-16,A,N,15600.0,,,,RM-05
-CIF100016,Rohan Thomas,INDIVIDUAL,1994-08-21,SALARIED,Government,Mass Affluent,Consumer Banking,Dubai,2024-06-17,A,N,20100.0,,,,RM-10
-CIF100017,Noura George,INDIVIDUAL,1994-12-09,SALARIED,Healthcare,Mass,Consumer Banking,Sharjah,2023-09-18,D,Y,11700.0,,,,
-CIF100018,Omar Brown,INDIVIDUAL,1993-02-25,SALARIED,Government,Mass,Consumer Banking,Umm Al Quwain,2015-11-19,B,N,16300.0,,,,
-CIF100019,Imran Hamdan,INDIVIDUAL,1983-09-21,SALARIED,Hospitality & Tourism,Mass Affluent,Consumer Banking,Dubai,2017-02-20,D,Y,18400.0,,,,RM-12
-CIF100020,Priya Varghese,INDIVIDUAL,2002-03-08,SALARIED,Banking & Finance,Affluent,Consumer Banking,Ajman,2019-01-21,A,Y,60300.0,,,,RM-10
-CIF100021,Mark Pereira,INDIVIDUAL,1998-04-15,SALARIED,Government,Mass Affluent,Consumer Banking,Dubai,2016-09-22,C,Y,33300.0,,,,RM-06
-CIF100022,Deepa Sharma,INDIVIDUAL,1998-06-15,SALARIED,Government,Mass Affluent,Consumer Banking,Dubai,2019-09-23,B,N,20500.0,,,,RM-12
-CIF100023,Saeed Reyes,INDIVIDUAL,2003-01-28,SALARIED,Government,Mass Affluent,Consumer Banking,Dubai,2022-09-24,D,Y,27700.0,,,,RM-09
-CIF100024,John Wilson,INDIVIDUAL,1985-03-10,SALARIED,Government,Mass Affluent,Consumer Banking,Sharjah,2017-08-25,B,Y,19800.0,,,,RM-08
-CIF100025,Huda Saleh,INDIVIDUAL,1987-07-07,SALARIED,Hospitality & Tourism,Mass,Consumer Banking,Abu Dhabi,2024-04-26,A,Y,5400.0,,,,
-CIF100026,Ana Mathew,INDIVIDUAL,1999-12-05,SALARIED,Government,Affluent,Consumer Banking,Dubai,2017-07-27,A,Y,48900.0,,,,RM-02
-CIF100027,Kiran Rahman,INDIVIDUAL,1986-08-15,SALARIED,Government,Mass Affluent,Consumer Banking,Dubai,2022-01-01,C,Y,27300.0,,,,RM-05
-CIF100028,Liza Patel,INDIVIDUAL,1968-08-16,SALARIED,Banking & Finance,Affluent,Consumer Banking,Dubai,2018-06-02,A,Y,106800.0,,,,RM-01
-CIF100029,Ana Saleh,INDIVIDUAL,1970-11-23,SALARIED,Government,Mass Affluent,Consumer Banking,Dubai,2020-12-03,D,Y,31900.0,,,,RM-12
-CIF100030,Hana Iyer,INDIVIDUAL,1978-11-13,SALARIED,Retail Trade,Mass,Consumer Banking,Ajman,2015-05-04,B,Y,9800.0,,,,
-CIF100031,Ayesha Iyer,INDIVIDUAL,1998-09-10,SALARIED,Banking & Finance,Mass,Consumer Banking,Dubai,2022-08-05,D,Y,13100.0,,,,
-CIF100032,Noura Rahman,INDIVIDUAL,1966-06-19,SALARIED,Healthcare,Mass Affluent,Consumer Banking,Sharjah,2021-01-06,C,Y,22600.0,,,,RM-10
-CIF100033,Rohan Reyes,INDIVIDUAL,1978-02-18,SALARIED,Hospitality & Tourism,Mass,Consumer Banking,Abu Dhabi,2015-08-07,D,Y,9600.0,,,,
-CIF100034,Yousef Smith,INDIVIDUAL,1966-12-03,SALARIED,Retail Trade,Mass,Consumer Banking,Sharjah,2020-08-08,B,Y,11400.0,,,,
-CIF100035,Hana Siddiqui,INDIVIDUAL,1974-10-26,SALARIED,Retail Trade,Mass,Consumer Banking,Abu Dhabi,2019-08-09,A,N,5400.0,,,,
-CIF100036,Deepa Brown,INDIVIDUAL,1967-10-06,SALARIED,Government,Mass Affluent,Consumer Banking,Dubai,2021-01-10,B,Y,30800.0,,,,RM-05
-CIF100037,Rohan Iyer,INDIVIDUAL,1993-07-13,SALARIED,Government,Mass Affluent,Consumer Banking,Ras Al Khaimah,2020-03-11,C,N,30500.0,,,,RM-03
-CIF100038,Khalid Hamdan,INDIVIDUAL,1970-12-12,SALARIED,Healthcare,Mass Affluent,Consumer Banking,Sharjah,2019-06-12,C,Y,35500.0,,,,RM-11
-CIF100039,Priya Reddy,INDIVIDUAL,1980-12-13,SALARIED,Education,Mass,Consumer Banking,Dubai,2022-01-13,A,N,7700.0,,,,
-CIF100040,Deepa Varghese,INDIVIDUAL,1972-01-03,SALARIED,IT & Telecom,Mass Affluent,Consumer Banking,Sharjah,2021-03-14,A,N,19200.0,,,,RM-02
-CIF100041,Rashid Al Mansoori,INDIVIDUAL,1969-10-23,SALARIED,Government,Mass Affluent,Consumer Banking,Dubai,2014-10-15,A,Y,19500.0,,,,RM-11
-CIF100042,Deepa Rahman,INDIVIDUAL,2003-03-02,SALARIED,Aviation,Mass,Consumer Banking,Sharjah,2023-02-16,D,Y,10900.0,,,,
-CIF100043,Faisal Haddad,INDIVIDUAL,1976-02-24,SALARIED,Banking & Finance,Affluent,Consumer Banking,Abu Dhabi,2016-08-17,C,Y,55700.0,,,,RM-01
-CIF100044,Jose Khan,INDIVIDUAL,2003-01-07,SALARIED,Hospitality & Tourism,Mass,Consumer Banking,Abu Dhabi,2021-10-18,A,N,11800.0,,,,
-CIF100045,Michael Reddy,INDIVIDUAL,1993-08-25,SELF_EMPLOYED,Self-Employed Professional,Mass Affluent,Consumer Banking,Sharjah,2020-02-19,B,N,21000.0,,,,RM-02
-CIF100046,Kiran Patel,INDIVIDUAL,1991-06-15,SALARIED,Hospitality & Tourism,Mass Affluent,Consumer Banking,Dubai,2015-12-20,B,Y,17500.0,,,,RM-02
-CIF100047,Bilal Hossain,INDIVIDUAL,1965-05-05,SALARIED,Education,Mass Affluent,Consumer Banking,Abu Dhabi,2023-11-21,B,Y,17100.0,,,,RM-03
-CIF100048,Grace Fernandes,INDIVIDUAL,2002-08-20,SALARIED,Banking & Finance,Mass Affluent,Consumer Banking,Abu Dhabi,2017-11-22,B,Y,17400.0,,,,RM-08
-CIF100049,Jose Al Suwaidi,INDIVIDUAL,1971-09-16,SALARIED,Hospitality & Tourism,Mass Affluent,Consumer Banking,Abu Dhabi,2017-05-23,B,Y,36900.0,,,,RM-12
-CIF100050,Rania Al Hashimi,INDIVIDUAL,1972-11-24,SALARIED,Retail Trade,Mass,Consumer Banking,Dubai,2019-08-24,B,Y,11600.0,,,,
-CIF100051,Nikhil Haddad,INDIVIDUAL,1997-05-11,SALARIED,Government,Mass,Consumer Banking,Ajman,2019-10-25,D,Y,11600.0,,,,
-CIF100052,Meera Iyer,INDIVIDUAL,1989-02-20,SALARIED,Construction,Mass,Consumer Banking,Abu Dhabi,2018-01-26,A,N,8000.0,,,,
-CIF100053,Liza Santos,INDIVIDUAL,2003-12-28,SALARIED,Banking & Finance,Mass Affluent,Consumer Banking,Sharjah,2024-07-27,B,Y,20300.0,,,,RM-10
-CIF100054,Hessa Sharma,INDIVIDUAL,1984-06-26,SALARIED,Government,Mass Affluent,Consumer Banking,Dubai,2021-01-01,A,Y,28100.0,,,,RM-03
-CIF100055,Samir Hossain,INDIVIDUAL,1994-04-07,SALARIED,Retail Trade,Mass,Consumer Banking,Dubai,2018-10-02,C,Y,5400.0,,,,
-CIF100056,Arjun Qureshi,INDIVIDUAL,1977-12-24,SALARIED,Healthcare,Mass Affluent,Consumer Banking,Dubai,2023-03-03,D,Y,26400.0,,,,RM-09
-CIF100057,Khalid Al Mansoori,INDIVIDUAL,1970-07-15,SALARIED,Aviation,Mass,Consumer Banking,Abu Dhabi,2018-09-04,A,Y,12100.0,,,,
-CIF100058,Priya Al Suwaidi,INDIVIDUAL,1976-06-12,SALARIED,Banking & Finance,Mass Affluent,Consumer Banking,Ras Al Khaimah,2016-06-05,B,Y,24000.0,,,,RM-08
-CIF100059,Maria Smith,INDIVIDUAL,1975-08-26,SALARIED,Hospitality & Tourism,Mass Affluent,Consumer Banking,Sharjah,2022-07-06,C,N,19700.0,,,,RM-08
-CIF100060,Hassan Al Shamsi,INDIVIDUAL,1965-08-12,SALARIED,Construction,Mass,Consumer Banking,Abu Dhabi,2024-07-07,C,Y,5400.0,,,,
-CIF100061,Amira Perera,INDIVIDUAL,1965-06-25,SALARIED,Government,Mass,Consumer Banking,Sharjah,2019-05-08,C,Y,16100.0,,,,
-CIF100062,Mohammed Al Hashimi,INDIVIDUAL,1986-10-07,SALARIED,Retail Trade,Mass,Consumer Banking,Ras Al Khaimah,2018-06-09,C,Y,6400.0,,,,
-CIF100063,Fatima Mathew,INDIVIDUAL,1988-10-11,SALARIED,Construction,Mass,Consumer Banking,Sharjah,2017-01-10,A,Y,6900.0,,,,
-CIF100064,Deepa Hamdan,INDIVIDUAL,1976-11-18,SALARIED,Hospitality & Tourism,Mass,Consumer Banking,Dubai,2017-02-11,C,Y,13200.0,,,,
-CIF100065,Rashid Pereira,INDIVIDUAL,1982-11-25,SALARIED,Retail Trade,Mass,Consumer Banking,Dubai,2015-08-12,C,Y,7700.0,,,,
-CIF100066,Amira Perera,INDIVIDUAL,1999-07-06,SALARIED,Oil & Gas,Mass Affluent,Consumer Banking,Dubai,2015-05-13,D,N,29500.0,,,,RM-09
-CIF100067,Grace Al Mansoori,INDIVIDUAL,1988-05-06,SALARIED,Government,Affluent,Consumer Banking,Dubai,2021-01-14,B,Y,49300.0,,,,RM-12
-CIF100068,Layla Santos,INDIVIDUAL,1990-11-11,SALARIED,Construction,Mass,Consumer Banking,Dubai,2026-06-15,C,Y,6800.0,,,,
-CIF100069,Hessa Nair,INDIVIDUAL,1992-04-05,SALARIED,Hospitality & Tourism,Mass,Consumer Banking,Dubai,2023-06-16,D,Y,6800.0,,,,
-CIF100070,Karim D'Souza,INDIVIDUAL,1980-09-08,SALARIED,Education,Mass Affluent,Consumer Banking,Umm Al Quwain,2016-06-17,A,Y,19700.0,,,,RM-11
-CIF100071,Mark George,INDIVIDUAL,1981-02-02,SELF_EMPLOYED,Self-Employed Professional,Mass Affluent,Consumer Banking,Dubai,2015-02-18,B,N,34200.0,,,,RM-04
-CIF100072,Khalid Fernandes,INDIVIDUAL,2002-01-24,SALARIED,Education,Mass,Consumer Banking,Dubai,2018-07-19,A,Y,13000.0,,,,
-CIF100073,Dina Haddad,INDIVIDUAL,1992-02-12,SALARIED,Healthcare,Mass Affluent,Consumer Banking,Dubai,2015-01-20,B,Y,24900.0,,,,RM-01
-CIF100074,Ana Qureshi,INDIVIDUAL,1990-08-07,SALARIED,Aviation,Mass Affluent,Consumer Banking,Dubai,2017-01-21,E,Y,19700.0,,,,RM-05
-CIF100075,Mariam Al Mansoori,INDIVIDUAL,1979-01-09,SALARIED,Education,Mass Affluent,Consumer Banking,Dubai,2022-11-22,A,Y,16700.0,,,,RM-12
-CIF100076,Joseph Al Mansoori,INDIVIDUAL,2002-09-24,SALARIED,Banking & Finance,Affluent,Consumer Banking,Abu Dhabi,2020-11-23,D,Y,51900.0,,,,RM-07
-CIF100077,Amira Al Ketbi,INDIVIDUAL,1965-08-26,SALARIED,Oil & Gas,Mass Affluent,Consumer Banking,Abu Dhabi,2020-03-24,C,Y,30700.0,,,,RM-05
-CIF100078,Rohan Nair,INDIVIDUAL,1972-11-01,SALARIED,Education,Mass Affluent,Consumer Banking,Dubai,2016-05-25,C,Y,18800.0,,,,RM-09
-CIF100079,Hessa D'Souza,INDIVIDUAL,1994-02-22,SALARIED,Healthcare,Mass Affluent,Consumer Banking,Abu Dhabi,2015-12-26,A,Y,19700.0,,,,RM-09
-CIF100080,Omar Silva,INDIVIDUAL,1964-07-26,SELF_EMPLOYED,Self-Employed Professional,Affluent,Consumer Banking,Dubai,2020-11-27,A,N,51000.0,,,,RM-02
-CIF100081,Ahmed Al Hashimi,INDIVIDUAL,1964-11-06,SALARIED,Retail Trade,Mass,Consumer Banking,Abu Dhabi,2020-08-01,A,Y,11000.0,,,,
-CIF100082,Michael Hamdan,INDIVIDUAL,1982-09-22,SALARIED,Retail Trade,Mass,Consumer Banking,Abu Dhabi,2022-04-02,C,Y,11100.0,,,,
-CIF100083,Jose D'Souza,INDIVIDUAL,1966-02-22,SALARIED,Construction,Mass,Consumer Banking,Dubai,2018-09-03,D,Y,12400.0,,,,
-CIF100084,Dina Fernandes,INDIVIDUAL,1968-09-19,SALARIED,Banking & Finance,Mass,Consumer Banking,Abu Dhabi,2018-07-04,C,Y,15400.0,,,,
-CIF100085,Hana Siddiqui,INDIVIDUAL,1976-11-25,SALARIED,Retail Trade,Mass,Consumer Banking,Ajman,2015-09-05,A,Y,5200.0,,,,
-CIF100086,Priya Nair,INDIVIDUAL,1978-05-18,SALARIED,Healthcare,Affluent,Consumer Banking,Ajman,2018-07-06,B,N,43800.0,,,,RM-08
-CIF100087,Tariq Al Suwaidi,INDIVIDUAL,1987-05-12,SALARIED,Education,Mass Affluent,Consumer Banking,Dubai,2026-07-07,D,Y,20500.0,,,,RM-04
-CIF100088,Noura Varghese,INDIVIDUAL,1990-04-14,SALARIED,Government,Mass Affluent,Consumer Banking,Ajman,2019-04-08,A,Y,24900.0,,,,RM-03
-CIF100089,Layla Hamdan,INDIVIDUAL,1993-11-04,SELF_EMPLOYED,Self-Employed Professional,Mass Affluent,Consumer Banking,Abu Dhabi,2022-05-09,D,N,30100.0,,,,RM-04
-CIF100090,Mariam Thomas,INDIVIDUAL,1980-01-12,SELF_EMPLOYED,Self-Employed Professional,Mass,Consumer Banking,Ras Al Khaimah,2017-10-10,A,N,15400.0,,,,
-CIF100091,Saeed Al Shamsi,INDIVIDUAL,2000-04-13,SALARIED,Hospitality & Tourism,Mass,Consumer Banking,Dubai,2023-03-11,B,Y,7700.0,,,,
-CIF100092,Liza Patel,INDIVIDUAL,2002-03-17,SALARIED,Healthcare,Mass Affluent,Consumer Banking,Sharjah,2018-07-12,C,Y,19800.0,,,,RM-02
-CIF100093,Mariam Perera,INDIVIDUAL,1993-11-20,SALARIED,Education,Mass Affluent,Consumer Banking,Dubai,2018-02-13,A,Y,19300.0,,,,RM-09
-CIF100094,Maria Farouk,INDIVIDUAL,2003-10-10,SALARIED,Banking & Finance,Mass Affluent,Consumer Banking,Ajman,2022-12-14,A,Y,18000.0,,,,RM-06
-CIF100095,Imran Santos,INDIVIDUAL,1986-02-05,SELF_EMPLOYED,Self-Employed Professional,Affluent,Consumer Banking,Ras Al Khaimah,2017-04-15,A,N,57700.0,,,,RM-02
-CIF100096,Bilal Malik,INDIVIDUAL,2001-06-28,SALARIED,IT & Telecom,Mass Affluent,Consumer Banking,Abu Dhabi,2016-02-16,C,N,33500.0,,,,RM-07
-CIF100097,Mark Nair,INDIVIDUAL,1971-07-02,SALARIED,Government,Mass Affluent,Consumer Banking,Dubai,2020-12-17,C,Y,31900.0,,,,RM-08
-CIF100098,Amira Farouk,INDIVIDUAL,1973-01-16,SALARIED,IT & Telecom,Mass,Consumer Banking,Abu Dhabi,2017-07-18,A,Y,14100.0,,,,
-CIF100099,Rohan Smith,INDIVIDUAL,1978-04-12,SALARIED,Hospitality & Tourism,Mass,Consumer Banking,Ras Al Khaimah,2019-04-19,B,Y,11400.0,,,,
-CIF100100,Fatima Varghese,INDIVIDUAL,1964-11-17,SALARIED,Healthcare,Mass Affluent,Consumer Banking,Abu Dhabi,2026-06-01,B,Y,21100.0,,,,RM-06
-CIF100101,Sana Patel,INDIVIDUAL,1964-09-21,SALARIED,Oil & Gas,Affluent,Consumer Banking,Dubai,2021-11-02,D,Y,66500.0,,,,RM-02
-CIF100102,Mariam Hossain,INDIVIDUAL,1985-06-08,SALARIED,Hospitality & Tourism,Mass,Consumer Banking,Dubai,2015-08-03,C,Y,7100.0,,,,
-CIF100103,Yousef Mathew,INDIVIDUAL,1966-11-22,SALARIED,Healthcare,Mass Affluent,Consumer Banking,Sharjah,2022-05-04,A,Y,35500.0,,,,RM-09
-CIF100104,Tariq George,INDIVIDUAL,1998-07-20,SALARIED,IT & Telecom,Mass Affluent,Consumer Banking,Abu Dhabi,2017-04-05,B,Y,28400.0,,,,RM-09
-CIF100105,Dina George,INDIVIDUAL,1982-05-20,SALARIED,Healthcare,Mass,Consumer Banking,Dubai,2020-10-06,D,N,13900.0,,,,
-CIF100106,Arjun Rahman,INDIVIDUAL,1986-08-23,SALARIED,Healthcare,Mass Affluent,Consumer Banking,Abu Dhabi,2017-11-07,E,N,30700.0,,,,RM-03
-CIF100107,Kiran Saleh,INDIVIDUAL,1970-08-13,SALARIED,Construction,Mass,Consumer Banking,Abu Dhabi,2017-10-08,B,Y,11400.0,,,,
-CIF100108,Imran Al Mansoori,INDIVIDUAL,1993-07-05,SALARIED,Banking & Finance,Mass Affluent,Consumer Banking,Ajman,2022-08-09,A,Y,21500.0,,,,RM-06
-CIF100109,Hessa Al Nuaimi,INDIVIDUAL,1992-03-27,SALARIED,Government,Mass Affluent,Consumer Banking,Umm Al Quwain,2017-08-10,A,N,23500.0,,,,RM-06
-CIF100110,Faisal Al Shamsi,INDIVIDUAL,1964-03-19,SALARIED,Construction,Mass,Consumer Banking,Ajman,2016-04-11,B,Y,11300.0,,,,
-CIF100111,Mohammed Siddiqui,INDIVIDUAL,1987-01-28,SALARIED,Hospitality & Tourism,Mass,Consumer Banking,Umm Al Quwain,2015-12-12,B,Y,10500.0,,,,
-CIF100112,Arjun Taylor,INDIVIDUAL,1964-10-10,SALARIED,Education,Mass Affluent,Consumer Banking,Abu Dhabi,2022-11-13,B,Y,19600.0,,,,RM-11
-CIF100113,Dina Mathew,INDIVIDUAL,1993-02-16,SALARIED,Aviation,Mass,Consumer Banking,Ajman,2015-09-14,A,Y,11500.0,,,,
-CIF100114,Ravi Brown,INDIVIDUAL,2000-01-10,SALARIED,Government,Mass Affluent,Consumer Banking,Sharjah,2015-05-15,C,Y,18200.0,,,,RM-10
-CIF100115,Sarah Hamdan,INDIVIDUAL,1969-07-21,SALARIED,Aviation,Mass Affluent,Consumer Banking,Dubai,2019-09-16,B,Y,38600.0,,,,RM-03
-CIF100116,Omar Nair,INDIVIDUAL,1965-02-22,SALARIED,Banking & Finance,Mass Affluent,Consumer Banking,Sharjah,2015-05-17,E,Y,20200.0,,,,RM-03
-CIF100117,Liza Varghese,INDIVIDUAL,1988-03-25,SALARIED,Hospitality & Tourism,Mass,Consumer Banking,Dubai,2020-11-18,C,Y,14900.0,,,,
-CIF100118,Imran Smith,INDIVIDUAL,1995-05-24,SALARIED,Construction,Mass,Consumer Banking,Abu Dhabi,2023-12-19,B,Y,5800.0,,,,
-CIF100119,Hessa Iyer,INDIVIDUAL,1979-05-16,SALARIED,Education,Mass,Consumer Banking,Sharjah,2016-05-20,B,Y,13900.0,,,,
-CIF100120,Tariq Fernandes,INDIVIDUAL,1991-08-26,SALARIED,Government,Mass Affluent,Consumer Banking,Dubai,2023-07-21,C,Y,24400.0,,,,RM-11
-CIF100121,Deepa Al Nuaimi,INDIVIDUAL,1985-03-09,SALARIED,Government,Affluent,Consumer Banking,Abu Dhabi,2026-05-22,A,Y,52600.0,,,,RM-03
-CIF100122,John Menon,INDIVIDUAL,1987-03-02,SALARIED,IT & Telecom,Mass Affluent,Consumer Banking,Dubai,2020-10-23,D,Y,16700.0,,,,RM-12
-CIF100123,Mariam Khoury,INDIVIDUAL,1985-08-12,SALARIED,Government,Mass,Consumer Banking,Dubai,2026-08-24,B,Y,15000.0,,,,
-CIF100124,Michael Mathew,INDIVIDUAL,1985-12-03,SALARIED,Government,Mass Affluent,Consumer Banking,Dubai,2022-09-25,B,N,30200.0,,,,RM-10
-CIF100125,Zainab Al Suwaidi,INDIVIDUAL,1964-10-17,SELF_EMPLOYED,Self-Employed Professional,Mass Affluent,Consumer Banking,Dubai,2016-08-26,A,N,30600.0,,,,RM-03
-CIF100126,Emma Iyer,INDIVIDUAL,1986-06-23,SALARIED,Retail Trade,Mass Affluent,Consumer Banking,Dubai,2022-05-27,B,Y,20100.0,,,,RM-12
-CIF100127,Hassan Nair,INDIVIDUAL,1990-05-09,SALARIED,Education,Mass Affluent,Consumer Banking,Abu Dhabi,2015-09-01,C,Y,16500.0,,,,RM-07
-CIF100128,Rania George,INDIVIDUAL,1982-04-15,SALARIED,Banking & Finance,Mass Affluent,Consumer Banking,Sharjah,2024-08-02,D,Y,22300.0,,,,RM-12
-CIF100129,Mark Pereira,INDIVIDUAL,2001-08-02,SALARIED,IT & Telecom,Mass Affluent,Consumer Banking,Dubai,2015-01-03,C,Y,17700.0,,,,RM-01
-CIF100130,Dina Varghese,INDIVIDUAL,1966-04-25,SALARIED,Education,Mass,Consumer Banking,Sharjah,2018-06-04,A,Y,15300.0,,,,
-CIF100131,Samir Perera,INDIVIDUAL,2000-12-23,SALARIED,Retail Trade,Mass,Consumer Banking,Fujairah,2016-08-05,B,Y,10200.0,,,,
-CIF100132,David Mathew,INDIVIDUAL,1978-12-21,SALARIED,Aviation,Mass Affluent,Consumer Banking,Abu Dhabi,2016-01-06,C,Y,27900.0,,,,RM-06
-CIF100133,Liza Siddiqui,INDIVIDUAL,1999-01-01,SALARIED,Oil & Gas,Affluent,Consumer Banking,Ajman,2021-08-07,C,Y,43600.0,,,,RM-06
-CIF100134,Noura Reddy,INDIVIDUAL,1965-07-27,SALARIED,Hospitality & Tourism,Mass,Consumer Banking,Abu Dhabi,2016-02-08,A,Y,10900.0,,,,
-CIF100135,Ravi Varghese,INDIVIDUAL,1994-01-17,SALARIED,Healthcare,Mass Affluent,Consumer Banking,Fujairah,2026-05-09,A,Y,22500.0,,,,RM-11
-CIF100136,Grace Sharma,INDIVIDUAL,1986-03-20,SELF_EMPLOYED,Self-Employed Professional,Affluent,Consumer Banking,Dubai,2015-03-10,D,N,124100.0,,,,RM-05
-CIF100137,John Al Hashimi,INDIVIDUAL,1966-02-21,SALARIED,Government,Mass Affluent,Consumer Banking,Sharjah,2022-08-11,A,Y,34200.0,,,,RM-11
-CIF100138,Rashid Al Ketbi,INDIVIDUAL,1986-03-28,SALARIED,Healthcare,Mass,Consumer Banking,Dubai,2016-01-12,C,N,15600.0,,,,
-CIF100139,Priya Malik,INDIVIDUAL,1975-12-23,SALARIED,Aviation,Mass,Consumer Banking,Dubai,2024-04-13,E,N,9800.0,,,,
-CIF100140,Rashid Iyer,INDIVIDUAL,1968-04-11,SALARIED,Education,Mass,Consumer Banking,Dubai,2020-05-14,B,Y,12400.0,,,,
-CIF100141,Rahul Varghese,INDIVIDUAL,1972-11-06,SALARIED,Hospitality & Tourism,Mass,Consumer Banking,Dubai,2026-07-15,E,Y,7400.0,,,,
-CIF100142,Hessa Santos,INDIVIDUAL,1966-02-06,SALARIED,Government,Mass Affluent,Consumer Banking,Dubai,2020-01-16,A,Y,24500.0,,,,RM-04
-CIF100143,Omar Khan,INDIVIDUAL,1998-05-04,SALARIED,Hospitality & Tourism,Mass,Consumer Banking,Ras Al Khaimah,2016-12-17,B,N,5300.0,,,,
-CIF100144,Deepa Haddad,INDIVIDUAL,1996-08-05,SALARIED,Retail Trade,Mass,Consumer Banking,Dubai,2019-01-18,B,Y,10400.0,,,,
-CIF100145,Maria Thomas,INDIVIDUAL,1982-07-01,SALARIED,Banking & Finance,Mass Affluent,Consumer Banking,Abu Dhabi,2026-07-19,B,Y,18800.0,,,,RM-06
-CIF100146,Sarah Varghese,INDIVIDUAL,1984-08-02,SALARIED,Retail Trade,Mass Affluent,Consumer Banking,Abu Dhabi,2023-08-20,A,Y,17100.0,,,,RM-06
-CIF100147,Samir Wilson,INDIVIDUAL,1985-08-06,SALARIED,Hospitality & Tourism,Mass,Consumer Banking,Dubai,2021-01-21,C,Y,8100.0,,,,
-CIF100148,Rohan Qureshi,INDIVIDUAL,1989-07-02,SALARIED,Healthcare,Mass Affluent,Consumer Banking,Sharjah,2020-09-22,A,N,22000.0,,,,RM-06
-CIF100149,Michael Al Shamsi,INDIVIDUAL,1974-09-08,SALARIED,Hospitality & Tourism,Mass,Consumer Banking,Ajman,2017-07-23,A,Y,5600.0,,,,
-CIF100150,Meera Menon,INDIVIDUAL,1996-11-05,SALARIED,IT & Telecom,Mass Affluent,Consumer Banking,Sharjah,2016-03-24,B,Y,27000.0,,,,RM-10
-CIF100151,Hana Reyes,INDIVIDUAL,1987-06-07,SALARIED,Retail Trade,Mass,Consumer Banking,Dubai,2022-03-25,C,Y,5700.0,,,,
-CIF100152,Yousef Mathew,INDIVIDUAL,1990-05-21,SALARIED,Healthcare,Mass Affluent,Consumer Banking,Abu Dhabi,2018-05-26,B,Y,20900.0,,,,RM-10
-CIF100153,Imran Qureshi,INDIVIDUAL,1998-01-27,SALARIED,Healthcare,Mass,Consumer Banking,Sharjah,2020-12-27,B,Y,7900.0,,,,
-CIF100154,Nikhil Al Mansoori,INDIVIDUAL,1964-10-03,SALARIED,IT & Telecom,Mass Affluent,Consumer Banking,Abu Dhabi,2019-08-01,B,Y,19200.0,,,,RM-06
-CIF100155,Samir Wilson,INDIVIDUAL,1996-10-02,SALARIED,Aviation,Affluent,Consumer Banking,Dubai,2016-05-02,B,N,51800.0,,,,RM-12
-CIF100156,David Farouk,INDIVIDUAL,1991-12-16,SALARIED,Hospitality & Tourism,Mass,Consumer Banking,Dubai,2022-02-03,D,Y,8600.0,,,,
-CIF100157,Layla Rahman,INDIVIDUAL,2001-09-05,SALARIED,Aviation,Mass,Consumer Banking,Dubai,2022-05-04,C,N,14800.0,,,,
-CIF100158,Ahmed Reddy,INDIVIDUAL,1998-07-08,SALARIED,Banking & Finance,Mass Affluent,Consumer Banking,Fujairah,2017-04-05,D,Y,19900.0,,,,RM-09
-CIF100159,Amira Silva,INDIVIDUAL,1981-07-11,SALARIED,Aviation,Mass,Consumer Banking,Dubai,2015-02-06,C,Y,11100.0,,,,
-CIF100160,Rashid Santos,INDIVIDUAL,1994-03-05,SALARIED,Healthcare,Mass,Consumer Banking,Dubai,2018-10-07,B,Y,8000.0,,,,
-CIF100161,Yousef Varghese,INDIVIDUAL,1994-12-03,SELF_EMPLOYED,Self-Employed Professional,Mass Affluent,Consumer Banking,Dubai,2024-05-08,C,N,40000.0,,,,RM-09
-CIF100162,Noura Mathew,INDIVIDUAL,2000-03-23,SALARIED,Banking & Finance,Affluent,Consumer Banking,Dubai,2017-05-09,A,Y,56200.0,,,,RM-08
-CIF100163,Sana Hamdan,INDIVIDUAL,1987-11-18,SALARIED,IT & Telecom,Mass Affluent,Consumer Banking,Dubai,2019-01-10,A,Y,28500.0,,,,RM-01
-CIF100164,Samir Perera,INDIVIDUAL,1972-07-02,SALARIED,Aviation,Mass,Consumer Banking,Dubai,2026-07-11,A,Y,6800.0,,,,
-CIF100165,Rashid Malik,INDIVIDUAL,1973-01-25,SALARIED,IT & Telecom,Mass,Consumer Banking,Dubai,2016-05-12,B,Y,10800.0,,,,
-CIF100166,Samir Iyer,INDIVIDUAL,1974-07-17,SALARIED,Banking & Finance,Mass Affluent,Consumer Banking,Abu Dhabi,2023-10-13,C,Y,29200.0,,,,RM-12
-CIF100167,Rohan Rahman,INDIVIDUAL,1985-12-01,SALARIED,Retail Trade,Mass,Consumer Banking,Sharjah,2023-11-14,C,Y,5600.0,,,,
-CIF100168,Rahul Siddiqui,INDIVIDUAL,1979-11-03,SELF_EMPLOYED,Self-Employed Professional,Mass Affluent,Consumer Banking,Dubai,2020-10-15,D,N,19200.0,,,,RM-10
-CIF100169,Mark Hossain,INDIVIDUAL,1964-04-19,SALARIED,Construction,Mass,Consumer Banking,Abu Dhabi,2023-11-16,B,Y,5000.0,,,,
-CIF100170,Samir Iyer,INDIVIDUAL,1975-10-01,SALARIED,Government,Mass Affluent,Consumer Banking,Ajman,2015-04-17,A,Y,34500.0,,,,RM-11
-CIF100171,Tariq Taylor,INDIVIDUAL,1982-07-12,SALARIED,Construction,Mass,Consumer Banking,Dubai,2017-03-18,D,Y,11300.0,,,,
-CIF100172,Faisal Al Hashimi,INDIVIDUAL,1999-06-04,SALARIED,Hospitality & Tourism,Mass,Consumer Banking,Abu Dhabi,2021-02-19,C,N,5100.0,,,,
-CIF100173,Mark Hossain,INDIVIDUAL,1997-11-19,SALARIED,Retail Trade,Mass,Consumer Banking,Fujairah,2018-01-20,A,Y,8300.0,,,,
-CIF100174,Rania Brown,INDIVIDUAL,2002-02-15,SALARIED,Government,Affluent,Consumer Banking,Dubai,2018-10-21,B,Y,56600.0,,,,RM-07
-CIF100175,Aisha Haddad,INDIVIDUAL,1968-03-14,SALARIED,Hospitality & Tourism,Mass,Consumer Banking,Dubai,2018-12-22,A,Y,8000.0,,,,
-CIF100176,Jose Wilson,INDIVIDUAL,1997-11-03,SALARIED,Healthcare,Mass Affluent,Consumer Banking,Ajman,2016-11-23,D,Y,24700.0,,,,RM-10
-CIF100177,David Haddad,INDIVIDUAL,1992-08-13,SALARIED,Retail Trade,Mass,Consumer Banking,Abu Dhabi,2020-12-24,C,Y,14100.0,,,,
-CIF100178,Layla Nair,INDIVIDUAL,1986-02-28,SALARIED,Government,Mass Affluent,Consumer Banking,Dubai,2023-02-25,C,Y,17200.0,,,,RM-06
-CIF100179,Mark Qureshi,INDIVIDUAL,1970-09-26,SALARIED,Education,Mass Affluent,Consumer Banking,Abu Dhabi,2020-09-26,A,Y,29500.0,,,,RM-08
-CIF100180,Hassan Siddiqui,INDIVIDUAL,1981-06-28,SALARIED,Education,Mass,Consumer Banking,Abu Dhabi,2019-03-27,A,Y,9600.0,,,,
-CIF100181,Michael Varghese,INDIVIDUAL,1975-01-07,SALARIED,Education,Mass,Consumer Banking,Sharjah,2016-04-01,B,Y,13800.0,,,,
-CIF100182,Ana Thomas,INDIVIDUAL,1997-03-07,SALARIED,Hospitality & Tourism,Mass,Consumer Banking,Sharjah,2019-09-02,E,Y,8400.0,,,,
-CIF100183,Amira Al Mansoori,INDIVIDUAL,1978-07-22,SALARIED,Oil & Gas,Mass Affluent,Consumer Banking,Dubai,2021-11-03,D,Y,33900.0,,,,RM-12
-CIF100184,Yousef Varghese,INDIVIDUAL,1969-12-13,SALARIED,Retail Trade,Mass,Consumer Banking,Dubai,2020-07-04,A,N,6400.0,,,,
-CIF100185,Bilal Patel,INDIVIDUAL,1972-07-18,SALARIED,Retail Trade,Mass,Consumer Banking,Abu Dhabi,2018-12-05,A,Y,12000.0,,,,
-CIF100186,Amira Santos,INDIVIDUAL,1990-02-22,SALARIED,Aviation,Mass,Consumer Banking,Dubai,2015-11-06,C,Y,10500.0,,,,
-CIF100187,Mohammed Hossain,INDIVIDUAL,1996-10-01,SALARIED,Government,Mass Affluent,Consumer Banking,Abu Dhabi,2020-10-07,B,Y,29500.0,,,,RM-07
-CIF100188,Ana Nair,INDIVIDUAL,1982-03-17,SALARIED,Aviation,Mass Affluent,Consumer Banking,Dubai,2022-10-08,C,Y,22000.0,,,,RM-07
-CIF100189,Tariq Menon,INDIVIDUAL,1977-12-14,SELF_EMPLOYED,Self-Employed Professional,Mass,Consumer Banking,Dubai,2022-01-09,B,N,9600.0,,,,
-CIF100190,Emma Taylor,INDIVIDUAL,2002-03-18,SALARIED,Government,Mass,Consumer Banking,Abu Dhabi,2015-03-10,B,Y,11700.0,,,,
-CIF100191,Saeed Patel,INDIVIDUAL,1999-07-13,SALARIED,Banking & Finance,Mass Affluent,Consumer Banking,Dubai,2022-12-11,B,N,23300.0,,,,RM-02
-CIF100192,Tariq Smith,INDIVIDUAL,1983-01-25,SALARIED,Government,Mass Affluent,Consumer Banking,Ras Al Khaimah,2026-05-12,A,N,34000.0,,,,RM-12
-CIF100193,Maria Haddad,INDIVIDUAL,1981-08-17,SALARIED,Hospitality & Tourism,Mass,Consumer Banking,Dubai,2021-09-13,D,Y,5400.0,,,,
-CIF100194,Mohammed Menon,INDIVIDUAL,1974-02-21,SALARIED,Retail Trade,Mass,Consumer Banking,Fujairah,2021-12-14,D,Y,5100.0,,,,
-CIF100195,Hana Saleh,INDIVIDUAL,1985-03-24,SALARIED,Banking & Finance,Affluent,Consumer Banking,Dubai,2023-12-15,C,Y,62300.0,,,,RM-06
-CIF100196,Aisha Patel,INDIVIDUAL,1969-05-09,SALARIED,Government,Mass,Consumer Banking,Abu Dhabi,2019-06-16,A,N,12800.0,,,,
-CIF100197,Liza Hamdan,INDIVIDUAL,2002-06-23,SALARIED,Aviation,Mass Affluent,Consumer Banking,Sharjah,2021-08-17,A,N,21200.0,,,,RM-08
-CIF100198,Noura Reddy,INDIVIDUAL,1984-06-04,SALARIED,Hospitality & Tourism,Mass,Consumer Banking,Dubai,2017-05-18,A,Y,12700.0,,,,
-CIF100199,Faisal Saleh,INDIVIDUAL,1992-05-01,SALARIED,Healthcare,Mass Affluent,Consumer Banking,Dubai,2018-08-19,B,Y,26400.0,,,,RM-04
-CIF100200,Ayesha Brown,INDIVIDUAL,1973-05-24,SALARIED,Retail Trade,Mass,Consumer Banking,Abu Dhabi,2015-09-01,A,N,8200.0,,,,
-CIF100201,Mark Varghese,INDIVIDUAL,1983-08-08,SALARIED,Construction,Mass,Consumer Banking,Sharjah,2024-06-02,C,Y,12500.0,,,,
-CIF100202,Samir Siddiqui,INDIVIDUAL,2000-06-03,SALARIED,Healthcare,Mass Affluent,Consumer Banking,Dubai,2017-08-03,A,N,31500.0,,,,RM-04
-CIF100203,Grace Patel,INDIVIDUAL,1985-01-03,SALARIED,IT & Telecom,Mass Affluent,Consumer Banking,Abu Dhabi,2019-09-04,A,N,26200.0,,,,RM-09
-CIF100204,Sana Nair,INDIVIDUAL,1987-11-25,SALARIED,Aviation,Mass,Consumer Banking,Dubai,2020-01-05,B,Y,10900.0,,,,
-CIF100205,Deepa Menon,INDIVIDUAL,1985-03-15,SALARIED,Healthcare,Mass Affluent,Consumer Banking,Abu Dhabi,2017-10-06,B,Y,25600.0,,,,RM-04
-CIF100206,Ayesha Nair,INDIVIDUAL,1975-01-26,SALARIED,Aviation,Mass Affluent,Consumer Banking,Dubai,2019-08-07,A,Y,25700.0,,,,RM-07
-CIF100207,Nikhil Patel,INDIVIDUAL,1994-08-05,SALARIED,Government,Mass Affluent,Consumer Banking,Ras Al Khaimah,2019-12-08,B,Y,33900.0,,,,RM-09
-CIF100208,David Hamdan,INDIVIDUAL,1997-01-26,SALARIED,Banking & Finance,Affluent,Consumer Banking,Dubai,2015-10-09,A,Y,42300.0,,,,RM-12
-CIF100209,Arjun Nair,INDIVIDUAL,1987-05-28,SALARIED,Oil & Gas,Mass Affluent,Consumer Banking,Dubai,2016-12-10,C,Y,18100.0,,,,RM-04
-CIF100210,Mohammed Wilson,INDIVIDUAL,1995-12-09,SALARIED,IT & Telecom,Mass Affluent,Consumer Banking,Abu Dhabi,2023-02-11,D,N,23000.0,,,,RM-09
-CIF100211,Omar Thomas,INDIVIDUAL,2001-12-14,SALARIED,Construction,Mass Affluent,Consumer Banking,Dubai,2017-06-12,A,Y,16800.0,,,,RM-12
-CIF100212,Meera Farouk,INDIVIDUAL,1977-05-03,SALARIED,Construction,Mass Affluent,Consumer Banking,Ajman,2015-03-13,B,Y,22700.0,,,,RM-11
-CIF100213,Ayesha Wilson,INDIVIDUAL,1969-11-26,SALARIED,Education,Mass,Consumer Banking,Dubai,2018-01-14,A,Y,15300.0,,,,
-CIF100214,Rania George,INDIVIDUAL,1981-05-14,SALARIED,Government,Affluent,Consumer Banking,Abu Dhabi,2019-09-15,C,Y,64700.0,,,,RM-04
-CIF100215,Priya Hamdan,INDIVIDUAL,1965-04-17,SALARIED,Retail Trade,Mass,Consumer Banking,Sharjah,2018-04-16,C,Y,13800.0,,,,
-CIF100216,Rahul Hamdan,INDIVIDUAL,1981-07-15,SALARIED,Retail Trade,Mass,Consumer Banking,Dubai,2018-09-17,D,Y,14000.0,,,,
-CIF100217,Zainab Haddad,INDIVIDUAL,1966-06-13,SALARIED,Healthcare,Mass,Consumer Banking,Sharjah,2022-04-18,D,N,11400.0,,,,
-CIF100218,Ravi Thomas,INDIVIDUAL,1985-08-27,SALARIED,IT & Telecom,Mass Affluent,Consumer Banking,Dubai,2018-04-19,B,Y,40100.0,,,,RM-04
-CIF100219,Mohammed Al Shamsi,INDIVIDUAL,1979-01-17,SALARIED,IT & Telecom,Mass Affluent,Consumer Banking,Sharjah,2019-03-20,D,Y,23400.0,,,,RM-08
-CIF100220,Dina Malik,INDIVIDUAL,2000-12-11,SALARIED,IT & Telecom,Mass Affluent,Consumer Banking,Dubai,2015-05-21,A,Y,21500.0,,,,RM-11
-CIF100221,Anjali Pereira,INDIVIDUAL,1990-05-07,SALARIED,Banking & Finance,Mass Affluent,Consumer Banking,Abu Dhabi,2017-08-22,D,Y,26000.0,,,,RM-07
-CIF100222,Amira Pereira,INDIVIDUAL,1980-09-13,SALARIED,IT & Telecom,Mass Affluent,Consumer Banking,Dubai,2019-04-23,B,Y,30000.0,,,,RM-10
-CIF100223,Emma Thomas,INDIVIDUAL,1970-11-17,SALARIED,Construction,Mass,Consumer Banking,Sharjah,2020-10-24,C,Y,10400.0,,,,
-CIF100224,Ayesha Al Mansoori,INDIVIDUAL,1973-08-14,SALARIED,Retail Trade,Mass,Consumer Banking,Ajman,2016-08-25,A,Y,11400.0,,,,
-CIF100225,Hassan Haddad,INDIVIDUAL,1992-04-06,SALARIED,IT & Telecom,Mass Affluent,Consumer Banking,Dubai,2020-10-26,A,Y,22600.0,,,,RM-09
-CIF100226,Priya Wilson,INDIVIDUAL,1992-12-27,SALARIED,Government,Mass Affluent,Consumer Banking,Sharjah,2019-07-27,B,Y,24800.0,,,,RM-03
-CIF100227,Aisha Iyer,INDIVIDUAL,1979-12-24,SALARIED,Education,Mass Affluent,Consumer Banking,Ajman,2016-03-01,A,Y,22100.0,,,,RM-05
-CIF100228,Mohammed Patel,INDIVIDUAL,1992-12-02,SALARIED,Retail Trade,Mass,Consumer Banking,Dubai,2018-09-02,B,Y,7000.0,,,,
-CIF100229,Priya Hossain,INDIVIDUAL,1964-02-11,SALARIED,Retail Trade,Mass,Consumer Banking,Abu Dhabi,2015-09-03,C,Y,5100.0,,,,
-CIF100230,Maria Brown,INDIVIDUAL,1976-09-02,SALARIED,Retail Trade,Mass,Consumer Banking,Dubai,2014-10-04,C,Y,5200.0,,,,
-CIF100231,Rohan Saleh,INDIVIDUAL,2001-07-24,SALARIED,Government,Mass Affluent,Consumer Banking,Dubai,2018-12-05,C,Y,22600.0,,,,RM-10
-CIF100232,Zainab Al Ketbi,INDIVIDUAL,1966-01-09,SELF_EMPLOYED,Self-Employed Professional,Mass Affluent,Consumer Banking,Sharjah,2023-11-06,A,N,35400.0,,,,RM-11
-CIF100233,Kiran Sharma,INDIVIDUAL,1976-06-10,SALARIED,Healthcare,Mass,Consumer Banking,Abu Dhabi,2015-02-07,D,Y,15300.0,,,,
-CIF100234,Ayesha Haddad,INDIVIDUAL,1998-02-07,SALARIED,Government,Mass Affluent,Consumer Banking,Sharjah,2015-03-08,E,Y,35800.0,,,,RM-02
-CIF100235,Anjali Santos,INDIVIDUAL,1990-10-24,SALARIED,Construction,Mass Affluent,Consumer Banking,Abu Dhabi,2024-05-09,A,N,17000.0,,,,RM-01
-CIF100236,Zainab Silva,INDIVIDUAL,1993-09-22,SALARIED,Retail Trade,Mass,Consumer Banking,Sharjah,2019-12-10,A,Y,12500.0,,,,
-CIF100237,Rashid Malik,INDIVIDUAL,1981-06-12,SALARIED,IT & Telecom,Affluent,Consumer Banking,Fujairah,2015-10-11,B,Y,47200.0,,,,RM-05
-CIF100238,Omar Haddad,INDIVIDUAL,1973-10-24,SALARIED,IT & Telecom,Mass,Consumer Banking,Dubai,2023-09-12,C,Y,14600.0,,,,
-CIF100239,Arjun Mathew,INDIVIDUAL,1968-08-14,SALARIED,Construction,Mass,Consumer Banking,Sharjah,2021-08-13,C,Y,9600.0,,,,
-CIF100240,John Nair,INDIVIDUAL,2003-03-20,SALARIED,Construction,Mass,Consumer Banking,Dubai,2019-07-14,B,Y,5300.0,,,,
-CIF100241,Hana Taylor,INDIVIDUAL,1996-08-08,SALARIED,Retail Trade,Mass,Consumer Banking,Sharjah,2020-12-15,A,Y,7500.0,,,,
-CIF100242,Sarah Khoury,INDIVIDUAL,1990-02-12,SALARIED,Retail Trade,Mass,Consumer Banking,Abu Dhabi,2016-12-16,B,Y,5400.0,,,,
-CIF100243,Maria Hamdan,INDIVIDUAL,2002-09-11,SALARIED,Healthcare,Mass Affluent,Consumer Banking,Ajman,2018-06-17,B,Y,23200.0,,,,RM-05
-CIF100244,Mohammed Rahman,INDIVIDUAL,1996-03-10,SALARIED,Retail Trade,Mass Affluent,Consumer Banking,Dubai,2026-08-18,A,Y,20200.0,,,,RM-11
-CIF100245,Jose Fernandes,INDIVIDUAL,1965-12-27,SELF_EMPLOYED,Self-Employed Professional,Mass Affluent,Consumer Banking,Dubai,2021-02-19,D,N,35300.0,,,,RM-07
-CIF100246,Nikhil Farouk,INDIVIDUAL,1995-06-24,SALARIED,Government,Mass Affluent,Consumer Banking,Ras Al Khaimah,2024-01-20,B,N,20100.0,,,,RM-08
-CIF100247,Layla Sharma,INDIVIDUAL,1993-02-20,SALARIED,Education,Mass,Consumer Banking,Dubai,2023-01-21,C,Y,11200.0,,,,
-CIF100248,Ana Reddy,INDIVIDUAL,1973-08-09,SALARIED,Banking & Finance,Affluent,Consumer Banking,Dubai,2024-02-22,B,N,55900.0,,,,RM-02
-CIF100249,Ana Reyes,INDIVIDUAL,1970-01-27,SALARIED,Hospitality & Tourism,Mass,Consumer Banking,Dubai,2018-01-23,C,Y,15200.0,,,,
-CIF100250,Jose Iyer,INDIVIDUAL,2003-02-15,SALARIED,Education,Mass Affluent,Consumer Banking,Dubai,2016-06-24,A,Y,27100.0,,,,RM-06
-CIF100251,Kiran Varghese,INDIVIDUAL,1990-04-16,SALARIED,Retail Trade,Mass,Consumer Banking,Ras Al Khaimah,2014-12-25,A,Y,8300.0,,,,
-CIF100252,Sana Qureshi,INDIVIDUAL,1976-08-10,SALARIED,Hospitality & Tourism,Mass Affluent,Consumer Banking,Abu Dhabi,2015-07-26,A,Y,20500.0,,,,RM-01
-CIF100253,Huda Pereira,INDIVIDUAL,1964-02-18,SALARIED,Construction,Mass Affluent,Consumer Banking,Abu Dhabi,2015-12-27,A,N,24300.0,,,,RM-12
-CIF100254,Arjun Nasser,INDIVIDUAL,1979-06-25,SALARIED,Government,Mass Affluent,Consumer Banking,Dubai,2023-03-01,D,Y,33200.0,,,,RM-02
-CIF100255,Imran Patel,INDIVIDUAL,1973-06-03,SALARIED,Government,Mass Affluent,Consumer Banking,Ras Al Khaimah,2024-03-02,C,Y,18800.0,,,,RM-07
-CIF100256,Layla Taylor,INDIVIDUAL,1985-08-23,SALARIED,Construction,Mass,Consumer Banking,Dubai,2021-05-03,C,N,7900.0,,,,
-CIF100257,Dina Santos,INDIVIDUAL,1992-03-11,SALARIED,Construction,Mass,Consumer Banking,Abu Dhabi,2022-11-04,D,Y,9000.0,,,,
-CIF100258,Anjali Al Hashimi,INDIVIDUAL,1975-07-10,SALARIED,IT & Telecom,Mass,Consumer Banking,Dubai,2017-08-05,B,Y,14800.0,,,,
-CIF100259,Noura Saleh,INDIVIDUAL,1994-06-18,SALARIED,Hospitality & Tourism,Mass,Consumer Banking,Dubai,2022-11-06,C,Y,11800.0,,,,
-CIF100260,Hana Al Mansoori,INDIVIDUAL,1990-09-26,SALARIED,IT & Telecom,Mass Affluent,Consumer Banking,Ajman,2016-07-07,C,N,37900.0,,,,RM-08
-CIF100261,John Al Shamsi,INDIVIDUAL,1987-05-16,SALARIED,Education,Mass Affluent,Consumer Banking,Dubai,2023-02-08,B,Y,23600.0,,,,RM-04
-CIF100262,Michael Iyer,INDIVIDUAL,1979-01-21,SALARIED,Retail Trade,Mass,Consumer Banking,Ajman,2019-05-09,B,Y,5800.0,,,,
-CIF100263,Meera Al Hashimi,INDIVIDUAL,1972-10-20,SALARIED,Retail Trade,Mass,Consumer Banking,Abu Dhabi,2018-02-10,A,Y,9300.0,,,,
-CIF100264,Yousef Qureshi,INDIVIDUAL,1974-09-05,SALARIED,Oil & Gas,Affluent,Consumer Banking,Dubai,2015-05-11,E,Y,65500.0,,,,RM-07
-CIF100265,Mark Perera,INDIVIDUAL,1968-12-12,SALARIED,Banking & Finance,Affluent,Consumer Banking,Dubai,2020-01-12,C,Y,51500.0,,,,RM-09
-CIF100266,Ravi Rahman,INDIVIDUAL,1989-03-16,SALARIED,Education,Mass,Consumer Banking,Dubai,2024-05-13,A,Y,13600.0,,,,
-CIF100267,Grace Siddiqui,INDIVIDUAL,1987-01-12,SALARIED,Banking & Finance,Mass Affluent,Consumer Banking,Umm Al Quwain,2021-05-14,A,Y,28200.0,,,,RM-07
-CIF100268,Jose Al Mansoori,INDIVIDUAL,1987-07-26,SALARIED,Construction,Mass,Consumer Banking,Dubai,2015-02-15,A,Y,11100.0,,,,
-CIF100269,Amira Al Ketbi,INDIVIDUAL,1990-02-17,SALARIED,Banking & Finance,Mass Affluent,Consumer Banking,Sharjah,2016-06-16,B,Y,34400.0,,,,RM-07
-CIF100270,Layla Al Nuaimi,INDIVIDUAL,1964-01-27,SALARIED,Banking & Finance,Mass Affluent,Consumer Banking,Abu Dhabi,2020-05-17,D,Y,30700.0,,,,RM-09
-CIF100271,Meera Mathew,INDIVIDUAL,1968-06-19,SALARIED,Hospitality & Tourism,Mass,Consumer Banking,Abu Dhabi,2015-01-18,D,Y,12300.0,,,,
-CIF100272,Rahul Taylor,INDIVIDUAL,2001-04-05,SALARIED,Hospitality & Tourism,Mass,Consumer Banking,Umm Al Quwain,2016-12-19,B,Y,12800.0,,,,
-CIF100273,Hana Al Shamsi,INDIVIDUAL,1973-06-04,SALARIED,Retail Trade,Mass,Consumer Banking,Dubai,2017-11-20,C,Y,9700.0,,,,
-CIF100274,Nikhil Al Ketbi,INDIVIDUAL,1995-07-24,SALARIED,Retail Trade,Mass,Consumer Banking,Dubai,2022-10-21,C,N,6200.0,,,,
-CIF100275,Ahmed Qureshi,INDIVIDUAL,1970-05-28,SALARIED,Healthcare,Mass,Consumer Banking,Sharjah,2020-10-22,B,Y,10700.0,,,,
-CIF100276,Noura Perera,INDIVIDUAL,1999-01-02,SALARIED,Construction,Mass Affluent,Consumer Banking,Dubai,2015-02-23,B,Y,19300.0,,,,RM-06
-CIF100277,Deepa Cruz,INDIVIDUAL,1973-04-19,SALARIED,Retail Trade,Mass,Consumer Banking,Ras Al Khaimah,2015-04-24,C,N,5600.0,,,,
-CIF100278,Faisal Malik,INDIVIDUAL,1998-03-25,SALARIED,Banking & Finance,Mass Affluent,Consumer Banking,Sharjah,2018-04-25,B,Y,20200.0,,,,RM-06
-CIF100279,Grace Reddy,INDIVIDUAL,1978-05-13,SALARIED,Healthcare,Mass Affluent,Consumer Banking,Sharjah,2016-10-26,A,Y,23100.0,,,,RM-10
-CIF100280,Karim Patel,INDIVIDUAL,1992-06-09,SALARIED,Construction,Mass,Consumer Banking,Dubai,2017-12-27,C,N,11000.0,,,,
-CIF100281,Priya Siddiqui,INDIVIDUAL,1976-07-07,SALARIED,Construction,Mass,Consumer Banking,Dubai,2015-10-01,B,Y,7700.0,,,,
-CIF100282,Mohammed Reddy,INDIVIDUAL,1968-06-01,SALARIED,IT & Telecom,Mass Affluent,Consumer Banking,Abu Dhabi,2015-12-02,B,Y,23400.0,,,,RM-03
-CIF100283,Priya Nair,INDIVIDUAL,1993-04-16,SALARIED,Government,Mass Affluent,Consumer Banking,Dubai,2016-12-03,D,Y,20700.0,,,,RM-04
-CIF100284,David Malik,INDIVIDUAL,1981-08-19,SALARIED,Government,Mass Affluent,Consumer Banking,Umm Al Quwain,2018-10-04,B,N,23100.0,,,,RM-12
-CIF100285,Joseph Iyer,INDIVIDUAL,1995-06-28,SALARIED,Healthcare,Mass Affluent,Consumer Banking,Dubai,2024-05-05,D,Y,24100.0,,,,RM-04
-CIF100286,Faisal Nair,INDIVIDUAL,1997-09-04,SALARIED,Hospitality & Tourism,Mass,Consumer Banking,Abu Dhabi,2016-04-06,A,Y,7400.0,,,,
-CIF100287,Fatima Haddad,INDIVIDUAL,1999-09-17,SELF_EMPLOYED,Self-Employed Professional,Mass Affluent,Consumer Banking,Dubai,2018-10-07,B,N,29200.0,,,,RM-08
-CIF100288,Mark D'Souza,INDIVIDUAL,1980-09-25,SALARIED,Retail Trade,Mass,Consumer Banking,Abu Dhabi,2021-10-08,B,Y,11300.0,,,,
-CIF100289,Deepa Farouk,INDIVIDUAL,2000-12-05,SELF_EMPLOYED,Self-Employed Professional,Mass,Consumer Banking,Sharjah,2015-12-09,C,N,13300.0,,,,
-CIF100290,Zainab Mathew,INDIVIDUAL,1991-03-05,SALARIED,IT & Telecom,Mass Affluent,Consumer Banking,Sharjah,2026-06-10,A,Y,26800.0,,,,RM-03
-CIF100291,Sarah Al Shamsi,INDIVIDUAL,1967-02-21,SALARIED,IT & Telecom,Mass Affluent,Consumer Banking,Fujairah,2023-01-11,B,Y,17400.0,,,,RM-04
-CIF100292,Mark Siddiqui,INDIVIDUAL,1992-04-27,SALARIED,Education,Mass,Consumer Banking,Dubai,2021-06-12,C,Y,13100.0,,,,
-CIF100293,Rashid Al Hashimi,INDIVIDUAL,1975-09-17,SALARIED,Hospitality & Tourism,Mass,Consumer Banking,Dubai,2024-04-13,A,Y,11700.0,,,,
-CIF100294,Dina Santos,INDIVIDUAL,1982-11-16,SALARIED,Construction,Mass,Consumer Banking,Dubai,2016-01-14,E,Y,7300.0,,,,
-CIF100295,Aisha Al Ketbi,INDIVIDUAL,1995-04-21,SALARIED,Aviation,Mass,Consumer Banking,Dubai,2020-01-15,A,Y,14800.0,,,,
-CIF100296,John Farouk,INDIVIDUAL,1999-06-20,SALARIED,Oil & Gas,Mass Affluent,Consumer Banking,Sharjah,2024-02-16,B,Y,32800.0,,,,RM-10
-CIF100297,Priya Patel,INDIVIDUAL,1999-07-05,SALARIED,Healthcare,Mass,Consumer Banking,Abu Dhabi,2016-02-17,B,Y,5200.0,,,,
-CIF100298,Amira Al Suwaidi,INDIVIDUAL,1988-03-05,SALARIED,Construction,Mass,Consumer Banking,Dubai,2021-10-18,A,Y,7200.0,,,,
-CIF100299,Meera Nasser,INDIVIDUAL,1986-06-11,SALARIED,Healthcare,Mass,Consumer Banking,Sharjah,2024-06-19,D,Y,13400.0,,,,
-CIF100300,David Perera,INDIVIDUAL,2002-10-18,SALARIED,IT & Telecom,Affluent,Consumer Banking,Abu Dhabi,2023-02-01,A,Y,47400.0,,,,RM-06
-CIF100301,Aisha Reddy,INDIVIDUAL,1995-04-11,SALARIED,Education,Mass Affluent,Consumer Banking,Ajman,2016-07-02,B,Y,28100.0,,,,RM-08
-CIF100302,Ana D'Souza,INDIVIDUAL,2000-11-01,SELF_EMPLOYED,Self-Employed Professional,Affluent,Consumer Banking,Sharjah,2015-08-03,A,N,45400.0,,,,RM-05
-CIF100303,John Sharma,INDIVIDUAL,1979-10-22,SALARIED,Government,Mass Affluent,Consumer Banking,Sharjah,2019-03-04,D,Y,21300.0,,,,RM-06
-CIF100304,Fatima Hamdan,INDIVIDUAL,1998-06-26,SALARIED,IT & Telecom,Mass,Consumer Banking,Fujairah,2015-07-05,A,Y,9200.0,,,,
-CIF100305,Deepa Reyes,INDIVIDUAL,1992-08-02,SALARIED,Banking & Finance,Mass Affluent,Consumer Banking,Sharjah,2026-05-06,B,Y,18400.0,,,,RM-04
-CIF100306,Hessa Haddad,INDIVIDUAL,1966-06-18,SALARIED,Hospitality & Tourism,Mass,Consumer Banking,Abu Dhabi,2024-08-07,A,Y,9900.0,,,,
-CIF100307,Huda Malik,INDIVIDUAL,1993-09-06,SALARIED,Healthcare,Mass Affluent,Consumer Banking,Dubai,2021-07-08,B,N,35100.0,,,,RM-08
-CIF100308,Samir Santos,INDIVIDUAL,1983-10-16,SALARIED,Government,Mass Affluent,Consumer Banking,Sharjah,2014-11-09,A,Y,23200.0,,,,RM-01
-CIF100309,Aisha Smith,INDIVIDUAL,1991-01-21,SALARIED,Government,Mass Affluent,Consumer Banking,Abu Dhabi,2016-07-10,A,N,37300.0,,,,RM-04
-CIF100310,Aisha Perera,INDIVIDUAL,1984-04-02,SALARIED,Healthcare,Mass Affluent,Consumer Banking,Dubai,2022-06-11,E,Y,31900.0,,,,RM-01
-CIF100311,Aisha Khoury,INDIVIDUAL,1964-03-03,SALARIED,Hospitality & Tourism,Mass Affluent,Consumer Banking,Abu Dhabi,2020-09-12,C,N,17800.0,,,,RM-10
-CIF100312,Imran Pereira,INDIVIDUAL,1998-11-21,SELF_EMPLOYED,Self-Employed Professional,Mass Affluent,Consumer Banking,Dubai,2020-12-13,A,N,16100.0,,,,RM-01
-CIF100313,Hessa Perera,INDIVIDUAL,1966-12-21,SALARIED,Banking & Finance,Mass Affluent,Consumer Banking,Dubai,2017-08-14,A,Y,29700.0,,,,RM-07
-CIF100314,Omar Santos,INDIVIDUAL,1993-07-17,SALARIED,Hospitality & Tourism,Mass,Consumer Banking,Dubai,2016-04-15,D,Y,12500.0,,,,
-CIF100315,Aisha Nasser,INDIVIDUAL,2000-01-07,SALARIED,Hospitality & Tourism,Mass,Consumer Banking,Dubai,2026-05-16,C,Y,13500.0,,,,
-CIF100316,Ahmed Rahman,INDIVIDUAL,1993-05-18,SALARIED,Retail Trade,Mass,Consumer Banking,Sharjah,2017-07-17,D,Y,8100.0,,,,
-CIF100317,Rashid Farouk,INDIVIDUAL,1964-09-14,SALARIED,Hospitality & Tourism,Mass,Consumer Banking,Sharjah,2021-03-18,A,Y,11300.0,,,,
-CIF100318,Rahul Saleh,INDIVIDUAL,1986-12-07,SALARIED,Government,Mass Affluent,Consumer Banking,Dubai,2024-02-19,D,N,18900.0,,,,RM-05
-CIF100319,David Silva,INDIVIDUAL,1981-04-23,SALARIED,Government,Mass Affluent,Consumer Banking,Dubai,2024-05-20,A,Y,38800.0,,,,RM-02
-CIF100320,Michael Khoury,INDIVIDUAL,1971-04-08,SALARIED,Government,Mass Affluent,Consumer Banking,Dubai,2017-09-21,B,Y,16400.0,,,,RM-01
-CIF100321,Arjun Al Suwaidi,INDIVIDUAL,2001-05-27,SALARIED,Banking & Finance,Mass Affluent,Consumer Banking,Sharjah,2020-08-22,C,Y,19200.0,,,,RM-04
-CIF100322,Khalid Fernandes,INDIVIDUAL,1998-04-27,SALARIED,Aviation,Mass Affluent,Consumer Banking,Abu Dhabi,2015-10-23,A,Y,32200.0,,,,RM-08
-CIF100323,Zainab Menon,INDIVIDUAL,2000-02-13,SALARIED,Hospitality & Tourism,Mass,Consumer Banking,Dubai,2020-02-24,C,Y,14700.0,,,,
-CIF100324,Mariam Thomas,INDIVIDUAL,1984-02-01,SALARIED,Construction,Mass,Consumer Banking,Abu Dhabi,2019-03-25,E,N,5200.0,,,,
-CIF100325,Arjun Al Hashimi,INDIVIDUAL,1993-06-17,SALARIED,Government,Mass,Consumer Banking,Dubai,2020-01-26,B,N,14900.0,,,,
-CIF100326,Hana Sharma,INDIVIDUAL,1982-02-03,SALARIED,Government,Mass Affluent,Consumer Banking,Dubai,2019-01-27,C,Y,15100.0,,,,RM-12
-CIF100327,Layla Al Hashimi,INDIVIDUAL,1968-07-17,SALARIED,Aviation,Mass Affluent,Consumer Banking,Sharjah,2015-07-01,B,Y,21400.0,,,,RM-12
-CIF100328,Rashid Nair,INDIVIDUAL,1994-11-15,SALARIED,Retail Trade,Mass,Consumer Banking,Dubai,2016-08-02,B,Y,9800.0,,,,
-CIF100329,Jose Al Nuaimi,INDIVIDUAL,1999-04-11,SALARIED,Construction,Mass Affluent,Consumer Banking,Sharjah,2015-02-03,C,Y,18400.0,,,,RM-11
-CIF100330,Priya Khoury,INDIVIDUAL,1997-09-25,SALARIED,Retail Trade,Mass Affluent,Consumer Banking,Abu Dhabi,2015-12-04,B,Y,19900.0,,,,RM-05
-CIF100331,John Al Nuaimi,INDIVIDUAL,1991-01-25,SALARIED,Hospitality & Tourism,Mass,Consumer Banking,Dubai,2018-05-05,B,Y,12000.0,,,,
-CIF100332,Mariam Perera,INDIVIDUAL,1983-01-09,SALARIED,IT & Telecom,Affluent,Consumer Banking,Ras Al Khaimah,2020-04-06,C,Y,61800.0,,,,RM-08
-CIF100333,Kiran Saleh,INDIVIDUAL,1968-02-12,SALARIED,IT & Telecom,Mass Affluent,Consumer Banking,Dubai,2023-04-07,A,Y,29500.0,,,,RM-12
-CIF100334,Faisal Siddiqui,INDIVIDUAL,1966-07-24,SALARIED,Hospitality & Tourism,Mass,Consumer Banking,Dubai,2022-11-08,B,Y,11400.0,,,,
-CIF100335,Grace Siddiqui,INDIVIDUAL,1971-12-04,SALARIED,Retail Trade,Mass,Consumer Banking,Abu Dhabi,2020-11-09,B,Y,5000.0,,,,
-CIF100336,Huda D'Souza,INDIVIDUAL,1994-06-10,SALARIED,Government,Affluent,Consumer Banking,Ajman,2016-04-10,A,Y,49400.0,,,,RM-05
-CIF100337,Amira Reddy,INDIVIDUAL,1996-07-26,SALARIED,IT & Telecom,Mass Affluent,Consumer Banking,Abu Dhabi,2024-07-11,B,Y,32200.0,,,,RM-03
-CIF100338,Jose Menon,INDIVIDUAL,1990-01-02,SALARIED,Retail Trade,Mass,Consumer Banking,Dubai,2014-12-12,C,Y,10400.0,,,,
-CIF100339,Mohammed Al Nuaimi,INDIVIDUAL,1976-08-01,SALARIED,Aviation,Mass,Consumer Banking,Abu Dhabi,2017-09-13,D,Y,11000.0,,,,
-CIF100340,Sana Farouk,INDIVIDUAL,1966-05-01,SALARIED,Construction,Mass Affluent,Consumer Banking,Sharjah,2022-08-14,B,Y,30600.0,,,,RM-02
-CIF100341,Bilal Iyer,INDIVIDUAL,1972-07-14,SELF_EMPLOYED,Self-Employed Professional,Mass Affluent,Consumer Banking,Dubai,2022-09-15,D,N,18300.0,,,,RM-07
-CIF100342,Ana Santos,INDIVIDUAL,1970-01-24,SALARIED,Retail Trade,Mass,Consumer Banking,Sharjah,2026-05-16,C,Y,6700.0,,,,
-CIF100343,John Cruz,INDIVIDUAL,1976-12-24,SALARIED,Retail Trade,Mass,Consumer Banking,Dubai,2017-01-17,C,Y,5100.0,,,,
-CIF100344,David Fernandes,INDIVIDUAL,1975-05-01,SALARIED,Aviation,Mass Affluent,Consumer Banking,Abu Dhabi,2020-05-18,C,Y,21900.0,,,,RM-01
-CIF100345,Hassan Reddy,INDIVIDUAL,1999-12-07,SALARIED,Oil & Gas,Affluent,Consumer Banking,Sharjah,2023-03-19,C,Y,81300.0,,,,RM-12
-CIF100346,Hana Siddiqui,INDIVIDUAL,1997-08-11,SALARIED,Retail Trade,Mass Affluent,Consumer Banking,Dubai,2015-10-20,D,Y,21200.0,,,,RM-09
-CIF100347,Nikhil Farouk,INDIVIDUAL,2003-02-18,SALARIED,Government,Mass Affluent,Consumer Banking,Abu Dhabi,2022-10-21,B,Y,24200.0,,,,RM-10
-CIF100348,Ravi Khan,INDIVIDUAL,1997-02-10,SALARIED,Retail Trade,Mass,Consumer Banking,Dubai,2016-05-22,C,N,9400.0,,,,
-CIF100349,Mohammed Taylor,INDIVIDUAL,1999-04-09,SALARIED,Retail Trade,Mass,Consumer Banking,Abu Dhabi,2019-10-23,B,N,5300.0,,,,
-CIF100350,Arjun Rahman,INDIVIDUAL,1979-04-28,SALARIED,Retail Trade,Mass,Consumer Banking,Dubai,2020-05-24,B,Y,7500.0,,,,
-CIF100351,Sarah Iyer,INDIVIDUAL,1970-04-10,SALARIED,Government,Mass,Consumer Banking,Dubai,2021-12-25,A,Y,16300.0,,,,
-CIF100352,Jose Rahman,INDIVIDUAL,1974-05-26,SALARIED,Construction,Mass,Consumer Banking,Sharjah,2022-02-26,B,Y,9100.0,,,,
-CIF100353,Zainab Varghese,INDIVIDUAL,1972-04-02,SALARIED,Healthcare,Mass Affluent,Consumer Banking,Dubai,2023-07-27,B,N,24200.0,,,,RM-09
-CIF100354,Ahmed Siddiqui,INDIVIDUAL,1986-12-22,SALARIED,Government,Mass Affluent,Consumer Banking,Dubai,2017-03-01,C,Y,24800.0,,,,RM-02
-CIF100355,Faisal Menon,INDIVIDUAL,1994-07-20,SALARIED,Hospitality & Tourism,Mass,Consumer Banking,Abu Dhabi,2017-07-02,B,Y,9200.0,,,,
-CIF100356,Tariq Silva,INDIVIDUAL,1965-05-16,SALARIED,Education,Mass,Consumer Banking,Abu Dhabi,2016-03-03,A,Y,10900.0,,,,
-CIF100357,Michael Rahman,INDIVIDUAL,1996-04-02,SALARIED,Retail Trade,Mass,Consumer Banking,Abu Dhabi,2017-05-04,B,N,11300.0,,,,
-CIF100358,Deepa Wilson,INDIVIDUAL,1971-06-02,SALARIED,Government,Mass Affluent,Consumer Banking,Dubai,2018-08-05,C,Y,31600.0,,,,RM-03
-CIF100359,Omar Siddiqui,INDIVIDUAL,1973-04-25,SALARIED,Banking & Finance,Mass Affluent,Consumer Banking,Dubai,2020-01-06,A,Y,34900.0,,,,RM-02
-CIF100360,Arjun Nasser,INDIVIDUAL,2001-04-12,SALARIED,IT & Telecom,Mass Affluent,Consumer Banking,Dubai,2018-07-07,B,Y,28700.0,,,,RM-12
-CIF100361,Arjun Thomas,INDIVIDUAL,1972-11-11,SALARIED,Oil & Gas,Mass Affluent,Consumer Banking,Sharjah,2015-05-08,B,Y,23000.0,,,,RM-07
-CIF100362,Imran George,INDIVIDUAL,1974-08-10,SALARIED,Education,Mass Affluent,Consumer Banking,Dubai,2018-07-09,B,Y,26300.0,,,,RM-05
-CIF100363,Fatima Qureshi,INDIVIDUAL,1992-04-17,SALARIED,Retail Trade,Mass,Consumer Banking,Dubai,2014-12-10,A,N,8800.0,,,,
-CIF100364,Deepa Rahman,INDIVIDUAL,1977-04-07,SALARIED,Hospitality & Tourism,Mass,Consumer Banking,Dubai,2019-02-11,C,Y,7300.0,,,,
-CIF100365,Karim Rahman,INDIVIDUAL,1988-09-12,SALARIED,Construction,Mass,Consumer Banking,Sharjah,2024-01-12,B,N,6300.0,,,,
-CIF100366,Hassan Cruz,INDIVIDUAL,1972-10-24,SALARIED,Aviation,Mass Affluent,Consumer Banking,Sharjah,2020-02-13,D,Y,18300.0,,,,RM-03
-CIF100367,Zainab Smith,INDIVIDUAL,1966-03-08,SALARIED,Retail Trade,Mass,Consumer Banking,Fujairah,2021-02-14,A,Y,7800.0,,,,
-CIF100368,Dina Silva,INDIVIDUAL,1995-03-08,SALARIED,Retail Trade,Mass Affluent,Consumer Banking,Sharjah,2016-09-15,C,Y,20800.0,,,,RM-07
-CIF100369,Huda Al Mansoori,INDIVIDUAL,1984-04-08,SALARIED,Construction,Mass,Consumer Banking,Dubai,2023-12-16,B,N,5600.0,,,,
-CIF100370,Arjun Nasser,INDIVIDUAL,1970-07-07,SALARIED,Banking & Finance,Mass Affluent,Consumer Banking,Sharjah,2018-06-17,C,N,38000.0,,,,RM-08
-CIF100371,Karim Wilson,INDIVIDUAL,1965-08-03,SALARIED,Construction,Affluent,Consumer Banking,Sharjah,2015-08-18,E,Y,47300.0,,,,RM-08
-CIF100372,Anjali Cruz,INDIVIDUAL,1982-02-26,SALARIED,Retail Trade,Mass,Consumer Banking,Fujairah,2021-09-19,A,Y,5400.0,,,,
-CIF100373,Bilal Al Mansoori,INDIVIDUAL,1984-10-19,SALARIED,Retail Trade,Mass,Consumer Banking,Abu Dhabi,2017-06-20,B,Y,8000.0,,,,
-CIF100374,Mark Hamdan,INDIVIDUAL,1972-08-18,SALARIED,Government,Mass Affluent,Consumer Banking,Abu Dhabi,2023-06-21,A,Y,30800.0,,,,RM-10
-CIF100375,Karim Hossain,INDIVIDUAL,1981-02-20,SALARIED,Healthcare,Mass Affluent,Consumer Banking,Dubai,2020-12-22,A,Y,21000.0,,,,RM-06
-CIF100376,Emma Cruz,INDIVIDUAL,1971-12-18,SALARIED,Retail Trade,Mass,Consumer Banking,Dubai,2019-06-23,B,Y,7400.0,,,,
-CIF100377,Rahul Menon,INDIVIDUAL,1973-10-13,SALARIED,Education,Mass Affluent,Consumer Banking,Dubai,2015-06-24,D,Y,25300.0,,,,RM-09
-CIF100378,John Patel,INDIVIDUAL,1979-01-08,SALARIED,Construction,Mass,Consumer Banking,Dubai,2023-02-25,B,Y,12800.0,,,,
-CIF100379,Ahmed Khan,INDIVIDUAL,1988-06-03,SALARIED,Aviation,Mass Affluent,Consumer Banking,Sharjah,2021-06-26,D,Y,28900.0,,,,RM-11
-CIF100380,Imran Hossain,INDIVIDUAL,1977-06-04,SALARIED,Retail Trade,Mass,Consumer Banking,Abu Dhabi,2016-10-27,E,Y,8300.0,,,,
-CIF100381,Nikhil Siddiqui,INDIVIDUAL,1971-06-10,SALARIED,Government,Affluent,Consumer Banking,Dubai,2017-07-01,A,Y,53100.0,,,,RM-11
-CIF100382,Samir D'Souza,INDIVIDUAL,1965-07-04,SALARIED,Aviation,Mass Affluent,Consumer Banking,Dubai,2019-12-02,D,N,29400.0,,,,RM-09
-CIF100383,Hessa Brown,INDIVIDUAL,1982-03-13,SALARIED,Healthcare,Mass Affluent,Consumer Banking,Dubai,2015-10-03,C,Y,20000.0,,,,RM-10
-CIF100384,Mohammed Khan,INDIVIDUAL,1989-02-15,SALARIED,IT & Telecom,Mass Affluent,Consumer Banking,Sharjah,2018-07-04,B,Y,26400.0,,,,RM-04
-CIF100385,Dina Haddad,INDIVIDUAL,1984-03-25,SALARIED,Retail Trade,Mass,Consumer Banking,Dubai,2018-03-05,B,Y,10400.0,,,,
-CIF100386,Sarah Saleh,INDIVIDUAL,1977-07-23,SALARIED,Aviation,Mass Affluent,Consumer Banking,Ajman,2015-06-06,B,Y,18000.0,,,,RM-07
-CIF100387,Karim Khoury,INDIVIDUAL,1993-12-06,SALARIED,Retail Trade,Mass,Consumer Banking,Dubai,2016-11-07,B,Y,13500.0,,,,
-CIF100388,Emma Thomas,INDIVIDUAL,1968-05-27,SALARIED,IT & Telecom,Mass Affluent,Consumer Banking,Dubai,2015-06-08,E,Y,19900.0,,,,RM-02
-CIF100389,Kiran Varghese,INDIVIDUAL,1982-02-04,SALARIED,Government,Mass Affluent,Consumer Banking,Dubai,2026-06-09,A,Y,28300.0,,,,RM-04
-CIF100390,Nikhil Khoury,INDIVIDUAL,1984-12-15,SALARIED,Government,Mass,Consumer Banking,Dubai,2023-10-10,A,Y,14400.0,,,,
-CIF100391,Noura Saleh,INDIVIDUAL,2001-01-17,SALARIED,Hospitality & Tourism,Mass,Consumer Banking,Dubai,2019-01-11,B,Y,8700.0,,,,
-CIF100392,Samir Sharma,INDIVIDUAL,1995-09-03,SELF_EMPLOYED,Self-Employed Professional,Mass Affluent,Consumer Banking,Dubai,2014-11-12,A,N,19600.0,,,,RM-03
-CIF100393,Samir Patel,INDIVIDUAL,1993-05-27,SALARIED,Healthcare,Mass,Consumer Banking,Sharjah,2017-02-13,B,Y,10800.0,,,,
-CIF100394,Mark Santos,INDIVIDUAL,1964-03-06,SALARIED,Banking & Finance,Mass Affluent,Consumer Banking,Dubai,2021-03-14,B,Y,20100.0,,,,RM-01
-CIF100395,Ayesha Mathew,INDIVIDUAL,1993-05-09,SALARIED,Hospitality & Tourism,Mass,Consumer Banking,Dubai,2019-01-15,C,N,5500.0,,,,
-CIF100396,Noura Malik,INDIVIDUAL,1977-10-18,SALARIED,IT & Telecom,Mass Affluent,Consumer Banking,Dubai,2018-08-16,C,Y,23000.0,,,,RM-01
-CIF100397,Mark Wilson,INDIVIDUAL,1976-02-19,SALARIED,Aviation,Mass,Consumer Banking,Sharjah,2019-07-17,A,Y,8000.0,,,,
-CIF100398,Faisal D'Souza,INDIVIDUAL,1996-07-14,SALARIED,Hospitality & Tourism,Mass,Consumer Banking,Abu Dhabi,2022-12-18,D,Y,7200.0,,,,
-CIF100399,Sarah Nasser,INDIVIDUAL,1973-02-13,SALARIED,Aviation,Mass,Consumer Banking,Sharjah,2015-12-19,C,Y,13200.0,,,,
-CIF100400,Saeed Al Ketbi,INDIVIDUAL,1979-06-28,SALARIED,Banking & Finance,Mass Affluent,Consumer Banking,Abu Dhabi,2026-06-01,A,Y,31900.0,,,,RM-01
-CIF100401,Zainab Malik,INDIVIDUAL,1981-02-09,SALARIED,Healthcare,Mass Affluent,Consumer Banking,Sharjah,2020-02-02,A,Y,23500.0,,,,RM-04
-CIF100402,Noura Nasser,INDIVIDUAL,1986-03-05,SALARIED,Government,Mass Affluent,Consumer Banking,Sharjah,2018-01-03,D,Y,23300.0,,,,RM-04
-CIF100403,Deepa Al Ketbi,INDIVIDUAL,1976-04-26,SALARIED,Hospitality & Tourism,Mass,Consumer Banking,Dubai,2020-08-04,B,Y,6700.0,,,,
-CIF100404,Priya Hamdan,INDIVIDUAL,1967-05-22,SALARIED,Aviation,Mass Affluent,Consumer Banking,Abu Dhabi,2023-04-05,B,Y,17600.0,,,,RM-05
-CIF100405,Hessa Al Nuaimi,INDIVIDUAL,1987-12-18,SALARIED,Construction,Mass,Consumer Banking,Dubai,2026-07-06,D,Y,9600.0,,,,
-CIF100406,Mohammed Al Shamsi,INDIVIDUAL,1998-07-10,SALARIED,Hospitality & Tourism,Mass,Consumer Banking,Abu Dhabi,2019-09-07,C,Y,7400.0,,,,
-CIF100407,Yousef Al Hashimi,INDIVIDUAL,1983-06-12,SALARIED,Retail Trade,Mass,Consumer Banking,Dubai,2015-01-08,B,Y,8400.0,,,,
-CIF100408,Ahmed Patel,INDIVIDUAL,1975-07-02,SALARIED,Retail Trade,Mass,Consumer Banking,Abu Dhabi,2023-10-09,A,Y,12600.0,,,,
-CIF100409,Yousef Smith,INDIVIDUAL,1997-08-01,SALARIED,Oil & Gas,Mass Affluent,Consumer Banking,Dubai,2021-02-10,D,Y,23200.0,,,,RM-01
-CIF100410,Anjali Cruz,INDIVIDUAL,1985-02-16,SELF_EMPLOYED,Self-Employed Professional,Mass Affluent,Consumer Banking,Sharjah,2021-03-11,D,N,23500.0,,,,RM-12
-CIF100411,Karim D'Souza,INDIVIDUAL,1984-12-28,SALARIED,Government,Mass Affluent,Consumer Banking,Abu Dhabi,2024-02-12,A,Y,17600.0,,,,RM-02
-CIF100412,Mark Al Shamsi,INDIVIDUAL,1984-12-15,SALARIED,Retail Trade,Mass,Consumer Banking,Dubai,2023-08-13,A,Y,13600.0,,,,
-CIF100413,Layla Khoury,INDIVIDUAL,1999-11-22,SALARIED,Government,Affluent,Consumer Banking,Sharjah,2019-03-14,C,Y,40300.0,,,,RM-07
-CIF100414,Deepa Nair,INDIVIDUAL,2000-03-03,SALARIED,Education,Mass Affluent,Consumer Banking,Abu Dhabi,2019-05-15,A,Y,23100.0,,,,RM-01
-CIF100415,Jose Khoury,INDIVIDUAL,1996-09-17,SALARIED,Government,Mass Affluent,Consumer Banking,Ajman,2017-04-16,A,N,23500.0,,,,RM-05
-CIF100416,Dina Khan,INDIVIDUAL,1984-05-23,SALARIED,Construction,Mass,Consumer Banking,Dubai,2020-01-17,C,Y,6100.0,,,,
-CIF100417,Mohammed Varghese,INDIVIDUAL,1985-11-09,SALARIED,Retail Trade,Mass Affluent,Consumer Banking,Dubai,2017-07-18,A,Y,22900.0,,,,RM-03
-CIF100418,Maria George,INDIVIDUAL,1998-07-14,SALARIED,Aviation,Mass Affluent,Consumer Banking,Dubai,2024-04-19,A,N,31500.0,,,,RM-07
-CIF100419,Hana Al Nuaimi,INDIVIDUAL,1984-10-16,SALARIED,Hospitality & Tourism,Mass,Consumer Banking,Dubai,2022-04-20,D,Y,10200.0,,,,
-CIF100420,Rahul Reyes,INDIVIDUAL,1966-11-26,SALARIED,Banking & Finance,Mass Affluent,Consumer Banking,Dubai,2016-01-21,A,Y,31900.0,,,,RM-09
-CIF100421,Emirates Link Import & Export LLC,SME,,BUSINESS,General Trading,Medium,Business Banking,Umm Al Quwain,2015-06-22,C,N,,23700000.0,16,LLC,RM-15
-CIF100422,Palm Crest Hospitality LLC,SME,,BUSINESS,Restaurants & Hospitality,Micro,Business Banking,Abu Dhabi,2017-11-23,A,N,,1821000.0,7,FZ-LLC,RM-21
-CIF100423,Oasis Retail LLC,SME,,BUSINESS,Retail,Micro,Business Banking,Abu Dhabi,2022-11-24,A,N,,3269000.0,14,LLC,RM-22
-CIF100424,Dune Ridge Cafe & Bistro,SME,,BUSINESS,Restaurants & Hospitality,Small,Business Banking,Dubai,2015-05-25,A,N,,15444000.0,21,Sole Establishment,RM-21
-CIF100425,Golden Sands Hospitality LLC,SME,,BUSINESS,Restaurants & Hospitality,Small,Business Banking,Ras Al Khaimah,2019-06-26,C,N,,16646000.0,6,LLC,RM-23
-CIF100426,Al Bustan General Trading LLC,SME,,BUSINESS,General Trading,Micro,Business Banking,Sharjah,2020-01-27,D,N,,1469000.0,18,LLC,RM-19
-CIF100427,Summit Property Management LLC,SME,,BUSINESS,Real Estate Services,Small,Business Banking,Dubai,2023-08-01,C,N,,15289000.0,2,LLC,RM-18
-CIF100428,Red Sea Civil Works LLC,SME,,BUSINESS,Construction & Contracting,Small,Business Banking,Sharjah,2026-07-02,B,N,,13003000.0,0,Sole Establishment,RM-24
-CIF100429,Desert Rose Cafe & Bistro,SME,,BUSINESS,Restaurants & Hospitality,Micro,Business Banking,Dubai,2016-06-03,C,N,,1080000.0,13,LLC,RM-15
-CIF100430,Palm Crest Industries LLC,SME,,BUSINESS,Manufacturing,Micro,Business Banking,Dubai,2019-09-04,A,N,,1650000.0,6,FZE,RM-23
-CIF100431,Falcon Retail LLC,SME,,BUSINESS,Retail,Micro,Business Banking,Abu Dhabi,2016-07-05,C,N,,2259000.0,17,LLC,RM-20
-CIF100432,Silver Dune Medical Centre LLC,SME,,BUSINESS,Healthcare Services,Small,Business Banking,Dubai,2019-06-06,D,N,,12471000.0,23,FZE,RM-20
-CIF100433,Oasis Cafe & Bistro,SME,,BUSINESS,Restaurants & Hospitality,Micro,Business Banking,Dubai,2014-11-07,A,N,,2455000.0,10,LLC,RM-24
-CIF100434,Falcon Cafe & Bistro,SME,,BUSINESS,Restaurants & Hospitality,Micro,Business Banking,Dubai,2016-02-08,A,N,,1838000.0,15,LLC,RM-19
-CIF100435,Summit Civil Works LLC,SME,,BUSINESS,Construction & Contracting,Medium,Business Banking,Ajman,2017-10-09,B,N,,63838000.0,21,LLC,RM-22
-CIF100436,Palm Crest Technical Services LLC,SME,,BUSINESS,Construction & Contracting,Medium,Business Banking,Sharjah,2020-04-10,A,N,,67837000.0,12,LLC,RM-16
-CIF100437,Blue Coast Consultancy FZ-LLC,SME,,BUSINESS,IT & Professional Services,Small,Business Banking,Abu Dhabi,2021-09-11,B,N,,9740000.0,17,LLC,RM-20
-CIF100438,Arabian Gate Civil Works LLC,SME,,BUSINESS,Construction & Contracting,Medium,Business Banking,Sharjah,2017-02-12,D,N,,26330000.0,8,FZ-LLC,RM-23
-CIF100439,Oasis Cargo Services LLC,SME,,BUSINESS,Logistics & Transport,Micro,Business Banking,Abu Dhabi,2019-03-13,B,N,,1495000.0,17,FZ-LLC,RM-22
-CIF100440,Horizon Building Contracting LLC,SME,,BUSINESS,Construction & Contracting,Medium,Business Banking,Abu Dhabi,2019-12-14,D,N,,27513000.0,5,LLC,RM-24
-CIF100441,Al Noor Trading Co. LLC,SME,,BUSINESS,General Trading,Micro,Business Banking,Abu Dhabi,2026-07-15,B,N,,1448000.0,1,LLC,RM-22
-CIF100442,Oasis Import & Export LLC,SME,,BUSINESS,General Trading,Micro,Business Banking,Dubai,2023-04-16,A,N,,1356000.0,19,LLC,RM-20
-CIF100443,Al Bustan Technical Services LLC,SME,,BUSINESS,Construction & Contracting,Micro,Business Banking,Abu Dhabi,2022-06-17,C,N,,1077000.0,7,LLC,RM-24
-CIF100444,Coral Fashion LLC,SME,,BUSINESS,Retail,Small,Business Banking,Dubai,2023-04-18,B,N,,12020000.0,16,Sole Establishment,RM-16
-CIF100445,Horizon Transport LLC,SME,,BUSINESS,Logistics & Transport,Medium,Business Banking,Dubai,2019-08-19,B,N,,21000000.0,6,FZ-LLC,RM-21
-CIF100446,Blue Coast IT Solutions FZE,SME,,BUSINESS,IT & Professional Services,Micro,Business Banking,Dubai,2018-03-20,C,N,,2342000.0,7,Sole Establishment,RM-13
-CIF100447,Palm Crest Transport LLC,SME,,BUSINESS,Logistics & Transport,Micro,Business Banking,Umm Al Quwain,2016-05-21,C,N,,2032000.0,9,FZE,RM-14
-CIF100448,Golden Sands Import & Export LLC,SME,,BUSINESS,General Trading,Small,Business Banking,Dubai,2023-02-22,C,N,,8414000.0,18,FZE,RM-17
-CIF100449,Gulf Star Hospitality LLC,SME,,BUSINESS,Restaurants & Hospitality,Micro,Business Banking,Sharjah,2022-05-23,B,N,,2359000.0,22,Sole Establishment,RM-19
-CIF100450,Coral Transport LLC,SME,,BUSINESS,Logistics & Transport,Medium,Business Banking,Abu Dhabi,2023-05-24,B,N,,25218000.0,11,FZ-LLC,RM-15
-CIF100451,Pearl Bay Cafe & Bistro,SME,,BUSINESS,Restaurants & Hospitality,Small,Business Banking,Umm Al Quwain,2023-04-25,A,N,,18193000.0,17,LLC,RM-24
-CIF100452,Summit Consultancy FZ-LLC,SME,,BUSINESS,IT & Professional Services,Medium,Business Banking,Abu Dhabi,2019-06-26,B,N,,28707000.0,14,LLC,RM-16
-CIF100453,Dune Ridge Electronics LLC,SME,,BUSINESS,Retail,Micro,Business Banking,Abu Dhabi,2023-05-27,A,N,,2701000.0,16,FZE,RM-20
-CIF100454,Falcon Civil Works LLC,SME,,BUSINESS,Construction & Contracting,Micro,Business Banking,Sharjah,2021-08-01,A,N,,1113000.0,17,LLC,RM-13
-CIF100455,Falcon Contracting Co.,SME,,BUSINESS,Construction & Contracting,Micro,Business Banking,Sharjah,2022-03-02,B,N,,1768000.0,18,LLC,RM-24
-CIF100456,Falcon Dental Clinic,SME,,BUSINESS,Healthcare Services,Micro,Business Banking,Dubai,2020-06-03,B,N,,1049000.0,22,LLC,RM-24
-CIF100457,Desert Rose Plastics Factory LLC,SME,,BUSINESS,Manufacturing,Small,Business Banking,Abu Dhabi,2021-08-04,A,N,,4153000.0,24,FZE,RM-17
-CIF100458,Palm Crest General Trading LLC,SME,,BUSINESS,General Trading,Micro,Business Banking,Dubai,2023-06-05,D,N,,1829000.0,3,LLC,RM-22
-CIF100459,Al Noor Medical Centre LLC,SME,,BUSINESS,Healthcare Services,Small,Business Banking,Dubai,2014-10-06,A,N,,19442000.0,11,Sole Establishment,RM-23
-CIF100460,Horizon Real Estate Brokers,SME,,BUSINESS,Real Estate Services,Micro,Business Banking,Dubai,2024-06-07,B,N,,2073000.0,12,Sole Establishment,RM-18
-CIF100461,Crescent Cafe & Bistro,SME,,BUSINESS,Restaurants & Hospitality,Micro,Business Banking,Dubai,2019-05-08,B,N,,1104000.0,6,Sole Establishment,RM-17
-CIF100462,Blue Coast Retail LLC,SME,,BUSINESS,Retail,Micro,Business Banking,Abu Dhabi,2020-02-09,B,N,,1170000.0,13,LLC,RM-15
-CIF100463,Golden Sands Retail LLC,SME,,BUSINESS,Retail,Micro,Business Banking,Dubai,2023-11-10,B,N,,2434000.0,16,LLC,RM-17
-CIF100464,Falcon Industries LLC,SME,,BUSINESS,Manufacturing,Small,Business Banking,Dubai,2019-04-11,A,N,,11616000.0,15,LLC,RM-15
-CIF100465,Red Sea Import & Export LLC,SME,,BUSINESS,General Trading,Micro,Business Banking,Ajman,2018-05-12,B,N,,1756000.0,7,LLC,RM-13
-CIF100466,Dune Ridge Electronics LLC,SME,,BUSINESS,Retail,Micro,Business Banking,Dubai,2026-08-13,B,N,,3249000.0,1,FZ-LLC,RM-19
-CIF100467,Al Noor Cargo Services LLC,SME,,BUSINESS,Logistics & Transport,Small,Business Banking,Sharjah,2024-03-14,A,N,,4709000.0,17,LLC,RM-13
-CIF100468,Al Noor Trading Co. LLC,SME,,BUSINESS,General Trading,Micro,Business Banking,Dubai,2024-05-15,C,N,,2249000.0,25,LLC,RM-17
-CIF100469,Arabian Gate Medical Centre LLC,SME,,BUSINESS,Healthcare Services,Micro,Business Banking,Abu Dhabi,2017-01-16,A,N,,1970000.0,24,LLC,RM-24
-CIF100470,Gulf Star Real Estate Brokers,SME,,BUSINESS,Real Estate Services,Small,Business Banking,Dubai,2021-12-17,B,N,,7147000.0,3,FZE,RM-24
-CIF100471,Pearl Bay Hospitality LLC,SME,,BUSINESS,Restaurants & Hospitality,Small,Business Banking,Abu Dhabi,2014-11-18,A,N,,9345000.0,13,LLC,RM-13
-CIF100472,Crescent Stores LLC,SME,,BUSINESS,Retail,Small,Business Banking,Dubai,2018-09-19,A,N,,12527000.0,17,LLC,RM-16
-CIF100473,Al Noor Dental Clinic,SME,,BUSINESS,Healthcare Services,Medium,Business Banking,Dubai,2023-07-20,A,N,,48044000.0,5,FZE,RM-16
-CIF100474,Golden Sands Import & Export LLC,SME,,BUSINESS,General Trading,Medium,Business Banking,Dubai,2016-02-21,C,N,,34669000.0,11,LLC,RM-20
-CIF100475,Falcon Medical Centre LLC,SME,,BUSINESS,Healthcare Services,Micro,Business Banking,Sharjah,2021-07-22,A,N,,1991000.0,4,LLC,RM-24
-CIF100476,Emirates Link Hospitality LLC,SME,,BUSINESS,Restaurants & Hospitality,Medium,Business Banking,Sharjah,2017-02-23,B,N,,25816000.0,17,LLC,RM-17
-CIF100477,Summit Cafe & Bistro,SME,,BUSINESS,Restaurants & Hospitality,Micro,Business Banking,Abu Dhabi,2017-12-24,B,N,,2170000.0,20,Sole Establishment,RM-15
-CIF100478,Oasis Retail LLC,SME,,BUSINESS,Retail,Small,Business Banking,Ajman,2018-08-25,E,N,,5425000.0,22,Sole Establishment,RM-23
-CIF100479,Blue Coast Contracting Co.,SME,,BUSINESS,Construction & Contracting,Micro,Business Banking,Dubai,2021-10-26,B,N,,1073000.0,25,FZE,RM-19
-CIF100480,Red Sea Trading Co. LLC,SME,,BUSINESS,General Trading,Medium,Business Banking,Abu Dhabi,2016-11-27,A,N,,47530000.0,22,Sole Establishment,RM-18
-CIF100481,Oasis Hospitality LLC,SME,,BUSINESS,Restaurants & Hospitality,Medium,Business Banking,Sharjah,2024-07-01,A,N,,32441000.0,15,LLC,RM-24
-CIF100482,Oasis Property Management LLC,SME,,BUSINESS,Real Estate Services,Small,Business Banking,Dubai,2022-04-02,B,N,,6445000.0,13,LLC,RM-19
-CIF100483,Al Bustan Civil Works LLC,SME,,BUSINESS,Construction & Contracting,Small,Business Banking,Ajman,2018-07-03,C,N,,4499000.0,14,FZE,RM-15
-CIF100484,Golden Sands Electronics LLC,SME,,BUSINESS,Retail,Small,Business Banking,Sharjah,2026-07-04,E,N,,10083000.0,1,LLC,RM-16
-CIF100485,Blue Coast Civil Works LLC,SME,,BUSINESS,Construction & Contracting,Medium,Business Banking,Ajman,2019-07-05,A,N,,25152000.0,18,LLC,RM-13
-CIF100486,Emirates Link Trading Co. LLC,SME,,BUSINESS,General Trading,Micro,Business Banking,Dubai,2021-07-06,B,N,,1284000.0,21,LLC,RM-13
-CIF100487,Al Bustan Restaurant LLC,SME,,BUSINESS,Restaurants & Hospitality,Micro,Business Banking,Ras Al Khaimah,2016-05-07,B,N,,2331000.0,23,LLC,RM-22
-CIF100488,Horizon Logistics LLC,SME,,BUSINESS,Logistics & Transport,Micro,Business Banking,Dubai,2021-04-08,A,N,,3229000.0,7,LLC,RM-21
-CIF100489,Silver Dune Cafe & Bistro,SME,,BUSINESS,Restaurants & Hospitality,Micro,Business Banking,Dubai,2015-03-09,B,N,,2039000.0,17,LLC,RM-24
-CIF100490,Emirates Link Cargo Services LLC,SME,,BUSINESS,Logistics & Transport,Small,Business Banking,Dubai,2015-05-10,C,N,,6250000.0,25,LLC,RM-21
-CIF100491,Oasis Hospitality LLC,SME,,BUSINESS,Restaurants & Hospitality,Small,Business Banking,Ras Al Khaimah,2017-12-11,B,N,,7967000.0,12,Sole Establishment,RM-20
-CIF100492,Emirates Link Retail LLC,SME,,BUSINESS,Retail,Micro,Business Banking,Ajman,2016-09-12,D,N,,811000.0,9,Sole Establishment,RM-15
-CIF100493,Gulf Star Industries LLC,SME,,BUSINESS,Manufacturing,Small,Business Banking,Dubai,2020-09-13,C,N,,4941000.0,11,FZ-LLC,RM-15
-CIF100494,Blue Coast Digital Services FZE,SME,,BUSINESS,IT & Professional Services,Micro,Business Banking,Abu Dhabi,2020-03-14,B,N,,1577000.0,5,LLC,RM-13
-CIF100495,Golden Sands Stores LLC,SME,,BUSINESS,Retail,Micro,Business Banking,Dubai,2020-12-15,B,N,,1119000.0,4,LLC,RM-24
-CIF100496,Dune Ridge Cafe & Bistro,SME,,BUSINESS,Restaurants & Hospitality,Micro,Business Banking,Abu Dhabi,2019-06-16,B,N,,1464000.0,16,LLC,RM-15
-CIF100497,Desert Rose Import & Export LLC,SME,,BUSINESS,General Trading,Small,Business Banking,Dubai,2018-11-17,D,N,,6792000.0,24,Sole Establishment,RM-24
-CIF100498,Desert Rose Hospitality LLC,SME,,BUSINESS,Restaurants & Hospitality,Small,Business Banking,Dubai,2020-10-18,C,N,,6204000.0,4,Sole Establishment,RM-21
-CIF100499,Summit Electronics LLC,SME,,BUSINESS,Retail,Micro,Business Banking,Abu Dhabi,2020-06-19,C,N,,807000.0,22,LLC,RM-14
-CIF100500,Crescent Retail LLC,SME,,BUSINESS,Retail,Small,Business Banking,Dubai,2015-04-01,B,N,,18150000.0,24,Sole Establishment,RM-24
-CIF100501,Falcon Fashion LLC,SME,,BUSINESS,Retail,Micro,Business Banking,Abu Dhabi,2023-11-02,E,N,,1714000.0,2,LLC,RM-22
-CIF100502,Coral Trading Co. LLC,SME,,BUSINESS,General Trading,Micro,Business Banking,Ajman,2018-02-03,B,N,,1380000.0,7,LLC,RM-13
-CIF100503,Falcon Electronics LLC,SME,,BUSINESS,Retail,Micro,Business Banking,Dubai,2022-05-04,C,N,,3305000.0,20,FZE,RM-18
-CIF100504,Palm Crest Cafe & Bistro,SME,,BUSINESS,Restaurants & Hospitality,Micro,Business Banking,Dubai,2017-09-05,E,N,,892000.0,9,LLC,RM-13
-CIF100505,Crescent Trading Co. LLC,SME,,BUSINESS,General Trading,Micro,Business Banking,Sharjah,2026-07-06,B,N,,2127000.0,2,LLC,RM-14
-CIF100506,Emirates Link General Trading LLC,SME,,BUSINESS,General Trading,Micro,Business Banking,Dubai,2020-03-07,A,N,,846000.0,25,Sole Establishment,RM-19
-CIF100507,Oasis Trading Co. LLC,SME,,BUSINESS,General Trading,Medium,Business Banking,Abu Dhabi,2021-07-08,A,N,,20838000.0,23,Sole Establishment,RM-15
-CIF100508,Summit Metal Works LLC,SME,,BUSINESS,Manufacturing,Medium,Business Banking,Dubai,2023-01-09,B,N,,37018000.0,25,LLC,RM-16
-CIF100509,Gulf Star Import & Export LLC,SME,,BUSINESS,General Trading,Micro,Business Banking,Dubai,2024-04-10,D,N,,2943000.0,2,LLC,RM-14
-CIF100510,Golden Sands Restaurant LLC,SME,,BUSINESS,Restaurants & Hospitality,Micro,Business Banking,Dubai,2019-01-11,B,N,,741000.0,9,LLC,RM-19
-CIF100511,Desert Rose Import & Export LLC,SME,,BUSINESS,General Trading,Micro,Business Banking,Dubai,2018-10-12,C,N,,1161000.0,21,LLC,RM-16
-CIF100512,Gulf Star Stores LLC,SME,,BUSINESS,Retail,Micro,Business Banking,Abu Dhabi,2017-05-13,B,N,,1395000.0,8,LLC,RM-23
-CIF100513,Golden Sands Cafe & Bistro,SME,,BUSINESS,Restaurants & Hospitality,Micro,Business Banking,Sharjah,2019-02-14,D,N,,802000.0,10,FZE,RM-16
-CIF100514,Coral Fashion LLC,SME,,BUSINESS,Retail,Micro,Business Banking,Dubai,2023-01-15,A,N,,1486000.0,11,FZE,RM-14
-CIF100515,Oasis Property Management LLC,SME,,BUSINESS,Real Estate Services,Medium,Business Banking,Ras Al Khaimah,2018-07-16,C,N,,42538000.0,22,FZE,RM-17
-CIF100516,Summit Stores LLC,SME,,BUSINESS,Retail,Micro,Business Banking,Ras Al Khaimah,2016-09-17,A,N,,2542000.0,9,LLC,RM-24
-CIF100517,Emirates Link Stores LLC,SME,,BUSINESS,Retail,Micro,Business Banking,Dubai,2024-07-18,E,N,,2074000.0,10,Sole Establishment,RM-21
-CIF100518,Silver Dune Technical Services LLC,SME,,BUSINESS,Construction & Contracting,Micro,Business Banking,Dubai,2021-01-19,E,N,,1664000.0,19,LLC,RM-17
-CIF100519,Coral Trading Co. LLC,SME,,BUSINESS,General Trading,Micro,Business Banking,Dubai,2020-02-20,D,N,,1507000.0,18,LLC,RM-17
-CIF100520,Al Noor Contracting Co.,SME,,BUSINESS,Construction & Contracting,Micro,Business Banking,Abu Dhabi,2020-09-21,D,N,,1765000.0,5,LLC,RM-24
-CIF100521,Pearl Bay Building Contracting LLC,SME,,BUSINESS,Construction & Contracting,Small,Business Banking,Sharjah,2021-11-22,C,N,,12003000.0,8,Sole Establishment,RM-22
-CIF100522,Marina Technical Services LLC,SME,,BUSINESS,Construction & Contracting,Micro,Business Banking,Dubai,2022-03-23,C,N,,2412000.0,8,Sole Establishment,RM-22
-CIF100523,Red Sea Metal Works LLC,SME,,BUSINESS,Manufacturing,Small,Business Banking,Abu Dhabi,2021-03-24,C,N,,11970000.0,16,LLC,RM-20
-CIF100524,Oasis Trading Co. LLC,SME,,BUSINESS,General Trading,Micro,Business Banking,Ajman,2022-12-25,B,N,,2808000.0,24,Sole Establishment,RM-13
-CIF100525,Crescent Digital Services FZE,SME,,BUSINESS,IT & Professional Services,Micro,Business Banking,Abu Dhabi,2020-07-26,A,N,,1737000.0,19,LLC,RM-21
-CIF100526,Arabian Gate Pharmacy LLC,SME,,BUSINESS,Healthcare Services,Micro,Business Banking,Sharjah,2023-12-27,B,N,,1015000.0,3,LLC,RM-16
-CIF100527,Falcon IT Solutions FZE,SME,,BUSINESS,IT & Professional Services,Small,Business Banking,Dubai,2019-11-01,A,N,,6839000.0,10,LLC,RM-21
-CIF100528,Marina General Trading LLC,SME,,BUSINESS,General Trading,Small,Business Banking,Dubai,2017-05-02,C,N,,11287000.0,8,FZE,RM-23
-CIF100529,Desert Rose Import & Export LLC,SME,,BUSINESS,General Trading,Small,Business Banking,Dubai,2024-08-03,C,N,,6909000.0,2,LLC,RM-17
-CIF100530,Horizon Plastics Factory LLC,SME,,BUSINESS,Manufacturing,Small,Business Banking,Sharjah,2019-02-04,C,N,,18623000.0,24,LLC,RM-13
-CIF100531,Al Noor Dental Clinic,SME,,BUSINESS,Healthcare Services,Micro,Business Banking,Dubai,2016-05-05,C,N,,2344000.0,9,FZE,RM-14
-CIF100532,Arabian Gate Civil Works LLC,SME,,BUSINESS,Construction & Contracting,Small,Business Banking,Dubai,2026-07-06,D,N,,5368000.0,2,LLC,RM-19
-CIF100533,Desert Rose Restaurant LLC,SME,,BUSINESS,Restaurants & Hospitality,Micro,Business Banking,Dubai,2022-03-07,A,N,,2094000.0,16,LLC,RM-14
-CIF100534,Summit Pharmacy LLC,SME,,BUSINESS,Healthcare Services,Micro,Business Banking,Dubai,2016-10-08,C,N,,1465000.0,16,FZ-LLC,RM-22
-CIF100535,Red Sea Building Contracting LLC,SME,,BUSINESS,Construction & Contracting,Small,Business Banking,Ras Al Khaimah,2015-01-09,D,N,,7958000.0,10,LLC,RM-17
-CIF100536,Al Bustan Import & Export LLC,SME,,BUSINESS,General Trading,Micro,Business Banking,Dubai,2023-04-10,B,N,,2132000.0,17,LLC,RM-18
-CIF100537,Emirates Link Civil Works LLC,SME,,BUSINESS,Construction & Contracting,Micro,Business Banking,Sharjah,2026-07-11,A,N,,1015000.0,1,FZE,RM-20
-CIF100538,Golden Sands Pharmacy LLC,SME,,BUSINESS,Healthcare Services,Small,Business Banking,Abu Dhabi,2020-11-12,A,N,,3773000.0,9,FZ-LLC,RM-14
-CIF100539,Gulf Star Stores LLC,SME,,BUSINESS,Retail,Micro,Business Banking,Dubai,2017-10-13,A,N,,1068000.0,17,FZE,RM-24
-CIF100540,Arabian Gate Real Estate Brokers,SME,,BUSINESS,Real Estate Services,Micro,Business Banking,Abu Dhabi,2026-05-14,B,N,,2870000.0,1,LLC,RM-22
-CIF100541,Al Noor Consultancy FZ-LLC,SME,,BUSINESS,IT & Professional Services,Small,Business Banking,Abu Dhabi,2022-05-15,B,N,,9084000.0,3,Sole Establishment,RM-24
-CIF100542,Marina General Trading LLC,SME,,BUSINESS,General Trading,Micro,Business Banking,Abu Dhabi,2021-05-16,A,N,,962000.0,22,LLC,RM-17
-CIF100543,Red Sea Building Contracting LLC,SME,,BUSINESS,Construction & Contracting,Micro,Business Banking,Ras Al Khaimah,2026-07-17,A,N,,1061000.0,2,LLC,RM-14
-CIF100544,Desert Rose Hospitality LLC,SME,,BUSINESS,Restaurants & Hospitality,Medium,Business Banking,Dubai,2019-05-18,B,N,,32612000.0,6,Sole Establishment,RM-23
-CIF100545,Marina Logistics LLC,SME,,BUSINESS,Logistics & Transport,Small,Business Banking,Abu Dhabi,2018-12-19,C,N,,18072000.0,8,Sole Establishment,RM-17
-CIF100546,Al Noor Retail LLC,SME,,BUSINESS,Retail,Small,Business Banking,Ras Al Khaimah,2020-01-20,A,N,,10478000.0,11,LLC,RM-24
-CIF100547,Horizon Plastics Factory LLC,SME,,BUSINESS,Manufacturing,Small,Business Banking,Dubai,2019-03-21,B,N,,8777000.0,8,LLC,RM-21
-CIF100548,Summit Electronics LLC,SME,,BUSINESS,Retail,Micro,Business Banking,Sharjah,2017-11-22,B,N,,1305000.0,16,LLC,RM-16
-CIF100549,Al Noor Retail LLC,SME,,BUSINESS,Retail,Small,Business Banking,Sharjah,2016-07-23,B,N,,11656000.0,9,LLC,RM-21
-CIF100550,Horizon General Trading LLC,SME,,BUSINESS,General Trading,Small,Business Banking,Sharjah,2021-01-24,B,N,,5370000.0,5,Sole Establishment,RM-17
-CIF100551,Coral Stores LLC,SME,,BUSINESS,Retail,Micro,Business Banking,Dubai,2022-01-25,B,N,,1652000.0,25,LLC,RM-23
-CIF100552,Silver Dune Technical Services LLC,SME,,BUSINESS,Construction & Contracting,Medium,Business Banking,Sharjah,2019-12-26,A,N,,58648000.0,19,LLC,RM-16
-CIF100553,Marina Transport LLC,SME,,BUSINESS,Logistics & Transport,Micro,Business Banking,Abu Dhabi,2020-12-27,B,N,,2914000.0,15,LLC,RM-23
-CIF100554,Crescent Import & Export LLC,SME,,BUSINESS,General Trading,Small,Business Banking,Dubai,2020-07-01,B,N,,12310000.0,22,LLC,RM-21
-CIF100555,Palm Crest Trading Co. LLC,SME,,BUSINESS,General Trading,Micro,Business Banking,Ajman,2016-05-02,A,N,,2120000.0,9,FZE,RM-19
-CIF100556,Summit Industries LLC,SME,,BUSINESS,Manufacturing,Medium,Business Banking,Sharjah,2020-01-03,B,N,,18791000.0,5,Sole Establishment,RM-20
-CIF100557,Al Bustan Property Management LLC,SME,,BUSINESS,Real Estate Services,Micro,Business Banking,Sharjah,2018-09-04,D,N,,2166000.0,25,LLC,RM-21
-CIF100558,Gulf Star General Trading LLC,SME,,BUSINESS,General Trading,Micro,Business Banking,Dubai,2026-08-05,B,N,,2599000.0,2,FZE,RM-22
-CIF100559,Marina Technical Services LLC,SME,,BUSINESS,Construction & Contracting,Micro,Business Banking,Dubai,2020-10-06,C,N,,2548000.0,23,FZ-LLC,RM-23
-CIF100560,Falcon Hospitality LLC,SME,,BUSINESS,Restaurants & Hospitality,Small,Business Banking,Sharjah,2024-01-07,E,N,,10899000.0,13,LLC,RM-13
-CIF100561,Coral General Trading LLC,SME,,BUSINESS,General Trading,Micro,Business Banking,Sharjah,2026-06-08,A,N,,2406000.0,1,LLC,RM-21
-CIF100562,Blue Coast Metal Works LLC,SME,,BUSINESS,Manufacturing,Small,Business Banking,Abu Dhabi,2018-03-09,C,N,,16853000.0,11,Sole Establishment,RM-20
-CIF100563,Oasis Real Estate Brokers,SME,,BUSINESS,Real Estate Services,Micro,Business Banking,Dubai,2023-05-10,E,N,,1771000.0,17,Sole Establishment,RM-19
-CIF100564,Golden Sands Hospitality LLC,SME,,BUSINESS,Restaurants & Hospitality,Medium,Business Banking,Sharjah,2026-06-11,C,N,,30128000.0,2,FZE,RM-24
-CIF100565,Arabian Gate Trading Co. LLC,SME,,BUSINESS,General Trading,Small,Business Banking,Abu Dhabi,2018-11-12,B,N,,10565000.0,23,LLC,RM-23
-CIF100566,Red Sea Electronics LLC,SME,,BUSINESS,Retail,Small,Business Banking,Sharjah,2022-06-13,C,N,,10695000.0,9,LLC,RM-22
-CIF100567,Golden Sands Stores LLC,SME,,BUSINESS,Retail,Small,Business Banking,Dubai,2023-02-14,C,N,,5511000.0,9,Sole Establishment,RM-16
-CIF100568,Falcon Civil Works LLC,SME,,BUSINESS,Construction & Contracting,Micro,Business Banking,Sharjah,2022-11-15,C,N,,2280000.0,10,LLC,RM-21
-CIF100569,Al Bustan Cafe & Bistro,SME,,BUSINESS,Restaurants & Hospitality,Micro,Business Banking,Abu Dhabi,2020-10-16,B,N,,2532000.0,7,LLC,RM-17
-CIF100570,Palm Crest Metal Works LLC,SME,,BUSINESS,Manufacturing,Medium,Business Banking,Dubai,2014-12-17,A,N,,30457000.0,20,FZE,RM-14
-CIF100571,Dune Ridge Real Estate Brokers,SME,,BUSINESS,Real Estate Services,Small,Business Banking,Abu Dhabi,2021-08-18,C,N,,8519000.0,15,Sole Establishment,RM-13
-CIF100572,Summit Property Management LLC,SME,,BUSINESS,Real Estate Services,Small,Business Banking,Dubai,2016-04-19,A,N,,3919000.0,16,LLC,RM-18
-CIF100573,Blue Coast Stores LLC,SME,,BUSINESS,Retail,Micro,Business Banking,Dubai,2018-04-20,A,N,,2026000.0,13,FZ-LLC,RM-22
-CIF100574,Horizon Import & Export LLC,SME,,BUSINESS,General Trading,Small,Business Banking,Fujairah,2015-01-21,C,N,,3860000.0,15,FZE,RM-19
-CIF100575,Crescent Real Estate Brokers,SME,,BUSINESS,Real Estate Services,Small,Business Banking,Sharjah,2017-05-22,B,N,,3320000.0,20,LLC,RM-22
-CIF100576,Silver Dune Retail LLC,SME,,BUSINESS,Retail,Micro,Business Banking,Fujairah,2020-04-23,C,N,,971000.0,14,LLC,RM-16
-CIF100577,Silver Dune Real Estate Brokers,SME,,BUSINESS,Real Estate Services,Micro,Business Banking,Dubai,2016-06-24,D,N,,1461000.0,19,LLC,RM-18
-CIF100578,Al Bustan Real Estate Brokers,SME,,BUSINESS,Real Estate Services,Micro,Business Banking,Dubai,2014-12-25,B,N,,3038000.0,10,LLC,RM-16
-CIF100579,Blue Coast Real Estate Brokers,SME,,BUSINESS,Real Estate Services,Small,Business Banking,Dubai,2015-04-26,C,N,,8362000.0,21,LLC,RM-15
-CIF100580,Arabian Gate Logistics LLC,SME,,BUSINESS,Logistics & Transport,Micro,Business Banking,Abu Dhabi,2015-08-27,C,N,,1489000.0,10,LLC,RM-20
-CIF100581,Golden Sands Import & Export LLC,SME,,BUSINESS,General Trading,Micro,Business Banking,Dubai,2017-08-01,B,N,,1496000.0,18,Sole Establishment,RM-14
-CIF100582,Gulf Star Hospitality LLC,SME,,BUSINESS,Restaurants & Hospitality,Micro,Business Banking,Umm Al Quwain,2023-01-02,C,N,,1573000.0,17,LLC,RM-22
-CIF100583,Emirates Link Hospitality LLC,SME,,BUSINESS,Restaurants & Hospitality,Small,Business Banking,Dubai,2020-01-03,B,N,,14003000.0,15,LLC,RM-13
-CIF100584,Coral Logistics LLC,SME,,BUSINESS,Logistics & Transport,Medium,Business Banking,Abu Dhabi,2023-04-04,C,N,,71243000.0,10,FZE,RM-13
-CIF100585,Desert Rose Trading Co. LLC,SME,,BUSINESS,General Trading,Small,Business Banking,Dubai,2015-09-05,C,N,,4554000.0,25,Sole Establishment,RM-23
-CIF100586,Al Bustan Import & Export LLC,SME,,BUSINESS,General Trading,Small,Business Banking,Dubai,2024-02-06,E,N,,4453000.0,4,Sole Establishment,RM-21
-CIF100587,Red Sea General Trading LLC,SME,,BUSINESS,General Trading,Medium,Business Banking,Ajman,2018-12-07,C,N,,56703000.0,15,LLC,RM-24
-CIF100588,Oasis General Trading LLC,SME,,BUSINESS,General Trading,Medium,Business Banking,Ras Al Khaimah,2019-03-08,A,N,,61657000.0,8,LLC,RM-17
-CIF100589,Silver Dune IT Solutions FZE,SME,,BUSINESS,IT & Professional Services,Small,Business Banking,Dubai,2016-03-09,D,N,,6191000.0,11,LLC,RM-19
-CIF100590,Crescent General Trading LLC,SME,,BUSINESS,General Trading,Micro,Business Banking,Abu Dhabi,2018-09-10,A,N,,1065000.0,21,Sole Establishment,RM-23
-CIF100591,Al Noor Contracting Co.,SME,,BUSINESS,Construction & Contracting,Medium,Business Banking,Sharjah,2018-12-11,A,N,,35020000.0,9,LLC,RM-24
-CIF100592,Al Noor Retail LLC,SME,,BUSINESS,Retail,Small,Business Banking,Dubai,2020-06-12,A,N,,5743000.0,22,LLC,RM-14
-CIF100593,Al Noor Dental Clinic,SME,,BUSINESS,Healthcare Services,Small,Business Banking,Dubai,2016-01-13,E,N,,4481000.0,9,Sole Establishment,RM-14
-CIF100594,Emirates Link Trading Co. LLC,SME,,BUSINESS,General Trading,Small,Business Banking,Dubai,2023-01-14,B,N,,9508000.0,14,FZE,RM-16
-CIF100595,Emirates Link IT Solutions FZE,SME,,BUSINESS,IT & Professional Services,Micro,Business Banking,Abu Dhabi,2026-07-15,C,N,,1291000.0,1,FZ-LLC,RM-16
-CIF100596,Crescent Trading Co. LLC,SME,,BUSINESS,General Trading,Medium,Business Banking,Dubai,2017-03-16,A,N,,20823000.0,8,LLC,RM-17
-CIF100597,Falcon Stores LLC,SME,,BUSINESS,Retail,Micro,Business Banking,Abu Dhabi,2017-03-17,D,N,,1111000.0,19,LLC,RM-23
-CIF100598,Red Sea General Trading LLC,SME,,BUSINESS,General Trading,Micro,Business Banking,Dubai,2018-09-18,B,N,,1083000.0,7,Sole Establishment,RM-20
-CIF100599,Red Sea Dental Clinic,SME,,BUSINESS,Healthcare Services,Small,Business Banking,Dubai,2019-03-19,A,N,,11758000.0,8,LLC,RM-19
-CIF100600,Gulf Star Plastics Factory LLC,SME,,BUSINESS,Manufacturing,Small,Business Banking,Dubai,2022-01-01,B,N,,9993000.0,22,Sole Establishment,RM-20
+customer_id,customer_name,customer_type,date_of_birth,employment_type,employment_or_business_category,customer_segment,portfolio,region,customer_since,onboarding_risk_grade,salary_transfer_flag,declared_monthly_income,declared_annual_turnover,years_in_business,legal_form,relationship_manager_id
+CIF100001,Indrani Bose,INDIVIDUAL,1995-02-15,SALARIED,Education,Mass Affluent,Consumer Banking,Hyderabad,2019-09-02,D,Y,57600.0,,,,RM-10
+CIF100002,Rekha Kapoor,INDIVIDUAL,1989-02-16,SALARIED,Aviation,Mass Affluent,Consumer Banking,Delhi NCR,2022-04-03,E,Y,90300.0,,,,RM-02
+CIF100003,Bhavesh Gokhale,INDIVIDUAL,1984-01-16,SALARIED,Construction,Mass,Consumer Banking,Bengaluru,2022-02-04,B,Y,27600.0,,,,
+CIF100004,Divya Iyer,INDIVIDUAL,1990-03-16,SALARIED,Banking & Finance,Mass Affluent,Consumer Banking,Bengaluru,2022-05-05,C,Y,87000.0,,,,RM-10
+CIF100005,Anjali Malhotra,INDIVIDUAL,1970-10-06,SALARIED,Oil & Gas,Affluent,Consumer Banking,Mumbai,2021-09-06,B,Y,167800.0,,,,RM-06
+CIF100006,Rituparna Das,INDIVIDUAL,1977-06-24,SALARIED,Government & PSU,Affluent,Consumer Banking,Hyderabad,2022-08-07,A,Y,120200.0,,,,RM-08
+CIF100007,Rekha Jain,INDIVIDUAL,1991-01-07,SALARIED,Banking & Finance,Mass Affluent,Consumer Banking,Pune,2021-04-08,C,Y,79900.0,,,,RM-06
+CIF100008,Sourav Bose,INDIVIDUAL,1990-01-03,SALARIED,Healthcare,Mass Affluent,Consumer Banking,Mumbai,2024-01-09,C,Y,70400.0,,,,RM-06
+CIF100009,Anil Gupta,INDIVIDUAL,1997-08-11,SALARIED,Healthcare,Mass Affluent,Consumer Banking,Hyderabad,2023-10-10,A,Y,49600.0,,,,RM-05
+CIF100010,Faisal Qureshi,INDIVIDUAL,1974-04-03,SALARIED,Construction,Mass Affluent,Consumer Banking,Bengaluru,2021-11-11,B,N,46100.0,,,,RM-06
+CIF100011,Bhavesh Deshmukh,INDIVIDUAL,1991-08-13,SALARIED,Aviation,Mass Affluent,Consumer Banking,Chennai,2015-08-12,A,Y,75700.0,,,,RM-08
+CIF100012,Bilal Shaikh,INDIVIDUAL,1996-08-23,SALARIED,Healthcare,Mass Affluent,Consumer Banking,Mumbai,2017-09-13,D,Y,68400.0,,,,RM-07
+CIF100013,Harpreet Dhillon,INDIVIDUAL,2003-09-14,SALARIED,Construction,Mass Affluent,Consumer Banking,Bengaluru,2017-05-14,B,Y,50300.0,,,,RM-10
+CIF100014,Priya Chauhan,INDIVIDUAL,1982-02-09,SALARIED,Government & PSU,Mass Affluent,Consumer Banking,Ahmedabad,2021-12-15,C,Y,98200.0,,,,RM-09
+CIF100015,Srinivas Thomas,INDIVIDUAL,1974-02-16,SALARIED,IT & Telecom,Mass Affluent,Consumer Banking,Mumbai,2017-11-16,A,N,61100.0,,,,RM-12
+CIF100016,Grace Fernandes,INDIVIDUAL,1982-01-09,SALARIED,Oil & Gas,Mass Affluent,Consumer Banking,Mumbai,2016-12-17,B,N,85200.0,,,,RM-11
+CIF100017,Arindam Mukherjee,INDIVIDUAL,1968-11-03,SALARIED,Construction,Mass,Consumer Banking,Delhi NCR,2015-01-18,C,Y,26600.0,,,,
+CIF100018,Neha Malhotra,INDIVIDUAL,1999-01-06,SALARIED,Banking & Finance,Affluent,Consumer Banking,Pune,2019-09-19,A,Y,197100.0,,,,RM-06
+CIF100019,Snehal Trivedi,INDIVIDUAL,1992-07-26,SALARIED,Government & PSU,Mass Affluent,Consumer Banking,Mumbai,2015-08-20,A,Y,87900.0,,,,RM-03
+CIF100020,Sachin Gokhale,INDIVIDUAL,1974-02-14,SALARIED,IT & Telecom,Mass Affluent,Consumer Banking,Delhi NCR,2023-12-21,B,Y,79000.0,,,,RM-12
+CIF100021,Amrit Grewal,INDIVIDUAL,2003-12-05,SALARIED,Government & PSU,Mass Affluent,Consumer Banking,Delhi NCR,2023-02-22,A,Y,67900.0,,,,RM-10
+CIF100022,Rukhsar Sheikh,INDIVIDUAL,2003-10-17,SALARIED,Construction,Mass,Consumer Banking,Bengaluru,2023-12-23,C,Y,12600.0,,,,
+CIF100023,Indrani Banerjee,INDIVIDUAL,1986-12-21,SALARIED,Education,Mass Affluent,Consumer Banking,Delhi NCR,2020-08-24,C,Y,99200.0,,,,RM-06
+CIF100024,Nikhil Tiwari,INDIVIDUAL,1997-04-17,SALARIED,Government & PSU,Mass Affluent,Consumer Banking,Mumbai,2022-12-25,B,Y,85200.0,,,,RM-01
+CIF100025,Ayesha Khan,INDIVIDUAL,2001-09-25,SALARIED,Healthcare,Mass Affluent,Consumer Banking,Bengaluru,2017-02-26,C,Y,67000.0,,,,RM-11
+CIF100026,Shruti Kapoor,INDIVIDUAL,1999-01-12,SALARIED,Government & PSU,Mass,Consumer Banking,Pune,2023-02-27,C,N,44000.0,,,,
+CIF100027,Ayesha Hussain,INDIVIDUAL,1970-07-10,SALARIED,Hospitality & Tourism,Mass,Consumer Banking,Mumbai,2019-05-01,B,Y,25300.0,,,,
+CIF100028,Manoj Yadav,INDIVIDUAL,1990-05-15,SALARIED,Education,Mass Affluent,Consumer Banking,Delhi NCR,2022-08-02,D,Y,51800.0,,,,RM-05
+CIF100029,Rituparna Das,INDIVIDUAL,1966-06-19,SALARIED,Healthcare,Mass Affluent,Consumer Banking,Pune,2017-08-03,A,Y,73700.0,,,,RM-01
+CIF100030,Sneha Mishra,INDIVIDUAL,1978-02-18,SALARIED,IT & Telecom,Mass Affluent,Consumer Banking,Hyderabad,2016-06-04,C,N,99700.0,,,,RM-12
+CIF100031,Amit Pandey,INDIVIDUAL,1971-09-17,SALARIED,Construction,Mass,Consumer Banking,Delhi NCR,2014-10-05,C,Y,17600.0,,,,
+CIF100032,Ravneet Singh,INDIVIDUAL,1981-03-17,SALARIED,Construction,Mass,Consumer Banking,Bengaluru,2019-08-06,B,Y,38200.0,,,,
+CIF100033,Anjali Kumar,INDIVIDUAL,1977-10-22,SALARIED,Hospitality & Tourism,Mass Affluent,Consumer Banking,Ahmedabad,2016-04-07,E,Y,49600.0,,,,RM-04
+CIF100034,Kavitha Menon,INDIVIDUAL,1966-12-11,SALARIED,Healthcare,Affluent,Consumer Banking,Bengaluru,2023-02-08,A,Y,129100.0,,,,RM-05
+CIF100035,Rohan Yadav,INDIVIDUAL,1965-01-20,SALARIED,Hospitality & Tourism,Mass,Consumer Banking,Hyderabad,2024-05-09,B,Y,13200.0,,,,
+CIF100036,Sana Siddiqui,INDIVIDUAL,1985-05-28,SALARIED,IT & Telecom,Affluent,Consumer Banking,Mumbai,2015-10-10,C,N,118400.0,,,,RM-01
+CIF100037,Sourav Dutta,INDIVIDUAL,1994-03-13,SALARIED,Government & PSU,Mass Affluent,Consumer Banking,Mumbai,2023-10-11,A,Y,75400.0,,,,RM-03
+CIF100038,Kavya Malhotra,INDIVIDUAL,2002-04-24,SALARIED,Hospitality & Tourism,Mass,Consumer Banking,Delhi NCR,2023-02-12,C,Y,16200.0,,,,
+CIF100039,Sunita Rathore,INDIVIDUAL,1976-02-24,SALARIED,Banking & Finance,Affluent,Consumer Banking,Hyderabad,2017-06-13,E,Y,171100.0,,,,RM-01
+CIF100040,Sneha Kumar,INDIVIDUAL,1995-11-13,SALARIED,Government & PSU,Mass Affluent,Consumer Banking,Mumbai,2020-08-14,D,N,41800.0,,,,RM-02
+CIF100041,Hetal Kulkarni,INDIVIDUAL,1985-07-09,SALARIED,Retail Trade,Mass,Consumer Banking,Ahmedabad,2016-04-15,C,N,33000.0,,,,
+CIF100042,Ananya Yadav,INDIVIDUAL,1998-12-08,SALARIED,Education,Mass Affluent,Consumer Banking,Mumbai,2021-01-16,B,Y,103500.0,,,,RM-05
+CIF100043,Rajesh Verma,INDIVIDUAL,1992-06-14,SALARIED,Retail Trade,Mass,Consumer Banking,Mumbai,2020-06-17,B,Y,16800.0,,,,
+CIF100044,Divya Varghese,INDIVIDUAL,1996-06-15,SALARIED,Healthcare,Mass Affluent,Consumer Banking,Bengaluru,2016-01-18,C,N,50500.0,,,,RM-07
+CIF100045,Arjun Verma,INDIVIDUAL,1967-05-14,SALARIED,Construction,Mass,Consumer Banking,Pune,2015-07-19,B,Y,41800.0,,,,
+CIF100046,Zeeshan Siddiqui,INDIVIDUAL,1992-06-24,SALARIED,Healthcare,Mass,Consumer Banking,Mumbai,2021-05-20,B,Y,22400.0,,,,
+CIF100047,Ketaki Joshi,INDIVIDUAL,1999-10-20,SELF_EMPLOYED,Self-Employed Professional,Affluent,Consumer Banking,Delhi NCR,2026-05-21,A,N,125800.0,,,,RM-05
+CIF100048,Ayesha Hussain,INDIVIDUAL,1967-12-27,SALARIED,Banking & Finance,Mass Affluent,Consumer Banking,Pune,2023-02-22,A,Y,61200.0,,,,RM-12
+CIF100049,Shabana Khan,INDIVIDUAL,1988-04-06,SALARIED,Education,Mass Affluent,Consumer Banking,Mumbai,2017-08-23,B,Y,80700.0,,,,RM-03
+CIF100050,Sejal Jadhav,INDIVIDUAL,1969-08-16,SALARIED,Government & PSU,Mass,Consumer Banking,Pune,2022-04-24,B,Y,31800.0,,,,
+CIF100051,Ayesha Siddiqui,INDIVIDUAL,1976-11-11,SALARIED,Aviation,Mass Affluent,Consumer Banking,Chennai,2020-07-25,B,Y,96300.0,,,,RM-08
+CIF100052,Anil Agarwal,INDIVIDUAL,1984-05-05,SALARIED,Healthcare,Mass Affluent,Consumer Banking,Hyderabad,2023-12-26,B,Y,65200.0,,,,RM-08
+CIF100053,Vaishali Shinde,INDIVIDUAL,1982-08-20,SALARIED,Government & PSU,Mass Affluent,Consumer Banking,Chennai,2019-11-27,E,N,75200.0,,,,RM-06
+CIF100054,Vaishali Deshmukh,INDIVIDUAL,1975-10-13,SALARIED,IT & Telecom,Affluent,Consumer Banking,Chennai,2024-07-01,C,Y,146200.0,,,,RM-02
+CIF100055,Grace Lobo,INDIVIDUAL,1983-10-27,SALARIED,Healthcare,Mass,Consumer Banking,Mumbai,2019-05-02,C,Y,26900.0,,,,
+CIF100056,Karthik Varghese,INDIVIDUAL,1986-10-07,SALARIED,Retail Trade,Mass,Consumer Banking,Ahmedabad,2015-03-03,C,Y,19800.0,,,,
+CIF100057,Kunal Desai,INDIVIDUAL,1988-01-26,SALARIED,IT & Telecom,Mass Affluent,Consumer Banking,Pune,2017-05-04,A,Y,53300.0,,,,RM-11
+CIF100058,Kavitha Thomas,INDIVIDUAL,1976-05-24,SALARIED,IT & Telecom,Affluent,Consumer Banking,Delhi NCR,2020-08-05,A,Y,181700.0,,,,RM-09
+CIF100059,Ryan Rodrigues,INDIVIDUAL,1986-09-12,SALARIED,Banking & Finance,Affluent,Consumer Banking,Delhi NCR,2015-12-06,E,Y,119200.0,,,,RM-04
+CIF100060,Rohan Kumar,INDIVIDUAL,1981-03-14,SALARIED,Retail Trade,Mass,Consumer Banking,Ahmedabad,2020-04-07,B,Y,28200.0,,,,
+CIF100061,Vaishali Mehta,INDIVIDUAL,2003-12-22,SALARIED,Healthcare,Mass Affluent,Consumer Banking,Ahmedabad,2017-01-08,D,Y,51800.0,,,,RM-05
+CIF100062,Vikram Agarwal,INDIVIDUAL,2002-04-24,SALARIED,Construction,Mass Affluent,Consumer Banking,Hyderabad,2015-05-09,C,Y,51000.0,,,,RM-02
+CIF100063,Sohini Sen,INDIVIDUAL,1981-08-19,SALARIED,Education,Mass Affluent,Consumer Banking,Kolkata,2016-08-10,A,Y,59000.0,,,,RM-06
+CIF100064,Shruti Jain,INDIVIDUAL,1998-01-27,SELF_EMPLOYED,Self-Employed Professional,Affluent,Consumer Banking,Bengaluru,2020-06-11,C,N,111900.0,,,,RM-01
+CIF100065,Divya Chauhan,INDIVIDUAL,2001-08-11,SALARIED,Healthcare,Mass Affluent,Consumer Banking,Mumbai,2017-09-12,B,Y,49900.0,,,,RM-12
+CIF100066,Rajesh Kumar,INDIVIDUAL,1999-07-08,SALARIED,Government & PSU,Mass Affluent,Consumer Banking,Mumbai,2020-01-13,B,Y,44800.0,,,,RM-06
+CIF100067,Manpreet Singh,INDIVIDUAL,1993-09-10,SALARIED,Education,Mass,Consumer Banking,Delhi NCR,2016-08-14,A,Y,30600.0,,,,
+CIF100068,Sneha Pandey,INDIVIDUAL,1997-10-01,SALARIED,IT & Telecom,Affluent,Consumer Banking,Mumbai,2020-05-15,C,Y,105000.0,,,,RM-02
+CIF100069,Rekha Jain,INDIVIDUAL,1968-10-28,SALARIED,Aviation,Affluent,Consumer Banking,Mumbai,2023-10-16,B,Y,161000.0,,,,RM-12
+CIF100070,Divya Krishnan,INDIVIDUAL,1964-04-07,SALARIED,Healthcare,Mass Affluent,Consumer Banking,Hyderabad,2015-01-17,A,Y,76400.0,,,,RM-11
+CIF100071,Manisha Desai,INDIVIDUAL,1970-04-04,SALARIED,Hospitality & Tourism,Mass Affluent,Consumer Banking,Chennai,2015-05-18,B,Y,66000.0,,,,RM-02
+CIF100072,Priya Chopra,INDIVIDUAL,1997-07-17,SALARIED,Government & PSU,Mass Affluent,Consumer Banking,Kolkata,2020-01-19,B,N,66400.0,,,,RM-05
+CIF100073,Sunita Sharma,INDIVIDUAL,1990-08-28,SALARIED,Government & PSU,Mass,Consumer Banking,Delhi NCR,2020-08-20,A,Y,38600.0,,,,
+CIF100074,Rituparna Bose,INDIVIDUAL,1982-09-22,SALARIED,Retail Trade,Mass,Consumer Banking,Hyderabad,2024-07-21,A,Y,31900.0,,,,
+CIF100075,Prasad Trivedi,INDIVIDUAL,1973-11-19,SALARIED,Retail Trade,Mass,Consumer Banking,Mumbai,2016-03-22,B,Y,23100.0,,,,
+CIF100076,Meenakshi Subramaniam,INDIVIDUAL,1968-09-19,SALARIED,IT & Telecom,Mass Affluent,Consumer Banking,Bengaluru,2020-01-23,C,Y,61300.0,,,,RM-07
+CIF100077,Sanjay Rathore,INDIVIDUAL,1972-07-03,SALARIED,IT & Telecom,Mass Affluent,Consumer Banking,Chennai,2024-06-24,C,Y,67900.0,,,,RM-03
+CIF100078,Prasad Patil,INDIVIDUAL,1981-07-11,SALARIED,Healthcare,Mass Affluent,Consumer Banking,Hyderabad,2018-02-25,B,Y,69700.0,,,,RM-12
+CIF100079,Karan Verma,INDIVIDUAL,1988-01-27,SALARIED,Banking & Finance,Affluent,Consumer Banking,Delhi NCR,2023-06-26,A,Y,114600.0,,,,RM-08
+CIF100080,Manpreet Kaur,INDIVIDUAL,1998-01-01,SALARIED,Retail Trade,Mass,Consumer Banking,Delhi NCR,2021-03-27,A,Y,21200.0,,,,
+CIF100081,Navjot Dhillon,INDIVIDUAL,1999-12-18,SALARIED,Construction,Mass,Consumer Banking,Ahmedabad,2015-06-01,B,Y,30000.0,,,,
+CIF100082,Vikram Verma,INDIVIDUAL,1983-02-03,SALARIED,Aviation,Mass Affluent,Consumer Banking,Bengaluru,2022-02-02,B,Y,50000.0,,,,RM-11
+CIF100083,Vikram Chopra,INDIVIDUAL,1992-08-27,SALARIED,Construction,Mass,Consumer Banking,Mumbai,2016-07-03,A,Y,28000.0,,,,
+CIF100084,Nazia Siddiqui,INDIVIDUAL,1970-02-24,SALARIED,Education,Mass,Consumer Banking,Chennai,2018-01-04,A,Y,34800.0,,,,
+CIF100085,Suresh Rao,INDIVIDUAL,1994-04-14,SALARIED,IT & Telecom,Mass Affluent,Consumer Banking,Bengaluru,2026-05-05,D,Y,77300.0,,,,RM-05
+CIF100086,Vikram Kumar,INDIVIDUAL,1965-03-05,SELF_EMPLOYED,Self-Employed Professional,Affluent,Consumer Banking,Bengaluru,2014-10-06,B,N,120300.0,,,,RM-02
+CIF100087,Paromita Bose,INDIVIDUAL,1991-11-28,SALARIED,Healthcare,Mass Affluent,Consumer Banking,Mumbai,2016-04-07,B,N,48600.0,,,,RM-11
+CIF100088,Anjali Agarwal,INDIVIDUAL,2001-10-18,SALARIED,Healthcare,Mass Affluent,Consumer Banking,Hyderabad,2022-03-08,E,Y,45500.0,,,,RM-12
+CIF100089,Mandar Joshi,INDIVIDUAL,2003-06-05,SALARIED,Government & PSU,Mass Affluent,Consumer Banking,Mumbai,2017-11-09,B,Y,99600.0,,,,RM-08
+CIF100090,Bhavesh Gokhale,INDIVIDUAL,1982-05-16,SALARIED,Retail Trade,Mass,Consumer Banking,Ahmedabad,2023-02-10,D,Y,31900.0,,,,
+CIF100091,Revathi Mathew,INDIVIDUAL,1997-04-11,SELF_EMPLOYED,Self-Employed Professional,Mass Affluent,Consumer Banking,Hyderabad,2023-08-11,C,N,78700.0,,,,RM-09
+CIF100092,Ramesh Reddy,INDIVIDUAL,1981-05-10,SALARIED,IT & Telecom,Affluent,Consumer Banking,Hyderabad,2015-08-12,C,Y,139700.0,,,,RM-10
+CIF100093,Rekha Chopra,INDIVIDUAL,1997-10-27,SALARIED,Government & PSU,Mass,Consumer Banking,Mumbai,2021-05-13,A,Y,38400.0,,,,
+CIF100094,Simran Dhillon,INDIVIDUAL,1965-07-16,SALARIED,Hospitality & Tourism,Mass,Consumer Banking,Mumbai,2020-10-14,B,Y,33800.0,,,,
+CIF100095,Manisha Joshi,INDIVIDUAL,1982-05-20,SALARIED,Healthcare,Mass Affluent,Consumer Banking,Mumbai,2023-02-15,B,N,47600.0,,,,RM-06
+CIF100096,Shabana Shaikh,INDIVIDUAL,1969-10-07,SALARIED,Education,Mass Affluent,Consumer Banking,Delhi NCR,2024-06-16,C,Y,48100.0,,,,RM-12
+CIF100097,Suresh Yadav,INDIVIDUAL,1979-08-18,SALARIED,Education,Mass,Consumer Banking,Delhi NCR,2020-07-17,D,Y,25400.0,,,,
+CIF100098,Sunita Chauhan,INDIVIDUAL,1985-10-04,SALARIED,Banking & Finance,Mass Affluent,Consumer Banking,Delhi NCR,2019-03-18,A,Y,83600.0,,,,RM-10
+CIF100099,Shruti Gupta,INDIVIDUAL,1964-04-28,SALARIED,Education,Affluent,Consumer Banking,Ahmedabad,2017-06-19,C,N,141500.0,,,,RM-03
+CIF100100,Hetal Jadhav,INDIVIDUAL,1983-07-07,SALARIED,Aviation,Mass Affluent,Consumer Banking,Bengaluru,2015-01-01,A,N,102100.0,,,,RM-08
+CIF100101,Manoj Chauhan,INDIVIDUAL,1983-03-12,SELF_EMPLOYED,Self-Employed Professional,Affluent,Consumer Banking,Bengaluru,2022-07-02,C,N,197600.0,,,,RM-04
+CIF100102,Asif Siddiqui,INDIVIDUAL,1975-10-05,SALARIED,Education,Mass Affluent,Consumer Banking,Chennai,2017-12-03,C,Y,65000.0,,,,RM-02
+CIF100103,Anil Chauhan,INDIVIDUAL,1997-11-22,SALARIED,Government & PSU,Mass Affluent,Consumer Banking,Bengaluru,2016-05-04,C,Y,68200.0,,,,RM-05
+CIF100104,Pooja Singh,INDIVIDUAL,1987-05-16,SALARIED,Retail Trade,Mass,Consumer Banking,Mumbai,2022-03-05,C,Y,20300.0,,,,
+CIF100105,Rohan Gupta,INDIVIDUAL,1965-02-22,SALARIED,Banking & Finance,Mass Affluent,Consumer Banking,Chennai,2021-09-06,A,Y,71200.0,,,,RM-03
+CIF100106,Asif Qureshi,INDIVIDUAL,1964-12-28,SALARIED,Education,Mass Affluent,Consumer Banking,Pune,2021-04-07,C,Y,45100.0,,,,RM-06
+CIF100107,Nilesh Joshi,INDIVIDUAL,1985-01-15,SALARIED,Retail Trade,Mass Affluent,Consumer Banking,Chennai,2017-04-08,C,Y,81100.0,,,,RM-06
+CIF100108,Sejal Kulkarni,INDIVIDUAL,1973-02-09,SALARIED,Healthcare,Mass Affluent,Consumer Banking,Bengaluru,2014-10-09,D,Y,66600.0,,,,RM-05
+CIF100109,Shruti Singh,INDIVIDUAL,1970-06-24,SALARIED,Banking & Finance,Mass Affluent,Consumer Banking,Bengaluru,2017-09-10,B,Y,84800.0,,,,RM-03
+CIF100110,Bilal Siddiqui,INDIVIDUAL,1976-01-04,SALARIED,Banking & Finance,Mass Affluent,Consumer Banking,Mumbai,2015-04-11,A,Y,69600.0,,,,RM-03
+CIF100111,Rohan Yadav,INDIVIDUAL,1976-02-22,SALARIED,Banking & Finance,Mass Affluent,Consumer Banking,Ahmedabad,2024-04-12,D,Y,78600.0,,,,RM-08
+CIF100112,Jaspreet Dhillon,INDIVIDUAL,1973-01-10,SELF_EMPLOYED,Self-Employed Professional,Mass Affluent,Consumer Banking,Delhi NCR,2016-06-13,E,N,57500.0,,,,RM-12
+CIF100113,Ananya Chauhan,INDIVIDUAL,1971-05-23,SALARIED,Retail Trade,Mass,Consumer Banking,Delhi NCR,2017-12-14,C,Y,12300.0,,,,
+CIF100114,Navjot Grewal,INDIVIDUAL,1971-08-11,SALARIED,Healthcare,Mass Affluent,Consumer Banking,Bengaluru,2024-05-15,B,Y,43900.0,,,,RM-05
+CIF100115,Suresh Gupta,INDIVIDUAL,1981-01-11,SALARIED,Retail Trade,Mass,Consumer Banking,Delhi NCR,2023-04-16,C,Y,21300.0,,,,
+CIF100116,Vaishali Patel,INDIVIDUAL,1995-03-17,SALARIED,Oil & Gas,Mass Affluent,Consumer Banking,Ahmedabad,2018-08-17,B,N,80300.0,,,,RM-11
+CIF100117,Nazia Qureshi,INDIVIDUAL,2000-01-10,SALARIED,Government & PSU,Affluent,Consumer Banking,Bengaluru,2020-05-18,B,Y,125100.0,,,,RM-06
+CIF100118,Sourav Ghosh,INDIVIDUAL,1972-09-05,SALARIED,Healthcare,Mass Affluent,Consumer Banking,Delhi NCR,2024-04-19,C,N,88300.0,,,,RM-03
+CIF100119,Kavitha Pillai,INDIVIDUAL,1999-02-11,SALARIED,Retail Trade,Mass,Consumer Banking,Delhi NCR,2020-05-20,B,Y,29700.0,,,,
+CIF100120,Suresh Rathore,INDIVIDUAL,1995-11-02,SALARIED,Education,Mass,Consumer Banking,Chennai,2023-06-21,B,Y,26300.0,,,,
+CIF100121,Karthik Varghese,INDIVIDUAL,1972-08-04,SALARIED,Banking & Finance,Mass Affluent,Consumer Banking,Delhi NCR,2020-06-22,B,Y,65900.0,,,,RM-07
+CIF100122,Ananya Chauhan,INDIVIDUAL,1996-05-28,SALARIED,IT & Telecom,Affluent,Consumer Banking,Pune,2021-01-23,B,Y,118500.0,,,,RM-11
+CIF100123,Sneha Mishra,INDIVIDUAL,1977-01-06,SALARIED,Retail Trade,Mass,Consumer Banking,Ahmedabad,2023-09-24,C,N,16400.0,,,,
+CIF100124,Manisha Kulkarni,INDIVIDUAL,1975-07-02,SALARIED,Government & PSU,Affluent,Consumer Banking,Mumbai,2016-06-25,B,Y,140400.0,,,,RM-05
+CIF100125,Hetal Jadhav,INDIVIDUAL,1965-09-25,SALARIED,Oil & Gas,Mass Affluent,Consumer Banking,Mumbai,2023-02-26,A,N,70600.0,,,,RM-08
+CIF100126,Anitha Reddy,INDIVIDUAL,1995-12-13,SALARIED,Retail Trade,Mass,Consumer Banking,Ahmedabad,2019-04-27,B,Y,29500.0,,,,
+CIF100127,Ananya Singh,INDIVIDUAL,1996-12-24,SALARIED,Government & PSU,Mass Affluent,Consumer Banking,Bengaluru,2022-11-01,B,N,72700.0,,,,RM-02
+CIF100128,Nikhil Agarwal,INDIVIDUAL,1995-05-05,SELF_EMPLOYED,Self-Employed Professional,Affluent,Consumer Banking,Mumbai,2026-08-02,B,N,195500.0,,,,RM-05
+CIF100129,Revathi Menon,INDIVIDUAL,1977-11-18,SALARIED,Banking & Finance,Mass Affluent,Consumer Banking,Hyderabad,2020-11-03,B,Y,70800.0,,,,RM-02
+CIF100130,Bhavesh Trivedi,INDIVIDUAL,1966-03-19,SALARIED,Retail Trade,Mass,Consumer Banking,Delhi NCR,2023-09-04,E,Y,31900.0,,,,
+CIF100131,Srinivas Varghese,INDIVIDUAL,1997-01-15,SALARIED,Government & PSU,Mass,Consumer Banking,Bengaluru,2023-11-05,A,Y,34100.0,,,,
+CIF100132,Ramesh George,INDIVIDUAL,1987-08-28,SALARIED,Banking & Finance,Mass Affluent,Consumer Banking,Mumbai,2015-05-06,C,Y,83600.0,,,,RM-09
+CIF100133,Sachin Jadhav,INDIVIDUAL,1973-08-09,SALARIED,Education,Mass Affluent,Consumer Banking,Pune,2020-09-07,D,Y,44700.0,,,,RM-09
+CIF100134,Deepak Agarwal,INDIVIDUAL,1986-08-21,SALARIED,Construction,Mass,Consumer Banking,Mumbai,2016-12-08,A,Y,15300.0,,,,
+CIF100135,Ganesh George,INDIVIDUAL,1968-05-09,SELF_EMPLOYED,Self-Employed Professional,Mass Affluent,Consumer Banking,Mumbai,2021-10-09,A,N,77700.0,,,,RM-03
+CIF100136,Bhavesh Jadhav,INDIVIDUAL,1994-04-11,SALARIED,Education,Mass Affluent,Consumer Banking,Delhi NCR,2017-02-10,C,Y,48300.0,,,,RM-09
+CIF100137,Vikram Yadav,INDIVIDUAL,1972-05-11,SALARIED,Education,Mass,Consumer Banking,Delhi NCR,2023-10-11,B,Y,35100.0,,,,
+CIF100138,Priya Rathore,INDIVIDUAL,1973-11-11,SALARIED,Government & PSU,Mass Affluent,Consumer Banking,Delhi NCR,2019-09-12,C,Y,85800.0,,,,RM-05
+CIF100139,Sanjay Rathore,INDIVIDUAL,1983-10-11,SALARIED,Hospitality & Tourism,Mass,Consumer Banking,Ahmedabad,2014-11-13,B,N,26300.0,,,,
+CIF100140,Subhash Banerjee,INDIVIDUAL,1964-02-20,SALARIED,Retail Trade,Mass Affluent,Consumer Banking,Pune,2015-12-14,B,Y,45200.0,,,,RM-11
+CIF100141,Falguni Mehta,INDIVIDUAL,1968-06-10,SALARIED,Oil & Gas,Affluent,Consumer Banking,Ahmedabad,2016-09-15,D,Y,198000.0,,,,RM-03
+CIF100142,Sunita Chopra,INDIVIDUAL,1974-03-07,SALARIED,Aviation,Mass Affluent,Consumer Banking,Mumbai,2024-08-16,A,Y,52200.0,,,,RM-11
+CIF100143,Anjali Malhotra,INDIVIDUAL,1971-12-13,SELF_EMPLOYED,Self-Employed Professional,Mass Affluent,Consumer Banking,Bengaluru,2018-07-17,C,N,108400.0,,,,RM-07
+CIF100144,Ganesh Mathew,INDIVIDUAL,1968-01-06,SALARIED,Government & PSU,Mass Affluent,Consumer Banking,Kolkata,2018-02-18,B,Y,94600.0,,,,RM-10
+CIF100145,Snehal Kulkarni,INDIVIDUAL,1974-09-25,SALARIED,Banking & Finance,Mass Affluent,Consumer Banking,Bengaluru,2018-11-19,D,Y,75700.0,,,,RM-02
+CIF100146,Karan Kumar,INDIVIDUAL,1987-06-04,SALARIED,Hospitality & Tourism,Mass,Consumer Banking,Mumbai,2019-05-20,D,Y,28100.0,,,,
+CIF100147,Revathi Varghese,INDIVIDUAL,1992-02-01,SALARIED,Oil & Gas,Mass Affluent,Consumer Banking,Delhi NCR,2017-04-21,B,Y,103200.0,,,,RM-03
+CIF100148,Faisal Qureshi,INDIVIDUAL,2002-08-24,SALARIED,Construction,Mass Affluent,Consumer Banking,Ahmedabad,2023-05-22,C,Y,57600.0,,,,RM-11
+CIF100149,Asif Qureshi,INDIVIDUAL,1999-09-28,SALARIED,Government & PSU,Mass Affluent,Consumer Banking,Ahmedabad,2016-05-23,A,Y,75600.0,,,,RM-07
+CIF100150,Shalini Thomas,INDIVIDUAL,1974-07-17,SALARIED,Banking & Finance,Mass Affluent,Consumer Banking,Bengaluru,2017-03-24,C,Y,96900.0,,,,RM-10
+CIF100151,Clara Pereira,INDIVIDUAL,2003-09-23,SALARIED,Banking & Finance,Affluent,Consumer Banking,Kolkata,2015-06-25,A,Y,111100.0,,,,RM-05
+CIF100152,Manpreet Sandhu,INDIVIDUAL,1964-08-11,SALARIED,IT & Telecom,Affluent,Consumer Banking,Chennai,2022-05-26,B,Y,111800.0,,,,RM-03
+CIF100153,Deepa Reddy,INDIVIDUAL,1967-09-09,SALARIED,Aviation,Mass Affluent,Consumer Banking,Delhi NCR,2022-03-27,B,Y,62400.0,,,,RM-01
+CIF100154,Arif Qureshi,INDIVIDUAL,2002-03-21,SALARIED,Government & PSU,Mass,Consumer Banking,Pune,2026-08-01,A,Y,35200.0,,,,
+CIF100155,Aravind Reddy,INDIVIDUAL,1994-05-21,SELF_EMPLOYED,Self-Employed Professional,Mass Affluent,Consumer Banking,Hyderabad,2021-02-02,A,N,70500.0,,,,RM-01
+CIF100156,Shabana Rizvi,INDIVIDUAL,1998-02-08,SALARIED,Aviation,Mass,Consumer Banking,Bengaluru,2023-11-03,A,Y,25400.0,,,,
+CIF100157,Bilal Rizvi,INDIVIDUAL,2000-01-01,SALARIED,Government & PSU,Mass Affluent,Consumer Banking,Kolkata,2018-10-04,B,Y,52000.0,,,,RM-07
+CIF100158,Deepak Malhotra,INDIVIDUAL,1968-03-14,SALARIED,Hospitality & Tourism,Mass,Consumer Banking,Delhi NCR,2022-03-05,C,Y,22300.0,,,,
+CIF100159,Pooja Agarwal,INDIVIDUAL,1994-11-22,SALARIED,Hospitality & Tourism,Mass,Consumer Banking,Mumbai,2015-11-06,B,N,20600.0,,,,
+CIF100160,Anil Chauhan,INDIVIDUAL,1992-02-18,SALARIED,Retail Trade,Mass Affluent,Consumer Banking,Hyderabad,2021-07-07,B,Y,60600.0,,,,RM-07
+CIF100161,Farhan Ansari,INDIVIDUAL,1970-09-22,SALARIED,Government & PSU,Mass Affluent,Consumer Banking,Bengaluru,2020-02-08,B,Y,94700.0,,,,RM-07
+CIF100162,Deepak Mishra,INDIVIDUAL,1984-12-21,SALARIED,Retail Trade,Mass,Consumer Banking,Hyderabad,2026-06-09,B,N,30300.0,,,,
+CIF100163,Meera Yadav,INDIVIDUAL,1984-02-03,SALARIED,Education,Mass Affluent,Consumer Banking,Mumbai,2022-01-10,A,N,51800.0,,,,RM-07
+CIF100164,Sachin Mehta,INDIVIDUAL,1987-08-06,SALARIED,Government & PSU,Mass Affluent,Consumer Banking,Mumbai,2017-03-11,B,Y,54000.0,,,,RM-05
+CIF100165,Kavya Jain,INDIVIDUAL,1967-09-09,SALARIED,Aviation,Mass,Consumer Banking,Delhi NCR,2014-11-12,B,N,30200.0,,,,
+CIF100166,Farhan Siddiqui,INDIVIDUAL,1964-05-15,SALARIED,Aviation,Mass Affluent,Consumer Banking,Mumbai,2024-07-13,D,N,101200.0,,,,RM-03
+CIF100167,Hetal Joshi,INDIVIDUAL,2000-07-05,SALARIED,Oil & Gas,Mass Affluent,Consumer Banking,Bengaluru,2018-12-14,A,Y,69200.0,,,,RM-05
+CIF100168,Bhavesh Patel,INDIVIDUAL,1990-02-22,SALARIED,Aviation,Mass,Consumer Banking,Delhi NCR,2017-04-15,A,Y,39100.0,,,,
+CIF100169,Amit Pandey,INDIVIDUAL,1977-01-24,SALARIED,Government & PSU,Mass Affluent,Consumer Banking,Mumbai,2019-02-16,C,Y,49500.0,,,,RM-09
+CIF100170,Nikhil Malhotra,INDIVIDUAL,1990-07-20,SALARIED,Government & PSU,Mass Affluent,Consumer Banking,Ahmedabad,2024-04-17,B,Y,62000.0,,,,RM-08
+CIF100171,Ramesh Varma,INDIVIDUAL,1965-09-02,SALARIED,Education,Mass Affluent,Consumer Banking,Delhi NCR,2019-02-18,B,Y,74500.0,,,,RM-04
+CIF100172,Ananya Agarwal,INDIVIDUAL,1969-06-18,SALARIED,Aviation,Mass Affluent,Consumer Banking,Mumbai,2016-05-19,B,Y,89100.0,,,,RM-01
+CIF100173,Ayesha Shaikh,INDIVIDUAL,1987-07-01,SALARIED,IT & Telecom,Affluent,Consumer Banking,Ahmedabad,2022-04-20,D,N,154000.0,,,,RM-11
+CIF100174,Deepa Naidu,INDIVIDUAL,2001-08-27,SALARIED,Retail Trade,Mass,Consumer Banking,Pune,2020-06-21,C,N,33900.0,,,,
+CIF100175,Gurpreet Kaur,INDIVIDUAL,1975-07-16,SALARIED,Hospitality & Tourism,Mass,Consumer Banking,Bengaluru,2022-01-22,A,Y,12500.0,,,,
+CIF100176,Zeeshan Hussain,INDIVIDUAL,1966-11-19,SALARIED,IT & Telecom,Affluent,Consumer Banking,Mumbai,2015-12-23,C,N,182600.0,,,,RM-03
+CIF100177,Deepak Mishra,INDIVIDUAL,1993-11-10,SALARIED,Government & PSU,Mass,Consumer Banking,Hyderabad,2016-02-24,B,N,32800.0,,,,
+CIF100178,Kunal Shah,INDIVIDUAL,1992-10-27,SALARIED,Retail Trade,Mass,Consumer Banking,Bengaluru,2017-07-25,B,Y,18100.0,,,,
+CIF100179,Lakshmi Rao,INDIVIDUAL,1998-03-13,SALARIED,Government & PSU,Mass Affluent,Consumer Banking,Mumbai,2015-01-26,B,Y,70500.0,,,,RM-06
+CIF100180,Arindam Banerjee,INDIVIDUAL,1990-06-10,SALARIED,Government & PSU,Mass Affluent,Consumer Banking,Delhi NCR,2016-03-27,C,Y,71900.0,,,,RM-05
+CIF100181,Neha Pandey,INDIVIDUAL,2003-11-27,SALARIED,Education,Mass,Consumer Banking,Chennai,2022-05-01,B,Y,26600.0,,,,
+CIF100182,Anjali Singh,INDIVIDUAL,1972-12-16,SELF_EMPLOYED,Self-Employed Professional,Mass Affluent,Consumer Banking,Bengaluru,2026-05-02,B,N,76700.0,,,,RM-03
+CIF100183,Nikhil Rathore,INDIVIDUAL,1992-06-01,SALARIED,Healthcare,Mass,Consumer Banking,Kolkata,2024-02-03,A,Y,30100.0,,,,
+CIF100184,Ayesha Qureshi,INDIVIDUAL,1965-04-25,SALARIED,IT & Telecom,Mass Affluent,Consumer Banking,Kolkata,2023-04-04,B,Y,98800.0,,,,RM-06
+CIF100185,Sneha Chauhan,INDIVIDUAL,1988-05-11,SALARIED,Banking & Finance,Affluent,Consumer Banking,Mumbai,2021-06-05,A,N,120800.0,,,,RM-07
+CIF100186,Aarti Mehta,INDIVIDUAL,1977-05-03,SALARIED,Healthcare,Affluent,Consumer Banking,Bengaluru,2022-02-06,B,Y,158900.0,,,,RM-03
+CIF100187,Bhavesh Kulkarni,INDIVIDUAL,2002-11-27,SALARIED,Banking & Finance,Affluent,Consumer Banking,Pune,2024-08-07,A,Y,110800.0,,,,RM-09
+CIF100188,Shruti Jain,INDIVIDUAL,1990-01-03,SALARIED,Retail Trade,Mass,Consumer Banking,Hyderabad,2015-02-08,A,Y,24400.0,,,,
+CIF100189,Anil Singh,INDIVIDUAL,1987-05-28,SALARIED,Oil & Gas,Mass Affluent,Consumer Banking,Delhi NCR,2017-08-09,E,Y,59100.0,,,,RM-02
+CIF100190,Sohini Dutta,INDIVIDUAL,1973-01-22,SALARIED,Retail Trade,Mass,Consumer Banking,Delhi NCR,2026-05-10,C,Y,23400.0,,,,
+CIF100191,Suresh Chauhan,INDIVIDUAL,1973-06-22,SALARIED,IT & Telecom,Mass Affluent,Consumer Banking,Kolkata,2022-05-11,B,Y,42300.0,,,,RM-09
+CIF100192,Sanjay Bhatia,INDIVIDUAL,1969-01-19,SALARIED,Government & PSU,Mass Affluent,Consumer Banking,Delhi NCR,2016-08-12,D,Y,70900.0,,,,RM-05
+CIF100193,Karthik Iyer,INDIVIDUAL,1993-06-08,SALARIED,Healthcare,Mass Affluent,Consumer Banking,Delhi NCR,2020-05-13,C,Y,58600.0,,,,RM-08
+CIF100194,Hari Rao,INDIVIDUAL,1980-11-05,SELF_EMPLOYED,Self-Employed Professional,Mass Affluent,Consumer Banking,Kolkata,2017-10-14,A,N,78700.0,,,,RM-03
+CIF100195,Bhavesh Jadhav,INDIVIDUAL,1980-04-02,SALARIED,Government & PSU,Mass Affluent,Consumer Banking,Chennai,2026-07-15,C,Y,73200.0,,,,RM-07
+CIF100196,Falguni Trivedi,INDIVIDUAL,1993-04-04,SALARIED,IT & Telecom,Affluent,Consumer Banking,Mumbai,2021-11-16,B,Y,107100.0,,,,RM-06
+CIF100197,Sana Shaikh,INDIVIDUAL,1964-11-04,SALARIED,Education,Mass Affluent,Consumer Banking,Mumbai,2018-04-17,B,Y,55500.0,,,,RM-04
+CIF100198,Nilesh Shah,INDIVIDUAL,1979-01-17,SALARIED,IT & Telecom,Mass Affluent,Consumer Banking,Chennai,2022-09-18,C,Y,104800.0,,,,RM-05
+CIF100199,Sunita Verma,INDIVIDUAL,1966-11-16,SALARIED,Government & PSU,Mass Affluent,Consumer Banking,Delhi NCR,2017-04-19,A,Y,53700.0,,,,RM-07
+CIF100200,Kavitha Krishnan,INDIVIDUAL,1976-07-28,SALARIED,Hospitality & Tourism,Mass,Consumer Banking,Delhi NCR,2020-07-01,D,Y,28000.0,,,,
+CIF100201,Sanjay Yadav,INDIVIDUAL,1982-12-23,SALARIED,Government & PSU,Mass Affluent,Consumer Banking,Hyderabad,2015-01-02,C,Y,52900.0,,,,RM-07
+CIF100202,Imran Khan,INDIVIDUAL,1983-08-24,SALARIED,Hospitality & Tourism,Mass,Consumer Banking,Chennai,2016-04-03,B,Y,20400.0,,,,
+CIF100203,Rajesh Chopra,INDIVIDUAL,1969-04-06,SALARIED,Banking & Finance,Mass Affluent,Consumer Banking,Chennai,2016-09-04,E,Y,48800.0,,,,RM-01
+CIF100204,Sneha Chopra,INDIVIDUAL,1976-01-03,SALARIED,Hospitality & Tourism,Mass Affluent,Consumer Banking,Delhi NCR,2017-11-05,B,N,48800.0,,,,RM-01
+CIF100205,Sejal Shinde,INDIVIDUAL,1973-07-13,SALARIED,Education,Mass,Consumer Banking,Bengaluru,2018-08-06,A,Y,29300.0,,,,
+CIF100206,Farah Khan,INDIVIDUAL,1988-10-14,SALARIED,Oil & Gas,Affluent,Consumer Banking,Chennai,2018-09-07,A,Y,139200.0,,,,RM-01
+CIF100207,Deepa Krishnan,INDIVIDUAL,1987-06-24,SALARIED,Banking & Finance,Affluent,Consumer Banking,Bengaluru,2022-01-08,C,N,221900.0,,,,RM-10
+CIF100208,Amit Rathore,INDIVIDUAL,1986-04-05,SALARIED,Healthcare,Mass Affluent,Consumer Banking,Mumbai,2021-12-09,C,Y,92500.0,,,,RM-01
+CIF100209,Kunal Jadhav,INDIVIDUAL,1982-11-21,SALARIED,Government & PSU,Mass Affluent,Consumer Banking,Mumbai,2015-01-10,E,Y,60100.0,,,,RM-06
+CIF100210,Manisha Kulkarni,INDIVIDUAL,1983-02-25,SALARIED,Aviation,Mass Affluent,Consumer Banking,Bengaluru,2018-11-11,B,Y,79500.0,,,,RM-10
+CIF100211,Bilal Qureshi,INDIVIDUAL,1969-05-02,SALARIED,Healthcare,Mass Affluent,Consumer Banking,Delhi NCR,2024-05-12,A,Y,98900.0,,,,RM-08
+CIF100212,Anil Rathore,INDIVIDUAL,1970-03-28,SALARIED,Government & PSU,Mass Affluent,Consumer Banking,Chennai,2020-08-13,B,Y,51300.0,,,,RM-11
+CIF100213,Jignesh Deshmukh,INDIVIDUAL,1988-03-15,SALARIED,Retail Trade,Mass,Consumer Banking,Delhi NCR,2020-08-14,D,Y,18400.0,,,,
+CIF100214,Manisha Shinde,INDIVIDUAL,1969-04-15,SALARIED,Banking & Finance,Mass Affluent,Consumer Banking,Delhi NCR,2023-11-15,A,Y,96200.0,,,,RM-12
+CIF100215,Pooja Malhotra,INDIVIDUAL,1984-10-04,SALARIED,Retail Trade,Mass,Consumer Banking,Ahmedabad,2023-12-16,A,N,17700.0,,,,
+CIF100216,Mandar Mehta,INDIVIDUAL,1974-11-21,SALARIED,Hospitality & Tourism,Mass,Consumer Banking,Pune,2015-05-17,C,N,29000.0,,,,
+CIF100217,Vignesh Reddy,INDIVIDUAL,1980-01-06,SALARIED,Construction,Mass,Consumer Banking,Mumbai,2019-07-18,B,Y,12800.0,,,,
+CIF100218,Vaishali Patil,INDIVIDUAL,1987-04-23,SALARIED,Hospitality & Tourism,Mass Affluent,Consumer Banking,Hyderabad,2015-10-19,B,Y,49000.0,,,,RM-10
+CIF100219,Nazia Ansari,INDIVIDUAL,1996-03-01,SALARIED,Hospitality & Tourism,Mass,Consumer Banking,Hyderabad,2020-08-20,B,Y,19100.0,,,,
+CIF100220,Nikhil Gupta,INDIVIDUAL,1990-01-22,SALARIED,Hospitality & Tourism,Mass,Consumer Banking,Delhi NCR,2018-06-21,A,Y,27100.0,,,,
+CIF100221,Anjali Chopra,INDIVIDUAL,1970-10-23,SALARIED,Healthcare,Mass,Consumer Banking,Delhi NCR,2020-10-22,A,Y,36900.0,,,,
+CIF100222,Shalini Iyer,INDIVIDUAL,1978-03-21,SALARIED,IT & Telecom,Affluent,Consumer Banking,Bengaluru,2026-06-23,A,N,132900.0,,,,RM-01
+CIF100223,Divya Subramaniam,INDIVIDUAL,1970-10-18,SALARIED,IT & Telecom,Mass Affluent,Consumer Banking,Bengaluru,2015-09-24,C,Y,66400.0,,,,RM-04
+CIF100224,Deepa Mathew,INDIVIDUAL,1989-02-12,SALARIED,Banking & Finance,Mass Affluent,Consumer Banking,Mumbai,2024-04-25,D,Y,66300.0,,,,RM-08
+CIF100225,Aditya Bhatia,INDIVIDUAL,1967-07-20,SALARIED,Hospitality & Tourism,Mass,Consumer Banking,Hyderabad,2016-03-26,A,Y,12800.0,,,,
+CIF100226,Meenakshi Subramaniam,INDIVIDUAL,1988-10-07,SALARIED,Retail Trade,Mass,Consumer Banking,Delhi NCR,2020-11-27,A,Y,42500.0,,,,
+CIF100227,Vaishali Patel,INDIVIDUAL,1991-04-08,SALARIED,Retail Trade,Mass,Consumer Banking,Ahmedabad,2023-05-01,B,Y,25400.0,,,,
+CIF100228,Sneha Verma,INDIVIDUAL,2002-04-12,SALARIED,Construction,Mass,Consumer Banking,Hyderabad,2018-06-02,C,N,39400.0,,,,
+CIF100229,Heena Khan,INDIVIDUAL,2003-04-20,SALARIED,Aviation,Mass Affluent,Consumer Banking,Hyderabad,2015-01-03,A,Y,97000.0,,,,RM-05
+CIF100230,Ramesh Thomas,INDIVIDUAL,1995-02-06,SALARIED,Government & PSU,Mass Affluent,Consumer Banking,Delhi NCR,2023-04-04,A,Y,59100.0,,,,RM-10
+CIF100231,Shalini Varma,INDIVIDUAL,1999-07-27,SALARIED,Government & PSU,Mass Affluent,Consumer Banking,Ahmedabad,2026-08-05,A,Y,83600.0,,,,RM-09
+CIF100232,Shalini Krishnan,INDIVIDUAL,1991-11-26,SALARIED,Banking & Finance,Affluent,Consumer Banking,Delhi NCR,2017-09-06,D,Y,112600.0,,,,RM-10
+CIF100233,Navjot Dhillon,INDIVIDUAL,1996-05-07,SALARIED,IT & Telecom,Mass Affluent,Consumer Banking,Ahmedabad,2020-04-07,B,Y,101900.0,,,,RM-09
+CIF100234,Lakshmi Pillai,INDIVIDUAL,1982-08-20,SALARIED,Government & PSU,Affluent,Consumer Banking,Pune,2018-06-08,C,Y,114600.0,,,,RM-06
+CIF100235,Indrani Dutta,INDIVIDUAL,1996-10-25,SALARIED,Retail Trade,Mass,Consumer Banking,Delhi NCR,2015-05-09,B,Y,34600.0,,,,
+CIF100236,Hetal Shah,INDIVIDUAL,1964-03-12,SALARIED,Construction,Mass,Consumer Banking,Ahmedabad,2021-08-10,B,Y,19600.0,,,,
+CIF100237,Prasad Trivedi,INDIVIDUAL,1988-08-02,SALARIED,Retail Trade,Mass,Consumer Banking,Ahmedabad,2017-07-11,B,Y,17800.0,,,,
+CIF100238,Divya Thomas,INDIVIDUAL,1988-09-21,SALARIED,Retail Trade,Mass,Consumer Banking,Pune,2015-08-12,A,Y,43500.0,,,,
+CIF100239,Manpreet Sidhu,INDIVIDUAL,1980-06-15,SALARIED,Banking & Finance,Mass Affluent,Consumer Banking,Delhi NCR,2024-07-13,A,Y,62400.0,,,,RM-03
+CIF100240,Lakshmi Mathew,INDIVIDUAL,1969-09-19,SALARIED,Government & PSU,Mass Affluent,Consumer Banking,Pune,2019-10-14,B,Y,61700.0,,,,RM-10
+CIF100241,Aditya Kapoor,INDIVIDUAL,1968-04-07,SALARIED,Hospitality & Tourism,Mass Affluent,Consumer Banking,Delhi NCR,2019-09-15,A,N,95100.0,,,,RM-04
+CIF100242,Subhash Dutta,INDIVIDUAL,1977-05-12,SALARIED,Retail Trade,Mass,Consumer Banking,Delhi NCR,2022-07-16,D,Y,32300.0,,,,
+CIF100243,Sanjay Sharma,INDIVIDUAL,1981-04-17,SALARIED,Oil & Gas,Affluent,Consumer Banking,Delhi NCR,2024-07-17,C,Y,155500.0,,,,RM-07
+CIF100244,Anjali Mishra,INDIVIDUAL,2000-03-06,SALARIED,Construction,Mass Affluent,Consumer Banking,Chennai,2016-12-18,C,Y,52100.0,,,,RM-12
+CIF100245,Divya Reddy,INDIVIDUAL,1983-09-15,SALARIED,IT & Telecom,Mass Affluent,Consumer Banking,Pune,2020-07-19,A,Y,89500.0,,,,RM-08
+CIF100246,Suresh Malhotra,INDIVIDUAL,1991-10-28,SALARIED,Education,Mass,Consumer Banking,Pune,2026-05-20,B,Y,43300.0,,,,
+CIF100247,Rohan Pandey,INDIVIDUAL,1973-06-04,SALARIED,Retail Trade,Mass,Consumer Banking,Mumbai,2022-04-21,C,Y,28600.0,,,,
+CIF100248,Subhash Sen,INDIVIDUAL,1976-09-03,SALARIED,IT & Telecom,Mass Affluent,Consumer Banking,Pune,2020-06-22,B,Y,96900.0,,,,RM-01
+CIF100249,Ananya Jain,INDIVIDUAL,1979-01-13,SALARIED,Construction,Affluent,Consumer Banking,Bengaluru,2022-08-23,B,Y,120600.0,,,,RM-03
+CIF100250,Hetal Mehta,INDIVIDUAL,1996-06-01,SALARIED,IT & Telecom,Mass Affluent,Consumer Banking,Mumbai,2019-01-24,A,N,63400.0,,,,RM-04
+CIF100251,Rajesh Kapoor,INDIVIDUAL,1966-09-02,SALARIED,Government & PSU,Mass Affluent,Consumer Banking,Kolkata,2023-04-25,C,Y,51200.0,,,,RM-10
+CIF100252,Deepa Nair,INDIVIDUAL,1985-06-08,SALARIED,Hospitality & Tourism,Mass,Consumer Banking,Hyderabad,2020-02-26,B,Y,27100.0,,,,
+CIF100253,Deepa Subramaniam,INDIVIDUAL,1986-01-22,SALARIED,Retail Trade,Mass Affluent,Consumer Banking,Mumbai,2022-10-27,C,Y,44200.0,,,,RM-04
+CIF100254,Suresh Pillai,INDIVIDUAL,2003-06-28,SALARIED,Hospitality & Tourism,Mass Affluent,Consumer Banking,Chennai,2026-08-01,B,Y,49100.0,,,,RM-04
+CIF100255,Sanjay Jain,INDIVIDUAL,1999-11-13,SALARIED,IT & Telecom,Mass Affluent,Consumer Banking,Hyderabad,2016-11-02,B,Y,101200.0,,,,RM-11
+CIF100256,Sachin Mehta,INDIVIDUAL,1991-07-09,SALARIED,Government & PSU,Mass Affluent,Consumer Banking,Mumbai,2018-09-03,A,N,50200.0,,,,RM-03
+CIF100257,Deepak Bhatia,INDIVIDUAL,1999-07-28,SELF_EMPLOYED,Self-Employed Professional,Affluent,Consumer Banking,Hyderabad,2020-12-04,B,N,292600.0,,,,RM-11
+CIF100258,Simran Dhillon,INDIVIDUAL,1984-05-19,SALARIED,IT & Telecom,Affluent,Consumer Banking,Kolkata,2020-10-05,A,Y,117100.0,,,,RM-01
+CIF100259,Heena Khan,INDIVIDUAL,1975-10-07,SALARIED,Hospitality & Tourism,Mass Affluent,Consumer Banking,Mumbai,2024-08-06,A,Y,49500.0,,,,RM-10
+CIF100260,Sachin Patil,INDIVIDUAL,1987-08-14,SALARIED,Government & PSU,Mass,Consumer Banking,Hyderabad,2020-08-07,D,Y,35400.0,,,,
+CIF100261,Joseph Lobo,INDIVIDUAL,1967-03-19,SALARIED,Education,Mass,Consumer Banking,Mumbai,2016-12-08,B,Y,35100.0,,,,
+CIF100262,Sourav Chatterjee,INDIVIDUAL,1978-11-27,SALARIED,Healthcare,Mass Affluent,Consumer Banking,Ahmedabad,2016-09-09,A,Y,88900.0,,,,RM-02
+CIF100263,Pooja Pandey,INDIVIDUAL,1990-08-28,SALARIED,Banking & Finance,Mass Affluent,Consumer Banking,Chennai,2020-02-10,A,Y,63700.0,,,,RM-12
+CIF100264,Meenakshi Subramaniam,INDIVIDUAL,1993-02-08,SALARIED,Banking & Finance,Mass Affluent,Consumer Banking,Hyderabad,2016-11-11,D,Y,70100.0,,,,RM-10
+CIF100265,Rajesh Verma,INDIVIDUAL,1975-03-02,SALARIED,Oil & Gas,Affluent,Consumer Banking,Hyderabad,2016-05-12,D,Y,268500.0,,,,RM-12
+CIF100266,Kavya Kapoor,INDIVIDUAL,2002-06-24,SALARIED,Oil & Gas,Affluent,Consumer Banking,Bengaluru,2021-02-13,B,Y,152300.0,,,,RM-12
+CIF100267,Pooja Rathore,INDIVIDUAL,1980-07-04,SALARIED,Government & PSU,Mass Affluent,Consumer Banking,Hyderabad,2023-07-14,C,Y,54700.0,,,,RM-04
+CIF100268,Ganesh Krishnan,INDIVIDUAL,1980-04-13,SALARIED,Hospitality & Tourism,Mass Affluent,Consumer Banking,Mumbai,2016-06-15,A,Y,53100.0,,,,RM-09
+CIF100269,Manoj Jain,INDIVIDUAL,1991-06-23,SALARIED,Aviation,Mass,Consumer Banking,Delhi NCR,2016-01-16,B,N,39500.0,,,,
+CIF100270,Debashish Ghosh,INDIVIDUAL,1975-03-26,SALARIED,Banking & Finance,Mass Affluent,Consumer Banking,Delhi NCR,2024-06-17,B,Y,90200.0,,,,RM-03
+CIF100271,Ketaki Shinde,INDIVIDUAL,1971-08-01,SALARIED,Banking & Finance,Mass Affluent,Consumer Banking,Mumbai,2026-08-18,A,Y,87300.0,,,,RM-06
+CIF100272,Meenakshi Subramaniam,INDIVIDUAL,1995-04-11,SALARIED,Education,Mass Affluent,Consumer Banking,Pune,2022-01-19,A,Y,82300.0,,,,RM-02
+CIF100273,Sachin Shah,INDIVIDUAL,2003-11-19,SALARIED,Aviation,Affluent,Consumer Banking,Pune,2017-02-20,A,N,170000.0,,,,RM-08
+CIF100274,Anitha Rao,INDIVIDUAL,1995-12-06,SALARIED,Construction,Mass,Consumer Banking,Delhi NCR,2016-06-21,D,Y,35500.0,,,,
+CIF100275,Rahul Gupta,INDIVIDUAL,1967-04-11,SALARIED,Education,Mass Affluent,Consumer Banking,Mumbai,2016-09-22,D,N,54900.0,,,,RM-03
+CIF100276,Harpreet Gill,INDIVIDUAL,1975-08-13,SALARIED,Hospitality & Tourism,Mass,Consumer Banking,Delhi NCR,2017-09-23,C,Y,38400.0,,,,
+CIF100277,Suresh Chopra,INDIVIDUAL,1971-04-28,SALARIED,Hospitality & Tourism,Mass,Consumer Banking,Hyderabad,2018-01-24,A,Y,18600.0,,,,
+CIF100278,Zeeshan Sheikh,INDIVIDUAL,1974-12-04,SALARIED,Retail Trade,Mass,Consumer Banking,Hyderabad,2015-09-25,C,Y,25200.0,,,,
+CIF100279,Maria Fernandes,INDIVIDUAL,2003-04-17,SALARIED,Government & PSU,Mass Affluent,Consumer Banking,Delhi NCR,2015-02-26,C,Y,60700.0,,,,RM-01
+CIF100280,Deepak Agarwal,INDIVIDUAL,1974-04-10,SALARIED,Banking & Finance,Mass Affluent,Consumer Banking,Hyderabad,2015-06-27,D,Y,88000.0,,,,RM-01
+CIF100281,Falguni Desai,INDIVIDUAL,2001-09-03,SELF_EMPLOYED,Self-Employed Professional,Mass Affluent,Consumer Banking,Mumbai,2020-02-01,B,N,53500.0,,,,RM-02
+CIF100282,Nikhil Kapoor,INDIVIDUAL,2000-06-19,SALARIED,Hospitality & Tourism,Mass Affluent,Consumer Banking,Kolkata,2014-10-02,B,N,80000.0,,,,RM-09
+CIF100283,Abhijit Chatterjee,INDIVIDUAL,2002-01-28,SALARIED,Oil & Gas,Mass Affluent,Consumer Banking,Mumbai,2026-06-03,A,Y,59700.0,,,,RM-11
+CIF100284,Priya Gupta,INDIVIDUAL,1996-04-16,SALARIED,Hospitality & Tourism,Mass,Consumer Banking,Delhi NCR,2017-10-04,D,Y,36800.0,,,,
+CIF100285,Neha Verma,INDIVIDUAL,1967-03-02,SALARIED,IT & Telecom,Mass Affluent,Consumer Banking,Mumbai,2021-09-05,C,Y,73300.0,,,,RM-03
+CIF100286,Anil Tiwari,INDIVIDUAL,1971-04-03,SALARIED,Construction,Mass,Consumer Banking,Mumbai,2022-10-06,A,Y,21200.0,,,,
+CIF100287,Sanjay Gupta,INDIVIDUAL,1990-06-05,SALARIED,Hospitality & Tourism,Mass,Consumer Banking,Hyderabad,2019-11-07,A,Y,34900.0,,,,
+CIF100288,Zainab Hussain,INDIVIDUAL,1977-11-27,SALARIED,Oil & Gas,Affluent,Consumer Banking,Delhi NCR,2026-06-08,C,Y,144400.0,,,,RM-04
+CIF100289,Divya Nair,INDIVIDUAL,1990-05-08,SALARIED,Education,Mass,Consumer Banking,Bengaluru,2022-10-09,B,Y,22800.0,,,,
+CIF100290,Arjun Agarwal,INDIVIDUAL,1991-01-14,SALARIED,Government & PSU,Mass Affluent,Consumer Banking,Mumbai,2022-04-10,A,N,42800.0,,,,RM-12
+CIF100291,Shalini Subramaniam,INDIVIDUAL,1981-09-16,SALARIED,Retail Trade,Mass,Consumer Banking,Chennai,2026-07-11,C,Y,24600.0,,,,
+CIF100292,Divya Nair,INDIVIDUAL,1970-08-01,SALARIED,Oil & Gas,Affluent,Consumer Banking,Mumbai,2020-11-12,B,Y,174800.0,,,,RM-02
+CIF100293,Hari Nair,INDIVIDUAL,1975-12-14,SALARIED,Education,Mass Affluent,Consumer Banking,Chennai,2017-11-13,E,Y,82700.0,,,,RM-06
+CIF100294,Jaspreet Bedi,INDIVIDUAL,1985-08-09,SALARIED,Government & PSU,Mass,Consumer Banking,Mumbai,2024-01-14,A,Y,37000.0,,,,
+CIF100295,Karthik Thomas,INDIVIDUAL,1972-04-10,SALARIED,Construction,Mass Affluent,Consumer Banking,Mumbai,2016-09-15,B,Y,60700.0,,,,RM-09
+CIF100296,Rohan Jain,INDIVIDUAL,1970-06-08,SALARIED,Retail Trade,Mass,Consumer Banking,Ahmedabad,2018-01-16,D,Y,14400.0,,,,
+CIF100297,Sneha Mishra,INDIVIDUAL,1983-05-05,SALARIED,Retail Trade,Mass Affluent,Consumer Banking,Pune,2022-08-17,C,Y,58000.0,,,,RM-10
+CIF100298,Ramesh Rao,INDIVIDUAL,2003-04-06,SALARIED,Government & PSU,Mass,Consumer Banking,Mumbai,2020-04-18,C,Y,30500.0,,,,
+CIF100299,Sachin Mehta,INDIVIDUAL,1998-04-20,SALARIED,Healthcare,Mass Affluent,Consumer Banking,Hyderabad,2014-10-19,A,Y,92600.0,,,,RM-08
+CIF100300,Ayesha Ansari,INDIVIDUAL,1968-08-01,SALARIED,Banking & Finance,Mass Affluent,Consumer Banking,Bengaluru,2017-08-01,D,Y,91800.0,,,,RM-01
+CIF100301,Sanjay Kapoor,INDIVIDUAL,1966-12-15,SALARIED,Banking & Finance,Mass Affluent,Consumer Banking,Bengaluru,2021-03-02,C,N,55600.0,,,,RM-02
+CIF100302,Amit Kapoor,INDIVIDUAL,2002-06-19,SALARIED,Government & PSU,Mass,Consumer Banking,Hyderabad,2026-05-03,C,N,34600.0,,,,
+CIF100303,Priya Mishra,INDIVIDUAL,1968-10-19,SALARIED,Oil & Gas,Affluent,Consumer Banking,Mumbai,2017-09-04,B,Y,104100.0,,,,RM-06
+CIF100304,Divya Krishnan,INDIVIDUAL,1984-05-08,SALARIED,Government & PSU,Affluent,Consumer Banking,Pune,2023-05-05,D,Y,129500.0,,,,RM-02
+CIF100305,Nikhil Tiwari,INDIVIDUAL,1968-06-07,SALARIED,Retail Trade,Mass,Consumer Banking,Kolkata,2019-02-06,C,Y,23200.0,,,,
+CIF100306,Aditya Chauhan,INDIVIDUAL,2003-02-25,SALARIED,Banking & Finance,Affluent,Consumer Banking,Delhi NCR,2018-01-07,C,Y,118200.0,,,,RM-04
+CIF100307,Shabana Khan,INDIVIDUAL,1978-10-09,SALARIED,Government & PSU,Mass Affluent,Consumer Banking,Kolkata,2019-06-08,A,Y,53200.0,,,,RM-01
+CIF100308,Anjali Bhatia,INDIVIDUAL,1972-05-09,SALARIED,Construction,Mass,Consumer Banking,Hyderabad,2022-08-09,B,Y,24000.0,,,,
+CIF100309,Omkar Trivedi,INDIVIDUAL,1981-03-27,SALARIED,Education,Mass,Consumer Banking,Ahmedabad,2023-09-10,C,Y,21700.0,,,,
+CIF100310,Vaishali Patel,INDIVIDUAL,1981-08-14,SALARIED,Hospitality & Tourism,Mass Affluent,Consumer Banking,Mumbai,2020-10-11,C,Y,71200.0,,,,RM-07
+CIF100311,Priya Pandey,INDIVIDUAL,1967-05-28,SALARIED,Construction,Mass,Consumer Banking,Pune,2021-02-12,B,Y,34800.0,,,,
+CIF100312,Navjot Sidhu,INDIVIDUAL,1979-09-04,SALARIED,Hospitality & Tourism,Mass,Consumer Banking,Ahmedabad,2023-11-13,B,Y,39700.0,,,,
+CIF100313,Suresh Varghese,INDIVIDUAL,1970-02-17,SALARIED,Construction,Mass,Consumer Banking,Pune,2019-01-14,C,Y,26000.0,,,,
+CIF100314,Sohini Das,INDIVIDUAL,2003-02-18,SALARIED,Government & PSU,Mass Affluent,Consumer Banking,Bengaluru,2017-01-15,D,Y,65400.0,,,,RM-03
+CIF100315,Revathi Varghese,INDIVIDUAL,1991-08-14,SALARIED,IT & Telecom,Mass Affluent,Consumer Banking,Delhi NCR,2023-03-16,B,Y,51000.0,,,,RM-03
+CIF100316,Manisha Trivedi,INDIVIDUAL,1966-06-16,SALARIED,Retail Trade,Mass Affluent,Consumer Banking,Chennai,2015-07-17,A,Y,46200.0,,,,RM-07
+CIF100317,Rahul Rathore,INDIVIDUAL,1967-07-24,SALARIED,Aviation,Affluent,Consumer Banking,Bengaluru,2017-10-18,B,N,102500.0,,,,RM-03
+CIF100318,Abhijit Bose,INDIVIDUAL,1974-09-05,SALARIED,Healthcare,Affluent,Consumer Banking,Delhi NCR,2018-09-19,C,Y,118400.0,,,,RM-10
+CIF100319,Karan Malhotra,INDIVIDUAL,1967-06-23,SALARIED,Education,Mass,Consumer Banking,Delhi NCR,2019-06-20,C,Y,39500.0,,,,
+CIF100320,Revathi Pillai,INDIVIDUAL,1964-04-04,SELF_EMPLOYED,Self-Employed Professional,Mass Affluent,Consumer Banking,Delhi NCR,2014-10-21,A,N,83400.0,,,,RM-10
+CIF100321,Zainab Shaikh,INDIVIDUAL,1988-04-15,SALARIED,Banking & Finance,Affluent,Consumer Banking,Hyderabad,2018-03-22,B,Y,201700.0,,,,RM-08
+CIF100322,Sachin Patil,INDIVIDUAL,1997-02-24,SALARIED,Hospitality & Tourism,Mass,Consumer Banking,Bengaluru,2016-10-23,B,N,26200.0,,,,
+CIF100323,Omkar Patel,INDIVIDUAL,1977-10-12,SALARIED,Government & PSU,Mass Affluent,Consumer Banking,Hyderabad,2016-11-24,B,Y,103600.0,,,,RM-01
+CIF100324,Kavitha Pillai,INDIVIDUAL,1986-01-19,SALARIED,Government & PSU,Mass Affluent,Consumer Banking,Mumbai,2022-04-25,A,Y,80500.0,,,,RM-05
+CIF100325,Divya George,INDIVIDUAL,1992-07-05,SALARIED,Banking & Finance,Affluent,Consumer Banking,Mumbai,2016-11-26,D,N,123000.0,,,,RM-03
+CIF100326,Prasad Shinde,INDIVIDUAL,1990-02-28,SALARIED,Banking & Finance,Affluent,Consumer Banking,Mumbai,2015-02-27,D,Y,125900.0,,,,RM-05
+CIF100327,Abhijit Chatterjee,INDIVIDUAL,1990-11-02,SALARIED,Healthcare,Affluent,Consumer Banking,Delhi NCR,2019-07-01,A,Y,142200.0,,,,RM-09
+CIF100328,Ananya Malhotra,INDIVIDUAL,1976-01-07,SELF_EMPLOYED,Self-Employed Professional,Affluent,Consumer Banking,Delhi NCR,2024-07-02,A,N,235400.0,,,,RM-07
+CIF100329,Rohan Gupta,INDIVIDUAL,1987-12-20,SALARIED,Government & PSU,Mass,Consumer Banking,Bengaluru,2022-11-03,C,Y,30700.0,,,,
+CIF100330,Zeeshan Rizvi,INDIVIDUAL,1986-11-24,SALARIED,Construction,Mass Affluent,Consumer Banking,Chennai,2024-01-04,B,Y,100000.0,,,,RM-10
+CIF100331,Neha Tiwari,INDIVIDUAL,1972-10-24,SALARIED,Aviation,Mass Affluent,Consumer Banking,Pune,2016-11-05,B,N,65900.0,,,,RM-09
+CIF100332,Paromita Ghosh,INDIVIDUAL,1967-06-21,SALARIED,Banking & Finance,Affluent,Consumer Banking,Delhi NCR,2016-08-06,B,Y,172700.0,,,,RM-06
+CIF100333,Karan Rathore,INDIVIDUAL,1973-04-17,SALARIED,Hospitality & Tourism,Mass,Consumer Banking,Pune,2019-10-07,B,Y,29600.0,,,,
+CIF100334,Neha Kumar,INDIVIDUAL,1994-02-05,SALARIED,Oil & Gas,Affluent,Consumer Banking,Ahmedabad,2018-12-08,B,Y,134700.0,,,,RM-02
+CIF100335,Sejal Jadhav,INDIVIDUAL,1972-05-27,SALARIED,Hospitality & Tourism,Mass,Consumer Banking,Ahmedabad,2019-09-09,A,Y,32900.0,,,,
+CIF100336,Manoj Mishra,INDIVIDUAL,1975-04-27,SELF_EMPLOYED,Self-Employed Professional,Mass Affluent,Consumer Banking,Pune,2024-04-10,A,N,45200.0,,,,RM-03
+CIF100337,Bhavesh Shah,INDIVIDUAL,2003-01-24,SALARIED,Hospitality & Tourism,Mass,Consumer Banking,Delhi NCR,2021-03-11,B,Y,20400.0,,,,
+CIF100338,Aditya Yadav,INDIVIDUAL,1983-03-08,SALARIED,Government & PSU,Mass Affluent,Consumer Banking,Delhi NCR,2017-04-12,B,N,48800.0,,,,RM-08
+CIF100339,Aravind Pillai,INDIVIDUAL,1972-04-11,SALARIED,Retail Trade,Mass,Consumer Banking,Bengaluru,2021-01-13,B,Y,31200.0,,,,
+CIF100340,Anjali Chopra,INDIVIDUAL,1973-04-08,SALARIED,Government & PSU,Affluent,Consumer Banking,Bengaluru,2019-06-14,B,Y,123600.0,,,,RM-08
+CIF100341,Anjali Kumar,INDIVIDUAL,1964-01-22,SALARIED,Oil & Gas,Mass Affluent,Consumer Banking,Hyderabad,2015-06-15,D,Y,81500.0,,,,RM-09
+CIF100342,Lakshmi Pillai,INDIVIDUAL,1979-01-08,SALARIED,Construction,Mass,Consumer Banking,Delhi NCR,2019-02-16,A,Y,38900.0,,,,
+CIF100343,Divya Chauhan,INDIVIDUAL,1979-01-14,SALARIED,Education,Mass Affluent,Consumer Banking,Mumbai,2024-02-17,C,Y,59000.0,,,,RM-03
+CIF100344,Rohan Tiwari,INDIVIDUAL,1970-03-05,SALARIED,Hospitality & Tourism,Mass,Consumer Banking,Delhi NCR,2024-08-18,D,Y,35500.0,,,,
+CIF100345,Manpreet Kaur,INDIVIDUAL,1985-09-25,SALARIED,Education,Mass Affluent,Consumer Banking,Ahmedabad,2022-12-19,A,Y,87200.0,,,,RM-01
+CIF100346,Snehal Mehta,INDIVIDUAL,1966-11-26,SALARIED,Hospitality & Tourism,Mass,Consumer Banking,Bengaluru,2020-02-20,A,Y,26300.0,,,,
+CIF100347,Debashish Sen,INDIVIDUAL,1996-07-19,SALARIED,Hospitality & Tourism,Mass,Consumer Banking,Delhi NCR,2016-04-21,C,Y,26400.0,,,,
+CIF100348,Prasad Deshmukh,INDIVIDUAL,1983-05-15,SALARIED,Healthcare,Mass Affluent,Consumer Banking,Delhi NCR,2016-11-22,B,Y,52100.0,,,,RM-06
+CIF100349,Bilal Rizvi,INDIVIDUAL,1974-10-03,SALARIED,Banking & Finance,Affluent,Consumer Banking,Bengaluru,2026-07-23,B,Y,186100.0,,,,RM-07
+CIF100350,Shruti Agarwal,INDIVIDUAL,2002-10-03,SALARIED,Healthcare,Mass Affluent,Consumer Banking,Bengaluru,2020-10-24,D,Y,53700.0,,,,RM-04
+CIF100351,Navjot Bedi,INDIVIDUAL,1999-06-10,SALARIED,Government & PSU,Mass Affluent,Consumer Banking,Delhi NCR,2016-10-25,D,Y,62800.0,,,,RM-09
+CIF100352,Shruti Singh,INDIVIDUAL,1964-02-20,SALARIED,Healthcare,Mass Affluent,Consumer Banking,Mumbai,2019-09-26,B,Y,73700.0,,,,RM-06
+CIF100353,Arjun Chopra,INDIVIDUAL,1975-03-17,SELF_EMPLOYED,Self-Employed Professional,Affluent,Consumer Banking,Bengaluru,2021-07-27,C,N,109300.0,,,,RM-01
+CIF100354,Sanjay Agarwal,INDIVIDUAL,1984-01-11,SALARIED,Education,Mass,Consumer Banking,Delhi NCR,2019-06-01,E,N,27200.0,,,,
+CIF100355,Rekha Yadav,INDIVIDUAL,1964-03-01,SALARIED,Government & PSU,Mass Affluent,Consumer Banking,Delhi NCR,2016-07-02,B,Y,84100.0,,,,RM-02
+CIF100356,Nikhil Jain,INDIVIDUAL,2001-06-23,SALARIED,Banking & Finance,Mass Affluent,Consumer Banking,Mumbai,2016-08-03,A,Y,69100.0,,,,RM-08
+CIF100357,Ananya Chatterjee,INDIVIDUAL,1966-12-03,SALARIED,Retail Trade,Mass,Consumer Banking,Bengaluru,2018-12-04,C,Y,26700.0,,,,
+CIF100358,Hari Krishnan,INDIVIDUAL,1967-08-26,SALARIED,Hospitality & Tourism,Mass,Consumer Banking,Bengaluru,2026-08-05,B,Y,33500.0,,,,
+CIF100359,Sohini Chatterjee,INDIVIDUAL,1999-11-13,SALARIED,Aviation,Mass Affluent,Consumer Banking,Pune,2019-07-06,A,Y,73900.0,,,,RM-10
+CIF100360,Lakshmi Varma,INDIVIDUAL,1996-09-06,SALARIED,Healthcare,Mass,Consumer Banking,Ahmedabad,2022-12-07,D,Y,22300.0,,,,
+CIF100361,Ananya Gupta,INDIVIDUAL,1973-02-13,SALARIED,Aviation,Mass Affluent,Consumer Banking,Chennai,2022-11-08,A,Y,45000.0,,,,RM-10
+CIF100362,Suresh Varma,INDIVIDUAL,1967-02-01,SALARIED,Hospitality & Tourism,Mass Affluent,Consumer Banking,Mumbai,2016-04-09,B,Y,43400.0,,,,RM-01
+CIF100363,Hetal Shah,INDIVIDUAL,1968-12-09,SALARIED,Hospitality & Tourism,Mass,Consumer Banking,Bengaluru,2015-06-10,C,Y,18200.0,,,,
+CIF100364,Falguni Patil,INDIVIDUAL,1995-08-05,SALARIED,Banking & Finance,Mass Affluent,Consumer Banking,Delhi NCR,2019-02-11,B,Y,99900.0,,,,RM-11
+CIF100365,Vignesh Krishnan,INDIVIDUAL,1981-08-26,SALARIED,Government & PSU,Mass Affluent,Consumer Banking,Chennai,2022-05-12,C,Y,89700.0,,,,RM-11
+CIF100366,Indrani Das,INDIVIDUAL,1983-06-20,SALARIED,Retail Trade,Mass,Consumer Banking,Delhi NCR,2023-07-13,A,N,13600.0,,,,
+CIF100367,Divya Menon,INDIVIDUAL,1978-09-22,SALARIED,Education,Mass,Consumer Banking,Ahmedabad,2019-10-14,B,Y,33300.0,,,,
+CIF100368,Karthik Rao,INDIVIDUAL,2003-07-23,SALARIED,Hospitality & Tourism,Mass,Consumer Banking,Delhi NCR,2019-06-15,C,Y,26800.0,,,,
+CIF100369,Imran Khan,INDIVIDUAL,1975-07-02,SALARIED,Education,Mass Affluent,Consumer Banking,Bengaluru,2021-05-16,A,Y,62600.0,,,,RM-01
+CIF100370,Suresh Rao,INDIVIDUAL,1983-09-01,SALARIED,Healthcare,Mass Affluent,Consumer Banking,Delhi NCR,2024-04-17,E,Y,55400.0,,,,RM-11
+CIF100371,Sana Qureshi,INDIVIDUAL,1981-12-27,SALARIED,Construction,Mass,Consumer Banking,Hyderabad,2021-12-18,B,Y,23000.0,,,,
+CIF100372,Rajesh Yadav,INDIVIDUAL,1997-01-27,SALARIED,Aviation,Affluent,Consumer Banking,Mumbai,2026-08-19,B,Y,202000.0,,,,RM-09
+CIF100373,Ananya Banerjee,INDIVIDUAL,1992-09-06,SALARIED,IT & Telecom,Mass Affluent,Consumer Banking,Mumbai,2022-02-20,A,Y,71800.0,,,,RM-01
+CIF100374,Sanjay Tiwari,INDIVIDUAL,1994-05-02,SALARIED,Education,Mass Affluent,Consumer Banking,Hyderabad,2018-02-21,E,Y,53500.0,,,,RM-07
+CIF100375,Priya Kapoor,INDIVIDUAL,2001-06-05,SALARIED,Banking & Finance,Mass Affluent,Consumer Banking,Delhi NCR,2016-06-22,B,Y,87200.0,,,,RM-11
+CIF100376,Hari Thomas,INDIVIDUAL,1975-01-16,SALARIED,Government & PSU,Affluent,Consumer Banking,Chennai,2020-12-23,C,N,114700.0,,,,RM-11
+CIF100377,Arif Khan,INDIVIDUAL,1977-06-08,SALARIED,Education,Mass Affluent,Consumer Banking,Chennai,2022-09-24,A,Y,44600.0,,,,RM-08
+CIF100378,Manpreet Sandhu,INDIVIDUAL,1970-01-16,SALARIED,Retail Trade,Mass Affluent,Consumer Banking,Mumbai,2019-01-25,C,N,53000.0,,,,RM-04
+CIF100379,Rituparna Sen,INDIVIDUAL,1992-07-23,SALARIED,Retail Trade,Mass,Consumer Banking,Pune,2021-09-26,B,Y,34500.0,,,,
+CIF100380,Neha Kumar,INDIVIDUAL,1969-08-20,SALARIED,Healthcare,Mass,Consumer Banking,Delhi NCR,2015-02-27,A,Y,20600.0,,,,
+CIF100381,Karan Verma,INDIVIDUAL,1968-03-03,SALARIED,Banking & Finance,Affluent,Consumer Banking,Hyderabad,2022-10-01,B,Y,262900.0,,,,RM-07
+CIF100382,Revathi Mathew,INDIVIDUAL,1993-09-06,SALARIED,Retail Trade,Mass,Consumer Banking,Bengaluru,2014-11-02,B,Y,18400.0,,,,
+CIF100383,Sunita Yadav,INDIVIDUAL,1994-04-22,SALARIED,Hospitality & Tourism,Mass,Consumer Banking,Chennai,2026-07-03,C,Y,36100.0,,,,
+CIF100384,Kunal Mehta,INDIVIDUAL,1976-01-23,SALARIED,Aviation,Mass Affluent,Consumer Banking,Hyderabad,2017-01-04,A,Y,94500.0,,,,RM-01
+CIF100385,Shruti Sharma,INDIVIDUAL,1967-09-02,SALARIED,Government & PSU,Affluent,Consumer Banking,Pune,2026-08-05,A,Y,115600.0,,,,RM-07
+CIF100386,Meenakshi Reddy,INDIVIDUAL,1964-10-13,SALARIED,Banking & Finance,Mass Affluent,Consumer Banking,Ahmedabad,2021-08-06,A,Y,51400.0,,,,RM-10
+CIF100387,Sohini Chatterjee,INDIVIDUAL,1977-09-14,SALARIED,Hospitality & Tourism,Mass,Consumer Banking,Delhi NCR,2023-08-07,C,Y,20100.0,,,,
+CIF100388,Rekha Gupta,INDIVIDUAL,1964-09-13,SALARIED,Education,Mass,Consumer Banking,Mumbai,2024-01-08,A,Y,34100.0,,,,
+CIF100389,Suresh Agarwal,INDIVIDUAL,1980-12-15,SALARIED,Banking & Finance,Mass Affluent,Consumer Banking,Mumbai,2023-02-09,B,N,74000.0,,,,RM-02
+CIF100390,Hetal Patel,INDIVIDUAL,1999-10-08,SALARIED,Hospitality & Tourism,Mass,Consumer Banking,Mumbai,2018-04-10,C,Y,20600.0,,,,
+CIF100391,Srinivas George,INDIVIDUAL,1983-01-17,SALARIED,Construction,Mass,Consumer Banking,Chennai,2020-08-11,D,Y,23200.0,,,,
+CIF100392,Tapan Sen,INDIVIDUAL,1994-02-18,SALARIED,Healthcare,Mass Affluent,Consumer Banking,Chennai,2021-06-12,B,Y,65200.0,,,,RM-07
+CIF100393,Priya Gupta,INDIVIDUAL,1983-04-11,SALARIED,Hospitality & Tourism,Affluent,Consumer Banking,Hyderabad,2015-01-13,D,Y,130600.0,,,,RM-04
+CIF100394,Vikram Singh,INDIVIDUAL,1971-10-11,SALARIED,Healthcare,Affluent,Consumer Banking,Bengaluru,2016-04-14,D,Y,138500.0,,,,RM-04
+CIF100395,Nikhil Kapoor,INDIVIDUAL,1968-04-16,SALARIED,Education,Mass Affluent,Consumer Banking,Bengaluru,2021-03-15,B,Y,45500.0,,,,RM-08
+CIF100396,Suresh Subramaniam,INDIVIDUAL,1975-10-21,SALARIED,Government & PSU,Mass,Consumer Banking,Mumbai,2017-12-16,A,Y,38500.0,,,,
+CIF100397,Omkar Patel,INDIVIDUAL,2000-11-26,SALARIED,Hospitality & Tourism,Mass,Consumer Banking,Delhi NCR,2015-02-17,B,Y,12700.0,,,,
+CIF100398,Anjali Kumar,INDIVIDUAL,1968-08-25,SALARIED,Aviation,Mass,Consumer Banking,Bengaluru,2023-04-18,A,Y,26000.0,,,,
+CIF100399,Rohan Sharma,INDIVIDUAL,1995-12-21,SALARIED,Retail Trade,Mass,Consumer Banking,Pune,2018-04-19,C,Y,24200.0,,,,
+CIF100400,Hari Thomas,INDIVIDUAL,1972-06-01,SALARIED,Government & PSU,Mass Affluent,Consumer Banking,Hyderabad,2015-12-01,C,Y,52700.0,,,,RM-05
+CIF100401,Shalini Krishnan,INDIVIDUAL,1991-03-09,SALARIED,IT & Telecom,Mass Affluent,Consumer Banking,Mumbai,2017-03-02,B,Y,48400.0,,,,RM-12
+CIF100402,Kavya Bhatia,INDIVIDUAL,2002-09-28,SALARIED,Aviation,Affluent,Consumer Banking,Bengaluru,2020-10-03,C,Y,125000.0,,,,RM-07
+CIF100403,Meenakshi Nair,INDIVIDUAL,1977-09-04,SALARIED,Government & PSU,Mass Affluent,Consumer Banking,Pune,2024-07-04,B,Y,76900.0,,,,RM-05
+CIF100404,Jignesh Desai,INDIVIDUAL,1985-04-07,SELF_EMPLOYED,Self-Employed Professional,Mass Affluent,Consumer Banking,Chennai,2018-03-05,C,N,95100.0,,,,RM-01
+CIF100405,Aditya Jain,INDIVIDUAL,1993-08-28,SALARIED,Hospitality & Tourism,Mass,Consumer Banking,Chennai,2020-05-06,D,Y,37600.0,,,,
+CIF100406,Sneha Kumar,INDIVIDUAL,1977-02-25,SALARIED,Retail Trade,Mass Affluent,Consumer Banking,Delhi NCR,2016-08-07,A,Y,44600.0,,,,RM-11
+CIF100407,Vaishali Patil,INDIVIDUAL,1966-11-21,SALARIED,Government & PSU,Mass Affluent,Consumer Banking,Chennai,2015-06-08,D,N,80700.0,,,,RM-10
+CIF100408,Ravneet Sidhu,INDIVIDUAL,1978-05-06,SALARIED,Retail Trade,Mass,Consumer Banking,Mumbai,2014-11-09,B,Y,16600.0,,,,
+CIF100409,Heena Qureshi,INDIVIDUAL,1988-09-10,SELF_EMPLOYED,Self-Employed Professional,Affluent,Consumer Banking,Hyderabad,2026-08-10,C,N,105300.0,,,,RM-02
+CIF100410,Bhavesh Patil,INDIVIDUAL,1981-04-17,SALARIED,Hospitality & Tourism,Mass,Consumer Banking,Delhi NCR,2019-03-11,D,Y,18800.0,,,,
+CIF100411,Anil Agarwal,INDIVIDUAL,1992-11-25,SALARIED,IT & Telecom,Mass Affluent,Consumer Banking,Hyderabad,2020-12-12,B,Y,44800.0,,,,RM-04
+CIF100412,Priya Agarwal,INDIVIDUAL,1990-03-05,SALARIED,Government & PSU,Affluent,Consumer Banking,Hyderabad,2019-06-13,B,Y,109900.0,,,,RM-01
+CIF100413,Ananya Ghosh,INDIVIDUAL,1970-06-06,SALARIED,IT & Telecom,Affluent,Consumer Banking,Delhi NCR,2021-04-14,D,N,155200.0,,,,RM-02
+CIF100414,Zeeshan Ansari,INDIVIDUAL,1987-04-20,SALARIED,Government & PSU,Mass Affluent,Consumer Banking,Mumbai,2020-06-15,C,Y,93200.0,,,,RM-06
+CIF100415,Aditya Sharma,INDIVIDUAL,1986-04-28,SALARIED,IT & Telecom,Mass Affluent,Consumer Banking,Mumbai,2018-10-16,A,Y,84200.0,,,,RM-08
+CIF100416,Thomas Pereira,INDIVIDUAL,1998-05-21,SALARIED,IT & Telecom,Affluent,Consumer Banking,Chennai,2019-03-17,C,Y,120100.0,,,,RM-04
+CIF100417,Divya Iyer,INDIVIDUAL,1986-05-11,SALARIED,Banking & Finance,Mass Affluent,Consumer Banking,Pune,2019-06-18,B,Y,71200.0,,,,RM-06
+CIF100418,Ramesh Iyer,INDIVIDUAL,1964-10-03,SALARIED,Healthcare,Mass Affluent,Consumer Banking,Delhi NCR,2022-08-19,B,Y,52400.0,,,,RM-06
+CIF100419,Amit Yadav,INDIVIDUAL,1987-08-02,SALARIED,Retail Trade,Mass Affluent,Consumer Banking,Delhi NCR,2024-05-20,A,Y,47100.0,,,,RM-06
+CIF100420,Deepak Chopra,INDIVIDUAL,1979-10-12,SALARIED,Aviation,Mass Affluent,Consumer Banking,Hyderabad,2017-02-21,C,N,74000.0,,,,RM-08
+CIF100421,Shree Trading Co.,SME,,BUSINESS,General Trading,Micro,Business Banking,Mumbai,2016-12-22,B,N,,19844000.0,10,Proprietorship,RM-16
+CIF100422,Krishna Caterers LLP,SME,,BUSINESS,Restaurants & Hospitality,Medium,Business Banking,Mumbai,2016-11-23,B,N,,222312000.0,8,LLP,RM-18
+CIF100423,Ashoka Enterprises,SME,,BUSINESS,General Trading,Medium,Business Banking,Bengaluru,2026-06-24,B,N,,397704000.0,1,Partnership,RM-21
+CIF100424,Deccan Logistics Pvt Ltd,SME,,BUSINESS,Logistics & Transport,Small,Business Banking,Mumbai,2019-01-25,A,N,,58194000.0,12,Proprietorship,RM-18
+CIF100425,Krishna Roadlines,SME,,BUSINESS,Logistics & Transport,Micro,Business Banking,Ahmedabad,2021-10-26,A,N,,37069000.0,24,Proprietorship,RM-23
+CIF100426,Konark Caterers LLP,SME,,BUSINESS,Restaurants & Hospitality,Micro,Business Banking,Ahmedabad,2019-07-27,C,N,,9365000.0,8,Proprietorship,RM-18
+CIF100427,Omkar Hospitality Pvt Ltd,SME,,BUSINESS,Restaurants & Hospitality,Micro,Business Banking,Bengaluru,2019-04-01,B,N,,7546000.0,6,Partnership,RM-17
+CIF100428,Deccan Caterers LLP,SME,,BUSINESS,Restaurants & Hospitality,Small,Business Banking,Ahmedabad,2024-08-02,B,N,,71138000.0,6,Partnership,RM-15
+CIF100429,Ashoka Infra Projects Pvt Ltd,SME,,BUSINESS,Construction & Contracting,Small,Business Banking,Pune,2022-07-03,D,N,,106301000.0,11,Proprietorship,RM-23
+CIF100430,Lakshmi Hospitality Pvt Ltd,SME,,BUSINESS,Restaurants & Hospitality,Small,Business Banking,Delhi NCR,2015-12-04,A,N,,109841000.0,21,Proprietorship,RM-22
+CIF100431,Shree Restaurant Pvt Ltd,SME,,BUSINESS,Restaurants & Hospitality,Micro,Business Banking,Delhi NCR,2022-02-05,B,N,,11861000.0,3,Proprietorship,RM-20
+CIF100432,Vindhya Medicals,SME,,BUSINESS,Healthcare Services,Micro,Business Banking,Ahmedabad,2017-07-06,B,N,,7860000.0,12,Proprietorship,RM-19
+CIF100433,Narmada Infra Projects Pvt Ltd,SME,,BUSINESS,Construction & Contracting,Small,Business Banking,Delhi NCR,2018-03-07,B,N,,100367000.0,7,Partnership,RM-18
+CIF100434,Siddhi Garments Pvt Ltd,SME,,BUSINESS,Retail,Small,Business Banking,Delhi NCR,2016-03-08,B,N,,86379000.0,18,Proprietorship,RM-20
+CIF100435,Bharat Restaurant Pvt Ltd,SME,,BUSINESS,Restaurants & Hospitality,Medium,Business Banking,Mumbai,2016-12-09,A,N,,620753000.0,18,LLP,RM-16
+CIF100436,Trident Builders & Contractors,SME,,BUSINESS,Construction & Contracting,Small,Business Banking,Delhi NCR,2021-01-10,A,N,,86401000.0,18,Partnership,RM-22
+CIF100437,Lakshmi Logistics Pvt Ltd,SME,,BUSINESS,Logistics & Transport,Small,Business Banking,Mumbai,2019-05-11,B,N,,147209000.0,18,Proprietorship,RM-15
+CIF100438,Narmada Civil Works LLP,SME,,BUSINESS,Construction & Contracting,Small,Business Banking,Mumbai,2026-07-12,D,N,,123075000.0,0,Proprietorship,RM-17
+CIF100439,Sunrise Infra Projects Pvt Ltd,SME,,BUSINESS,Construction & Contracting,Micro,Business Banking,Hyderabad,2017-06-13,B,N,,15413000.0,22,Private Limited,RM-20
+CIF100440,Lakshmi Infra Projects Pvt Ltd,SME,,BUSINESS,Construction & Contracting,Small,Business Banking,Delhi NCR,2024-07-14,B,N,,89873000.0,22,Partnership,RM-20
+CIF100441,Narmada Retail Pvt Ltd,SME,,BUSINESS,Retail,Small,Business Banking,Hyderabad,2020-12-15,B,N,,113873000.0,16,LLP,RM-15
+CIF100442,Krishna Builders & Contractors,SME,,BUSINESS,Construction & Contracting,Micro,Business Banking,Delhi NCR,2017-02-16,A,N,,20765000.0,8,Proprietorship,RM-15
+CIF100443,Rajdhani Constructions Pvt Ltd,SME,,BUSINESS,Construction & Contracting,Micro,Business Banking,Mumbai,2018-10-17,B,N,,17044000.0,18,Partnership,RM-23
+CIF100444,Siddhi Property Services LLP,SME,,BUSINESS,Real Estate Services,Medium,Business Banking,Delhi NCR,2018-01-18,B,N,,634979000.0,8,Proprietorship,RM-15
+CIF100445,Lakshmi Engineering Works,SME,,BUSINESS,Manufacturing,Micro,Business Banking,Pune,2023-11-19,B,N,,6416000.0,17,Proprietorship,RM-20
+CIF100446,Sai Garments Pvt Ltd,SME,,BUSINESS,Retail,Micro,Business Banking,Chennai,2022-06-20,C,N,,16794000.0,5,Partnership,RM-20
+CIF100447,Trident Hospitality Pvt Ltd,SME,,BUSINESS,Restaurants & Hospitality,Micro,Business Banking,Mumbai,2022-07-21,B,N,,14252000.0,3,Partnership,RM-16
+CIF100448,Omkar Industries Pvt Ltd,SME,,BUSINESS,Manufacturing,Small,Business Banking,Hyderabad,2017-12-22,B,N,,164191000.0,16,Partnership,RM-18
+CIF100449,Bharat Traders Pvt Ltd,SME,,BUSINESS,General Trading,Medium,Business Banking,Bengaluru,2020-04-23,C,N,,193778000.0,10,Proprietorship,RM-23
+CIF100450,Aravalli Trading Co.,SME,,BUSINESS,General Trading,Micro,Business Banking,Delhi NCR,2016-04-24,E,N,,11603000.0,25,Private Limited,RM-24
+CIF100451,Ashoka Restaurant Pvt Ltd,SME,,BUSINESS,Restaurants & Hospitality,Small,Business Banking,Pune,2019-10-25,A,N,,41483000.0,18,Partnership,RM-19
+CIF100452,Balaji Civil Works LLP,SME,,BUSINESS,Construction & Contracting,Micro,Business Banking,Mumbai,2019-09-26,A,N,,27975000.0,16,Proprietorship,RM-15
+CIF100453,Sunrise Caterers LLP,SME,,BUSINESS,Restaurants & Hospitality,Small,Business Banking,Delhi NCR,2023-02-27,B,N,,174107000.0,3,Private Limited,RM-17
+CIF100454,Sai Impex Pvt Ltd,SME,,BUSINESS,General Trading,Medium,Business Banking,Chennai,2018-11-01,C,N,,393208000.0,11,Proprietorship,RM-22
+CIF100455,Nilgiri Builders & Contractors,SME,,BUSINESS,Construction & Contracting,Medium,Business Banking,Mumbai,2022-11-02,A,N,,465987000.0,25,Partnership,RM-23
+CIF100456,Rajdhani Restaurant Pvt Ltd,SME,,BUSINESS,Restaurants & Hospitality,Small,Business Banking,Mumbai,2018-12-03,C,N,,74174000.0,18,Proprietorship,RM-23
+CIF100457,Godavari Impex Pvt Ltd,SME,,BUSINESS,General Trading,Medium,Business Banking,Chennai,2026-06-04,B,N,,456573000.0,0,Partnership,RM-19
+CIF100458,Vindhya Hospitality Pvt Ltd,SME,,BUSINESS,Restaurants & Hospitality,Micro,Business Banking,Mumbai,2021-04-05,B,N,,15125000.0,5,Proprietorship,RM-16
+CIF100459,Krishna Caterers LLP,SME,,BUSINESS,Restaurants & Hospitality,Micro,Business Banking,Delhi NCR,2017-11-06,D,N,,7269000.0,22,Partnership,RM-19
+CIF100460,Vindhya Realtors Pvt Ltd,SME,,BUSINESS,Real Estate Services,Medium,Business Banking,Ahmedabad,2021-03-07,A,N,,403678000.0,4,Partnership,RM-14
+CIF100461,Krishna Civil Works LLP,SME,,BUSINESS,Construction & Contracting,Small,Business Banking,Pune,2018-11-08,B,N,,83550000.0,25,Proprietorship,RM-23
+CIF100462,Godavari Builders & Contractors,SME,,BUSINESS,Construction & Contracting,Small,Business Banking,Pune,2022-02-09,A,N,,42637000.0,18,Proprietorship,RM-23
+CIF100463,Sai Traders Pvt Ltd,SME,,BUSINESS,General Trading,Small,Business Banking,Hyderabad,2015-04-10,C,N,,73513000.0,10,Partnership,RM-17
+CIF100464,Krishna Garments Pvt Ltd,SME,,BUSINESS,Retail,Medium,Business Banking,Hyderabad,2015-11-11,B,N,,392767000.0,9,Private Limited,RM-21
+CIF100465,Trident Dental Clinic LLP,SME,,BUSINESS,Healthcare Services,Small,Business Banking,Mumbai,2014-12-12,A,N,,51742000.0,10,Proprietorship,RM-20
+CIF100466,Ganesh Impex Pvt Ltd,SME,,BUSINESS,General Trading,Micro,Business Banking,Delhi NCR,2026-05-13,A,N,,15179000.0,1,Partnership,RM-17
+CIF100467,Siddhi Trading Co.,SME,,BUSINESS,General Trading,Micro,Business Banking,Mumbai,2015-04-14,A,N,,16189000.0,20,Proprietorship,RM-18
+CIF100468,Shree Dental Clinic LLP,SME,,BUSINESS,Healthcare Services,Medium,Business Banking,Delhi NCR,2015-10-15,B,N,,359628000.0,18,Proprietorship,RM-17
+CIF100469,Ganesh Hospitality Pvt Ltd,SME,,BUSINESS,Restaurants & Hospitality,Micro,Business Banking,Delhi NCR,2016-09-16,A,N,,11248000.0,12,Partnership,RM-18
+CIF100470,Siddhi Hospitality Pvt Ltd,SME,,BUSINESS,Restaurants & Hospitality,Micro,Business Banking,Pune,2022-12-17,B,N,,11031000.0,25,Partnership,RM-20
+CIF100471,Siddhi Stores,SME,,BUSINESS,Retail,Micro,Business Banking,Delhi NCR,2023-11-18,B,N,,26167000.0,2,Private Limited,RM-14
+CIF100472,Trident Property Services LLP,SME,,BUSINESS,Real Estate Services,Small,Business Banking,Delhi NCR,2026-07-19,D,N,,157239000.0,2,Proprietorship,RM-21
+CIF100473,Sai Softech Pvt Ltd,SME,,BUSINESS,IT & Professional Services,Micro,Business Banking,Mumbai,2022-02-20,B,N,,9244000.0,22,Partnership,RM-16
+CIF100474,Bharat Roadlines,SME,,BUSINESS,Logistics & Transport,Small,Business Banking,Kolkata,2020-03-21,C,N,,87792000.0,7,Proprietorship,RM-21
+CIF100475,Narmada Infra Projects Pvt Ltd,SME,,BUSINESS,Construction & Contracting,Micro,Business Banking,Ahmedabad,2024-08-22,B,N,,16682000.0,24,Partnership,RM-16
+CIF100476,Lakshmi Constructions Pvt Ltd,SME,,BUSINESS,Construction & Contracting,Micro,Business Banking,Ahmedabad,2021-01-23,C,N,,6706000.0,11,Proprietorship,RM-22
+CIF100477,Vindhya Enterprises,SME,,BUSINESS,General Trading,Micro,Business Banking,Ahmedabad,2017-07-24,A,N,,16656000.0,15,Private Limited,RM-22
+CIF100478,Krishna Medical Centre Pvt Ltd,SME,,BUSINESS,Healthcare Services,Small,Business Banking,Pune,2023-05-25,B,N,,104050000.0,7,Proprietorship,RM-20
+CIF100479,Vindhya Trading Co.,SME,,BUSINESS,General Trading,Small,Business Banking,Hyderabad,2020-12-26,D,N,,140443000.0,11,Partnership,RM-22
+CIF100480,Deccan Stores,SME,,BUSINESS,Retail,Micro,Business Banking,Pune,2026-08-27,D,N,,10487000.0,1,Proprietorship,RM-22
+CIF100481,Aravalli Medicals,SME,,BUSINESS,Healthcare Services,Small,Business Banking,Mumbai,2021-03-01,C,N,,50650000.0,25,Partnership,RM-13
+CIF100482,Rajdhani Transport Co.,SME,,BUSINESS,Logistics & Transport,Micro,Business Banking,Mumbai,2015-04-02,A,N,,27004000.0,24,Proprietorship,RM-15
+CIF100483,Vindhya Hospitality Pvt Ltd,SME,,BUSINESS,Restaurants & Hospitality,Medium,Business Banking,Delhi NCR,2018-10-03,B,N,,427198000.0,25,Partnership,RM-20
+CIF100484,Godavari Roadlines,SME,,BUSINESS,Logistics & Transport,Micro,Business Banking,Mumbai,2019-10-04,A,N,,17867000.0,5,Private Limited,RM-19
+CIF100485,Sunrise Property Services LLP,SME,,BUSINESS,Real Estate Services,Micro,Business Banking,Delhi NCR,2015-01-05,D,N,,24392000.0,10,Partnership,RM-17
+CIF100486,Shree Constructions Pvt Ltd,SME,,BUSINESS,Construction & Contracting,Micro,Business Banking,Hyderabad,2017-09-06,D,N,,16218000.0,8,LLP,RM-20
+CIF100487,Bharat Stores,SME,,BUSINESS,Retail,Micro,Business Banking,Hyderabad,2019-06-07,D,N,,14315000.0,7,Private Limited,RM-14
+CIF100488,Krishna Enterprises,SME,,BUSINESS,General Trading,Small,Business Banking,Chennai,2018-03-08,B,N,,134134000.0,25,Private Limited,RM-17
+CIF100489,Trident Impex Pvt Ltd,SME,,BUSINESS,General Trading,Small,Business Banking,Mumbai,2019-01-09,A,N,,126985000.0,6,Partnership,RM-15
+CIF100490,Sai Enterprises,SME,,BUSINESS,General Trading,Micro,Business Banking,Mumbai,2019-11-10,A,N,,23468000.0,21,Proprietorship,RM-24
+CIF100491,Balaji Trading Co.,SME,,BUSINESS,General Trading,Medium,Business Banking,Hyderabad,2021-04-11,A,N,,243164000.0,4,Partnership,RM-18
+CIF100492,Trident Civil Works LLP,SME,,BUSINESS,Construction & Contracting,Micro,Business Banking,Ahmedabad,2022-02-12,B,N,,24713000.0,23,Proprietorship,RM-20
+CIF100493,Nilgiri Civil Works LLP,SME,,BUSINESS,Construction & Contracting,Micro,Business Banking,Delhi NCR,2023-03-13,B,N,,24968000.0,6,Proprietorship,RM-13
+CIF100494,Sai Stores,SME,,BUSINESS,Retail,Medium,Business Banking,Mumbai,2015-10-14,B,N,,352806000.0,11,Partnership,RM-18
+CIF100495,Omkar Constructions Pvt Ltd,SME,,BUSINESS,Construction & Contracting,Micro,Business Banking,Delhi NCR,2017-08-15,B,N,,28916000.0,16,Partnership,RM-19
+CIF100496,Krishna Constructions Pvt Ltd,SME,,BUSINESS,Construction & Contracting,Medium,Business Banking,Delhi NCR,2023-02-16,B,N,,328412000.0,24,Proprietorship,RM-18
+CIF100497,Omkar Realtors Pvt Ltd,SME,,BUSINESS,Real Estate Services,Small,Business Banking,Hyderabad,2014-11-17,B,N,,48614000.0,10,Partnership,RM-24
+CIF100498,Vindhya Garments Pvt Ltd,SME,,BUSINESS,Retail,Micro,Business Banking,Hyderabad,2018-01-18,A,N,,31133000.0,23,Proprietorship,RM-16
+CIF100499,Sunrise Realtors Pvt Ltd,SME,,BUSINESS,Real Estate Services,Micro,Business Banking,Hyderabad,2015-10-19,A,N,,12593000.0,9,Proprietorship,RM-20
+CIF100500,Narmada Civil Works LLP,SME,,BUSINESS,Construction & Contracting,Small,Business Banking,Delhi NCR,2026-06-01,B,N,,39462000.0,2,Partnership,RM-13
+CIF100501,Omkar Softech Pvt Ltd,SME,,BUSINESS,IT & Professional Services,Small,Business Banking,Chennai,2022-01-02,D,N,,146752000.0,15,Private Limited,RM-16
+CIF100502,Siddhi Stores,SME,,BUSINESS,Retail,Micro,Business Banking,Hyderabad,2023-10-03,B,N,,15659000.0,7,Proprietorship,RM-20
+CIF100503,Narmada Caterers LLP,SME,,BUSINESS,Restaurants & Hospitality,Small,Business Banking,Bengaluru,2020-03-04,C,N,,85660000.0,5,LLP,RM-19
+CIF100504,Omkar Garments Pvt Ltd,SME,,BUSINESS,Retail,Micro,Business Banking,Mumbai,2023-05-05,B,N,,19457000.0,24,Partnership,RM-20
+CIF100505,Krishna Garments Pvt Ltd,SME,,BUSINESS,Retail,Micro,Business Banking,Delhi NCR,2020-10-06,C,N,,13885000.0,17,Proprietorship,RM-23
+CIF100506,Trident Enterprises,SME,,BUSINESS,General Trading,Micro,Business Banking,Mumbai,2019-11-07,C,N,,11481000.0,22,Partnership,RM-14
+CIF100507,Lakshmi Retail Pvt Ltd,SME,,BUSINESS,Retail,Micro,Business Banking,Chennai,2020-07-08,A,N,,24596000.0,10,Proprietorship,RM-22
+CIF100508,Sai Enterprises,SME,,BUSINESS,General Trading,Medium,Business Banking,Hyderabad,2022-08-09,A,N,,345743000.0,25,LLP,RM-15
+CIF100509,Vindhya Restaurant Pvt Ltd,SME,,BUSINESS,Restaurants & Hospitality,Micro,Business Banking,Mumbai,2023-08-10,C,N,,16270000.0,6,Proprietorship,RM-20
+CIF100510,Krishna Garments Pvt Ltd,SME,,BUSINESS,Retail,Medium,Business Banking,Bengaluru,2017-08-11,B,N,,362912000.0,15,Partnership,RM-14
+CIF100511,Vindhya Hospitality Pvt Ltd,SME,,BUSINESS,Restaurants & Hospitality,Micro,Business Banking,Bengaluru,2022-05-12,D,N,,14914000.0,3,Proprietorship,RM-24
+CIF100512,Ganesh Restaurant Pvt Ltd,SME,,BUSINESS,Restaurants & Hospitality,Small,Business Banking,Chennai,2023-03-13,A,N,,137189000.0,8,LLP,RM-21
+CIF100513,Balaji Enterprises,SME,,BUSINESS,General Trading,Micro,Business Banking,Bengaluru,2020-11-14,D,N,,24838000.0,12,Proprietorship,RM-23
+CIF100514,Siddhi Retail Pvt Ltd,SME,,BUSINESS,Retail,Medium,Business Banking,Mumbai,2024-05-15,C,N,,558118000.0,6,Proprietorship,RM-24
+CIF100515,Ganesh Impex Pvt Ltd,SME,,BUSINESS,General Trading,Medium,Business Banking,Pune,2017-09-16,A,N,,571531000.0,17,LLP,RM-16
+CIF100516,Nilgiri Roadlines,SME,,BUSINESS,Logistics & Transport,Medium,Business Banking,Ahmedabad,2017-02-17,C,N,,257034000.0,8,Proprietorship,RM-23
+CIF100517,Konark Engineering Works,SME,,BUSINESS,Manufacturing,Small,Business Banking,Mumbai,2015-02-18,B,N,,42012000.0,24,LLP,RM-15
+CIF100518,Konark Medicals,SME,,BUSINESS,Healthcare Services,Micro,Business Banking,Mumbai,2017-03-19,C,N,,16346000.0,8,Proprietorship,RM-13
+CIF100519,Nilgiri Caterers LLP,SME,,BUSINESS,Restaurants & Hospitality,Micro,Business Banking,Hyderabad,2026-08-20,B,N,,12537000.0,2,Private Limited,RM-14
+CIF100520,Krishna Impex Pvt Ltd,SME,,BUSINESS,General Trading,Small,Business Banking,Chennai,2019-05-21,C,N,,100167000.0,6,LLP,RM-15
+CIF100521,Trident Medicals,SME,,BUSINESS,Healthcare Services,Medium,Business Banking,Pune,2016-06-22,C,N,,666003000.0,9,Proprietorship,RM-21
+CIF100522,Narmada Caterers LLP,SME,,BUSINESS,Restaurants & Hospitality,Small,Business Banking,Hyderabad,2022-01-23,B,N,,163757000.0,20,Private Limited,RM-20
+CIF100523,Narmada Transport Co.,SME,,BUSINESS,Logistics & Transport,Small,Business Banking,Chennai,2021-11-24,B,N,,32626000.0,13,Partnership,RM-19
+CIF100524,Ashoka Builders & Contractors,SME,,BUSINESS,Construction & Contracting,Micro,Business Banking,Pune,2019-03-25,B,N,,12696000.0,12,Proprietorship,RM-21
+CIF100525,Sunrise Civil Works LLP,SME,,BUSINESS,Construction & Contracting,Small,Business Banking,Mumbai,2020-03-26,A,N,,130141000.0,8,Partnership,RM-20
+CIF100526,Nilgiri Stores,SME,,BUSINESS,Retail,Small,Business Banking,Delhi NCR,2015-10-27,E,N,,44140000.0,17,Partnership,RM-19
+CIF100527,Aravalli Trading Co.,SME,,BUSINESS,General Trading,Small,Business Banking,Pune,2022-11-01,B,N,,182883000.0,2,Proprietorship,RM-20
+CIF100528,Narmada Restaurant Pvt Ltd,SME,,BUSINESS,Restaurants & Hospitality,Micro,Business Banking,Mumbai,2018-01-02,C,N,,18496000.0,17,Partnership,RM-19
+CIF100529,Narmada Trading Co.,SME,,BUSINESS,General Trading,Micro,Business Banking,Delhi NCR,2020-02-03,A,N,,16669000.0,5,Partnership,RM-14
+CIF100530,Godavari Builders & Contractors,SME,,BUSINESS,Construction & Contracting,Micro,Business Banking,Hyderabad,2017-05-04,A,N,,9432000.0,24,Proprietorship,RM-17
+CIF100531,Ashoka Impex Pvt Ltd,SME,,BUSINESS,General Trading,Medium,Business Banking,Bengaluru,2016-02-05,C,N,,390017000.0,18,Proprietorship,RM-22
+CIF100532,Rajdhani Property Services LLP,SME,,BUSINESS,Real Estate Services,Micro,Business Banking,Chennai,2020-12-06,A,N,,9108000.0,12,Partnership,RM-14
+CIF100533,Godavari Technologies Pvt Ltd,SME,,BUSINESS,IT & Professional Services,Micro,Business Banking,Delhi NCR,2022-08-07,A,N,,15856000.0,17,Private Limited,RM-22
+CIF100534,Aravalli Enterprises,SME,,BUSINESS,General Trading,Small,Business Banking,Bengaluru,2023-06-08,A,N,,61661000.0,5,Private Limited,RM-20
+CIF100535,Krishna Builders & Contractors,SME,,BUSINESS,Construction & Contracting,Micro,Business Banking,Delhi NCR,2026-08-09,C,N,,9161000.0,2,Partnership,RM-17
+CIF100536,Ganesh Retail Pvt Ltd,SME,,BUSINESS,Retail,Small,Business Banking,Delhi NCR,2021-03-10,B,N,,36895000.0,4,Proprietorship,RM-22
+CIF100537,Rajdhani Caterers LLP,SME,,BUSINESS,Restaurants & Hospitality,Micro,Business Banking,Hyderabad,2023-04-11,A,N,,11659000.0,11,Proprietorship,RM-21
+CIF100538,Balaji Hospitality Pvt Ltd,SME,,BUSINESS,Restaurants & Hospitality,Micro,Business Banking,Delhi NCR,2017-09-12,A,N,,19007000.0,9,Private Limited,RM-20
+CIF100539,Deccan Hospitality Pvt Ltd,SME,,BUSINESS,Restaurants & Hospitality,Medium,Business Banking,Delhi NCR,2023-09-13,B,N,,726589000.0,21,Partnership,RM-14
+CIF100540,Ashoka Infra Projects Pvt Ltd,SME,,BUSINESS,Construction & Contracting,Small,Business Banking,Delhi NCR,2015-10-14,C,N,,71403000.0,10,Partnership,RM-20
+CIF100541,Nilgiri Engineering Works,SME,,BUSINESS,Manufacturing,Small,Business Banking,Hyderabad,2026-05-15,B,N,,71139000.0,0,Partnership,RM-22
+CIF100542,Sunrise Impex Pvt Ltd,SME,,BUSINESS,General Trading,Small,Business Banking,Pune,2023-11-16,B,N,,117178000.0,10,Private Limited,RM-22
+CIF100543,Shree Traders Pvt Ltd,SME,,BUSINESS,General Trading,Micro,Business Banking,Chennai,2016-01-17,D,N,,28073000.0,24,Private Limited,RM-21
+CIF100544,Krishna Realtors Pvt Ltd,SME,,BUSINESS,Real Estate Services,Micro,Business Banking,Ahmedabad,2017-06-18,E,N,,7674000.0,8,Proprietorship,RM-18
+CIF100545,Shree Polymers Pvt Ltd,SME,,BUSINESS,Manufacturing,Micro,Business Banking,Bengaluru,2024-08-19,C,N,,8143000.0,12,Private Limited,RM-22
+CIF100546,Konark Caterers LLP,SME,,BUSINESS,Restaurants & Hospitality,Micro,Business Banking,Bengaluru,2017-05-20,A,N,,10249000.0,8,Proprietorship,RM-23
+CIF100547,Shree Electronics Pvt Ltd,SME,,BUSINESS,Retail,Small,Business Banking,Hyderabad,2018-01-21,D,N,,146416000.0,11,Proprietorship,RM-22
+CIF100548,Krishna Retail Pvt Ltd,SME,,BUSINESS,Retail,Micro,Business Banking,Ahmedabad,2022-10-22,B,N,,7131000.0,2,Proprietorship,RM-14
+CIF100549,Sunrise Retail Pvt Ltd,SME,,BUSINESS,Retail,Micro,Business Banking,Mumbai,2015-09-23,C,N,,26695000.0,10,Proprietorship,RM-24
+CIF100550,Krishna Restaurant Pvt Ltd,SME,,BUSINESS,Restaurants & Hospitality,Micro,Business Banking,Mumbai,2024-05-24,B,N,,22021000.0,3,Partnership,RM-15
+CIF100551,Konark Retail Pvt Ltd,SME,,BUSINESS,Retail,Small,Business Banking,Bengaluru,2023-07-25,E,N,,46356000.0,7,Partnership,RM-23
+CIF100552,Trident Infra Projects Pvt Ltd,SME,,BUSINESS,Construction & Contracting,Small,Business Banking,Pune,2022-04-26,B,N,,43148000.0,7,Proprietorship,RM-13
+CIF100553,Ganesh Property Services LLP,SME,,BUSINESS,Real Estate Services,Micro,Business Banking,Delhi NCR,2019-10-27,A,N,,6909000.0,25,Proprietorship,RM-13
+CIF100554,Bharat Hospitality Pvt Ltd,SME,,BUSINESS,Restaurants & Hospitality,Micro,Business Banking,Hyderabad,2017-06-01,A,N,,9805000.0,8,Proprietorship,RM-16
+CIF100555,Trident Caterers LLP,SME,,BUSINESS,Restaurants & Hospitality,Micro,Business Banking,Mumbai,2022-06-02,B,N,,8747000.0,17,Partnership,RM-17
+CIF100556,Nilgiri Medical Centre Pvt Ltd,SME,,BUSINESS,Healthcare Services,Small,Business Banking,Delhi NCR,2019-10-03,A,N,,117556000.0,6,Partnership,RM-14
+CIF100557,Shree Logistics Pvt Ltd,SME,,BUSINESS,Logistics & Transport,Small,Business Banking,Bengaluru,2026-06-04,C,N,,63326000.0,2,Partnership,RM-21
+CIF100558,Bharat Restaurant Pvt Ltd,SME,,BUSINESS,Restaurants & Hospitality,Micro,Business Banking,Bengaluru,2026-06-05,A,N,,13889000.0,2,Proprietorship,RM-24
+CIF100559,Balaji Hospitality Pvt Ltd,SME,,BUSINESS,Restaurants & Hospitality,Small,Business Banking,Mumbai,2022-07-06,C,N,,114229000.0,4,Partnership,RM-16
+CIF100560,Godavari Enterprises,SME,,BUSINESS,General Trading,Small,Business Banking,Delhi NCR,2024-07-07,B,N,,32297000.0,20,Partnership,RM-24
+CIF100561,Narmada Caterers LLP,SME,,BUSINESS,Restaurants & Hospitality,Micro,Business Banking,Hyderabad,2023-02-08,A,N,,7889000.0,10,Proprietorship,RM-14
+CIF100562,Deccan Caterers LLP,SME,,BUSINESS,Restaurants & Hospitality,Small,Business Banking,Mumbai,2018-10-09,A,N,,54171000.0,10,Partnership,RM-15
+CIF100563,Aravalli Caterers LLP,SME,,BUSINESS,Restaurants & Hospitality,Micro,Business Banking,Mumbai,2019-04-10,B,N,,14225000.0,6,Partnership,RM-18
+CIF100564,Nilgiri Civil Works LLP,SME,,BUSINESS,Construction & Contracting,Micro,Business Banking,Pune,2021-02-11,B,N,,8131000.0,17,Partnership,RM-24
+CIF100565,Godavari Dental Clinic LLP,SME,,BUSINESS,Healthcare Services,Micro,Business Banking,Ahmedabad,2016-07-12,B,N,,7885000.0,9,Private Limited,RM-17
+CIF100566,Krishna Engineering Works,SME,,BUSINESS,Manufacturing,Medium,Business Banking,Mumbai,2016-02-13,A,N,,454232000.0,13,Private Limited,RM-18
+CIF100567,Omkar Restaurant Pvt Ltd,SME,,BUSINESS,Restaurants & Hospitality,Small,Business Banking,Pune,2020-11-14,A,N,,32870000.0,21,Proprietorship,RM-18
+CIF100568,Narmada Roadlines,SME,,BUSINESS,Logistics & Transport,Micro,Business Banking,Chennai,2018-08-15,A,N,,20378000.0,7,Proprietorship,RM-22
+CIF100569,Sunrise Electronics Pvt Ltd,SME,,BUSINESS,Retail,Small,Business Banking,Delhi NCR,2024-02-16,A,N,,198363000.0,23,LLP,RM-24
+CIF100570,Trident Dental Clinic LLP,SME,,BUSINESS,Healthcare Services,Small,Business Banking,Kolkata,2016-05-17,C,N,,54378000.0,9,Partnership,RM-20
+CIF100571,Aravalli Logistics Pvt Ltd,SME,,BUSINESS,Logistics & Transport,Small,Business Banking,Chennai,2016-02-18,B,N,,67532000.0,9,Proprietorship,RM-24
+CIF100572,Trident Retail Pvt Ltd,SME,,BUSINESS,Retail,Small,Business Banking,Hyderabad,2020-10-19,A,N,,76589000.0,19,Proprietorship,RM-23
+CIF100573,Narmada Retail Pvt Ltd,SME,,BUSINESS,Retail,Micro,Business Banking,Bengaluru,2022-02-20,B,N,,9885000.0,24,Partnership,RM-23
+CIF100574,Trident Civil Works LLP,SME,,BUSINESS,Construction & Contracting,Micro,Business Banking,Ahmedabad,2023-06-21,D,N,,22978000.0,9,Proprietorship,RM-18
+CIF100575,Godavari Restaurant Pvt Ltd,SME,,BUSINESS,Restaurants & Hospitality,Small,Business Banking,Ahmedabad,2019-09-22,B,N,,129323000.0,20,Proprietorship,RM-23
+CIF100576,Nilgiri Caterers LLP,SME,,BUSINESS,Restaurants & Hospitality,Small,Business Banking,Hyderabad,2026-07-23,A,N,,55348000.0,1,Proprietorship,RM-23
+CIF100577,Konark Restaurant Pvt Ltd,SME,,BUSINESS,Restaurants & Hospitality,Medium,Business Banking,Kolkata,2017-09-24,D,N,,200167000.0,18,Proprietorship,RM-17
+CIF100578,Siddhi Hospitality Pvt Ltd,SME,,BUSINESS,Restaurants & Hospitality,Small,Business Banking,Hyderabad,2016-03-25,E,N,,143398000.0,9,Proprietorship,RM-23
+CIF100579,Ganesh Enterprises,SME,,BUSINESS,General Trading,Small,Business Banking,Mumbai,2016-04-26,B,N,,62564000.0,16,Private Limited,RM-18
+CIF100580,Sai Trading Co.,SME,,BUSINESS,General Trading,Micro,Business Banking,Bengaluru,2019-04-27,B,N,,7032000.0,16,Proprietorship,RM-24
+CIF100581,Godavari Dental Clinic LLP,SME,,BUSINESS,Healthcare Services,Micro,Business Banking,Bengaluru,2023-06-01,C,N,,29879000.0,4,Proprietorship,RM-14
+CIF100582,Nilgiri Retail Pvt Ltd,SME,,BUSINESS,Retail,Small,Business Banking,Mumbai,2023-12-02,B,N,,120069000.0,6,Partnership,RM-17
+CIF100583,Ganesh Trading Co.,SME,,BUSINESS,General Trading,Medium,Business Banking,Delhi NCR,2020-06-03,B,N,,431321000.0,13,Private Limited,RM-15
+CIF100584,Krishna Property Services LLP,SME,,BUSINESS,Real Estate Services,Small,Business Banking,Mumbai,2015-11-04,B,N,,49011000.0,9,Private Limited,RM-21
+CIF100585,Konark Caterers LLP,SME,,BUSINESS,Restaurants & Hospitality,Micro,Business Banking,Chennai,2023-11-05,C,N,,20490000.0,21,Private Limited,RM-19
+CIF100586,Krishna Civil Works LLP,SME,,BUSINESS,Construction & Contracting,Small,Business Banking,Delhi NCR,2018-09-06,B,N,,171692000.0,19,Private Limited,RM-22
+CIF100587,Lakshmi Stores,SME,,BUSINESS,Retail,Micro,Business Banking,Chennai,2026-05-07,C,N,,6611000.0,1,Private Limited,RM-17
+CIF100588,Omkar Technologies Pvt Ltd,SME,,BUSINESS,IT & Professional Services,Medium,Business Banking,Hyderabad,2018-01-08,A,N,,319522000.0,10,Partnership,RM-16
+CIF100589,Rajdhani Trading Co.,SME,,BUSINESS,General Trading,Micro,Business Banking,Delhi NCR,2020-06-09,D,N,,15707000.0,15,Proprietorship,RM-16
+CIF100590,Aravalli Traders Pvt Ltd,SME,,BUSINESS,General Trading,Medium,Business Banking,Hyderabad,2016-10-10,A,N,,227725000.0,8,Proprietorship,RM-14
+CIF100591,Vindhya Medical Centre Pvt Ltd,SME,,BUSINESS,Healthcare Services,Small,Business Banking,Delhi NCR,2016-12-11,B,N,,47453000.0,25,Proprietorship,RM-23
+CIF100592,Lakshmi Infra Projects Pvt Ltd,SME,,BUSINESS,Construction & Contracting,Micro,Business Banking,Delhi NCR,2026-07-12,A,N,,17099000.0,1,Proprietorship,RM-21
+CIF100593,Sai Retail Pvt Ltd,SME,,BUSINESS,Retail,Small,Business Banking,Ahmedabad,2015-06-13,A,N,,139307000.0,18,Proprietorship,RM-19
+CIF100594,Sunrise Retail Pvt Ltd,SME,,BUSINESS,Retail,Small,Business Banking,Pune,2016-02-14,C,N,,59555000.0,24,Proprietorship,RM-13
+CIF100595,Sunrise Realtors Pvt Ltd,SME,,BUSINESS,Real Estate Services,Micro,Business Banking,Delhi NCR,2021-08-15,B,N,,15332000.0,4,Partnership,RM-24
+CIF100596,Godavari Electronics Pvt Ltd,SME,,BUSINESS,Retail,Medium,Business Banking,Bengaluru,2020-12-16,B,N,,537181000.0,17,Partnership,RM-15
+CIF100597,Godavari Softech Pvt Ltd,SME,,BUSINESS,IT & Professional Services,Medium,Business Banking,Hyderabad,2020-05-17,D,N,,563493000.0,9,Proprietorship,RM-18
+CIF100598,Shree Stores,SME,,BUSINESS,Retail,Micro,Business Banking,Bengaluru,2017-03-18,B,N,,22872000.0,21,Proprietorship,RM-22
+CIF100599,Sunrise Restaurant Pvt Ltd,SME,,BUSINESS,Restaurants & Hospitality,Micro,Business Banking,Delhi NCR,2015-11-19,A,N,,8435000.0,9,Private Limited,RM-14
+CIF100600,Krishna Logistics Pvt Ltd,SME,,BUSINESS,Logistics & Transport,Micro,Business Banking,Mumbai,2023-03-01,A,N,,13451000.0,25,Proprietorship,RM-15

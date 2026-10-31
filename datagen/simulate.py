@@ -166,6 +166,12 @@ class Generator:
                       else v) for v in weights.values()], dtype=float)
         return keys[self.rng.choice(len(keys), p=w / w.sum())]
 
+    def person_name(self) -> str:
+        """Given and family name from the same pool, so the pairing stays plausible."""
+        w = np.array([p[0] for p in C.NAME_POOLS], dtype=float)
+        _, given, family = C.NAME_POOLS[self.rng.choice(len(C.NAME_POOLS), p=w / w.sum())]
+        return f"{self.rng.choice(given)} {self.rng.choice(family)}"
+
     def u(self, lo, hi):
         return float(self.rng.uniform(lo, hi))
 
@@ -200,21 +206,21 @@ class Generator:
             archetype = self.pick(C.INDIVIDUAL_ARCHETYPES)
             sector = self.pick(C.EMPLOYER_SECTORS)
             _, median, sigma = C.EMPLOYER_SECTORS[sector]
-            income = float(np.clip(rng.lognormal(np.log(median), sigma), 5000, 150000))
+            income = float(np.clip(rng.lognormal(np.log(median), sigma), 12_000, 600_000))
             income = round(income, -2)
-            emirate = self.pick(C.EMIRATES)
-            segment = ("Mass" if income < 15000 else
-                       "Mass Affluent" if income < 40000 else "Affluent")
+            region = self.pick(C.REGIONS)
+            segment = ("Mass" if income < 40_000 else
+                       "Mass Affluent" if income < 100_000 else "Affluent")
             age = self.ri(23, 62)
             dob = date(C.AS_OF_DATE.year - age, self.ri(1, 12), self.ri(1, 28))
             attrs = dict(
-                customer_name=f"{rng.choice(C.FIRST_NAMES)} {rng.choice(C.LAST_NAMES)}",
+                customer_name=self.person_name(),
                 date_of_birth=dob,
                 employment_type="SELF_EMPLOYED" if sector.startswith("Self") else "SALARIED",
                 employment_or_business_category=sector,
                 customer_segment=segment,
                 portfolio="Consumer Banking",
-                emirate=emirate,
+                region=region,
                 declared_monthly_income=round(income * self.u(1.0, 1.12), -2),
                 declared_annual_turnover=None,
                 years_in_business=None,
@@ -235,8 +241,8 @@ class Generator:
             size = self.pick(C.SME_SIZE)
             _, lo, hi = C.SME_SIZE[size]
             income = round(float(np.exp(self.u(np.log(lo), np.log(hi)))), -3)
-            emirate = (self.pick(C.CONSTRUCTION_EMIRATES)
-                       if industry == "Construction & Contracting" else self.pick(C.EMIRATES))
+            region = (self.pick(C.CONSTRUCTION_REGIONS)
+                      if industry == "Construction & Contracting" else self.pick(C.REGIONS))
             prefix = str(rng.choice(C.SME_NAME_PARTS[0]))
             suffix = str(rng.choice(C.SME_NAME_PARTS[1][industry]))
             attrs = dict(
@@ -246,12 +252,11 @@ class Generator:
                 employment_or_business_category=industry,
                 customer_segment=size,
                 portfolio="Business Banking",
-                emirate=emirate,
+                region=region,
                 declared_monthly_income=None,
                 declared_annual_turnover=round(income * 12 * self.u(0.95, 1.25), -3),
                 years_in_business=self.ri(1, 25),
-                legal_form=str(rng.choice(["LLC", "Sole Establishment", "FZE", "FZ-LLC"],
-                                          p=[0.6, 0.2, 0.12, 0.08])),
+                legal_form=str(rng.choice(C.LEGAL_FORMS, p=C.LEGAL_FORM_WEIGHTS)),
                 relationship_manager_id=f"RM-{self.ri(13, 24):02d}",
             )
             salary_transfer = False
@@ -280,7 +285,7 @@ class Generator:
                 cat = c.attrs["employment_or_business_category"]
                 if cat != cl.get("industry", cl.get("sector")):
                     continue
-                if c.attrs["emirate"] not in cl["emirates"] or self.rng.random() > cl["share"]:
+                if c.attrs["region"] not in cl["regions"] or self.rng.random() > cl["share"]:
                     continue
                 c.archetype = cl["archetype"]
                 c.cluster_id = cl["cluster_id"]
@@ -423,11 +428,12 @@ class Generator:
             if c.archetype == "CHRONIC_LATE_PAYER":
                 channel = str(self.rng.choice(["MANUAL_TRANSFER", "CHEQUE"]))
             elif c.ctype == "SME":
-                channel = str(self.rng.choice(["CHEQUE", "DIRECT_DEBIT", "MANUAL_TRANSFER"],
+                channel = str(self.rng.choice(["CHEQUE", "NACH_DEBIT", "MANUAL_TRANSFER"],
                                               p=[0.45, 0.25, 0.30]))
             elif c.salary_transfer:
-                channel = str(self.rng.choice(["DIRECT_DEBIT", "STANDING_INSTRUCTION",
-                                               "MANUAL_TRANSFER"], p=[0.7, 0.15, 0.15]))
+                channel = str(self.rng.choice(["NACH_DEBIT", "STANDING_INSTRUCTION",
+                                               "UPI_AUTOPAY", "MANUAL_TRANSFER"],
+                                              p=[0.6, 0.15, 0.10, 0.15]))
             else:
                 channel = str(self.rng.choice(["MANUAL_TRANSFER", "CHEQUE",
                                                "STANDING_INSTRUCTION"], p=[0.5, 0.35, 0.15]))

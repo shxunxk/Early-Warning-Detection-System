@@ -21,6 +21,18 @@ PARAMETERS = dict(
     stale_data_months=2,
 )
 
+# RBI credit-risk EWS reporting. SMA buckets follow the IRAC norms (SMA-0 at 1-30 DPD,
+# SMA-1 at 31-60, SMA-2 at 61-90, NPA beyond 90); the turnaround times mirror the RBI EWS
+# framework. Configuration, not code, so a risk team can retune without a release.
+RBI_EWS_CONFIG = dict(
+    alert_examination_tat_days=30,
+    escalation_deadline_days=7,
+    resolution_deadline_days=180,
+    high_exposure_threshold_inr=25_000_000,
+    sma_buckets=[[0, 0, "Standard"], [1, 30, "SMA-0"], [31, 60, "SMA-1"],
+                 [61, 90, "SMA-2"], [91, 999_999, "NPA"]],
+)
+
 SCORE_BANDS = [
     dict(band="Green", min_score=0, max_score=29, monitoring_status="NORMAL",
          recommended_action="No action; routine monitoring"),
@@ -155,4 +167,5 @@ def definitions() -> dict:
                  for sig in SIGNALS],
         score_bands=SCORE_BANDS,
         overrides=OVERRIDES,
+        rbi_ews_config=RBI_EWS_CONFIG,
     )

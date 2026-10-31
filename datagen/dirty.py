@@ -75,7 +75,7 @@ def make_dirty(tables: dict[str, pd.DataFrame], seed: int):
               "Unparseable disbursement date")
     for r in j.rows("facilities", 2):
         j.set("facilities", r, "facility_id", "currency", "USD", "CURRENCY_MISMATCH",
-              "Currency differs from portfolio currency (AED)")
+              "Currency differs from portfolio currency (INR)")
     for r in j.rows("facilities", 2, lambda d: d.facility_status == "ACTIVE"):
         j.set("facilities", r, "facility_id", "facility_status", "CLOSED",
               "INCONSISTENT_STATUS", "Marked CLOSED but has outstanding balance")
@@ -144,7 +144,7 @@ def make_dirty(tables: dict[str, pd.DataFrame], seed: int):
         j.set("financials", r, "customer_id", "net_cash_flow", round(v, 2),
               "INCONSISTENT_VALUES", "net_cash_flow != total_inflows - total_outflows")
     for r in j.rows("financials", 2, lambda d: d.salary_credit.notna()):
-        v = f"{float(T['financials'].at[r, 'salary_credit']):,.2f} AED"
+        v = f"INR {float(T['financials'].at[r, 'salary_credit']):,.2f}"
         j.set("financials", r, "customer_id", "salary_credit", v, "TEXT_IN_NUMERIC",
               "Formatted text in numeric column")
     j.duplicate("financials", 3, "customer_id", "Same customer-month reported twice")
