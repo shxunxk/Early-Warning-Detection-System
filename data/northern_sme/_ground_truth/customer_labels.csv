@@ -1,0 +1,1201 @@
+customer_id,customer_type,archetype,archetype_subtype,scenarios,cluster_id,onset_month,expected_risk_band,expected_data_sufficiency,current_max_dpd,peak_dpd_in_window,notes
+CIF500001,INDIVIDUAL,STABLE,,,,,Low,SUFFICIENT,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500002,INDIVIDUAL,SALARY_ELSEWHERE,,S7,,,Low,PARTIAL,0,0,Salary credited at another bank; sparse account data with feed gaps.
+CIF500003,INDIVIDUAL,ISOLATED_EXCEPTION,TEMPORARY_HARDSHIP,S4,,2025-06,Low,SUFFICIENT,0,10,"One delayed/missed instalment with an explanation, then recovered."
+CIF500004,INDIVIDUAL,STABLE,,,,,Low,SUFFICIENT,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500005,INDIVIDUAL,INCOME_DECLINE,GRADUAL,S2,,2026-02,Medium,SUFFICIENT,0,0,"Salary cut, job loss or gradual decline; repayments lag the income drop."
+CIF500006,INDIVIDUAL,REPAYMENT_DETERIORATION,,S1|S5,,2025-10,High,SUFFICIENT,23,23,"Lateness grows month on month, then partials and misses."
+CIF500007,INDIVIDUAL,ISOLATED_EXCEPTION,SALARY_DELAY,S4,,2026-04,Low,SUFFICIENT,0,10,"One delayed/missed instalment with an explanation, then recovered."
+CIF500008,INDIVIDUAL,OVER_LEVERAGED,,S3,,2025-08,High,PARTIAL,0,3,"New on-us and off-us credit, rising utilisation and debt burden."
+CIF500009,INDIVIDUAL,INCOME_DECLINE,GRADUAL,S2,,2026-03,Medium,PARTIAL,5,6,"Salary cut, job loss or gradual decline; repayments lag the income drop."
+CIF500010,INDIVIDUAL,STABLE,,,,,Low,PARTIAL,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500011,INDIVIDUAL,ROLL_FORWARD,,S5,,2026-07,High,SUFFICIENT,9,11,Moves from current into 1-30 and on to 31-60/61-90 DPD.
+CIF500012,INDIVIDUAL,STABLE,,,,,Low,SUFFICIENT,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500013,INDIVIDUAL,CURED,,S5,,2025-07,Low,SUFFICIENT,0,77,"Had a 2-3 month delinquency episode early in the window, fully cured since."
+CIF500014,INDIVIDUAL,INCOME_DECLINE,PAY_CUT,S2,,2026-03,Medium,SUFFICIENT,0,0,"Salary cut, job loss or gradual decline; repayments lag the income drop."
+CIF500015,INDIVIDUAL,STABLE,,,,,Low,SUFFICIENT,0,3,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500016,INDIVIDUAL,STABLE,,,,,Low,SUFFICIENT,0,3,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500017,INDIVIDUAL,STABLE,,,,,Low,SUFFICIENT,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500018,INDIVIDUAL,CHRONIC_LATE_PAYER,,S1,,,Medium,PARTIAL,0,0,Habitually pays 2-9 days late every month but always pays in full.
+CIF500019,INDIVIDUAL,INCOME_DECLINE,PAY_CUT,S2,,2026-01,Medium,SUFFICIENT,0,0,"Salary cut, job loss or gradual decline; repayments lag the income drop."
+CIF500020,INDIVIDUAL,ISOLATED_EXCEPTION,SALARY_DELAY,S4,,2025-09,Low,SUFFICIENT,0,0,"One delayed/missed instalment with an explanation, then recovered."
+CIF500021,INDIVIDUAL,STABLE,,,,,Low,SUFFICIENT,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500022,INDIVIDUAL,INCOME_DECLINE,GRADUAL,S2|S8,CLU-RET-TRADE-NORTH,2026-05,Medium,SUFFICIENT,0,0,"Salary cut, job loss or gradual decline; repayments lag the income drop."
+CIF500023,INDIVIDUAL,CHRONIC_LATE_PAYER,,S1,,,Medium,SUFFICIENT,0,0,Habitually pays 2-9 days late every month but always pays in full.
+CIF500024,INDIVIDUAL,CHRONIC_LATE_PAYER,,S1,,,Medium,SUFFICIENT,0,8,Habitually pays 2-9 days late every month but always pays in full.
+CIF500025,INDIVIDUAL,ISOLATED_EXCEPTION,SALARY_DELAY,S4,,2026-01,Low,SUFFICIENT,0,16,"One delayed/missed instalment with an explanation, then recovered."
+CIF500026,INDIVIDUAL,THIN_FILE,,S7,,,Low,INSUFFICIENT,0,0,"New-to-bank, only a few months of history; may be bureau no-hit."
+CIF500027,INDIVIDUAL,REPAYMENT_DETERIORATION,,S1|S5,,2026-02,High,PARTIAL,2,3,"Lateness grows month on month, then partials and misses."
+CIF500028,INDIVIDUAL,LEGACY_NPL,,S5,,2026-01,Critical,SUFFICIENT,253,253,"Defaulted early in (or before) the window; 90+ DPD, token payments only."
+CIF500029,INDIVIDUAL,CURED,,S5,,2025-04,Low,PARTIAL,0,59,"Had a 2-3 month delinquency episode early in the window, fully cured since."
+CIF500030,INDIVIDUAL,INCOME_DECLINE,PAY_CUT,S2|S8,CLU-RET-TRADE-NORTH,2026-03,Medium,SUFFICIENT,0,0,"Salary cut, job loss or gradual decline; repayments lag the income drop."
+CIF500031,INDIVIDUAL,STABLE,,,,,Low,SUFFICIENT,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500032,INDIVIDUAL,CURED,,S5,,2025-03,Low,SUFFICIENT,0,58,"Had a 2-3 month delinquency episode early in the window, fully cured since."
+CIF500033,INDIVIDUAL,OVER_LEVERAGED,,S3,,2025-07,High,SUFFICIENT,0,29,"New on-us and off-us credit, rising utilisation and debt burden."
+CIF500034,INDIVIDUAL,STABLE,,,,,Low,SUFFICIENT,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500035,INDIVIDUAL,ISOLATED_EXCEPTION,TEMPORARY_HARDSHIP,S4,,2025-07,Low,SUFFICIENT,0,3,"One delayed/missed instalment with an explanation, then recovered."
+CIF500036,INDIVIDUAL,INCOME_DECLINE,GRADUAL,S2,,2026-02,Medium,SUFFICIENT,0,0,"Salary cut, job loss or gradual decline; repayments lag the income drop."
+CIF500037,INDIVIDUAL,STABLE,,,,,Low,SUFFICIENT,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500038,INDIVIDUAL,STABLE,,,,,Low,PARTIAL,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500039,INDIVIDUAL,LEGACY_NPL,,S5,,2026-04,Critical,SUFFICIENT,173,173,"Defaulted early in (or before) the window; 90+ DPD, token payments only."
+CIF500040,INDIVIDUAL,REPAYMENT_DETERIORATION,,S1|S5,,2025-11,High,SUFFICIENT,20,56,"Lateness grows month on month, then partials and misses."
+CIF500041,INDIVIDUAL,STABLE,,,,,Low,PARTIAL,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500042,INDIVIDUAL,STABLE,,,,,Low,SUFFICIENT,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500043,INDIVIDUAL,STABLE,,,,,Low,SUFFICIENT,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500044,INDIVIDUAL,STABLE,,,,,Low,SUFFICIENT,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500045,INDIVIDUAL,STABLE,,,,,Low,SUFFICIENT,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500046,INDIVIDUAL,STABLE,,,,,Low,PARTIAL,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500047,INDIVIDUAL,STABLE,,,,,Low,SUFFICIENT,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500048,INDIVIDUAL,STABLE,,,,,Low,SUFFICIENT,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500049,INDIVIDUAL,STABLE,,,,,Low,PARTIAL,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500050,INDIVIDUAL,ROLL_FORWARD,,S5,,2026-07,High,SUFFICIENT,5,6,Moves from current into 1-30 and on to 31-60/61-90 DPD.
+CIF500051,INDIVIDUAL,STABLE,,,,,Low,SUFFICIENT,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500052,INDIVIDUAL,CHRONIC_LATE_PAYER,,S1,,,Medium,PARTIAL,0,0,Habitually pays 2-9 days late every month but always pays in full.
+CIF500053,INDIVIDUAL,REPAYMENT_DETERIORATION,,S1|S5,,2026-01,High,SUFFICIENT,2,60,"Lateness grows month on month, then partials and misses."
+CIF500054,INDIVIDUAL,SALARY_ELSEWHERE,,S7,,,Low,PARTIAL,0,0,Salary credited at another bank; sparse account data with feed gaps.
+CIF500055,INDIVIDUAL,OVER_LEVERAGED,,S3,,2026-01,High,PARTIAL,0,0,"New on-us and off-us credit, rising utilisation and debt burden."
+CIF500056,INDIVIDUAL,ISOLATED_EXCEPTION,SALARY_DELAY,S4,,2025-10,Low,PARTIAL,0,11,"One delayed/missed instalment with an explanation, then recovered."
+CIF500057,INDIVIDUAL,OVER_LEVERAGED,,S3,,2025-08,High,PARTIAL,0,0,"New on-us and off-us credit, rising utilisation and debt burden."
+CIF500058,INDIVIDUAL,REPAYMENT_DETERIORATION,,S1|S5,,2026-01,Critical,SUFFICIENT,64,64,"Lateness grows month on month, then partials and misses."
+CIF500059,INDIVIDUAL,INCOME_DECLINE,GRADUAL,S2|S8,CLU-RET-TRADE-NORTH,2026-03,Medium,SUFFICIENT,20,20,"Salary cut, job loss or gradual decline; repayments lag the income drop."
+CIF500060,INDIVIDUAL,STABLE,,,,,Low,SUFFICIENT,0,29,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500061,INDIVIDUAL,ROLL_FORWARD,,S5,,2026-03,Critical,SUFFICIENT,72,72,Moves from current into 1-30 and on to 31-60/61-90 DPD.
+CIF500062,INDIVIDUAL,CURED,,S5,,2025-08,Low,SUFFICIENT,0,0,"Had a 2-3 month delinquency episode early in the window, fully cured since."
+CIF500063,INDIVIDUAL,OVER_LEVERAGED,,S3,,2025-06,High,SUFFICIENT,0,21,"New on-us and off-us credit, rising utilisation and debt burden."
+CIF500064,INDIVIDUAL,SALARY_ELSEWHERE,,S7,,,Low,PARTIAL,0,0,Salary credited at another bank; sparse account data with feed gaps.
+CIF500065,INDIVIDUAL,STABLE,,,,,Low,PARTIAL,0,3,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500066,INDIVIDUAL,ISOLATED_EXCEPTION,SALARY_DELAY,S4,,2025-10,Low,PARTIAL,0,11,"One delayed/missed instalment with an explanation, then recovered."
+CIF500067,INDIVIDUAL,STABLE,,,,,Low,PARTIAL,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500068,INDIVIDUAL,OVER_LEVERAGED,,S3,,2026-02,High,SUFFICIENT,0,0,"New on-us and off-us credit, rising utilisation and debt burden."
+CIF500069,INDIVIDUAL,OVER_LEVERAGED,,S3,,2025-06,High,SUFFICIENT,0,16,"New on-us and off-us credit, rising utilisation and debt burden."
+CIF500070,INDIVIDUAL,OVER_LEVERAGED,,S3,,2026-03,High,PARTIAL,29,29,"New on-us and off-us credit, rising utilisation and debt burden."
+CIF500071,INDIVIDUAL,STABLE,,,,,Low,SUFFICIENT,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500072,INDIVIDUAL,STABLE,,,,,Low,PARTIAL,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500073,INDIVIDUAL,OVER_LEVERAGED,,S3,,2026-01,High,SUFFICIENT,0,0,"New on-us and off-us credit, rising utilisation and debt burden."
+CIF500074,INDIVIDUAL,LEGACY_NPL,,S5,,2025-12,Critical,SUFFICIENT,300,300,"Defaulted early in (or before) the window; 90+ DPD, token payments only."
+CIF500075,INDIVIDUAL,ISOLATED_EXCEPTION,HOLIDAY_PERIOD,S4,,2025-09,Low,SUFFICIENT,0,5,"One delayed/missed instalment with an explanation, then recovered."
+CIF500076,INDIVIDUAL,STABLE,,,,,Low,SUFFICIENT,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500077,INDIVIDUAL,ISOLATED_EXCEPTION,HOLIDAY_PERIOD,S4,,2025-06,Low,SUFFICIENT,0,0,"One delayed/missed instalment with an explanation, then recovered."
+CIF500078,INDIVIDUAL,CHRONIC_LATE_PAYER,,S1,,,Medium,SUFFICIENT,0,0,Habitually pays 2-9 days late every month but always pays in full.
+CIF500079,INDIVIDUAL,OVER_LEVERAGED,,S3,,2025-11,High,SUFFICIENT,0,11,"New on-us and off-us credit, rising utilisation and debt burden."
+CIF500080,INDIVIDUAL,STABLE,,,,,Low,SUFFICIENT,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500081,INDIVIDUAL,OVER_LEVERAGED,,S3,,2025-10,High,SUFFICIENT,0,6,"New on-us and off-us credit, rising utilisation and debt burden."
+CIF500082,INDIVIDUAL,OVER_LEVERAGED,,S3,,2025-11,High,SUFFICIENT,0,26,"New on-us and off-us credit, rising utilisation and debt burden."
+CIF500083,INDIVIDUAL,REPAYMENT_DETERIORATION,,S1|S5,,2026-01,High,SUFFICIENT,58,58,"Lateness grows month on month, then partials and misses."
+CIF500084,INDIVIDUAL,STABLE,,,,,Low,PARTIAL,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500085,INDIVIDUAL,STABLE,,,,,Low,SUFFICIENT,0,3,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500086,INDIVIDUAL,INCOME_DECLINE,PAY_CUT,S2,,2026-05,Medium,SUFFICIENT,0,0,"Salary cut, job loss or gradual decline; repayments lag the income drop."
+CIF500087,INDIVIDUAL,STABLE,,,,,Low,SUFFICIENT,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500088,INDIVIDUAL,OVER_LEVERAGED,,S3,,2025-10,High,SUFFICIENT,0,0,"New on-us and off-us credit, rising utilisation and debt burden."
+CIF500089,INDIVIDUAL,INCOME_DECLINE,JOB_LOSS,S2,,2026-04,High,SUFFICIENT,0,23,"Salary cut, job loss or gradual decline; repayments lag the income drop."
+CIF500090,INDIVIDUAL,REPAYMENT_DETERIORATION,,S1|S5,,2025-09,Critical,PARTIAL,204,204,"Lateness grows month on month, then partials and misses."
+CIF500091,INDIVIDUAL,STABLE,,,,,Low,PARTIAL,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500092,INDIVIDUAL,CURED,,S5,,2025-06,Low,SUFFICIENT,0,62,"Had a 2-3 month delinquency episode early in the window, fully cured since."
+CIF500093,INDIVIDUAL,STABLE,,,,,Low,SUFFICIENT,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500094,INDIVIDUAL,OVER_LEVERAGED,,S3,,2025-08,High,SUFFICIENT,0,3,"New on-us and off-us credit, rising utilisation and debt burden."
+CIF500095,INDIVIDUAL,STABLE,,,,,Low,PARTIAL,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500096,INDIVIDUAL,SALARY_ELSEWHERE,,S7,,,Low,PARTIAL,0,0,Salary credited at another bank; sparse account data with feed gaps.
+CIF500097,INDIVIDUAL,ISOLATED_EXCEPTION,SALARY_DELAY,S4,,2025-07,Low,SUFFICIENT,0,0,"One delayed/missed instalment with an explanation, then recovered."
+CIF500098,INDIVIDUAL,STABLE,,,,,Low,SUFFICIENT,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500099,INDIVIDUAL,THIN_FILE,,S7,,,Low,INSUFFICIENT,0,0,"New-to-bank, only a few months of history; may be bureau no-hit."
+CIF500100,INDIVIDUAL,ROLL_FORWARD,,S5,,2026-03,Critical,SUFFICIENT,152,152,Moves from current into 1-30 and on to 31-60/61-90 DPD.
+CIF500101,INDIVIDUAL,SALARY_ELSEWHERE,,S7,,,Low,PARTIAL,0,0,Salary credited at another bank; sparse account data with feed gaps.
+CIF500102,INDIVIDUAL,REPAYMENT_DETERIORATION,,S1|S5,,2025-11,Critical,SUFFICIENT,64,64,"Lateness grows month on month, then partials and misses."
+CIF500103,INDIVIDUAL,REPAYMENT_DETERIORATION,,S1|S5,,2025-10,High,SUFFICIENT,9,42,"Lateness grows month on month, then partials and misses."
+CIF500104,INDIVIDUAL,STABLE,,,,,Low,PARTIAL,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500105,INDIVIDUAL,STABLE,,,,,Low,PARTIAL,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500106,INDIVIDUAL,INCOME_DECLINE,GRADUAL,S2,,2026-03,Medium,SUFFICIENT,0,0,"Salary cut, job loss or gradual decline; repayments lag the income drop."
+CIF500107,INDIVIDUAL,STABLE,,,,,Low,SUFFICIENT,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500108,INDIVIDUAL,STABLE,,,,,Low,SUFFICIENT,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500109,INDIVIDUAL,STABLE,,,,,Low,SUFFICIENT,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500110,INDIVIDUAL,STABLE,,,,,Low,SUFFICIENT,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500111,INDIVIDUAL,REPAYMENT_DETERIORATION,,S1|S5,,2026-02,High,SUFFICIENT,5,6,"Lateness grows month on month, then partials and misses."
+CIF500112,INDIVIDUAL,ISOLATED_EXCEPTION,TEMPORARY_HARDSHIP,S4,,2025-08,Low,SUFFICIENT,0,1,"One delayed/missed instalment with an explanation, then recovered."
+CIF500113,INDIVIDUAL,INCOME_DECLINE,GRADUAL,S2,,2025-11,Medium,SUFFICIENT,0,0,"Salary cut, job loss or gradual decline; repayments lag the income drop."
+CIF500114,INDIVIDUAL,CHRONIC_LATE_PAYER,,S1,,,Medium,SUFFICIENT,0,0,Habitually pays 2-9 days late every month but always pays in full.
+CIF500115,INDIVIDUAL,STABLE,,,,,Low,SUFFICIENT,0,3,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500116,INDIVIDUAL,STABLE,,,,,Low,PARTIAL,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500117,INDIVIDUAL,STABLE,,,,,Low,SUFFICIENT,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500118,INDIVIDUAL,STABLE,,,,,Low,SUFFICIENT,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500119,INDIVIDUAL,REPAYMENT_DETERIORATION,,S1|S5,,2025-12,Critical,SUFFICIENT,100,100,"Lateness grows month on month, then partials and misses."
+CIF500120,INDIVIDUAL,STABLE,,,,,Low,SUFFICIENT,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500121,INDIVIDUAL,INCOME_DECLINE,PAY_CUT,S2,,2026-04,Medium,PARTIAL,0,28,"Salary cut, job loss or gradual decline; repayments lag the income drop."
+CIF500122,INDIVIDUAL,CURED,,S5,,2025-07,Low,SUFFICIENT,0,0,"Had a 2-3 month delinquency episode early in the window, fully cured since."
+CIF500123,INDIVIDUAL,OVER_LEVERAGED,,S3,,2025-09,Medium,SUFFICIENT,2,3,"New on-us and off-us credit, rising utilisation and debt burden."
+CIF500124,INDIVIDUAL,ISOLATED_EXCEPTION,PROCESSING_DELAY,S4,,2026-04,Low,SUFFICIENT,0,0,"One delayed/missed instalment with an explanation, then recovered."
+CIF500125,INDIVIDUAL,STABLE,,,,,Low,SUFFICIENT,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500126,INDIVIDUAL,ISOLATED_EXCEPTION,PROCESSING_DELAY,S4,,2026-03,Low,SUFFICIENT,0,0,"One delayed/missed instalment with an explanation, then recovered."
+CIF500127,INDIVIDUAL,ROLL_FORWARD,,S5,,2026-03,Critical,SUFFICIENT,112,112,Moves from current into 1-30 and on to 31-60/61-90 DPD.
+CIF500128,INDIVIDUAL,REPAYMENT_DETERIORATION,,S1|S5,,2025-10,High,PARTIAL,20,81,"Lateness grows month on month, then partials and misses."
+CIF500129,INDIVIDUAL,INCOME_DECLINE,PAY_CUT,S2,,2026-05,Medium,SUFFICIENT,0,0,"Salary cut, job loss or gradual decline; repayments lag the income drop."
+CIF500130,INDIVIDUAL,INCOME_DECLINE,PAY_CUT,S2,,2026-04,Medium,PARTIAL,2,14,"Salary cut, job loss or gradual decline; repayments lag the income drop."
+CIF500131,INDIVIDUAL,STABLE,,,,,Low,PARTIAL,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500132,INDIVIDUAL,STABLE,,,,,Low,PARTIAL,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500133,INDIVIDUAL,STABLE,,,,,Low,PARTIAL,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500134,INDIVIDUAL,ISOLATED_EXCEPTION,PROCESSING_DELAY,S4,,2026-01,Low,SUFFICIENT,0,0,"One delayed/missed instalment with an explanation, then recovered."
+CIF500135,INDIVIDUAL,ISOLATED_EXCEPTION,PROCESSING_DELAY,S4,,2026-07,Low,SUFFICIENT,0,0,"One delayed/missed instalment with an explanation, then recovered."
+CIF500136,INDIVIDUAL,STABLE,,,,,Low,SUFFICIENT,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500137,INDIVIDUAL,STABLE,,,,,Low,SUFFICIENT,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500138,INDIVIDUAL,REPAYMENT_DETERIORATION,,S1|S5,,2026-05,High,SUFFICIENT,23,26,"Lateness grows month on month, then partials and misses."
+CIF500139,INDIVIDUAL,STABLE,,,,,Low,PARTIAL,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500140,INDIVIDUAL,STABLE,,,,,Low,SUFFICIENT,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500141,INDIVIDUAL,INCOME_DECLINE,JOB_LOSS,S2|S8,CLU-RET-TRADE-NORTH,2026-05,High,SUFFICIENT,23,23,"Salary cut, job loss or gradual decline; repayments lag the income drop."
+CIF500142,INDIVIDUAL,STABLE,,,,,Low,PARTIAL,0,4,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500143,INDIVIDUAL,SALARY_ELSEWHERE,,S7,,,Low,PARTIAL,0,28,Salary credited at another bank; sparse account data with feed gaps.
+CIF500144,INDIVIDUAL,INCOME_DECLINE,PAY_CUT,S2|S8,CLU-RET-TRADE-NORTH,2026-05,Medium,SUFFICIENT,0,3,"Salary cut, job loss or gradual decline; repayments lag the income drop."
+CIF500145,INDIVIDUAL,CHRONIC_LATE_PAYER,,S1,,,Medium,PARTIAL,0,0,Habitually pays 2-9 days late every month but always pays in full.
+CIF500146,INDIVIDUAL,STABLE,,,,,Low,SUFFICIENT,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500147,INDIVIDUAL,STABLE,,,,,Low,SUFFICIENT,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500148,INDIVIDUAL,ROLL_FORWARD,,S5,,2026-07,High,SUFFICIENT,15,15,Moves from current into 1-30 and on to 31-60/61-90 DPD.
+CIF500149,INDIVIDUAL,SALARY_ELSEWHERE,,S7,,,Low,PARTIAL,0,0,Salary credited at another bank; sparse account data with feed gaps.
+CIF500150,INDIVIDUAL,STABLE,,,,,Low,SUFFICIENT,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500151,INDIVIDUAL,OVER_LEVERAGED,,S3,,2025-07,High,SUFFICIENT,0,45,"New on-us and off-us credit, rising utilisation and debt burden."
+CIF500152,INDIVIDUAL,STABLE,,,,,Low,SUFFICIENT,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500153,INDIVIDUAL,INCOME_DECLINE,GRADUAL,S2,,2026-02,Medium,SUFFICIENT,0,0,"Salary cut, job loss or gradual decline; repayments lag the income drop."
+CIF500154,INDIVIDUAL,ISOLATED_EXCEPTION,SALARY_DELAY,S4,,2026-04,Low,SUFFICIENT,0,3,"One delayed/missed instalment with an explanation, then recovered."
+CIF500155,INDIVIDUAL,THIN_FILE,,S7,,,Low,INSUFFICIENT,0,0,"New-to-bank, only a few months of history; may be bureau no-hit."
+CIF500156,INDIVIDUAL,OVER_LEVERAGED,,S3,,2025-11,High,SUFFICIENT,9,9,"New on-us and off-us credit, rising utilisation and debt burden."
+CIF500157,INDIVIDUAL,INCOME_DECLINE,GRADUAL,S2,,2026-05,Medium,SUFFICIENT,0,0,"Salary cut, job loss or gradual decline; repayments lag the income drop."
+CIF500158,INDIVIDUAL,STABLE,,,,,Low,SUFFICIENT,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500159,INDIVIDUAL,ISOLATED_EXCEPTION,SALARY_DELAY,S4,,2025-09,Low,SUFFICIENT,0,3,"One delayed/missed instalment with an explanation, then recovered."
+CIF500160,INDIVIDUAL,STABLE,,,,,Low,SUFFICIENT,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500161,INDIVIDUAL,STABLE,,,,,Low,PARTIAL,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500162,INDIVIDUAL,SALARY_ELSEWHERE,,S7,,,Low,PARTIAL,0,0,Salary credited at another bank; sparse account data with feed gaps.
+CIF500163,INDIVIDUAL,STABLE,,,,,Low,SUFFICIENT,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500164,INDIVIDUAL,STABLE,,,,,Low,SUFFICIENT,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500165,INDIVIDUAL,SALARY_ELSEWHERE,,S7,,,Low,PARTIAL,0,0,Salary credited at another bank; sparse account data with feed gaps.
+CIF500166,INDIVIDUAL,CHRONIC_LATE_PAYER,,S1,,,Medium,SUFFICIENT,0,11,Habitually pays 2-9 days late every month but always pays in full.
+CIF500167,INDIVIDUAL,STABLE,,,,,Low,SUFFICIENT,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500168,INDIVIDUAL,ROLL_FORWARD,,S5,,2026-03,Critical,SUFFICIENT,100,100,Moves from current into 1-30 and on to 31-60/61-90 DPD.
+CIF500169,INDIVIDUAL,INCOME_DECLINE,JOB_LOSS,S2|S8,CLU-RET-TRADE-NORTH,2026-05,Medium,SUFFICIENT,0,3,"Salary cut, job loss or gradual decline; repayments lag the income drop."
+CIF500170,INDIVIDUAL,INCOME_DECLINE,GRADUAL,S2|S8,CLU-RET-TRADE-NORTH,2026-03,Medium,SUFFICIENT,0,0,"Salary cut, job loss or gradual decline; repayments lag the income drop."
+CIF500171,INDIVIDUAL,STABLE,,,,,Low,SUFFICIENT,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500172,INDIVIDUAL,CURED,,S5,,2025-06,Low,SUFFICIENT,0,0,"Had a 2-3 month delinquency episode early in the window, fully cured since."
+CIF500173,INDIVIDUAL,STABLE,,,,,Low,SUFFICIENT,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500174,INDIVIDUAL,OVER_LEVERAGED,,S3,,2025-07,High,PARTIAL,5,6,"New on-us and off-us credit, rising utilisation and debt burden."
+CIF500175,INDIVIDUAL,THIN_FILE,,S7,,,Low,INSUFFICIENT,0,0,"New-to-bank, only a few months of history; may be bureau no-hit."
+CIF500176,INDIVIDUAL,THIN_FILE,,S7,,,Low,INSUFFICIENT,0,0,"New-to-bank, only a few months of history; may be bureau no-hit."
+CIF500177,INDIVIDUAL,STABLE,,,,,Low,SUFFICIENT,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500178,INDIVIDUAL,STABLE,,,,,Low,SUFFICIENT,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500179,INDIVIDUAL,LEGACY_NPL,,S5,,2026-01,Critical,SUFFICIENT,261,261,"Defaulted early in (or before) the window; 90+ DPD, token payments only."
+CIF500180,INDIVIDUAL,STABLE,,,,,Low,PARTIAL,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500181,INDIVIDUAL,THIN_FILE,,S7,,,Low,INSUFFICIENT,0,0,"New-to-bank, only a few months of history; may be bureau no-hit."
+CIF500182,INDIVIDUAL,INCOME_DECLINE,GRADUAL,S2,,2026-03,Medium,SUFFICIENT,0,0,"Salary cut, job loss or gradual decline; repayments lag the income drop."
+CIF500183,INDIVIDUAL,INCOME_DECLINE,GRADUAL,S2|S8,CLU-RET-TRADE-NORTH,2026-05,Medium,SUFFICIENT,0,0,"Salary cut, job loss or gradual decline; repayments lag the income drop."
+CIF500184,INDIVIDUAL,STABLE,,,,,Low,SUFFICIENT,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500185,INDIVIDUAL,STABLE,,,,,Low,SUFFICIENT,0,3,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500186,INDIVIDUAL,ISOLATED_EXCEPTION,SALARY_DELAY,S4,,2025-10,Low,SUFFICIENT,0,0,"One delayed/missed instalment with an explanation, then recovered."
+CIF500187,INDIVIDUAL,OVER_LEVERAGED,,S3,,2025-06,High,SUFFICIENT,0,28,"New on-us and off-us credit, rising utilisation and debt burden."
+CIF500188,INDIVIDUAL,STABLE,,,,,Low,SUFFICIENT,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500189,INDIVIDUAL,STABLE,,,,,Low,SUFFICIENT,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500190,INDIVIDUAL,REPAYMENT_DETERIORATION,,S1|S5,,2025-12,High,PARTIAL,0,0,"Lateness grows month on month, then partials and misses."
+CIF500191,INDIVIDUAL,STABLE,,,,,Low,SUFFICIENT,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500192,INDIVIDUAL,ROLL_FORWARD,,S5,,2026-05,High,SUFFICIENT,29,60,Moves from current into 1-30 and on to 31-60/61-90 DPD.
+CIF500193,INDIVIDUAL,STABLE,,,,,Low,SUFFICIENT,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500194,INDIVIDUAL,ISOLATED_EXCEPTION,SALARY_DELAY,S4,,2025-06,Low,SUFFICIENT,0,0,"One delayed/missed instalment with an explanation, then recovered."
+CIF500195,INDIVIDUAL,THIN_FILE,,S7,,,Low,INSUFFICIENT,0,0,"New-to-bank, only a few months of history; may be bureau no-hit."
+CIF500196,INDIVIDUAL,INCOME_DECLINE,GRADUAL,S2,,2026-04,Medium,SUFFICIENT,0,0,"Salary cut, job loss or gradual decline; repayments lag the income drop."
+CIF500197,INDIVIDUAL,STABLE,,,,,Low,SUFFICIENT,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500198,INDIVIDUAL,STABLE,,,,,Low,PARTIAL,0,6,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500199,INDIVIDUAL,CHRONIC_LATE_PAYER,,S1,,,Medium,SUFFICIENT,0,0,Habitually pays 2-9 days late every month but always pays in full.
+CIF500200,INDIVIDUAL,STABLE,,,,,Low,PARTIAL,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500201,INDIVIDUAL,OVER_LEVERAGED,,S3,,2025-12,High,SUFFICIENT,0,0,"New on-us and off-us credit, rising utilisation and debt burden."
+CIF500202,INDIVIDUAL,STABLE,,,,,Low,SUFFICIENT,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500203,INDIVIDUAL,INCOME_DECLINE,JOB_LOSS,S2|S8,CLU-RET-TRADE-NORTH,2026-04,Medium,SUFFICIENT,0,0,"Salary cut, job loss or gradual decline; repayments lag the income drop."
+CIF500204,INDIVIDUAL,STABLE,,,,,Low,SUFFICIENT,0,29,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500205,INDIVIDUAL,REPAYMENT_DETERIORATION,,S1|S5,,2025-12,High,PARTIAL,0,0,"Lateness grows month on month, then partials and misses."
+CIF500206,INDIVIDUAL,STABLE,,,,,Low,SUFFICIENT,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500207,INDIVIDUAL,STABLE,,,,,Low,SUFFICIENT,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500208,INDIVIDUAL,STABLE,,,,,Low,PARTIAL,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500209,INDIVIDUAL,OVER_LEVERAGED,,S3,,2025-10,High,SUFFICIENT,0,0,"New on-us and off-us credit, rising utilisation and debt burden."
+CIF500210,INDIVIDUAL,STABLE,,,,,Low,SUFFICIENT,0,26,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500211,INDIVIDUAL,STABLE,,,,,Low,SUFFICIENT,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500212,INDIVIDUAL,ROLL_FORWARD,,S5,,2026-06,Critical,PARTIAL,90,90,Moves from current into 1-30 and on to 31-60/61-90 DPD.
+CIF500213,INDIVIDUAL,INCOME_DECLINE,PAY_CUT,S2|S8,CLU-RET-TRADE-NORTH,2026-03,Medium,SUFFICIENT,0,0,"Salary cut, job loss or gradual decline; repayments lag the income drop."
+CIF500214,INDIVIDUAL,ROLL_FORWARD,,S5,,2026-03,High,SUFFICIENT,0,3,Moves from current into 1-30 and on to 31-60/61-90 DPD.
+CIF500215,INDIVIDUAL,ISOLATED_EXCEPTION,SALARY_DELAY,S4,,2026-04,Low,SUFFICIENT,0,0,"One delayed/missed instalment with an explanation, then recovered."
+CIF500216,INDIVIDUAL,ROLL_FORWARD,,S5,,2026-03,Critical,SUFFICIENT,128,128,Moves from current into 1-30 and on to 31-60/61-90 DPD.
+CIF500217,INDIVIDUAL,ISOLATED_EXCEPTION,HOLIDAY_PERIOD,S4,,2025-09,Low,SUFFICIENT,0,5,"One delayed/missed instalment with an explanation, then recovered."
+CIF500218,INDIVIDUAL,CHRONIC_LATE_PAYER,,S1,,,Medium,SUFFICIENT,0,8,Habitually pays 2-9 days late every month but always pays in full.
+CIF500219,INDIVIDUAL,ROLL_FORWARD,,S5,,2026-03,High,SUFFICIENT,0,32,Moves from current into 1-30 and on to 31-60/61-90 DPD.
+CIF500220,INDIVIDUAL,LEGACY_NPL,,S5,,2025-12,Critical,SUFFICIENT,289,289,"Defaulted early in (or before) the window; 90+ DPD, token payments only."
+CIF500221,INDIVIDUAL,STABLE,,,,,Low,SUFFICIENT,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500222,INDIVIDUAL,THIN_FILE,,S7,,,Low,INSUFFICIENT,0,0,"New-to-bank, only a few months of history; may be bureau no-hit."
+CIF500223,INDIVIDUAL,STABLE,,,,,Low,SUFFICIENT,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500224,INDIVIDUAL,STABLE,,,,,Low,SUFFICIENT,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500225,INDIVIDUAL,LEGACY_NPL,,S5,,2026-01,Critical,SUFFICIENT,268,268,"Defaulted early in (or before) the window; 90+ DPD, token payments only."
+CIF500226,INDIVIDUAL,LEGACY_NPL,,S5,,2026-04,Critical,PARTIAL,181,181,"Defaulted early in (or before) the window; 90+ DPD, token payments only."
+CIF500227,INDIVIDUAL,CHRONIC_LATE_PAYER,,S1,,,Medium,SUFFICIENT,0,0,Habitually pays 2-9 days late every month but always pays in full.
+CIF500228,INDIVIDUAL,ROLL_FORWARD,,S5,,2026-03,Critical,SUFFICIENT,133,133,Moves from current into 1-30 and on to 31-60/61-90 DPD.
+CIF500229,INDIVIDUAL,STABLE,,,,,Low,SUFFICIENT,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500230,INDIVIDUAL,STABLE,,,,,Low,SUFFICIENT,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500231,INDIVIDUAL,SALARY_ELSEWHERE,,S7,,,Low,PARTIAL,0,0,Salary credited at another bank; sparse account data with feed gaps.
+CIF500232,INDIVIDUAL,LEGACY_NPL,,S5,,2025-12,Critical,SUFFICIENT,289,289,"Defaulted early in (or before) the window; 90+ DPD, token payments only."
+CIF500233,INDIVIDUAL,SALARY_ELSEWHERE,,S7,,,Low,PARTIAL,0,0,Salary credited at another bank; sparse account data with feed gaps.
+CIF500234,INDIVIDUAL,REPAYMENT_DETERIORATION,,S1|S5,,2026-02,High,PARTIAL,15,16,"Lateness grows month on month, then partials and misses."
+CIF500235,INDIVIDUAL,ISOLATED_EXCEPTION,HOLIDAY_PERIOD,S4,,2026-06,Low,SUFFICIENT,0,0,"One delayed/missed instalment with an explanation, then recovered."
+CIF500236,INDIVIDUAL,REPAYMENT_DETERIORATION,,S1|S5,,2026-05,High,PARTIAL,0,6,"Lateness grows month on month, then partials and misses."
+CIF500237,INDIVIDUAL,STABLE,,,,,Low,PARTIAL,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500238,INDIVIDUAL,REPAYMENT_DETERIORATION,,S1|S5,,2026-05,High,SUFFICIENT,28,28,"Lateness grows month on month, then partials and misses."
+CIF500239,INDIVIDUAL,THIN_FILE,,S7,,,Low,INSUFFICIENT,0,0,"New-to-bank, only a few months of history; may be bureau no-hit."
+CIF500240,INDIVIDUAL,ROLL_FORWARD,,S5,,2026-07,High,SUFFICIENT,0,0,Moves from current into 1-30 and on to 31-60/61-90 DPD.
+CIF500241,INDIVIDUAL,STABLE,,,,,Low,PARTIAL,0,3,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500242,INDIVIDUAL,STABLE,,,,,Low,SUFFICIENT,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500243,INDIVIDUAL,REPAYMENT_DETERIORATION,,S1|S5,,2025-12,High,SUFFICIENT,58,58,"Lateness grows month on month, then partials and misses."
+CIF500244,INDIVIDUAL,ISOLATED_EXCEPTION,HOLIDAY_PERIOD,S4,,2026-06,Low,SUFFICIENT,0,1,"One delayed/missed instalment with an explanation, then recovered."
+CIF500245,INDIVIDUAL,ISOLATED_EXCEPTION,PROCESSING_DELAY,S4,,2026-01,Low,SUFFICIENT,0,3,"One delayed/missed instalment with an explanation, then recovered."
+CIF500246,INDIVIDUAL,OVER_LEVERAGED,,S3,,2025-08,High,SUFFICIENT,0,0,"New on-us and off-us credit, rising utilisation and debt burden."
+CIF500247,INDIVIDUAL,ROLL_FORWARD,,S5,,2026-04,Critical,PARTIAL,97,97,Moves from current into 1-30 and on to 31-60/61-90 DPD.
+CIF500248,INDIVIDUAL,INCOME_DECLINE,PAY_CUT,S2|S8,CLU-RET-TRADE-NORTH,2026-06,Medium,PARTIAL,0,0,"Salary cut, job loss or gradual decline; repayments lag the income drop."
+CIF500249,INDIVIDUAL,STABLE,,,,,Low,PARTIAL,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500250,INDIVIDUAL,STABLE,,,,,Low,SUFFICIENT,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500251,INDIVIDUAL,OVER_LEVERAGED,,S3,,2025-11,Medium,SUFFICIENT,0,0,"New on-us and off-us credit, rising utilisation and debt burden."
+CIF500252,INDIVIDUAL,STABLE,,,,,Low,SUFFICIENT,0,3,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500253,INDIVIDUAL,REPAYMENT_DETERIORATION,,S1|S5,,2026-05,High,SUFFICIENT,0,0,"Lateness grows month on month, then partials and misses."
+CIF500254,INDIVIDUAL,ISOLATED_EXCEPTION,PROCESSING_DELAY,S4,,2026-06,Low,SUFFICIENT,0,6,"One delayed/missed instalment with an explanation, then recovered."
+CIF500255,INDIVIDUAL,STABLE,,,,,Low,SUFFICIENT,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500256,INDIVIDUAL,REPAYMENT_DETERIORATION,,S1|S5,,2025-11,Critical,SUFFICIENT,117,118,"Lateness grows month on month, then partials and misses."
+CIF500257,INDIVIDUAL,STABLE,,,,,Low,SUFFICIENT,0,25,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500258,INDIVIDUAL,INCOME_DECLINE,PAY_CUT,S2|S8,CLU-RET-TRADE-NORTH,2026-05,Medium,SUFFICIENT,0,0,"Salary cut, job loss or gradual decline; repayments lag the income drop."
+CIF500259,INDIVIDUAL,STABLE,,,,,Low,SUFFICIENT,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500260,INDIVIDUAL,ROLL_FORWARD,,S5,,2026-03,High,SUFFICIENT,20,20,Moves from current into 1-30 and on to 31-60/61-90 DPD.
+CIF500261,INDIVIDUAL,STABLE,,,,,Low,SUFFICIENT,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500262,INDIVIDUAL,INCOME_DECLINE,PAY_CUT,S2|S8,CLU-RET-TRADE-NORTH,2026-06,Medium,PARTIAL,0,14,"Salary cut, job loss or gradual decline; repayments lag the income drop."
+CIF500263,INDIVIDUAL,ISOLATED_EXCEPTION,TEMPORARY_HARDSHIP,S4,,2026-02,Low,SUFFICIENT,0,18,"One delayed/missed instalment with an explanation, then recovered."
+CIF500264,INDIVIDUAL,STABLE,,,,,Low,SUFFICIENT,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500265,INDIVIDUAL,INCOME_DECLINE,PAY_CUT,S2|S8,CLU-RET-TRADE-NORTH,2026-05,Medium,SUFFICIENT,29,29,"Salary cut, job loss or gradual decline; repayments lag the income drop."
+CIF500266,INDIVIDUAL,STABLE,,,,,Low,SUFFICIENT,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500267,INDIVIDUAL,CHRONIC_LATE_PAYER,,S1,,,Medium,SUFFICIENT,5,6,Habitually pays 2-9 days late every month but always pays in full.
+CIF500268,INDIVIDUAL,CURED,,S5,,2025-05,Low,SUFFICIENT,0,49,"Had a 2-3 month delinquency episode early in the window, fully cured since."
+CIF500269,INDIVIDUAL,ROLL_FORWARD,,S5,,2026-04,Critical,SUFFICIENT,72,72,Moves from current into 1-30 and on to 31-60/61-90 DPD.
+CIF500270,INDIVIDUAL,ISOLATED_EXCEPTION,PROCESSING_DELAY,S4,,2026-01,Low,SUFFICIENT,0,3,"One delayed/missed instalment with an explanation, then recovered."
+CIF500271,INDIVIDUAL,ROLL_FORWARD,,S5,,2026-04,Critical,PARTIAL,120,120,Moves from current into 1-30 and on to 31-60/61-90 DPD.
+CIF500272,INDIVIDUAL,STABLE,,,,,Low,SUFFICIENT,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500273,INDIVIDUAL,STABLE,,,,,Low,SUFFICIENT,0,3,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500274,INDIVIDUAL,ISOLATED_EXCEPTION,PROCESSING_DELAY,S4,,2025-08,Low,SUFFICIENT,0,0,"One delayed/missed instalment with an explanation, then recovered."
+CIF500275,INDIVIDUAL,STABLE,,,,,Low,SUFFICIENT,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500276,INDIVIDUAL,ISOLATED_EXCEPTION,TEMPORARY_HARDSHIP,S4,,2025-09,Low,PARTIAL,0,1,"One delayed/missed instalment with an explanation, then recovered."
+CIF500277,INDIVIDUAL,REPAYMENT_DETERIORATION,,S1|S5,,2025-11,High,PARTIAL,9,11,"Lateness grows month on month, then partials and misses."
+CIF500278,INDIVIDUAL,CURED,,S5,,2025-02,Low,SUFFICIENT,0,39,"Had a 2-3 month delinquency episode early in the window, fully cured since."
+CIF500279,INDIVIDUAL,OVER_LEVERAGED,,S3,,2026-01,High,SUFFICIENT,0,0,"New on-us and off-us credit, rising utilisation and debt burden."
+CIF500280,INDIVIDUAL,STABLE,,,,,Low,SUFFICIENT,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500281,INDIVIDUAL,STABLE,,,,,Low,SUFFICIENT,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500282,INDIVIDUAL,ISOLATED_EXCEPTION,TEMPORARY_HARDSHIP,S4,,2025-06,Low,PARTIAL,0,0,"One delayed/missed instalment with an explanation, then recovered."
+CIF500283,INDIVIDUAL,REPAYMENT_DETERIORATION,,S1|S5,,2026-02,High,SUFFICIENT,0,29,"Lateness grows month on month, then partials and misses."
+CIF500284,INDIVIDUAL,INCOME_DECLINE,JOB_LOSS,S2,,2025-11,Medium,SUFFICIENT,0,0,"Salary cut, job loss or gradual decline; repayments lag the income drop."
+CIF500285,INDIVIDUAL,STABLE,,,,,Low,SUFFICIENT,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500286,INDIVIDUAL,STABLE,,,,,Low,SUFFICIENT,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500287,INDIVIDUAL,STABLE,,,,,Low,SUFFICIENT,0,25,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500288,INDIVIDUAL,ROLL_FORWARD,,S5,,2026-04,Critical,PARTIAL,77,77,Moves from current into 1-30 and on to 31-60/61-90 DPD.
+CIF500289,INDIVIDUAL,STABLE,,,,,Low,SUFFICIENT,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500290,INDIVIDUAL,STABLE,,,,,Low,SUFFICIENT,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500291,INDIVIDUAL,CURED,,S5,,2025-04,Low,SUFFICIENT,0,70,"Had a 2-3 month delinquency episode early in the window, fully cured since."
+CIF500292,INDIVIDUAL,LEGACY_NPL,,S5,,2026-03,Critical,SUFFICIENT,212,212,"Defaulted early in (or before) the window; 90+ DPD, token payments only."
+CIF500293,INDIVIDUAL,STABLE,,,,,Low,SUFFICIENT,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500294,INDIVIDUAL,STABLE,,,,,Low,SUFFICIENT,0,16,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500295,INDIVIDUAL,SALARY_ELSEWHERE,,S7,,,Low,PARTIAL,0,0,Salary credited at another bank; sparse account data with feed gaps.
+CIF500296,INDIVIDUAL,STABLE,,,,,Low,PARTIAL,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500297,INDIVIDUAL,ROLL_FORWARD,,S5,,2026-04,High,SUFFICIENT,0,0,Moves from current into 1-30 and on to 31-60/61-90 DPD.
+CIF500298,INDIVIDUAL,OVER_LEVERAGED,,S3,,2025-07,High,SUFFICIENT,0,50,"New on-us and off-us credit, rising utilisation and debt burden."
+CIF500299,INDIVIDUAL,ISOLATED_EXCEPTION,PROCESSING_DELAY,S4,,2026-02,Low,PARTIAL,0,0,"One delayed/missed instalment with an explanation, then recovered."
+CIF500300,INDIVIDUAL,STABLE,,,,,Low,SUFFICIENT,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500301,INDIVIDUAL,CHRONIC_LATE_PAYER,,S1,,,Medium,SUFFICIENT,0,8,Habitually pays 2-9 days late every month but always pays in full.
+CIF500302,INDIVIDUAL,REPAYMENT_DETERIORATION,,S1|S5,,2025-09,High,SUFFICIENT,58,61,"Lateness grows month on month, then partials and misses."
+CIF500303,INDIVIDUAL,OVER_LEVERAGED,,S3,,2025-07,High,SUFFICIENT,0,29,"New on-us and off-us credit, rising utilisation and debt burden."
+CIF500304,INDIVIDUAL,STABLE,,,,,Low,PARTIAL,0,3,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500305,INDIVIDUAL,THIN_FILE,,S7,,,Low,INSUFFICIENT,0,0,"New-to-bank, only a few months of history; may be bureau no-hit."
+CIF500306,INDIVIDUAL,LEGACY_NPL,,S5,,2026-05,Critical,SUFFICIENT,149,149,"Defaulted early in (or before) the window; 90+ DPD, token payments only."
+CIF500307,INDIVIDUAL,STABLE,,,,,Low,PARTIAL,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500308,INDIVIDUAL,CURED,,S5,,2025-03,Low,SUFFICIENT,0,33,"Had a 2-3 month delinquency episode early in the window, fully cured since."
+CIF500309,INDIVIDUAL,CHRONIC_LATE_PAYER,,S1,,,Medium,PARTIAL,0,0,Habitually pays 2-9 days late every month but always pays in full.
+CIF500310,INDIVIDUAL,STABLE,,,,,Low,PARTIAL,0,3,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500311,INDIVIDUAL,STABLE,,,,,Low,SUFFICIENT,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500312,INDIVIDUAL,INCOME_DECLINE,GRADUAL,S2,,2026-03,Medium,SUFFICIENT,0,3,"Salary cut, job loss or gradual decline; repayments lag the income drop."
+CIF500313,INDIVIDUAL,INCOME_DECLINE,GRADUAL,S2,,2025-11,Medium,SUFFICIENT,0,6,"Salary cut, job loss or gradual decline; repayments lag the income drop."
+CIF500314,INDIVIDUAL,THIN_FILE,,S7,,,Low,INSUFFICIENT,0,0,"New-to-bank, only a few months of history; may be bureau no-hit."
+CIF500315,INDIVIDUAL,STABLE,,,,,Low,SUFFICIENT,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500316,INDIVIDUAL,STABLE,,,,,Low,SUFFICIENT,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500317,INDIVIDUAL,CHRONIC_LATE_PAYER,,S1,,,Medium,SUFFICIENT,0,6,Habitually pays 2-9 days late every month but always pays in full.
+CIF500318,INDIVIDUAL,OVER_LEVERAGED,,S3,,2026-03,High,SUFFICIENT,2,3,"New on-us and off-us credit, rising utilisation and debt burden."
+CIF500319,INDIVIDUAL,ROLL_FORWARD,,S5,,2026-07,High,SUFFICIENT,33,33,Moves from current into 1-30 and on to 31-60/61-90 DPD.
+CIF500320,INDIVIDUAL,INCOME_DECLINE,JOB_LOSS,S2|S8,CLU-RET-TRADE-NORTH,2026-05,High,PARTIAL,0,0,"Salary cut, job loss or gradual decline; repayments lag the income drop."
+CIF500321,INDIVIDUAL,REPAYMENT_DETERIORATION,,S1|S5,,2025-12,High,SUFFICIENT,36,36,"Lateness grows month on month, then partials and misses."
+CIF500322,INDIVIDUAL,STABLE,,,,,Low,SUFFICIENT,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500323,INDIVIDUAL,STABLE,,,,,Low,SUFFICIENT,0,16,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500324,INDIVIDUAL,STABLE,,,,,Low,SUFFICIENT,0,6,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500325,INDIVIDUAL,REPAYMENT_DETERIORATION,,S1|S5,,2025-09,High,SUFFICIENT,0,64,"Lateness grows month on month, then partials and misses."
+CIF500326,INDIVIDUAL,CURED,,S5,,2025-06,Low,PARTIAL,0,82,"Had a 2-3 month delinquency episode early in the window, fully cured since."
+CIF500327,INDIVIDUAL,ROLL_FORWARD,,S5,,2026-05,Critical,SUFFICIENT,97,98,Moves from current into 1-30 and on to 31-60/61-90 DPD.
+CIF500328,INDIVIDUAL,THIN_FILE,,S7,,,Low,INSUFFICIENT,0,0,"New-to-bank, only a few months of history; may be bureau no-hit."
+CIF500329,INDIVIDUAL,STABLE,,,,,Low,SUFFICIENT,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500330,INDIVIDUAL,LEGACY_NPL,,S5,,2026-02,Critical,SUFFICIENT,0,0,"Defaulted early in (or before) the window; 90+ DPD, token payments only."
+CIF500331,INDIVIDUAL,ISOLATED_EXCEPTION,HOLIDAY_PERIOD,S4,,2026-05,Low,SUFFICIENT,0,0,"One delayed/missed instalment with an explanation, then recovered."
+CIF500332,INDIVIDUAL,CHRONIC_LATE_PAYER,,S1,,,Medium,SUFFICIENT,2,6,Habitually pays 2-9 days late every month but always pays in full.
+CIF500333,INDIVIDUAL,INCOME_DECLINE,JOB_LOSS,S2,,2026-02,Medium,SUFFICIENT,0,20,"Salary cut, job loss or gradual decline; repayments lag the income drop."
+CIF500334,INDIVIDUAL,CURED,,S5,,2025-06,Low,SUFFICIENT,0,31,"Had a 2-3 month delinquency episode early in the window, fully cured since."
+CIF500335,INDIVIDUAL,ISOLATED_EXCEPTION,SALARY_DELAY,S4,,2025-07,Low,SUFFICIENT,0,0,"One delayed/missed instalment with an explanation, then recovered."
+CIF500336,INDIVIDUAL,THIN_FILE,,S7,,,Low,INSUFFICIENT,0,0,"New-to-bank, only a few months of history; may be bureau no-hit."
+CIF500337,INDIVIDUAL,THIN_FILE,,S7,,,Low,INSUFFICIENT,0,0,"New-to-bank, only a few months of history; may be bureau no-hit."
+CIF500338,INDIVIDUAL,ROLL_FORWARD,,S5,,2026-07,High,SUFFICIENT,0,14,Moves from current into 1-30 and on to 31-60/61-90 DPD.
+CIF500339,INDIVIDUAL,STABLE,,,,,Low,SUFFICIENT,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500340,INDIVIDUAL,THIN_FILE,,S7,,,Low,INSUFFICIENT,0,0,"New-to-bank, only a few months of history; may be bureau no-hit."
+CIF500341,INDIVIDUAL,THIN_FILE,,S7,,,Low,INSUFFICIENT,0,0,"New-to-bank, only a few months of history; may be bureau no-hit."
+CIF500342,INDIVIDUAL,THIN_FILE,,S7,,,Low,INSUFFICIENT,0,0,"New-to-bank, only a few months of history; may be bureau no-hit."
+CIF500343,INDIVIDUAL,STABLE,,,,,Low,SUFFICIENT,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500344,INDIVIDUAL,ROLL_FORWARD,,S5,,2026-06,Critical,SUFFICIENT,72,72,Moves from current into 1-30 and on to 31-60/61-90 DPD.
+CIF500345,INDIVIDUAL,STABLE,,,,,Low,SUFFICIENT,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500346,INDIVIDUAL,ROLL_FORWARD,,S5,,2026-06,Critical,PARTIAL,90,90,Moves from current into 1-30 and on to 31-60/61-90 DPD.
+CIF500347,INDIVIDUAL,OVER_LEVERAGED,,S3,,2025-10,High,SUFFICIENT,0,3,"New on-us and off-us credit, rising utilisation and debt burden."
+CIF500348,INDIVIDUAL,THIN_FILE,,S7,,,Low,INSUFFICIENT,0,0,"New-to-bank, only a few months of history; may be bureau no-hit."
+CIF500349,INDIVIDUAL,INCOME_DECLINE,PAY_CUT,S2,,2026-02,Medium,SUFFICIENT,0,0,"Salary cut, job loss or gradual decline; repayments lag the income drop."
+CIF500350,INDIVIDUAL,OVER_LEVERAGED,,S3,,2025-08,High,SUFFICIENT,0,0,"New on-us and off-us credit, rising utilisation and debt burden."
+CIF500351,INDIVIDUAL,REPAYMENT_DETERIORATION,,S1|S5,,2025-10,Critical,PARTIAL,82,82,"Lateness grows month on month, then partials and misses."
+CIF500352,INDIVIDUAL,STABLE,,,,,Low,PARTIAL,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500353,INDIVIDUAL,CHRONIC_LATE_PAYER,,S1,,,Medium,PARTIAL,0,0,Habitually pays 2-9 days late every month but always pays in full.
+CIF500354,INDIVIDUAL,STABLE,,,,,Low,SUFFICIENT,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500355,INDIVIDUAL,OVER_LEVERAGED,,S3,,2025-10,High,SUFFICIENT,0,3,"New on-us and off-us credit, rising utilisation and debt burden."
+CIF500356,INDIVIDUAL,INCOME_DECLINE,GRADUAL,S2,,2026-02,Medium,SUFFICIENT,0,0,"Salary cut, job loss or gradual decline; repayments lag the income drop."
+CIF500357,INDIVIDUAL,ROLL_FORWARD,,S5,,2026-06,High,SUFFICIENT,58,58,Moves from current into 1-30 and on to 31-60/61-90 DPD.
+CIF500358,INDIVIDUAL,STABLE,,,,,Low,PARTIAL,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500359,INDIVIDUAL,INCOME_DECLINE,JOB_LOSS,S2|S8,CLU-RET-TRADE-NORTH,2026-06,Medium,PARTIAL,0,3,"Salary cut, job loss or gradual decline; repayments lag the income drop."
+CIF500360,INDIVIDUAL,INCOME_DECLINE,GRADUAL,S2|S8,CLU-RET-TRADE-NORTH,2026-04,Medium,PARTIAL,9,9,"Salary cut, job loss or gradual decline; repayments lag the income drop."
+CIF500361,INDIVIDUAL,SALARY_ELSEWHERE,,S7,,,Low,PARTIAL,0,3,Salary credited at another bank; sparse account data with feed gaps.
+CIF500362,INDIVIDUAL,ISOLATED_EXCEPTION,HOLIDAY_PERIOD,S4,,2026-03,Low,SUFFICIENT,0,0,"One delayed/missed instalment with an explanation, then recovered."
+CIF500363,INDIVIDUAL,ROLL_FORWARD,,S5,,2026-06,Critical,SUFFICIENT,65,65,Moves from current into 1-30 and on to 31-60/61-90 DPD.
+CIF500364,INDIVIDUAL,INCOME_DECLINE,PAY_CUT,S2,,2026-05,Medium,SUFFICIENT,0,0,"Salary cut, job loss or gradual decline; repayments lag the income drop."
+CIF500365,INDIVIDUAL,LEGACY_NPL,,S5,,2025-12,Critical,PARTIAL,245,245,"Defaulted early in (or before) the window; 90+ DPD, token payments only."
+CIF500366,INDIVIDUAL,STABLE,,,,,Low,SUFFICIENT,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500367,INDIVIDUAL,REPAYMENT_DETERIORATION,,S1|S5,,2025-11,High,SUFFICIENT,29,30,"Lateness grows month on month, then partials and misses."
+CIF500368,INDIVIDUAL,REPAYMENT_DETERIORATION,,S1|S5,,2025-11,Critical,PARTIAL,107,108,"Lateness grows month on month, then partials and misses."
+CIF500369,INDIVIDUAL,ISOLATED_EXCEPTION,SALARY_DELAY,S4,,2026-01,Low,SUFFICIENT,0,0,"One delayed/missed instalment with an explanation, then recovered."
+CIF500370,INDIVIDUAL,STABLE,,,,,Low,SUFFICIENT,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500371,INDIVIDUAL,STABLE,,,,,Low,SUFFICIENT,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500372,INDIVIDUAL,STABLE,,,,,Low,PARTIAL,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500373,INDIVIDUAL,STABLE,,,,,Low,PARTIAL,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500374,INDIVIDUAL,ROLL_FORWARD,,S5,,2026-05,Critical,PARTIAL,86,86,Moves from current into 1-30 and on to 31-60/61-90 DPD.
+CIF500375,INDIVIDUAL,STABLE,,,,,Low,SUFFICIENT,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500376,INDIVIDUAL,ISOLATED_EXCEPTION,SALARY_DELAY,S4,,2026-03,Low,SUFFICIENT,0,0,"One delayed/missed instalment with an explanation, then recovered."
+CIF500377,INDIVIDUAL,CURED,,S5,,2025-08,Low,SUFFICIENT,0,41,"Had a 2-3 month delinquency episode early in the window, fully cured since."
+CIF500378,INDIVIDUAL,INCOME_DECLINE,PAY_CUT,S2,,2026-04,Medium,SUFFICIENT,0,0,"Salary cut, job loss or gradual decline; repayments lag the income drop."
+CIF500379,INDIVIDUAL,STABLE,,,,,Low,PARTIAL,0,26,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500380,INDIVIDUAL,CURED,,S5,,2025-09,Low,SUFFICIENT,0,0,"Had a 2-3 month delinquency episode early in the window, fully cured since."
+CIF500381,INDIVIDUAL,REPAYMENT_DETERIORATION,,S1|S5,,2025-12,High,SUFFICIENT,33,33,"Lateness grows month on month, then partials and misses."
+CIF500382,INDIVIDUAL,INCOME_DECLINE,GRADUAL,S2|S8,CLU-RET-TRADE-NORTH,2026-03,Medium,SUFFICIENT,0,0,"Salary cut, job loss or gradual decline; repayments lag the income drop."
+CIF500383,INDIVIDUAL,STABLE,,,,,Low,SUFFICIENT,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500384,INDIVIDUAL,INCOME_DECLINE,GRADUAL,S2,,2026-05,Medium,SUFFICIENT,0,0,"Salary cut, job loss or gradual decline; repayments lag the income drop."
+CIF500385,INDIVIDUAL,INCOME_DECLINE,JOB_LOSS,S2,,2026-05,High,SUFFICIENT,0,0,"Salary cut, job loss or gradual decline; repayments lag the income drop."
+CIF500386,INDIVIDUAL,STABLE,,,,,Low,SUFFICIENT,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500387,INDIVIDUAL,ROLL_FORWARD,,S5,,2026-03,Critical,PARTIAL,91,91,Moves from current into 1-30 and on to 31-60/61-90 DPD.
+CIF500388,INDIVIDUAL,THIN_FILE,,S7,,,Low,INSUFFICIENT,0,0,"New-to-bank, only a few months of history; may be bureau no-hit."
+CIF500389,INDIVIDUAL,STABLE,,,,,Low,SUFFICIENT,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500390,INDIVIDUAL,STABLE,,,,,Low,SUFFICIENT,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500391,INDIVIDUAL,LEGACY_NPL,,S5,,2026-04,Critical,SUFFICIENT,182,182,"Defaulted early in (or before) the window; 90+ DPD, token payments only."
+CIF500392,INDIVIDUAL,STABLE,,,,,Low,SUFFICIENT,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500393,INDIVIDUAL,STABLE,,,,,Low,SUFFICIENT,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500394,INDIVIDUAL,ISOLATED_EXCEPTION,TEMPORARY_HARDSHIP,S4,,2025-07,Low,PARTIAL,0,24,"One delayed/missed instalment with an explanation, then recovered."
+CIF500395,INDIVIDUAL,REPAYMENT_DETERIORATION,,S1|S5,,2026-02,Critical,SUFFICIENT,90,90,"Lateness grows month on month, then partials and misses."
+CIF500396,INDIVIDUAL,OVER_LEVERAGED,,S3,,2025-06,Medium,SUFFICIENT,23,23,"New on-us and off-us credit, rising utilisation and debt burden."
+CIF500397,INDIVIDUAL,INCOME_DECLINE,PAY_CUT,S2|S8,CLU-RET-TRADE-NORTH,2026-04,Medium,SUFFICIENT,0,0,"Salary cut, job loss or gradual decline; repayments lag the income drop."
+CIF500398,INDIVIDUAL,STABLE,,,,,Low,SUFFICIENT,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500399,INDIVIDUAL,STABLE,,,,,Low,SUFFICIENT,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500400,INDIVIDUAL,INCOME_DECLINE,GRADUAL,S2,,2026-02,Medium,SUFFICIENT,0,0,"Salary cut, job loss or gradual decline; repayments lag the income drop."
+CIF500401,INDIVIDUAL,STABLE,,,,,Low,SUFFICIENT,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500402,INDIVIDUAL,STABLE,,,,,Low,PARTIAL,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500403,INDIVIDUAL,INCOME_DECLINE,PAY_CUT,S2,,2025-12,Medium,SUFFICIENT,0,20,"Salary cut, job loss or gradual decline; repayments lag the income drop."
+CIF500404,INDIVIDUAL,CURED,,S5,,2025-06,Low,SUFFICIENT,0,59,"Had a 2-3 month delinquency episode early in the window, fully cured since."
+CIF500405,INDIVIDUAL,ISOLATED_EXCEPTION,PROCESSING_DELAY,S4,,2026-06,Low,PARTIAL,0,0,"One delayed/missed instalment with an explanation, then recovered."
+CIF500406,INDIVIDUAL,STABLE,,,,,Low,SUFFICIENT,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500407,INDIVIDUAL,THIN_FILE,,S7,,,Low,INSUFFICIENT,0,0,"New-to-bank, only a few months of history; may be bureau no-hit."
+CIF500408,INDIVIDUAL,CURED,,S5,,2025-02,Low,SUFFICIENT,0,49,"Had a 2-3 month delinquency episode early in the window, fully cured since."
+CIF500409,INDIVIDUAL,STABLE,,,,,Low,SUFFICIENT,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500410,INDIVIDUAL,STABLE,,,,,Low,PARTIAL,0,3,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500411,INDIVIDUAL,INCOME_DECLINE,GRADUAL,S2,,2026-01,Medium,PARTIAL,0,0,"Salary cut, job loss or gradual decline; repayments lag the income drop."
+CIF500412,INDIVIDUAL,ISOLATED_EXCEPTION,TEMPORARY_HARDSHIP,S4,,2026-06,Low,SUFFICIENT,0,0,"One delayed/missed instalment with an explanation, then recovered."
+CIF500413,INDIVIDUAL,SALARY_ELSEWHERE,,S7,,,Low,PARTIAL,0,3,Salary credited at another bank; sparse account data with feed gaps.
+CIF500414,INDIVIDUAL,REPAYMENT_DETERIORATION,,S1|S5,,2026-05,High,SUFFICIENT,0,0,"Lateness grows month on month, then partials and misses."
+CIF500415,INDIVIDUAL,INCOME_DECLINE,GRADUAL,S2,,2026-04,Medium,SUFFICIENT,0,0,"Salary cut, job loss or gradual decline; repayments lag the income drop."
+CIF500416,INDIVIDUAL,STABLE,,,,,Low,SUFFICIENT,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500417,INDIVIDUAL,INCOME_DECLINE,JOB_LOSS,S2,,2026-03,High,PARTIAL,9,11,"Salary cut, job loss or gradual decline; repayments lag the income drop."
+CIF500418,INDIVIDUAL,ROLL_FORWARD,,S5,,2026-05,Critical,SUFFICIENT,128,128,Moves from current into 1-30 and on to 31-60/61-90 DPD.
+CIF500419,INDIVIDUAL,CHRONIC_LATE_PAYER,,S1,,,Medium,SUFFICIENT,5,6,Habitually pays 2-9 days late every month but always pays in full.
+CIF500420,INDIVIDUAL,ROLL_FORWARD,,S5,,2026-05,High,SUFFICIENT,0,0,Moves from current into 1-30 and on to 31-60/61-90 DPD.
+CIF500421,INDIVIDUAL,STABLE,,,,,Low,SUFFICIENT,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500422,INDIVIDUAL,ROLL_FORWARD,,S5,,2026-04,Critical,PARTIAL,112,112,Moves from current into 1-30 and on to 31-60/61-90 DPD.
+CIF500423,INDIVIDUAL,ISOLATED_EXCEPTION,SALARY_DELAY,S4,,2026-02,Low,SUFFICIENT,0,8,"One delayed/missed instalment with an explanation, then recovered."
+CIF500424,INDIVIDUAL,OVER_LEVERAGED,,S3,,2025-11,High,PARTIAL,0,0,"New on-us and off-us credit, rising utilisation and debt burden."
+CIF500425,INDIVIDUAL,THIN_FILE,,S7,,,Low,INSUFFICIENT,0,0,"New-to-bank, only a few months of history; may be bureau no-hit."
+CIF500426,INDIVIDUAL,ROLL_FORWARD,,S5,,2026-04,High,SUFFICIENT,23,26,Moves from current into 1-30 and on to 31-60/61-90 DPD.
+CIF500427,INDIVIDUAL,ISOLATED_EXCEPTION,PROCESSING_DELAY,S4,,2026-05,Low,SUFFICIENT,0,0,"One delayed/missed instalment with an explanation, then recovered."
+CIF500428,INDIVIDUAL,REPAYMENT_DETERIORATION,,S1|S5,,2025-11,Critical,SUFFICIENT,128,128,"Lateness grows month on month, then partials and misses."
+CIF500429,INDIVIDUAL,ROLL_FORWARD,,S5,,2026-06,High,SUFFICIENT,0,0,Moves from current into 1-30 and on to 31-60/61-90 DPD.
+CIF500430,INDIVIDUAL,CURED,,S5,,2025-09,Low,SUFFICIENT,0,62,"Had a 2-3 month delinquency episode early in the window, fully cured since."
+CIF500431,INDIVIDUAL,ISOLATED_EXCEPTION,SALARY_DELAY,S4,,2025-12,Low,SUFFICIENT,0,0,"One delayed/missed instalment with an explanation, then recovered."
+CIF500432,INDIVIDUAL,INCOME_DECLINE,PAY_CUT,S2,,2026-01,Medium,PARTIAL,0,27,"Salary cut, job loss or gradual decline; repayments lag the income drop."
+CIF500433,INDIVIDUAL,STABLE,,,,,Low,SUFFICIENT,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500434,INDIVIDUAL,STABLE,,,,,Low,SUFFICIENT,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500435,INDIVIDUAL,OVER_LEVERAGED,,S3,,2025-12,High,SUFFICIENT,0,0,"New on-us and off-us credit, rising utilisation and debt burden."
+CIF500436,INDIVIDUAL,INCOME_DECLINE,PAY_CUT,S2,,2026-05,Medium,SUFFICIENT,0,0,"Salary cut, job loss or gradual decline; repayments lag the income drop."
+CIF500437,INDIVIDUAL,INCOME_DECLINE,PAY_CUT,S2|S8,CLU-RET-TRADE-NORTH,2026-06,Medium,SUFFICIENT,0,11,"Salary cut, job loss or gradual decline; repayments lag the income drop."
+CIF500438,INDIVIDUAL,OVER_LEVERAGED,,S3,,2025-06,High,SUFFICIENT,0,35,"New on-us and off-us credit, rising utilisation and debt burden."
+CIF500439,INDIVIDUAL,REPAYMENT_DETERIORATION,,S1|S5,,2025-12,High,SUFFICIENT,0,29,"Lateness grows month on month, then partials and misses."
+CIF500440,INDIVIDUAL,REPAYMENT_DETERIORATION,,S1|S5,,2025-10,High,PARTIAL,51,52,"Lateness grows month on month, then partials and misses."
+CIF500441,INDIVIDUAL,THIN_FILE,,S7,,,Low,INSUFFICIENT,0,0,"New-to-bank, only a few months of history; may be bureau no-hit."
+CIF500442,INDIVIDUAL,CHRONIC_LATE_PAYER,,S1,,,Medium,PARTIAL,0,0,Habitually pays 2-9 days late every month but always pays in full.
+CIF500443,INDIVIDUAL,ISOLATED_EXCEPTION,TEMPORARY_HARDSHIP,S4,,2025-07,Low,SUFFICIENT,0,0,"One delayed/missed instalment with an explanation, then recovered."
+CIF500444,INDIVIDUAL,ROLL_FORWARD,,S5,,2026-05,Critical,SUFFICIENT,64,64,Moves from current into 1-30 and on to 31-60/61-90 DPD.
+CIF500445,INDIVIDUAL,STABLE,,,,,Low,PARTIAL,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500446,INDIVIDUAL,OVER_LEVERAGED,,S3,,2025-11,High,SUFFICIENT,0,14,"New on-us and off-us credit, rising utilisation and debt burden."
+CIF500447,INDIVIDUAL,REPAYMENT_DETERIORATION,,S1|S5,,2025-11,High,SUFFICIENT,9,11,"Lateness grows month on month, then partials and misses."
+CIF500448,INDIVIDUAL,STABLE,,,,,Medium,SUFFICIENT,5,27,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500449,INDIVIDUAL,CHRONIC_LATE_PAYER,,S1,,,Medium,SUFFICIENT,0,0,Habitually pays 2-9 days late every month but always pays in full.
+CIF500450,INDIVIDUAL,LEGACY_NPL,,S5,,2026-05,Critical,SUFFICIENT,148,148,"Defaulted early in (or before) the window; 90+ DPD, token payments only."
+CIF500451,INDIVIDUAL,INCOME_DECLINE,PAY_CUT,S2,,2025-12,Medium,SUFFICIENT,0,0,"Salary cut, job loss or gradual decline; repayments lag the income drop."
+CIF500452,INDIVIDUAL,LEGACY_NPL,,S5,,2026-05,Critical,SUFFICIENT,142,142,"Defaulted early in (or before) the window; 90+ DPD, token payments only."
+CIF500453,INDIVIDUAL,CURED,,S5,,2025-02,Low,SUFFICIENT,0,31,"Had a 2-3 month delinquency episode early in the window, fully cured since."
+CIF500454,INDIVIDUAL,ISOLATED_EXCEPTION,TEMPORARY_HARDSHIP,S4,,2025-11,Low,SUFFICIENT,0,5,"One delayed/missed instalment with an explanation, then recovered."
+CIF500455,INDIVIDUAL,OVER_LEVERAGED,,S3,,2025-08,High,SUFFICIENT,15,56,"New on-us and off-us credit, rising utilisation and debt burden."
+CIF500456,INDIVIDUAL,REPAYMENT_DETERIORATION,,S1|S5,,2026-02,High,PARTIAL,44,44,"Lateness grows month on month, then partials and misses."
+CIF500457,INDIVIDUAL,CURED,,S5,,2025-06,Low,PARTIAL,0,56,"Had a 2-3 month delinquency episode early in the window, fully cured since."
+CIF500458,INDIVIDUAL,THIN_FILE,,S7,,,Low,INSUFFICIENT,0,0,"New-to-bank, only a few months of history; may be bureau no-hit."
+CIF500459,INDIVIDUAL,STABLE,,,,,Low,SUFFICIENT,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500460,INDIVIDUAL,REPAYMENT_DETERIORATION,,S1|S5,,2025-11,High,SUFFICIENT,0,36,"Lateness grows month on month, then partials and misses."
+CIF500461,INDIVIDUAL,STABLE,,,,,Low,SUFFICIENT,0,4,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500462,INDIVIDUAL,STABLE,,,,,Low,SUFFICIENT,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500463,INDIVIDUAL,ROLL_FORWARD,,S5,,2026-05,High,SUFFICIENT,36,36,Moves from current into 1-30 and on to 31-60/61-90 DPD.
+CIF500464,INDIVIDUAL,STABLE,,,,,Low,SUFFICIENT,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500465,INDIVIDUAL,STABLE,,,,,Low,SUFFICIENT,0,11,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500466,INDIVIDUAL,STABLE,,,,,Low,SUFFICIENT,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500467,INDIVIDUAL,OVER_LEVERAGED,,S3,,2025-09,High,PARTIAL,28,30,"New on-us and off-us credit, rising utilisation and debt burden."
+CIF500468,INDIVIDUAL,INCOME_DECLINE,PAY_CUT,S2,,2026-01,Medium,SUFFICIENT,0,0,"Salary cut, job loss or gradual decline; repayments lag the income drop."
+CIF500469,INDIVIDUAL,STABLE,,,,,Low,SUFFICIENT,0,3,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500470,INDIVIDUAL,REPAYMENT_DETERIORATION,,S1|S5,,2025-09,High,SUFFICIENT,0,46,"Lateness grows month on month, then partials and misses."
+CIF500471,INDIVIDUAL,STABLE,,,,,Low,SUFFICIENT,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500472,INDIVIDUAL,INCOME_DECLINE,PAY_CUT,S2|S8,CLU-RET-TRADE-NORTH,2026-03,Medium,SUFFICIENT,0,0,"Salary cut, job loss or gradual decline; repayments lag the income drop."
+CIF500473,INDIVIDUAL,CHRONIC_LATE_PAYER,,S1,,,Medium,SUFFICIENT,0,0,Habitually pays 2-9 days late every month but always pays in full.
+CIF500474,INDIVIDUAL,REPAYMENT_DETERIORATION,,S1|S5,,2026-05,High,PARTIAL,0,14,"Lateness grows month on month, then partials and misses."
+CIF500475,INDIVIDUAL,SALARY_ELSEWHERE,,S7,,,Low,PARTIAL,0,0,Salary credited at another bank; sparse account data with feed gaps.
+CIF500476,INDIVIDUAL,ISOLATED_EXCEPTION,TEMPORARY_HARDSHIP,S4,,2026-04,Low,SUFFICIENT,0,29,"One delayed/missed instalment with an explanation, then recovered."
+CIF500477,INDIVIDUAL,ROLL_FORWARD,,S5,,2026-04,Critical,SUFFICIENT,97,97,Moves from current into 1-30 and on to 31-60/61-90 DPD.
+CIF500478,INDIVIDUAL,ISOLATED_EXCEPTION,SALARY_DELAY,S4,,2025-08,Low,PARTIAL,0,16,"One delayed/missed instalment with an explanation, then recovered."
+CIF500479,INDIVIDUAL,REPAYMENT_DETERIORATION,,S1|S5,,2026-05,High,SUFFICIENT,0,0,"Lateness grows month on month, then partials and misses."
+CIF500480,INDIVIDUAL,OVER_LEVERAGED,,S3,,2025-10,High,PARTIAL,0,0,"New on-us and off-us credit, rising utilisation and debt burden."
+CIF500481,INDIVIDUAL,ISOLATED_EXCEPTION,HOLIDAY_PERIOD,S4,,2025-06,Low,SUFFICIENT,0,0,"One delayed/missed instalment with an explanation, then recovered."
+CIF500482,INDIVIDUAL,OVER_LEVERAGED,,S3,,2025-08,High,PARTIAL,0,11,"New on-us and off-us credit, rising utilisation and debt burden."
+CIF500483,INDIVIDUAL,THIN_FILE,,S7,,,Low,INSUFFICIENT,0,0,"New-to-bank, only a few months of history; may be bureau no-hit."
+CIF500484,INDIVIDUAL,ISOLATED_EXCEPTION,SALARY_DELAY,S4,,2026-02,Low,SUFFICIENT,0,0,"One delayed/missed instalment with an explanation, then recovered."
+CIF500485,INDIVIDUAL,STABLE,,,,,Low,SUFFICIENT,0,3,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500486,INDIVIDUAL,CHRONIC_LATE_PAYER,,S1,,,Medium,SUFFICIENT,0,0,Habitually pays 2-9 days late every month but always pays in full.
+CIF500487,INDIVIDUAL,STABLE,,,,,Low,SUFFICIENT,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500488,INDIVIDUAL,INCOME_DECLINE,GRADUAL,S2,,2026-03,Medium,SUFFICIENT,0,0,"Salary cut, job loss or gradual decline; repayments lag the income drop."
+CIF500489,INDIVIDUAL,CURED,,S5,,2025-07,Low,SUFFICIENT,0,91,"Had a 2-3 month delinquency episode early in the window, fully cured since."
+CIF500490,INDIVIDUAL,THIN_FILE,,S7,,,Low,INSUFFICIENT,0,0,"New-to-bank, only a few months of history; may be bureau no-hit."
+CIF500491,INDIVIDUAL,ROLL_FORWARD,,S5,,2026-06,High,SUFFICIENT,58,61,Moves from current into 1-30 and on to 31-60/61-90 DPD.
+CIF500492,INDIVIDUAL,THIN_FILE,,S7,,,Low,INSUFFICIENT,0,0,"New-to-bank, only a few months of history; may be bureau no-hit."
+CIF500493,INDIVIDUAL,STABLE,,,,,Low,SUFFICIENT,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500494,INDIVIDUAL,CHRONIC_LATE_PAYER,,S1,,,Medium,PARTIAL,0,0,Habitually pays 2-9 days late every month but always pays in full.
+CIF500495,INDIVIDUAL,OVER_LEVERAGED,,S3,,2025-08,High,SUFFICIENT,0,0,"New on-us and off-us credit, rising utilisation and debt burden."
+CIF500496,INDIVIDUAL,REPAYMENT_DETERIORATION,,S1|S5,,2026-05,High,SUFFICIENT,0,0,"Lateness grows month on month, then partials and misses."
+CIF500497,INDIVIDUAL,SALARY_ELSEWHERE,,S7,,,Low,PARTIAL,0,0,Salary credited at another bank; sparse account data with feed gaps.
+CIF500498,INDIVIDUAL,CHRONIC_LATE_PAYER,,S1,,,Medium,SUFFICIENT,0,0,Habitually pays 2-9 days late every month but always pays in full.
+CIF500499,INDIVIDUAL,STABLE,,,,,Low,SUFFICIENT,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500500,INDIVIDUAL,ROLL_FORWARD,,S5,,2026-05,High,SUFFICIENT,0,6,Moves from current into 1-30 and on to 31-60/61-90 DPD.
+CIF500501,INDIVIDUAL,CURED,,S5,,2025-02,Low,PARTIAL,0,31,"Had a 2-3 month delinquency episode early in the window, fully cured since."
+CIF500502,INDIVIDUAL,ISOLATED_EXCEPTION,HOLIDAY_PERIOD,S4,,2026-06,Low,SUFFICIENT,0,0,"One delayed/missed instalment with an explanation, then recovered."
+CIF500503,INDIVIDUAL,THIN_FILE,,S7,,,Low,INSUFFICIENT,0,0,"New-to-bank, only a few months of history; may be bureau no-hit."
+CIF500504,INDIVIDUAL,THIN_FILE,,S7,,,Low,INSUFFICIENT,0,0,"New-to-bank, only a few months of history; may be bureau no-hit."
+CIF500505,INDIVIDUAL,SALARY_ELSEWHERE,,S7,,,Low,PARTIAL,0,0,Salary credited at another bank; sparse account data with feed gaps.
+CIF500506,INDIVIDUAL,STABLE,,,,,Low,SUFFICIENT,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500507,INDIVIDUAL,STABLE,,,,,Low,SUFFICIENT,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500508,INDIVIDUAL,CURED,,S5,,2025-04,Low,SUFFICIENT,0,33,"Had a 2-3 month delinquency episode early in the window, fully cured since."
+CIF500509,INDIVIDUAL,SALARY_ELSEWHERE,,S7,,,Low,PARTIAL,0,3,Salary credited at another bank; sparse account data with feed gaps.
+CIF500510,INDIVIDUAL,CURED,,S5,,2025-03,Low,SUFFICIENT,0,58,"Had a 2-3 month delinquency episode early in the window, fully cured since."
+CIF500511,INDIVIDUAL,STABLE,,,,,Low,SUFFICIENT,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500512,INDIVIDUAL,STABLE,,,,,Low,SUFFICIENT,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500513,INDIVIDUAL,THIN_FILE,,S7,,,Low,INSUFFICIENT,0,0,"New-to-bank, only a few months of history; may be bureau no-hit."
+CIF500514,INDIVIDUAL,CHRONIC_LATE_PAYER,,S1,,,Medium,PARTIAL,0,6,Habitually pays 2-9 days late every month but always pays in full.
+CIF500515,INDIVIDUAL,OVER_LEVERAGED,,S3,,2025-09,High,SUFFICIENT,0,0,"New on-us and off-us credit, rising utilisation and debt burden."
+CIF500516,INDIVIDUAL,REPAYMENT_DETERIORATION,,S1|S5,,2025-12,High,SUFFICIENT,0,0,"Lateness grows month on month, then partials and misses."
+CIF500517,INDIVIDUAL,INCOME_DECLINE,PAY_CUT,S2,,2026-02,Medium,PARTIAL,9,9,"Salary cut, job loss or gradual decline; repayments lag the income drop."
+CIF500518,INDIVIDUAL,INCOME_DECLINE,JOB_LOSS,S2,,2026-01,Medium,PARTIAL,0,0,"Salary cut, job loss or gradual decline; repayments lag the income drop."
+CIF500519,INDIVIDUAL,CHRONIC_LATE_PAYER,,S1,,,Medium,PARTIAL,2,3,Habitually pays 2-9 days late every month but always pays in full.
+CIF500520,INDIVIDUAL,INCOME_DECLINE,JOB_LOSS,S2,,2026-04,Medium,PARTIAL,0,0,"Salary cut, job loss or gradual decline; repayments lag the income drop."
+CIF500521,INDIVIDUAL,THIN_FILE,,S7,,,Low,INSUFFICIENT,0,0,"New-to-bank, only a few months of history; may be bureau no-hit."
+CIF500522,INDIVIDUAL,STABLE,,,,,Low,PARTIAL,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500523,INDIVIDUAL,STABLE,,,,,Low,SUFFICIENT,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500524,INDIVIDUAL,INCOME_DECLINE,JOB_LOSS,S2,,2025-12,Medium,SUFFICIENT,0,0,"Salary cut, job loss or gradual decline; repayments lag the income drop."
+CIF500525,INDIVIDUAL,STABLE,,,,,Low,SUFFICIENT,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500526,INDIVIDUAL,OVER_LEVERAGED,,S3,,2025-09,High,SUFFICIENT,0,0,"New on-us and off-us credit, rising utilisation and debt burden."
+CIF500527,INDIVIDUAL,STABLE,,,,,Low,SUFFICIENT,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500528,INDIVIDUAL,THIN_FILE,,S7,,,Low,INSUFFICIENT,0,0,"New-to-bank, only a few months of history; may be bureau no-hit."
+CIF500529,INDIVIDUAL,ROLL_FORWARD,,S5,,2026-06,Critical,SUFFICIENT,97,97,Moves from current into 1-30 and on to 31-60/61-90 DPD.
+CIF500530,INDIVIDUAL,STABLE,,,,,Low,SUFFICIENT,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500531,INDIVIDUAL,STABLE,,,,,Low,SUFFICIENT,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500532,INDIVIDUAL,STABLE,,,,,Low,SUFFICIENT,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500533,INDIVIDUAL,OVER_LEVERAGED,,S3,,2026-03,High,SUFFICIENT,0,0,"New on-us and off-us credit, rising utilisation and debt burden."
+CIF500534,INDIVIDUAL,THIN_FILE,,S7,,,Low,INSUFFICIENT,0,0,"New-to-bank, only a few months of history; may be bureau no-hit."
+CIF500535,INDIVIDUAL,CURED,,S5,,2025-08,Low,SUFFICIENT,0,67,"Had a 2-3 month delinquency episode early in the window, fully cured since."
+CIF500536,INDIVIDUAL,REPAYMENT_DETERIORATION,,S1|S5,,2025-12,High,SUFFICIENT,0,0,"Lateness grows month on month, then partials and misses."
+CIF500537,INDIVIDUAL,ISOLATED_EXCEPTION,PROCESSING_DELAY,S4,,2025-09,Low,SUFFICIENT,0,16,"One delayed/missed instalment with an explanation, then recovered."
+CIF500538,INDIVIDUAL,STABLE,,,,,Low,SUFFICIENT,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500539,INDIVIDUAL,STABLE,,,,,Low,PARTIAL,0,1,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500540,INDIVIDUAL,CHRONIC_LATE_PAYER,,S1,,,Medium,PARTIAL,0,0,Habitually pays 2-9 days late every month but always pays in full.
+CIF500541,INDIVIDUAL,STABLE,,,,,Low,SUFFICIENT,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500542,INDIVIDUAL,STABLE,,,,,Low,SUFFICIENT,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500543,INDIVIDUAL,INCOME_DECLINE,PAY_CUT,S2,,2026-02,Medium,PARTIAL,0,30,"Salary cut, job loss or gradual decline; repayments lag the income drop."
+CIF500544,INDIVIDUAL,REPAYMENT_DETERIORATION,,S1|S5,,2026-04,High,SUFFICIENT,2,3,"Lateness grows month on month, then partials and misses."
+CIF500545,INDIVIDUAL,STABLE,,,,,Low,SUFFICIENT,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500546,INDIVIDUAL,CURED,,S5,,2025-09,Low,SUFFICIENT,0,32,"Had a 2-3 month delinquency episode early in the window, fully cured since."
+CIF500547,INDIVIDUAL,REPAYMENT_DETERIORATION,,S1|S5,,2025-10,Critical,SUFFICIENT,72,72,"Lateness grows month on month, then partials and misses."
+CIF500548,INDIVIDUAL,STABLE,,,,,Low,PARTIAL,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500549,INDIVIDUAL,CHRONIC_LATE_PAYER,,S1,,,Medium,SUFFICIENT,0,6,Habitually pays 2-9 days late every month but always pays in full.
+CIF500550,INDIVIDUAL,STABLE,,,,,Low,PARTIAL,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500551,INDIVIDUAL,STABLE,,,,,Low,PARTIAL,0,9,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500552,INDIVIDUAL,STABLE,,,,,Low,PARTIAL,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500553,INDIVIDUAL,STABLE,,,,,Low,PARTIAL,0,1,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500554,INDIVIDUAL,REPAYMENT_DETERIORATION,,S1|S5,,2025-10,High,SUFFICIENT,33,34,"Lateness grows month on month, then partials and misses."
+CIF500555,INDIVIDUAL,LEGACY_NPL,,S5,,2026-01,Critical,SUFFICIENT,0,0,"Defaulted early in (or before) the window; 90+ DPD, token payments only."
+CIF500556,INDIVIDUAL,INCOME_DECLINE,PAY_CUT,S2|S8,CLU-RET-TRADE-NORTH,2026-04,Medium,SUFFICIENT,0,3,"Salary cut, job loss or gradual decline; repayments lag the income drop."
+CIF500557,INDIVIDUAL,ROLL_FORWARD,,S5,,2026-04,Critical,SUFFICIENT,86,87,Moves from current into 1-30 and on to 31-60/61-90 DPD.
+CIF500558,INDIVIDUAL,REPAYMENT_DETERIORATION,,S1|S5,,2026-02,High,SUFFICIENT,33,33,"Lateness grows month on month, then partials and misses."
+CIF500559,INDIVIDUAL,STABLE,,,,,Low,PARTIAL,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500560,INDIVIDUAL,LEGACY_NPL,,S5,,2025-12,Critical,SUFFICIENT,253,253,"Defaulted early in (or before) the window; 90+ DPD, token payments only."
+CIF500561,INDIVIDUAL,THIN_FILE,,S7,,,Low,INSUFFICIENT,0,0,"New-to-bank, only a few months of history; may be bureau no-hit."
+CIF500562,INDIVIDUAL,SALARY_ELSEWHERE,,S7,,,Low,PARTIAL,0,0,Salary credited at another bank; sparse account data with feed gaps.
+CIF500563,INDIVIDUAL,THIN_FILE,,S7,,,Low,INSUFFICIENT,0,0,"New-to-bank, only a few months of history; may be bureau no-hit."
+CIF500564,INDIVIDUAL,SALARY_ELSEWHERE,,S7,,,Low,PARTIAL,0,0,Salary credited at another bank; sparse account data with feed gaps.
+CIF500565,INDIVIDUAL,ISOLATED_EXCEPTION,SALARY_DELAY,S4,,2026-07,Low,SUFFICIENT,0,3,"One delayed/missed instalment with an explanation, then recovered."
+CIF500566,INDIVIDUAL,INCOME_DECLINE,PAY_CUT,S2|S8,CLU-RET-TRADE-NORTH,2026-05,Medium,PARTIAL,0,0,"Salary cut, job loss or gradual decline; repayments lag the income drop."
+CIF500567,INDIVIDUAL,CHRONIC_LATE_PAYER,,S1,,,Medium,SUFFICIENT,0,0,Habitually pays 2-9 days late every month but always pays in full.
+CIF500568,INDIVIDUAL,CHRONIC_LATE_PAYER,,S1,,,Medium,SUFFICIENT,0,0,Habitually pays 2-9 days late every month but always pays in full.
+CIF500569,INDIVIDUAL,STABLE,,,,,Low,SUFFICIENT,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500570,INDIVIDUAL,STABLE,,,,,Low,PARTIAL,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500571,INDIVIDUAL,ISOLATED_EXCEPTION,HOLIDAY_PERIOD,S4,,2025-06,Low,PARTIAL,0,0,"One delayed/missed instalment with an explanation, then recovered."
+CIF500572,INDIVIDUAL,CHRONIC_LATE_PAYER,,S1,,,Medium,SUFFICIENT,0,0,Habitually pays 2-9 days late every month but always pays in full.
+CIF500573,INDIVIDUAL,ISOLATED_EXCEPTION,PROCESSING_DELAY,S4,,2026-07,Low,SUFFICIENT,0,0,"One delayed/missed instalment with an explanation, then recovered."
+CIF500574,INDIVIDUAL,STABLE,,,,,Low,PARTIAL,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500575,INDIVIDUAL,STABLE,,,,,Low,SUFFICIENT,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500576,INDIVIDUAL,ISOLATED_EXCEPTION,SALARY_DELAY,S4,,2026-07,Low,SUFFICIENT,0,3,"One delayed/missed instalment with an explanation, then recovered."
+CIF500577,INDIVIDUAL,STABLE,,,,,Low,SUFFICIENT,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500578,INDIVIDUAL,STABLE,,,,,Low,SUFFICIENT,0,3,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500579,INDIVIDUAL,OVER_LEVERAGED,,S3,,2026-01,High,SUFFICIENT,0,0,"New on-us and off-us credit, rising utilisation and debt burden."
+CIF500580,INDIVIDUAL,STABLE,,,,,Low,SUFFICIENT,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500581,INDIVIDUAL,STABLE,,,,,Low,SUFFICIENT,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500582,INDIVIDUAL,STABLE,,,,,Low,SUFFICIENT,0,3,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500583,INDIVIDUAL,STABLE,,,,,Low,SUFFICIENT,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500584,INDIVIDUAL,LEGACY_NPL,,S5,,2026-04,Critical,SUFFICIENT,156,156,"Defaulted early in (or before) the window; 90+ DPD, token payments only."
+CIF500585,INDIVIDUAL,ISOLATED_EXCEPTION,PROCESSING_DELAY,S4,,2025-10,Low,SUFFICIENT,0,3,"One delayed/missed instalment with an explanation, then recovered."
+CIF500586,INDIVIDUAL,SALARY_ELSEWHERE,,S7,,,Low,PARTIAL,0,0,Salary credited at another bank; sparse account data with feed gaps.
+CIF500587,INDIVIDUAL,CHRONIC_LATE_PAYER,,S1,,,Medium,SUFFICIENT,0,6,Habitually pays 2-9 days late every month but always pays in full.
+CIF500588,INDIVIDUAL,REPAYMENT_DETERIORATION,,S1|S5,,2026-01,High,SUFFICIENT,0,0,"Lateness grows month on month, then partials and misses."
+CIF500589,INDIVIDUAL,STABLE,,,,,Low,SUFFICIENT,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500590,INDIVIDUAL,REPAYMENT_DETERIORATION,,S1|S5,,2025-09,Critical,SUFFICIENT,77,77,"Lateness grows month on month, then partials and misses."
+CIF500591,INDIVIDUAL,ISOLATED_EXCEPTION,SALARY_DELAY,S4,,2026-06,Low,SUFFICIENT,0,0,"One delayed/missed instalment with an explanation, then recovered."
+CIF500592,INDIVIDUAL,CHRONIC_LATE_PAYER,,S1,,,Medium,SUFFICIENT,0,0,Habitually pays 2-9 days late every month but always pays in full.
+CIF500593,INDIVIDUAL,THIN_FILE,,S7,,,Low,INSUFFICIENT,0,0,"New-to-bank, only a few months of history; may be bureau no-hit."
+CIF500594,INDIVIDUAL,STABLE,,,,,Low,SUFFICIENT,0,2,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500595,INDIVIDUAL,REPAYMENT_DETERIORATION,,S1|S5,,2026-04,High,SUFFICIENT,36,36,"Lateness grows month on month, then partials and misses."
+CIF500596,INDIVIDUAL,STABLE,,,,,Low,SUFFICIENT,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500597,INDIVIDUAL,STABLE,,,,,Low,PARTIAL,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500598,INDIVIDUAL,STABLE,,,,,Low,SUFFICIENT,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500599,INDIVIDUAL,STABLE,,,,,Low,PARTIAL,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500600,INDIVIDUAL,STABLE,,,,,Low,SUFFICIENT,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500601,INDIVIDUAL,REPAYMENT_DETERIORATION,,S1|S5,,2026-04,High,SUFFICIENT,0,3,"Lateness grows month on month, then partials and misses."
+CIF500602,INDIVIDUAL,CURED,,S5,,2025-05,Low,SUFFICIENT,0,72,"Had a 2-3 month delinquency episode early in the window, fully cured since."
+CIF500603,INDIVIDUAL,STABLE,,,,,Medium,SUFFICIENT,23,23,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500604,INDIVIDUAL,OVER_LEVERAGED,,S3,,2026-03,Medium,SUFFICIENT,5,66,"New on-us and off-us credit, rising utilisation and debt burden."
+CIF500605,INDIVIDUAL,ISOLATED_EXCEPTION,TEMPORARY_HARDSHIP,S4,,2026-02,Low,SUFFICIENT,0,0,"One delayed/missed instalment with an explanation, then recovered."
+CIF500606,INDIVIDUAL,STABLE,,,,,Low,SUFFICIENT,0,3,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500607,INDIVIDUAL,INCOME_DECLINE,PAY_CUT,S2|S8,CLU-RET-TRADE-NORTH,2026-04,Medium,SUFFICIENT,0,0,"Salary cut, job loss or gradual decline; repayments lag the income drop."
+CIF500608,INDIVIDUAL,CURED,,S5,,2025-07,Low,PARTIAL,0,82,"Had a 2-3 month delinquency episode early in the window, fully cured since."
+CIF500609,INDIVIDUAL,SALARY_ELSEWHERE,,S7,,,Low,PARTIAL,0,0,Salary credited at another bank; sparse account data with feed gaps.
+CIF500610,INDIVIDUAL,STABLE,,,,,Low,SUFFICIENT,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500611,INDIVIDUAL,STABLE,,,,,Low,PARTIAL,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500612,INDIVIDUAL,REPAYMENT_DETERIORATION,,S1|S5,,2026-04,High,SUFFICIENT,0,6,"Lateness grows month on month, then partials and misses."
+CIF500613,INDIVIDUAL,STABLE,,,,,Low,SUFFICIENT,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500614,INDIVIDUAL,INCOME_DECLINE,PAY_CUT,S2|S8,CLU-RET-TRADE-NORTH,2026-06,Medium,PARTIAL,0,0,"Salary cut, job loss or gradual decline; repayments lag the income drop."
+CIF500615,INDIVIDUAL,ISOLATED_EXCEPTION,SALARY_DELAY,S4,,2025-11,Low,PARTIAL,0,0,"One delayed/missed instalment with an explanation, then recovered."
+CIF500616,INDIVIDUAL,OVER_LEVERAGED,,S3,,2026-01,High,SUFFICIENT,0,30,"New on-us and off-us credit, rising utilisation and debt burden."
+CIF500617,INDIVIDUAL,STABLE,,,,,Low,SUFFICIENT,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500618,INDIVIDUAL,SALARY_ELSEWHERE,,S7,,,Low,PARTIAL,0,0,Salary credited at another bank; sparse account data with feed gaps.
+CIF500619,INDIVIDUAL,REPAYMENT_DETERIORATION,,S1|S5,,2026-01,High,SUFFICIENT,2,3,"Lateness grows month on month, then partials and misses."
+CIF500620,INDIVIDUAL,SALARY_ELSEWHERE,,S7,,,Low,PARTIAL,0,0,Salary credited at another bank; sparse account data with feed gaps.
+CIF500621,INDIVIDUAL,CHRONIC_LATE_PAYER,,S1,,,Medium,SUFFICIENT,0,0,Habitually pays 2-9 days late every month but always pays in full.
+CIF500622,INDIVIDUAL,INCOME_DECLINE,JOB_LOSS,S2|S8,CLU-RET-TRADE-NORTH,2026-05,High,SUFFICIENT,2,3,"Salary cut, job loss or gradual decline; repayments lag the income drop."
+CIF500623,INDIVIDUAL,ISOLATED_EXCEPTION,SALARY_DELAY,S4,,2025-06,Low,SUFFICIENT,0,0,"One delayed/missed instalment with an explanation, then recovered."
+CIF500624,INDIVIDUAL,STABLE,,,,,Low,SUFFICIENT,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500625,INDIVIDUAL,LEGACY_NPL,,S5,,2025-12,Critical,SUFFICIENT,261,264,"Defaulted early in (or before) the window; 90+ DPD, token payments only."
+CIF500626,INDIVIDUAL,ISOLATED_EXCEPTION,HOLIDAY_PERIOD,S4,,2026-03,Low,SUFFICIENT,0,0,"One delayed/missed instalment with an explanation, then recovered."
+CIF500627,INDIVIDUAL,ISOLATED_EXCEPTION,PROCESSING_DELAY,S4,,2026-04,Low,SUFFICIENT,0,0,"One delayed/missed instalment with an explanation, then recovered."
+CIF500628,INDIVIDUAL,CHRONIC_LATE_PAYER,,S1,,,Medium,SUFFICIENT,0,0,Habitually pays 2-9 days late every month but always pays in full.
+CIF500629,INDIVIDUAL,STABLE,,,,,Low,SUFFICIENT,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500630,INDIVIDUAL,STABLE,,,,,Low,SUFFICIENT,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500631,INDIVIDUAL,ISOLATED_EXCEPTION,SALARY_DELAY,S4,,2025-10,Low,SUFFICIENT,0,3,"One delayed/missed instalment with an explanation, then recovered."
+CIF500632,INDIVIDUAL,OVER_LEVERAGED,,S3,,2025-12,Medium,SUFFICIENT,0,0,"New on-us and off-us credit, rising utilisation and debt burden."
+CIF500633,INDIVIDUAL,STABLE,,,,,Low,SUFFICIENT,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500634,INDIVIDUAL,ISOLATED_EXCEPTION,PROCESSING_DELAY,S4,,2026-03,Low,PARTIAL,0,0,"One delayed/missed instalment with an explanation, then recovered."
+CIF500635,INDIVIDUAL,STABLE,,,,,Low,SUFFICIENT,0,3,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500636,INDIVIDUAL,STABLE,,,,,Low,SUFFICIENT,0,3,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500637,INDIVIDUAL,STABLE,,,,,Low,SUFFICIENT,0,3,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500638,INDIVIDUAL,OVER_LEVERAGED,,S3,,2025-09,High,SUFFICIENT,0,30,"New on-us and off-us credit, rising utilisation and debt burden."
+CIF500639,INDIVIDUAL,CHRONIC_LATE_PAYER,,S1,,,Medium,SUFFICIENT,2,3,Habitually pays 2-9 days late every month but always pays in full.
+CIF500640,INDIVIDUAL,STABLE,,,,,Low,PARTIAL,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500641,INDIVIDUAL,STABLE,,,,,Low,SUFFICIENT,0,3,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500642,INDIVIDUAL,STABLE,,,,,Low,SUFFICIENT,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500643,INDIVIDUAL,OVER_LEVERAGED,,S3,,2025-12,High,SUFFICIENT,0,3,"New on-us and off-us credit, rising utilisation and debt burden."
+CIF500644,INDIVIDUAL,STABLE,,,,,Low,PARTIAL,0,4,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500645,INDIVIDUAL,ROLL_FORWARD,,S5,,2026-07,High,SUFFICIENT,58,58,Moves from current into 1-30 and on to 31-60/61-90 DPD.
+CIF500646,INDIVIDUAL,STABLE,,,,,Low,SUFFICIENT,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500647,INDIVIDUAL,STABLE,,,,,Low,SUFFICIENT,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500648,INDIVIDUAL,CURED,,S5,,2025-03,Low,SUFFICIENT,0,89,"Had a 2-3 month delinquency episode early in the window, fully cured since."
+CIF500649,INDIVIDUAL,SALARY_ELSEWHERE,,S7,,,Low,PARTIAL,0,0,Salary credited at another bank; sparse account data with feed gaps.
+CIF500650,INDIVIDUAL,STABLE,,,,,Low,SUFFICIENT,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500651,INDIVIDUAL,STABLE,,,,,Low,SUFFICIENT,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500652,INDIVIDUAL,STABLE,,,,,Low,SUFFICIENT,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500653,INDIVIDUAL,INCOME_DECLINE,PAY_CUT,S2|S8,CLU-RET-TRADE-NORTH,2026-06,Medium,SUFFICIENT,0,20,"Salary cut, job loss or gradual decline; repayments lag the income drop."
+CIF500654,INDIVIDUAL,ROLL_FORWARD,,S5,,2026-03,Critical,SUFFICIENT,93,93,Moves from current into 1-30 and on to 31-60/61-90 DPD.
+CIF500655,INDIVIDUAL,STABLE,,,,,Low,SUFFICIENT,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500656,INDIVIDUAL,ROLL_FORWARD,,S5,,2026-06,Critical,PARTIAL,121,121,Moves from current into 1-30 and on to 31-60/61-90 DPD.
+CIF500657,INDIVIDUAL,STABLE,,,,,Low,SUFFICIENT,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500658,INDIVIDUAL,LEGACY_NPL,,S5,,2026-03,Critical,SUFFICIENT,209,209,"Defaulted early in (or before) the window; 90+ DPD, token payments only."
+CIF500659,INDIVIDUAL,STABLE,,,,,Low,PARTIAL,0,0,"Regular payer, stable salary; occasional 1-2 day slips only."
+CIF500660,INDIVIDUAL,ROLL_FORWARD,,S5,,2026-06,High,SUFFICIENT,0,0,Moves from current into 1-30 and on to 31-60/61-90 DPD.
+CIF500661,SME,SME_LEGACY_NPL,,S5|S6,,2025-11,Critical,SUFFICIENT,275,275,Business in default since early in the window; collections stage.
+CIF500662,SME,SME_STABLE,,,,,Low,SUFFICIENT,0,0,Stable receipts with normal seasonality.
+CIF500663,SME,SME_OVER_LEVERAGED,,S3|S6,,2026-01,Medium,SUFFICIENT,0,0,Additional term/equipment debt on-us and off-us.
+CIF500664,SME,SME_LEGACY_NPL,,S5|S6,,2025-07,Critical,SUFFICIENT,359,359,Business in default since early in the window; collections stage.
+CIF500665,SME,SME_OVER_LEVERAGED,,S3|S6,,2025-08,Medium,SUFFICIENT,0,34,Additional term/equipment debt on-us and off-us.
+CIF500666,SME,SME_OVER_LEVERAGED,,S3|S6,,2025-09,Medium,SUFFICIENT,0,4,Additional term/equipment debt on-us and off-us.
+CIF500667,SME,SME_THIN_FILE,,S7,,,Low,INSUFFICIENT,0,0,"New business / new-to-bank, little history."
+CIF500668,SME,SME_SEASONAL,,S6,,,Low,SUFFICIENT,0,0,Strong summer dip (3+ months falling) that recovers each autumn.
+CIF500669,SME,SME_SEASONAL,,S6,,,Low,SUFFICIENT,0,0,Strong summer dip (3+ months falling) that recovers each autumn.
+CIF500670,SME,SME_STABLE,,,,,Low,SUFFICIENT,0,3,Stable receipts with normal seasonality.
+CIF500671,SME,SME_OVER_LEVERAGED,,S3|S6,,2025-11,Medium,SUFFICIENT,0,3,Additional term/equipment debt on-us and off-us.
+CIF500672,SME,SME_SEASONAL,,S6,,,Low,SUFFICIENT,0,0,Strong summer dip (3+ months falling) that recovers each autumn.
+CIF500673,SME,SME_OVER_LEVERAGED,,S3|S6,,2025-11,Medium,SUFFICIENT,0,0,Additional term/equipment debt on-us and off-us.
+CIF500674,SME,SME_OVER_LEVERAGED,,S3|S6,,2026-01,Medium,SUFFICIENT,0,0,Additional term/equipment debt on-us and off-us.
+CIF500675,SME,SME_OVER_LEVERAGED,,S3|S6,,2026-03,Medium,SUFFICIENT,0,0,Additional term/equipment debt on-us and off-us.
+CIF500676,SME,SME_REPAYMENT_DETERIORATION,,S1|S5|S6,,2026-03,Critical,SUFFICIENT,86,86,"Business repayments deteriorating, mild receipts decline."
+CIF500677,SME,SME_SEASONAL,,S6,,,Low,SUFFICIENT,0,0,Strong summer dip (3+ months falling) that recovers each autumn.
+CIF500678,SME,SME_LEGACY_NPL,,S5|S6,,2026-01,Critical,SUFFICIENT,271,271,Business in default since early in the window; collections stage.
+CIF500679,SME,SME_STABLE,,,,,Low,SUFFICIENT,0,0,Stable receipts with normal seasonality.
+CIF500680,SME,SME_THIN_FILE,,S7,,,Low,INSUFFICIENT,0,0,"New business / new-to-bank, little history."
+CIF500681,SME,SME_THIN_FILE,,S7,,,Low,INSUFFICIENT,0,0,"New business / new-to-bank, little history."
+CIF500682,SME,SME_THIN_FILE,,S7,,,Low,INSUFFICIENT,0,0,"New business / new-to-bank, little history."
+CIF500683,SME,SME_CASHFLOW_STRESS,,S2|S6,,2025-12,High,SUFFICIENT,58,58,"Sales receipts falling for months, WC limit maxed, cheque returns."
+CIF500684,SME,SME_SEASONAL,,S6,,,Low,SUFFICIENT,0,0,Strong summer dip (3+ months falling) that recovers each autumn.
+CIF500685,SME,SME_STABLE,,,,,Low,SUFFICIENT,0,0,Stable receipts with normal seasonality.
+CIF500686,SME,SME_STABLE,,,,,Low,SUFFICIENT,0,0,Stable receipts with normal seasonality.
+CIF500687,SME,SME_OVER_LEVERAGED,,S3|S6,,2025-07,Medium,SUFFICIENT,2,30,Additional term/equipment debt on-us and off-us.
+CIF500688,SME,SME_CASHFLOW_STRESS,,S2|S6,,2026-05,High,SUFFICIENT,0,0,"Sales receipts falling for months, WC limit maxed, cheque returns."
+CIF500689,SME,SME_SEASONAL,,S6,,,Low,SUFFICIENT,0,3,Strong summer dip (3+ months falling) that recovers each autumn.
+CIF500690,SME,SME_STABLE,,,,,Low,SUFFICIENT,0,6,Stable receipts with normal seasonality.
+CIF500691,SME,SME_STABLE,,,,,Low,SUFFICIENT,0,0,Stable receipts with normal seasonality.
+CIF500692,SME,SME_CASHFLOW_STRESS,,S2|S6,,2026-01,High,SUFFICIENT,9,9,"Sales receipts falling for months, WC limit maxed, cheque returns."
+CIF500693,SME,SME_THIN_FILE,,S7,,,Low,INSUFFICIENT,0,0,"New business / new-to-bank, little history."
+CIF500694,SME,SME_OVER_LEVERAGED,,S3|S6,,2025-12,Medium,SUFFICIENT,0,0,Additional term/equipment debt on-us and off-us.
+CIF500695,SME,SME_CASHFLOW_STRESS,,S2|S6,,2025-12,High,SUFFICIENT,23,26,"Sales receipts falling for months, WC limit maxed, cheque returns."
+CIF500696,SME,SME_REPAYMENT_DETERIORATION,,S1|S5|S6,,2026-05,High,SUFFICIENT,2,3,"Business repayments deteriorating, mild receipts decline."
+CIF500697,SME,SME_SEASONAL,,S6,,,Low,SUFFICIENT,0,0,Strong summer dip (3+ months falling) that recovers each autumn.
+CIF500698,SME,SME_SEASONAL,,S6,,,Low,SUFFICIENT,0,0,Strong summer dip (3+ months falling) that recovers each autumn.
+CIF500699,SME,SME_THIN_FILE,,S7,,,Low,INSUFFICIENT,0,0,"New business / new-to-bank, little history."
+CIF500700,SME,SME_LEGACY_NPL,,S5|S6,,2025-12,Critical,SUFFICIENT,303,303,Business in default since early in the window; collections stage.
+CIF500701,SME,SME_STABLE,,,,,Low,SUFFICIENT,0,0,Stable receipts with normal seasonality.
+CIF500702,SME,SME_REPAYMENT_DETERIORATION,,S1|S5|S6,,2025-11,Critical,SUFFICIENT,86,86,"Business repayments deteriorating, mild receipts decline."
+CIF500703,SME,SME_LEGACY_NPL,,S5|S6,,2025-09,Critical,SUFFICIENT,300,300,Business in default since early in the window; collections stage.
+CIF500704,SME,SME_SEASONAL,,S6,,,Low,SUFFICIENT,0,0,Strong summer dip (3+ months falling) that recovers each autumn.
+CIF500705,SME,SME_CASHFLOW_STRESS,,S2|S6,,2026-03,High,SUFFICIENT,0,0,"Sales receipts falling for months, WC limit maxed, cheque returns."
+CIF500706,SME,SME_STABLE,,,,,Low,SUFFICIENT,0,0,Stable receipts with normal seasonality.
+CIF500707,SME,SME_SEASONAL,,S6,,,Low,SUFFICIENT,0,3,Strong summer dip (3+ months falling) that recovers each autumn.
+CIF500708,SME,SME_LEGACY_NPL,,S5|S6,,2025-09,Critical,SUFFICIENT,359,359,Business in default since early in the window; collections stage.
+CIF500709,SME,SME_REPAYMENT_DETERIORATION,,S1|S5|S6,,2025-10,High,SUFFICIENT,51,52,"Business repayments deteriorating, mild receipts decline."
+CIF500710,SME,SME_STABLE,,,,,Low,SUFFICIENT,0,0,Stable receipts with normal seasonality.
+CIF500711,SME,SME_CASHFLOW_STRESS,,S2|S6,,2026-03,High,SUFFICIENT,0,0,"Sales receipts falling for months, WC limit maxed, cheque returns."
+CIF500712,SME,SME_REPAYMENT_DETERIORATION,,S1|S5|S6,,2025-09,Critical,SUFFICIENT,97,125,"Business repayments deteriorating, mild receipts decline."
+CIF500713,SME,SME_REPAYMENT_DETERIORATION,,S1|S5|S6,,2026-02,High,SUFFICIENT,51,51,"Business repayments deteriorating, mild receipts decline."
+CIF500714,SME,SME_THIN_FILE,,S7,,,Low,INSUFFICIENT,0,0,"New business / new-to-bank, little history."
+CIF500715,SME,SME_THIN_FILE,,S7,,,Low,INSUFFICIENT,0,0,"New business / new-to-bank, little history."
+CIF500716,SME,SME_STABLE,,,,,Low,SUFFICIENT,0,0,Stable receipts with normal seasonality.
+CIF500717,SME,SME_OVER_LEVERAGED,,S3|S6,,2026-03,Medium,SUFFICIENT,0,0,Additional term/equipment debt on-us and off-us.
+CIF500718,SME,SME_THIN_FILE,,S7,,,Low,INSUFFICIENT,0,0,"New business / new-to-bank, little history."
+CIF500719,SME,SME_CASHFLOW_STRESS,,S2|S6,,2026-05,High,SUFFICIENT,0,0,"Sales receipts falling for months, WC limit maxed, cheque returns."
+CIF500720,SME,SME_SEASONAL,,S6,,,Low,SUFFICIENT,0,3,Strong summer dip (3+ months falling) that recovers each autumn.
+CIF500721,SME,SME_STABLE,,,,,Low,SUFFICIENT,0,3,Stable receipts with normal seasonality.
+CIF500722,SME,SME_REPAYMENT_DETERIORATION,,S1|S5|S6,,2026-05,High,SUFFICIENT,20,21,"Business repayments deteriorating, mild receipts decline."
+CIF500723,SME,SME_STABLE,,,,,Low,SUFFICIENT,0,0,Stable receipts with normal seasonality.
+CIF500724,SME,SME_OVER_LEVERAGED,,S3|S6,,2025-09,High,SUFFICIENT,28,29,Additional term/equipment debt on-us and off-us.
+CIF500725,SME,SME_STABLE,,,,,Low,SUFFICIENT,0,0,Stable receipts with normal seasonality.
+CIF500726,SME,SME_CASHFLOW_STRESS,,S2|S6,,2026-02,High,SUFFICIENT,5,5,"Sales receipts falling for months, WC limit maxed, cheque returns."
+CIF500727,SME,SME_REPAYMENT_DETERIORATION,,S1|S5|S6,,2025-09,High,SUFFICIENT,51,51,"Business repayments deteriorating, mild receipts decline."
+CIF500728,SME,SME_STABLE,,,,,Low,SUFFICIENT,0,0,Stable receipts with normal seasonality.
+CIF500729,SME,SME_STABLE,,,,,Low,SUFFICIENT,0,0,Stable receipts with normal seasonality.
+CIF500730,SME,SME_CASHFLOW_STRESS,,S2|S6|S8,CLU-SME-LOGI-NORTH,2026-01,High,SUFFICIENT,0,8,"Sales receipts falling for months, WC limit maxed, cheque returns."
+CIF500731,SME,SME_REPAYMENT_DETERIORATION,,S1|S5|S6,,2026-05,High,SUFFICIENT,2,3,"Business repayments deteriorating, mild receipts decline."
+CIF500732,SME,SME_OVER_LEVERAGED,,S3|S6,,2026-01,Medium,SUFFICIENT,0,0,Additional term/equipment debt on-us and off-us.
+CIF500733,SME,SME_THIN_FILE,,S7,,,Low,INSUFFICIENT,0,0,"New business / new-to-bank, little history."
+CIF500734,SME,SME_LEGACY_NPL,,S5|S6,,2025-10,Critical,SUFFICIENT,364,364,Business in default since early in the window; collections stage.
+CIF500735,SME,SME_REPAYMENT_DETERIORATION,,S1|S5|S6,,2025-10,Critical,SUFFICIENT,112,112,"Business repayments deteriorating, mild receipts decline."
+CIF500736,SME,SME_REPAYMENT_DETERIORATION,,S1|S5|S6|S8,CLU-SME-REST-AJM,2026-05,High,SUFFICIENT,0,25,"Business repayments deteriorating, mild receipts decline."
+CIF500737,SME,SME_STABLE,,,,,Low,SUFFICIENT,0,0,Stable receipts with normal seasonality.
+CIF500738,SME,SME_REPAYMENT_DETERIORATION,,S1|S5|S6|S8,CLU-SME-REST-AJM,2026-04,High,SUFFICIENT,0,0,"Business repayments deteriorating, mild receipts decline."
+CIF500739,SME,SME_THIN_FILE,,S7,,,Low,INSUFFICIENT,0,0,"New business / new-to-bank, little history."
+CIF500740,SME,SME_STABLE,,,,,Low,SUFFICIENT,0,0,Stable receipts with normal seasonality.
+CIF500741,SME,SME_REPAYMENT_DETERIORATION,,S1|S5|S6,,2026-04,High,SUFFICIENT,28,29,"Business repayments deteriorating, mild receipts decline."
+CIF500742,SME,SME_REPAYMENT_DETERIORATION,,S1|S5|S6,,2026-05,High,SUFFICIENT,0,0,"Business repayments deteriorating, mild receipts decline."
+CIF500743,SME,SME_STABLE,,,,,Low,SUFFICIENT,0,0,Stable receipts with normal seasonality.
+CIF500744,SME,SME_STABLE,,,,,Low,SUFFICIENT,0,0,Stable receipts with normal seasonality.
+CIF500745,SME,SME_SEASONAL,,S6,,,Low,SUFFICIENT,0,3,Strong summer dip (3+ months falling) that recovers each autumn.
+CIF500746,SME,SME_CASHFLOW_STRESS,,S2|S6,,2026-04,High,SUFFICIENT,0,0,"Sales receipts falling for months, WC limit maxed, cheque returns."
+CIF500747,SME,SME_SEASONAL,,S6,,,Low,SUFFICIENT,0,0,Strong summer dip (3+ months falling) that recovers each autumn.
+CIF500748,SME,SME_SEASONAL,,S6,,,Low,SUFFICIENT,0,0,Strong summer dip (3+ months falling) that recovers each autumn.
+CIF500749,SME,SME_LEGACY_NPL,,S5|S6,,2025-12,Critical,SUFFICIENT,275,275,Business in default since early in the window; collections stage.
+CIF500750,SME,SME_CASHFLOW_STRESS,,S2|S6,,2026-04,High,SUFFICIENT,0,0,"Sales receipts falling for months, WC limit maxed, cheque returns."
+CIF500751,SME,SME_OVER_LEVERAGED,,S3|S6,,2025-09,Medium,SUFFICIENT,0,0,Additional term/equipment debt on-us and off-us.
+CIF500752,SME,SME_OVER_LEVERAGED,,S3|S6,,2025-09,High,SUFFICIENT,33,33,Additional term/equipment debt on-us and off-us.
+CIF500753,SME,SME_OVER_LEVERAGED,,S3|S6,,2025-06,Medium,SUFFICIENT,0,6,Additional term/equipment debt on-us and off-us.
+CIF500754,SME,SME_OVER_LEVERAGED,,S3|S6,,2025-12,Medium,SUFFICIENT,0,0,Additional term/equipment debt on-us and off-us.
+CIF500755,SME,SME_OVER_LEVERAGED,,S3|S6,,2025-12,Medium,SUFFICIENT,0,0,Additional term/equipment debt on-us and off-us.
+CIF500756,SME,SME_THIN_FILE,,S7,,,Low,INSUFFICIENT,0,0,"New business / new-to-bank, little history."
+CIF500757,SME,SME_STABLE,,,,,Low,SUFFICIENT,0,25,Stable receipts with normal seasonality.
+CIF500758,SME,SME_CASHFLOW_STRESS,,S2|S6,,2026-06,High,SUFFICIENT,0,0,"Sales receipts falling for months, WC limit maxed, cheque returns."
+CIF500759,SME,SME_STABLE,,,,,Low,SUFFICIENT,0,0,Stable receipts with normal seasonality.
+CIF500760,SME,SME_CASHFLOW_STRESS,,S2|S6|S8,CLU-SME-LOGI-NORTH,2026-02,High,SUFFICIENT,28,28,"Sales receipts falling for months, WC limit maxed, cheque returns."
+CIF500761,SME,SME_STABLE,,,,,Low,SUFFICIENT,0,0,Stable receipts with normal seasonality.
+CIF500762,SME,SME_CASHFLOW_STRESS,,S2|S6,,2026-03,High,SUFFICIENT,28,28,"Sales receipts falling for months, WC limit maxed, cheque returns."
+CIF500763,SME,SME_STABLE,,,,,Low,SUFFICIENT,0,0,Stable receipts with normal seasonality.
+CIF500764,SME,SME_THIN_FILE,,S7,,,Low,INSUFFICIENT,0,0,"New business / new-to-bank, little history."
+CIF500765,SME,SME_SEASONAL,,S6,,,Low,SUFFICIENT,0,26,Strong summer dip (3+ months falling) that recovers each autumn.
+CIF500766,SME,SME_CASHFLOW_STRESS,,S2|S6,,2026-03,High,SUFFICIENT,2,3,"Sales receipts falling for months, WC limit maxed, cheque returns."
+CIF500767,SME,SME_STABLE,,,,,Low,SUFFICIENT,0,0,Stable receipts with normal seasonality.
+CIF500768,SME,SME_LEGACY_NPL,,S5|S6,,2026-01,Critical,SUFFICIENT,0,0,Business in default since early in the window; collections stage.
+CIF500769,SME,SME_CASHFLOW_STRESS,,S2|S6,,2026-01,High,SUFFICIENT,0,0,"Sales receipts falling for months, WC limit maxed, cheque returns."
+CIF500770,SME,SME_THIN_FILE,,S7,,,Low,INSUFFICIENT,0,0,"New business / new-to-bank, little history."
+CIF500771,SME,SME_OVER_LEVERAGED,,S3|S6,,2025-08,Medium,SUFFICIENT,0,3,Additional term/equipment debt on-us and off-us.
+CIF500772,SME,SME_LEGACY_NPL,,S5|S6,,2026-01,Critical,SUFFICIENT,271,271,Business in default since early in the window; collections stage.
+CIF500773,SME,SME_SEASONAL,,S6,,,Low,SUFFICIENT,0,3,Strong summer dip (3+ months falling) that recovers each autumn.
+CIF500774,SME,SME_REPAYMENT_DETERIORATION,,S1|S5|S6|S8,CLU-SME-REST-AJM,2026-04,High,SUFFICIENT,0,0,"Business repayments deteriorating, mild receipts decline."
+CIF500775,SME,SME_CASHFLOW_STRESS,,S2|S6,,2026-01,High,SUFFICIENT,0,0,"Sales receipts falling for months, WC limit maxed, cheque returns."
+CIF500776,SME,SME_REPAYMENT_DETERIORATION,,S1|S5|S6,,2026-05,High,SUFFICIENT,0,0,"Business repayments deteriorating, mild receipts decline."
+CIF500777,SME,SME_STABLE,,,,,Low,SUFFICIENT,0,0,Stable receipts with normal seasonality.
+CIF500778,SME,SME_REPAYMENT_DETERIORATION,,S1|S5|S6|S8,CLU-SME-REST-AJM,2026-06,High,SUFFICIENT,0,21,"Business repayments deteriorating, mild receipts decline."
+CIF500779,SME,SME_LEGACY_NPL,,S5|S6,,2025-10,Critical,SUFFICIENT,363,363,Business in default since early in the window; collections stage.
+CIF500780,SME,SME_THIN_FILE,,S7,,,Low,INSUFFICIENT,0,0,"New business / new-to-bank, little history."
+CIF500781,SME,SME_CASHFLOW_STRESS,,S2|S6,,2026-02,High,SUFFICIENT,15,15,"Sales receipts falling for months, WC limit maxed, cheque returns."
+CIF500782,SME,SME_REPAYMENT_DETERIORATION,,S1|S5|S6,,2025-09,High,SUFFICIENT,0,51,"Business repayments deteriorating, mild receipts decline."
+CIF500783,SME,SME_CASHFLOW_STRESS,,S2|S6,,2026-04,High,SUFFICIENT,0,0,"Sales receipts falling for months, WC limit maxed, cheque returns."
+CIF500784,SME,SME_OVER_LEVERAGED,,S3|S6,,2025-08,Medium,SUFFICIENT,29,29,Additional term/equipment debt on-us and off-us.
+CIF500785,SME,SME_STABLE,,,,,Low,SUFFICIENT,0,0,Stable receipts with normal seasonality.
+CIF500786,SME,SME_REPAYMENT_DETERIORATION,,S1|S5|S6|S8,CLU-SME-REST-AJM,2026-04,High,SUFFICIENT,0,0,"Business repayments deteriorating, mild receipts decline."
+CIF500787,SME,SME_OVER_LEVERAGED,,S3|S6,,2025-10,Medium,SUFFICIENT,0,0,Additional term/equipment debt on-us and off-us.
+CIF500788,SME,SME_CASHFLOW_STRESS,,S2|S6,,2025-12,High,SUFFICIENT,51,51,"Sales receipts falling for months, WC limit maxed, cheque returns."
+CIF500789,SME,SME_STABLE,,,,,Low,SUFFICIENT,0,0,Stable receipts with normal seasonality.
+CIF500790,SME,SME_SEASONAL,,S6,,,Low,SUFFICIENT,0,0,Strong summer dip (3+ months falling) that recovers each autumn.
+CIF500791,SME,SME_STABLE,,,,,Low,SUFFICIENT,0,0,Stable receipts with normal seasonality.
+CIF500792,SME,SME_STABLE,,,,,Low,SUFFICIENT,0,0,Stable receipts with normal seasonality.
+CIF500793,SME,SME_STABLE,,,,,Low,SUFFICIENT,0,0,Stable receipts with normal seasonality.
+CIF500794,SME,SME_OVER_LEVERAGED,,S3|S6,,2025-08,Medium,SUFFICIENT,0,0,Additional term/equipment debt on-us and off-us.
+CIF500795,SME,SME_STABLE,,,,,Low,SUFFICIENT,0,0,Stable receipts with normal seasonality.
+CIF500796,SME,SME_THIN_FILE,,S7,,,Low,INSUFFICIENT,0,0,"New business / new-to-bank, little history."
+CIF500797,SME,SME_CASHFLOW_STRESS,,S2|S6|S8,CLU-SME-LOGI-NORTH,2026-01,High,SUFFICIENT,20,21,"Sales receipts falling for months, WC limit maxed, cheque returns."
+CIF500798,SME,SME_STABLE,,,,,Low,SUFFICIENT,0,0,Stable receipts with normal seasonality.
+CIF500799,SME,SME_LEGACY_NPL,,S5|S6,,2025-10,Critical,SUFFICIENT,329,329,Business in default since early in the window; collections stage.
+CIF500800,SME,SME_CASHFLOW_STRESS,,S2|S6,,2026-03,Critical,SUFFICIENT,65,65,"Sales receipts falling for months, WC limit maxed, cheque returns."
+CIF500801,SME,SME_REPAYMENT_DETERIORATION,,S1|S5|S6,,2026-03,High,SUFFICIENT,0,0,"Business repayments deteriorating, mild receipts decline."
+CIF500802,SME,SME_STABLE,,,,,Low,SUFFICIENT,0,0,Stable receipts with normal seasonality.
+CIF500803,SME,SME_STABLE,,,,,Low,SUFFICIENT,0,0,Stable receipts with normal seasonality.
+CIF500804,SME,SME_CASHFLOW_STRESS,,S2|S6,,2026-06,High,SUFFICIENT,0,0,"Sales receipts falling for months, WC limit maxed, cheque returns."
+CIF500805,SME,SME_CASHFLOW_STRESS,,S2|S6,,2026-03,High,SUFFICIENT,58,58,"Sales receipts falling for months, WC limit maxed, cheque returns."
+CIF500806,SME,SME_OVER_LEVERAGED,,S3|S6,,2026-03,Medium,SUFFICIENT,0,0,Additional term/equipment debt on-us and off-us.
+CIF500807,SME,SME_STABLE,,,,,Low,SUFFICIENT,0,0,Stable receipts with normal seasonality.
+CIF500808,SME,SME_STABLE,,,,,Low,SUFFICIENT,0,3,Stable receipts with normal seasonality.
+CIF500809,SME,SME_THIN_FILE,,S7,,,Low,INSUFFICIENT,0,0,"New business / new-to-bank, little history."
+CIF500810,SME,SME_CASHFLOW_STRESS,,S2|S6|S8,CLU-SME-LOGI-NORTH,2026-04,High,SUFFICIENT,0,0,"Sales receipts falling for months, WC limit maxed, cheque returns."
+CIF500811,SME,SME_LEGACY_NPL,,S5|S6,,2026-02,Critical,SUFFICIENT,163,192,Business in default since early in the window; collections stage.
+CIF500812,SME,SME_CASHFLOW_STRESS,,S2|S6,,2026-05,High,SUFFICIENT,0,0,"Sales receipts falling for months, WC limit maxed, cheque returns."
+CIF500813,SME,SME_SEASONAL,,S6,,,Low,SUFFICIENT,0,0,Strong summer dip (3+ months falling) that recovers each autumn.
+CIF500814,SME,SME_THIN_FILE,,S7,,,Low,INSUFFICIENT,0,0,"New business / new-to-bank, little history."
+CIF500815,SME,SME_REPAYMENT_DETERIORATION,,S1|S5|S6,,2026-03,High,SUFFICIENT,0,11,"Business repayments deteriorating, mild receipts decline."
+CIF500816,SME,SME_THIN_FILE,,S7,,,Low,INSUFFICIENT,0,0,"New business / new-to-bank, little history."
+CIF500817,SME,SME_CASHFLOW_STRESS,,S2|S6,,2026-06,High,SUFFICIENT,0,0,"Sales receipts falling for months, WC limit maxed, cheque returns."
+CIF500818,SME,SME_SEASONAL,,S6,,,Low,SUFFICIENT,0,0,Strong summer dip (3+ months falling) that recovers each autumn.
+CIF500819,SME,SME_STABLE,,,,,Low,SUFFICIENT,0,0,Stable receipts with normal seasonality.
+CIF500820,SME,SME_OVER_LEVERAGED,,S3|S6,,2025-08,Medium,SUFFICIENT,0,33,Additional term/equipment debt on-us and off-us.
+CIF500821,SME,SME_CASHFLOW_STRESS,,S2|S6,,2026-03,High,SUFFICIENT,0,0,"Sales receipts falling for months, WC limit maxed, cheque returns."
+CIF500822,SME,SME_LEGACY_NPL,,S5|S6,,2025-11,Critical,SUFFICIENT,306,306,Business in default since early in the window; collections stage.
+CIF500823,SME,SME_CASHFLOW_STRESS,,S2|S6,,2026-06,High,SUFFICIENT,29,29,"Sales receipts falling for months, WC limit maxed, cheque returns."
+CIF500824,SME,SME_STABLE,,,,,Low,SUFFICIENT,0,0,Stable receipts with normal seasonality.
+CIF500825,SME,SME_STABLE,,,,,Low,SUFFICIENT,0,0,Stable receipts with normal seasonality.
+CIF500826,SME,SME_REPAYMENT_DETERIORATION,,S1|S5|S6|S8,CLU-SME-REST-AJM,2026-04,High,SUFFICIENT,2,64,"Business repayments deteriorating, mild receipts decline."
+CIF500827,SME,SME_CASHFLOW_STRESS,,S2|S6,,2026-03,High,SUFFICIENT,0,3,"Sales receipts falling for months, WC limit maxed, cheque returns."
+CIF500828,SME,SME_STABLE,,,,,Low,SUFFICIENT,0,0,Stable receipts with normal seasonality.
+CIF500829,SME,SME_SEASONAL,,S6,,,Low,SUFFICIENT,0,0,Strong summer dip (3+ months falling) that recovers each autumn.
+CIF500830,SME,SME_STABLE,,,,,Low,SUFFICIENT,0,0,Stable receipts with normal seasonality.
+CIF500831,SME,SME_THIN_FILE,,S7,,,Low,INSUFFICIENT,0,0,"New business / new-to-bank, little history."
+CIF500832,SME,SME_CASHFLOW_STRESS,,S2|S6|S8,CLU-SME-LOGI-NORTH,2026-03,High,SUFFICIENT,9,21,"Sales receipts falling for months, WC limit maxed, cheque returns."
+CIF500833,SME,SME_SEASONAL,,S6,,,Low,SUFFICIENT,0,0,Strong summer dip (3+ months falling) that recovers each autumn.
+CIF500834,SME,SME_CASHFLOW_STRESS,,S2|S6,,2026-02,High,SUFFICIENT,0,0,"Sales receipts falling for months, WC limit maxed, cheque returns."
+CIF500835,SME,SME_CASHFLOW_STRESS,,S2|S6,,2026-02,High,SUFFICIENT,0,0,"Sales receipts falling for months, WC limit maxed, cheque returns."
+CIF500836,SME,SME_THIN_FILE,,S7,,,Low,INSUFFICIENT,0,0,"New business / new-to-bank, little history."
+CIF500837,SME,SME_OVER_LEVERAGED,,S3|S6,,2025-07,Medium,SUFFICIENT,0,21,Additional term/equipment debt on-us and off-us.
+CIF500838,SME,SME_STABLE,,,,,Low,SUFFICIENT,0,0,Stable receipts with normal seasonality.
+CIF500839,SME,SME_STABLE,,,,,Low,SUFFICIENT,0,3,Stable receipts with normal seasonality.
+CIF500840,SME,SME_SEASONAL,,S6,,,Low,SUFFICIENT,0,3,Strong summer dip (3+ months falling) that recovers each autumn.
+CIF500841,SME,SME_STABLE,,,,,Low,SUFFICIENT,0,3,Stable receipts with normal seasonality.
+CIF500842,SME,SME_SEASONAL,,S6,,,Low,SUFFICIENT,0,0,Strong summer dip (3+ months falling) that recovers each autumn.
+CIF500843,SME,SME_CASHFLOW_STRESS,,S2|S6,,2026-01,High,SUFFICIENT,0,0,"Sales receipts falling for months, WC limit maxed, cheque returns."
+CIF500844,SME,SME_THIN_FILE,,S7,,,Low,INSUFFICIENT,0,0,"New business / new-to-bank, little history."
+CIF500845,SME,SME_CASHFLOW_STRESS,,S2|S6,,2026-02,High,SUFFICIENT,0,11,"Sales receipts falling for months, WC limit maxed, cheque returns."
+CIF500846,SME,SME_REPAYMENT_DETERIORATION,,S1|S5|S6,,2025-10,High,SUFFICIENT,0,77,"Business repayments deteriorating, mild receipts decline."
+CIF500847,SME,SME_STABLE,,,,,Low,SUFFICIENT,0,0,Stable receipts with normal seasonality.
+CIF500848,SME,SME_STABLE,,,,,Low,SUFFICIENT,0,6,Stable receipts with normal seasonality.
+CIF500849,SME,SME_CASHFLOW_STRESS,,S2|S6,,2026-05,High,SUFFICIENT,0,0,"Sales receipts falling for months, WC limit maxed, cheque returns."
+CIF500850,SME,SME_SEASONAL,,S6,,,Low,SUFFICIENT,0,3,Strong summer dip (3+ months falling) that recovers each autumn.
+CIF500851,SME,SME_CASHFLOW_STRESS,,S2|S6,,2026-01,High,SUFFICIENT,20,21,"Sales receipts falling for months, WC limit maxed, cheque returns."
+CIF500852,SME,SME_SEASONAL,,S6,,,Low,SUFFICIENT,0,0,Strong summer dip (3+ months falling) that recovers each autumn.
+CIF500853,SME,SME_STABLE,,,,,Low,SUFFICIENT,0,0,Stable receipts with normal seasonality.
+CIF500854,SME,SME_CASHFLOW_STRESS,,S2|S6,,2026-04,High,SUFFICIENT,0,0,"Sales receipts falling for months, WC limit maxed, cheque returns."
+CIF500855,SME,SME_STABLE,,,,,Low,SUFFICIENT,0,0,Stable receipts with normal seasonality.
+CIF500856,SME,SME_STABLE,,,,,Low,SUFFICIENT,0,0,Stable receipts with normal seasonality.
+CIF500857,SME,SME_CASHFLOW_STRESS,,S2|S6,,2026-03,High,SUFFICIENT,0,0,"Sales receipts falling for months, WC limit maxed, cheque returns."
+CIF500858,SME,SME_STABLE,,,,,Low,SUFFICIENT,0,0,Stable receipts with normal seasonality.
+CIF500859,SME,SME_STABLE,,,,,Low,SUFFICIENT,0,0,Stable receipts with normal seasonality.
+CIF500860,SME,SME_THIN_FILE,,S7,,,Low,INSUFFICIENT,0,0,"New business / new-to-bank, little history."
+CIF500861,SME,SME_OVER_LEVERAGED,,S3|S6,,2025-07,High,SUFFICIENT,0,25,Additional term/equipment debt on-us and off-us.
+CIF500862,SME,SME_SEASONAL,,S6,,,Low,SUFFICIENT,0,0,Strong summer dip (3+ months falling) that recovers each autumn.
+CIF500863,SME,SME_OVER_LEVERAGED,,S3|S6,,2025-06,Medium,SUFFICIENT,0,30,Additional term/equipment debt on-us and off-us.
+CIF500864,SME,SME_CASHFLOW_STRESS,,S2|S6,,2026-03,High,SUFFICIENT,0,3,"Sales receipts falling for months, WC limit maxed, cheque returns."
+CIF500865,SME,SME_STABLE,,,,,Low,SUFFICIENT,0,0,Stable receipts with normal seasonality.
+CIF500866,SME,SME_STABLE,,,,,Low,SUFFICIENT,0,0,Stable receipts with normal seasonality.
+CIF500867,SME,SME_OVER_LEVERAGED,,S3|S6,,2025-12,Medium,SUFFICIENT,0,0,Additional term/equipment debt on-us and off-us.
+CIF500868,SME,SME_STABLE,,,,,Low,SUFFICIENT,0,21,Stable receipts with normal seasonality.
+CIF500869,SME,SME_OVER_LEVERAGED,,S3|S6,,2026-03,Medium,SUFFICIENT,0,0,Additional term/equipment debt on-us and off-us.
+CIF500870,SME,SME_SEASONAL,,S6,,,Low,SUFFICIENT,0,0,Strong summer dip (3+ months falling) that recovers each autumn.
+CIF500871,SME,SME_STABLE,,,,,Low,SUFFICIENT,0,0,Stable receipts with normal seasonality.
+CIF500872,SME,SME_LEGACY_NPL,,S5|S6,,2025-08,Critical,SUFFICIENT,411,411,Business in default since early in the window; collections stage.
+CIF500873,SME,SME_LEGACY_NPL,,S5|S6,,2025-07,Critical,SUFFICIENT,450,450,Business in default since early in the window; collections stage.
+CIF500874,SME,SME_OVER_LEVERAGED,,S3|S6,,2025-10,Medium,SUFFICIENT,0,3,Additional term/equipment debt on-us and off-us.
+CIF500875,SME,SME_REPAYMENT_DETERIORATION,,S1|S5|S6|S8,CLU-SME-REST-AJM,2026-05,High,SUFFICIENT,28,28,"Business repayments deteriorating, mild receipts decline."
+CIF500876,SME,SME_REPAYMENT_DETERIORATION,,S1|S5|S6,,2025-09,Critical,SUFFICIENT,279,279,"Business repayments deteriorating, mild receipts decline."
+CIF500877,SME,SME_OVER_LEVERAGED,,S3|S6,,2025-12,Medium,SUFFICIENT,0,0,Additional term/equipment debt on-us and off-us.
+CIF500878,SME,SME_STABLE,,,,,Low,SUFFICIENT,0,0,Stable receipts with normal seasonality.
+CIF500879,SME,SME_REPAYMENT_DETERIORATION,,S1|S5|S6,,2026-05,High,SUFFICIENT,0,5,"Business repayments deteriorating, mild receipts decline."
+CIF500880,SME,SME_REPAYMENT_DETERIORATION,,S1|S5|S6|S8,CLU-SME-REST-AJM,2026-05,High,SUFFICIENT,0,21,"Business repayments deteriorating, mild receipts decline."
+CIF500881,SME,SME_CASHFLOW_STRESS,,S2|S6,,2026-06,High,SUFFICIENT,0,0,"Sales receipts falling for months, WC limit maxed, cheque returns."
+CIF500882,SME,SME_STABLE,,,,,Low,SUFFICIENT,0,0,Stable receipts with normal seasonality.
+CIF500883,SME,SME_LEGACY_NPL,,S5|S6,,2025-06,Critical,SUFFICIENT,462,462,Business in default since early in the window; collections stage.
+CIF500884,SME,SME_STABLE,,,,,Low,SUFFICIENT,0,24,Stable receipts with normal seasonality.
+CIF500885,SME,SME_STABLE,,,,,Low,SUFFICIENT,0,0,Stable receipts with normal seasonality.
+CIF500886,SME,SME_SEASONAL,,S6,,,Low,SUFFICIENT,0,3,Strong summer dip (3+ months falling) that recovers each autumn.
+CIF500887,SME,SME_SEASONAL,,S6,,,Low,SUFFICIENT,0,0,Strong summer dip (3+ months falling) that recovers each autumn.
+CIF500888,SME,SME_LEGACY_NPL,,S5|S6,,2026-02,Critical,SUFFICIENT,237,237,Business in default since early in the window; collections stage.
+CIF500889,SME,SME_STABLE,,,,,Low,SUFFICIENT,0,11,Stable receipts with normal seasonality.
+CIF500890,SME,SME_CASHFLOW_STRESS,,S2|S6|S8,CLU-SME-LOGI-NORTH,2026-04,High,SUFFICIENT,0,0,"Sales receipts falling for months, WC limit maxed, cheque returns."
+CIF500891,SME,SME_STABLE,,,,,Low,SUFFICIENT,0,0,Stable receipts with normal seasonality.
+CIF500892,SME,SME_LEGACY_NPL,,S5|S6,,2025-08,Critical,SUFFICIENT,406,406,Business in default since early in the window; collections stage.
+CIF500893,SME,SME_SEASONAL,,S6,,,Low,SUFFICIENT,0,0,Strong summer dip (3+ months falling) that recovers each autumn.
+CIF500894,SME,SME_LEGACY_NPL,,S5|S6,,2025-06,Critical,SUFFICIENT,337,337,Business in default since early in the window; collections stage.
+CIF500895,SME,SME_STABLE,,,,,Low,SUFFICIENT,0,0,Stable receipts with normal seasonality.
+CIF500896,SME,SME_SEASONAL,,S6,,,Low,SUFFICIENT,0,0,Strong summer dip (3+ months falling) that recovers each autumn.
+CIF500897,SME,SME_SEASONAL,,S6,,,Low,SUFFICIENT,0,0,Strong summer dip (3+ months falling) that recovers each autumn.
+CIF500898,SME,SME_REPAYMENT_DETERIORATION,,S1|S5|S6,,2026-01,High,SUFFICIENT,0,0,"Business repayments deteriorating, mild receipts decline."
+CIF500899,SME,SME_CASHFLOW_STRESS,,S2|S6,,2026-06,High,SUFFICIENT,0,0,"Sales receipts falling for months, WC limit maxed, cheque returns."
+CIF500900,SME,SME_STABLE,,,,,Low,SUFFICIENT,0,0,Stable receipts with normal seasonality.
+CIF500901,SME,SME_STABLE,,,,,Low,SUFFICIENT,0,0,Stable receipts with normal seasonality.
+CIF500902,SME,SME_OVER_LEVERAGED,,S3|S6,,2025-09,High,SUFFICIENT,33,34,Additional term/equipment debt on-us and off-us.
+CIF500903,SME,SME_CASHFLOW_STRESS,,S2|S6,,2026-01,High,SUFFICIENT,0,0,"Sales receipts falling for months, WC limit maxed, cheque returns."
+CIF500904,SME,SME_CASHFLOW_STRESS,,S2|S6,,2026-05,High,SUFFICIENT,0,0,"Sales receipts falling for months, WC limit maxed, cheque returns."
+CIF500905,SME,SME_CASHFLOW_STRESS,,S2|S6,,2026-01,High,SUFFICIENT,5,5,"Sales receipts falling for months, WC limit maxed, cheque returns."
+CIF500906,SME,SME_STABLE,,,,,Low,SUFFICIENT,0,0,Stable receipts with normal seasonality.
+CIF500907,SME,SME_STABLE,,,,,Low,SUFFICIENT,0,0,Stable receipts with normal seasonality.
+CIF500908,SME,SME_THIN_FILE,,S7,,,Low,INSUFFICIENT,0,0,"New business / new-to-bank, little history."
+CIF500909,SME,SME_SEASONAL,,S6,,,Low,SUFFICIENT,0,0,Strong summer dip (3+ months falling) that recovers each autumn.
+CIF500910,SME,SME_LEGACY_NPL,,S5|S6,,2025-09,Critical,SUFFICIENT,253,281,Business in default since early in the window; collections stage.
+CIF500911,SME,SME_THIN_FILE,,S7,,,Low,INSUFFICIENT,0,0,"New business / new-to-bank, little history."
+CIF500912,SME,SME_REPAYMENT_DETERIORATION,,S1|S5|S6,,2025-11,Critical,SUFFICIENT,97,97,"Business repayments deteriorating, mild receipts decline."
+CIF500913,SME,SME_STABLE,,,,,Low,SUFFICIENT,0,0,Stable receipts with normal seasonality.
+CIF500914,SME,SME_STABLE,,,,,Low,SUFFICIENT,0,0,Stable receipts with normal seasonality.
+CIF500915,SME,SME_OVER_LEVERAGED,,S3|S6,,2025-06,Medium,SUFFICIENT,0,0,Additional term/equipment debt on-us and off-us.
+CIF500916,SME,SME_STABLE,,,,,Low,SUFFICIENT,0,6,Stable receipts with normal seasonality.
+CIF500917,SME,SME_STABLE,,,,,Low,SUFFICIENT,0,0,Stable receipts with normal seasonality.
+CIF500918,SME,SME_THIN_FILE,,S7,,,Low,INSUFFICIENT,0,0,"New business / new-to-bank, little history."
+CIF500919,SME,SME_LEGACY_NPL,,S5|S6,,2026-02,Critical,SUFFICIENT,217,217,Business in default since early in the window; collections stage.
+CIF500920,SME,SME_STABLE,,,,,Low,SUFFICIENT,0,0,Stable receipts with normal seasonality.
+CIF500921,SME,SME_REPAYMENT_DETERIORATION,,S1|S5|S6,,2026-02,High,SUFFICIENT,0,0,"Business repayments deteriorating, mild receipts decline."
+CIF500922,SME,SME_STABLE,,,,,Low,SUFFICIENT,0,0,Stable receipts with normal seasonality.
+CIF500923,SME,SME_CASHFLOW_STRESS,,S2|S6|S8,CLU-SME-LOGI-NORTH,2026-03,High,SUFFICIENT,0,0,"Sales receipts falling for months, WC limit maxed, cheque returns."
+CIF500924,SME,SME_CASHFLOW_STRESS,,S2|S6,,2026-01,High,SUFFICIENT,51,51,"Sales receipts falling for months, WC limit maxed, cheque returns."
+CIF500925,SME,SME_SEASONAL,,S6,,,Low,SUFFICIENT,0,0,Strong summer dip (3+ months falling) that recovers each autumn.
+CIF500926,SME,SME_CASHFLOW_STRESS,,S2|S6,,2026-01,High,SUFFICIENT,28,60,"Sales receipts falling for months, WC limit maxed, cheque returns."
+CIF500927,SME,SME_CASHFLOW_STRESS,,S2|S6,,2026-06,High,SUFFICIENT,0,3,"Sales receipts falling for months, WC limit maxed, cheque returns."
+CIF500928,SME,SME_LEGACY_NPL,,S5|S6,,2025-07,Critical,SUFFICIENT,398,399,Business in default since early in the window; collections stage.
+CIF500929,SME,SME_REPAYMENT_DETERIORATION,,S1|S5|S6,,2026-01,Critical,SUFFICIENT,82,112,"Business repayments deteriorating, mild receipts decline."
+CIF500930,SME,SME_REPAYMENT_DETERIORATION,,S1|S5|S6,,2025-11,Critical,SUFFICIENT,156,156,"Business repayments deteriorating, mild receipts decline."
+CIF500931,SME,SME_REPAYMENT_DETERIORATION,,S1|S5|S6|S8,CLU-SME-REST-AJM,2026-05,High,SUFFICIENT,29,29,"Business repayments deteriorating, mild receipts decline."
+CIF500932,SME,SME_CASHFLOW_STRESS,,S2|S6,,2026-01,High,SUFFICIENT,5,6,"Sales receipts falling for months, WC limit maxed, cheque returns."
+CIF500933,SME,SME_CASHFLOW_STRESS,,S2|S6,,2025-12,High,SUFFICIENT,0,30,"Sales receipts falling for months, WC limit maxed, cheque returns."
+CIF500934,SME,SME_OVER_LEVERAGED,,S3|S6,,2026-02,Medium,SUFFICIENT,0,0,Additional term/equipment debt on-us and off-us.
+CIF500935,SME,SME_STABLE,,,,,Low,SUFFICIENT,0,0,Stable receipts with normal seasonality.
+CIF500936,SME,SME_SEASONAL,,S6,,,Low,SUFFICIENT,0,0,Strong summer dip (3+ months falling) that recovers each autumn.
+CIF500937,SME,SME_THIN_FILE,,S7,,,Low,INSUFFICIENT,0,0,"New business / new-to-bank, little history."
+CIF500938,SME,SME_STABLE,,,,,Low,SUFFICIENT,0,0,Stable receipts with normal seasonality.
+CIF500939,SME,SME_THIN_FILE,,S7,,,Low,INSUFFICIENT,0,0,"New business / new-to-bank, little history."
+CIF500940,SME,SME_STABLE,,,,,Low,SUFFICIENT,0,0,Stable receipts with normal seasonality.
+CIF500941,SME,SME_CASHFLOW_STRESS,,S2|S6,,2026-02,High,SUFFICIENT,0,0,"Sales receipts falling for months, WC limit maxed, cheque returns."
+CIF500942,SME,SME_CASHFLOW_STRESS,,S2|S6,,2026-06,High,SUFFICIENT,0,0,"Sales receipts falling for months, WC limit maxed, cheque returns."
+CIF500943,SME,SME_STABLE,,,,,Low,SUFFICIENT,0,10,Stable receipts with normal seasonality.
+CIF500944,SME,SME_CASHFLOW_STRESS,,S2|S6,,2026-02,High,SUFFICIENT,0,0,"Sales receipts falling for months, WC limit maxed, cheque returns."
+CIF500945,SME,SME_CASHFLOW_STRESS,,S2|S6,,2026-05,High,SUFFICIENT,0,0,"Sales receipts falling for months, WC limit maxed, cheque returns."
+CIF500946,SME,SME_CASHFLOW_STRESS,,S2|S6,,2026-05,High,SUFFICIENT,5,6,"Sales receipts falling for months, WC limit maxed, cheque returns."
+CIF500947,SME,SME_STABLE,,,,,Low,SUFFICIENT,0,0,Stable receipts with normal seasonality.
+CIF500948,SME,SME_THIN_FILE,,S7,,,Low,INSUFFICIENT,0,0,"New business / new-to-bank, little history."
+CIF500949,SME,SME_STABLE,,,,,Low,SUFFICIENT,0,0,Stable receipts with normal seasonality.
+CIF500950,SME,SME_CASHFLOW_STRESS,,S2|S6,,2025-12,High,SUFFICIENT,20,21,"Sales receipts falling for months, WC limit maxed, cheque returns."
+CIF500951,SME,SME_STABLE,,,,,Low,SUFFICIENT,0,0,Stable receipts with normal seasonality.
+CIF500952,SME,SME_STABLE,,,,,Low,SUFFICIENT,0,0,Stable receipts with normal seasonality.
+CIF500953,SME,SME_SEASONAL,,S6,,,Low,SUFFICIENT,0,0,Strong summer dip (3+ months falling) that recovers each autumn.
+CIF500954,SME,SME_LEGACY_NPL,,S5|S6,,2025-09,Critical,SUFFICIENT,393,393,Business in default since early in the window; collections stage.
+CIF500955,SME,SME_THIN_FILE,,S7,,,Low,INSUFFICIENT,0,0,"New business / new-to-bank, little history."
+CIF500956,SME,SME_STABLE,,,,,Low,SUFFICIENT,0,0,Stable receipts with normal seasonality.
+CIF500957,SME,SME_LEGACY_NPL,,S5|S6,,2026-02,Critical,SUFFICIENT,237,237,Business in default since early in the window; collections stage.
+CIF500958,SME,SME_STABLE,,,,,Low,SUFFICIENT,0,0,Stable receipts with normal seasonality.
+CIF500959,SME,SME_CASHFLOW_STRESS,,S2|S6,,2026-04,High,SUFFICIENT,0,26,"Sales receipts falling for months, WC limit maxed, cheque returns."
+CIF500960,SME,SME_SEASONAL,,S6,,,Low,SUFFICIENT,0,21,Strong summer dip (3+ months falling) that recovers each autumn.
+CIF500961,SME,SME_OVER_LEVERAGED,,S3|S6,,2025-07,High,SUFFICIENT,0,20,Additional term/equipment debt on-us and off-us.
+CIF500962,SME,SME_STABLE,,,,,Low,SUFFICIENT,0,3,Stable receipts with normal seasonality.
+CIF500963,SME,SME_OVER_LEVERAGED,,S3|S6,,2025-09,High,SUFFICIENT,9,11,Additional term/equipment debt on-us and off-us.
+CIF500964,SME,SME_OVER_LEVERAGED,,S3|S6,,2025-09,Medium,SUFFICIENT,0,0,Additional term/equipment debt on-us and off-us.
+CIF500965,SME,SME_CASHFLOW_STRESS,,S2|S6,,2026-02,High,SUFFICIENT,23,26,"Sales receipts falling for months, WC limit maxed, cheque returns."
+CIF500966,SME,SME_STABLE,,,,,Low,SUFFICIENT,0,0,Stable receipts with normal seasonality.
+CIF500967,SME,SME_THIN_FILE,,S7,,,Low,INSUFFICIENT,0,0,"New business / new-to-bank, little history."
+CIF500968,SME,SME_REPAYMENT_DETERIORATION,,S1|S5|S6,,2025-12,High,SUFFICIENT,0,11,"Business repayments deteriorating, mild receipts decline."
+CIF500969,SME,SME_THIN_FILE,,S7,,,Low,INSUFFICIENT,0,0,"New business / new-to-bank, little history."
+CIF500970,SME,SME_STABLE,,,,,Low,SUFFICIENT,0,0,Stable receipts with normal seasonality.
+CIF500971,SME,SME_CASHFLOW_STRESS,,S2|S6|S8,CLU-SME-LOGI-NORTH,2026-01,High,SUFFICIENT,0,0,"Sales receipts falling for months, WC limit maxed, cheque returns."
+CIF500972,SME,SME_STABLE,,,,,Low,SUFFICIENT,0,0,Stable receipts with normal seasonality.
+CIF500973,SME,SME_REPAYMENT_DETERIORATION,,S1|S5|S6,,2026-05,High,SUFFICIENT,0,0,"Business repayments deteriorating, mild receipts decline."
+CIF500974,SME,SME_CASHFLOW_STRESS,,S2|S6,,2026-01,High,SUFFICIENT,29,29,"Sales receipts falling for months, WC limit maxed, cheque returns."
+CIF500975,SME,SME_STABLE,,,,,Low,SUFFICIENT,0,26,Stable receipts with normal seasonality.
+CIF500976,SME,SME_THIN_FILE,,S7,,,Low,INSUFFICIENT,0,0,"New business / new-to-bank, little history."
+CIF500977,SME,SME_SEASONAL,,S6,,,Low,SUFFICIENT,0,0,Strong summer dip (3+ months falling) that recovers each autumn.
+CIF500978,SME,SME_STABLE,,,,,Low,SUFFICIENT,0,0,Stable receipts with normal seasonality.
+CIF500979,SME,SME_THIN_FILE,,S7,,,Low,INSUFFICIENT,0,0,"New business / new-to-bank, little history."
+CIF500980,SME,SME_STABLE,,,,,Low,SUFFICIENT,0,0,Stable receipts with normal seasonality.
+CIF500981,SME,SME_STABLE,,,,,Low,SUFFICIENT,0,0,Stable receipts with normal seasonality.
+CIF500982,SME,SME_THIN_FILE,,S7,,,Low,INSUFFICIENT,0,0,"New business / new-to-bank, little history."
+CIF500983,SME,SME_STABLE,,,,,Low,SUFFICIENT,0,0,Stable receipts with normal seasonality.
+CIF500984,SME,SME_STABLE,,,,,Low,SUFFICIENT,0,0,Stable receipts with normal seasonality.
+CIF500985,SME,SME_REPAYMENT_DETERIORATION,,S1|S5|S6,,2026-05,High,SUFFICIENT,0,0,"Business repayments deteriorating, mild receipts decline."
+CIF500986,SME,SME_STABLE,,,,,Low,SUFFICIENT,0,0,Stable receipts with normal seasonality.
+CIF500987,SME,SME_SEASONAL,,S6,,,Low,SUFFICIENT,0,0,Strong summer dip (3+ months falling) that recovers each autumn.
+CIF500988,SME,SME_STABLE,,,,,Low,SUFFICIENT,0,0,Stable receipts with normal seasonality.
+CIF500989,SME,SME_STABLE,,,,,Low,SUFFICIENT,0,0,Stable receipts with normal seasonality.
+CIF500990,SME,SME_STABLE,,,,,Low,SUFFICIENT,0,0,Stable receipts with normal seasonality.
+CIF500991,SME,SME_SEASONAL,,S6,,,Low,SUFFICIENT,0,0,Strong summer dip (3+ months falling) that recovers each autumn.
+CIF500992,SME,SME_STABLE,,,,,Low,SUFFICIENT,0,0,Stable receipts with normal seasonality.
+CIF500993,SME,SME_STABLE,,,,,Low,SUFFICIENT,0,0,Stable receipts with normal seasonality.
+CIF500994,SME,SME_STABLE,,,,,Low,SUFFICIENT,0,0,Stable receipts with normal seasonality.
+CIF500995,SME,SME_STABLE,,,,,Low,SUFFICIENT,0,0,Stable receipts with normal seasonality.
+CIF500996,SME,SME_OVER_LEVERAGED,,S3|S6,,2025-09,Medium,SUFFICIENT,0,0,Additional term/equipment debt on-us and off-us.
+CIF500997,SME,SME_STABLE,,,,,Low,SUFFICIENT,0,0,Stable receipts with normal seasonality.
+CIF500998,SME,SME_STABLE,,,,,Low,SUFFICIENT,0,0,Stable receipts with normal seasonality.
+CIF500999,SME,SME_CASHFLOW_STRESS,,S2|S6,,2026-04,High,SUFFICIENT,0,0,"Sales receipts falling for months, WC limit maxed, cheque returns."
+CIF501000,SME,SME_OVER_LEVERAGED,,S3|S6,,2026-03,High,SUFFICIENT,0,0,Additional term/equipment debt on-us and off-us.
+CIF501001,SME,SME_STABLE,,,,,Low,SUFFICIENT,0,0,Stable receipts with normal seasonality.
+CIF501002,SME,SME_LEGACY_NPL,,S5|S6,,2025-10,Critical,SUFFICIENT,338,338,Business in default since early in the window; collections stage.
+CIF501003,SME,SME_REPAYMENT_DETERIORATION,,S1|S5|S6,,2025-12,High,SUFFICIENT,36,36,"Business repayments deteriorating, mild receipts decline."
+CIF501004,SME,SME_STABLE,,,,,Low,SUFFICIENT,0,9,Stable receipts with normal seasonality.
+CIF501005,SME,SME_SEASONAL,,S6,,,Low,SUFFICIENT,0,0,Strong summer dip (3+ months falling) that recovers each autumn.
+CIF501006,SME,SME_REPAYMENT_DETERIORATION,,S1|S5|S6,,2026-01,High,SUFFICIENT,0,0,"Business repayments deteriorating, mild receipts decline."
+CIF501007,SME,SME_REPAYMENT_DETERIORATION,,S1|S5|S6,,2026-05,High,SUFFICIENT,0,1,"Business repayments deteriorating, mild receipts decline."
+CIF501008,SME,SME_STABLE,,,,,Low,SUFFICIENT,0,3,Stable receipts with normal seasonality.
+CIF501009,SME,SME_STABLE,,,,,Low,SUFFICIENT,0,0,Stable receipts with normal seasonality.
+CIF501010,SME,SME_OVER_LEVERAGED,,S3|S6,,2026-02,Medium,SUFFICIENT,0,0,Additional term/equipment debt on-us and off-us.
+CIF501011,SME,SME_STABLE,,,,,Low,SUFFICIENT,0,0,Stable receipts with normal seasonality.
+CIF501012,SME,SME_SEASONAL,,S6,,,Low,SUFFICIENT,0,0,Strong summer dip (3+ months falling) that recovers each autumn.
+CIF501013,SME,SME_CASHFLOW_STRESS,,S2|S6,,2026-01,High,SUFFICIENT,0,3,"Sales receipts falling for months, WC limit maxed, cheque returns."
+CIF501014,SME,SME_THIN_FILE,,S7,,,Low,INSUFFICIENT,0,0,"New business / new-to-bank, little history."
+CIF501015,SME,SME_THIN_FILE,,S7,,,Low,INSUFFICIENT,0,0,"New business / new-to-bank, little history."
+CIF501016,SME,SME_CASHFLOW_STRESS,,S2|S6,,2026-02,High,SUFFICIENT,56,56,"Sales receipts falling for months, WC limit maxed, cheque returns."
+CIF501017,SME,SME_STABLE,,,,,Low,SUFFICIENT,0,0,Stable receipts with normal seasonality.
+CIF501018,SME,SME_CASHFLOW_STRESS,,S2|S6,,2026-06,High,SUFFICIENT,0,0,"Sales receipts falling for months, WC limit maxed, cheque returns."
+CIF501019,SME,SME_LEGACY_NPL,,S5|S6,,2025-06,Critical,SUFFICIENT,0,0,Business in default since early in the window; collections stage.
+CIF501020,SME,SME_OVER_LEVERAGED,,S3|S6,,2025-12,Medium,SUFFICIENT,5,5,Additional term/equipment debt on-us and off-us.
+CIF501021,SME,SME_CASHFLOW_STRESS,,S2|S6,,2026-06,High,SUFFICIENT,0,0,"Sales receipts falling for months, WC limit maxed, cheque returns."
+CIF501022,SME,SME_STABLE,,,,,Low,SUFFICIENT,0,0,Stable receipts with normal seasonality.
+CIF501023,SME,SME_REPAYMENT_DETERIORATION,,S1|S5|S6,,2026-05,High,SUFFICIENT,0,3,"Business repayments deteriorating, mild receipts decline."
+CIF501024,SME,SME_CASHFLOW_STRESS,,S2|S6,,2026-06,High,SUFFICIENT,0,0,"Sales receipts falling for months, WC limit maxed, cheque returns."
+CIF501025,SME,SME_LEGACY_NPL,,S5|S6,,2025-09,Critical,SUFFICIENT,394,394,Business in default since early in the window; collections stage.
+CIF501026,SME,SME_STABLE,,,,,Low,SUFFICIENT,0,0,Stable receipts with normal seasonality.
+CIF501027,SME,SME_OVER_LEVERAGED,,S3|S6,,2025-12,Medium,SUFFICIENT,0,19,Additional term/equipment debt on-us and off-us.
+CIF501028,SME,SME_SEASONAL,,S6,,,Low,SUFFICIENT,0,0,Strong summer dip (3+ months falling) that recovers each autumn.
+CIF501029,SME,SME_STABLE,,,,,Low,SUFFICIENT,0,0,Stable receipts with normal seasonality.
+CIF501030,SME,SME_STABLE,,,,,Low,SUFFICIENT,0,0,Stable receipts with normal seasonality.
+CIF501031,SME,SME_THIN_FILE,,S7,,,Low,INSUFFICIENT,0,0,"New business / new-to-bank, little history."
+CIF501032,SME,SME_STABLE,,,,,Low,SUFFICIENT,0,26,Stable receipts with normal seasonality.
+CIF501033,SME,SME_STABLE,,,,,Low,SUFFICIENT,0,0,Stable receipts with normal seasonality.
+CIF501034,SME,SME_SEASONAL,,S6,,,Low,SUFFICIENT,0,3,Strong summer dip (3+ months falling) that recovers each autumn.
+CIF501035,SME,SME_SEASONAL,,S6,,,Low,SUFFICIENT,0,21,Strong summer dip (3+ months falling) that recovers each autumn.
+CIF501036,SME,SME_STABLE,,,,,Low,SUFFICIENT,0,0,Stable receipts with normal seasonality.
+CIF501037,SME,SME_OVER_LEVERAGED,,S3|S6,,2026-01,High,SUFFICIENT,0,0,Additional term/equipment debt on-us and off-us.
+CIF501038,SME,SME_REPAYMENT_DETERIORATION,,S1|S5|S6,,2026-04,High,SUFFICIENT,0,0,"Business repayments deteriorating, mild receipts decline."
+CIF501039,SME,SME_CASHFLOW_STRESS,,S2|S6,,2025-12,High,SUFFICIENT,2,60,"Sales receipts falling for months, WC limit maxed, cheque returns."
+CIF501040,SME,SME_OVER_LEVERAGED,,S3|S6,,2025-06,High,SUFFICIENT,0,29,Additional term/equipment debt on-us and off-us.
+CIF501041,SME,SME_STABLE,,,,,Low,SUFFICIENT,0,0,Stable receipts with normal seasonality.
+CIF501042,SME,SME_LEGACY_NPL,,S5|S6,,2025-11,Critical,SUFFICIENT,331,331,Business in default since early in the window; collections stage.
+CIF501043,SME,SME_STABLE,,,,,Low,SUFFICIENT,0,3,Stable receipts with normal seasonality.
+CIF501044,SME,SME_THIN_FILE,,S7,,,Low,INSUFFICIENT,0,0,"New business / new-to-bank, little history."
+CIF501045,SME,SME_LEGACY_NPL,,S5|S6,,2025-09,Critical,SUFFICIENT,390,390,Business in default since early in the window; collections stage.
+CIF501046,SME,SME_THIN_FILE,,S7,,,Low,INSUFFICIENT,0,0,"New business / new-to-bank, little history."
+CIF501047,SME,SME_REPAYMENT_DETERIORATION,,S1|S5|S6|S8,CLU-SME-REST-AJM,2026-04,High,SUFFICIENT,5,5,"Business repayments deteriorating, mild receipts decline."
+CIF501048,SME,SME_REPAYMENT_DETERIORATION,,S1|S5|S6,,2026-02,Critical,SUFFICIENT,91,91,"Business repayments deteriorating, mild receipts decline."
+CIF501049,SME,SME_THIN_FILE,,S7,,,Low,INSUFFICIENT,0,0,"New business / new-to-bank, little history."
+CIF501050,SME,SME_REPAYMENT_DETERIORATION,,S1|S5|S6|S8,CLU-SME-REST-AJM,2026-04,High,SUFFICIENT,9,11,"Business repayments deteriorating, mild receipts decline."
+CIF501051,SME,SME_THIN_FILE,,S7,,,Low,INSUFFICIENT,0,0,"New business / new-to-bank, little history."
+CIF501052,SME,SME_THIN_FILE,,S7,,,Low,INSUFFICIENT,0,0,"New business / new-to-bank, little history."
+CIF501053,SME,SME_STABLE,,,,,Low,SUFFICIENT,0,0,Stable receipts with normal seasonality.
+CIF501054,SME,SME_STABLE,,,,,Low,SUFFICIENT,0,0,Stable receipts with normal seasonality.
+CIF501055,SME,SME_SEASONAL,,S6,,,Low,SUFFICIENT,0,3,Strong summer dip (3+ months falling) that recovers each autumn.
+CIF501056,SME,SME_STABLE,,,,,Low,SUFFICIENT,0,0,Stable receipts with normal seasonality.
+CIF501057,SME,SME_THIN_FILE,,S7,,,Low,INSUFFICIENT,0,0,"New business / new-to-bank, little history."
+CIF501058,SME,SME_STABLE,,,,,Low,SUFFICIENT,0,3,Stable receipts with normal seasonality.
+CIF501059,SME,SME_CASHFLOW_STRESS,,S2|S6|S8,CLU-SME-LOGI-NORTH,2026-02,High,SUFFICIENT,2,3,"Sales receipts falling for months, WC limit maxed, cheque returns."
+CIF501060,SME,SME_STABLE,,,,,Low,SUFFICIENT,0,15,Stable receipts with normal seasonality.
+CIF501061,SME,SME_OVER_LEVERAGED,,S3|S6,,2025-08,High,SUFFICIENT,0,30,Additional term/equipment debt on-us and off-us.
+CIF501062,SME,SME_OVER_LEVERAGED,,S3|S6,,2026-01,High,SUFFICIENT,0,3,Additional term/equipment debt on-us and off-us.
+CIF501063,SME,SME_REPAYMENT_DETERIORATION,,S1|S5|S6,,2026-03,High,SUFFICIENT,0,0,"Business repayments deteriorating, mild receipts decline."
+CIF501064,SME,SME_REPAYMENT_DETERIORATION,,S1|S5|S6,,2026-01,High,SUFFICIENT,51,51,"Business repayments deteriorating, mild receipts decline."
+CIF501065,SME,SME_CASHFLOW_STRESS,,S2|S6,,2026-04,High,SUFFICIENT,0,6,"Sales receipts falling for months, WC limit maxed, cheque returns."
+CIF501066,SME,SME_STABLE,,,,,Low,SUFFICIENT,0,0,Stable receipts with normal seasonality.
+CIF501067,SME,SME_LEGACY_NPL,,S5|S6,,2025-07,Critical,SUFFICIENT,450,450,Business in default since early in the window; collections stage.
+CIF501068,SME,SME_STABLE,,,,,Low,SUFFICIENT,0,0,Stable receipts with normal seasonality.
+CIF501069,SME,SME_REPAYMENT_DETERIORATION,,S1|S5|S6|S8,CLU-SME-REST-AJM,2026-05,High,SUFFICIENT,0,3,"Business repayments deteriorating, mild receipts decline."
+CIF501070,SME,SME_STABLE,,,,,Low,SUFFICIENT,0,0,Stable receipts with normal seasonality.
+CIF501071,SME,SME_CASHFLOW_STRESS,,S2|S6,,2026-06,High,SUFFICIENT,0,3,"Sales receipts falling for months, WC limit maxed, cheque returns."
+CIF501072,SME,SME_CASHFLOW_STRESS,,S2|S6,,2026-02,High,SUFFICIENT,5,6,"Sales receipts falling for months, WC limit maxed, cheque returns."
+CIF501073,SME,SME_STABLE,,,,,Low,SUFFICIENT,0,3,Stable receipts with normal seasonality.
+CIF501074,SME,SME_OVER_LEVERAGED,,S3|S6,,2025-08,Medium,SUFFICIENT,0,3,Additional term/equipment debt on-us and off-us.
+CIF501075,SME,SME_STABLE,,,,,Low,SUFFICIENT,0,0,Stable receipts with normal seasonality.
+CIF501076,SME,SME_OVER_LEVERAGED,,S3|S6,,2026-01,Medium,SUFFICIENT,0,3,Additional term/equipment debt on-us and off-us.
+CIF501077,SME,SME_CASHFLOW_STRESS,,S2|S6,,2026-06,High,SUFFICIENT,0,0,"Sales receipts falling for months, WC limit maxed, cheque returns."
+CIF501078,SME,SME_REPAYMENT_DETERIORATION,,S1|S5|S6,,2025-12,High,SUFFICIENT,44,46,"Business repayments deteriorating, mild receipts decline."
+CIF501079,SME,SME_CASHFLOW_STRESS,,S2|S6,,2026-03,High,SUFFICIENT,0,0,"Sales receipts falling for months, WC limit maxed, cheque returns."
+CIF501080,SME,SME_CASHFLOW_STRESS,,S2|S6,,2025-12,Critical,SUFFICIENT,86,86,"Sales receipts falling for months, WC limit maxed, cheque returns."
+CIF501081,SME,SME_SEASONAL,,S6,,,Low,SUFFICIENT,0,0,Strong summer dip (3+ months falling) that recovers each autumn.
+CIF501082,SME,SME_CASHFLOW_STRESS,,S2|S6,,2026-05,High,SUFFICIENT,0,0,"Sales receipts falling for months, WC limit maxed, cheque returns."
+CIF501083,SME,SME_LEGACY_NPL,,S5|S6,,2025-09,Critical,SUFFICIENT,390,390,Business in default since early in the window; collections stage.
+CIF501084,SME,SME_STABLE,,,,,Low,SUFFICIENT,0,29,Stable receipts with normal seasonality.
+CIF501085,SME,SME_CASHFLOW_STRESS,,S2|S6,,2026-01,Critical,SUFFICIENT,91,91,"Sales receipts falling for months, WC limit maxed, cheque returns."
+CIF501086,SME,SME_STABLE,,,,,Low,SUFFICIENT,0,0,Stable receipts with normal seasonality.
+CIF501087,SME,SME_THIN_FILE,,S7,,,Low,INSUFFICIENT,0,0,"New business / new-to-bank, little history."
+CIF501088,SME,SME_STABLE,,,,,Low,SUFFICIENT,0,0,Stable receipts with normal seasonality.
+CIF501089,SME,SME_OVER_LEVERAGED,,S3|S6,,2025-06,Medium,SUFFICIENT,2,32,Additional term/equipment debt on-us and off-us.
+CIF501090,SME,SME_OVER_LEVERAGED,,S3|S6,,2025-11,Medium,SUFFICIENT,0,0,Additional term/equipment debt on-us and off-us.
+CIF501091,SME,SME_CASHFLOW_STRESS,,S2|S6,,2026-05,High,SUFFICIENT,15,15,"Sales receipts falling for months, WC limit maxed, cheque returns."
+CIF501092,SME,SME_REPAYMENT_DETERIORATION,,S1|S5|S6,,2026-04,High,SUFFICIENT,0,0,"Business repayments deteriorating, mild receipts decline."
+CIF501093,SME,SME_LEGACY_NPL,,S5|S6,,2025-11,Critical,SUFFICIENT,314,314,Business in default since early in the window; collections stage.
+CIF501094,SME,SME_CASHFLOW_STRESS,,S2|S6,,2026-02,High,SUFFICIENT,0,0,"Sales receipts falling for months, WC limit maxed, cheque returns."
+CIF501095,SME,SME_CASHFLOW_STRESS,,S2|S6,,2026-02,High,SUFFICIENT,20,21,"Sales receipts falling for months, WC limit maxed, cheque returns."
+CIF501096,SME,SME_LEGACY_NPL,,S5|S6,,2025-08,Critical,SUFFICIENT,425,425,Business in default since early in the window; collections stage.
+CIF501097,SME,SME_SEASONAL,,S6,,,Low,SUFFICIENT,0,0,Strong summer dip (3+ months falling) that recovers each autumn.
+CIF501098,SME,SME_REPAYMENT_DETERIORATION,,S1|S5|S6,,2026-01,High,SUFFICIENT,0,2,"Business repayments deteriorating, mild receipts decline."
+CIF501099,SME,SME_CASHFLOW_STRESS,,S2|S6,,2026-03,High,SUFFICIENT,0,0,"Sales receipts falling for months, WC limit maxed, cheque returns."
+CIF501100,SME,SME_STABLE,,,,,Low,SUFFICIENT,0,0,Stable receipts with normal seasonality.
+CIF501101,SME,SME_OVER_LEVERAGED,,S3|S6,,2025-10,Medium,SUFFICIENT,0,25,Additional term/equipment debt on-us and off-us.
+CIF501102,SME,SME_REPAYMENT_DETERIORATION,,S1|S5|S6,,2026-04,High,SUFFICIENT,9,9,"Business repayments deteriorating, mild receipts decline."
+CIF501103,SME,SME_STABLE,,,,,Low,SUFFICIENT,0,0,Stable receipts with normal seasonality.
+CIF501104,SME,SME_LEGACY_NPL,,S5|S6,,2025-12,Critical,SUFFICIENT,282,282,Business in default since early in the window; collections stage.
+CIF501105,SME,SME_STABLE,,,,,Low,SUFFICIENT,0,0,Stable receipts with normal seasonality.
+CIF501106,SME,SME_SEASONAL,,S6,,,Low,SUFFICIENT,0,0,Strong summer dip (3+ months falling) that recovers each autumn.
+CIF501107,SME,SME_CASHFLOW_STRESS,,S2|S6,,2026-05,High,SUFFICIENT,0,0,"Sales receipts falling for months, WC limit maxed, cheque returns."
+CIF501108,SME,SME_CASHFLOW_STRESS,,S2|S6|S8,CLU-SME-LOGI-NORTH,2026-02,High,SUFFICIENT,0,5,"Sales receipts falling for months, WC limit maxed, cheque returns."
+CIF501109,SME,SME_STABLE,,,,,Low,SUFFICIENT,0,0,Stable receipts with normal seasonality.
+CIF501110,SME,SME_STABLE,,,,,Low,SUFFICIENT,0,0,Stable receipts with normal seasonality.
+CIF501111,SME,SME_OVER_LEVERAGED,,S3|S6,,2025-11,High,SUFFICIENT,0,0,Additional term/equipment debt on-us and off-us.
+CIF501112,SME,SME_OVER_LEVERAGED,,S3|S6,,2025-06,Medium,SUFFICIENT,5,6,Additional term/equipment debt on-us and off-us.
+CIF501113,SME,SME_STABLE,,,,,Low,SUFFICIENT,0,0,Stable receipts with normal seasonality.
+CIF501114,SME,SME_STABLE,,,,,Low,SUFFICIENT,0,0,Stable receipts with normal seasonality.
+CIF501115,SME,SME_CASHFLOW_STRESS,,S2|S6,,2025-12,High,SUFFICIENT,20,20,"Sales receipts falling for months, WC limit maxed, cheque returns."
+CIF501116,SME,SME_LEGACY_NPL,,S5|S6,,2025-12,Critical,SUFFICIENT,299,299,Business in default since early in the window; collections stage.
+CIF501117,SME,SME_STABLE,,,,,Low,SUFFICIENT,0,0,Stable receipts with normal seasonality.
+CIF501118,SME,SME_STABLE,,,,,Low,SUFFICIENT,0,0,Stable receipts with normal seasonality.
+CIF501119,SME,SME_SEASONAL,,S6,,,Low,SUFFICIENT,0,0,Strong summer dip (3+ months falling) that recovers each autumn.
+CIF501120,SME,SME_STABLE,,,,,Low,SUFFICIENT,0,3,Stable receipts with normal seasonality.
+CIF501121,SME,SME_CASHFLOW_STRESS,,S2|S6,,2026-01,High,SUFFICIENT,56,56,"Sales receipts falling for months, WC limit maxed, cheque returns."
+CIF501122,SME,SME_STABLE,,,,,Low,SUFFICIENT,0,0,Stable receipts with normal seasonality.
+CIF501123,SME,SME_THIN_FILE,,S7,,,Low,INSUFFICIENT,0,0,"New business / new-to-bank, little history."
+CIF501124,SME,SME_SEASONAL,,S6,,,Low,SUFFICIENT,0,0,Strong summer dip (3+ months falling) that recovers each autumn.
+CIF501125,SME,SME_THIN_FILE,,S7,,,Low,INSUFFICIENT,0,0,"New business / new-to-bank, little history."
+CIF501126,SME,SME_CASHFLOW_STRESS,,S2|S6,,2025-12,High,SUFFICIENT,36,36,"Sales receipts falling for months, WC limit maxed, cheque returns."
+CIF501127,SME,SME_CASHFLOW_STRESS,,S2|S6|S8,CLU-SME-LOGI-NORTH,2026-03,High,SUFFICIENT,0,3,"Sales receipts falling for months, WC limit maxed, cheque returns."
+CIF501128,SME,SME_SEASONAL,,S6,,,Low,SUFFICIENT,0,0,Strong summer dip (3+ months falling) that recovers each autumn.
+CIF501129,SME,SME_CASHFLOW_STRESS,,S2|S6|S8,CLU-SME-LOGI-NORTH,2026-04,High,SUFFICIENT,20,20,"Sales receipts falling for months, WC limit maxed, cheque returns."
+CIF501130,SME,SME_OVER_LEVERAGED,,S3|S6,,2025-06,Medium,SUFFICIENT,0,30,Additional term/equipment debt on-us and off-us.
+CIF501131,SME,SME_THIN_FILE,,S7,,,Low,INSUFFICIENT,0,0,"New business / new-to-bank, little history."
+CIF501132,SME,SME_STABLE,,,,,Low,SUFFICIENT,0,3,Stable receipts with normal seasonality.
+CIF501133,SME,SME_SEASONAL,,S6,,,Low,SUFFICIENT,0,3,Strong summer dip (3+ months falling) that recovers each autumn.
+CIF501134,SME,SME_REPAYMENT_DETERIORATION,,S1|S5|S6,,2026-01,High,SUFFICIENT,33,64,"Business repayments deteriorating, mild receipts decline."
+CIF501135,SME,SME_STABLE,,,,,Low,SUFFICIENT,0,0,Stable receipts with normal seasonality.
+CIF501136,SME,SME_CASHFLOW_STRESS,,S2|S6,,2026-01,High,SUFFICIENT,0,16,"Sales receipts falling for months, WC limit maxed, cheque returns."
+CIF501137,SME,SME_CASHFLOW_STRESS,,S2|S6,,2026-04,High,SUFFICIENT,0,28,"Sales receipts falling for months, WC limit maxed, cheque returns."
+CIF501138,SME,SME_CASHFLOW_STRESS,,S2|S6,,2026-02,High,SUFFICIENT,0,3,"Sales receipts falling for months, WC limit maxed, cheque returns."
+CIF501139,SME,SME_THIN_FILE,,S7,,,Low,INSUFFICIENT,0,0,"New business / new-to-bank, little history."
+CIF501140,SME,SME_REPAYMENT_DETERIORATION,,S1|S5|S6,,2025-10,Critical,SUFFICIENT,86,86,"Business repayments deteriorating, mild receipts decline."
+CIF501141,SME,SME_REPAYMENT_DETERIORATION,,S1|S5|S6,,2025-10,High,SUFFICIENT,33,33,"Business repayments deteriorating, mild receipts decline."
+CIF501142,SME,SME_OVER_LEVERAGED,,S3|S6,,2025-09,Medium,SUFFICIENT,0,0,Additional term/equipment debt on-us and off-us.
+CIF501143,SME,SME_STABLE,,,,,Low,SUFFICIENT,0,0,Stable receipts with normal seasonality.
+CIF501144,SME,SME_REPAYMENT_DETERIORATION,,S1|S5|S6,,2026-04,High,SUFFICIENT,0,11,"Business repayments deteriorating, mild receipts decline."
+CIF501145,SME,SME_OVER_LEVERAGED,,S3|S6,,2025-12,Medium,SUFFICIENT,0,14,Additional term/equipment debt on-us and off-us.
+CIF501146,SME,SME_CASHFLOW_STRESS,,S2|S6,,2025-12,High,SUFFICIENT,2,3,"Sales receipts falling for months, WC limit maxed, cheque returns."
+CIF501147,SME,SME_SEASONAL,,S6,,,Low,SUFFICIENT,0,0,Strong summer dip (3+ months falling) that recovers each autumn.
+CIF501148,SME,SME_OVER_LEVERAGED,,S3|S6,,2025-11,Medium,SUFFICIENT,0,0,Additional term/equipment debt on-us and off-us.
+CIF501149,SME,SME_LEGACY_NPL,,S5|S6,,2025-07,Critical,SUFFICIENT,411,411,Business in default since early in the window; collections stage.
+CIF501150,SME,SME_REPAYMENT_DETERIORATION,,S1|S5|S6,,2026-04,High,SUFFICIENT,33,33,"Business repayments deteriorating, mild receipts decline."
+CIF501151,SME,SME_LEGACY_NPL,,S5|S6,,2025-11,Critical,SUFFICIENT,329,329,Business in default since early in the window; collections stage.
+CIF501152,SME,SME_STABLE,,,,,Low,SUFFICIENT,0,0,Stable receipts with normal seasonality.
+CIF501153,SME,SME_SEASONAL,,S6,,,Low,SUFFICIENT,0,0,Strong summer dip (3+ months falling) that recovers each autumn.
+CIF501154,SME,SME_SEASONAL,,S6,,,Low,SUFFICIENT,0,3,Strong summer dip (3+ months falling) that recovers each autumn.
+CIF501155,SME,SME_STABLE,,,,,Low,SUFFICIENT,0,29,Stable receipts with normal seasonality.
+CIF501156,SME,SME_THIN_FILE,,S7,,,Low,INSUFFICIENT,0,0,"New business / new-to-bank, little history."
+CIF501157,SME,SME_STABLE,,,,,Low,SUFFICIENT,0,3,Stable receipts with normal seasonality.
+CIF501158,SME,SME_CASHFLOW_STRESS,,S2|S6,,2025-12,High,SUFFICIENT,2,3,"Sales receipts falling for months, WC limit maxed, cheque returns."
+CIF501159,SME,SME_CASHFLOW_STRESS,,S2|S6,,2026-04,High,SUFFICIENT,29,29,"Sales receipts falling for months, WC limit maxed, cheque returns."
+CIF501160,SME,SME_THIN_FILE,,S7,,,Low,INSUFFICIENT,0,0,"New business / new-to-bank, little history."
+CIF501161,SME,SME_REPAYMENT_DETERIORATION,,S1|S5|S6,,2025-10,Critical,SUFFICIENT,64,64,"Business repayments deteriorating, mild receipts decline."
+CIF501162,SME,SME_SEASONAL,,S6,,,Low,SUFFICIENT,0,3,Strong summer dip (3+ months falling) that recovers each autumn.
+CIF501163,SME,SME_STABLE,,,,,Low,SUFFICIENT,0,0,Stable receipts with normal seasonality.
+CIF501164,SME,SME_SEASONAL,,S6,,,Low,SUFFICIENT,0,0,Strong summer dip (3+ months falling) that recovers each autumn.
+CIF501165,SME,SME_STABLE,,,,,Low,SUFFICIENT,0,0,Stable receipts with normal seasonality.
+CIF501166,SME,SME_THIN_FILE,,S7,,,Low,INSUFFICIENT,0,0,"New business / new-to-bank, little history."
+CIF501167,SME,SME_REPAYMENT_DETERIORATION,,S1|S5|S6|S8,CLU-SME-REST-AJM,2026-05,High,SUFFICIENT,5,21,"Business repayments deteriorating, mild receipts decline."
+CIF501168,SME,SME_CASHFLOW_STRESS,,S2|S6,,2026-03,High,SUFFICIENT,0,11,"Sales receipts falling for months, WC limit maxed, cheque returns."
+CIF501169,SME,SME_THIN_FILE,,S7,,,Low,INSUFFICIENT,0,0,"New business / new-to-bank, little history."
+CIF501170,SME,SME_REPAYMENT_DETERIORATION,,S1|S5|S6,,2025-12,Critical,SUFFICIENT,142,142,"Business repayments deteriorating, mild receipts decline."
+CIF501171,SME,SME_STABLE,,,,,Low,SUFFICIENT,0,3,Stable receipts with normal seasonality.
+CIF501172,SME,SME_OVER_LEVERAGED,,S3|S6,,2025-12,Medium,SUFFICIENT,0,4,Additional term/equipment debt on-us and off-us.
+CIF501173,SME,SME_STABLE,,,,,Low,SUFFICIENT,0,0,Stable receipts with normal seasonality.
+CIF501174,SME,SME_REPAYMENT_DETERIORATION,,S1|S5|S6,,2025-12,High,SUFFICIENT,0,26,"Business repayments deteriorating, mild receipts decline."
+CIF501175,SME,SME_CASHFLOW_STRESS,,S2|S6,,2026-05,High,SUFFICIENT,0,0,"Sales receipts falling for months, WC limit maxed, cheque returns."
+CIF501176,SME,SME_OVER_LEVERAGED,,S3|S6,,2025-09,High,SUFFICIENT,29,29,Additional term/equipment debt on-us and off-us.
+CIF501177,SME,SME_SEASONAL,,S6,,,Low,SUFFICIENT,0,0,Strong summer dip (3+ months falling) that recovers each autumn.
+CIF501178,SME,SME_CASHFLOW_STRESS,,S2|S6,,2026-04,High,SUFFICIENT,0,0,"Sales receipts falling for months, WC limit maxed, cheque returns."
+CIF501179,SME,SME_CASHFLOW_STRESS,,S2|S6,,2026-04,High,SUFFICIENT,0,0,"Sales receipts falling for months, WC limit maxed, cheque returns."
+CIF501180,SME,SME_OVER_LEVERAGED,,S3|S6,,2026-03,High,SUFFICIENT,0,0,Additional term/equipment debt on-us and off-us.
+CIF501181,SME,SME_CASHFLOW_STRESS,,S2|S6,,2026-04,High,SUFFICIENT,0,0,"Sales receipts falling for months, WC limit maxed, cheque returns."
+CIF501182,SME,SME_OVER_LEVERAGED,,S3|S6,,2026-03,Medium,SUFFICIENT,0,0,Additional term/equipment debt on-us and off-us.
+CIF501183,SME,SME_STABLE,,,,,Low,SUFFICIENT,0,0,Stable receipts with normal seasonality.
+CIF501184,SME,SME_STABLE,,,,,Low,SUFFICIENT,0,0,Stable receipts with normal seasonality.
+CIF501185,SME,SME_OVER_LEVERAGED,,S3|S6,,2025-09,High,SUFFICIENT,5,5,Additional term/equipment debt on-us and off-us.
+CIF501186,SME,SME_REPAYMENT_DETERIORATION,,S1|S5|S6,,2026-02,Critical,SUFFICIENT,64,64,"Business repayments deteriorating, mild receipts decline."
+CIF501187,SME,SME_CASHFLOW_STRESS,,S2|S6,,2026-05,High,SUFFICIENT,0,0,"Sales receipts falling for months, WC limit maxed, cheque returns."
+CIF501188,SME,SME_THIN_FILE,,S7,,,Low,INSUFFICIENT,0,0,"New business / new-to-bank, little history."
+CIF501189,SME,SME_REPAYMENT_DETERIORATION,,S1|S5|S6,,2026-05,High,SUFFICIENT,29,30,"Business repayments deteriorating, mild receipts decline."
+CIF501190,SME,SME_STABLE,,,,,Low,SUFFICIENT,0,27,Stable receipts with normal seasonality.
+CIF501191,SME,SME_OVER_LEVERAGED,,S3|S6,,2025-07,Medium,SUFFICIENT,0,3,Additional term/equipment debt on-us and off-us.
+CIF501192,SME,SME_STABLE,,,,,Low,SUFFICIENT,0,0,Stable receipts with normal seasonality.
+CIF501193,SME,SME_THIN_FILE,,S7,,,Low,INSUFFICIENT,0,0,"New business / new-to-bank, little history."
+CIF501194,SME,SME_SEASONAL,,S6,,,Low,SUFFICIENT,0,0,Strong summer dip (3+ months falling) that recovers each autumn.
+CIF501195,SME,SME_THIN_FILE,,S7,,,Low,INSUFFICIENT,0,0,"New business / new-to-bank, little history."
+CIF501196,SME,SME_STABLE,,,,,Low,SUFFICIENT,0,0,Stable receipts with normal seasonality.
+CIF501197,SME,SME_STABLE,,,,,Low,SUFFICIENT,0,0,Stable receipts with normal seasonality.
+CIF501198,SME,SME_OVER_LEVERAGED,,S3|S6,,2025-10,Medium,SUFFICIENT,0,3,Additional term/equipment debt on-us and off-us.
+CIF501199,SME,SME_CASHFLOW_STRESS,,S2|S6,,2026-03,High,SUFFICIENT,0,11,"Sales receipts falling for months, WC limit maxed, cheque returns."
+CIF501200,SME,SME_LEGACY_NPL,,S5|S6,,2025-06,Critical,SUFFICIENT,456,456,Business in default since early in the window; collections stage.

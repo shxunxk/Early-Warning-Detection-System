@@ -1,0 +1,73 @@
+issue_id,table,record_key,column,issue_type,injected_value,description
+DQ0001,customers,CIF100392,customer_type,MISSING_MANDATORY,None,customer_type is blank
+DQ0002,customers,CIF100303,customer_type,MISSING_MANDATORY,None,customer_type is blank
+DQ0003,customers,CIF100347,customer_type,INCONSISTENT_FORMAT, individual,Wrong case / stray whitespace in enumerated value
+DQ0004,customers,CIF100027,customer_type,INCONSISTENT_FORMAT, individual,Wrong case / stray whitespace in enumerated value
+DQ0005,customers,CIF100166,date_of_birth,INVALID_DATE,1990-13-45,Impossible date
+DQ0006,customers,CIF100278,customer_id,DUPLICATE_RECORD,CIF100278,Exact duplicate customer record
+DQ0007,customers,CIF100503,customer_id,DUPLICATE_RECORD,CIF100503,Exact duplicate customer record
+DQ0008,customers,CIF100354,customer_id,DUPLICATE_RECORD,CIF100354,Exact duplicate customer record
+DQ0009,facilities,TL0400196,customer_id,ORPHAN_REFERENCE,CIF990000,customer_id does not exist in customers
+DQ0010,facilities,CC0400962,customer_id,ORPHAN_REFERENCE,CIF990001,customer_id does not exist in customers
+DQ0011,facilities,WC0400708,customer_id,ORPHAN_REFERENCE,CIF990002,customer_id does not exist in customers
+DQ0012,facilities,AF0400811,sanctioned_amount,NEGATIVE_AMOUNT,-64000.0,Sanctioned amount is negative
+DQ0013,facilities,PF0400262,sanctioned_amount,NEGATIVE_AMOUNT,-35000.0,Sanctioned amount is negative
+DQ0014,facilities,EF0400544,disbursement_date,INVALID_DATE,2025-02-30,Unparseable disbursement date
+DQ0015,facilities,PF0400586,disbursement_date,INVALID_DATE,N/A,Unparseable disbursement date
+DQ0016,facilities,PF0400620,currency,CURRENCY_MISMATCH,USD,Currency differs from portfolio currency (AED)
+DQ0017,facilities,TL0400669,currency,CURRENCY_MISMATCH,USD,Currency differs from portfolio currency (AED)
+DQ0018,facilities,EF0400436,facility_status,INCONSISTENT_STATUS,CLOSED,Marked CLOSED but has outstanding balance
+DQ0019,facilities,CC0400234,facility_status,INCONSISTENT_STATUS,CLOSED,Marked CLOSED but has outstanding balance
+DQ0020,repayments,RP00008124,facility_id,ORPHAN_REFERENCE,PF9900000,facility_id does not exist in facilities
+DQ0021,repayments,RP00000079,facility_id,ORPHAN_REFERENCE,PF9900001,facility_id does not exist in facilities
+DQ0022,repayments,RP00008133,facility_id,ORPHAN_REFERENCE,PF9900002,facility_id does not exist in facilities
+DQ0023,repayments,RP00008796,facility_id,ORPHAN_REFERENCE,PF9900003,facility_id does not exist in facilities
+DQ0024,repayments,RP00016138,customer_id,RELATIONSHIP_MISMATCH,CIF100323,customer_id differs from the facility's owner
+DQ0025,repayments,RP00000272,customer_id,RELATIONSHIP_MISMATCH,CIF100284,customer_id differs from the facility's owner
+DQ0026,repayments,RP00009359,amount_paid,NEGATIVE_AMOUNT,-841.82,Amount paid is negative
+DQ0027,repayments,RP00015878,amount_paid,NEGATIVE_AMOUNT,-10433.03,Amount paid is negative
+DQ0028,repayments,RP00018196,amount_paid,NEGATIVE_AMOUNT,-13183.09,Amount paid is negative
+DQ0029,repayments,RP00013485,amount_paid,OUTLIER,1170881.0,Amount paid is 50x the amount due
+DQ0030,repayments,RP00018152,amount_paid,OUTLIER,653566.5,Amount paid is 50x the amount due
+DQ0031,repayments,RP00000652,amount_due,MISSING_MANDATORY,None,amount_due is blank
+DQ0032,repayments,RP00019210,amount_due,MISSING_MANDATORY,None,amount_due is blank
+DQ0033,repayments,RP00000900,amount_due,MISSING_MANDATORY,None,amount_due is blank
+DQ0034,repayments,RP00016624,due_date,INCONSISTENT_FORMAT,10/04/2026,Date in DD/MM/YYYY instead of ISO
+DQ0035,repayments,RP00002431,due_date,INCONSISTENT_FORMAT,10/12/2024,Date in DD/MM/YYYY instead of ISO
+DQ0036,repayments,RP00002034,due_date,INCONSISTENT_FORMAT,28/11/2024,Date in DD/MM/YYYY instead of ISO
+DQ0037,repayments,RP00002437,due_date,INCONSISTENT_FORMAT,10/06/2025,Date in DD/MM/YYYY instead of ISO
+DQ0038,repayments,RP00014650,due_date,INCONSISTENT_FORMAT,20/02/2025,Date in DD/MM/YYYY instead of ISO
+DQ0039,repayments,RP00006581,due_date,INCONSISTENT_FORMAT,21/09/2026,Date in DD/MM/YYYY instead of ISO
+DQ0040,repayments,RP00013027,payment_date,LOGICAL_ERROR,2019-01-01,Payment date precedes the facility's disbursement
+DQ0041,repayments,RP00000981,payment_date,LOGICAL_ERROR,2019-01-01,Payment date precedes the facility's disbursement
+DQ0042,repayments,RP00002529,repayment_status,STATUS_MISMATCH,PAID_ON_TIME,Status says on time but payment date is after due date
+DQ0043,repayments,RP00002114,repayment_status,STATUS_MISMATCH,PAID_ON_TIME,Status says on time but payment date is after due date
+DQ0044,repayments,RP00008647,repayment_status,STATUS_MISMATCH,PAID_ON_TIME,Status says on time but payment date is after due date
+DQ0045,repayments,RP00009656,repayment_status,STATUS_MISMATCH,PAID_ON_TIME,Status says on time but payment date is after due date
+DQ0046,repayments,RP00010845,repayment_id,DUPLICATE_RECORD,RP00010845,Exact duplicate repayment record
+DQ0047,repayments,RP00005854,repayment_id,DUPLICATE_RECORD,RP00005854,Exact duplicate repayment record
+DQ0048,repayments,RP00009716,repayment_id,DUPLICATE_RECORD,RP00009716,Exact duplicate repayment record
+DQ0049,repayments,RP00008045,repayment_id,DUPLICATE_RECORD,RP00008045,Exact duplicate repayment record
+DQ0050,repayments,RP00000645,repayment_id,DUPLICATE_RECORD,RP00000645,Exact duplicate repayment record
+DQ0051,delinquency,CC0400982,overdue_amount,INCONSISTENT_VALUES,0.0,DPD > 0 but overdue amount is zero (snapshot 2025-04-30)
+DQ0052,delinquency,PF0400443,overdue_amount,INCONSISTENT_VALUES,0.0,DPD > 0 but overdue amount is zero (snapshot 2026-04-30)
+DQ0053,delinquency,CC0400157,overdue_amount,INCONSISTENT_VALUES,0.0,DPD > 0 but overdue amount is zero (snapshot 2026-09-30)
+DQ0054,delinquency,EF0400144,days_past_due,OUT_OF_RANGE,-5,Negative DPD (snapshot 2026-09-30)
+DQ0055,delinquency,CC0400784,days_past_due,OUT_OF_RANGE,-5,Negative DPD (snapshot 2025-01-31)
+DQ0056,delinquency,PF0400092,dpd_bucket,INCONSISTENT_VALUES,31-60,Bucket does not match DPD (snapshot 2025-04-30)
+DQ0057,delinquency,PF0400076,dpd_bucket,INCONSISTENT_VALUES,31-60,Bucket does not match DPD (snapshot 2026-06-30)
+DQ0058,exposure,CIF100149,bureau_score,OUT_OF_RANGE,1200,Bureau score outside 300-900
+DQ0059,exposure,CIF100508,bureau_score,OUT_OF_RANGE,1200,Bureau score outside 300-900
+DQ0060,exposure,CIF100238,revolving_utilisation_pct,OUT_OF_RANGE,-10.0,Negative utilisation
+DQ0061,exposure,CIF980000,customer_id,ORPHAN_REFERENCE,CIF980000,customer_id does not exist in customers
+DQ0062,exposure,CIF980001,customer_id,ORPHAN_REFERENCE,CIF980001,customer_id does not exist in customers
+DQ0063,financials,CIF100124,total_inflows,MISSING_MANDATORY,None,total_inflows blank for 2026-09
+DQ0064,financials,CIF100381,total_inflows,MISSING_MANDATORY,None,total_inflows blank for 2026-02
+DQ0065,financials,CIF100254,total_inflows,MISSING_MANDATORY,None,total_inflows blank for 2026-08
+DQ0066,financials,CIF100381,net_cash_flow,INCONSISTENT_VALUES,24158.04,net_cash_flow != total_inflows - total_outflows
+DQ0067,financials,CIF100090,net_cash_flow,INCONSISTENT_VALUES,25129.08,net_cash_flow != total_inflows - total_outflows
+DQ0068,financials,CIF100358,salary_credit,TEXT_IN_NUMERIC,"31,861.12 AED",Formatted text in numeric column
+DQ0069,financials,CIF100005,salary_credit,TEXT_IN_NUMERIC,"11,717.23 AED",Formatted text in numeric column
+DQ0070,financials,CIF100272,customer_id,DUPLICATE_RECORD,CIF100272,Same customer-month reported twice
+DQ0071,financials,CIF100520,customer_id,DUPLICATE_RECORD,CIF100520,Same customer-month reported twice
+DQ0072,financials,CIF100343,customer_id,DUPLICATE_RECORD,CIF100343,Same customer-month reported twice
