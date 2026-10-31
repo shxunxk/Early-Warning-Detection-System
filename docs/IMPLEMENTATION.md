@@ -110,13 +110,13 @@ Rows with an **ERROR** are rejected. Rows with a **WARNING** are normalised and 
 | Unknown enum value | ERROR | Row rejected |
 | Non-ISO date (e.g. `05/03/2026`) | WARNING | Parsed day-first |
 | Unparseable date in a required column | ERROR | Row rejected |
-| Text in a numeric column (e.g. `"12,500.00 AED"`) | WARNING | Stripped to a number |
+| Text in a numeric column (e.g. `"INR 12,500.00"`) | WARNING | Stripped to a number |
 | Negative amount / DPD | ERROR | Row rejected |
 | Duplicate primary key | WARNING | First occurrence kept, duplicates dropped |
 | Orphan reference (unknown customer or facility) | ERROR | Row rejected |
 | Repayment customer ≠ facility owner | WARNING | Facility owner used |
 | Payment before disbursement | ERROR | Row rejected |
-| Non-AED currency | WARNING | Kept, flagged |
+| Non-INR currency | WARNING | Kept, flagged |
 | `CLOSED` facility with balance | WARNING | Kept, flagged |
 | `PAID_ON_TIME` but paid after due date | WARNING | Dates take precedence |
 | Amount paid > 3× due | WARNING | Kept, flagged |
@@ -144,7 +144,7 @@ used. Column names match the `metric` field in the rules file. **NaN means not e
 - An instalment is **settled** if paid in full by as-of. `late_days` is the payment date
   minus the due date (or as-of minus the due date if unpaid).
 - **Excused** if late by no more than `grace_days` (3), or by no more than 5 days with a
-  **lunar** bank holiday between the due date and the payment date.
+  **moon-sighting** bank holiday between the due date and the payment date.
 - **Pending** (not irregular yet) if unpaid but due within the grace period.
 - **Irregular** = not on time, not excused, not pending.
 - Counted **per month, not per instalment**, so a customer with 3 facilities isn't triple-counted.
@@ -285,12 +285,12 @@ Compare the score now with the score at as-of − 3 months (same rules):
 - **Transitions:** every facility's month-to-month bucket change, about 19k transitions.
   Normalised by row to give the probability of each next-month bucket.
 - **`p_roll`:** probability of moving to a *worse* bucket, per portfolio (Retail Secured,
-  Retail Unsecured, SME Lending) × bucket.
+  Retail Unsecured, MSME Lending) × bucket.
 - **Customer roll probability:** the highest `p_roll` across the customer's facilities, given their current buckets.
 - **Exposure at risk** = outstanding × roll probability. It's used to sort the watchlist.
 
 ### Emerging clusters (S8)
-- **Segments:** `category × emirate`, `primary_product × emirate`, `category`, and `segment × portfolio`.
+- **Segments:** `category × region`, `primary_product × region`, `category`, and `segment × portfolio`.
 - **At risk** = tier Amber or Red. Each segment's at-risk rate is compared with the portfolio rate.
 - **Emerging** = at least 3 at-risk customers **and** the Wilson 95% lower bound of the
   segment rate is above the portfolio rate. Segments need at least 5 customers.
@@ -390,7 +390,7 @@ The sidebar shows the dataset, as-of date, rules version hash and LLM status.
 |---|---|
 | **Upload & Validate** | Bundled clean or dirty dataset, or upload of multiple files. KPIs (received, accepted, rejected, warnings), per-table summary, relationship coverage, issues table filterable by severity, table and type, plus an issue-type chart |
 | **Portfolio** | Tier KPIs and outstanding at Amber/Red; tier mix by portfolio; trajectory distribution; emerging-clusters table; roll-rate heatmap; accuracy panel (clean sample only) |
-| **Watchlist** | Filters: tier, product, segment, portfolio, delinquency bucket, emirate, trajectory, confidence. Columns: ID, name, products, outstanding, score bar, tier, confidence, trajectory, contributing indicators, DPD bucket, monitoring status, review status. Sorted by tier → score → exposure at risk. Row select → **Open customer**. CSV download |
+| **Watchlist** | Filters: tier, product, segment, portfolio, delinquency bucket, region, trajectory, confidence, SMA category. Columns: ID, name, products, outstanding, score bar, tier, confidence, trajectory, contributing indicators, DPD bucket, monitoring status, review status. Sorted by tier → score → exposure at risk. Row select → **Open customer**. CSV download |
 | **Customer** | Tier badge, score with change vs 3 months, confidence/DCS, trajectory, DPD, roll probability, outstanding; insufficient-evidence and hard-trigger banners; recommended action; points chart; score arithmetic; reasons; all-signals table (fired / ok / not evaluated); module indices; **AI summary**; charts for DPD, income/inflows/balance, utilisation, and on-us vs bureau obligations; tabs for repayments, facilities, exposure and evidence |
 | **Review** | Publish alerts for the current run; alert list filterable by status; frozen original vs live score; decision form (4 options, mandatory reason and analyst); append-only history |
 | **Rules** | Editable signal table (enabled, threshold, severe, weight) and score bands; **Apply and re-score**, with before/after tier counts; reset to defaults; download rules JSON |
@@ -408,7 +408,7 @@ The sidebar shows the dataset, as-of date, rules version hash and LLM status.
 
 | Section | Contents |
 |---|---|
-| `parameters` | `as_of_date` 2026-09-30, `grace_days` 3, `excuse_lunar_holiday_delays` true, `trajectory_lookback_months` 3, currency AED, score direction |
+| `parameters` | `as_of_date` 2026-09-30, `grace_days` 3, `excuse_lunar_holiday_delays` true, `trajectory_lookback_months` 3, currency INR, score direction |
 | `signals` | The table in §5.2, plus `enabled`, `lookback_months` and `description` |
 | `score_bands` | Band, min/max score, monitoring status, recommended action |
 | `overrides` | Documented hard triggers and the confidence cap (implemented in `scoring.py`) |
@@ -433,7 +433,7 @@ Rules page.
 | Planted Low rated Amber or Red (false alarms) | 0.0% |
 | Within one tier of planted band | 97.5% |
 | Trap customers flagged (isolated exception, seasonal SME, thin file, salary elsewhere, cured) | 0 / 130 |
-| Top emerging cluster | Construction & Contracting · Sharjah: 60% vs 13.8%, lift 4.3 (planted) |
+| Top emerging cluster | Construction & Contracting · Pune: 50% vs 15.5%, lift 3.2 (planted) |
 | Review | Frozen alert unchanged after a decision and a reclassification |
 
 ---
@@ -444,7 +444,7 @@ Rules page.
 |---|---|---|
 | Organiser data | Only header aliases; no mapping UI. Unseen layouts (e.g. row-level transactions) may fail validation | Column-mapping screen, with an optional LLM-suggested mapping |
 | Detection | About 24% of planted High/Critical missed. About half show no observable signal by the as-of date; the rest are pay-cut income declines firing one moderate signal | Tune weights with the eval panel; add a salary-drop-vs-baseline signal |
-| Clusters | At-risk = Amber/Red only, so the Watch-heavy Dubai hospitality cluster is not flagged | Option to count Watch and Deteriorating trajectory |
+| Clusters | At-risk = Amber/Red only, so the Watch-heavy Bengaluru hospitality cluster is not flagged | Option to count Watch and Deteriorating trajectory |
 | Point-in-time | Past as-of dates use final repayment status filtered by payment date; earlier partial history is approximate | Store payment events, not settled status |
 | SME debt burden | Not evaluated (salary-based ratio is meaningless for SMEs) | Debt-service coverage from receipts |
 | Roll probability | Per portfolio × bucket, not adjusted per customer | Logistic adjustment with RBDI/CFSI |

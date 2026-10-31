@@ -1,30 +1,31 @@
 # Synthetic EWS dataset
 
 Fully synthetic loan-portfolio data for the Early Warning System challenge (problem
-statement 4). No real customers, PII or bank data. Setting: a UAE bank, amounts in AED.
+statement 4). No real customers, PII or bank data. Setting: an Indian bank, amounts in INR,
+so RBI SMA/NPA classification, NACH mandates and MSME turnover bands all apply natively.
 
 - **As-of date:** 2026-09-30. All "last N months" logic should use this date, not today.
 - **History window:** 24 months, Oct 2024 to Sep 2026.
-- **Size (default):** 600 customers (420 individuals, 180 SMEs), ~1,040 facilities,
-  ~19k repayment rows, ~19.5k facility-month snapshots, ~13.7k customer-month snapshots.
+- **Size (default):** 600 customers (420 individuals, 180 MSMEs), ~1,070 facilities,
+  ~19.4k repayment rows, ~19.7k facility-month snapshots, ~13.6k customer-month snapshots.
 - **Regenerate:** `uv run python datagen/generate.py [--customers N] [--seed S]`
 - **Verify:** `uv run python datagen/checks.py` (41 consistency checks; clean set passes all)
 
-## Second portfolio: Northern Emirates Commercial Bank
+## Second portfolio: Northern Plains Commercial Bank
 
 `data/northern_sme/` has the same schema, generated with
 `uv run python datagen/generate.py --profile northern_sme --out data/northern_sme`
 (profile in `datagen/config.py → PROFILES`; summary in `data/northern_sme/PROFILE.md`).
 
-| | Gulf Bank (default) | Northern Emirates |
+| | Bharat Commercial Bank (default) | Northern Plains |
 |---|---|---|
-| Customers / SME share | 600 / 30% | 1,200 / 45% |
-| Footprint | Dubai, Abu Dhabi led | Sharjah, Ajman, RAK led |
-| Median salary | ~AED 16k | ~AED 12k (mid-market) |
+| Customers / MSME share | 600 / 30% | 1,200 / 45% |
+| Footprint | Mumbai, Delhi NCR, Bengaluru led | Ludhiana, Jalandhar, Kanpur led |
+| Median salary | ~₹54k / month | ~₹36k / month (mid-market) |
 | Customer IDs | `CIF1xxxxx` | `CIF5xxxxx` |
-| NPL by value | 0.2% | 5.6% (retail 3.4%, SME 5.9%) |
-| Extra archetypes | — | `LEGACY_NPL`, `SME_LEGACY_NPL`: defaulted 5–20 months before as-of, token payments only; retail defaults are recent (median ~210 DPD, i.e. before typical write-off), SME workouts older (median ~330 DPD) |
-| Clusters | Construction (Sharjah/Ajman), hospitality staff (Dubai) | Logistics (Sharjah/RAK), retail-trade staff (Sharjah/Ajman), restaurants (Ajman/Sharjah) |
+| NPL by value | 0.1% | 12.8% (retail secured 1.7%, retail unsecured 4.9%, MSME 13.3%) |
+| Extra archetypes | — | `LEGACY_NPL`, `SME_LEGACY_NPL`: defaulted 5–20 months before as-of, token payments only; retail defaults are recent (median ~210 DPD, i.e. before typical write-off), MSME workouts older (median ~330 DPD) |
+| Clusters | Construction (Delhi NCR/Pune), hospitality staff (Bengaluru) | Logistics (Ludhiana/Kanpur), retail-trade staff (Ludhiana/Jalandhar), restaurants (Agra/Meerut) |
 
 ## Layout
 
@@ -64,7 +65,7 @@ bank_holidays                                     reference calendar
 | employment_or_business_category | employer sector (individuals) or industry (SMEs) |
 | customer_segment | Mass / Mass Affluent / Affluent; Micro / Small / Medium for SMEs |
 | portfolio | Consumer Banking / Business Banking |
-| emirate | region |
+| region | city or state of the customer |
 | customer_since | onboarding date; recent for thin-file customers |
 | onboarding_risk_grade | A (best) to E at approval time |
 | salary_transfer_flag | `Y` if salary is credited to this bank. If `N`, there is no salary in `financials`, and that is **not** an income drop |
@@ -73,12 +74,13 @@ bank_holidays                                     reference calendar
 | relationship_manager_id | RMs for SME and affluent customers |
 
 ### facilities
-`product_code`: PF Personal Finance, AF Auto Finance, HF Home Finance, CC Credit Card,
-TL Business Term Loan, WC Working Capital Facility, EF Equipment Finance.
+`product_code`: PF Personal Loan, AF Auto Loan, HF Home Loan, CC Credit Card,
+TL Business Term Loan, WC Cash Credit / Working Capital, EF Equipment Finance.
 `facility_type` is `INSTALMENT` (fixed EMI) or `REVOLVING` (CC/WC; `sanctioned_amount` is the
 limit). Other columns: `secured_flag`, `currency`, `disbursement_date`, `tenure_months`,
 `maturity_date`, `interest_rate_pct` (annual), `instalment_amount`, `due_day`,
-`payment_channel` (DIRECT_DEBIT / STANDING_INSTRUCTION / MANUAL_TRANSFER / CHEQUE),
+`payment_channel` (NACH_DEBIT / STANDING_INSTRUCTION / UPI_AUTOPAY / MANUAL_TRANSFER /
+CHEQUE),
 `outstanding_balance` (as of the as-of date), `facility_status` (ACTIVE / CLOSED), `closure_date`.
 
 ### repayments
@@ -89,14 +91,14 @@ instalment a month while one behind stays stuck in arrears.
 
 | column | notes |
 |---|---|
-| due_date | rolled past weekends and fixed holidays; **not** past lunar holidays |
+| due_date | rolled past weekends and published holidays; **not** past moon-sighting holidays |
 | amount_due / amount_paid | amount_paid is what has been allocated so far |
 | payment_date | date the instalment was fully settled (or last partial payment) |
 | days_late | settle date minus due date; for open instalments, as-of minus due date |
 | repayment_status | `PAID_ON_TIME`, `PAID_LATE`, `PARTIALLY_PAID`, `UNPAID` |
 
-`PAID_LATE` has **no grace period** applied. 1–4 day delays on direct debits around Eid are
-genuine bank-side delays. Use `bank_holidays` and the `grace_days` rule parameter to excuse them.
+`PAID_LATE` has **no grace period** applied. 1–4 day delays on NACH mandates around Eid,
+Bakrid, Muharram and Milad-un-Nabi are genuine bank-side delays. Use `bank_holidays` and the `grace_days` rule parameter to excuse them.
 
 ### delinquency (facility × month-end)
 `days_past_due` (from the oldest unpaid instalment; an instalment due *on* the snapshot date is
@@ -106,8 +108,8 @@ not overdue), `dpd_bucket` (Current, 1-30, 31-60, 61-90, 91-180, 180+), `overdue
 
 ### exposure (customer × month-end)
 - **On-us:** `onus_active_facilities`, `onus_sanctioned_total`, `onus_outstanding_total`,
-  `onus_monthly_obligation` (EMIs + 5% of card limits + WC interest, per the UAE debt-burden
-  convention), `revolving_limit_total`, `revolving_balance_total`, `revolving_utilisation_pct`
+  `onus_monthly_obligation` (EMIs + 5% of card limits + working-capital interest, the usual
+  FOIR/debt-burden convention), `revolving_limit_total`, `revolving_balance_total`, `revolving_utilisation_pct`
   (can exceed 100% when over limit), `new_onus_facilities_3m`.
 - **Bureau (other lenders):** `bureau_external_facilities`, `_outstanding`,
   `_monthly_obligation`, `_card_limit`, `_card_utilisation_pct`, `bureau_enquiries_3m`,
@@ -143,7 +145,7 @@ Data-quality signals (DQ01–DQ03) have weight 0: missing data lowers confidence
 | archetype | count | scenarios | what it looks like |
 |---|---|---|---|
 | STABLE | ~200 | — | regular payer; rare 1–2 day slips |
-| ISOLATED_EXCEPTION | ~40 | S4 | one delayed/missed instalment (salary delay, processing delay, hardship, Eid travel), then recovered |
+| ISOLATED_EXCEPTION | ~40 | S4 | one delayed/missed instalment (salary delay, processing delay, hardship, festival travel), then recovered |
 | CHRONIC_LATE_PAYER | ~20 | S1 | 2–9 days late most months but always pays in full |
 | REPAYMENT_DETERIORATION | ~23 | S1, S5 | lateness grows, then partials and misses |
 | INCOME_DECLINE | ~44 | S2 | pay cut, job loss or gradual decline; repayments lag the income drop |
@@ -159,9 +161,9 @@ Data-quality signals (DQ01–DQ03) have weight 0: missing data lowers confidence
 | SME_REPAYMENT_DETERIORATION | ~11 | S1, S5, S6 | business repayments deteriorating |
 | SME_THIN_FILE | ~13 | S7 | new business, little history |
 
-**Emerging risk clusters (S8):** `CLU-SME-CONSTR-NORTH`, construction SMEs in Sharjah/Ajman
-going into cash-flow stress in Mar–May 2026; `CLU-RET-HOSP-DXB`, hospitality employees in
-Dubai with pay cuts and layoffs from Apr–Jun 2026.
+**Emerging risk clusters (S8):** `CLU-SME-CONSTR-NCR`, construction MSMEs in Delhi NCR/Pune
+going into cash-flow stress in Mar–May 2026; `CLU-RET-HOSP-BLR`, hospitality employees in
+Bengaluru with pay cuts and layoffs from Apr–Jun 2026.
 
 `expected_risk_band` and `expected_data_sufficiency` are the generator's intended outcome,
 adjusted for actual DPD at the as-of date. Treat them as a benchmark, not exact answers.

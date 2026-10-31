@@ -11,7 +11,7 @@
 
 ## 1. What We Are Building
 
-An AI-powered Early Warning System for a UAE bank (AED currency) that:
+An AI-powered Early Warning System for an Indian bank (INR currency) that:
 - Ingests customer, facility, repayment, exposure, and financial data (CSV / Excel / JSON)
 - Detects 8 early warning scenarios using configurable rules + statistical methods
 - Calculates an explainable 0–100 Warning Score per customer (higher = riskier)
@@ -43,7 +43,7 @@ The organiser tests **actual application behaviour**. Every capability must work
 ### 3.1 Two-Stage Compute Model
 
 The architecture separates expensive metric computation from cheap scoring, which is
-critical for enabling the Rules Editor and What-If Simulator:
+critical for enabling the Rules Editor and multi-period history scoring:
 
 ```
 Stage 1: metrics(data, as_of)     — HEAVY, cached
@@ -58,8 +58,8 @@ Stage 2: score(metrics, rules)    — CHEAP, re-runs instantly
 ```
 
 This split means editing a signal weight or threshold in the Rules Editor page gives
-instant feedback — no need to recompute metrics. The What-If Simulator works the same
-way: it modifies a customer's metric values and re-runs `score()`.
+instant feedback — no need to recompute metrics. The Investigation workspace works the
+same way: it re-runs `score()` over several past as-of dates to build a score history.
 
 ### 3.2 System Diagram
 
@@ -180,8 +180,8 @@ way: it modifies a customer's metric values and re-runs `score()`.
 │  │  Validate    │ │  (filters)   │ │  Deep-Dive   │ │  Dashboard   │       │
 │  └──────────────┘ └──────────────┘ └──────────────┘ └──────────────┘       │
 │  ┌──────────────┐ ┌──────────────┐ ┌──────────────┐ ┌──────────────┐       │
-│  │  Analyst     │ │  Rules       │ │  What-If     │ │  AI          │       │
-│  │  Review      │ │  Editor      │ │  Simulator   │ │  Assistant   │       │
+│  │  Analyst     │ │  Rules       │ │ Investigation│ │  RBI         │       │
+│  │  Review      │ │  Editor      │ │  Workspace   │ │  Reporting   │       │
 │  └──────────────┘ └──────────────┘ └──────────────┘ └──────────────┘       │
 │                                                                              │
 │  DuckDB store: inputs, runs, frozen alerts, append-only analyst decisions   │
@@ -352,9 +352,9 @@ def score_customer(customer_id, metrics, rules):
 ```
 
 **Why two stages matter:** Editing a signal weight in the Rules Editor re-runs Stage 2
-only (~0.5s), not Stage 1. The What-If Simulator modifies one customer's metric dict
-and re-runs Stage 2 for that customer alone (~instant). Without this split, every slider
-change recomputes metrics from raw data — unacceptably slow for interactive use.
+only (~0.5s), not Stage 1. The Investigation workspace re-runs Stage 2 at several past
+as-of dates to chart a customer's score history. Without this split, every rules change
+would recompute metrics from raw data — unacceptably slow for interactive use.
 
 ### 4.4 Score Bands
 
@@ -384,7 +384,7 @@ eval panel (ground truth), improving catch rate from 54% to 76% with zero false 
 | RS01 (late/missed) | 20 | **30** | Primary deterioration signal; needed more influence |
 | RS07 (inflow decline) | 15 | **20** | Catches income drops before delinquency |
 | RS12 (utilisation) | 8 | **12** | Over-leveraged customers need earlier escalation |
-| RS14 (debt burden) | 12 | **15** | UAE 50% DBR cap is a hard regulatory line |
+| RS14 (debt burden) | 12 | **15** | A 50% FOIR/DBR cap is a hard underwriting line |
 | RS15 (new credit) | 8 | **12** | Credit-hungry behaviour is a strong warning |
 | RS10, RS13, RS16 | 8, 8, 8 | **10, 10, 10** | Modest increases for supporting signals |
 | RS01 severe anchor | 2× threshold | **3** (instalments) | Full strength at 3 irregular months, not 4 |
@@ -494,7 +494,7 @@ products.
 **Metrics:**
 - `revolving_utilisation_pct` (RS12): From latest `exposure` snapshot. Can exceed 100%.
 - `utilisation_change_pp` (RS13): Change in `revolving_utilisation_pct` over 6 months, in percentage points.
-- `debt_burden_ratio_pct` (RS14): `(onus_monthly_obligation + bureau_external_monthly_obligation) / monthly_income × 100`. **Individuals only** — monthly income = latest `salary_credit`. UAE regulatory cap is 50%. **For SME customers, RS14 = NOT_EVALUATED** — salary-based DBR is meaningless for businesses. SME over-leverage is caught via RS12 (utilisation), RS15 (new credit), and RS16 (exposure growth).
+- `debt_burden_ratio_pct` (RS14): `(onus_monthly_obligation + bureau_external_monthly_obligation) / monthly_income × 100`. **Individuals only** — monthly income = latest `salary_credit`. The FOIR cap is 50%. **For SME customers, RS14 = NOT_EVALUATED** — salary-based DBR is meaningless for businesses. SME over-leverage is caught via RS12 (utilisation), RS15 (new credit), and RS16 (exposure growth).
 - `new_facilities_or_enquiries` (RS15): `new_onus_facilities_3m` (from 2 snapshots to cover 6m) + `bureau_enquiries_3m` + count of `bureau_external_facilities` increases.
 - `exposure_growth_minus_income_growth_pp` (RS16): `(onus_outstanding_total growth % over 6m) − (income growth % over 6m)`.
 
@@ -597,13 +597,13 @@ dcs = (
 - **Thin-file customer with no problems:** DQ01 fires, confidence = Low, no risk signals triggered → band = Low with "Insufficient Evidence" label. The system does NOT classify them as high risk.
 
 #### S8: Portfolio Concentration & Emerging Risk Clusters
-**Source:** All customer scores + `customers` attributes (industry, emirate, product)
+**Source:** All customer scores + `customers` attributes (industry, region, product)
 
 **Method: Segment concentration test** (not HDBSCAN — more explainable, guaranteed to find small planted clusters):
 
 ```python
-# For each segment defined by (product, industry, emirate) and pairs thereof:
-segments = group_customers_by(["product", "industry", "emirate"])
+# For each segment defined by (product, industry, region) and pairs thereof:
+segments = group_customers_by(["product", "industry", "region"])
 
 for segment in segments:
     if segment.customer_count < 3:
@@ -631,8 +631,8 @@ for segment in segments:
 ```
 
 **Planted clusters to detect:**
-- `CLU-SME-CONSTR-NORTH`: Construction SMEs in Sharjah/Ajman, ~14 customers, cash-flow stress starting Mar 2026
-- `CLU-RET-HOSP-DXB`: Hospitality employees in Dubai, ~20 customers, pay cuts/layoffs starting Apr 2026
+- `CLU-SME-CONSTR-NCR`: Construction MSMEs in Delhi NCR/Pune, ~14 customers, cash-flow stress starting Mar 2026
+- `CLU-RET-HOSP-BLR`: Hospitality employees in Bengaluru, ~20 customers, pay cuts/layoffs starting Apr 2026
 
 Both have ≥ 3 at-risk customers and should show lift > 2.0 vs portfolio.
 
@@ -678,7 +678,7 @@ def grounding_check(llm_text: str, evidence: dict) -> str:
 ### 6.4 Prompt Design (Risk Narrative)
 
 ```
-You are a credit risk analyst at a UAE bank. Generate a brief risk summary for a
+You are a credit risk analyst at an Indian bank. Generate a brief risk summary for a
 relationship manager.
 
 EVIDENCE (source of truth — use ONLY these numbers):
@@ -762,7 +762,7 @@ but does not modify the alert. This is the audit trail the problem statement req
 | # | Trap | How It's Handled | Where in Code |
 |---|---|---|---|
 | 1 | **Seasonal SME** — 3 consecutive monthly receipt declines that are normal | RS08 uses YoY comparison for SME customers; MoM decline is only flagged if YoY comparison also shows decline | `features/cashflow.py` |
-| 2 | **Lunar holiday delay** — direct debits 1–4 days late around Eid | RS01 excludes payments within `grace_days` of a LUNAR holiday where `schedule_adjusted = N` | `features/repayment.py` |
+| 2 | **Moon-sighting holiday delay** — NACH mandates 1–4 days late around Eid | RS01 excludes payments within `grace_days` of a moon-sighting holiday where `schedule_adjusted = N` | `features/repayment.py` |
 | 3 | **FIFO allocation** — customer pays monthly but DPD stuck at ~30 due to payment ordering | Detect: `amount_paid` ≥ `amount_due` for recent months but `days_late > 0` from arrears structure. Lower RS03 strength; add "structural DPD" note to evidence | `features/repayment.py` |
 | 4 | **Unverified "salary delay"** — deteriorating customer claims salary was delayed | Exception engine checks `verified_flag`. Unverified evidence weakens mitigation. Guardrails block mitigation entirely if CFSI or RS01 is high | `features/exceptions.py` |
 | 5 | **Salary not domiciled** — salary_transfer_flag=N, no salary in financials | RS09 returns `NOT_EVALUATED` (not "salary stopped"). No points, no flag. Evidence shows "salary not with this bank" | `features/cashflow.py` |
@@ -777,12 +777,13 @@ but does not modify the alert. This is the audit trail the problem statement req
 | # | Page | Purpose | Required |
 |---|---|---|---|
 | 1 | **Upload & Validate** | Load CSV/Excel/JSON, show validation report with defects, confirm load | Level 1 ✓ |
-| 2 | **Watchlist** | Filterable table: customer_id, product, outstanding, score, band, confidence, top signals, status. Filters by band, product, segment, emirate. Click → customer detail | Level 1 ✓ |
+| 2 | **Watchlist** | Filterable table: customer_id, product, outstanding, score, band, confidence, top signals, status. Filters by band, product, segment, region. Click → customer detail | Level 1 ✓ |
 | 3 | **Customer Detail** | Score breakdown (signal-by-signal), repayment timeline chart, exposure over time, module indices (RBDI/CFSI/LPI gauges), roll-forward probabilities, LLM narrative, exception explanation if applicable | Level 1 ✓ |
 | 4 | **Analyst Review** | Select an alert → see full evidence → record decision (Continue Monitoring / Requires Investigation / False Positive / Escalate) + free-text reason. Decision list shows history | Level 1 ✓ |
-| 5 | **Portfolio + Eval** | Heatmap: band × segment/product/emirate. Cluster alerts with lift and momentum. Exposure at risk per segment. LLM portfolio briefing. **Eval panel:** confusion matrix vs ground truth, High/Critical catch rate, thin-file false-positive rate, per-archetype breakdown. Judges can see accuracy live | Extra (high demo value) |
+| 5 | **Portfolio + Eval** | Heatmap: band × segment/product/region. Cluster alerts with lift and momentum. Exposure at risk per segment. LLM portfolio briefing. **Eval panel:** confusion matrix vs ground truth, High/Critical catch rate, thin-file false-positive rate, per-archetype breakdown. Judges can see accuracy live | Extra (high demo value) |
 | 6 | **Rules Editor** | Edit signal weights/thresholds → instant re-score (Stage 2 only, ~0.5s). Before/after tier counts, score distribution shift. Download modified rules JSON | Extra |
-| 7 | **What-If Simulator** | Select a customer → adjust income, DPD, exposure sliders → see score and band change in real time. Powered by `score_customer()` with modified inputs | Extra |
+| 7 | **Investigation Workspace** | Select a customer → correlated deterioration patterns, recommended interventions by urgency, 12-month score and indicator history, and a case file for interventions, ownership and analyst notes | Extra |
+| 7b | **RBI Reporting** | SMA distribution and migration matrix, SMA trend, EWS compliance tiles (30-day TAT, 7-day escalation, 180-day resolution), SMA-2/NPA detail, Excel export | Extra |
 | 8 | **AI Assistant** | Chat interface grounded in customer data. "Why is CIF100150 flagged?" → grounded answer. Only available when LLM is on | Extra |
 
 ### 9.2 Watchlist Columns
@@ -792,7 +793,7 @@ but does not modify the alert. This is the audit trail the problem statement req
 | Customer ID | `customers.customer_id` |
 | Customer Type | INDIVIDUAL / SME |
 | Product(s) | Facility product codes |
-| Outstanding (AED) | Sum of `facilities.outstanding_balance` |
+| Outstanding (₹) | Sum of `facilities.outstanding_balance` |
 | Warning Score | `alerts.warning_score` |
 | Band | Low / Medium / High / Critical |
 | Confidence | High / Medium / Low |
@@ -807,7 +808,7 @@ but does not modify the alert. This is the audit trail the problem statement req
 ```
 ┌─────────────────────────────────────────────────────────┐
 │  CIF100XXX — Hassan Ali   │  Band: HIGH  │  Score: 62  │
-│  Individual · Mass · Dubai │  Confidence: High           │
+│  Individual · Mass · Mumbai│  Confidence: High           │
 │  Trajectory: Deteriorating │  Roll Prob: 68% (30d)       │
 ├──────────────────────┬──────────────────────────────────┤
 │  MODULE INDICES      │  TRIGGERED SIGNALS               │
@@ -828,7 +829,7 @@ but does not modify the alert. This is the audit trail the problem statement req
 │  with delays averaging 12 days. Monthly salary has      │
 │  declined 28% over the last two quarters. Debt burden   │
 │  is at 54%, above the 50% regulatory cap. One missed    │
-│  payment in June was mitigated (Eid holiday, verified). │
+│  payment in June was mitigated (Bakrid holiday, verified).│
 │  Trajectory is deteriorating — RM outreach recommended."│
 ├─────────────────────────────────────────────────────────┤
 │  ML SECOND OPINION: P(deterioration 90d) = 71%          │
@@ -885,7 +886,7 @@ sentinel/
 │   ├── validate.py                  ← Schema checks, dedup, FK integrity, date parsing
 │   └── mapping.py                   ← Column alias map (+ LLM helper for unknown headers)
 ├── features/
-│   ├── repayment.py                 ← S1: per-month late/missed, lunar excuse
+│   ├── repayment.py                 ← S1: per-month late/missed, holiday excuse
 │   ├── cashflow.py                  ← S2: inflow trends, salary stopped, balance erosion
 │   ├── exposure.py                  ← S3: utilisation, DBR (individuals only), bureau
 │   ├── exceptions.py                ← S4: mitigation score with guardrails
@@ -988,7 +989,7 @@ the modular layout (§10.2) between Steps 4 and 5, only after all Level 1 capabi
 
 - [ ] `sentinel/metrics.py` — Stage 1: compute all 21 metric values per customer
       (vectorised pandas, ~0.4s for 600 customers). **Key implementation details:**
-  - RS01, RS04: count per **month** not per instalment; excuse lunar holidays
+  - RS01, RS04: count per **month** not per instalment; excuse moon-sighting holidays
   - RS07, RS08: YoY for SMEs; salary_transfer_flag check for RS09
   - RS14: individuals only; NOT_EVALUATED for SMEs
   - DQ01–DQ03: flag completeness, never add risk points
@@ -1005,7 +1006,7 @@ Eval shows catch rate, false-alarm rate, and per-archetype breakdown.
 **Time: 3.5 – 5 hours**
 
 - [ ] Watchlist page in `app.py` — table with all required columns, filters
-      (band, product, segment, emirate, DPD bucket, confidence), sorted by tier
+      (band, product, segment, region, DPD bucket, confidence), sorted by tier
       then exposure × roll probability
 - [ ] Customer page in `app.py` — score breakdown (points per signal), fired signals
       with value vs threshold and reason, mitigation note, module indices, charts
@@ -1035,7 +1036,7 @@ Eval shows catch rate, false-alarm rate, and per-archetype breakdown.
 
 - [ ] `sentinel/insights.py` → roll-rate matrix from delinquency snapshots (product × vintage)
 - [ ] Roll-forward probabilities added to customer output and watchlist
-- [ ] Segment concentration test: category × emirate, product × emirate (matches planted clusters)
+- [ ] Segment concentration test: category × region, product × region (matches planted clusters)
 - [ ] Portfolio page: tier mix donut, exposure at risk, emerging-cluster table (segment, n,
       at-risk rate, lift, momentum), roll-rate matrix heatmap
 - [ ] **Eval panel on Portfolio page:** confusion matrix vs ground truth, catch rate on
@@ -1064,7 +1065,7 @@ Eval shows catch rate, false-alarm rate, and per-archetype breakdown.
 - [ ] LightGBM second opinion column (train on time-split, show alongside rules score)
 - [ ] SHAP waterfall chart on Customer page (per-prediction contributions)
 - [ ] AI Assistant page — analyst chat grounded in customer evidence JSON
-- [ ] Additional cluster dimensions beyond category × emirate
+- [ ] Additional cluster dimensions beyond category × region
 
 ### If the Clock Runs Short (Cut Order)
 
@@ -1091,9 +1092,9 @@ The 5 Level 1 capabilities (Steps 1–4) are **never cut**.
 
 ### Demo 2: Temporary Exception — Eid Holiday Delay
 **Customer archetype:** ISOLATED_EXCEPTION
-**What happens:** RS01 detects 1 late payment. But S4 exception engine finds: due date was 2 days after Eid Al Fitr (lunar, not adjusted), customer paid within 3 days, 18 prior on-time payments, verified holiday evidence on file. Mitigation score is high → RS05 fires → score reduced by 8 points. Band = Low. LLM explains the reasoning in plain English.
+**What happens:** RS01 detects 1 late payment. But S4 exception engine finds: due date was 2 days after Eid-ul-Fitr (moon-sighting, not adjusted), customer paid within 3 days, 18 prior on-time payments, verified holiday evidence on file. Mitigation score is high → RS05 fires → score reduced by 8 points. Band = Low. LLM explains the reasoning in plain English.
 
-**Why this impresses:** Shows the system can distinguish a holiday blip from a real problem, using the actual UAE holiday calendar.
+**Why this impresses:** Shows the system can distinguish a holiday blip from a real problem, using the actual RBI holiday calendar.
 
 ### Demo 3: Seasonal SME — NOT a False Alarm
 **Customer archetype:** SME_SEASONAL
@@ -1102,8 +1103,8 @@ The 5 Level 1 capabilities (Steps 1–4) are **never cut**.
 **Why this impresses:** Shows we avoid false alarms on seasonal businesses while still catching genuine SME cash-flow stress (separate demo).
 
 ### Demo 4: Portfolio Risk Cluster — Construction Sector
-**Cluster:** CLU-SME-CONSTR-NORTH
-**What happens:** Segment concentration test finds: construction SMEs in Sharjah/Ajman have 4× the at-risk rate vs the overall portfolio, with positive momentum (getting worse). 8 of 14 customers show elevated CFSI. LLM briefing: *"Emerging concentration in Northern Emirates construction: 8 SME clients showing coordinated cash-flow deterioration since March, with AED 12M exposure at risk."*
+**Cluster:** CLU-SME-CONSTR-NCR
+**What happens:** Segment concentration test finds: construction MSMEs in Delhi NCR/Pune have 4× the at-risk rate vs the overall portfolio, with positive momentum (getting worse). 8 of 14 customers show elevated CFSI. LLM briefing: *"Emerging concentration in Delhi NCR/Pune construction: 8 MSME clients showing coordinated cash-flow deterioration since March, with ₹28 Cr exposure at risk."*
 
 **Why this impresses:** Portfolio-level pattern detection, not just individual scoring.
 
@@ -1146,7 +1147,7 @@ path if we continue development.
 | 4 | Point-in-time for past dates is approximate (filter by payment_date ≤ as_of) | Good enough for trajectory comparison | Partial-payment history before as_of not fully reconstructable | Store payment events, not settled status |
 | 5 | Severe anchors default to 2× threshold where not configured | Avoids tuning 21 pairs by hand | Some signal strengths miscalibrated | Tune against eval panel |
 | 6 | Debt burden NOT evaluated for SMEs | Salary-based ratio is meaningless for businesses | SME over-leverage caught only via utilisation and new credit | Add debt-service coverage from receipts |
-| 7 | Clusters test only category × emirate and product × emirate | Matches the planted clusters and is explainable | Misses other segment combinations | Add generic N-dimensional segment search |
+| 7 | Clusters test only category × region and product × region | Matches the planted clusters and is explainable | Misses other segment combinations | Add generic N-dimensional segment search |
 | 8 | Roll probability is empirical rate per bucket × product group, not per-customer adjusted | Transparent; uses real transition data | Same probability for all customers in a bucket | Logistic adjustment with RBDI/CFSI multipliers |
 | 9 | Template text is the default; LLM is opt-in | No runtime dependency during judging | LLM features invisible if API unavailable | Pre-test API key before the demo |
 | 10 | Weights tuned once from prototype; not cross-validated | Configurable via Rules Editor | Some tiers may be off vs ground truth in edge cases | Iterate with the eval panel |
@@ -1175,9 +1176,9 @@ Root causes (roughly half each):
 **Mitigation:** Tune RS07 weight further (currently 20); consider a "compound signal"
 bonus when multiple cash-flow signals fire together.
 
-### 16.2 Hospitality-in-Dubai Cluster Not Flagged
+### 16.2 Hospitality-in-Bengaluru Cluster Not Flagged
 
-The planted `CLU-RET-HOSP-DXB` cluster (hospitality employees in Dubai, pay cuts) is
+The planted `CLU-RET-HOSP-BLR` cluster (hospitality employees in Bengaluru, pay cuts) is
 not detected as an emerging cluster. The customers mostly reach Watch/Medium tier —
 the cluster test counts only High/Critical (Amber/Red). The construction cluster is
 found because its customers deteriorate further.

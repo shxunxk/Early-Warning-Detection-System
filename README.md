@@ -242,33 +242,38 @@ leaves the machine.
 
 ## 7. Data
 
-Two fully **synthetic** UAE bank portfolios (AED); no real customers or PII. Both appear in
+Two fully **synthetic** Indian bank portfolios (INR); no real customers or PII. Both appear in
 the **Upload & Validate → Bundled dataset** dropdown (each with a *dirty* variant for testing
 validation) and are processed entirely on the local machine (load + score + forecast < 10 s).
 
 | Dataset | Profile | Customers | NPL (90+ DPD, by value) | Planted clusters |
 |---|---|---|---|---|
-| **Synthetic Gulf Bank** (`data/sample`) | Diversified, retail-led, Dubai/Abu Dhabi | 600 (30% SME) | 0.2% (early-warning focus, no legacy defaults) | Construction SMEs Sharjah/Ajman; hospitality staff Dubai |
-| **Northern Emirates Commercial Bank** (`data/northern_sme`) | SME-heavy mid-market lender in Sharjah / Ajman / RAK, stressed 2026 | 1,200 (45% SME) | 5.6% (retail 3.4%, SME 5.9%) with a legacy NPL stock in collections | Hauliers Sharjah/RAK (freight and fuel costs); retail-trade staff Sharjah/Ajman (pay cuts); restaurants Ajman/Sharjah (weak summer) |
+| **Synthetic Bharat Commercial Bank** (`data/sample`) | Diversified, retail-led, Mumbai/Delhi NCR/Bengaluru | 600 (30% SME) | 0.1% (early-warning focus, no legacy defaults) | Construction MSMEs Delhi NCR/Pune; hospitality staff Bengaluru |
+| **Northern Plains Commercial Bank** (`data/northern_sme`) | MSME-heavy mid-market lender in Ludhiana / Jalandhar / Kanpur, stressed 2026 | 1,200 (45% SME) | 12.8% (retail secured 1.7%, retail unsecured 4.9%, MSME 13.3%) with a legacy NPL stock in collections | Hauliers Ludhiana/Kanpur (freight and diesel costs); retail-trade staff Ludhiana/Jalandhar (pay cuts); restaurants Agra/Meerut (weak monsoon season) |
 
-The tables below describe the Gulf Bank sample; the Northern dataset uses the same schema at about twice the volume.
+The tables below describe the Bharat Commercial Bank sample; the Northern dataset uses the same schema at about twice the volume.
 
 | Table | Rows | Grain |
 |---|---|---|
-| customers | 600 | customer (420 individuals, 180 SMEs) |
-| facilities | 1,037 | loan / card / working-capital line (7 products) |
-| repayments | 19,252 | instalment due (FIFO payment allocation) |
-| delinquency | 19,508 | facility × month-end |
-| exposure | 13,744 | customer × month-end (on-us + credit bureau) |
-| financials | 13,681 | customer × month (salary, receipts, balances, bounced payments) |
-| exception_evidence | 51 | documented reasons for irregular payments (verified Y/N) |
-| bank_holidays | 24 | fixed and lunar holidays |
+| customers | 600 | customer (420 individuals, 180 MSMEs) |
+| facilities | 1,069 | loan / card / cash-credit line (7 products) |
+| repayments | 19,414 | instalment due (FIFO payment allocation) |
+| delinquency | 19,669 | facility × month-end |
+| exposure | 13,617 | customer × month-end (on-us + credit bureau) |
+| financials | 13,575 | customer × month (salary, receipts, balances, bounced payments) |
+| exception_evidence | 71 | documented reasons for irregular payments (verified Y/N) |
+| bank_holidays | 22 | published and moon-sighting holidays |
 
 - **History:** 24 months, Oct 2024 to Sep 2026; as-of date **2026-09-30**.
 - **Behaviour:** 16 planted behaviour archetypes covering all 8 challenge scenarios, plus 2
-  emerging risk clusters (construction SMEs in Sharjah/Ajman; hospitality employees in Dubai).
-- **Traps:** seasonal SMEs, Eid-holiday delays, unverified excuses, off-us delinquency
-  leading on-us, salary credited elsewhere, data-feed gaps.
+  emerging risk clusters (construction MSMEs in Delhi NCR/Pune; hospitality employees in
+  Bengaluru).
+- **Calibration:** urban salaried borrowers — median declared income about ₹53,650 a month;
+  segments are Mass (< ₹40k), Mass Affluent (₹40k–₹1L) and Affluent (≥ ₹1L). MSME monthly
+  receipts annualise inside the MSME turnover definitions (micro ≤ ₹5 cr, small ≤ ₹50 cr,
+  medium ≤ ₹250 cr); median SME turnover is about ₹3.2 cr. The book is about ₹236 Cr.
+- **Traps:** seasonal MSMEs, moon-sighting-holiday delays, unverified excuses, off-us
+  delinquency leading on-us, salary credited elsewhere, data-feed gaps.
 - **`data/sample/`:** clean set in CSV and Excel (JSON is regenerable) plus the rules file.
 - **`data/dirty/`:** the same data with 72 logged defects for validation testing.
 - **`data/_ground_truth/`:** planted archetype and band per customer, for evaluation only.
@@ -289,15 +294,15 @@ On the clean sample with the current rules:
 
 | Measure | Result |
 |---|---|
-| Records ingested (CSV, Excel or JSON) | 67,897, 0 issues |
-| Dirty sample | 516 rows rejected, 42 warnings; all 15 injected defect types caught |
-| Tier distribution | 482 Green · 49 Watch · 47 Amber · 22 Red |
-| Planted High/Critical rated Amber or Red | 57.6% (75.8% with the earlier 25/45/70 bands) |
+| Records ingested (CSV, Excel or JSON) | 68,037, 0 issues |
+| Dirty sample | 641 rows rejected, 42 warnings; all 15 injected defect types caught |
+| Tier distribution | 452 Green · 55 Watch · 53 Amber · 40 Red |
+| Planted High/Critical rated Amber or Red | 59.7% |
 | Planted low-risk rated Amber or Red (false alarms) | 0.2% |
-| Within one tier of planted band | 97.3% |
-| Trap customers flagged Amber/Red | 1 / 130 |
-| Top emerging cluster | Construction & Contracting · Sharjah (planted) |
-| Forecast AUC (out-of-time) | 0.96 next month · 0.89 next quarter |
+| Within one tier of planted band | 96.8% |
+| Trap customers flagged Amber/Red | 1 / 153 |
+| Top emerging cluster | Construction & Contracting · Pune (planted) |
+| Forecast AUC (out-of-time) | 0.96 next month · 0.90 next quarter |
 | Scoring time (600 customers) | ~0.5 s per re-score |
 
 ---
@@ -329,7 +334,7 @@ sentinel/
   store.py                   DuckDB alerts and decisions
 datagen/                     synthetic data generator, rules source, dirty variant, checks
 scripts/llm_bakeoff.py       compare local LLMs on grounding, latency and tokens
-data/                        Gulf Bank sample/dirty/ground truth/rules; data/northern_sme/ second portfolio
+data/                        Bharat Commercial Bank sample/dirty/ground truth/rules; data/northern_sme/ second portfolio
 docs/                        architecture, implementation and UI guides
 sql/schema.sql               DuckDB DDL for inputs and outputs
 FINAL_ARCHITECTURE.md        team architecture document
@@ -350,7 +355,7 @@ models.ipynb                 model exploration notebook
 | [docs/app_architecture.md](docs/app_architecture.md) | Design review of the Sentinel spec, recommended architecture, trade-offs |
 | [docs/prototype_1h_plan.md](docs/prototype_1h_plan.md) | Timeboxed prototype plan, trade-offs and build results |
 | [data/README.md](data/README.md) | Synthetic data dictionary, archetypes and traps |
-| [FINAL_ARCHITECTURE.md](FINAL_ARCHITECTURE.md) | Team architecture (What-If, AI Assistant, ML) |
+| [FINAL_ARCHITECTURE.md](FINAL_ARCHITECTURE.md) | Team architecture (Investigation, RBI Reporting, AI Assistant, ML) |
 
 ---
 

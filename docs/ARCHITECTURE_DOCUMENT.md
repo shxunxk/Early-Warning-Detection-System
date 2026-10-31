@@ -78,7 +78,7 @@ Design and build an Early Warning Detection System that satisfies **5 Level 1 ca
 
 ### 2.4 Target Setting
 
-- **Geography:** UAE (AED currency, Emirates-based distribution)
+- **Geography:** India (INR currency, metro and tier-2 city distribution)
 - **As-of Date:** 2026-09-30
 - **History Window:** 24 months (October 2024 - September 2026)
 - **Customer Segments:** Individual (retail) and SME
@@ -202,7 +202,7 @@ The `sentinel/` package contains 14 Python modules, each with a single responsib
 - Result cached in `st.session_state` (~0.4s for 600 customers)
 
 **Stage 2 - Scoring (Cheap, Real-time):**
-- Re-runs on every rule change, What-If scenario, or parameter edit
+- Re-runs on every rule change or parameter edit
 - Maps metrics to signal strengths using absolute thresholds
 - Computes weighted sum, mitigation, triggers, confidence, trajectory
 - Result: scored DataFrame with tier, score, reasons, evidence (~0.5s)
@@ -215,7 +215,7 @@ The `sentinel/` package contains 14 Python modules, each with a single responsib
 
 | Table | Key Columns | Grain |
 |-------|------------|-------|
-| **customers** | customer_id, customer_type, customer_segment, portfolio, emirate, declared_monthly_income, declared_annual_turnover, salary_transfer_flag | One row per customer |
+| **customers** | customer_id, customer_type, customer_segment, portfolio, region, declared_monthly_income, declared_annual_turnover, salary_transfer_flag | One row per customer |
 | **facilities** | facility_id, customer_id, product_code, product_name, facility_type, sanctioned_amount, outstanding_balance, facility_status | One row per facility |
 | **repayments** | repayment_id, facility_id, customer_id, due_date, amount_due, payment_date, amount_paid, days_late, repayment_status | One row per instalment |
 | **financials** | month, customer_id, salary_credit, business_receipts, total_inflows, total_outflows, net_cash_flow, closing_balance | Monthly per customer |
@@ -226,12 +226,12 @@ The `sentinel/` package contains 14 Python modules, each with a single responsib
 
 ### 5.2 Synthetic Portfolios
 
-**Portfolio 1: Synthetic Gulf Bank**
+**Portfolio 1: Synthetic Bharat Commercial Bank**
 - 600 customers (420 individual, 180 SME)
 - Retail-led portfolio, 0.2% NPL rate
-- Default profile, AED currency
+- Default profile, INR currency
 
-**Portfolio 2: Northern Emirates Commercial Bank**
+**Portfolio 2: Northern Plains Commercial Bank**
 - 1,200 customers (660 individual, 540 SME)
 - SME-heavy mid-market bank, 5.6% NPL rate
 - Heavier stress archetypes including LEGACY_NPL
@@ -328,7 +328,7 @@ The metrics engine computes point-in-time values for every customer at a given a
 
 | Metric | Description | Logic |
 |--------|-------------|-------|
-| `late_or_missed_instalments` | Count of months with late/missed payments | Per-month (not per-instalment) in trailing window. Excuses lunar holidays with grace_days=3 and up to 5-day lunar adjustment |
+| `late_or_missed_instalments` | Count of months with late/missed payments | Per-month (not per-instalment) in trailing window. Excuses moon-sighting holidays with grace_days=3 and up to 5-day adjustment |
 | `partial_payments` | Count of partial payments | amount_paid > 0 but < amount_due |
 | `isolated_delay_recovered` | Boolean: single late month followed by recovery | Exactly 1 late month in window AND most recent 2 months current |
 | `evidence_verified` | Boolean: exception evidence exists and is verified | Matches customer_id + verified_flag=True |
@@ -822,7 +822,7 @@ The analyst's starting page providing a portfolio-level overview:
 
 #### Page 2: Upload & Validate
 
-- **Bundled Datasets:** 4 pre-loaded options (Gulf Bank clean/dirty, Northern Emirates clean/dirty)
+- **Bundled Datasets:** 4 pre-loaded options (Bharat Commercial Bank clean/dirty, Northern Plains clean/dirty)
 - **File Upload:** CSV/Excel/JSON upload with drag-and-drop
 - **Validation Dashboard:** KPIs (total records, rejected, warnings), per-table summary cards, relationship integrity matrix, filterable issues table
 
@@ -841,7 +841,7 @@ The analyst's starting page providing a portfolio-level overview:
 
 #### Page 4: Watchlist
 
-- **9 Filters:** Tier, product, segment, portfolio, DPD range, emirate, trajectory, confidence, SMA classification
+- **9 Filters:** Tier, product, segment, portfolio, DPD range, region, trajectory, confidence, SMA classification
 - **Sortable Table:** Columns include priority score, risk score, tier badge, forecast probability, top signal, recommended intervention
 - **Actions:** Click to open Customer Detail or Investigation page
 
@@ -938,7 +938,7 @@ uv run python datagen/generate.py --profile northern_sme --customers 1200 --seed
 | CURED | 5% | Was delinquent, now recovered |
 | THIN_FILE | 5% | Minimal history, bureau no-hit |
 | SALARY_ELSEWHERE | 4% | Salary not visible at this bank |
-| LEGACY_NPL | - | Already in 90+ DPD (Northern Emirates only) |
+| LEGACY_NPL | - | Already in 90+ DPD (Northern Plains only) |
 
 **SME Archetypes (6):**
 
@@ -953,11 +953,11 @@ uv run python datagen/generate.py --profile northern_sme --customers 1200 --seed
 
 ### 15.4 Profile System
 
-| Parameter | Gulf Bank (default) | Northern Emirates |
+| Parameter | Bharat Commercial Bank (default) | Northern Plains |
 |-----------|-------------------|-------------------|
 | Customers | 600 | 1,200 |
 | SME Ratio | 30% | 45% |
-| Currency | AED | AED |
+| Currency | INR | INR |
 | Risk Clusters | 2 | 3 |
 | NPL Rate | ~0.2% | ~5.6% |
 | Stress Level | Normal | Heavy |
@@ -1005,7 +1005,7 @@ data/{profile}/
 
 ## 17. Performance & Validation Results
 
-### 17.1 Clean Sample Results (Gulf Bank, 600 customers)
+### 17.1 Clean Sample Results (Bharat Commercial Bank, 600 customers)
 
 | Metric | Value |
 |--------|-------|
@@ -1045,7 +1045,7 @@ data/{profile}/
 
 | Cluster | Segment | Lift | Significance |
 |---------|---------|------|-------------|
-| Top cluster | Construction & Contracting, Sharjah | 4.3x | High |
+| Top cluster | Construction & Contracting, Pune | 3.2x | High |
 
 ---
 
@@ -1063,8 +1063,8 @@ data/{profile}/
 | `755f532` | Sentinel EWS Streamlit prototype |
 | `bc01280` | LLM bake-off (selected qwen3:4b-instruct) |
 | `a5ae4c9` | Gitignore and LLM documentation |
-| `91f796c` | **FINAL_ARCHITECTURE:** What-If Simulator, AI Assistant, LightGBM+SHAP, recovery profiles |
-| `66da100` | New files for Northern Emirates dataset |
+| `91f796c` | **FINAL_ARCHITECTURE:** AI Assistant, LightGBM+SHAP, recovery profiles |
+| `66da100` | New files for Northern Plains dataset |
 | `1478621` | **ML Enhancement:** SMOTE, cross-validation, threshold tuning, RBI regulatory docs |
 | `ed62ea7` | **Phase 2:** Risk correlation, interventions, priority scoring, RBI SMA reporting, trend analysis |
 
