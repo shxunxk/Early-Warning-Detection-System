@@ -11,7 +11,8 @@ import re
 import urllib.request
 
 OLLAMA = os.environ.get("OLLAMA_HOST", "http://localhost:11434")
-PREFERRED = ["qwen3:8b", "llama3.1:8b", "qwen2.5:7b", "llama3.2:3b"]
+# Small models first: summaries are short and grounded, so 3-4B is the speed/quality sweet spot.
+PREFERRED = ["qwen3:4b-instruct", "llama3.2:3b", "qwen3:8b", "llama3.1:8b"]
 
 
 def available_models() -> list[str]:
@@ -61,30 +62,51 @@ def grounded(text: str, ev: dict, reasons: list[str]) -> tuple[bool, list[float]
     for n in _numbers(text):
         if abs(n) <= 12:  # small counts / months are fine
             continue
-        if not any(abs(n - a) <= max(0.6, 0.01 * abs(a)) for a in allowed):
+        # Sign-insensitive: "a balance erosion of 76%" correctly restates "-76%".
+        if not any(abs(abs(n) - abs(a)) <= max(0.6, 0.01 * abs(a)) for a in allowed):
             bad.append(n)
     return not bad, bad
 
 
-def llm_summary(cid: str, ev: dict, reasons: list[str], model: str) -> dict:
-    fired = [s for s in ev["signals"] if s["points"]]
-    facts = dict(customer=cid, tier=ev["tier"], risk_score=ev["risk_score"],
-                 confidence=ev["confidence"], current_dpd=ev["current_dpd"],
-                 mitigation=ev["mitigation"], trigger=ev["trigger"], indices=ev["indices"],
-                 fired_signals=[{k: s[k] for k in ("name", "value", "operator", "threshold",
-                                                    "points")} for s in fired])
-    prompt = (
-        "You are a credit risk analyst assistant at a bank. Write a 4-6 sentence early "
-        "warning summary for a relationship manager, then one line starting 'Suggested "
-        "action:'. Use ONLY the facts in the JSON. Do not invent numbers, dates or causes. "
-        "Quote numbers exactly as given. Higher score = higher risk.\n\nFACTS:\n"
-        + json.dumps(facts, default=str))
-    body = json.dumps(dict(model=model, prompt=prompt, stream=False, think=False,
-                           options=dict(temperature=0.1, num_predict=350))).encode()
+SYSTEM = (
+    "You write early-warning credit risk notes for bank relationship managers. "
+    "Tiers from least to most severe: Green (no concern), Watch, Amber, Red. "
+    "Risk score is 0-100 and higher means riskier. "
+    "Use only the facts given. Never invent numbers, dates, causes or customer details. "
+    "Copy numbers exactly as written in the facts. Do not repeat the customer ID. "
+    "No preamble, no headings, no bullet points.")
+
+
+def facts_for(ev: dict, reasons: list[str], action: str = "") -> dict:
+    f = dict(tier=ev["tier"], risk_score=f"{ev['risk_score']:.0f}/100",
+             confidence=ev["confidence"], days_past_due=int(ev["current_dpd"]),
+             risk_drivers=reasons[:5] or ["No risk signals are firing"])
+    if ev.get("mitigation", 0) < 0:
+        f["mitigation"] = "One-off delay with recovery and clean history reduced the score"
+    if ev.get("mitigation_blocked"):
+        f["mitigation"] = "One-off delay NOT mitigated because underlying stress exists"
+    if ev.get("trigger"):
+        f["hard_trigger"] = ev["trigger"]
+    if ev["confidence"] == "Low":
+        f["data_note"] = "Limited data; missing information is not treated as risk"
+    if action:
+        f["policy_action_for_tier"] = action
+    return f
+
+
+def llm_summary(cid: str, ev: dict, reasons: list[str], model: str, action: str = "") -> dict:
+    facts = facts_for(ev, reasons, action)
+    prompt = ("Write 3-5 sentences explaining this customer's risk position and what is "
+              "driving it, then a final line starting 'Suggested action:' based on "
+              "policy_action_for_tier.\n\nFACTS:\n" + json.dumps(facts, indent=1))
+    body = json.dumps(dict(model=model, system=SYSTEM, prompt=prompt, stream=False, think=False,
+                           options=dict(temperature=0.1, num_predict=300))).encode()
     req = urllib.request.Request(f"{OLLAMA}/api/generate", data=body,
                                  headers={"Content-Type": "application/json"})
     with urllib.request.urlopen(req, timeout=120) as r:
-        text = json.load(r).get("response", "").strip()
-    text = re.sub(r"<think>.*?</think>", "", text, flags=re.S).strip()
-    ok, bad = grounded(text, ev, reasons)
-    return dict(text=text, grounded=ok, ungrounded_numbers=bad, model=model)
+        res = json.load(r)
+    text = re.sub(r"<think>.*?</think>", "", res.get("response", ""), flags=re.S).strip()
+    ok, bad = grounded(text, {"cid": cid, **facts}, reasons)
+    return dict(text=text, grounded=ok, ungrounded_numbers=bad, model=model,
+                prompt_tokens=res.get("prompt_eval_count"), output_tokens=res.get("eval_count"),
+                seconds=round(res.get("total_duration", 0) / 1e9, 1))

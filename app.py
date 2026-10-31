@@ -355,21 +355,22 @@ elif page == "Customer":
         st.dataframe(idx, hide_index=True, use_container_width=True)
         st.subheader("AI risk summary")
         model = llm.pick_model(models)
+        # Cached per customer + rules version + model: repeat views cost no tokens.
+        key = f"sum_{cid}_{rules_key(ss.rules)}_{model}"
         if st.button("Generate summary" + (f" ({model})" if model else " (template)")):
             if model:
                 with st.spinner(f"Running {model} locally…"):
                     try:
-                        out = llm.llm_summary(cid, evd, r.reasons, model)
-                        ss[f"sum_{cid}"] = out
+                        ss[key] = llm.llm_summary(cid, evd, r.reasons, model,
+                                                  r.recommended_action)
                     except Exception as e:  # noqa: BLE001
-                        ss[f"sum_{cid}"] = dict(text=llm.template_summary(
+                        ss[key] = dict(text=llm.template_summary(
                             cid, evd, r.reasons, r.customer_name), grounded=True, model=None,
                             error=str(e))
             else:
-                ss[f"sum_{cid}"] = dict(text=llm.template_summary(cid, evd, r.reasons,
-                                                                   r.customer_name),
-                                        grounded=True, model=None)
-        out = ss.get(f"sum_{cid}")
+                ss[key] = dict(text=llm.template_summary(cid, evd, r.reasons, r.customer_name),
+                               grounded=True, model=None)
+        out = ss.get(key)
         if out:
             if out.get("model") and not out["grounded"]:
                 st.warning(f"LLM output contained numbers not in the evidence "
@@ -378,7 +379,9 @@ elif page == "Customer":
             else:
                 st.write(out["text"])
             st.caption(f"Source: {out.get('model') or 'deterministic template'}"
-                       + (" · numbers verified against evidence" if out.get("model") else ""))
+                       + (f" · numbers verified against evidence · {out['prompt_tokens']} in / "
+                          f"{out['output_tokens']} out tokens · {out['seconds']} s"
+                          if out.get("model") else ""))
 
     t = ss.tables
     st.subheader("History")

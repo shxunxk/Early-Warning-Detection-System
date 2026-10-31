@@ -18,8 +18,21 @@ Optional local LLM summaries (no API keys; the app works without it):
 
 ```bash
 ollama serve
-ollama pull qwen3:8b        # or llama3.2:3b for a faster, smaller model
+ollama pull qwen3:4b-instruct   # default; llama3.2:3b is the fallback
 ```
+
+Use the **instruct** tag: plain `qwen3:4b` is the thinking-only build, which spends its token
+budget on reasoning text. Model choice from `scripts/llm_bakeoff.py` (20 customers across all
+tiers, M5 Pro):
+
+| Model | Grounded | Median latency | Tokens in / out | Notes |
+|---|---|---|---|---|
+| **qwen3:4b-instruct** | 100% | 1.4 s | ~268 / ~107 | Most accurate wording; default |
+| llama3.2:3b | 100% | 1.0 s | ~272 / ~94 | Fastest; occasionally mislabels facts (e.g. a count called "score") |
+| llama3.1:8b | 100% | 2.5 s | ~262 / ~102 | No quality gain for 2× the time and memory |
+
+Every summary's numbers are checked against the evidence; failures fall back to template text.
+Summaries are cached per customer, rules version and model.
 
 ## Pages
 | Page | What it shows |
