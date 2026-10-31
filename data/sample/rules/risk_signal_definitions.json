@@ -383,5 +383,18 @@
       "maximum_band": "Watch",
       "description": "Missing data alone never escalates beyond Watch (insufficient evidence)"
     }
-  ]
+  ],
+  "rbi_ews_config": {
+    "alert_examination_tat_days": 30,
+    "escalation_deadline_days": 7,
+    "resolution_deadline_days": 180,
+    "high_exposure_threshold_aed": 1000000,
+    "sma_buckets": [
+      [0, 0, "Standard"],
+      [1, 30, "SMA-0"],
+      [31, 60, "SMA-1"],
+      [61, 90, "SMA-2"],
+      [91, 999999, "NPA"]
+    ]
+  }
 }
