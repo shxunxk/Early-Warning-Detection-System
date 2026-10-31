@@ -1,0 +1,1201 @@
+customer_id,customer_name,customer_type,date_of_birth,employment_type,employment_or_business_category,customer_segment,portfolio,emirate,customer_since,onboarding_risk_grade,salary_transfer_flag,declared_monthly_income,declared_annual_turnover,years_in_business,legal_form,relationship_manager_id
+CIF500001,Hana Smith,INDIVIDUAL,1978-05-24,SALARIED,Hospitality & Tourism,Mass,Consumer Banking,Ajman,2023-09-02,A,Y,5100.0,,,,
+CIF500002,Rania D'Souza,INDIVIDUAL,1999-07-19,SELF_EMPLOYED,Self-Employed Professional,Mass Affluent,Consumer Banking,Dubai,2016-04-03,A,N,18000.0,,,,RM-06
+CIF500003,Amira Menon,INDIVIDUAL,1992-06-13,SALARIED,Retail Trade,Mass,Consumer Banking,Sharjah,2017-12-04,A,Y,6400.0,,,,
+CIF500004,Zainab Thomas,INDIVIDUAL,1986-03-10,SALARIED,IT & Telecom,Mass,Consumer Banking,Dubai,2018-11-05,B,Y,14400.0,,,,
+CIF500005,Grace Qureshi,INDIVIDUAL,1967-06-07,SALARIED,Education,Mass,Consumer Banking,Dubai,2016-04-06,B,Y,13900.0,,,,
+CIF500006,Mohammed Pereira,INDIVIDUAL,1974-11-14,SALARIED,Education,Mass,Consumer Banking,Ras Al Khaimah,2022-08-07,D,Y,9400.0,,,,
+CIF500007,Yousef Menon,INDIVIDUAL,2003-05-02,SALARIED,Education,Mass,Consumer Banking,Umm Al Quwain,2018-07-08,B,Y,10400.0,,,,
+CIF500008,Khalid Thomas,INDIVIDUAL,1981-04-05,SELF_EMPLOYED,Self-Employed Professional,Mass Affluent,Consumer Banking,Dubai,2017-09-09,B,N,20000.0,,,,RM-01
+CIF500009,Joseph Santos,INDIVIDUAL,1969-08-27,SALARIED,Retail Trade,Mass,Consumer Banking,Sharjah,2020-09-10,D,N,13300.0,,,,
+CIF500010,Grace Taylor,INDIVIDUAL,2000-08-02,SELF_EMPLOYED,Self-Employed Professional,Mass,Consumer Banking,Dubai,2023-11-11,B,N,12400.0,,,,
+CIF500011,Aisha Farouk,INDIVIDUAL,1998-10-10,SALARIED,Banking & Finance,Affluent,Consumer Banking,Ajman,2024-02-12,C,Y,67100.0,,,,RM-08
+CIF500012,Ayesha Al Ketbi,INDIVIDUAL,1991-05-01,SALARIED,Hospitality & Tourism,Mass,Consumer Banking,Sharjah,2024-01-13,C,Y,8400.0,,,,
+CIF500013,Faisal D'Souza,INDIVIDUAL,1983-01-04,SALARIED,Education,Mass,Consumer Banking,Ajman,2018-01-14,D,Y,8500.0,,,,
+CIF500014,Nikhil Smith,INDIVIDUAL,1981-06-19,SALARIED,Construction,Mass,Consumer Banking,Sharjah,2021-08-15,B,Y,10600.0,,,,
+CIF500015,Fatima Al Shamsi,INDIVIDUAL,1976-03-07,SALARIED,Government,Mass Affluent,Consumer Banking,Umm Al Quwain,2015-10-16,D,Y,27900.0,,,,RM-08
+CIF500016,Hana Hamdan,INDIVIDUAL,1998-02-07,SALARIED,Hospitality & Tourism,Mass Affluent,Consumer Banking,Dubai,2023-05-17,B,Y,17800.0,,,,RM-06
+CIF500017,Michael Al Nuaimi,INDIVIDUAL,1981-07-28,SALARIED,Construction,Mass,Consumer Banking,Sharjah,2018-05-18,B,Y,5100.0,,,,
+CIF500018,Rahul Haddad,INDIVIDUAL,1995-11-24,SELF_EMPLOYED,Self-Employed Professional,Mass Affluent,Consumer Banking,Sharjah,2017-09-19,C,N,30800.0,,,,RM-12
+CIF500019,Rohan Pereira,INDIVIDUAL,1971-08-14,SALARIED,IT & Telecom,Mass Affluent,Consumer Banking,Sharjah,2020-02-20,B,Y,34900.0,,,,RM-01
+CIF500020,Sarah Khoury,INDIVIDUAL,1997-05-26,SALARIED,Hospitality & Tourism,Mass,Consumer Banking,Ras Al Khaimah,2023-02-21,C,Y,7400.0,,,,
+CIF500021,Bilal Nasser,INDIVIDUAL,1973-07-03,SALARIED,Construction,Mass,Consumer Banking,Dubai,2018-01-22,B,Y,10900.0,,,,
+CIF500022,Zainab Reyes,INDIVIDUAL,1995-05-26,SALARIED,Retail Trade,Mass,Consumer Banking,Sharjah,2020-11-23,B,Y,7300.0,,,,
+CIF500023,Hessa Santos,INDIVIDUAL,1984-02-28,SALARIED,Retail Trade,Mass,Consumer Banking,Ras Al Khaimah,2015-01-24,D,Y,11400.0,,,,
+CIF500024,Nikhil Menon,INDIVIDUAL,1995-09-20,SALARIED,Retail Trade,Mass,Consumer Banking,Sharjah,2014-11-25,E,Y,5300.0,,,,
+CIF500025,Rania Al Shamsi,INDIVIDUAL,1966-04-03,SALARIED,Banking & Finance,Mass Affluent,Consumer Banking,Ras Al Khaimah,2024-08-26,A,Y,20400.0,,,,RM-07
+CIF500026,Hassan Patel,INDIVIDUAL,2001-12-13,SALARIED,Hospitality & Tourism,Mass Affluent,Consumer Banking,Ajman,2026-05-27,C,Y,31900.0,,,,RM-07
+CIF500027,Aisha Malik,INDIVIDUAL,1986-11-25,SALARIED,Healthcare,Mass,Consumer Banking,Sharjah,2019-10-01,C,N,13400.0,,,,
+CIF500028,Mark Patel,INDIVIDUAL,1964-12-10,SALARIED,Hospitality & Tourism,Mass,Consumer Banking,Sharjah,2019-02-02,C,Y,9200.0,,,,
+CIF500029,Nikhil Wilson,INDIVIDUAL,1999-04-15,SALARIED,IT & Telecom,Mass Affluent,Consumer Banking,Umm Al Quwain,2018-04-03,B,N,24400.0,,,,RM-06
+CIF500030,Nikhil Thomas,INDIVIDUAL,1994-07-17,SALARIED,Retail Trade,Mass,Consumer Banking,Sharjah,2022-02-04,C,Y,14100.0,,,,
+CIF500031,Fatima Menon,INDIVIDUAL,1967-06-03,SALARIED,Education,Mass,Consumer Banking,Ajman,2016-07-05,D,Y,10100.0,,,,
+CIF500032,Omar Menon,INDIVIDUAL,1982-02-04,SALARIED,Oil & Gas,Mass Affluent,Consumer Banking,Ras Al Khaimah,2024-04-06,B,Y,32200.0,,,,RM-11
+CIF500033,Bilal Sharma,INDIVIDUAL,1975-05-23,SALARIED,Education,Mass,Consumer Banking,Abu Dhabi,2020-03-07,C,Y,8700.0,,,,
+CIF500034,Sana Mathew,INDIVIDUAL,1976-12-27,SALARIED,Aviation,Mass,Consumer Banking,Umm Al Quwain,2016-01-08,C,Y,13500.0,,,,
+CIF500035,Tariq Al Suwaidi,INDIVIDUAL,1978-08-22,SALARIED,Retail Trade,Mass,Consumer Banking,Sharjah,2021-03-09,A,Y,15500.0,,,,
+CIF500036,Grace D'Souza,INDIVIDUAL,1987-04-15,SALARIED,Healthcare,Mass,Consumer Banking,Sharjah,2023-01-10,D,Y,5100.0,,,,
+CIF500037,Jose Menon,INDIVIDUAL,1972-06-06,SALARIED,IT & Telecom,Mass Affluent,Consumer Banking,Umm Al Quwain,2023-01-11,D,Y,27200.0,,,,RM-12
+CIF500038,Mohammed Haddad,INDIVIDUAL,1970-08-06,SELF_EMPLOYED,Self-Employed Professional,Mass,Consumer Banking,Sharjah,2019-12-12,A,N,10700.0,,,,
+CIF500039,Hessa Reyes,INDIVIDUAL,1982-08-17,SALARIED,Education,Mass,Consumer Banking,Fujairah,2022-04-13,B,Y,7100.0,,,,
+CIF500040,David Silva,INDIVIDUAL,1981-08-20,SALARIED,Construction,Mass,Consumer Banking,Abu Dhabi,2016-11-14,A,Y,11100.0,,,,
+CIF500041,Meera Perera,INDIVIDUAL,1978-01-10,SALARIED,Hospitality & Tourism,Mass,Consumer Banking,Dubai,2016-11-15,C,N,11700.0,,,,
+CIF500042,Michael Qureshi,INDIVIDUAL,1965-01-11,SALARIED,Government,Mass Affluent,Consumer Banking,Ras Al Khaimah,2017-08-16,A,Y,21700.0,,,,RM-01
+CIF500043,Deepa Cruz,INDIVIDUAL,1971-03-25,SALARIED,Education,Mass,Consumer Banking,Fujairah,2014-12-17,A,Y,8300.0,,,,
+CIF500044,Ayesha Smith,INDIVIDUAL,1966-03-12,SALARIED,Construction,Mass,Consumer Banking,Ajman,2015-08-18,A,Y,13100.0,,,,
+CIF500045,Anjali George,INDIVIDUAL,1984-01-17,SALARIED,Construction,Mass,Consumer Banking,Dubai,2018-01-19,B,Y,5100.0,,,,
+CIF500046,Nikhil Hossain,INDIVIDUAL,1977-11-03,SELF_EMPLOYED,Self-Employed Professional,Mass,Consumer Banking,Sharjah,2022-10-20,B,N,6900.0,,,,
+CIF500047,Hessa Iyer,INDIVIDUAL,1966-08-01,SALARIED,Banking & Finance,Mass Affluent,Consumer Banking,Dubai,2021-05-21,D,Y,16800.0,,,,RM-06
+CIF500048,Rania Al Ketbi,INDIVIDUAL,1969-04-14,SALARIED,Aviation,Mass,Consumer Banking,Abu Dhabi,2017-01-22,B,Y,12500.0,,,,
+CIF500049,Mariam Al Mansoori,INDIVIDUAL,1978-11-01,SELF_EMPLOYED,Self-Employed Professional,Mass Affluent,Consumer Banking,Ras Al Khaimah,2016-09-23,C,N,21500.0,,,,RM-08
+CIF500050,Arjun Haddad,INDIVIDUAL,1973-05-04,SALARIED,Construction,Mass,Consumer Banking,Ajman,2020-07-24,B,Y,11900.0,,,,
+CIF500051,Arjun Taylor,INDIVIDUAL,1968-07-13,SALARIED,Healthcare,Mass,Consumer Banking,Sharjah,2016-01-25,A,Y,13800.0,,,,
+CIF500052,Grace Al Shamsi,INDIVIDUAL,1964-11-16,SELF_EMPLOYED,Self-Employed Professional,Mass,Consumer Banking,Ras Al Khaimah,2022-11-26,D,N,11300.0,,,,
+CIF500053,Rahul Farouk,INDIVIDUAL,1967-05-28,SALARIED,Education,Mass,Consumer Banking,Fujairah,2018-11-27,B,Y,16200.0,,,,
+CIF500054,Mohammed Smith,INDIVIDUAL,1969-10-04,SALARIED,Construction,Mass,Consumer Banking,Ras Al Khaimah,2018-12-01,C,N,12700.0,,,,
+CIF500055,Rahul Nair,INDIVIDUAL,1980-02-06,SALARIED,Government,Mass Affluent,Consumer Banking,Ras Al Khaimah,2023-04-02,A,N,22000.0,,,,RM-06
+CIF500056,Layla Silva,INDIVIDUAL,1992-08-10,SALARIED,IT & Telecom,Mass Affluent,Consumer Banking,Abu Dhabi,2020-09-03,A,N,24800.0,,,,RM-07
+CIF500057,Fatima D'Souza,INDIVIDUAL,1989-11-19,SALARIED,Retail Trade,Mass Affluent,Consumer Banking,Umm Al Quwain,2021-11-04,C,N,16900.0,,,,RM-02
+CIF500058,Saeed Santos,INDIVIDUAL,1978-01-28,SALARIED,Healthcare,Mass,Consumer Banking,Ras Al Khaimah,2021-10-05,B,Y,7200.0,,,,
+CIF500059,Yousef Khan,INDIVIDUAL,1981-11-06,SALARIED,Retail Trade,Mass,Consumer Banking,Sharjah,2018-06-06,E,Y,5300.0,,,,
+CIF500060,Mark Khan,INDIVIDUAL,1977-05-08,SALARIED,Banking & Finance,Mass Affluent,Consumer Banking,Dubai,2019-11-07,B,Y,21400.0,,,,RM-01
+CIF500061,Noura Fernandes,INDIVIDUAL,1983-05-17,SALARIED,Retail Trade,Mass,Consumer Banking,Sharjah,2020-10-08,C,Y,6500.0,,,,
+CIF500062,Nikhil Al Hashimi,INDIVIDUAL,1971-05-08,SALARIED,Hospitality & Tourism,Mass,Consumer Banking,Dubai,2022-06-09,B,Y,15600.0,,,,
+CIF500063,Hana Menon,INDIVIDUAL,1970-01-27,SALARIED,Construction,Mass,Consumer Banking,Dubai,2023-08-10,C,Y,14600.0,,,,
+CIF500064,Faisal Nair,INDIVIDUAL,1968-08-05,SELF_EMPLOYED,Self-Employed Professional,Mass,Consumer Banking,Dubai,2021-06-11,A,N,8900.0,,,,
+CIF500065,Amira Taylor,INDIVIDUAL,1987-09-11,SALARIED,Healthcare,Mass Affluent,Consumer Banking,Fujairah,2022-11-12,B,N,19600.0,,,,RM-01
+CIF500066,Liza Haddad,INDIVIDUAL,1964-12-01,SELF_EMPLOYED,Self-Employed Professional,Mass Affluent,Consumer Banking,Fujairah,2019-04-13,B,N,34900.0,,,,RM-11
+CIF500067,Sarah George,INDIVIDUAL,1976-07-27,SELF_EMPLOYED,Self-Employed Professional,Mass Affluent,Consumer Banking,Sharjah,2024-08-14,C,N,16600.0,,,,RM-11
+CIF500068,Imran Smith,INDIVIDUAL,1985-05-19,SALARIED,Hospitality & Tourism,Mass,Consumer Banking,Sharjah,2015-07-15,C,Y,8700.0,,,,
+CIF500069,Ayesha Pereira,INDIVIDUAL,1985-11-01,SALARIED,Hospitality & Tourism,Mass,Consumer Banking,Dubai,2020-10-16,C,Y,12300.0,,,,
+CIF500070,Nikhil Farouk,INDIVIDUAL,1965-09-26,SALARIED,Retail Trade,Mass,Consumer Banking,Ras Al Khaimah,2018-07-17,C,N,6500.0,,,,
+CIF500071,Sana D'Souza,INDIVIDUAL,1964-07-13,SALARIED,Healthcare,Mass,Consumer Banking,Ras Al Khaimah,2015-07-18,D,Y,13500.0,,,,
+CIF500072,Omar Brown,INDIVIDUAL,1971-09-13,SALARIED,Retail Trade,Mass,Consumer Banking,Dubai,2023-04-19,E,N,7100.0,,,,
+CIF500073,John Brown,INDIVIDUAL,2000-08-08,SALARIED,Aviation,Mass Affluent,Consumer Banking,Dubai,2021-07-20,A,Y,22300.0,,,,RM-07
+CIF500074,Hessa Rahman,INDIVIDUAL,2003-09-08,SALARIED,Healthcare,Mass,Consumer Banking,Umm Al Quwain,2016-03-21,B,Y,11600.0,,,,
+CIF500075,Hassan Pereira,INDIVIDUAL,2000-06-25,SALARIED,Aviation,Mass,Consumer Banking,Ras Al Khaimah,2024-04-22,A,Y,11100.0,,,,
+CIF500076,Mariam Silva,INDIVIDUAL,1994-05-22,SALARIED,Construction,Mass Affluent,Consumer Banking,Abu Dhabi,2020-01-23,D,Y,28000.0,,,,RM-04
+CIF500077,Mark Nasser,INDIVIDUAL,1995-08-04,SALARIED,Healthcare,Mass,Consumer Banking,Sharjah,2022-02-24,A,Y,10800.0,,,,
+CIF500078,Emma Thomas,INDIVIDUAL,1984-12-16,SALARIED,Construction,Mass,Consumer Banking,Dubai,2021-10-25,B,Y,15300.0,,,,
+CIF500079,Aisha D'Souza,INDIVIDUAL,1989-07-15,SALARIED,Aviation,Mass Affluent,Consumer Banking,Sharjah,2022-03-26,C,Y,33500.0,,,,RM-06
+CIF500080,Omar Pereira,INDIVIDUAL,1964-03-22,SALARIED,Construction,Mass Affluent,Consumer Banking,Sharjah,2018-08-27,B,Y,25800.0,,,,RM-11
+CIF500081,Rania Khoury,INDIVIDUAL,1988-04-17,SALARIED,IT & Telecom,Mass,Consumer Banking,Umm Al Quwain,2024-08-01,A,Y,14500.0,,,,
+CIF500082,Rohan D'Souza,INDIVIDUAL,1993-03-04,SALARIED,Aviation,Mass Affluent,Consumer Banking,Fujairah,2016-12-02,B,Y,16800.0,,,,RM-03
+CIF500083,Amira Iyer,INDIVIDUAL,1980-04-13,SALARIED,IT & Telecom,Mass Affluent,Consumer Banking,Fujairah,2015-04-03,D,Y,25800.0,,,,RM-05
+CIF500084,Aisha Wilson,INDIVIDUAL,1973-06-01,SALARIED,Hospitality & Tourism,Mass,Consumer Banking,Ras Al Khaimah,2016-08-04,B,N,11700.0,,,,
+CIF500085,Ayesha Perera,INDIVIDUAL,1986-12-10,SALARIED,IT & Telecom,Mass,Consumer Banking,Ras Al Khaimah,2017-09-05,D,Y,12400.0,,,,
+CIF500086,Khalid Hamdan,INDIVIDUAL,1966-08-09,SALARIED,Education,Mass,Consumer Banking,Dubai,2020-06-06,C,Y,12500.0,,,,
+CIF500087,David Wilson,INDIVIDUAL,1971-08-13,SALARIED,Government,Mass,Consumer Banking,Dubai,2015-08-07,A,Y,13900.0,,,,
+CIF500088,Dina Nasser,INDIVIDUAL,1997-09-21,SALARIED,Healthcare,Mass Affluent,Consumer Banking,Ras Al Khaimah,2017-07-08,B,Y,28500.0,,,,RM-10
+CIF500089,Faisal Perera,INDIVIDUAL,1986-01-11,SALARIED,Retail Trade,Mass,Consumer Banking,Dubai,2022-07-09,C,Y,5400.0,,,,
+CIF500090,John Menon,INDIVIDUAL,1964-12-12,SALARIED,Construction,Mass,Consumer Banking,Fujairah,2018-11-10,D,N,8100.0,,,,
+CIF500091,Michael Iyer,INDIVIDUAL,2000-08-23,SELF_EMPLOYED,Self-Employed Professional,Mass Affluent,Consumer Banking,Sharjah,2016-09-11,A,N,20000.0,,,,RM-08
+CIF500092,Ana George,INDIVIDUAL,1974-06-13,SALARIED,Hospitality & Tourism,Mass,Consumer Banking,Ajman,2023-09-12,A,Y,11500.0,,,,
+CIF500093,Layla Brown,INDIVIDUAL,1977-09-09,SALARIED,Hospitality & Tourism,Mass,Consumer Banking,Ajman,2023-10-13,B,Y,14000.0,,,,
+CIF500094,Kiran Khoury,INDIVIDUAL,1993-12-10,SALARIED,Retail Trade,Mass,Consumer Banking,Dubai,2014-11-14,B,Y,8800.0,,,,
+CIF500095,Priya Cruz,INDIVIDUAL,1981-02-28,SELF_EMPLOYED,Self-Employed Professional,Mass Affluent,Consumer Banking,Ras Al Khaimah,2023-04-15,C,N,23700.0,,,,RM-07
+CIF500096,Ana Al Nuaimi,INDIVIDUAL,2000-12-13,SALARIED,Healthcare,Mass Affluent,Consumer Banking,Dubai,2024-06-16,C,N,18100.0,,,,RM-08
+CIF500097,Hana Thomas,INDIVIDUAL,1996-04-18,SALARIED,Banking & Finance,Mass Affluent,Consumer Banking,Ajman,2020-12-17,E,Y,19600.0,,,,RM-10
+CIF500098,Hassan Santos,INDIVIDUAL,1989-02-18,SALARIED,Education,Mass,Consumer Banking,Fujairah,2023-10-18,A,Y,13500.0,,,,
+CIF500099,Samir Taylor,INDIVIDUAL,1972-03-26,SELF_EMPLOYED,Self-Employed Professional,Mass Affluent,Consumer Banking,Ajman,2026-05-19,B,N,19000.0,,,,RM-12
+CIF500100,Omar Pereira,INDIVIDUAL,1983-10-08,SALARIED,Healthcare,Mass,Consumer Banking,Ajman,2021-09-01,B,Y,15700.0,,,,
+CIF500101,Priya Haddad,INDIVIDUAL,1977-09-12,SALARIED,Banking & Finance,Affluent,Consumer Banking,Sharjah,2016-11-02,B,N,48500.0,,,,RM-05
+CIF500102,Rashid Hossain,INDIVIDUAL,1988-07-12,SALARIED,Government,Mass,Consumer Banking,Fujairah,2020-05-03,B,Y,10000.0,,,,
+CIF500103,Ravi Cruz,INDIVIDUAL,1994-05-08,SALARIED,Government,Mass Affluent,Consumer Banking,Dubai,2021-05-04,D,Y,16500.0,,,,RM-03
+CIF500104,Michael Al Shamsi,INDIVIDUAL,1994-12-01,SALARIED,Banking & Finance,Mass Affluent,Consumer Banking,Sharjah,2018-01-05,B,N,36400.0,,,,RM-07
+CIF500105,Layla Silva,INDIVIDUAL,1985-09-10,SELF_EMPLOYED,Self-Employed Professional,Mass Affluent,Consumer Banking,Sharjah,2017-12-06,B,N,16200.0,,,,RM-04
+CIF500106,Rania Khoury,INDIVIDUAL,1975-11-13,SALARIED,Construction,Mass,Consumer Banking,Ajman,2021-09-07,C,Y,7600.0,,,,
+CIF500107,Samir Haddad,INDIVIDUAL,1967-01-24,SALARIED,Government,Mass Affluent,Consumer Banking,Ras Al Khaimah,2022-10-08,B,Y,29400.0,,,,RM-03
+CIF500108,Grace Malik,INDIVIDUAL,1999-08-13,SALARIED,Healthcare,Mass,Consumer Banking,Umm Al Quwain,2022-01-09,B,Y,11900.0,,,,
+CIF500109,Tariq Iyer,INDIVIDUAL,1979-04-11,SALARIED,Banking & Finance,Mass Affluent,Consumer Banking,Fujairah,2016-06-10,C,Y,24700.0,,,,RM-10
+CIF500110,Arjun Sharma,INDIVIDUAL,2002-10-05,SALARIED,Aviation,Mass Affluent,Consumer Banking,Ras Al Khaimah,2021-03-11,A,Y,22500.0,,,,RM-11
+CIF500111,Amira Pereira,INDIVIDUAL,1989-10-14,SALARIED,Healthcare,Mass,Consumer Banking,Abu Dhabi,2014-11-12,B,Y,14900.0,,,,
+CIF500112,John Nasser,INDIVIDUAL,1997-10-26,SALARIED,Construction,Mass,Consumer Banking,Sharjah,2019-02-13,D,Y,13700.0,,,,
+CIF500113,Ravi Taylor,INDIVIDUAL,1984-11-16,SALARIED,Retail Trade,Mass,Consumer Banking,Fujairah,2017-08-14,C,Y,9700.0,,,,
+CIF500114,Hassan Al Suwaidi,INDIVIDUAL,1980-04-25,SALARIED,Education,Mass,Consumer Banking,Abu Dhabi,2015-12-15,B,Y,11900.0,,,,
+CIF500115,Imran Varghese,INDIVIDUAL,1985-03-20,SALARIED,Construction,Mass,Consumer Banking,Dubai,2022-11-16,B,Y,16000.0,,,,
+CIF500116,Omar Al Mansoori,INDIVIDUAL,1995-02-02,SALARIED,Retail Trade,Mass,Consumer Banking,Sharjah,2024-07-17,D,N,9300.0,,,,
+CIF500117,Rohan Iyer,INDIVIDUAL,1990-05-24,SALARIED,Hospitality & Tourism,Mass,Consumer Banking,Dubai,2017-09-18,B,Y,6600.0,,,,
+CIF500118,Hessa Siddiqui,INDIVIDUAL,1972-02-12,SALARIED,Healthcare,Mass,Consumer Banking,Dubai,2022-07-19,C,Y,15300.0,,,,
+CIF500119,Saeed Al Ketbi,INDIVIDUAL,1964-10-20,SALARIED,Banking & Finance,Mass Affluent,Consumer Banking,Ajman,2022-08-20,B,Y,31600.0,,,,RM-02
+CIF500120,Deepa Varghese,INDIVIDUAL,1979-12-27,SALARIED,Government,Mass Affluent,Consumer Banking,Ras Al Khaimah,2023-07-21,B,Y,17200.0,,,,RM-03
+CIF500121,Yousef Al Hashimi,INDIVIDUAL,1974-12-02,SELF_EMPLOYED,Self-Employed Professional,Mass Affluent,Consumer Banking,Ras Al Khaimah,2015-09-22,A,N,34700.0,,,,RM-02
+CIF500122,Arjun Saleh,INDIVIDUAL,1969-10-18,SALARIED,Education,Mass,Consumer Banking,Abu Dhabi,2019-09-23,A,Y,11500.0,,,,
+CIF500123,Tariq D'Souza,INDIVIDUAL,1987-03-08,SALARIED,Government,Mass,Consumer Banking,Fujairah,2018-08-24,B,Y,11300.0,,,,
+CIF500124,Joseph Nair,INDIVIDUAL,1967-11-05,SALARIED,Hospitality & Tourism,Mass,Consumer Banking,Dubai,2023-10-25,A,Y,10500.0,,,,
+CIF500125,Ravi Menon,INDIVIDUAL,1994-11-14,SALARIED,Construction,Mass,Consumer Banking,Sharjah,2016-01-26,B,Y,14800.0,,,,
+CIF500126,Bilal Reyes,INDIVIDUAL,1987-04-05,SALARIED,Retail Trade,Mass,Consumer Banking,Dubai,2015-11-27,B,Y,11900.0,,,,
+CIF500127,Bilal Menon,INDIVIDUAL,2002-02-13,SALARIED,Education,Mass Affluent,Consumer Banking,Sharjah,2017-03-01,A,Y,21700.0,,,,RM-12
+CIF500128,David Taylor,INDIVIDUAL,1992-11-11,SELF_EMPLOYED,Self-Employed Professional,Mass Affluent,Consumer Banking,Dubai,2021-10-02,B,N,16800.0,,,,RM-05
+CIF500129,Noura Patel,INDIVIDUAL,1975-06-10,SALARIED,Healthcare,Mass,Consumer Banking,Sharjah,2020-09-03,C,Y,5900.0,,,,
+CIF500130,Ana D'Souza,INDIVIDUAL,1966-12-26,SELF_EMPLOYED,Self-Employed Professional,Mass,Consumer Banking,Fujairah,2024-07-04,B,N,8200.0,,,,
+CIF500131,Emma Hossain,INDIVIDUAL,2002-12-05,SELF_EMPLOYED,Self-Employed Professional,Mass,Consumer Banking,Abu Dhabi,2017-08-05,C,N,11600.0,,,,
+CIF500132,Ana Hossain,INDIVIDUAL,1992-05-17,SALARIED,IT & Telecom,Mass,Consumer Banking,Fujairah,2016-07-06,B,N,10300.0,,,,
+CIF500133,Rania Al Nuaimi,INDIVIDUAL,2003-12-12,SELF_EMPLOYED,Self-Employed Professional,Mass Affluent,Consumer Banking,Sharjah,2021-12-07,B,N,25400.0,,,,RM-12
+CIF500134,Kiran Al Ketbi,INDIVIDUAL,1995-05-08,SALARIED,Retail Trade,Mass,Consumer Banking,Sharjah,2016-11-08,B,Y,6700.0,,,,
+CIF500135,Ahmed Hamdan,INDIVIDUAL,1976-03-05,SALARIED,Banking & Finance,Mass,Consumer Banking,Ajman,2023-06-09,C,Y,9500.0,,,,
+CIF500136,Arjun Reyes,INDIVIDUAL,1993-07-21,SALARIED,Education,Mass,Consumer Banking,Dubai,2015-07-10,D,Y,11000.0,,,,
+CIF500137,Mariam Wilson,INDIVIDUAL,1978-11-27,SALARIED,Government,Mass Affluent,Consumer Banking,Ajman,2020-12-11,C,Y,16600.0,,,,RM-07
+CIF500138,Nikhil Menon,INDIVIDUAL,1984-05-23,SALARIED,Construction,Mass,Consumer Banking,Sharjah,2023-10-12,D,Y,12900.0,,,,
+CIF500139,Ravi Al Nuaimi,INDIVIDUAL,1967-02-19,SALARIED,Construction,Mass,Consumer Banking,Dubai,2015-02-13,C,N,9600.0,,,,
+CIF500140,Rania Fernandes,INDIVIDUAL,1966-09-07,SALARIED,Construction,Mass Affluent,Consumer Banking,Dubai,2020-08-14,A,Y,15600.0,,,,RM-09
+CIF500141,Maria Al Hashimi,INDIVIDUAL,2001-02-25,SALARIED,Retail Trade,Mass,Consumer Banking,Sharjah,2021-11-15,B,Y,5400.0,,,,
+CIF500142,Rahul Smith,INDIVIDUAL,1996-04-14,SALARIED,IT & Telecom,Mass Affluent,Consumer Banking,Sharjah,2019-10-16,C,N,21300.0,,,,RM-02
+CIF500143,Ravi Malik,INDIVIDUAL,2003-11-11,SALARIED,IT & Telecom,Mass Affluent,Consumer Banking,Sharjah,2015-03-17,B,N,15700.0,,,,RM-02
+CIF500144,Ayesha Al Ketbi,INDIVIDUAL,1999-06-04,SALARIED,Retail Trade,Mass,Consumer Banking,Sharjah,2020-03-18,E,Y,6400.0,,,,
+CIF500145,Rania Reddy,INDIVIDUAL,1978-01-20,SELF_EMPLOYED,Self-Employed Professional,Mass Affluent,Consumer Banking,Ajman,2015-04-19,D,N,27900.0,,,,RM-01
+CIF500146,Omar Silva,INDIVIDUAL,1980-07-23,SALARIED,IT & Telecom,Mass,Consumer Banking,Sharjah,2021-12-20,A,Y,13700.0,,,,
+CIF500147,Sana George,INDIVIDUAL,1972-08-11,SALARIED,Banking & Finance,Mass Affluent,Consumer Banking,Sharjah,2017-02-21,D,Y,27600.0,,,,RM-03
+CIF500148,Ana Hossain,INDIVIDUAL,1985-07-01,SALARIED,Aviation,Mass Affluent,Consumer Banking,Ras Al Khaimah,2019-01-22,A,Y,20500.0,,,,RM-08
+CIF500149,Samir Thomas,INDIVIDUAL,1992-06-14,SALARIED,Hospitality & Tourism,Mass,Consumer Banking,Dubai,2022-10-23,B,N,5100.0,,,,
+CIF500150,Sarah Santos,INDIVIDUAL,2003-03-20,SALARIED,Education,Mass,Consumer Banking,Dubai,2019-05-24,A,Y,5500.0,,,,
+CIF500151,Mark Farouk,INDIVIDUAL,1978-01-27,SALARIED,Banking & Finance,Mass Affluent,Consumer Banking,Sharjah,2021-11-25,B,Y,20000.0,,,,RM-11
+CIF500152,Rahul Perera,INDIVIDUAL,1995-06-02,SALARIED,Government,Mass Affluent,Consumer Banking,Sharjah,2022-04-26,B,Y,29300.0,,,,RM-10
+CIF500153,Meera George,INDIVIDUAL,2003-11-02,SALARIED,IT & Telecom,Mass,Consumer Banking,Ajman,2016-11-27,A,Y,11600.0,,,,
+CIF500154,Layla Al Mansoori,INDIVIDUAL,1974-05-22,SALARIED,Hospitality & Tourism,Mass,Consumer Banking,Ajman,2021-11-01,C,Y,6500.0,,,,
+CIF500155,Rahul Saleh,INDIVIDUAL,1966-05-15,SALARIED,Oil & Gas,Affluent,Consumer Banking,Sharjah,2026-05-02,A,Y,57000.0,,,,RM-09
+CIF500156,Ahmed Smith,INDIVIDUAL,1995-10-03,SALARIED,Banking & Finance,Mass Affluent,Consumer Banking,Dubai,2021-01-03,A,Y,36700.0,,,,RM-08
+CIF500157,Joseph Fernandes,INDIVIDUAL,1964-03-13,SALARIED,Government,Mass Affluent,Consumer Banking,Fujairah,2017-01-04,B,Y,19300.0,,,,RM-09
+CIF500158,Nikhil Fernandes,INDIVIDUAL,2002-01-03,SALARIED,Hospitality & Tourism,Mass,Consumer Banking,Fujairah,2023-08-05,B,Y,8500.0,,,,
+CIF500159,Deepa Smith,INDIVIDUAL,1970-01-19,SALARIED,Oil & Gas,Affluent,Consumer Banking,Abu Dhabi,2017-11-06,C,Y,50000.0,,,,RM-04
+CIF500160,Bilal Pereira,INDIVIDUAL,1971-09-18,SALARIED,Healthcare,Mass Affluent,Consumer Banking,Sharjah,2019-06-07,C,Y,20600.0,,,,RM-11
+CIF500161,Jose Wilson,INDIVIDUAL,1966-09-08,SELF_EMPLOYED,Self-Employed Professional,Mass,Consumer Banking,Dubai,2020-05-08,B,N,15300.0,,,,
+CIF500162,John Al Ketbi,INDIVIDUAL,1978-02-18,SALARIED,Government,Mass Affluent,Consumer Banking,Umm Al Quwain,2024-08-09,D,N,25300.0,,,,RM-03
+CIF500163,Priya George,INDIVIDUAL,1999-03-09,SALARIED,Healthcare,Mass Affluent,Consumer Banking,Sharjah,2021-11-10,B,Y,17400.0,,,,RM-10
+CIF500164,Sarah Sharma,INDIVIDUAL,1970-06-22,SALARIED,Hospitality & Tourism,Mass,Consumer Banking,Sharjah,2021-05-11,A,Y,15600.0,,,,
+CIF500165,Khalid Al Shamsi,INDIVIDUAL,1964-06-09,SALARIED,Construction,Mass Affluent,Consumer Banking,Sharjah,2017-08-12,A,N,20100.0,,,,RM-11
+CIF500166,Emma Cruz,INDIVIDUAL,1994-04-07,SALARIED,IT & Telecom,Mass,Consumer Banking,Sharjah,2019-06-13,B,Y,13500.0,,,,
+CIF500167,Sana Al Hashimi,INDIVIDUAL,1967-10-10,SALARIED,Hospitality & Tourism,Mass,Consumer Banking,Sharjah,2017-05-14,B,Y,11700.0,,,,
+CIF500168,John Hamdan,INDIVIDUAL,1995-03-04,SALARIED,Retail Trade,Mass,Consumer Banking,Sharjah,2022-10-15,B,Y,10100.0,,,,
+CIF500169,Priya Cruz,INDIVIDUAL,1969-09-25,SALARIED,Retail Trade,Mass,Consumer Banking,Sharjah,2023-12-16,C,Y,11600.0,,,,
+CIF500170,Rahul Al Ketbi,INDIVIDUAL,1990-11-22,SALARIED,Retail Trade,Mass,Consumer Banking,Sharjah,2020-09-17,C,Y,6100.0,,,,
+CIF500171,Amira Sharma,INDIVIDUAL,1985-08-24,SALARIED,Retail Trade,Mass,Consumer Banking,Sharjah,2022-10-18,A,Y,8600.0,,,,
+CIF500172,Michael Qureshi,INDIVIDUAL,1993-01-17,SALARIED,Construction,Mass,Consumer Banking,Ras Al Khaimah,2019-10-19,B,Y,7700.0,,,,
+CIF500173,Ravi Saleh,INDIVIDUAL,1989-05-12,SALARIED,Healthcare,Mass Affluent,Consumer Banking,Dubai,2022-06-20,E,Y,17700.0,,,,RM-05
+CIF500174,Khalid Taylor,INDIVIDUAL,1986-12-23,SALARIED,Construction,Mass,Consumer Banking,Sharjah,2018-08-21,A,N,6000.0,,,,
+CIF500175,Samir Rahman,INDIVIDUAL,2001-11-13,SALARIED,Retail Trade,Mass,Consumer Banking,Ras Al Khaimah,2026-07-22,A,Y,5300.0,,,,
+CIF500176,Grace Al Mansoori,INDIVIDUAL,1986-03-23,SALARIED,IT & Telecom,Mass Affluent,Consumer Banking,Ajman,2026-05-23,B,N,16900.0,,,,RM-08
+CIF500177,David Taylor,INDIVIDUAL,1972-03-20,SALARIED,Healthcare,Mass,Consumer Banking,Ras Al Khaimah,2024-06-24,A,Y,15900.0,,,,
+CIF500178,Michael D'Souza,INDIVIDUAL,2001-10-18,SALARIED,Retail Trade,Mass,Consumer Banking,Sharjah,2021-12-25,B,Y,5200.0,,,,
+CIF500179,Jose Varghese,INDIVIDUAL,1989-10-13,SALARIED,Healthcare,Mass,Consumer Banking,Umm Al Quwain,2020-08-26,C,Y,5700.0,,,,
+CIF500180,Bilal Wilson,INDIVIDUAL,1977-06-24,SELF_EMPLOYED,Self-Employed Professional,Mass,Consumer Banking,Ajman,2019-09-27,A,N,13000.0,,,,
+CIF500181,Karim Pereira,INDIVIDUAL,1967-04-18,SALARIED,Hospitality & Tourism,Mass,Consumer Banking,Dubai,2026-05-01,B,Y,5600.0,,,,
+CIF500182,Sarah Wilson,INDIVIDUAL,1976-01-24,SALARIED,Education,Mass Affluent,Consumer Banking,Ajman,2022-05-02,B,Y,24100.0,,,,RM-07
+CIF500183,Faisal Khan,INDIVIDUAL,2002-03-14,SALARIED,Retail Trade,Mass,Consumer Banking,Sharjah,2024-05-03,B,Y,5300.0,,,,
+CIF500184,Nikhil Menon,INDIVIDUAL,1990-04-23,SALARIED,Hospitality & Tourism,Mass,Consumer Banking,Dubai,2021-01-04,C,Y,10200.0,,,,
+CIF500185,Yousef Siddiqui,INDIVIDUAL,1978-11-18,SALARIED,Hospitality & Tourism,Mass,Consumer Banking,Sharjah,2016-04-05,A,Y,8400.0,,,,
+CIF500186,Liza Hossain,INDIVIDUAL,1987-11-24,SALARIED,Retail Trade,Mass,Consumer Banking,Fujairah,2017-05-06,E,Y,5300.0,,,,
+CIF500187,Omar Hamdan,INDIVIDUAL,1975-06-01,SALARIED,Government,Mass,Consumer Banking,Ras Al Khaimah,2020-04-07,B,Y,13400.0,,,,
+CIF500188,Kiran Cruz,INDIVIDUAL,1974-08-20,SALARIED,Hospitality & Tourism,Mass,Consumer Banking,Sharjah,2018-02-08,C,Y,9400.0,,,,
+CIF500189,Aisha Haddad,INDIVIDUAL,1971-10-25,SALARIED,Construction,Mass,Consumer Banking,Dubai,2019-02-09,C,Y,9700.0,,,,
+CIF500190,Karim Iyer,INDIVIDUAL,1965-05-20,SELF_EMPLOYED,Self-Employed Professional,Mass Affluent,Consumer Banking,Dubai,2019-03-10,A,N,19500.0,,,,RM-08
+CIF500191,Jose Reyes,INDIVIDUAL,1967-03-21,SALARIED,Government,Mass,Consumer Banking,Abu Dhabi,2017-03-11,B,Y,9500.0,,,,
+CIF500192,Joseph Cruz,INDIVIDUAL,1992-09-20,SALARIED,Hospitality & Tourism,Mass,Consumer Banking,Sharjah,2020-10-12,B,Y,5100.0,,,,
+CIF500193,Faisal Al Hashimi,INDIVIDUAL,2003-04-14,SALARIED,Education,Mass,Consumer Banking,Ras Al Khaimah,2018-01-13,B,Y,9600.0,,,,
+CIF500194,Kiran Mathew,INDIVIDUAL,1967-04-10,SALARIED,Oil & Gas,Affluent,Consumer Banking,Dubai,2018-11-14,A,Y,45900.0,,,,RM-02
+CIF500195,Amira Nair,INDIVIDUAL,1977-07-07,SALARIED,IT & Telecom,Mass Affluent,Consumer Banking,Ajman,2026-05-15,E,Y,25900.0,,,,RM-04
+CIF500196,Yousef Hossain,INDIVIDUAL,1968-08-18,SALARIED,Government,Mass Affluent,Consumer Banking,Sharjah,2016-08-16,B,Y,19000.0,,,,RM-04
+CIF500197,Sarah Perera,INDIVIDUAL,1976-05-28,SALARIED,Construction,Mass,Consumer Banking,Fujairah,2021-11-17,A,Y,6600.0,,,,
+CIF500198,Sana Saleh,INDIVIDUAL,1964-04-05,SELF_EMPLOYED,Self-Employed Professional,Mass,Consumer Banking,Fujairah,2017-06-18,A,N,14600.0,,,,
+CIF500199,Rania Menon,INDIVIDUAL,1976-11-18,SALARIED,Retail Trade,Mass,Consumer Banking,Dubai,2018-10-19,E,Y,5100.0,,,,
+CIF500200,Michael Taylor,INDIVIDUAL,1978-08-12,SELF_EMPLOYED,Self-Employed Professional,Mass,Consumer Banking,Fujairah,2016-04-01,A,N,14200.0,,,,
+CIF500201,Noura Farouk,INDIVIDUAL,1971-07-05,SALARIED,Banking & Finance,Mass Affluent,Consumer Banking,Ajman,2021-10-02,D,Y,18600.0,,,,RM-06
+CIF500202,Mohammed Hossain,INDIVIDUAL,1977-01-10,SALARIED,Construction,Mass,Consumer Banking,Dubai,2023-01-03,C,Y,10100.0,,,,
+CIF500203,Anjali Mathew,INDIVIDUAL,1987-05-25,SALARIED,Retail Trade,Mass,Consumer Banking,Sharjah,2021-06-04,C,Y,6300.0,,,,
+CIF500204,Kiran Mathew,INDIVIDUAL,2002-07-12,SALARIED,Education,Mass,Consumer Banking,Ras Al Khaimah,2020-02-05,A,Y,16100.0,,,,
+CIF500205,Meera Wilson,INDIVIDUAL,1981-02-17,SALARIED,Construction,Mass,Consumer Banking,Sharjah,2014-11-06,C,N,15500.0,,,,
+CIF500206,Liza Pereira,INDIVIDUAL,1983-04-06,SALARIED,IT & Telecom,Mass,Consumer Banking,Dubai,2021-06-07,A,Y,15300.0,,,,
+CIF500207,Faisal Santos,INDIVIDUAL,1975-08-26,SALARIED,Government,Mass Affluent,Consumer Banking,Abu Dhabi,2021-02-08,A,Y,20100.0,,,,RM-07
+CIF500208,Dina Brown,INDIVIDUAL,1987-12-15,SALARIED,Government,Mass Affluent,Consumer Banking,Ras Al Khaimah,2020-06-09,B,N,28900.0,,,,RM-07
+CIF500209,Saeed Patel,INDIVIDUAL,1970-05-18,SALARIED,Retail Trade,Mass,Consumer Banking,Umm Al Quwain,2020-06-10,C,Y,14200.0,,,,
+CIF500210,Bilal Fernandes,INDIVIDUAL,1976-09-18,SALARIED,IT & Telecom,Mass Affluent,Consumer Banking,Ras Al Khaimah,2019-07-11,C,Y,43300.0,,,,RM-11
+CIF500211,Huda Nair,INDIVIDUAL,1980-11-11,SALARIED,IT & Telecom,Mass,Consumer Banking,Sharjah,2017-01-12,C,Y,13400.0,,,,
+CIF500212,Hassan Haddad,INDIVIDUAL,1990-11-03,SALARIED,Retail Trade,Mass,Consumer Banking,Dubai,2024-01-13,B,N,6500.0,,,,
+CIF500213,Nikhil Al Suwaidi,INDIVIDUAL,1978-08-15,SALARIED,Retail Trade,Mass,Consumer Banking,Sharjah,2020-06-14,B,Y,5200.0,,,,
+CIF500214,Sarah Menon,INDIVIDUAL,1974-04-24,SALARIED,IT & Telecom,Mass Affluent,Consumer Banking,Umm Al Quwain,2015-06-15,B,Y,34500.0,,,,RM-08
+CIF500215,Rania Al Nuaimi,INDIVIDUAL,1965-05-02,SALARIED,Government,Mass Affluent,Consumer Banking,Fujairah,2016-02-16,B,Y,32000.0,,,,RM-07
+CIF500216,Liza Al Ketbi,INDIVIDUAL,1998-02-05,SALARIED,Government,Mass Affluent,Consumer Banking,Sharjah,2017-02-17,B,Y,30600.0,,,,RM-03
+CIF500217,Ravi Wilson,INDIVIDUAL,1992-05-10,SALARIED,Construction,Mass,Consumer Banking,Ras Al Khaimah,2017-03-18,A,Y,10800.0,,,,
+CIF500218,Emma Iyer,INDIVIDUAL,1990-09-02,SALARIED,Hospitality & Tourism,Mass,Consumer Banking,Sharjah,2024-02-19,B,Y,6900.0,,,,
+CIF500219,Mohammed Perera,INDIVIDUAL,1985-11-20,SALARIED,Government,Mass,Consumer Banking,Abu Dhabi,2020-10-20,D,Y,9100.0,,,,
+CIF500220,Rania Farouk,INDIVIDUAL,1966-10-13,SALARIED,Hospitality & Tourism,Mass,Consumer Banking,Sharjah,2016-03-21,A,Y,5300.0,,,,
+CIF500221,Mohammed Al Nuaimi,INDIVIDUAL,1989-03-21,SALARIED,Construction,Mass,Consumer Banking,Ajman,2015-07-22,A,Y,11000.0,,,,
+CIF500222,Michael Varghese,INDIVIDUAL,2001-03-01,SELF_EMPLOYED,Self-Employed Professional,Mass,Consumer Banking,Ajman,2026-05-23,D,N,15300.0,,,,
+CIF500223,Mark Malik,INDIVIDUAL,1964-02-17,SALARIED,Oil & Gas,Affluent,Consumer Banking,Sharjah,2020-09-24,D,Y,54800.0,,,,RM-12
+CIF500224,Emma Cruz,INDIVIDUAL,1965-07-22,SALARIED,Hospitality & Tourism,Mass,Consumer Banking,Sharjah,2020-11-25,A,Y,8700.0,,,,
+CIF500225,Sarah Al Suwaidi,INDIVIDUAL,1985-06-03,SALARIED,Government,Mass Affluent,Consumer Banking,Sharjah,2022-02-26,A,Y,16500.0,,,,RM-03
+CIF500226,Sarah Thomas,INDIVIDUAL,1968-09-23,SELF_EMPLOYED,Self-Employed Professional,Affluent,Consumer Banking,Dubai,2018-02-27,E,N,41800.0,,,,RM-12
+CIF500227,Mark Al Nuaimi,INDIVIDUAL,1999-06-25,SALARIED,Education,Mass,Consumer Banking,Fujairah,2017-01-01,C,Y,11200.0,,,,
+CIF500228,Joseph Reddy,INDIVIDUAL,1987-03-27,SALARIED,Hospitality & Tourism,Mass,Consumer Banking,Dubai,2020-01-02,B,Y,7200.0,,,,
+CIF500229,Faisal Khoury,INDIVIDUAL,1994-05-01,SALARIED,IT & Telecom,Mass,Consumer Banking,Abu Dhabi,2018-07-03,B,Y,7200.0,,,,
+CIF500230,Hessa Wilson,INDIVIDUAL,1966-06-12,SALARIED,Hospitality & Tourism,Mass,Consumer Banking,Sharjah,2020-07-04,D,Y,5300.0,,,,
+CIF500231,Rashid Smith,INDIVIDUAL,1984-06-22,SALARIED,Retail Trade,Mass,Consumer Banking,Sharjah,2023-09-05,A,N,7600.0,,,,
+CIF500232,Saeed Haddad,INDIVIDUAL,1998-07-02,SALARIED,Hospitality & Tourism,Mass,Consumer Banking,Fujairah,2021-07-06,D,Y,5700.0,,,,
+CIF500233,Ana Farouk,INDIVIDUAL,1970-02-14,SALARIED,Hospitality & Tourism,Mass,Consumer Banking,Sharjah,2024-05-07,A,N,11100.0,,,,
+CIF500234,Bilal Menon,INDIVIDUAL,1979-12-01,SELF_EMPLOYED,Self-Employed Professional,Mass Affluent,Consumer Banking,Dubai,2017-04-08,A,N,22900.0,,,,RM-03
+CIF500235,Nikhil Rahman,INDIVIDUAL,1975-11-14,SALARIED,Construction,Mass,Consumer Banking,Umm Al Quwain,2022-04-09,C,Y,5300.0,,,,
+CIF500236,Aisha Cruz,INDIVIDUAL,1994-02-16,SELF_EMPLOYED,Self-Employed Professional,Mass Affluent,Consumer Banking,Fujairah,2016-09-10,B,N,31600.0,,,,RM-08
+CIF500237,Ravi Wilson,INDIVIDUAL,1982-02-10,SALARIED,IT & Telecom,Mass Affluent,Consumer Banking,Sharjah,2021-09-11,C,N,31700.0,,,,RM-06
+CIF500238,Ayesha Fernandes,INDIVIDUAL,1975-03-24,SALARIED,Construction,Mass,Consumer Banking,Abu Dhabi,2020-10-12,C,Y,5900.0,,,,
+CIF500239,Maria Pereira,INDIVIDUAL,1985-03-02,SALARIED,Healthcare,Mass Affluent,Consumer Banking,Sharjah,2026-06-13,A,Y,23700.0,,,,RM-11
+CIF500240,Bilal George,INDIVIDUAL,1965-01-25,SALARIED,Construction,Mass,Consumer Banking,Ajman,2019-06-14,C,Y,6000.0,,,,
+CIF500241,Grace Fernandes,INDIVIDUAL,1974-07-12,SELF_EMPLOYED,Self-Employed Professional,Mass Affluent,Consumer Banking,Ajman,2020-11-15,A,N,24100.0,,,,RM-10
+CIF500242,Meera Siddiqui,INDIVIDUAL,1971-09-21,SALARIED,Aviation,Mass Affluent,Consumer Banking,Dubai,2021-02-16,A,Y,19000.0,,,,RM-01
+CIF500243,David Al Shamsi,INDIVIDUAL,1997-07-11,SALARIED,Construction,Mass,Consumer Banking,Fujairah,2019-04-17,D,Y,7100.0,,,,
+CIF500244,Mark Siddiqui,INDIVIDUAL,1975-02-05,SALARIED,Healthcare,Mass,Consumer Banking,Dubai,2020-06-18,B,Y,8800.0,,,,
+CIF500245,Yousef Sharma,INDIVIDUAL,1982-08-08,SALARIED,Education,Mass Affluent,Consumer Banking,Sharjah,2021-07-19,B,Y,23500.0,,,,RM-09
+CIF500246,Huda Silva,INDIVIDUAL,1991-05-24,SALARIED,Healthcare,Mass,Consumer Banking,Ras Al Khaimah,2021-02-20,B,Y,12900.0,,,,
+CIF500247,Tariq Wilson,INDIVIDUAL,1982-08-07,SELF_EMPLOYED,Self-Employed Professional,Mass,Consumer Banking,Ajman,2018-05-21,A,N,10500.0,,,,
+CIF500248,Omar Saleh,INDIVIDUAL,1985-02-22,SALARIED,Retail Trade,Mass,Consumer Banking,Sharjah,2014-12-22,A,N,8300.0,,,,
+CIF500249,Liza Farouk,INDIVIDUAL,2001-04-22,SELF_EMPLOYED,Self-Employed Professional,Mass Affluent,Consumer Banking,Abu Dhabi,2022-10-23,A,N,21900.0,,,,RM-06
+CIF500250,Meera Iyer,INDIVIDUAL,1991-05-20,SALARIED,Healthcare,Mass Affluent,Consumer Banking,Ras Al Khaimah,2020-11-24,D,Y,18800.0,,,,RM-01
+CIF500251,Hassan Menon,INDIVIDUAL,1985-02-07,SALARIED,Hospitality & Tourism,Mass,Consumer Banking,Ras Al Khaimah,2018-11-25,B,Y,15000.0,,,,
+CIF500252,Omar Nasser,INDIVIDUAL,1967-09-07,SALARIED,Hospitality & Tourism,Mass,Consumer Banking,Ajman,2017-03-26,A,Y,6700.0,,,,
+CIF500253,Samir Reddy,INDIVIDUAL,1999-05-07,SALARIED,Retail Trade,Mass,Consumer Banking,Dubai,2019-11-27,C,Y,5600.0,,,,
+CIF500254,Sana Thomas,INDIVIDUAL,1998-01-08,SALARIED,IT & Telecom,Mass,Consumer Banking,Dubai,2021-04-01,B,Y,12100.0,,,,
+CIF500255,Mark Menon,INDIVIDUAL,1972-01-11,SALARIED,Healthcare,Mass Affluent,Consumer Banking,Sharjah,2017-10-02,C,Y,37900.0,,,,RM-09
+CIF500256,Saeed Smith,INDIVIDUAL,1993-04-03,SALARIED,Healthcare,Mass Affluent,Consumer Banking,Ras Al Khaimah,2023-09-03,B,Y,17400.0,,,,RM-01
+CIF500257,Mariam Hamdan,INDIVIDUAL,2001-08-17,SALARIED,Retail Trade,Mass,Consumer Banking,Sharjah,2020-09-04,B,Y,14100.0,,,,
+CIF500258,Bilal Cruz,INDIVIDUAL,1992-12-04,SALARIED,Retail Trade,Mass,Consumer Banking,Sharjah,2016-09-05,C,Y,11200.0,,,,
+CIF500259,Hessa Farouk,INDIVIDUAL,1965-07-27,SALARIED,Hospitality & Tourism,Mass,Consumer Banking,Ajman,2017-01-06,B,Y,10300.0,,,,
+CIF500260,Ayesha Brown,INDIVIDUAL,1965-07-26,SALARIED,Construction,Mass,Consumer Banking,Ajman,2019-05-07,E,Y,5600.0,,,,
+CIF500261,Priya Santos,INDIVIDUAL,1980-07-15,SALARIED,Government,Mass,Consumer Banking,Ajman,2022-02-08,B,Y,11400.0,,,,
+CIF500262,Rashid Hossain,INDIVIDUAL,1988-05-25,SALARIED,Retail Trade,Mass,Consumer Banking,Ajman,2018-04-09,B,N,9800.0,,,,
+CIF500263,Zainab Varghese,INDIVIDUAL,1987-03-07,SALARIED,Healthcare,Mass,Consumer Banking,Abu Dhabi,2024-02-10,B,Y,14600.0,,,,
+CIF500264,Joseph Hossain,INDIVIDUAL,1992-05-01,SALARIED,Retail Trade,Mass,Consumer Banking,Sharjah,2021-11-11,B,Y,13900.0,,,,
+CIF500265,Mark Smith,INDIVIDUAL,1981-08-10,SALARIED,Retail Trade,Mass,Consumer Banking,Ajman,2020-03-12,B,Y,5400.0,,,,
+CIF500266,Anjali Mathew,INDIVIDUAL,1982-12-12,SALARIED,Hospitality & Tourism,Mass,Consumer Banking,Sharjah,2017-04-13,B,Y,10100.0,,,,
+CIF500267,Sarah Hossain,INDIVIDUAL,1986-01-03,SALARIED,Education,Mass,Consumer Banking,Ajman,2023-11-14,A,Y,13800.0,,,,
+CIF500268,Emma Silva,INDIVIDUAL,1966-10-10,SALARIED,Retail Trade,Mass,Consumer Banking,Umm Al Quwain,2017-07-15,A,Y,6900.0,,,,
+CIF500269,Joseph D'Souza,INDIVIDUAL,2003-08-08,SALARIED,Construction,Mass,Consumer Banking,Ras Al Khaimah,2015-06-16,A,Y,11700.0,,,,
+CIF500270,Yousef D'Souza,INDIVIDUAL,1993-06-27,SALARIED,Government,Mass Affluent,Consumer Banking,Abu Dhabi,2020-02-17,A,Y,19200.0,,,,RM-07
+CIF500271,Sarah Al Suwaidi,INDIVIDUAL,1965-07-01,SELF_EMPLOYED,Self-Employed Professional,Affluent,Consumer Banking,Sharjah,2019-12-18,D,N,77600.0,,,,RM-08
+CIF500272,Noura Rahman,INDIVIDUAL,1980-05-11,SALARIED,Retail Trade,Mass,Consumer Banking,Dubai,2018-11-19,C,Y,5100.0,,,,
+CIF500273,Arjun Haddad,INDIVIDUAL,1965-02-05,SALARIED,IT & Telecom,Mass Affluent,Consumer Banking,Sharjah,2022-08-20,B,Y,19900.0,,,,RM-07
+CIF500274,Rahul Al Nuaimi,INDIVIDUAL,1978-08-18,SALARIED,Healthcare,Mass Affluent,Consumer Banking,Ras Al Khaimah,2023-08-21,A,Y,24200.0,,,,RM-06
+CIF500275,Faisal Al Hashimi,INDIVIDUAL,1972-03-09,SALARIED,Healthcare,Mass,Consumer Banking,Sharjah,2023-05-22,A,Y,10900.0,,,,
+CIF500276,Faisal Nasser,INDIVIDUAL,1969-04-09,SELF_EMPLOYED,Self-Employed Professional,Mass,Consumer Banking,Sharjah,2024-04-23,A,N,13100.0,,,,
+CIF500277,Faisal Nasser,INDIVIDUAL,2001-10-15,SALARIED,Retail Trade,Mass,Consumer Banking,Abu Dhabi,2015-02-24,C,N,6100.0,,,,
+CIF500278,Faisal Hossain,INDIVIDUAL,1978-05-10,SALARIED,Education,Mass,Consumer Banking,Umm Al Quwain,2017-12-25,C,Y,9200.0,,,,
+CIF500279,Arjun Khoury,INDIVIDUAL,1984-10-10,SALARIED,Government,Mass Affluent,Consumer Banking,Dubai,2016-05-26,B,Y,31300.0,,,,RM-10
+CIF500280,Mariam Silva,INDIVIDUAL,1982-04-26,SALARIED,Healthcare,Mass Affluent,Consumer Banking,Dubai,2023-04-27,A,Y,19600.0,,,,RM-04
+CIF500281,John Hossain,INDIVIDUAL,2002-04-15,SALARIED,Healthcare,Mass,Consumer Banking,Ajman,2024-02-01,C,Y,10100.0,,,,
+CIF500282,Zainab Siddiqui,INDIVIDUAL,1985-05-07,SALARIED,Construction,Mass,Consumer Banking,Dubai,2016-11-02,B,N,13100.0,,,,
+CIF500283,Hassan Khoury,INDIVIDUAL,1985-05-27,SALARIED,Education,Mass,Consumer Banking,Sharjah,2022-05-03,B,Y,7200.0,,,,
+CIF500284,Noura Varghese,INDIVIDUAL,1984-09-10,SALARIED,Healthcare,Mass Affluent,Consumer Banking,Fujairah,2016-10-04,B,Y,20700.0,,,,RM-06
+CIF500285,Faisal Al Shamsi,INDIVIDUAL,1997-05-28,SALARIED,Banking & Finance,Mass Affluent,Consumer Banking,Sharjah,2019-07-05,D,Y,39700.0,,,,RM-04
+CIF500286,Sana Al Mansoori,INDIVIDUAL,1994-05-14,SALARIED,Construction,Mass,Consumer Banking,Sharjah,2018-07-06,A,Y,7600.0,,,,
+CIF500287,Rashid Al Shamsi,INDIVIDUAL,1985-01-14,SALARIED,Education,Mass Affluent,Consumer Banking,Sharjah,2019-06-07,A,Y,36400.0,,,,RM-09
+CIF500288,Mohammed Perera,INDIVIDUAL,1976-01-10,SELF_EMPLOYED,Self-Employed Professional,Mass Affluent,Consumer Banking,Ras Al Khaimah,2019-06-08,C,N,20200.0,,,,RM-10
+CIF500289,Rashid Khoury,INDIVIDUAL,2001-12-24,SALARIED,Construction,Mass,Consumer Banking,Ajman,2022-10-09,A,Y,5000.0,,,,
+CIF500290,Meera Fernandes,INDIVIDUAL,1975-02-24,SALARIED,Government,Mass,Consumer Banking,Ajman,2021-04-10,B,Y,11000.0,,,,
+CIF500291,Noura Silva,INDIVIDUAL,1969-05-22,SALARIED,IT & Telecom,Mass Affluent,Consumer Banking,Ras Al Khaimah,2014-10-11,D,Y,30500.0,,,,RM-09
+CIF500292,Hana Perera,INDIVIDUAL,1971-05-06,SALARIED,Education,Mass,Consumer Banking,Dubai,2017-02-12,C,Y,7400.0,,,,
+CIF500293,Hassan Cruz,INDIVIDUAL,1964-09-24,SALARIED,Healthcare,Mass,Consumer Banking,Dubai,2017-07-13,A,Y,8500.0,,,,
+CIF500294,Ahmed Silva,INDIVIDUAL,1991-12-04,SALARIED,Construction,Mass Affluent,Consumer Banking,Dubai,2019-07-14,B,Y,17500.0,,,,RM-01
+CIF500295,Rohan Nasser,INDIVIDUAL,1968-08-14,SALARIED,IT & Telecom,Mass Affluent,Consumer Banking,Sharjah,2016-03-15,C,N,16600.0,,,,RM-11
+CIF500296,Rania Cruz,INDIVIDUAL,1968-08-18,SELF_EMPLOYED,Self-Employed Professional,Mass Affluent,Consumer Banking,Ras Al Khaimah,2020-06-16,A,N,22000.0,,,,RM-05
+CIF500297,Maria Cruz,INDIVIDUAL,1973-03-04,SALARIED,Construction,Mass,Consumer Banking,Dubai,2019-04-17,B,Y,9400.0,,,,
+CIF500298,Ana D'Souza,INDIVIDUAL,1999-08-03,SALARIED,Government,Mass,Consumer Banking,Sharjah,2020-01-18,D,Y,13600.0,,,,
+CIF500299,Huda Smith,INDIVIDUAL,1983-04-03,SALARIED,IT & Telecom,Mass,Consumer Banking,Ras Al Khaimah,2020-06-19,B,N,10800.0,,,,
+CIF500300,Rashid Patel,INDIVIDUAL,1980-01-02,SALARIED,Healthcare,Mass Affluent,Consumer Banking,Ajman,2019-09-01,C,Y,21400.0,,,,RM-07
+CIF500301,Anjali Al Suwaidi,INDIVIDUAL,1977-05-28,SALARIED,Retail Trade,Mass,Consumer Banking,Sharjah,2015-06-02,E,Y,9600.0,,,,
+CIF500302,Rashid George,INDIVIDUAL,1969-08-03,SALARIED,IT & Telecom,Affluent,Consumer Banking,Ajman,2023-05-03,D,Y,61300.0,,,,RM-07
+CIF500303,Imran Brown,INDIVIDUAL,1983-11-13,SALARIED,Construction,Mass Affluent,Consumer Banking,Fujairah,2023-01-04,B,Y,34500.0,,,,RM-03
+CIF500304,Omar Iyer,INDIVIDUAL,1979-07-16,SELF_EMPLOYED,Self-Employed Professional,Mass,Consumer Banking,Abu Dhabi,2016-12-05,A,N,12400.0,,,,
+CIF500305,Khalid Qureshi,INDIVIDUAL,1975-12-07,SALARIED,IT & Telecom,Mass Affluent,Consumer Banking,Dubai,2026-06-06,D,Y,21900.0,,,,RM-12
+CIF500306,Hassan Saleh,INDIVIDUAL,2000-01-25,SALARIED,Government,Mass,Consumer Banking,Sharjah,2018-11-07,B,Y,11700.0,,,,
+CIF500307,John Haddad,INDIVIDUAL,1986-04-21,SALARIED,Government,Mass Affluent,Consumer Banking,Fujairah,2022-05-08,B,N,17500.0,,,,RM-06
+CIF500308,Sana Siddiqui,INDIVIDUAL,1997-08-16,SALARIED,Hospitality & Tourism,Mass,Consumer Banking,Sharjah,2024-02-09,B,Y,12100.0,,,,
+CIF500309,Ahmed Reddy,INDIVIDUAL,2000-11-24,SELF_EMPLOYED,Self-Employed Professional,Mass Affluent,Consumer Banking,Ajman,2019-06-10,B,N,27100.0,,,,RM-07
+CIF500310,Hassan Pereira,INDIVIDUAL,2003-08-15,SALARIED,Aviation,Mass Affluent,Consumer Banking,Umm Al Quwain,2016-06-11,A,N,23400.0,,,,RM-07
+CIF500311,Imran Siddiqui,INDIVIDUAL,1969-03-28,SALARIED,Construction,Mass,Consumer Banking,Sharjah,2015-03-12,B,Y,6200.0,,,,
+CIF500312,Hassan Al Mansoori,INDIVIDUAL,1971-04-09,SALARIED,Healthcare,Mass,Consumer Banking,Ras Al Khaimah,2015-05-13,B,Y,9500.0,,,,
+CIF500313,Huda Reyes,INDIVIDUAL,1988-05-22,SALARIED,Education,Mass Affluent,Consumer Banking,Ras Al Khaimah,2021-01-14,D,Y,17400.0,,,,RM-06
+CIF500314,Amira Khoury,INDIVIDUAL,1976-08-16,SALARIED,Healthcare,Mass,Consumer Banking,Sharjah,2026-07-15,E,Y,10100.0,,,,
+CIF500315,Huda Malik,INDIVIDUAL,1965-02-28,SALARIED,Education,Mass,Consumer Banking,Dubai,2020-06-16,B,Y,7000.0,,,,
+CIF500316,Mark D'Souza,INDIVIDUAL,2003-05-25,SALARIED,Healthcare,Mass,Consumer Banking,Ajman,2020-12-17,B,Y,11100.0,,,,
+CIF500317,Hana Malik,INDIVIDUAL,1991-11-09,SALARIED,Oil & Gas,Mass,Consumer Banking,Sharjah,2023-09-18,E,Y,14200.0,,,,
+CIF500318,Arjun Thomas,INDIVIDUAL,1973-12-01,SALARIED,Healthcare,Mass Affluent,Consumer Banking,Dubai,2022-08-19,A,Y,21000.0,,,,RM-08
+CIF500319,Ana Farouk,INDIVIDUAL,2001-02-25,SALARIED,Hospitality & Tourism,Mass Affluent,Consumer Banking,Ajman,2016-05-20,C,Y,16400.0,,,,RM-05
+CIF500320,Rashid Hossain,INDIVIDUAL,2002-10-21,SALARIED,Retail Trade,Mass,Consumer Banking,Sharjah,2021-09-21,C,N,8000.0,,,,
+CIF500321,Mohammed D'Souza,INDIVIDUAL,1966-09-03,SALARIED,Retail Trade,Mass,Consumer Banking,Ras Al Khaimah,2017-10-22,C,Y,7900.0,,,,
+CIF500322,Jose Reyes,INDIVIDUAL,2002-12-06,SALARIED,Construction,Mass,Consumer Banking,Sharjah,2019-10-23,B,Y,5700.0,,,,
+CIF500323,Aisha George,INDIVIDUAL,1972-06-08,SALARIED,Government,Mass Affluent,Consumer Banking,Sharjah,2018-06-24,A,Y,21200.0,,,,RM-08
+CIF500324,Ayesha Khan,INDIVIDUAL,1978-11-16,SALARIED,Education,Mass,Consumer Banking,Ras Al Khaimah,2023-05-25,A,Y,9200.0,,,,
+CIF500325,Maria Thomas,INDIVIDUAL,1964-11-01,SALARIED,Government,Mass Affluent,Consumer Banking,Ajman,2019-10-26,C,Y,23000.0,,,,RM-01
+CIF500326,Rashid Pereira,INDIVIDUAL,1989-08-05,SALARIED,Government,Mass Affluent,Consumer Banking,Dubai,2018-10-27,B,N,20700.0,,,,RM-01
+CIF500327,Rashid Brown,INDIVIDUAL,1996-03-13,SALARIED,Aviation,Affluent,Consumer Banking,Dubai,2015-11-01,D,Y,47300.0,,,,RM-07
+CIF500328,Joseph Al Hashimi,INDIVIDUAL,1985-11-22,SALARIED,Retail Trade,Mass,Consumer Banking,Umm Al Quwain,2026-06-02,A,Y,5300.0,,,,
+CIF500329,Priya Haddad,INDIVIDUAL,1991-06-01,SALARIED,Retail Trade,Mass,Consumer Banking,Sharjah,2024-05-03,C,Y,11700.0,,,,
+CIF500330,Mark Thomas,INDIVIDUAL,1981-02-10,SALARIED,Healthcare,Mass,Consumer Banking,Abu Dhabi,2018-07-04,B,Y,10500.0,,,,
+CIF500331,Aisha Hamdan,INDIVIDUAL,1991-04-19,SALARIED,Education,Mass Affluent,Consumer Banking,Sharjah,2019-07-05,A,Y,18600.0,,,,RM-02
+CIF500332,Layla Fernandes,INDIVIDUAL,1993-05-17,SALARIED,Construction,Mass,Consumer Banking,Ajman,2024-01-06,B,Y,7700.0,,,,
+CIF500333,Priya Saleh,INDIVIDUAL,1983-01-26,SALARIED,Hospitality & Tourism,Mass,Consumer Banking,Ras Al Khaimah,2019-10-07,C,Y,9700.0,,,,
+CIF500334,Nikhil Reyes,INDIVIDUAL,1990-09-02,SALARIED,Hospitality & Tourism,Mass,Consumer Banking,Sharjah,2019-05-08,D,Y,5600.0,,,,
+CIF500335,Deepa Pereira,INDIVIDUAL,1970-10-27,SALARIED,Education,Mass Affluent,Consumer Banking,Abu Dhabi,2016-08-09,A,Y,19600.0,,,,RM-11
+CIF500336,Joseph Nasser,INDIVIDUAL,1986-07-28,SALARIED,Government,Mass Affluent,Consumer Banking,Sharjah,2026-06-10,A,Y,16500.0,,,,RM-05
+CIF500337,Arjun Haddad,INDIVIDUAL,1983-03-09,SELF_EMPLOYED,Self-Employed Professional,Mass,Consumer Banking,Dubai,2026-07-11,A,N,8800.0,,,,
+CIF500338,Amira Rahman,INDIVIDUAL,1983-07-12,SALARIED,Construction,Mass,Consumer Banking,Fujairah,2015-05-12,B,Y,13400.0,,,,
+CIF500339,Rohan Nasser,INDIVIDUAL,1983-03-18,SALARIED,Construction,Mass,Consumer Banking,Ajman,2023-06-13,C,Y,9300.0,,,,
+CIF500340,Dina Brown,INDIVIDUAL,2000-03-14,SALARIED,Education,Mass,Consumer Banking,Sharjah,2026-05-14,D,N,14100.0,,,,
+CIF500341,Noura Siddiqui,INDIVIDUAL,1978-09-10,SALARIED,Hospitality & Tourism,Mass,Consumer Banking,Dubai,2026-05-15,A,Y,5200.0,,,,
+CIF500342,Ahmed George,INDIVIDUAL,1988-01-21,SALARIED,Healthcare,Mass Affluent,Consumer Banking,Ajman,2026-06-16,E,Y,18200.0,,,,RM-03
+CIF500343,Samir Taylor,INDIVIDUAL,1968-04-23,SALARIED,Government,Mass Affluent,Consumer Banking,Dubai,2018-01-17,D,Y,19000.0,,,,RM-10
+CIF500344,Ahmed Al Mansoori,INDIVIDUAL,1976-08-07,SALARIED,Healthcare,Mass Affluent,Consumer Banking,Ras Al Khaimah,2018-06-18,B,Y,20700.0,,,,RM-08
+CIF500345,Samir Perera,INDIVIDUAL,1994-02-09,SALARIED,Oil & Gas,Mass Affluent,Consumer Banking,Sharjah,2020-04-19,A,Y,34400.0,,,,RM-09
+CIF500346,Khalid Al Suwaidi,INDIVIDUAL,1966-11-12,SALARIED,Retail Trade,Mass,Consumer Banking,Ajman,2015-05-20,B,N,8700.0,,,,
+CIF500347,Grace Mathew,INDIVIDUAL,1989-07-24,SALARIED,Hospitality & Tourism,Mass,Consumer Banking,Sharjah,2023-07-21,C,Y,7400.0,,,,
+CIF500348,Noura George,INDIVIDUAL,1981-11-08,SALARIED,Retail Trade,Mass,Consumer Banking,Ras Al Khaimah,2026-06-22,A,Y,6600.0,,,,
+CIF500349,Liza Malik,INDIVIDUAL,1978-12-15,SALARIED,Healthcare,Mass Affluent,Consumer Banking,Ajman,2018-03-23,B,Y,17500.0,,,,RM-01
+CIF500350,Michael Nasser,INDIVIDUAL,1976-06-12,SALARIED,Hospitality & Tourism,Mass Affluent,Consumer Banking,Ajman,2023-02-24,B,Y,16500.0,,,,RM-10
+CIF500351,Rania D'Souza,INDIVIDUAL,1974-02-01,SELF_EMPLOYED,Self-Employed Professional,Mass Affluent,Consumer Banking,Abu Dhabi,2020-01-25,A,N,22300.0,,,,RM-10
+CIF500352,Amira Brown,INDIVIDUAL,1974-07-09,SALARIED,Hospitality & Tourism,Mass,Consumer Banking,Ras Al Khaimah,2024-05-26,B,N,12300.0,,,,
+CIF500353,Ravi Perera,INDIVIDUAL,1966-03-15,SALARIED,Education,Mass,Consumer Banking,Sharjah,2022-02-27,D,N,11000.0,,,,
+CIF500354,Rashid Sharma,INDIVIDUAL,1994-04-25,SALARIED,Construction,Mass,Consumer Banking,Dubai,2018-06-01,B,Y,11800.0,,,,
+CIF500355,Hassan Mathew,INDIVIDUAL,1967-09-16,SALARIED,Retail Trade,Mass,Consumer Banking,Dubai,2015-05-02,A,Y,10200.0,,,,
+CIF500356,Tariq Saleh,INDIVIDUAL,1987-12-18,SALARIED,Healthcare,Mass,Consumer Banking,Ajman,2019-03-03,B,Y,14000.0,,,,
+CIF500357,Hana Pereira,INDIVIDUAL,1965-06-20,SALARIED,Retail Trade,Mass,Consumer Banking,Sharjah,2021-10-04,B,Y,9800.0,,,,
+CIF500358,Layla Al Ketbi,INDIVIDUAL,1991-08-02,SELF_EMPLOYED,Self-Employed Professional,Mass,Consumer Banking,Sharjah,2019-02-05,B,N,8800.0,,,,
+CIF500359,David Al Nuaimi,INDIVIDUAL,1994-07-26,SALARIED,Retail Trade,Mass,Consumer Banking,Sharjah,2024-01-06,A,N,7100.0,,,,
+CIF500360,Michael Khan,INDIVIDUAL,1988-01-18,SALARIED,Retail Trade,Mass,Consumer Banking,Sharjah,2022-03-07,C,N,5900.0,,,,
+CIF500361,Zainab Saleh,INDIVIDUAL,1969-09-27,SALARIED,Government,Mass,Consumer Banking,Sharjah,2020-01-08,D,N,11100.0,,,,
+CIF500362,Tariq Nair,INDIVIDUAL,1992-08-22,SALARIED,Government,Mass Affluent,Consumer Banking,Dubai,2024-03-09,B,Y,24000.0,,,,RM-03
+CIF500363,Arjun Nair,INDIVIDUAL,2000-03-27,SALARIED,Retail Trade,Mass,Consumer Banking,Fujairah,2017-11-10,A,Y,12900.0,,,,
+CIF500364,Dina Khan,INDIVIDUAL,1972-07-24,SALARIED,Healthcare,Mass,Consumer Banking,Dubai,2024-07-11,B,Y,14300.0,,,,
+CIF500365,Meera Al Mansoori,INDIVIDUAL,1989-06-14,SALARIED,Retail Trade,Mass Affluent,Consumer Banking,Sharjah,2017-05-12,C,N,15500.0,,,,RM-06
+CIF500366,Karim Nair,INDIVIDUAL,1999-05-01,SALARIED,Construction,Mass Affluent,Consumer Banking,Ras Al Khaimah,2023-04-13,C,Y,23600.0,,,,RM-07
+CIF500367,Rohan Al Nuaimi,INDIVIDUAL,1967-04-23,SALARIED,Education,Mass,Consumer Banking,Sharjah,2022-01-14,E,Y,13900.0,,,,
+CIF500368,Layla Farouk,INDIVIDUAL,1986-03-16,SALARIED,Retail Trade,Mass,Consumer Banking,Umm Al Quwain,2023-09-15,B,N,5200.0,,,,
+CIF500369,Khalid Al Suwaidi,INDIVIDUAL,1977-03-28,SALARIED,Construction,Mass,Consumer Banking,Ras Al Khaimah,2016-01-16,B,Y,11200.0,,,,
+CIF500370,Jose Fernandes,INDIVIDUAL,1982-08-18,SALARIED,Retail Trade,Mass,Consumer Banking,Dubai,2015-01-17,E,Y,7300.0,,,,
+CIF500371,Mariam Rahman,INDIVIDUAL,1981-07-11,SALARIED,Construction,Mass,Consumer Banking,Sharjah,2023-05-18,B,Y,12900.0,,,,
+CIF500372,Dina Malik,INDIVIDUAL,1989-07-11,SELF_EMPLOYED,Self-Employed Professional,Mass,Consumer Banking,Dubai,2020-10-19,B,N,5500.0,,,,
+CIF500373,Ahmed Cruz,INDIVIDUAL,1995-04-08,SELF_EMPLOYED,Self-Employed Professional,Mass,Consumer Banking,Ras Al Khaimah,2021-02-20,C,N,13900.0,,,,
+CIF500374,Sarah Al Ketbi,INDIVIDUAL,1978-07-02,SALARIED,Banking & Finance,Mass Affluent,Consumer Banking,Sharjah,2023-03-21,B,N,18900.0,,,,RM-10
+CIF500375,Sarah Patel,INDIVIDUAL,1976-07-06,SALARIED,Healthcare,Mass,Consumer Banking,Abu Dhabi,2023-03-22,E,Y,12100.0,,,,
+CIF500376,Fatima D'Souza,INDIVIDUAL,1994-05-03,SALARIED,Hospitality & Tourism,Mass,Consumer Banking,Sharjah,2024-03-23,A,Y,11100.0,,,,
+CIF500377,David Al Nuaimi,INDIVIDUAL,1970-06-04,SALARIED,Education,Mass Affluent,Consumer Banking,Ajman,2024-07-24,B,Y,18900.0,,,,RM-06
+CIF500378,Hessa Taylor,INDIVIDUAL,1998-01-02,SALARIED,Government,Mass Affluent,Consumer Banking,Dubai,2022-08-25,B,Y,26400.0,,,,RM-02
+CIF500379,Huda Malik,INDIVIDUAL,2002-11-24,SALARIED,IT & Telecom,Mass,Consumer Banking,Ajman,2023-03-26,B,N,15100.0,,,,
+CIF500380,Aisha Thomas,INDIVIDUAL,1986-04-01,SALARIED,Government,Mass Affluent,Consumer Banking,Dubai,2022-08-27,B,Y,20700.0,,,,RM-05
+CIF500381,Aisha Fernandes,INDIVIDUAL,1996-04-20,SALARIED,Construction,Mass,Consumer Banking,Ras Al Khaimah,2024-07-01,B,Y,6500.0,,,,
+CIF500382,Hassan Hamdan,INDIVIDUAL,1978-07-03,SALARIED,Retail Trade,Mass,Consumer Banking,Sharjah,2023-02-02,D,Y,7600.0,,,,
+CIF500383,David Al Suwaidi,INDIVIDUAL,1982-03-18,SALARIED,Education,Mass Affluent,Consumer Banking,Sharjah,2024-01-03,B,Y,19700.0,,,,RM-05
+CIF500384,Zainab Pereira,INDIVIDUAL,1984-11-28,SALARIED,Retail Trade,Mass,Consumer Banking,Abu Dhabi,2020-01-04,B,Y,5100.0,,,,
+CIF500385,Joseph Nasser,INDIVIDUAL,1966-07-18,SALARIED,Healthcare,Mass Affluent,Consumer Banking,Ras Al Khaimah,2018-05-05,C,Y,27000.0,,,,RM-01
+CIF500386,Tariq Pereira,INDIVIDUAL,1980-06-07,SALARIED,Government,Mass,Consumer Banking,Ajman,2021-11-06,B,Y,14500.0,,,,
+CIF500387,Kiran D'Souza,INDIVIDUAL,1972-07-04,SELF_EMPLOYED,Self-Employed Professional,Mass Affluent,Consumer Banking,Dubai,2022-07-07,E,N,19700.0,,,,RM-12
+CIF500388,Jose Qureshi,INDIVIDUAL,2001-01-12,SALARIED,Banking & Finance,Mass Affluent,Consumer Banking,Ras Al Khaimah,2026-08-08,B,Y,21500.0,,,,RM-12
+CIF500389,David Khoury,INDIVIDUAL,1966-01-19,SALARIED,Government,Mass Affluent,Consumer Banking,Sharjah,2022-01-09,A,Y,17100.0,,,,RM-05
+CIF500390,Khalid Khan,INDIVIDUAL,1979-09-27,SALARIED,Healthcare,Mass Affluent,Consumer Banking,Ras Al Khaimah,2024-06-10,A,Y,16400.0,,,,RM-08
+CIF500391,Deepa D'Souza,INDIVIDUAL,2002-12-26,SALARIED,Retail Trade,Mass,Consumer Banking,Umm Al Quwain,2016-07-11,A,Y,5100.0,,,,
+CIF500392,Arjun Iyer,INDIVIDUAL,1980-04-25,SALARIED,Healthcare,Mass,Consumer Banking,Ajman,2015-04-12,B,Y,9200.0,,,,
+CIF500393,Dina Varghese,INDIVIDUAL,1981-03-18,SALARIED,Construction,Mass,Consumer Banking,Sharjah,2020-07-13,C,Y,8200.0,,,,
+CIF500394,Samir Hamdan,INDIVIDUAL,1969-01-05,SALARIED,Education,Mass Affluent,Consumer Banking,Dubai,2020-11-14,A,N,17600.0,,,,RM-09
+CIF500395,Liza Wilson,INDIVIDUAL,1992-08-16,SALARIED,Hospitality & Tourism,Mass,Consumer Banking,Ras Al Khaimah,2018-09-15,A,Y,12500.0,,,,
+CIF500396,Michael Cruz,INDIVIDUAL,1992-04-20,SALARIED,Education,Mass,Consumer Banking,Dubai,2019-06-16,D,Y,9700.0,,,,
+CIF500397,Ravi Cruz,INDIVIDUAL,1970-05-14,SALARIED,Retail Trade,Mass,Consumer Banking,Sharjah,2015-12-17,C,Y,5400.0,,,,
+CIF500398,Mohammed Smith,INDIVIDUAL,1973-12-18,SALARIED,Government,Affluent,Consumer Banking,Ajman,2018-06-18,B,Y,56800.0,,,,RM-10
+CIF500399,Imran Al Suwaidi,INDIVIDUAL,1980-06-20,SALARIED,Construction,Mass,Consumer Banking,Abu Dhabi,2022-03-19,A,Y,6200.0,,,,
+CIF500400,Ayesha Varghese,INDIVIDUAL,1977-02-24,SALARIED,Retail Trade,Mass,Consumer Banking,Dubai,2021-04-01,A,Y,5000.0,,,,
+CIF500401,Zainab Nasser,INDIVIDUAL,1964-05-15,SALARIED,Healthcare,Mass Affluent,Consumer Banking,Dubai,2014-12-02,B,Y,27900.0,,,,RM-05
+CIF500402,Grace Mathew,INDIVIDUAL,1996-05-09,SALARIED,Retail Trade,Mass,Consumer Banking,Dubai,2017-12-03,B,N,10500.0,,,,
+CIF500403,Jose Al Ketbi,INDIVIDUAL,1997-09-16,SALARIED,Education,Mass,Consumer Banking,Sharjah,2017-11-04,A,Y,6700.0,,,,
+CIF500404,Nikhil Fernandes,INDIVIDUAL,1996-08-20,SALARIED,Hospitality & Tourism,Mass,Consumer Banking,Ras Al Khaimah,2024-04-05,C,Y,8200.0,,,,
+CIF500405,Khalid Al Suwaidi,INDIVIDUAL,1965-11-20,SELF_EMPLOYED,Self-Employed Professional,Mass,Consumer Banking,Ras Al Khaimah,2016-11-06,D,N,5300.0,,,,
+CIF500406,David Hamdan,INDIVIDUAL,1996-10-09,SALARIED,Retail Trade,Mass,Consumer Banking,Umm Al Quwain,2021-04-07,B,Y,12200.0,,,,
+CIF500407,Rahul Pereira,INDIVIDUAL,1978-05-27,SALARIED,Healthcare,Mass Affluent,Consumer Banking,Abu Dhabi,2026-08-08,C,Y,28500.0,,,,RM-02
+CIF500408,Deepa D'Souza,INDIVIDUAL,1976-02-24,SALARIED,Government,Mass Affluent,Consumer Banking,Dubai,2021-11-09,A,Y,27100.0,,,,RM-04
+CIF500409,Emma Patel,INDIVIDUAL,2003-06-14,SALARIED,Retail Trade,Mass,Consumer Banking,Ajman,2021-07-10,D,Y,8700.0,,,,
+CIF500410,Aisha Nasser,INDIVIDUAL,2001-05-05,SELF_EMPLOYED,Self-Employed Professional,Mass Affluent,Consumer Banking,Sharjah,2018-09-11,A,N,24700.0,,,,RM-09
+CIF500411,Imran Al Ketbi,INDIVIDUAL,1997-11-15,SELF_EMPLOYED,Self-Employed Professional,Affluent,Consumer Banking,Dubai,2022-06-12,C,N,45100.0,,,,RM-10
+CIF500412,Sana Cruz,INDIVIDUAL,1979-08-19,SALARIED,Hospitality & Tourism,Mass,Consumer Banking,Sharjah,2016-07-13,A,Y,15500.0,,,,
+CIF500413,Joseph Wilson,INDIVIDUAL,1976-03-02,SALARIED,Retail Trade,Mass,Consumer Banking,Ras Al Khaimah,2018-07-14,B,N,11600.0,,,,
+CIF500414,John Al Ketbi,INDIVIDUAL,1995-10-06,SALARIED,Retail Trade,Mass,Consumer Banking,Ras Al Khaimah,2019-03-15,E,Y,11200.0,,,,
+CIF500415,Karim Iyer,INDIVIDUAL,1972-05-22,SALARIED,IT & Telecom,Mass,Consumer Banking,Dubai,2023-08-16,A,Y,11700.0,,,,
+CIF500416,Mariam Pereira,INDIVIDUAL,1965-08-21,SALARIED,Education,Mass,Consumer Banking,Sharjah,2019-12-17,A,Y,12300.0,,,,
+CIF500417,Nikhil Saleh,INDIVIDUAL,1991-01-24,SALARIED,Government,Mass,Consumer Banking,Dubai,2021-12-18,A,N,12000.0,,,,
+CIF500418,Yousef Al Shamsi,INDIVIDUAL,1970-07-24,SALARIED,Hospitality & Tourism,Mass,Consumer Banking,Dubai,2024-01-19,D,Y,5700.0,,,,
+CIF500419,Sarah Siddiqui,INDIVIDUAL,1985-02-13,SALARIED,Construction,Mass,Consumer Banking,Fujairah,2018-08-20,A,Y,8100.0,,,,
+CIF500420,Jose Iyer,INDIVIDUAL,1980-07-13,SALARIED,Construction,Mass,Consumer Banking,Dubai,2018-08-21,B,Y,7100.0,,,,
+CIF500421,John Khan,INDIVIDUAL,1981-03-23,SALARIED,Retail Trade,Mass,Consumer Banking,Ajman,2021-02-22,C,Y,5200.0,,,,
+CIF500422,Rania Haddad,INDIVIDUAL,1974-08-10,SALARIED,Education,Mass Affluent,Consumer Banking,Fujairah,2020-10-23,C,N,22300.0,,,,RM-12
+CIF500423,Hessa Al Shamsi,INDIVIDUAL,1997-09-04,SALARIED,Retail Trade,Mass,Consumer Banking,Umm Al Quwain,2017-02-24,B,Y,8900.0,,,,
+CIF500424,Khalid Mathew,INDIVIDUAL,1988-08-14,SELF_EMPLOYED,Self-Employed Professional,Mass Affluent,Consumer Banking,Dubai,2015-06-25,E,N,23400.0,,,,RM-12
+CIF500425,Mariam Taylor,INDIVIDUAL,1973-06-17,SALARIED,Government,Mass Affluent,Consumer Banking,Sharjah,2026-08-26,D,Y,28500.0,,,,RM-11
+CIF500426,Dina Reddy,INDIVIDUAL,1981-04-19,SALARIED,Construction,Mass,Consumer Banking,Ajman,2019-04-27,A,Y,7600.0,,,,
+CIF500427,Omar Mathew,INDIVIDUAL,1977-08-19,SALARIED,Retail Trade,Mass,Consumer Banking,Dubai,2023-05-01,B,Y,6100.0,,,,
+CIF500428,Aisha Varghese,INDIVIDUAL,1973-02-21,SALARIED,Construction,Mass,Consumer Banking,Sharjah,2024-01-02,B,Y,12800.0,,,,
+CIF500429,Ahmed Malik,INDIVIDUAL,1996-01-17,SALARIED,Healthcare,Mass,Consumer Banking,Sharjah,2023-05-03,A,Y,7400.0,,,,
+CIF500430,Samir Malik,INDIVIDUAL,1984-09-22,SALARIED,Retail Trade,Mass,Consumer Banking,Dubai,2022-12-04,A,Y,7800.0,,,,
+CIF500431,Sarah Al Suwaidi,INDIVIDUAL,1966-05-25,SALARIED,Construction,Mass Affluent,Consumer Banking,Ajman,2016-06-05,A,Y,19100.0,,,,RM-08
+CIF500432,Rahul Reyes,INDIVIDUAL,1966-07-18,SALARIED,Government,Mass Affluent,Consumer Banking,Dubai,2022-12-06,B,N,25300.0,,,,RM-03
+CIF500433,Kiran Mathew,INDIVIDUAL,1993-03-08,SALARIED,Government,Mass Affluent,Consumer Banking,Dubai,2015-08-07,A,Y,31400.0,,,,RM-02
+CIF500434,Jose George,INDIVIDUAL,1985-08-08,SALARIED,Construction,Mass,Consumer Banking,Dubai,2015-11-08,C,Y,8200.0,,,,
+CIF500435,Noura Al Nuaimi,INDIVIDUAL,1976-06-14,SALARIED,Hospitality & Tourism,Mass,Consumer Banking,Sharjah,2018-02-09,B,Y,8500.0,,,,
+CIF500436,Nikhil D'Souza,INDIVIDUAL,1979-11-05,SALARIED,Oil & Gas,Mass Affluent,Consumer Banking,Sharjah,2020-08-10,A,Y,29500.0,,,,RM-11
+CIF500437,Mark Cruz,INDIVIDUAL,1974-04-27,SALARIED,Retail Trade,Mass,Consumer Banking,Sharjah,2020-01-11,E,Y,5500.0,,,,
+CIF500438,Ravi Al Hashimi,INDIVIDUAL,1998-05-27,SALARIED,IT & Telecom,Mass Affluent,Consumer Banking,Sharjah,2018-04-12,C,Y,22800.0,,,,RM-12
+CIF500439,Liza Wilson,INDIVIDUAL,1977-12-01,SALARIED,Aviation,Mass,Consumer Banking,Dubai,2020-12-13,A,Y,8600.0,,,,
+CIF500440,Deepa Smith,INDIVIDUAL,1977-11-12,SELF_EMPLOYED,Self-Employed Professional,Mass,Consumer Banking,Ras Al Khaimah,2019-06-14,D,N,11000.0,,,,
+CIF500441,Mohammed Siddiqui,INDIVIDUAL,1976-07-02,SALARIED,Aviation,Mass,Consumer Banking,Fujairah,2026-07-15,C,Y,12000.0,,,,
+CIF500442,Mohammed Perera,INDIVIDUAL,1964-08-27,SALARIED,Education,Mass Affluent,Consumer Banking,Dubai,2018-07-16,D,N,17900.0,,,,RM-05
+CIF500443,Omar Siddiqui,INDIVIDUAL,1976-03-21,SALARIED,Healthcare,Mass,Consumer Banking,Ajman,2018-08-17,A,Y,13400.0,,,,
+CIF500444,Ravi Al Hashimi,INDIVIDUAL,1986-09-17,SALARIED,IT & Telecom,Mass Affluent,Consumer Banking,Ajman,2023-04-18,C,Y,21100.0,,,,RM-03
+CIF500445,Mark Khan,INDIVIDUAL,1975-12-07,SELF_EMPLOYED,Self-Employed Professional,Mass,Consumer Banking,Ras Al Khaimah,2021-01-19,D,N,7400.0,,,,
+CIF500446,Bilal Malik,INDIVIDUAL,1996-06-16,SALARIED,Construction,Mass,Consumer Banking,Dubai,2019-06-20,C,Y,8500.0,,,,
+CIF500447,Noura Hamdan,INDIVIDUAL,1976-08-06,SALARIED,Aviation,Mass,Consumer Banking,Ajman,2016-09-21,C,Y,9300.0,,,,
+CIF500448,Meera Wilson,INDIVIDUAL,1977-10-24,SALARIED,IT & Telecom,Mass,Consumer Banking,Sharjah,2015-10-22,D,Y,8800.0,,,,
+CIF500449,Rahul Reddy,INDIVIDUAL,1995-02-23,SALARIED,Education,Mass Affluent,Consumer Banking,Ajman,2022-04-23,B,Y,16300.0,,,,RM-04
+CIF500450,Imran Thomas,INDIVIDUAL,1968-08-24,SALARIED,Oil & Gas,Mass Affluent,Consumer Banking,Dubai,2020-01-24,D,Y,17100.0,,,,RM-01
+CIF500451,Samir Reyes,INDIVIDUAL,2001-04-09,SALARIED,Banking & Finance,Mass,Consumer Banking,Sharjah,2021-04-25,D,Y,7200.0,,,,
+CIF500452,Layla Al Ketbi,INDIVIDUAL,1969-01-07,SALARIED,Education,Mass Affluent,Consumer Banking,Sharjah,2017-08-26,D,Y,22400.0,,,,RM-10
+CIF500453,Imran Smith,INDIVIDUAL,1975-01-04,SALARIED,Retail Trade,Mass,Consumer Banking,Dubai,2022-10-27,A,Y,5300.0,,,,
+CIF500454,Maria Silva,INDIVIDUAL,1986-09-07,SALARIED,Government,Mass,Consumer Banking,Sharjah,2019-07-01,B,Y,13900.0,,,,
+CIF500455,Mohammed Al Hashimi,INDIVIDUAL,2001-12-15,SALARIED,Government,Mass Affluent,Consumer Banking,Sharjah,2023-04-02,C,Y,18800.0,,,,RM-04
+CIF500456,Saeed Malik,INDIVIDUAL,1973-03-23,SELF_EMPLOYED,Self-Employed Professional,Mass,Consumer Banking,Ras Al Khaimah,2016-05-03,C,N,11600.0,,,,
+CIF500457,Saeed Mathew,INDIVIDUAL,1982-11-26,SALARIED,IT & Telecom,Mass Affluent,Consumer Banking,Ras Al Khaimah,2020-01-04,C,N,21000.0,,,,RM-06
+CIF500458,Tariq Fernandes,INDIVIDUAL,1978-12-18,SALARIED,Healthcare,Mass,Consumer Banking,Abu Dhabi,2026-06-05,C,Y,11000.0,,,,
+CIF500459,Emma Khan,INDIVIDUAL,1969-04-15,SALARIED,Healthcare,Mass,Consumer Banking,Sharjah,2019-03-06,C,Y,9100.0,,,,
+CIF500460,Hassan Al Shamsi,INDIVIDUAL,1978-08-06,SALARIED,Construction,Mass,Consumer Banking,Sharjah,2021-03-07,A,Y,14500.0,,,,
+CIF500461,Kiran Hossain,INDIVIDUAL,1965-09-01,SALARIED,IT & Telecom,Mass,Consumer Banking,Sharjah,2015-04-08,C,Y,13500.0,,,,
+CIF500462,Layla Fernandes,INDIVIDUAL,1975-11-20,SALARIED,Government,Mass Affluent,Consumer Banking,Dubai,2018-03-09,C,Y,23400.0,,,,RM-10
+CIF500463,Omar Pereira,INDIVIDUAL,1970-12-05,SALARIED,Retail Trade,Mass,Consumer Banking,Abu Dhabi,2017-11-10,C,Y,7500.0,,,,
+CIF500464,David Brown,INDIVIDUAL,1981-02-16,SALARIED,IT & Telecom,Mass Affluent,Consumer Banking,Sharjah,2020-08-11,B,Y,21900.0,,,,RM-04
+CIF500465,Mark Hamdan,INDIVIDUAL,1993-06-07,SALARIED,Retail Trade,Mass,Consumer Banking,Dubai,2015-02-12,B,Y,8200.0,,,,
+CIF500466,Yousef Farouk,INDIVIDUAL,1997-01-07,SALARIED,Construction,Mass,Consumer Banking,Abu Dhabi,2020-05-13,B,Y,9700.0,,,,
+CIF500467,Zainab D'Souza,INDIVIDUAL,1982-02-22,SALARIED,Construction,Mass,Consumer Banking,Dubai,2019-01-14,A,N,5900.0,,,,
+CIF500468,Amira Pereira,INDIVIDUAL,1975-03-05,SALARIED,Construction,Mass,Consumer Banking,Sharjah,2019-03-15,B,Y,11200.0,,,,
+CIF500469,Nikhil Farouk,INDIVIDUAL,1964-01-25,SALARIED,Healthcare,Mass Affluent,Consumer Banking,Sharjah,2019-07-16,A,Y,32300.0,,,,RM-02
+CIF500470,Layla Saleh,INDIVIDUAL,1969-09-09,SALARIED,Construction,Mass,Consumer Banking,Sharjah,2021-07-17,A,Y,12900.0,,,,
+CIF500471,Priya Khan,INDIVIDUAL,1989-01-28,SALARIED,Healthcare,Mass,Consumer Banking,Ras Al Khaimah,2015-10-18,C,Y,13800.0,,,,
+CIF500472,Yousef Smith,INDIVIDUAL,1995-05-13,SALARIED,Retail Trade,Mass,Consumer Banking,Sharjah,2019-07-19,A,Y,5800.0,,,,
+CIF500473,David Thomas,INDIVIDUAL,2002-02-15,SALARIED,Construction,Mass,Consumer Banking,Dubai,2016-08-20,B,Y,11100.0,,,,
+CIF500474,Emma Cruz,INDIVIDUAL,1980-03-01,SELF_EMPLOYED,Self-Employed Professional,Mass Affluent,Consumer Banking,Ajman,2019-08-21,C,N,32900.0,,,,RM-09
+CIF500475,Tariq Mathew,INDIVIDUAL,1986-03-18,SALARIED,Government,Mass Affluent,Consumer Banking,Sharjah,2015-03-22,D,N,30700.0,,,,RM-05
+CIF500476,Saeed Nair,INDIVIDUAL,1991-02-03,SALARIED,Government,Mass Affluent,Consumer Banking,Ras Al Khaimah,2024-03-23,A,Y,29000.0,,,,RM-11
+CIF500477,Rahul Taylor,INDIVIDUAL,1982-03-12,SALARIED,Oil & Gas,Affluent,Consumer Banking,Umm Al Quwain,2021-12-24,B,Y,48800.0,,,,RM-03
+CIF500478,Liza Mathew,INDIVIDUAL,1979-07-18,SALARIED,Hospitality & Tourism,Mass,Consumer Banking,Dubai,2018-03-25,C,N,8000.0,,,,
+CIF500479,Michael Al Suwaidi,INDIVIDUAL,1987-07-25,SALARIED,Government,Mass Affluent,Consumer Banking,Ras Al Khaimah,2022-03-26,D,Y,16400.0,,,,RM-04
+CIF500480,Nikhil Rahman,INDIVIDUAL,1992-06-02,SALARIED,Government,Mass,Consumer Banking,Fujairah,2022-01-27,A,N,14900.0,,,,
+CIF500481,Hassan Silva,INDIVIDUAL,1984-05-09,SALARIED,Construction,Mass,Consumer Banking,Sharjah,2019-02-01,E,Y,6500.0,,,,
+CIF500482,Rahul Perera,INDIVIDUAL,1968-05-22,SALARIED,Banking & Finance,Mass,Consumer Banking,Abu Dhabi,2020-07-02,C,N,8400.0,,,,
+CIF500483,Imran Reyes,INDIVIDUAL,1999-09-03,SALARIED,Aviation,Mass,Consumer Banking,Dubai,2026-07-03,B,Y,14200.0,,,,
+CIF500484,Bilal Malik,INDIVIDUAL,1995-09-16,SALARIED,Construction,Mass Affluent,Consumer Banking,Abu Dhabi,2022-11-04,A,Y,24300.0,,,,RM-06
+CIF500485,Jose Farouk,INDIVIDUAL,1967-03-20,SALARIED,Construction,Mass,Consumer Banking,Fujairah,2017-10-05,C,Y,7500.0,,,,
+CIF500486,Huda Smith,INDIVIDUAL,1993-12-12,SALARIED,Education,Mass,Consumer Banking,Ajman,2015-02-06,C,Y,11600.0,,,,
+CIF500487,Hassan Thomas,INDIVIDUAL,1991-10-10,SALARIED,Construction,Mass,Consumer Banking,Ras Al Khaimah,2015-09-07,B,Y,5100.0,,,,
+CIF500488,Deepa Menon,INDIVIDUAL,1997-09-06,SALARIED,Retail Trade,Mass,Consumer Banking,Dubai,2019-02-08,C,Y,5200.0,,,,
+CIF500489,Mark Santos,INDIVIDUAL,2002-05-11,SALARIED,Oil & Gas,Mass Affluent,Consumer Banking,Ajman,2016-01-09,B,Y,24200.0,,,,RM-04
+CIF500490,Dina Nasser,INDIVIDUAL,1992-06-12,SALARIED,Construction,Mass,Consumer Banking,Sharjah,2026-06-10,B,Y,9500.0,,,,
+CIF500491,Mariam Hamdan,INDIVIDUAL,1995-01-05,SALARIED,Government,Mass Affluent,Consumer Banking,Ajman,2024-02-11,C,Y,23900.0,,,,RM-09
+CIF500492,Grace Al Shamsi,INDIVIDUAL,1998-11-22,SALARIED,Retail Trade,Mass,Consumer Banking,Abu Dhabi,2026-05-12,E,Y,15500.0,,,,
+CIF500493,Samir Taylor,INDIVIDUAL,1995-12-27,SALARIED,Hospitality & Tourism,Mass,Consumer Banking,Ras Al Khaimah,2020-11-13,C,Y,6300.0,,,,
+CIF500494,Bilal Farouk,INDIVIDUAL,1965-03-25,SALARIED,Retail Trade,Mass,Consumer Banking,Sharjah,2016-04-14,B,N,8000.0,,,,
+CIF500495,Omar Mathew,INDIVIDUAL,1997-11-14,SALARIED,IT & Telecom,Mass,Consumer Banking,Fujairah,2020-05-15,B,Y,16500.0,,,,
+CIF500496,Nikhil Reyes,INDIVIDUAL,1976-02-27,SALARIED,Retail Trade,Mass,Consumer Banking,Dubai,2018-12-16,B,Y,7700.0,,,,
+CIF500497,Khalid Farouk,INDIVIDUAL,1994-09-14,SALARIED,Hospitality & Tourism,Mass,Consumer Banking,Abu Dhabi,2022-02-17,C,N,8500.0,,,,
+CIF500498,Zainab Hamdan,INDIVIDUAL,2003-10-17,SALARIED,Government,Mass Affluent,Consumer Banking,Sharjah,2021-02-18,A,Y,15700.0,,,,RM-11
+CIF500499,Jose Al Nuaimi,INDIVIDUAL,1997-12-13,SALARIED,Government,Mass,Consumer Banking,Ras Al Khaimah,2018-07-19,A,Y,12700.0,,,,
+CIF500500,Omar Santos,INDIVIDUAL,1975-05-23,SALARIED,Education,Mass Affluent,Consumer Banking,Dubai,2015-06-01,C,Y,16200.0,,,,RM-06
+CIF500501,Samir Silva,INDIVIDUAL,1974-12-17,SALARIED,Healthcare,Mass,Consumer Banking,Ajman,2015-09-02,B,N,9200.0,,,,
+CIF500502,Mark Farouk,INDIVIDUAL,1986-02-09,SALARIED,Aviation,Mass,Consumer Banking,Dubai,2015-12-03,B,Y,9900.0,,,,
+CIF500503,Rahul Sharma,INDIVIDUAL,1983-09-21,SALARIED,Education,Mass,Consumer Banking,Dubai,2026-05-04,D,Y,13100.0,,,,
+CIF500504,Rahul Al Shamsi,INDIVIDUAL,1983-08-11,SALARIED,Retail Trade,Mass,Consumer Banking,Ajman,2026-05-05,A,Y,14300.0,,,,
+CIF500505,Maria Khoury,INDIVIDUAL,1967-07-10,SALARIED,Government,Mass Affluent,Consumer Banking,Abu Dhabi,2020-04-06,A,N,19700.0,,,,RM-09
+CIF500506,Imran Iyer,INDIVIDUAL,1992-03-23,SALARIED,Retail Trade,Mass,Consumer Banking,Abu Dhabi,2022-11-07,D,Y,5400.0,,,,
+CIF500507,Rashid Al Ketbi,INDIVIDUAL,1972-12-21,SALARIED,Hospitality & Tourism,Mass,Consumer Banking,Sharjah,2017-05-08,C,Y,11000.0,,,,
+CIF500508,Kiran Haddad,INDIVIDUAL,1966-05-02,SALARIED,Retail Trade,Mass,Consumer Banking,Sharjah,2024-03-09,B,Y,12900.0,,,,
+CIF500509,Maria Khoury,INDIVIDUAL,2003-05-25,SELF_EMPLOYED,Self-Employed Professional,Mass,Consumer Banking,Dubai,2020-01-10,C,N,7300.0,,,,
+CIF500510,Hana Wilson,INDIVIDUAL,1976-06-08,SALARIED,Retail Trade,Mass,Consumer Banking,Umm Al Quwain,2019-10-11,A,Y,6200.0,,,,
+CIF500511,Fatima Siddiqui,INDIVIDUAL,1983-02-14,SALARIED,Government,Mass,Consumer Banking,Sharjah,2021-02-12,C,Y,10600.0,,,,
+CIF500512,Amira Sharma,INDIVIDUAL,1979-03-28,SALARIED,Construction,Mass Affluent,Consumer Banking,Sharjah,2016-04-13,D,Y,17800.0,,,,RM-09
+CIF500513,Omar Reddy,INDIVIDUAL,1988-10-15,SALARIED,Hospitality & Tourism,Mass Affluent,Consumer Banking,Fujairah,2026-07-14,B,Y,16000.0,,,,RM-09
+CIF500514,Amira Siddiqui,INDIVIDUAL,1994-04-25,SELF_EMPLOYED,Self-Employed Professional,Mass,Consumer Banking,Ajman,2021-04-15,D,N,11200.0,,,,
+CIF500515,Grace Pereira,INDIVIDUAL,1996-10-24,SALARIED,Retail Trade,Mass Affluent,Consumer Banking,Ras Al Khaimah,2019-01-16,C,Y,16600.0,,,,RM-02
+CIF500516,Huda Brown,INDIVIDUAL,2000-07-03,SALARIED,Retail Trade,Mass,Consumer Banking,Ajman,2023-09-17,D,Y,6300.0,,,,
+CIF500517,Mohammed Siddiqui,INDIVIDUAL,1994-07-18,SALARIED,Hospitality & Tourism,Mass,Consumer Banking,Dubai,2019-03-18,B,N,11600.0,,,,
+CIF500518,Amira Nair,INDIVIDUAL,1993-07-24,SALARIED,Healthcare,Mass,Consumer Banking,Umm Al Quwain,2018-08-19,A,N,6700.0,,,,
+CIF500519,Grace Varghese,INDIVIDUAL,1979-07-09,SELF_EMPLOYED,Self-Employed Professional,Mass,Consumer Banking,Ras Al Khaimah,2020-11-20,C,N,14000.0,,,,
+CIF500520,Maria Fernandes,INDIVIDUAL,1976-04-20,SELF_EMPLOYED,Self-Employed Professional,Mass,Consumer Banking,Ajman,2022-10-21,A,N,11900.0,,,,
+CIF500521,Meera Cruz,INDIVIDUAL,1968-05-09,SALARIED,Retail Trade,Mass,Consumer Banking,Dubai,2026-08-22,E,Y,7000.0,,,,
+CIF500522,Joseph Hamdan,INDIVIDUAL,2002-09-05,SALARIED,Retail Trade,Mass,Consumer Banking,Dubai,2021-11-23,B,N,5900.0,,,,
+CIF500523,Faisal Al Suwaidi,INDIVIDUAL,1993-09-27,SALARIED,Retail Trade,Mass,Consumer Banking,Ras Al Khaimah,2019-09-24,D,Y,5000.0,,,,
+CIF500524,Amira Khoury,INDIVIDUAL,1986-02-12,SALARIED,IT & Telecom,Mass Affluent,Consumer Banking,Fujairah,2015-11-25,C,Y,27900.0,,,,RM-11
+CIF500525,Rohan Al Ketbi,INDIVIDUAL,2002-01-09,SALARIED,Construction,Mass,Consumer Banking,Sharjah,2022-09-26,A,Y,9100.0,,,,
+CIF500526,Noura George,INDIVIDUAL,1993-09-21,SALARIED,Construction,Mass,Consumer Banking,Ras Al Khaimah,2018-05-27,C,Y,5500.0,,,,
+CIF500527,Emma Khan,INDIVIDUAL,1966-01-15,SALARIED,Construction,Mass,Consumer Banking,Umm Al Quwain,2018-10-01,C,Y,11500.0,,,,
+CIF500528,Bilal Hamdan,INDIVIDUAL,1993-01-19,SALARIED,IT & Telecom,Mass,Consumer Banking,Dubai,2026-07-02,B,Y,8500.0,,,,
+CIF500529,Meera Santos,INDIVIDUAL,1993-02-28,SALARIED,Oil & Gas,Affluent,Consumer Banking,Dubai,2023-01-03,D,Y,53000.0,,,,RM-06
+CIF500530,Rohan Patel,INDIVIDUAL,1970-07-21,SALARIED,Construction,Mass,Consumer Banking,Fujairah,2018-05-04,A,Y,8700.0,,,,
+CIF500531,Ana Al Hashimi,INDIVIDUAL,1996-03-07,SALARIED,Retail Trade,Mass,Consumer Banking,Dubai,2019-02-05,C,Y,6200.0,,,,
+CIF500532,Maria Qureshi,INDIVIDUAL,1983-08-05,SALARIED,Construction,Mass,Consumer Banking,Ajman,2021-09-06,A,Y,14600.0,,,,
+CIF500533,Ana Malik,INDIVIDUAL,1973-08-28,SALARIED,Construction,Mass,Consumer Banking,Ajman,2022-07-07,D,Y,9400.0,,,,
+CIF500534,Huda Al Ketbi,INDIVIDUAL,1985-06-13,SALARIED,Retail Trade,Mass,Consumer Banking,Ajman,2026-05-08,C,Y,5900.0,,,,
+CIF500535,Khalid D'Souza,INDIVIDUAL,1989-11-19,SALARIED,Government,Mass,Consumer Banking,Dubai,2018-11-09,B,Y,11800.0,,,,
+CIF500536,Maria Qureshi,INDIVIDUAL,1997-02-23,SALARIED,IT & Telecom,Mass,Consumer Banking,Ajman,2024-05-10,B,Y,10900.0,,,,
+CIF500537,Rahul Nair,INDIVIDUAL,1975-05-21,SALARIED,IT & Telecom,Mass Affluent,Consumer Banking,Sharjah,2015-09-11,C,Y,23700.0,,,,RM-12
+CIF500538,Nikhil Perera,INDIVIDUAL,1965-12-27,SALARIED,Government,Mass Affluent,Consumer Banking,Dubai,2018-04-12,B,Y,16900.0,,,,RM-05
+CIF500539,Jose Al Nuaimi,INDIVIDUAL,1982-04-23,SELF_EMPLOYED,Self-Employed Professional,Affluent,Consumer Banking,Fujairah,2022-02-13,A,N,44800.0,,,,RM-04
+CIF500540,Bilal Al Mansoori,INDIVIDUAL,1975-09-05,SELF_EMPLOYED,Self-Employed Professional,Mass Affluent,Consumer Banking,Sharjah,2015-12-14,A,N,18900.0,,,,RM-01
+CIF500541,Tariq Silva,INDIVIDUAL,1974-05-25,SALARIED,Government,Mass Affluent,Consumer Banking,Sharjah,2018-11-15,B,Y,18800.0,,,,RM-10
+CIF500542,Rohan Al Suwaidi,INDIVIDUAL,1965-07-10,SALARIED,Hospitality & Tourism,Mass,Consumer Banking,Fujairah,2016-10-16,C,Y,14600.0,,,,
+CIF500543,John Rahman,INDIVIDUAL,1968-01-08,SELF_EMPLOYED,Self-Employed Professional,Mass Affluent,Consumer Banking,Umm Al Quwain,2023-09-17,C,N,22000.0,,,,RM-03
+CIF500544,Emma Rahman,INDIVIDUAL,1995-12-04,SALARIED,Government,Mass Affluent,Consumer Banking,Sharjah,2014-11-18,C,Y,28100.0,,,,RM-01
+CIF500545,Bilal Saleh,INDIVIDUAL,1975-10-11,SALARIED,Retail Trade,Mass,Consumer Banking,Dubai,2018-07-19,A,Y,11600.0,,,,
+CIF500546,Rahul Al Ketbi,INDIVIDUAL,1964-07-04,SALARIED,Retail Trade,Mass,Consumer Banking,Dubai,2018-04-20,C,Y,8600.0,,,,
+CIF500547,Bilal Brown,INDIVIDUAL,1996-10-17,SALARIED,Hospitality & Tourism,Mass,Consumer Banking,Dubai,2023-04-21,C,Y,14300.0,,,,
+CIF500548,Bilal Farouk,INDIVIDUAL,2003-03-12,SELF_EMPLOYED,Self-Employed Professional,Mass Affluent,Consumer Banking,Umm Al Quwain,2021-01-22,A,N,28200.0,,,,RM-10
+CIF500549,John Al Suwaidi,INDIVIDUAL,1991-12-12,SALARIED,Government,Mass Affluent,Consumer Banking,Sharjah,2021-09-23,C,Y,25600.0,,,,RM-09
+CIF500550,Rania Khoury,INDIVIDUAL,1976-01-23,SALARIED,Construction,Mass,Consumer Banking,Ajman,2021-09-24,B,N,15300.0,,,,
+CIF500551,Maria George,INDIVIDUAL,1990-05-18,SELF_EMPLOYED,Self-Employed Professional,Mass,Consumer Banking,Sharjah,2018-10-25,A,N,6400.0,,,,
+CIF500552,Tariq Khan,INDIVIDUAL,1994-11-27,SALARIED,Construction,Mass,Consumer Banking,Sharjah,2018-05-26,B,N,7900.0,,,,
+CIF500553,Liza Sharma,INDIVIDUAL,1989-12-25,SELF_EMPLOYED,Self-Employed Professional,Mass Affluent,Consumer Banking,Sharjah,2021-04-27,A,N,20300.0,,,,RM-04
+CIF500554,Noura Fernandes,INDIVIDUAL,1966-12-16,SALARIED,Aviation,Mass,Consumer Banking,Dubai,2018-08-01,B,Y,10400.0,,,,
+CIF500555,Nikhil Al Hashimi,INDIVIDUAL,2000-08-24,SALARIED,Banking & Finance,Affluent,Consumer Banking,Sharjah,2015-11-02,C,Y,48600.0,,,,RM-07
+CIF500556,Emma Al Suwaidi,INDIVIDUAL,1971-10-03,SALARIED,Retail Trade,Mass,Consumer Banking,Sharjah,2024-01-03,A,Y,6500.0,,,,
+CIF500557,Meera Al Shamsi,INDIVIDUAL,1985-08-20,SALARIED,Construction,Mass,Consumer Banking,Dubai,2018-02-04,B,Y,9600.0,,,,
+CIF500558,Deepa Varghese,INDIVIDUAL,1967-07-15,SALARIED,Government,Mass,Consumer Banking,Ajman,2020-06-05,C,Y,14700.0,,,,
+CIF500559,Huda Fernandes,INDIVIDUAL,1966-02-08,SALARIED,Construction,Mass Affluent,Consumer Banking,Ajman,2018-04-06,B,N,19500.0,,,,RM-01
+CIF500560,Rashid Khan,INDIVIDUAL,1976-11-07,SALARIED,Hospitality & Tourism,Mass,Consumer Banking,Sharjah,2021-02-07,A,Y,5600.0,,,,
+CIF500561,Aisha Nasser,INDIVIDUAL,1977-02-27,SALARIED,Banking & Finance,Mass Affluent,Consumer Banking,Umm Al Quwain,2026-05-08,B,Y,21700.0,,,,RM-04
+CIF500562,Fatima Menon,INDIVIDUAL,1984-11-06,SELF_EMPLOYED,Self-Employed Professional,Mass Affluent,Consumer Banking,Ajman,2020-01-09,A,N,19100.0,,,,RM-08
+CIF500563,Ayesha D'Souza,INDIVIDUAL,2001-11-07,SALARIED,Retail Trade,Mass,Consumer Banking,Ajman,2026-07-10,D,Y,5500.0,,,,
+CIF500564,Layla Khoury,INDIVIDUAL,1980-11-14,SALARIED,Healthcare,Mass Affluent,Consumer Banking,Dubai,2024-06-11,C,N,26000.0,,,,RM-06
+CIF500565,Saeed Rahman,INDIVIDUAL,1965-06-25,SALARIED,Education,Mass Affluent,Consumer Banking,Ras Al Khaimah,2015-12-12,C,Y,17800.0,,,,RM-05
+CIF500566,Rahul Khan,INDIVIDUAL,1974-11-14,SALARIED,Retail Trade,Mass Affluent,Consumer Banking,Sharjah,2015-05-13,A,N,17000.0,,,,RM-05
+CIF500567,Liza Al Shamsi,INDIVIDUAL,1969-09-09,SALARIED,Retail Trade,Mass,Consumer Banking,Ras Al Khaimah,2019-11-14,C,Y,7500.0,,,,
+CIF500568,Meera Thomas,INDIVIDUAL,1969-02-05,SALARIED,Healthcare,Mass,Consumer Banking,Dubai,2014-12-15,C,Y,8400.0,,,,
+CIF500569,Bilal Rahman,INDIVIDUAL,1999-07-24,SALARIED,Construction,Mass,Consumer Banking,Sharjah,2024-08-16,B,Y,5200.0,,,,
+CIF500570,Tariq Malik,INDIVIDUAL,1983-01-05,SALARIED,Retail Trade,Mass,Consumer Banking,Dubai,2022-11-17,B,N,5500.0,,,,
+CIF500571,Jose Farouk,INDIVIDUAL,1978-11-26,SELF_EMPLOYED,Self-Employed Professional,Mass Affluent,Consumer Banking,Ras Al Khaimah,2024-06-18,C,N,32700.0,,,,RM-09
+CIF500572,Layla Santos,INDIVIDUAL,1990-02-25,SALARIED,Government,Mass Affluent,Consumer Banking,Dubai,2015-06-19,B,Y,24500.0,,,,RM-04
+CIF500573,Khalid Santos,INDIVIDUAL,2000-07-10,SALARIED,Education,Mass,Consumer Banking,Dubai,2018-01-20,A,Y,8800.0,,,,
+CIF500574,Amira Sharma,INDIVIDUAL,1996-03-26,SELF_EMPLOYED,Self-Employed Professional,Mass,Consumer Banking,Sharjah,2017-02-21,A,N,11700.0,,,,
+CIF500575,Ayesha Wilson,INDIVIDUAL,2000-10-23,SALARIED,Healthcare,Mass Affluent,Consumer Banking,Fujairah,2017-08-22,B,Y,32500.0,,,,RM-03
+CIF500576,Nikhil Patel,INDIVIDUAL,1976-08-06,SALARIED,Retail Trade,Mass,Consumer Banking,Sharjah,2024-08-23,B,Y,11700.0,,,,
+CIF500577,Amira Pereira,INDIVIDUAL,1997-02-04,SALARIED,Hospitality & Tourism,Mass,Consumer Banking,Ajman,2022-04-24,B,Y,9400.0,,,,
+CIF500578,Dina Al Nuaimi,INDIVIDUAL,1973-07-17,SALARIED,Hospitality & Tourism,Mass Affluent,Consumer Banking,Sharjah,2022-09-25,A,Y,24100.0,,,,RM-03
+CIF500579,Tariq Al Hashimi,INDIVIDUAL,1964-02-03,SALARIED,Education,Mass,Consumer Banking,Fujairah,2019-04-26,D,Y,7700.0,,,,
+CIF500580,Grace Santos,INDIVIDUAL,1975-08-13,SALARIED,Construction,Mass,Consumer Banking,Sharjah,2016-08-27,C,Y,8900.0,,,,
+CIF500581,Mohammed Hossain,INDIVIDUAL,1981-04-28,SALARIED,Government,Mass Affluent,Consumer Banking,Fujairah,2019-09-01,A,Y,29200.0,,,,RM-07
+CIF500582,Khalid Smith,INDIVIDUAL,1988-06-25,SALARIED,Hospitality & Tourism,Mass,Consumer Banking,Abu Dhabi,2018-05-02,A,Y,14300.0,,,,
+CIF500583,Samir Malik,INDIVIDUAL,1988-09-27,SALARIED,Oil & Gas,Mass Affluent,Consumer Banking,Umm Al Quwain,2018-02-03,A,Y,22100.0,,,,RM-08
+CIF500584,Priya Al Nuaimi,INDIVIDUAL,1984-04-07,SALARIED,Education,Mass,Consumer Banking,Abu Dhabi,2015-10-04,E,Y,7900.0,,,,
+CIF500585,Grace Rahman,INDIVIDUAL,1966-02-17,SALARIED,Banking & Finance,Mass Affluent,Consumer Banking,Abu Dhabi,2015-12-05,B,Y,22100.0,,,,RM-01
+CIF500586,Hassan Menon,INDIVIDUAL,1993-06-08,SALARIED,Construction,Mass,Consumer Banking,Ajman,2022-02-06,A,N,15100.0,,,,
+CIF500587,Samir Thomas,INDIVIDUAL,1998-03-22,SALARIED,Construction,Mass,Consumer Banking,Fujairah,2022-07-07,C,Y,6600.0,,,,
+CIF500588,Arjun Reyes,INDIVIDUAL,1973-05-27,SALARIED,Oil & Gas,Mass,Consumer Banking,Ajman,2018-11-08,C,Y,12700.0,,,,
+CIF500589,Liza Al Ketbi,INDIVIDUAL,2000-11-07,SALARIED,Retail Trade,Mass,Consumer Banking,Sharjah,2020-07-09,A,Y,5400.0,,,,
+CIF500590,Ahmed Al Ketbi,INDIVIDUAL,1964-10-03,SALARIED,Government,Mass,Consumer Banking,Sharjah,2023-12-10,A,Y,9100.0,,,,
+CIF500591,Hana Fernandes,INDIVIDUAL,1985-07-20,SALARIED,Construction,Mass,Consumer Banking,Sharjah,2021-06-11,C,Y,5500.0,,,,
+CIF500592,Arjun Malik,INDIVIDUAL,1990-05-03,SALARIED,Retail Trade,Mass,Consumer Banking,Ras Al Khaimah,2014-10-12,A,Y,15800.0,,,,
+CIF500593,Layla Taylor,INDIVIDUAL,1978-05-25,SALARIED,Hospitality & Tourism,Mass,Consumer Banking,Sharjah,2026-06-13,B,Y,5400.0,,,,
+CIF500594,Rahul Sharma,INDIVIDUAL,1979-07-13,SALARIED,Education,Mass,Consumer Banking,Umm Al Quwain,2017-08-14,B,Y,16000.0,,,,
+CIF500595,David Iyer,INDIVIDUAL,1974-02-17,SALARIED,Retail Trade,Mass,Consumer Banking,Dubai,2021-09-15,A,Y,7000.0,,,,
+CIF500596,Karim Pereira,INDIVIDUAL,1964-02-01,SALARIED,Government,Mass Affluent,Consumer Banking,Sharjah,2022-05-16,A,Y,17500.0,,,,RM-10
+CIF500597,Ana Hossain,INDIVIDUAL,1991-04-17,SELF_EMPLOYED,Self-Employed Professional,Mass Affluent,Consumer Banking,Dubai,2021-08-17,B,N,35400.0,,,,RM-09
+CIF500598,John Khan,INDIVIDUAL,1970-09-10,SALARIED,Hospitality & Tourism,Mass Affluent,Consumer Banking,Abu Dhabi,2015-05-18,B,Y,17500.0,,,,RM-07
+CIF500599,Ahmed Al Ketbi,INDIVIDUAL,1975-09-10,SALARIED,Construction,Mass,Consumer Banking,Sharjah,2020-02-19,A,N,6800.0,,,,
+CIF500600,Hana Haddad,INDIVIDUAL,1972-06-04,SALARIED,Government,Mass Affluent,Consumer Banking,Abu Dhabi,2023-01-01,D,Y,33400.0,,,,RM-09
+CIF500601,Rohan Wilson,INDIVIDUAL,1994-01-20,SALARIED,Construction,Mass,Consumer Banking,Fujairah,2021-04-02,C,Y,12200.0,,,,
+CIF500602,Ana Nair,INDIVIDUAL,1980-11-13,SALARIED,Government,Mass Affluent,Consumer Banking,Ras Al Khaimah,2022-06-03,D,Y,39300.0,,,,RM-05
+CIF500603,Tariq Taylor,INDIVIDUAL,1991-02-13,SALARIED,Healthcare,Mass,Consumer Banking,Sharjah,2023-05-04,D,Y,7700.0,,,,
+CIF500604,Ahmed George,INDIVIDUAL,1968-10-16,SALARIED,Hospitality & Tourism,Mass,Consumer Banking,Sharjah,2021-03-05,C,Y,7100.0,,,,
+CIF500605,Hessa Saleh,INDIVIDUAL,1979-10-07,SALARIED,Healthcare,Affluent,Consumer Banking,Ras Al Khaimah,2019-03-06,B,Y,47100.0,,,,RM-06
+CIF500606,Rohan Siddiqui,INDIVIDUAL,1989-03-25,SALARIED,IT & Telecom,Mass Affluent,Consumer Banking,Dubai,2016-02-07,B,Y,25600.0,,,,RM-09
+CIF500607,Mariam Reddy,INDIVIDUAL,1994-01-07,SALARIED,Retail Trade,Mass,Consumer Banking,Ajman,2022-07-08,B,Y,15900.0,,,,
+CIF500608,Rohan Iyer,INDIVIDUAL,1980-01-01,SALARIED,Healthcare,Mass,Consumer Banking,Ajman,2024-07-09,C,N,8000.0,,,,
+CIF500609,Ahmed Menon,INDIVIDUAL,1969-06-23,SALARIED,Hospitality & Tourism,Mass,Consumer Banking,Sharjah,2023-03-10,A,N,9900.0,,,,
+CIF500610,Rashid Thomas,INDIVIDUAL,1989-11-28,SALARIED,Oil & Gas,Mass Affluent,Consumer Banking,Ras Al Khaimah,2022-03-11,C,Y,35800.0,,,,RM-01
+CIF500611,Bilal Sharma,INDIVIDUAL,1975-06-15,SALARIED,IT & Telecom,Mass Affluent,Consumer Banking,Dubai,2022-01-12,A,N,24100.0,,,,RM-11
+CIF500612,John Saleh,INDIVIDUAL,1982-01-05,SALARIED,Healthcare,Mass Affluent,Consumer Banking,Dubai,2022-09-13,A,Y,24000.0,,,,RM-10
+CIF500613,Sarah Mathew,INDIVIDUAL,2003-04-19,SALARIED,Hospitality & Tourism,Mass,Consumer Banking,Ajman,2015-09-14,A,Y,6300.0,,,,
+CIF500614,David Rahman,INDIVIDUAL,1996-02-25,SALARIED,Retail Trade,Mass Affluent,Consumer Banking,Ajman,2015-09-15,D,N,15800.0,,,,RM-04
+CIF500615,Saeed Al Hashimi,INDIVIDUAL,1998-07-17,SALARIED,Hospitality & Tourism,Mass Affluent,Consumer Banking,Ajman,2014-10-16,B,N,17800.0,,,,RM-02
+CIF500616,Sarah Malik,INDIVIDUAL,1968-03-20,SALARIED,Hospitality & Tourism,Mass Affluent,Consumer Banking,Dubai,2016-06-17,E,Y,15600.0,,,,RM-03
+CIF500617,John Nasser,INDIVIDUAL,1990-12-03,SALARIED,Government,Mass Affluent,Consumer Banking,Ras Al Khaimah,2016-07-18,D,Y,20900.0,,,,RM-02
+CIF500618,Karim Perera,INDIVIDUAL,1967-11-08,SELF_EMPLOYED,Self-Employed Professional,Mass,Consumer Banking,Sharjah,2017-05-19,A,N,8000.0,,,,
+CIF500619,Joseph Varghese,INDIVIDUAL,1991-07-20,SALARIED,Retail Trade,Mass,Consumer Banking,Ajman,2018-07-20,E,Y,6300.0,,,,
+CIF500620,Michael Thomas,INDIVIDUAL,1992-01-05,SALARIED,Education,Mass,Consumer Banking,Abu Dhabi,2023-08-21,B,N,14800.0,,,,
+CIF500621,Tariq Haddad,INDIVIDUAL,1976-07-25,SALARIED,Education,Mass Affluent,Consumer Banking,Dubai,2024-02-22,C,Y,24600.0,,,,RM-02
+CIF500622,Ayesha Al Nuaimi,INDIVIDUAL,2000-10-24,SALARIED,Retail Trade,Mass,Consumer Banking,Ajman,2017-12-23,C,Y,6900.0,,,,
+CIF500623,Joseph Al Hashimi,INDIVIDUAL,2001-02-18,SALARIED,Retail Trade,Mass,Consumer Banking,Ras Al Khaimah,2022-04-24,A,Y,5400.0,,,,
+CIF500624,Huda Al Ketbi,INDIVIDUAL,1996-05-11,SALARIED,Banking & Finance,Affluent,Consumer Banking,Ajman,2018-11-25,B,Y,53200.0,,,,RM-12
+CIF500625,Michael Varghese,INDIVIDUAL,1991-04-08,SALARIED,Banking & Finance,Mass Affluent,Consumer Banking,Ras Al Khaimah,2016-10-26,A,Y,36300.0,,,,RM-01
+CIF500626,Arjun Iyer,INDIVIDUAL,1984-01-20,SALARIED,Government,Mass Affluent,Consumer Banking,Sharjah,2014-11-27,C,Y,32400.0,,,,RM-05
+CIF500627,Omar Al Mansoori,INDIVIDUAL,1989-11-22,SALARIED,Education,Mass,Consumer Banking,Sharjah,2021-10-01,C,Y,11100.0,,,,
+CIF500628,Aisha Nair,INDIVIDUAL,2003-08-07,SALARIED,Aviation,Mass,Consumer Banking,Ras Al Khaimah,2015-12-02,D,Y,6300.0,,,,
+CIF500629,Ravi Malik,INDIVIDUAL,1968-10-05,SALARIED,Construction,Mass,Consumer Banking,Ras Al Khaimah,2022-11-03,D,Y,5000.0,,,,
+CIF500630,Ayesha Al Shamsi,INDIVIDUAL,1986-07-18,SALARIED,IT & Telecom,Affluent,Consumer Banking,Ras Al Khaimah,2016-09-04,A,Y,42500.0,,,,RM-08
+CIF500631,Mohammed Nair,INDIVIDUAL,1975-01-27,SALARIED,Hospitality & Tourism,Mass,Consumer Banking,Ajman,2022-05-05,B,Y,9000.0,,,,
+CIF500632,Mark Al Mansoori,INDIVIDUAL,1985-11-19,SALARIED,Construction,Mass,Consumer Banking,Sharjah,2019-06-06,B,Y,8700.0,,,,
+CIF500633,Maria Hossain,INDIVIDUAL,1971-11-18,SALARIED,Hospitality & Tourism,Mass,Consumer Banking,Abu Dhabi,2023-03-07,A,Y,8200.0,,,,
+CIF500634,Layla Qureshi,INDIVIDUAL,1982-04-21,SELF_EMPLOYED,Self-Employed Professional,Affluent,Consumer Banking,Sharjah,2021-12-08,A,N,55100.0,,,,RM-12
+CIF500635,Mariam Mathew,INDIVIDUAL,1969-11-14,SALARIED,Construction,Mass,Consumer Banking,Ras Al Khaimah,2022-06-09,A,Y,5400.0,,,,
+CIF500636,Ahmed Al Ketbi,INDIVIDUAL,1980-03-14,SALARIED,Retail Trade,Mass,Consumer Banking,Sharjah,2017-11-10,B,Y,8600.0,,,,
+CIF500637,Yousef Menon,INDIVIDUAL,1993-03-10,SALARIED,Healthcare,Mass Affluent,Consumer Banking,Ras Al Khaimah,2020-01-11,C,Y,28300.0,,,,RM-07
+CIF500638,John Al Hashimi,INDIVIDUAL,1981-05-02,SALARIED,Government,Mass Affluent,Consumer Banking,Ras Al Khaimah,2021-12-12,A,Y,27000.0,,,,RM-05
+CIF500639,Fatima Cruz,INDIVIDUAL,1964-06-27,SALARIED,Healthcare,Mass Affluent,Consumer Banking,Dubai,2018-07-13,C,Y,16900.0,,,,RM-05
+CIF500640,Emma Silva,INDIVIDUAL,1999-10-21,SELF_EMPLOYED,Self-Employed Professional,Mass,Consumer Banking,Dubai,2017-01-14,C,N,5200.0,,,,
+CIF500641,Fatima Siddiqui,INDIVIDUAL,1986-07-10,SALARIED,Banking & Finance,Mass,Consumer Banking,Sharjah,2024-04-15,C,Y,9900.0,,,,
+CIF500642,Aisha Mathew,INDIVIDUAL,1966-12-05,SALARIED,Construction,Mass,Consumer Banking,Ras Al Khaimah,2022-06-16,B,Y,8800.0,,,,
+CIF500643,Layla Al Mansoori,INDIVIDUAL,1968-10-27,SALARIED,IT & Telecom,Mass Affluent,Consumer Banking,Ras Al Khaimah,2016-10-17,B,Y,19800.0,,,,RM-01
+CIF500644,Mariam Saleh,INDIVIDUAL,2002-03-09,SALARIED,Education,Mass,Consumer Banking,Sharjah,2016-06-18,C,N,12600.0,,,,
+CIF500645,Ahmed Reyes,INDIVIDUAL,1967-12-10,SALARIED,Banking & Finance,Mass,Consumer Banking,Umm Al Quwain,2016-04-19,E,Y,14900.0,,,,
+CIF500646,Arjun Pereira,INDIVIDUAL,1999-07-27,SALARIED,Retail Trade,Mass,Consumer Banking,Fujairah,2020-04-20,C,Y,5100.0,,,,
+CIF500647,Layla Mathew,INDIVIDUAL,1978-10-18,SALARIED,Healthcare,Mass,Consumer Banking,Sharjah,2020-08-21,B,Y,8900.0,,,,
+CIF500648,Mark Wilson,INDIVIDUAL,1983-09-22,SALARIED,Government,Mass,Consumer Banking,Dubai,2022-01-22,B,Y,11500.0,,,,
+CIF500649,Karim Iyer,INDIVIDUAL,1994-10-28,SALARIED,Aviation,Mass Affluent,Consumer Banking,Dubai,2020-04-23,D,N,25100.0,,,,RM-03
+CIF500650,Khalid Patel,INDIVIDUAL,1978-12-05,SALARIED,Retail Trade,Mass,Consumer Banking,Ras Al Khaimah,2017-05-24,C,Y,12000.0,,,,
+CIF500651,Hassan Silva,INDIVIDUAL,1985-02-12,SALARIED,Construction,Mass Affluent,Consumer Banking,Dubai,2015-08-25,A,Y,27300.0,,,,RM-03
+CIF500652,Karim Perera,INDIVIDUAL,1965-01-07,SALARIED,Hospitality & Tourism,Mass,Consumer Banking,Ajman,2016-03-26,A,Y,5000.0,,,,
+CIF500653,Karim Nair,INDIVIDUAL,1971-11-10,SALARIED,Retail Trade,Mass,Consumer Banking,Sharjah,2016-01-27,A,Y,5900.0,,,,
+CIF500654,Fatima Farouk,INDIVIDUAL,1977-09-13,SALARIED,Hospitality & Tourism,Mass,Consumer Banking,Ajman,2017-04-01,D,Y,5300.0,,,,
+CIF500655,Michael Patel,INDIVIDUAL,1974-10-12,SALARIED,Government,Mass Affluent,Consumer Banking,Sharjah,2021-01-02,B,Y,31000.0,,,,RM-06
+CIF500656,Aisha Saleh,INDIVIDUAL,1968-07-03,SELF_EMPLOYED,Self-Employed Professional,Mass Affluent,Consumer Banking,Ras Al Khaimah,2015-04-03,C,N,40300.0,,,,RM-02
+CIF500657,John Nair,INDIVIDUAL,2000-04-22,SALARIED,Retail Trade,Mass,Consumer Banking,Ras Al Khaimah,2016-06-04,A,Y,5600.0,,,,
+CIF500658,Mohammed Farouk,INDIVIDUAL,1991-11-10,SALARIED,Banking & Finance,Mass,Consumer Banking,Sharjah,2020-03-05,D,Y,14000.0,,,,
+CIF500659,Nikhil Qureshi,INDIVIDUAL,1982-03-07,SALARIED,IT & Telecom,Mass,Consumer Banking,Dubai,2020-10-06,C,N,8900.0,,,,
+CIF500660,Hessa Saleh,INDIVIDUAL,1977-05-17,SALARIED,Government,Mass Affluent,Consumer Banking,Ras Al Khaimah,2015-02-07,A,Y,22000.0,,,,RM-03
+CIF500661,Golden Sands Import & Export LLC,SME,,BUSINESS,General Trading,Micro,Business Banking,Ras Al Khaimah,2020-02-08,C,N,,845000.0,23,LLC,RM-14
+CIF500662,Desert Rose Plastics Factory LLC,SME,,BUSINESS,Manufacturing,Medium,Business Banking,Fujairah,2024-08-09,A,N,,21455000.0,13,Sole Establishment,RM-14
+CIF500663,Pearl Bay Transport LLC,SME,,BUSINESS,Logistics & Transport,Small,Business Banking,Ajman,2015-09-10,A,N,,5495000.0,10,Sole Establishment,RM-19
+CIF500664,Silver Dune Contracting Co.,SME,,BUSINESS,Construction & Contracting,Micro,Business Banking,Ajman,2021-06-11,D,N,,1450000.0,4,Sole Establishment,RM-22
+CIF500665,Summit Civil Works LLC,SME,,BUSINESS,Construction & Contracting,Medium,Business Banking,Ras Al Khaimah,2016-02-12,C,N,,39094000.0,23,LLC,RM-17
+CIF500666,Al Noor Technical Services LLC,SME,,BUSINESS,Construction & Contracting,Micro,Business Banking,Ajman,2019-03-13,D,N,,654000.0,6,Sole Establishment,RM-23
+CIF500667,Pearl Bay Plastics Factory LLC,SME,,BUSINESS,Manufacturing,Small,Business Banking,Umm Al Quwain,2026-07-14,A,N,,5099000.0,1,LLC,RM-18
+CIF500668,Crescent Fashion LLC,SME,,BUSINESS,Retail,Micro,Business Banking,Sharjah,2016-05-15,A,N,,932000.0,9,LLC,RM-20
+CIF500669,Gulf Star Electronics LLC,SME,,BUSINESS,Retail,Small,Business Banking,Umm Al Quwain,2018-10-16,B,N,,6309000.0,10,FZE,RM-20
+CIF500670,Crescent Property Management LLC,SME,,BUSINESS,Real Estate Services,Micro,Business Banking,Abu Dhabi,2020-07-17,B,N,,2099000.0,20,FZ-LLC,RM-24
+CIF500671,Silver Dune Import & Export LLC,SME,,BUSINESS,General Trading,Micro,Business Banking,Sharjah,2016-11-18,B,N,,1275000.0,13,LLC,RM-13
+CIF500672,Marina Fashion LLC,SME,,BUSINESS,Retail,Micro,Business Banking,Dubai,2019-04-19,B,N,,782000.0,12,Sole Establishment,RM-24
+CIF500673,Gulf Star Cafe & Bistro,SME,,BUSINESS,Restaurants & Hospitality,Medium,Business Banking,Ras Al Khaimah,2017-03-20,C,N,,51807000.0,9,LLC,RM-13
+CIF500674,Coral Logistics LLC,SME,,BUSINESS,Logistics & Transport,Small,Business Banking,Abu Dhabi,2023-11-21,D,N,,3574000.0,9,Sole Establishment,RM-21
+CIF500675,Gulf Star Building Contracting LLC,SME,,BUSINESS,Construction & Contracting,Micro,Business Banking,Ajman,2017-10-22,D,N,,778000.0,10,LLC,RM-18
+CIF500676,Horizon Pharmacy LLC,SME,,BUSINESS,Healthcare Services,Micro,Business Banking,Ras Al Khaimah,2024-01-23,B,N,,789000.0,14,LLC,RM-19
+CIF500677,Al Noor Cafe & Bistro,SME,,BUSINESS,Restaurants & Hospitality,Micro,Business Banking,Sharjah,2022-04-24,B,N,,1855000.0,6,LLC,RM-15
+CIF500678,Summit Real Estate Brokers,SME,,BUSINESS,Real Estate Services,Micro,Business Banking,Ras Al Khaimah,2022-02-25,B,N,,674000.0,24,LLC,RM-18
+CIF500679,Falcon Transport LLC,SME,,BUSINESS,Logistics & Transport,Small,Business Banking,Ajman,2018-02-26,C,N,,11608000.0,7,FZE,RM-21
+CIF500680,Coral Trading Co. LLC,SME,,BUSINESS,General Trading,Micro,Business Banking,Dubai,2026-07-27,B,N,,1447000.0,0,LLC,RM-14
+CIF500681,Gulf Star Civil Works LLC,SME,,BUSINESS,Construction & Contracting,Small,Business Banking,Ras Al Khaimah,2026-05-01,C,N,,15008000.0,1,FZE,RM-18
+CIF500682,Gulf Star Technical Services LLC,SME,,BUSINESS,Construction & Contracting,Micro,Business Banking,Ras Al Khaimah,2026-06-02,C,N,,600000.0,1,LLC,RM-22
+CIF500683,Coral Transport LLC,SME,,BUSINESS,Logistics & Transport,Medium,Business Banking,Ras Al Khaimah,2020-03-03,C,N,,27234000.0,6,LLC,RM-13
+CIF500684,Emirates Link Cafe & Bistro,SME,,BUSINESS,Restaurants & Hospitality,Small,Business Banking,Fujairah,2021-11-04,E,N,,9043000.0,14,LLC,RM-23
+CIF500685,Falcon Technical Services LLC,SME,,BUSINESS,Construction & Contracting,Micro,Business Banking,Dubai,2016-06-05,B,N,,1946000.0,9,LLC,RM-18
+CIF500686,Dune Ridge Property Management LLC,SME,,BUSINESS,Real Estate Services,Micro,Business Banking,Dubai,2016-07-06,A,N,,2079000.0,9,LLC,RM-24
+CIF500687,Emirates Link Industries LLC,SME,,BUSINESS,Manufacturing,Medium,Business Banking,Dubai,2022-08-07,A,N,,40273000.0,10,Sole Establishment,RM-18
+CIF500688,Horizon General Trading LLC,SME,,BUSINESS,General Trading,Micro,Business Banking,Fujairah,2023-12-08,C,N,,1106000.0,2,FZE,RM-16
+CIF500689,Red Sea Fashion LLC,SME,,BUSINESS,Retail,Medium,Business Banking,Sharjah,2015-04-09,B,N,,44550000.0,11,LLC,RM-16
+CIF500690,Arabian Gate Cafe & Bistro,SME,,BUSINESS,Restaurants & Hospitality,Micro,Business Banking,Ajman,2018-04-10,E,N,,1589000.0,20,LLC,RM-13
+CIF500691,Golden Sands Metal Works LLC,SME,,BUSINESS,Manufacturing,Micro,Business Banking,Dubai,2017-01-11,A,N,,1178000.0,8,Sole Establishment,RM-19
+CIF500692,Marina Import & Export LLC,SME,,BUSINESS,General Trading,Micro,Business Banking,Ras Al Khaimah,2021-07-12,B,N,,786000.0,16,LLC,RM-17
+CIF500693,Pearl Bay Medical Centre LLC,SME,,BUSINESS,Healthcare Services,Small,Business Banking,Sharjah,2026-05-13,A,N,,8791000.0,2,FZ-LLC,RM-20
+CIF500694,Dune Ridge Metal Works LLC,SME,,BUSINESS,Manufacturing,Small,Business Banking,Sharjah,2021-02-14,A,N,,8777000.0,10,FZ-LLC,RM-15
+CIF500695,Horizon Trading Co. LLC,SME,,BUSINESS,General Trading,Small,Business Banking,Dubai,2018-03-15,A,N,,5583000.0,11,LLC,RM-24
+CIF500696,Gulf Star Import & Export LLC,SME,,BUSINESS,General Trading,Micro,Business Banking,Fujairah,2022-09-16,C,N,,676000.0,10,LLC,RM-22
+CIF500697,Blue Coast Restaurant LLC,SME,,BUSINESS,Restaurants & Hospitality,Micro,Business Banking,Umm Al Quwain,2020-04-17,B,N,,1011000.0,5,LLC,RM-13
+CIF500698,Red Sea Fashion LLC,SME,,BUSINESS,Retail,Small,Business Banking,Fujairah,2016-11-18,C,N,,8210000.0,8,LLC,RM-13
+CIF500699,Falcon Restaurant LLC,SME,,BUSINESS,Restaurants & Hospitality,Medium,Business Banking,Sharjah,2026-06-19,A,N,,36160000.0,1,LLC,RM-23
+CIF500700,Pearl Bay Technical Services LLC,SME,,BUSINESS,Construction & Contracting,Micro,Business Banking,Ras Al Khaimah,2024-02-01,A,N,,1193000.0,8,LLC,RM-16
+CIF500701,Al Bustan Electronics LLC,SME,,BUSINESS,Retail,Micro,Business Banking,Ajman,2021-01-02,C,N,,2473000.0,15,LLC,RM-22
+CIF500702,Coral Technical Services LLC,SME,,BUSINESS,Construction & Contracting,Small,Business Banking,Ras Al Khaimah,2023-04-03,A,N,,9102000.0,20,LLC,RM-20
+CIF500703,Crescent Stores LLC,SME,,BUSINESS,Retail,Micro,Business Banking,Ajman,2018-03-04,A,N,,631000.0,20,Sole Establishment,RM-19
+CIF500704,Golden Sands Cafe & Bistro,SME,,BUSINESS,Restaurants & Hospitality,Small,Business Banking,Ras Al Khaimah,2024-02-05,A,N,,4149000.0,7,LLC,RM-21
+CIF500705,Falcon Building Contracting LLC,SME,,BUSINESS,Construction & Contracting,Small,Business Banking,Sharjah,2022-09-06,C,N,,13277000.0,18,Sole Establishment,RM-13
+CIF500706,Silver Dune Property Management LLC,SME,,BUSINESS,Real Estate Services,Small,Business Banking,Sharjah,2023-11-07,C,N,,4916000.0,4,LLC,RM-15
+CIF500707,Oasis Fashion LLC,SME,,BUSINESS,Retail,Micro,Business Banking,Ajman,2017-08-08,B,N,,1666000.0,11,Sole Establishment,RM-14
+CIF500708,Gulf Star General Trading LLC,SME,,BUSINESS,General Trading,Small,Business Banking,Abu Dhabi,2023-08-09,B,N,,10092000.0,10,LLC,RM-13
+CIF500709,Golden Sands Transport LLC,SME,,BUSINESS,Logistics & Transport,Micro,Business Banking,Fujairah,2018-01-10,B,N,,1371000.0,7,FZE,RM-24
+CIF500710,Coral Electronics LLC,SME,,BUSINESS,Retail,Small,Business Banking,Sharjah,2023-04-11,A,N,,3378000.0,25,FZ-LLC,RM-14
+CIF500711,Palm Crest Industries LLC,SME,,BUSINESS,Manufacturing,Small,Business Banking,Ras Al Khaimah,2024-03-12,B,N,,10668000.0,12,LLC,RM-22
+CIF500712,Crescent Property Management LLC,SME,,BUSINESS,Real Estate Services,Small,Business Banking,Abu Dhabi,2016-08-13,A,N,,2556000.0,10,FZE,RM-14
+CIF500713,Coral Contracting Co.,SME,,BUSINESS,Construction & Contracting,Medium,Business Banking,Dubai,2017-08-14,C,N,,25648000.0,8,Sole Establishment,RM-14
+CIF500714,Horizon Cafe & Bistro,SME,,BUSINESS,Restaurants & Hospitality,Small,Business Banking,Sharjah,2026-06-15,C,N,,8404000.0,1,FZE,RM-19
+CIF500715,Summit Building Contracting LLC,SME,,BUSINESS,Construction & Contracting,Micro,Business Banking,Dubai,2026-07-16,D,N,,1624000.0,2,Sole Establishment,RM-21
+CIF500716,Arabian Gate Metal Works LLC,SME,,BUSINESS,Manufacturing,Small,Business Banking,Sharjah,2021-04-17,B,N,,13594000.0,4,FZ-LLC,RM-14
+CIF500717,Al Noor Building Contracting LLC,SME,,BUSINESS,Construction & Contracting,Micro,Business Banking,Ras Al Khaimah,2018-11-18,D,N,,992000.0,18,LLC,RM-16
+CIF500718,Marina Dental Clinic,SME,,BUSINESS,Healthcare Services,Micro,Business Banking,Ajman,2026-07-19,B,N,,2034000.0,0,LLC,RM-18
+CIF500719,Horizon Restaurant LLC,SME,,BUSINESS,Restaurants & Hospitality,Small,Business Banking,Dubai,2014-11-20,B,N,,16020000.0,17,Sole Establishment,RM-16
+CIF500720,Al Noor Cafe & Bistro,SME,,BUSINESS,Restaurants & Hospitality,Micro,Business Banking,Sharjah,2019-11-21,A,N,,1747000.0,9,Sole Establishment,RM-22
+CIF500721,Coral Cargo Services LLC,SME,,BUSINESS,Logistics & Transport,Micro,Business Banking,Fujairah,2020-05-22,A,N,,968000.0,5,LLC,RM-13
+CIF500722,Golden Sands Logistics LLC,SME,,BUSINESS,Logistics & Transport,Micro,Business Banking,Fujairah,2019-01-23,B,N,,1645000.0,12,LLC,RM-15
+CIF500723,Marina Property Management LLC,SME,,BUSINESS,Real Estate Services,Micro,Business Banking,Fujairah,2020-08-24,D,N,,1054000.0,21,Sole Establishment,RM-17
+CIF500724,Marina Cafe & Bistro,SME,,BUSINESS,Restaurants & Hospitality,Medium,Business Banking,Ajman,2024-08-25,E,N,,24763000.0,20,Sole Establishment,RM-18
+CIF500725,Desert Rose Contracting Co.,SME,,BUSINESS,Construction & Contracting,Micro,Business Banking,Dubai,2023-10-26,A,N,,2621000.0,5,LLC,RM-19
+CIF500726,Oasis Fashion LLC,SME,,BUSINESS,Retail,Micro,Business Banking,Fujairah,2024-02-27,B,N,,1423000.0,1,LLC,RM-15
+CIF500727,Silver Dune Logistics LLC,SME,,BUSINESS,Logistics & Transport,Micro,Business Banking,Ajman,2015-06-01,E,N,,1862000.0,12,LLC,RM-14
+CIF500728,Desert Rose Hospitality LLC,SME,,BUSINESS,Restaurants & Hospitality,Micro,Business Banking,Ras Al Khaimah,2020-01-02,A,N,,913000.0,15,LLC,RM-18
+CIF500729,Gulf Star Hospitality LLC,SME,,BUSINESS,Restaurants & Hospitality,Small,Business Banking,Ras Al Khaimah,2018-04-03,A,N,,11650000.0,12,FZ-LLC,RM-19
+CIF500730,Silver Dune Logistics LLC,SME,,BUSINESS,Logistics & Transport,Micro,Business Banking,Ras Al Khaimah,2016-11-04,A,N,,1034000.0,14,LLC,RM-14
+CIF500731,Arabian Gate Real Estate Brokers,SME,,BUSINESS,Real Estate Services,Micro,Business Banking,Sharjah,2016-04-05,D,N,,1163000.0,9,LLC,RM-22
+CIF500732,Blue Coast Civil Works LLC,SME,,BUSINESS,Construction & Contracting,Small,Business Banking,Sharjah,2017-02-06,C,N,,3295000.0,12,LLC,RM-17
+CIF500733,Arabian Gate Import & Export LLC,SME,,BUSINESS,General Trading,Small,Business Banking,Ajman,2026-05-07,A,N,,6334000.0,2,LLC,RM-17
+CIF500734,Arabian Gate Building Contracting LLC,SME,,BUSINESS,Construction & Contracting,Micro,Business Banking,Sharjah,2019-06-08,A,N,,696000.0,6,Sole Establishment,RM-24
+CIF500735,Gulf Star Plastics Factory LLC,SME,,BUSINESS,Manufacturing,Small,Business Banking,Sharjah,2019-06-09,C,N,,4596000.0,6,LLC,RM-20
+CIF500736,Dune Ridge Hospitality LLC,SME,,BUSINESS,Restaurants & Hospitality,Micro,Business Banking,Sharjah,2023-05-10,D,N,,1514000.0,7,LLC,RM-13
+CIF500737,Dune Ridge Building Contracting LLC,SME,,BUSINESS,Construction & Contracting,Micro,Business Banking,Sharjah,2016-01-11,A,N,,647000.0,25,FZE,RM-15
+CIF500738,Emirates Link Restaurant LLC,SME,,BUSINESS,Restaurants & Hospitality,Small,Business Banking,Ajman,2015-03-12,D,N,,6043000.0,18,Sole Establishment,RM-20
+CIF500739,Blue Coast Trading Co. LLC,SME,,BUSINESS,General Trading,Micro,Business Banking,Ajman,2026-07-13,B,N,,2352000.0,0,LLC,RM-21
+CIF500740,Falcon Trading Co. LLC,SME,,BUSINESS,General Trading,Small,Business Banking,Sharjah,2018-11-14,D,N,,5614000.0,24,Sole Establishment,RM-22
+CIF500741,Pearl Bay General Trading LLC,SME,,BUSINESS,General Trading,Medium,Business Banking,Sharjah,2015-07-15,B,N,,22268000.0,10,LLC,RM-21
+CIF500742,Horizon Restaurant LLC,SME,,BUSINESS,Restaurants & Hospitality,Micro,Business Banking,Ras Al Khaimah,2020-05-16,E,N,,1432000.0,8,LLC,RM-23
+CIF500743,Pearl Bay Technical Services LLC,SME,,BUSINESS,Construction & Contracting,Small,Business Banking,Ajman,2015-08-17,D,N,,6214000.0,10,Sole Establishment,RM-16
+CIF500744,Blue Coast Trading Co. LLC,SME,,BUSINESS,General Trading,Micro,Business Banking,Fujairah,2018-06-18,A,N,,2072000.0,25,LLC,RM-14
+CIF500745,Horizon Cafe & Bistro,SME,,BUSINESS,Restaurants & Hospitality,Micro,Business Banking,Umm Al Quwain,2021-04-19,A,N,,825000.0,9,LLC,RM-23
+CIF500746,Al Bustan IT Solutions FZE,SME,,BUSINESS,IT & Professional Services,Small,Business Banking,Umm Al Quwain,2018-05-20,B,N,,9280000.0,7,FZE,RM-21
+CIF500747,Al Bustan Electronics LLC,SME,,BUSINESS,Retail,Small,Business Banking,Sharjah,2019-04-21,B,N,,12852000.0,12,LLC,RM-15
+CIF500748,Red Sea Hospitality LLC,SME,,BUSINESS,Restaurants & Hospitality,Micro,Business Banking,Ajman,2022-11-22,C,N,,2031000.0,7,LLC,RM-22
+CIF500749,Emirates Link Real Estate Brokers,SME,,BUSINESS,Real Estate Services,Small,Business Banking,Dubai,2022-06-23,C,N,,4315000.0,9,LLC,RM-17
+CIF500750,Emirates Link Plastics Factory LLC,SME,,BUSINESS,Manufacturing,Small,Business Banking,Dubai,2020-12-24,E,N,,5959000.0,12,FZE,RM-21
+CIF500751,Dune Ridge Metal Works LLC,SME,,BUSINESS,Manufacturing,Micro,Business Banking,Fujairah,2019-05-25,A,N,,1849000.0,11,LLC,RM-15
+CIF500752,Blue Coast Building Contracting LLC,SME,,BUSINESS,Construction & Contracting,Micro,Business Banking,Ajman,2018-09-26,C,N,,1252000.0,15,LLC,RM-15
+CIF500753,Golden Sands General Trading LLC,SME,,BUSINESS,General Trading,Small,Business Banking,Ras Al Khaimah,2017-07-27,C,N,,9065000.0,14,LLC,RM-20
+CIF500754,Al Noor Technical Services LLC,SME,,BUSINESS,Construction & Contracting,Micro,Business Banking,Ajman,2015-04-01,E,N,,1325000.0,10,LLC,RM-21
+CIF500755,Palm Crest Real Estate Brokers,SME,,BUSINESS,Real Estate Services,Micro,Business Banking,Ajman,2019-01-02,C,N,,1959000.0,6,Sole Establishment,RM-17
+CIF500756,Falcon Trading Co. LLC,SME,,BUSINESS,General Trading,Micro,Business Banking,Dubai,2026-08-03,C,N,,952000.0,2,LLC,RM-19
+CIF500757,Desert Rose Plastics Factory LLC,SME,,BUSINESS,Manufacturing,Micro,Business Banking,Sharjah,2017-05-04,A,N,,1169000.0,24,FZ-LLC,RM-21
+CIF500758,Red Sea Electronics LLC,SME,,BUSINESS,Retail,Micro,Business Banking,Abu Dhabi,2017-12-05,E,N,,1876000.0,7,LLC,RM-15
+CIF500759,Horizon Electronics LLC,SME,,BUSINESS,Retail,Small,Business Banking,Ajman,2018-12-06,E,N,,10644000.0,6,LLC,RM-24
+CIF500760,Gulf Star Logistics LLC,SME,,BUSINESS,Logistics & Transport,Small,Business Banking,Sharjah,2014-10-07,E,N,,8804000.0,22,LLC,RM-23
+CIF500761,Dune Ridge Civil Works LLC,SME,,BUSINESS,Construction & Contracting,Micro,Business Banking,Dubai,2019-01-08,B,N,,1495000.0,25,LLC,RM-23
+CIF500762,Al Bustan Trading Co. LLC,SME,,BUSINESS,General Trading,Micro,Business Banking,Ajman,2015-06-09,B,N,,2398000.0,12,FZ-LLC,RM-15
+CIF500763,Arabian Gate General Trading LLC,SME,,BUSINESS,General Trading,Micro,Business Banking,Dubai,2018-08-10,A,N,,1825000.0,12,LLC,RM-16
+CIF500764,Falcon General Trading LLC,SME,,BUSINESS,General Trading,Micro,Business Banking,Sharjah,2026-05-11,B,N,,1629000.0,1,LLC,RM-22
+CIF500765,Silver Dune Electronics LLC,SME,,BUSINESS,Retail,Micro,Business Banking,Dubai,2024-08-12,B,N,,1088000.0,13,Sole Establishment,RM-20
+CIF500766,Dune Ridge Civil Works LLC,SME,,BUSINESS,Construction & Contracting,Micro,Business Banking,Sharjah,2024-04-13,C,N,,2059000.0,24,LLC,RM-19
+CIF500767,Oasis Hospitality LLC,SME,,BUSINESS,Restaurants & Hospitality,Micro,Business Banking,Ajman,2014-11-14,C,N,,2479000.0,10,Sole Establishment,RM-18
+CIF500768,Desert Rose Hospitality LLC,SME,,BUSINESS,Restaurants & Hospitality,Small,Business Banking,Dubai,2017-08-15,C,N,,6148000.0,25,LLC,RM-18
+CIF500769,Horizon Trading Co. LLC,SME,,BUSINESS,General Trading,Micro,Business Banking,Ajman,2021-09-16,B,N,,1161000.0,21,LLC,RM-16
+CIF500770,Blue Coast Restaurant LLC,SME,,BUSINESS,Restaurants & Hospitality,Micro,Business Banking,Sharjah,2026-05-17,B,N,,1390000.0,0,LLC,RM-20
+CIF500771,Dune Ridge Hospitality LLC,SME,,BUSINESS,Restaurants & Hospitality,Micro,Business Banking,Ras Al Khaimah,2018-03-18,D,N,,1631000.0,7,LLC,RM-16
+CIF500772,Coral Metal Works LLC,SME,,BUSINESS,Manufacturing,Micro,Business Banking,Ajman,2018-01-19,A,N,,2135000.0,11,LLC,RM-15
+CIF500773,Pearl Bay Stores LLC,SME,,BUSINESS,Retail,Small,Business Banking,Ajman,2024-08-20,B,N,,6188000.0,20,FZ-LLC,RM-23
+CIF500774,Oasis Restaurant LLC,SME,,BUSINESS,Restaurants & Hospitality,Micro,Business Banking,Ajman,2017-07-21,B,N,,886000.0,14,LLC,RM-14
+CIF500775,Palm Crest Retail LLC,SME,,BUSINESS,Retail,Medium,Business Banking,Dubai,2016-11-22,D,N,,26492000.0,10,LLC,RM-22
+CIF500776,Dune Ridge Hospitality LLC,SME,,BUSINESS,Restaurants & Hospitality,Micro,Business Banking,Ras Al Khaimah,2018-01-23,B,N,,1108000.0,7,LLC,RM-14
+CIF500777,Oasis Import & Export LLC,SME,,BUSINESS,General Trading,Micro,Business Banking,Umm Al Quwain,2019-12-24,B,N,,730000.0,19,Sole Establishment,RM-16
+CIF500778,Summit Cafe & Bistro,SME,,BUSINESS,Restaurants & Hospitality,Small,Business Banking,Ajman,2021-09-25,C,N,,5631000.0,17,FZE,RM-15
+CIF500779,Coral Civil Works LLC,SME,,BUSINESS,Construction & Contracting,Medium,Business Banking,Sharjah,2015-05-26,C,N,,26817000.0,25,LLC,RM-13
+CIF500780,Al Bustan Fashion LLC,SME,,BUSINESS,Retail,Small,Business Banking,Dubai,2026-06-27,B,N,,6206000.0,0,Sole Establishment,RM-17
+CIF500781,Golden Sands Cargo Services LLC,SME,,BUSINESS,Logistics & Transport,Micro,Business Banking,Ajman,2018-03-01,A,N,,1981000.0,18,LLC,RM-13
+CIF500782,Arabian Gate Stores LLC,SME,,BUSINESS,Retail,Medium,Business Banking,Ajman,2021-01-02,B,N,,37609000.0,22,Sole Establishment,RM-24
+CIF500783,Red Sea Building Contracting LLC,SME,,BUSINESS,Construction & Contracting,Micro,Business Banking,Ajman,2020-02-03,B,N,,865000.0,10,LLC,RM-23
+CIF500784,Desert Rose Fashion LLC,SME,,BUSINESS,Retail,Small,Business Banking,Sharjah,2015-08-04,B,N,,11982000.0,10,LLC,RM-21
+CIF500785,Golden Sands Contracting Co.,SME,,BUSINESS,Construction & Contracting,Micro,Business Banking,Fujairah,2019-09-05,B,N,,846000.0,6,LLC,RM-21
+CIF500786,Palm Crest Restaurant LLC,SME,,BUSINESS,Restaurants & Hospitality,Micro,Business Banking,Sharjah,2017-06-06,D,N,,1514000.0,16,LLC,RM-19
+CIF500787,Summit General Trading LLC,SME,,BUSINESS,General Trading,Small,Business Banking,Ras Al Khaimah,2020-10-07,B,N,,3380000.0,6,LLC,RM-13
+CIF500788,Silver Dune Plastics Factory LLC,SME,,BUSINESS,Manufacturing,Micro,Business Banking,Ajman,2022-02-08,A,N,,724000.0,9,LLC,RM-15
+CIF500789,Al Bustan General Trading LLC,SME,,BUSINESS,General Trading,Small,Business Banking,Dubai,2020-05-09,C,N,,9574000.0,11,LLC,RM-14
+CIF500790,Al Noor Hospitality LLC,SME,,BUSINESS,Restaurants & Hospitality,Micro,Business Banking,Ras Al Khaimah,2020-10-10,C,N,,842000.0,25,Sole Establishment,RM-14
+CIF500791,Arabian Gate Consultancy FZ-LLC,SME,,BUSINESS,IT & Professional Services,Micro,Business Banking,Ajman,2023-07-11,D,N,,2666000.0,10,Sole Establishment,RM-20
+CIF500792,Blue Coast Technical Services LLC,SME,,BUSINESS,Construction & Contracting,Small,Business Banking,Sharjah,2015-09-12,C,N,,4093000.0,12,FZE,RM-15
+CIF500793,Silver Dune Trading Co. LLC,SME,,BUSINESS,General Trading,Small,Business Banking,Sharjah,2015-07-13,B,N,,6384000.0,20,Sole Establishment,RM-23
+CIF500794,Crescent Trading Co. LLC,SME,,BUSINESS,General Trading,Medium,Business Banking,Dubai,2023-05-14,C,N,,23198000.0,19,FZE,RM-19
+CIF500795,Al Noor Transport LLC,SME,,BUSINESS,Logistics & Transport,Micro,Business Banking,Ras Al Khaimah,2017-01-15,D,N,,1184000.0,12,Sole Establishment,RM-16
+CIF500796,Golden Sands Cargo Services LLC,SME,,BUSINESS,Logistics & Transport,Medium,Business Banking,Umm Al Quwain,2026-07-16,E,N,,17974000.0,1,Sole Establishment,RM-18
+CIF500797,Coral Cargo Services LLC,SME,,BUSINESS,Logistics & Transport,Small,Business Banking,Sharjah,2023-06-17,A,N,,9938000.0,7,LLC,RM-17
+CIF500798,Al Noor General Trading LLC,SME,,BUSINESS,General Trading,Micro,Business Banking,Ajman,2021-05-18,A,N,,1824000.0,18,LLC,RM-16
+CIF500799,Al Bustan Dental Clinic,SME,,BUSINESS,Healthcare Services,Micro,Business Banking,Ajman,2017-01-19,C,N,,1088000.0,22,Sole Establishment,RM-21
+CIF500800,Summit Contracting Co.,SME,,BUSINESS,Construction & Contracting,Small,Business Banking,Dubai,2022-04-01,C,N,,3242000.0,4,LLC,RM-16
+CIF500801,Oasis Civil Works LLC,SME,,BUSINESS,Construction & Contracting,Small,Business Banking,Ajman,2018-12-02,B,N,,4548000.0,6,LLC,RM-14
+CIF500802,Desert Rose Trading Co. LLC,SME,,BUSINESS,General Trading,Medium,Business Banking,Sharjah,2023-08-03,B,N,,20294000.0,13,LLC,RM-24
+CIF500803,Desert Rose Medical Centre LLC,SME,,BUSINESS,Healthcare Services,Micro,Business Banking,Ajman,2017-10-04,B,N,,609000.0,15,LLC,RM-15
+CIF500804,Palm Crest Industries LLC,SME,,BUSINESS,Manufacturing,Micro,Business Banking,Ajman,2016-11-05,E,N,,878000.0,24,LLC,RM-14
+CIF500805,Pearl Bay Fashion LLC,SME,,BUSINESS,Retail,Micro,Business Banking,Umm Al Quwain,2015-09-06,D,N,,2310000.0,10,FZ-LLC,RM-24
+CIF500806,Desert Rose Pharmacy LLC,SME,,BUSINESS,Healthcare Services,Small,Business Banking,Dubai,2018-07-07,D,N,,16035000.0,14,LLC,RM-15
+CIF500807,Al Bustan Technical Services LLC,SME,,BUSINESS,Construction & Contracting,Micro,Business Banking,Ras Al Khaimah,2015-07-08,C,N,,2183000.0,10,Sole Establishment,RM-20
+CIF500808,Palm Crest Cargo Services LLC,SME,,BUSINESS,Logistics & Transport,Micro,Business Banking,Dubai,2015-04-09,C,N,,1406000.0,24,Sole Establishment,RM-21
+CIF500809,Pearl Bay Industries LLC,SME,,BUSINESS,Manufacturing,Small,Business Banking,Sharjah,2026-05-10,C,N,,6226000.0,2,LLC,RM-16
+CIF500810,Al Noor Transport LLC,SME,,BUSINESS,Logistics & Transport,Small,Business Banking,Sharjah,2018-11-11,B,N,,8682000.0,12,LLC,RM-23
+CIF500811,Emirates Link Stores LLC,SME,,BUSINESS,Retail,Medium,Business Banking,Sharjah,2017-06-12,B,N,,55759000.0,22,FZE,RM-20
+CIF500812,Arabian Gate Stores LLC,SME,,BUSINESS,Retail,Micro,Business Banking,Dubai,2021-08-13,A,N,,980000.0,16,Sole Establishment,RM-15
+CIF500813,Falcon Electronics LLC,SME,,BUSINESS,Retail,Micro,Business Banking,Sharjah,2022-12-14,A,N,,886000.0,12,FZE,RM-21
+CIF500814,Pearl Bay Plastics Factory LLC,SME,,BUSINESS,Manufacturing,Micro,Business Banking,Abu Dhabi,2026-06-15,B,N,,1108000.0,1,LLC,RM-16
+CIF500815,Arabian Gate Logistics LLC,SME,,BUSINESS,Logistics & Transport,Micro,Business Banking,Dubai,2022-06-16,D,N,,814000.0,9,LLC,RM-13
+CIF500816,Pearl Bay Cargo Services LLC,SME,,BUSINESS,Logistics & Transport,Micro,Business Banking,Sharjah,2026-05-17,C,N,,2251000.0,1,LLC,RM-19
+CIF500817,Horizon General Trading LLC,SME,,BUSINESS,General Trading,Micro,Business Banking,Fujairah,2019-10-18,A,N,,755000.0,22,LLC,RM-19
+CIF500818,Al Bustan Restaurant LLC,SME,,BUSINESS,Restaurants & Hospitality,Micro,Business Banking,Dubai,2018-01-19,D,N,,2419000.0,23,Sole Establishment,RM-21
+CIF500819,Emirates Link Plastics Factory LLC,SME,,BUSINESS,Manufacturing,Small,Business Banking,Sharjah,2017-08-20,B,N,,12356000.0,8,Sole Establishment,RM-22
+CIF500820,Horizon Cargo Services LLC,SME,,BUSINESS,Logistics & Transport,Small,Business Banking,Abu Dhabi,2015-04-21,C,N,,16057000.0,10,LLC,RM-22
+CIF500821,Gulf Star General Trading LLC,SME,,BUSINESS,General Trading,Small,Business Banking,Abu Dhabi,2023-11-22,A,N,,12192000.0,15,LLC,RM-16
+CIF500822,Marina Trading Co. LLC,SME,,BUSINESS,General Trading,Micro,Business Banking,Ras Al Khaimah,2018-04-23,A,N,,717000.0,14,LLC,RM-22
+CIF500823,Dune Ridge Metal Works LLC,SME,,BUSINESS,Manufacturing,Micro,Business Banking,Umm Al Quwain,2016-10-24,C,N,,2403000.0,20,FZ-LLC,RM-17
+CIF500824,Falcon Contracting Co.,SME,,BUSINESS,Construction & Contracting,Micro,Business Banking,Sharjah,2024-05-25,C,N,,1725000.0,6,LLC,RM-20
+CIF500825,Summit Electronics LLC,SME,,BUSINESS,Retail,Small,Business Banking,Dubai,2019-03-26,B,N,,11185000.0,24,FZE,RM-19
+CIF500826,Emirates Link Restaurant LLC,SME,,BUSINESS,Restaurants & Hospitality,Micro,Business Banking,Sharjah,2020-04-27,B,N,,1332000.0,19,FZ-LLC,RM-20
+CIF500827,Coral Real Estate Brokers,SME,,BUSINESS,Real Estate Services,Small,Business Banking,Ras Al Khaimah,2024-07-01,B,N,,2642000.0,18,LLC,RM-21
+CIF500828,Emirates Link Civil Works LLC,SME,,BUSINESS,Construction & Contracting,Micro,Business Banking,Dubai,2017-05-02,B,N,,784000.0,24,FZ-LLC,RM-21
+CIF500829,Emirates Link Electronics LLC,SME,,BUSINESS,Retail,Small,Business Banking,Sharjah,2023-01-03,A,N,,7591000.0,9,LLC,RM-20
+CIF500830,Al Bustan Cafe & Bistro,SME,,BUSINESS,Restaurants & Hospitality,Small,Business Banking,Dubai,2017-11-04,D,N,,12582000.0,10,LLC,RM-23
+CIF500831,Marina Cargo Services LLC,SME,,BUSINESS,Logistics & Transport,Small,Business Banking,Dubai,2026-07-05,C,N,,16120000.0,1,LLC,RM-19
+CIF500832,Summit Cargo Services LLC,SME,,BUSINESS,Logistics & Transport,Small,Business Banking,Sharjah,2022-06-06,D,N,,2981000.0,10,LLC,RM-17
+CIF500833,Crescent Fashion LLC,SME,,BUSINESS,Retail,Micro,Business Banking,Sharjah,2016-10-07,A,N,,1083000.0,18,LLC,RM-23
+CIF500834,Marina Logistics LLC,SME,,BUSINESS,Logistics & Transport,Micro,Business Banking,Ajman,2019-08-08,D,N,,897000.0,9,LLC,RM-21
+CIF500835,Horizon Dental Clinic,SME,,BUSINESS,Healthcare Services,Micro,Business Banking,Sharjah,2018-06-09,A,N,,1327000.0,24,Sole Establishment,RM-13
+CIF500836,Emirates Link Plastics Factory LLC,SME,,BUSINESS,Manufacturing,Micro,Business Banking,Ras Al Khaimah,2026-05-10,E,N,,1208000.0,2,LLC,RM-23
+CIF500837,Dune Ridge Retail LLC,SME,,BUSINESS,Retail,Micro,Business Banking,Ajman,2014-11-11,A,N,,633000.0,17,LLC,RM-20
+CIF500838,Blue Coast Transport LLC,SME,,BUSINESS,Logistics & Transport,Micro,Business Banking,Abu Dhabi,2017-12-12,A,N,,751000.0,19,FZE,RM-16
+CIF500839,Gulf Star Trading Co. LLC,SME,,BUSINESS,General Trading,Small,Business Banking,Ras Al Khaimah,2024-06-13,B,N,,4436000.0,20,FZ-LLC,RM-22
+CIF500840,Golden Sands Hospitality LLC,SME,,BUSINESS,Restaurants & Hospitality,Small,Business Banking,Ras Al Khaimah,2014-10-14,A,N,,14310000.0,10,LLC,RM-15
+CIF500841,Blue Coast Metal Works LLC,SME,,BUSINESS,Manufacturing,Small,Business Banking,Ras Al Khaimah,2017-11-15,B,N,,10602000.0,19,LLC,RM-17
+CIF500842,Horizon Stores LLC,SME,,BUSINESS,Retail,Small,Business Banking,Ajman,2017-01-16,A,N,,13576000.0,18,LLC,RM-17
+CIF500843,Desert Rose Stores LLC,SME,,BUSINESS,Retail,Micro,Business Banking,Sharjah,2016-03-17,D,N,,1375000.0,22,Sole Establishment,RM-23
+CIF500844,Red Sea Hospitality LLC,SME,,BUSINESS,Restaurants & Hospitality,Micro,Business Banking,Umm Al Quwain,2026-05-18,A,N,,2238000.0,2,Sole Establishment,RM-15
+CIF500845,Horizon Cafe & Bistro,SME,,BUSINESS,Restaurants & Hospitality,Micro,Business Banking,Ras Al Khaimah,2022-12-19,B,N,,1475000.0,11,LLC,RM-14
+CIF500846,Marina Hospitality LLC,SME,,BUSINESS,Restaurants & Hospitality,Micro,Business Banking,Ajman,2019-08-20,A,N,,775000.0,16,LLC,RM-16
+CIF500847,Red Sea General Trading LLC,SME,,BUSINESS,General Trading,Micro,Business Banking,Ajman,2017-06-21,C,N,,660000.0,20,LLC,RM-16
+CIF500848,Pearl Bay Trading Co. LLC,SME,,BUSINESS,General Trading,Small,Business Banking,Sharjah,2020-06-22,D,N,,13183000.0,8,LLC,RM-14
+CIF500849,Oasis Building Contracting LLC,SME,,BUSINESS,Construction & Contracting,Micro,Business Banking,Ras Al Khaimah,2018-10-23,B,N,,1331000.0,12,LLC,RM-16
+CIF500850,Desert Rose Retail LLC,SME,,BUSINESS,Retail,Micro,Business Banking,Dubai,2014-11-24,B,N,,2266000.0,10,Sole Establishment,RM-19
+CIF500851,Summit Pharmacy LLC,SME,,BUSINESS,Healthcare Services,Micro,Business Banking,Fujairah,2016-07-25,A,N,,628000.0,19,Sole Establishment,RM-18
+CIF500852,Palm Crest Restaurant LLC,SME,,BUSINESS,Restaurants & Hospitality,Medium,Business Banking,Ajman,2015-11-26,D,N,,15039000.0,9,LLC,RM-17
+CIF500853,Summit Metal Works LLC,SME,,BUSINESS,Manufacturing,Micro,Business Banking,Sharjah,2016-10-27,A,N,,1508000.0,25,FZE,RM-14
+CIF500854,Pearl Bay Civil Works LLC,SME,,BUSINESS,Construction & Contracting,Micro,Business Banking,Sharjah,2021-06-01,A,N,,807000.0,4,LLC,RM-17
+CIF500855,Silver Dune Hospitality LLC,SME,,BUSINESS,Restaurants & Hospitality,Small,Business Banking,Fujairah,2020-06-02,A,N,,3870000.0,19,LLC,RM-18
+CIF500856,Palm Crest Civil Works LLC,SME,,BUSINESS,Construction & Contracting,Small,Business Banking,Dubai,2021-03-03,B,N,,3873000.0,4,Sole Establishment,RM-19
+CIF500857,Emirates Link Contracting Co.,SME,,BUSINESS,Construction & Contracting,Small,Business Banking,Ajman,2021-02-04,A,N,,8101000.0,4,LLC,RM-16
+CIF500858,Falcon Trading Co. LLC,SME,,BUSINESS,General Trading,Small,Business Banking,Ajman,2019-05-05,B,N,,4283000.0,22,FZE,RM-19
+CIF500859,Horizon Real Estate Brokers,SME,,BUSINESS,Real Estate Services,Micro,Business Banking,Sharjah,2021-04-06,B,N,,1992000.0,12,LLC,RM-24
+CIF500860,Dune Ridge Real Estate Brokers,SME,,BUSINESS,Real Estate Services,Medium,Business Banking,Fujairah,2026-08-07,A,N,,33205000.0,1,LLC,RM-13
+CIF500861,Marina Cafe & Bistro,SME,,BUSINESS,Restaurants & Hospitality,Micro,Business Banking,Umm Al Quwain,2021-03-08,B,N,,2179000.0,4,LLC,RM-22
+CIF500862,Desert Rose Electronics LLC,SME,,BUSINESS,Retail,Micro,Business Banking,Ajman,2015-09-09,A,N,,2640000.0,19,FZ-LLC,RM-13
+CIF500863,Al Bustan General Trading LLC,SME,,BUSINESS,General Trading,Micro,Business Banking,Ras Al Khaimah,2023-04-10,D,N,,1338000.0,22,LLC,RM-22
+CIF500864,Arabian Gate Transport LLC,SME,,BUSINESS,Logistics & Transport,Micro,Business Banking,Umm Al Quwain,2022-07-11,C,N,,2550000.0,11,Sole Establishment,RM-22
+CIF500865,Crescent Trading Co. LLC,SME,,BUSINESS,General Trading,Small,Business Banking,Sharjah,2023-01-12,C,N,,4294000.0,16,LLC,RM-22
+CIF500866,Arabian Gate Electronics LLC,SME,,BUSINESS,Retail,Small,Business Banking,Ajman,2020-08-13,C,N,,6715000.0,13,LLC,RM-14
+CIF500867,Al Bustan General Trading LLC,SME,,BUSINESS,General Trading,Micro,Business Banking,Ras Al Khaimah,2022-06-14,C,N,,1433000.0,10,LLC,RM-16
+CIF500868,Al Noor Cargo Services LLC,SME,,BUSINESS,Logistics & Transport,Micro,Business Banking,Fujairah,2017-10-15,B,N,,767000.0,17,LLC,RM-21
+CIF500869,Oasis Civil Works LLC,SME,,BUSINESS,Construction & Contracting,Small,Business Banking,Sharjah,2017-02-16,B,N,,8709000.0,15,LLC,RM-13
+CIF500870,Al Bustan Stores LLC,SME,,BUSINESS,Retail,Small,Business Banking,Dubai,2019-09-17,C,N,,11309000.0,6,Sole Establishment,RM-22
+CIF500871,Oasis Stores LLC,SME,,BUSINESS,Retail,Small,Business Banking,Dubai,2024-04-18,A,N,,6962000.0,10,LLC,RM-13
+CIF500872,Golden Sands Transport LLC,SME,,BUSINESS,Logistics & Transport,Small,Business Banking,Sharjah,2020-05-19,A,N,,10025000.0,5,LLC,RM-21
+CIF500873,Red Sea Pharmacy LLC,SME,,BUSINESS,Healthcare Services,Micro,Business Banking,Sharjah,2015-05-20,B,N,,2142000.0,25,Sole Establishment,RM-22
+CIF500874,Marina Import & Export LLC,SME,,BUSINESS,General Trading,Small,Business Banking,Sharjah,2016-08-21,C,N,,16313000.0,22,LLC,RM-15
+CIF500875,Emirates Link Restaurant LLC,SME,,BUSINESS,Restaurants & Hospitality,Micro,Business Banking,Sharjah,2024-07-22,C,N,,2591000.0,13,Sole Establishment,RM-23
+CIF500876,Crescent Cargo Services LLC,SME,,BUSINESS,Logistics & Transport,Micro,Business Banking,Umm Al Quwain,2015-01-23,B,N,,827000.0,12,Sole Establishment,RM-17
+CIF500877,Silver Dune Contracting Co.,SME,,BUSINESS,Construction & Contracting,Micro,Business Banking,Sharjah,2015-12-24,C,N,,872000.0,20,FZE,RM-19
+CIF500878,Arabian Gate Trading Co. LLC,SME,,BUSINESS,General Trading,Micro,Business Banking,Sharjah,2023-07-25,B,N,,746000.0,3,LLC,RM-21
+CIF500879,Pearl Bay Transport LLC,SME,,BUSINESS,Logistics & Transport,Medium,Business Banking,Ras Al Khaimah,2016-05-26,C,N,,37627000.0,10,LLC,RM-21
+CIF500880,Desert Rose Hospitality LLC,SME,,BUSINESS,Restaurants & Hospitality,Micro,Business Banking,Sharjah,2021-07-27,B,N,,753000.0,20,FZE,RM-23
+CIF500881,Falcon Technical Services LLC,SME,,BUSINESS,Construction & Contracting,Micro,Business Banking,Ajman,2022-03-01,D,N,,2164000.0,24,FZ-LLC,RM-18
+CIF500882,Coral Cafe & Bistro,SME,,BUSINESS,Restaurants & Hospitality,Micro,Business Banking,Dubai,2021-06-02,A,N,,2494000.0,5,LLC,RM-22
+CIF500883,Arabian Gate Logistics LLC,SME,,BUSINESS,Logistics & Transport,Small,Business Banking,Dubai,2024-05-03,B,N,,11139000.0,23,Sole Establishment,RM-24
+CIF500884,Summit Contracting Co.,SME,,BUSINESS,Construction & Contracting,Small,Business Banking,Dubai,2024-02-04,C,N,,4196000.0,2,LLC,RM-18
+CIF500885,Blue Coast Building Contracting LLC,SME,,BUSINESS,Construction & Contracting,Micro,Business Banking,Ajman,2022-12-05,A,N,,2368000.0,19,Sole Establishment,RM-19
+CIF500886,Dune Ridge Fashion LLC,SME,,BUSINESS,Retail,Micro,Business Banking,Ras Al Khaimah,2023-06-06,C,N,,745000.0,24,Sole Establishment,RM-21
+CIF500887,Coral Fashion LLC,SME,,BUSINESS,Retail,Medium,Business Banking,Dubai,2017-01-07,C,N,,18028000.0,9,LLC,RM-22
+CIF500888,Coral Fashion LLC,SME,,BUSINESS,Retail,Small,Business Banking,Sharjah,2024-03-08,C,N,,4112000.0,6,LLC,RM-13
+CIF500889,Blue Coast Retail LLC,SME,,BUSINESS,Retail,Small,Business Banking,Ajman,2023-11-09,D,N,,11333000.0,24,LLC,RM-22
+CIF500890,Pearl Bay Logistics LLC,SME,,BUSINESS,Logistics & Transport,Micro,Business Banking,Sharjah,2022-12-10,E,N,,1368000.0,9,LLC,RM-22
+CIF500891,Gulf Star General Trading LLC,SME,,BUSINESS,General Trading,Micro,Business Banking,Dubai,2020-11-11,A,N,,862000.0,22,FZE,RM-14
+CIF500892,Emirates Link Consultancy FZ-LLC,SME,,BUSINESS,IT & Professional Services,Micro,Business Banking,Sharjah,2020-06-12,A,N,,886000.0,24,FZE,RM-21
+CIF500893,Al Bustan Cafe & Bistro,SME,,BUSINESS,Restaurants & Hospitality,Small,Business Banking,Fujairah,2018-06-13,B,N,,5225000.0,20,FZE,RM-15
+CIF500894,Silver Dune Electronics LLC,SME,,BUSINESS,Retail,Micro,Business Banking,Dubai,2019-06-14,D,N,,661000.0,17,LLC,RM-20
+CIF500895,Blue Coast Logistics LLC,SME,,BUSINESS,Logistics & Transport,Small,Business Banking,Ajman,2018-12-15,C,N,,10363000.0,14,FZ-LLC,RM-21
+CIF500896,Gulf Star Stores LLC,SME,,BUSINESS,Retail,Small,Business Banking,Ras Al Khaimah,2022-10-16,A,N,,6439000.0,4,LLC,RM-17
+CIF500897,Falcon Restaurant LLC,SME,,BUSINESS,Restaurants & Hospitality,Micro,Business Banking,Umm Al Quwain,2016-08-17,A,N,,1792000.0,9,FZE,RM-13
+CIF500898,Pearl Bay Retail LLC,SME,,BUSINESS,Retail,Medium,Business Banking,Ras Al Khaimah,2022-01-18,B,N,,20578000.0,6,FZ-LLC,RM-20
+CIF500899,Palm Crest Import & Export LLC,SME,,BUSINESS,General Trading,Micro,Business Banking,Fujairah,2023-04-19,A,N,,1554000.0,11,LLC,RM-18
+CIF500900,Falcon Technical Services LLC,SME,,BUSINESS,Construction & Contracting,Micro,Business Banking,Dubai,2021-10-01,A,N,,1883000.0,12,LLC,RM-22
+CIF500901,Golden Sands Retail LLC,SME,,BUSINESS,Retail,Micro,Business Banking,Ajman,2021-07-02,C,N,,2097000.0,12,LLC,RM-22
+CIF500902,Palm Crest General Trading LLC,SME,,BUSINESS,General Trading,Medium,Business Banking,Sharjah,2021-11-03,E,N,,51592000.0,18,LLC,RM-20
+CIF500903,Desert Rose Logistics LLC,SME,,BUSINESS,Logistics & Transport,Micro,Business Banking,Sharjah,2018-12-04,B,N,,1691000.0,22,Sole Establishment,RM-18
+CIF500904,Desert Rose Restaurant LLC,SME,,BUSINESS,Restaurants & Hospitality,Small,Business Banking,Sharjah,2019-07-05,B,N,,12034000.0,22,LLC,RM-21
+CIF500905,Dune Ridge Restaurant LLC,SME,,BUSINESS,Restaurants & Hospitality,Micro,Business Banking,Ajman,2024-07-06,B,N,,2487000.0,12,Sole Establishment,RM-20
+CIF500906,Summit General Trading LLC,SME,,BUSINESS,General Trading,Small,Business Banking,Abu Dhabi,2019-05-07,B,N,,3282000.0,22,Sole Establishment,RM-24
+CIF500907,Summit Technical Services LLC,SME,,BUSINESS,Construction & Contracting,Micro,Business Banking,Dubai,2022-09-08,B,N,,1456000.0,19,FZE,RM-22
+CIF500908,Falcon Property Management LLC,SME,,BUSINESS,Real Estate Services,Micro,Business Banking,Ajman,2026-08-09,A,N,,2316000.0,1,FZ-LLC,RM-21
+CIF500909,Gulf Star Fashion LLC,SME,,BUSINESS,Retail,Small,Business Banking,Sharjah,2015-11-10,B,N,,3699000.0,19,LLC,RM-13
+CIF500910,Coral Electronics LLC,SME,,BUSINESS,Retail,Small,Business Banking,Ajman,2020-04-11,A,N,,14927000.0,16,FZ-LLC,RM-18
+CIF500911,Coral Transport LLC,SME,,BUSINESS,Logistics & Transport,Small,Business Banking,Abu Dhabi,2026-07-12,C,N,,7416000.0,0,FZ-LLC,RM-24
+CIF500912,Arabian Gate General Trading LLC,SME,,BUSINESS,General Trading,Micro,Business Banking,Ras Al Khaimah,2024-01-13,D,N,,760000.0,1,Sole Establishment,RM-16
+CIF500913,Blue Coast Cargo Services LLC,SME,,BUSINESS,Logistics & Transport,Micro,Business Banking,Ajman,2019-08-14,A,N,,822000.0,18,LLC,RM-21
+CIF500914,Gulf Star Building Contracting LLC,SME,,BUSINESS,Construction & Contracting,Micro,Business Banking,Ras Al Khaimah,2018-07-15,B,N,,1099000.0,12,FZ-LLC,RM-14
+CIF500915,Golden Sands General Trading LLC,SME,,BUSINESS,General Trading,Micro,Business Banking,Abu Dhabi,2015-01-16,C,N,,1299000.0,11,Sole Establishment,RM-24
+CIF500916,Golden Sands Stores LLC,SME,,BUSINESS,Retail,Micro,Business Banking,Ras Al Khaimah,2015-02-17,A,N,,1146000.0,24,LLC,RM-21
+CIF500917,Golden Sands Real Estate Brokers,SME,,BUSINESS,Real Estate Services,Micro,Business Banking,Ras Al Khaimah,2020-12-18,C,N,,1422000.0,10,FZE,RM-19
+CIF500918,Summit Fashion LLC,SME,,BUSINESS,Retail,Micro,Business Banking,Sharjah,2026-08-19,B,N,,744000.0,1,LLC,RM-14
+CIF500919,Blue Coast Cafe & Bistro,SME,,BUSINESS,Restaurants & Hospitality,Small,Business Banking,Dubai,2021-03-20,C,N,,3357000.0,21,LLC,RM-23
+CIF500920,Summit Cargo Services LLC,SME,,BUSINESS,Logistics & Transport,Micro,Business Banking,Fujairah,2019-04-21,A,N,,935000.0,6,FZE,RM-21
+CIF500921,Summit Transport LLC,SME,,BUSINESS,Logistics & Transport,Small,Business Banking,Dubai,2020-11-22,C,N,,3303000.0,4,Sole Establishment,RM-14
+CIF500922,Dune Ridge Cargo Services LLC,SME,,BUSINESS,Logistics & Transport,Micro,Business Banking,Ajman,2022-06-23,D,N,,1291000.0,3,LLC,RM-19
+CIF500923,Pearl Bay Cargo Services LLC,SME,,BUSINESS,Logistics & Transport,Micro,Business Banking,Sharjah,2020-02-24,B,N,,854000.0,16,Sole Establishment,RM-16
+CIF500924,Summit Civil Works LLC,SME,,BUSINESS,Construction & Contracting,Small,Business Banking,Fujairah,2016-05-25,B,N,,7251000.0,17,Sole Establishment,RM-13
+CIF500925,Gulf Star Fashion LLC,SME,,BUSINESS,Retail,Small,Business Banking,Dubai,2016-03-26,B,N,,3562000.0,14,LLC,RM-22
+CIF500926,Marina Cafe & Bistro,SME,,BUSINESS,Restaurants & Hospitality,Micro,Business Banking,Sharjah,2014-10-27,E,N,,1024000.0,20,LLC,RM-20
+CIF500927,Crescent Technical Services LLC,SME,,BUSINESS,Construction & Contracting,Micro,Business Banking,Sharjah,2024-04-01,C,N,,1573000.0,4,LLC,RM-19
+CIF500928,Dune Ridge Industries LLC,SME,,BUSINESS,Manufacturing,Small,Business Banking,Dubai,2021-11-02,C,N,,15292000.0,22,Sole Establishment,RM-17
+CIF500929,Al Noor Industries LLC,SME,,BUSINESS,Manufacturing,Micro,Business Banking,Dubai,2021-10-03,A,N,,890000.0,20,Sole Establishment,RM-23
+CIF500930,Blue Coast Civil Works LLC,SME,,BUSINESS,Construction & Contracting,Micro,Business Banking,Dubai,2024-01-04,A,N,,2018000.0,4,LLC,RM-21
+CIF500931,Crescent Cafe & Bistro,SME,,BUSINESS,Restaurants & Hospitality,Micro,Business Banking,Ajman,2020-09-05,B,N,,1773000.0,15,LLC,RM-23
+CIF500932,Palm Crest Plastics Factory LLC,SME,,BUSINESS,Manufacturing,Micro,Business Banking,Sharjah,2018-05-06,A,N,,660000.0,18,Sole Establishment,RM-19
+CIF500933,Desert Rose General Trading LLC,SME,,BUSINESS,General Trading,Small,Business Banking,Dubai,2021-03-07,B,N,,7444000.0,4,FZ-LLC,RM-15
+CIF500934,Blue Coast Technical Services LLC,SME,,BUSINESS,Construction & Contracting,Small,Business Banking,Ras Al Khaimah,2019-12-08,E,N,,5250000.0,15,LLC,RM-19
+CIF500935,Dune Ridge Logistics LLC,SME,,BUSINESS,Logistics & Transport,Micro,Business Banking,Dubai,2019-02-09,B,N,,1478000.0,19,LLC,RM-21
+CIF500936,Dune Ridge Retail LLC,SME,,BUSINESS,Retail,Small,Business Banking,Ras Al Khaimah,2022-05-10,B,N,,6229000.0,5,FZ-LLC,RM-24
+CIF500937,Horizon Transport LLC,SME,,BUSINESS,Logistics & Transport,Small,Business Banking,Sharjah,2026-07-11,A,N,,14267000.0,2,FZE,RM-23
+CIF500938,Arabian Gate Cargo Services LLC,SME,,BUSINESS,Logistics & Transport,Micro,Business Banking,Sharjah,2023-09-12,B,N,,2246000.0,22,LLC,RM-23
+CIF500939,Coral Cafe & Bistro,SME,,BUSINESS,Restaurants & Hospitality,Micro,Business Banking,Dubai,2026-06-13,B,N,,981000.0,1,FZE,RM-17
+CIF500940,Pearl Bay Technical Services LLC,SME,,BUSINESS,Construction & Contracting,Medium,Business Banking,Sharjah,2015-02-14,C,N,,25432000.0,10,LLC,RM-15
+CIF500941,Pearl Bay Plastics Factory LLC,SME,,BUSINESS,Manufacturing,Micro,Business Banking,Sharjah,2014-12-15,A,N,,1863000.0,10,FZ-LLC,RM-14
+CIF500942,Crescent Building Contracting LLC,SME,,BUSINESS,Construction & Contracting,Small,Business Banking,Fujairah,2023-11-16,A,N,,4434000.0,20,LLC,RM-17
+CIF500943,Dune Ridge Civil Works LLC,SME,,BUSINESS,Construction & Contracting,Small,Business Banking,Ajman,2021-06-17,A,N,,3534000.0,14,LLC,RM-16
+CIF500944,Marina Electronics LLC,SME,,BUSINESS,Retail,Small,Business Banking,Dubai,2022-04-18,A,N,,8615000.0,3,LLC,RM-24
+CIF500945,Coral IT Solutions FZE,SME,,BUSINESS,IT & Professional Services,Micro,Business Banking,Dubai,2017-09-19,C,N,,646000.0,8,LLC,RM-16
+CIF500946,Arabian Gate Contracting Co.,SME,,BUSINESS,Construction & Contracting,Small,Business Banking,Ajman,2024-02-20,A,N,,5291000.0,21,LLC,RM-23
+CIF500947,Arabian Gate Medical Centre LLC,SME,,BUSINESS,Healthcare Services,Micro,Business Banking,Sharjah,2020-12-21,E,N,,857000.0,22,LLC,RM-23
+CIF500948,Horizon Trading Co. LLC,SME,,BUSINESS,General Trading,Small,Business Banking,Dubai,2026-08-22,B,N,,14894000.0,1,FZE,RM-14
+CIF500949,Summit Stores LLC,SME,,BUSINESS,Retail,Micro,Business Banking,Dubai,2021-02-23,E,N,,894000.0,24,FZE,RM-23
+CIF500950,Gulf Star Property Management LLC,SME,,BUSINESS,Real Estate Services,Micro,Business Banking,Ajman,2023-08-24,A,N,,780000.0,9,LLC,RM-20
+CIF500951,Coral Import & Export LLC,SME,,BUSINESS,General Trading,Micro,Business Banking,Dubai,2018-04-25,B,N,,1676000.0,13,LLC,RM-22
+CIF500952,Golden Sands Cafe & Bistro,SME,,BUSINESS,Restaurants & Hospitality,Micro,Business Banking,Dubai,2023-06-26,C,N,,1443000.0,11,LLC,RM-18
+CIF500953,Al Bustan Hospitality LLC,SME,,BUSINESS,Restaurants & Hospitality,Micro,Business Banking,Ajman,2018-01-27,B,N,,1340000.0,23,LLC,RM-13
+CIF500954,Horizon General Trading LLC,SME,,BUSINESS,General Trading,Micro,Business Banking,Dubai,2015-04-01,B,N,,1066000.0,25,LLC,RM-24
+CIF500955,Silver Dune Trading Co. LLC,SME,,BUSINESS,General Trading,Small,Business Banking,Sharjah,2026-07-02,B,N,,6398000.0,2,LLC,RM-19
+CIF500956,Summit Import & Export LLC,SME,,BUSINESS,General Trading,Micro,Business Banking,Ajman,2016-05-03,A,N,,1273000.0,9,FZE,RM-15
+CIF500957,Al Noor Trading Co. LLC,SME,,BUSINESS,General Trading,Small,Business Banking,Umm Al Quwain,2021-10-04,C,N,,10119000.0,18,FZ-LLC,RM-20
+CIF500958,Summit Contracting Co.,SME,,BUSINESS,Construction & Contracting,Small,Business Banking,Ajman,2021-01-05,B,N,,10867000.0,13,FZE,RM-16
+CIF500959,Coral Contracting Co.,SME,,BUSINESS,Construction & Contracting,Small,Business Banking,Sharjah,2015-05-06,A,N,,6433000.0,23,LLC,RM-19
+CIF500960,Al Noor Electronics LLC,SME,,BUSINESS,Retail,Medium,Business Banking,Sharjah,2022-01-07,B,N,,42132000.0,20,LLC,RM-13
+CIF500961,Dune Ridge Civil Works LLC,SME,,BUSINESS,Construction & Contracting,Small,Business Banking,Ras Al Khaimah,2022-09-08,B,N,,4460000.0,17,LLC,RM-17
+CIF500962,Coral Trading Co. LLC,SME,,BUSINESS,General Trading,Micro,Business Banking,Sharjah,2019-06-09,D,N,,784000.0,25,Sole Establishment,RM-21
+CIF500963,Dune Ridge Civil Works LLC,SME,,BUSINESS,Construction & Contracting,Medium,Business Banking,Sharjah,2017-06-10,B,N,,26000000.0,8,LLC,RM-24
+CIF500964,Dune Ridge Cargo Services LLC,SME,,BUSINESS,Logistics & Transport,Micro,Business Banking,Ajman,2019-01-11,A,N,,925000.0,6,LLC,RM-14
+CIF500965,Summit Property Management LLC,SME,,BUSINESS,Real Estate Services,Small,Business Banking,Sharjah,2015-05-12,A,N,,3671000.0,10,LLC,RM-19
+CIF500966,Red Sea Transport LLC,SME,,BUSINESS,Logistics & Transport,Small,Business Banking,Ajman,2017-09-13,B,N,,4235000.0,18,LLC,RM-24
+CIF500967,Silver Dune Consultancy FZ-LLC,SME,,BUSINESS,IT & Professional Services,Small,Business Banking,Ajman,2026-08-14,B,N,,12390000.0,1,LLC,RM-16
+CIF500968,Golden Sands Metal Works LLC,SME,,BUSINESS,Manufacturing,Small,Business Banking,Ras Al Khaimah,2020-11-15,E,N,,16464000.0,13,FZE,RM-24
+CIF500969,Emirates Link Fashion LLC,SME,,BUSINESS,Retail,Micro,Business Banking,Ajman,2026-08-16,A,N,,1750000.0,1,LLC,RM-20
+CIF500970,Coral Hospitality LLC,SME,,BUSINESS,Restaurants & Hospitality,Micro,Business Banking,Umm Al Quwain,2021-09-17,A,N,,1279000.0,11,LLC,RM-14
+CIF500971,Al Bustan Transport LLC,SME,,BUSINESS,Logistics & Transport,Micro,Business Banking,Sharjah,2023-03-18,B,N,,1112000.0,14,Sole Establishment,RM-24
+CIF500972,Desert Rose Electronics LLC,SME,,BUSINESS,Retail,Small,Business Banking,Fujairah,2016-01-19,B,N,,8075000.0,9,Sole Establishment,RM-13
+CIF500973,Al Bustan Real Estate Brokers,SME,,BUSINESS,Real Estate Services,Small,Business Banking,Ras Al Khaimah,2017-12-20,C,N,,10104000.0,25,LLC,RM-18
+CIF500974,Pearl Bay Fashion LLC,SME,,BUSINESS,Retail,Micro,Business Banking,Ajman,2020-11-21,A,N,,1494000.0,20,LLC,RM-24
+CIF500975,Red Sea Building Contracting LLC,SME,,BUSINESS,Construction & Contracting,Micro,Business Banking,Sharjah,2019-09-22,D,N,,621000.0,10,LLC,RM-17
+CIF500976,Al Bustan Property Management LLC,SME,,BUSINESS,Real Estate Services,Micro,Business Banking,Ajman,2026-07-23,C,N,,2651000.0,1,LLC,RM-14
+CIF500977,Silver Dune Electronics LLC,SME,,BUSINESS,Retail,Micro,Business Banking,Sharjah,2018-10-24,A,N,,1776000.0,25,FZ-LLC,RM-16
+CIF500978,Marina Technical Services LLC,SME,,BUSINESS,Construction & Contracting,Micro,Business Banking,Sharjah,2018-11-25,B,N,,1030000.0,20,FZ-LLC,RM-20
+CIF500979,Emirates Link Real Estate Brokers,SME,,BUSINESS,Real Estate Services,Micro,Business Banking,Fujairah,2026-05-26,C,N,,1067000.0,1,FZE,RM-15
+CIF500980,Blue Coast Trading Co. LLC,SME,,BUSINESS,General Trading,Micro,Business Banking,Dubai,2023-04-27,C,N,,2167000.0,22,FZE,RM-24
+CIF500981,Crescent Pharmacy LLC,SME,,BUSINESS,Healthcare Services,Small,Business Banking,Ras Al Khaimah,2022-01-01,C,N,,3255000.0,24,FZE,RM-17
+CIF500982,Al Noor Real Estate Brokers,SME,,BUSINESS,Real Estate Services,Small,Business Banking,Abu Dhabi,2026-08-02,E,N,,7302000.0,0,FZE,RM-15
+CIF500983,Desert Rose Fashion LLC,SME,,BUSINESS,Retail,Micro,Business Banking,Sharjah,2015-01-03,B,N,,703000.0,10,LLC,RM-22
+CIF500984,Pearl Bay Hospitality LLC,SME,,BUSINESS,Restaurants & Hospitality,Medium,Business Banking,Ras Al Khaimah,2021-04-04,A,N,,33616000.0,16,LLC,RM-13
+CIF500985,Gulf Star Property Management LLC,SME,,BUSINESS,Real Estate Services,Micro,Business Banking,Dubai,2017-03-05,A,N,,907000.0,21,LLC,RM-22
+CIF500986,Falcon Dental Clinic,SME,,BUSINESS,Healthcare Services,Medium,Business Banking,Ajman,2017-07-06,A,N,,34271000.0,8,LLC,RM-13
+CIF500987,Golden Sands Electronics LLC,SME,,BUSINESS,Retail,Micro,Business Banking,Abu Dhabi,2023-09-07,C,N,,2671000.0,6,LLC,RM-24
+CIF500988,Coral Trading Co. LLC,SME,,BUSINESS,General Trading,Micro,Business Banking,Fujairah,2019-06-08,C,N,,987000.0,21,LLC,RM-21
+CIF500989,Crescent Technical Services LLC,SME,,BUSINESS,Construction & Contracting,Small,Business Banking,Sharjah,2018-03-09,C,N,,5831000.0,20,LLC,RM-21
+CIF500990,Al Noor Contracting Co.,SME,,BUSINESS,Construction & Contracting,Small,Business Banking,Ras Al Khaimah,2015-08-10,B,N,,2809000.0,17,FZE,RM-22
+CIF500991,Pearl Bay Fashion LLC,SME,,BUSINESS,Retail,Medium,Business Banking,Dubai,2017-04-11,C,N,,29597000.0,22,LLC,RM-20
+CIF500992,Oasis Real Estate Brokers,SME,,BUSINESS,Real Estate Services,Micro,Business Banking,Dubai,2018-02-12,B,N,,1318000.0,7,LLC,RM-16
+CIF500993,Marina General Trading LLC,SME,,BUSINESS,General Trading,Micro,Business Banking,Ajman,2024-04-13,B,N,,2278000.0,7,FZ-LLC,RM-15
+CIF500994,Red Sea Import & Export LLC,SME,,BUSINESS,General Trading,Micro,Business Banking,Sharjah,2022-07-14,B,N,,2141000.0,10,LLC,RM-19
+CIF500995,Gulf Star Fashion LLC,SME,,BUSINESS,Retail,Small,Business Banking,Sharjah,2021-07-15,A,N,,4123000.0,17,Sole Establishment,RM-14
+CIF500996,Gulf Star Cargo Services LLC,SME,,BUSINESS,Logistics & Transport,Micro,Business Banking,Sharjah,2019-12-16,C,N,,575000.0,18,FZ-LLC,RM-18
+CIF500997,Dune Ridge Restaurant LLC,SME,,BUSINESS,Restaurants & Hospitality,Micro,Business Banking,Umm Al Quwain,2018-11-17,A,N,,1269000.0,22,Sole Establishment,RM-13
+CIF500998,Blue Coast Hospitality LLC,SME,,BUSINESS,Restaurants & Hospitality,Micro,Business Banking,Ras Al Khaimah,2018-07-18,C,N,,812000.0,22,Sole Establishment,RM-20
+CIF500999,Arabian Gate General Trading LLC,SME,,BUSINESS,General Trading,Small,Business Banking,Ras Al Khaimah,2020-01-19,B,N,,5581000.0,9,LLC,RM-23
+CIF501000,Blue Coast Technical Services LLC,SME,,BUSINESS,Construction & Contracting,Micro,Business Banking,Ajman,2017-05-01,B,N,,2056000.0,9,Sole Establishment,RM-17
+CIF501001,Blue Coast Restaurant LLC,SME,,BUSINESS,Restaurants & Hospitality,Micro,Business Banking,Dubai,2020-09-02,C,N,,766000.0,18,Sole Establishment,RM-15
+CIF501002,Al Noor Hospitality LLC,SME,,BUSINESS,Restaurants & Hospitality,Micro,Business Banking,Dubai,2019-11-03,D,N,,1106000.0,15,LLC,RM-24
+CIF501003,Arabian Gate Industries LLC,SME,,BUSINESS,Manufacturing,Micro,Business Banking,Ras Al Khaimah,2024-06-04,A,N,,1704000.0,17,LLC,RM-19
+CIF501004,Blue Coast Real Estate Brokers,SME,,BUSINESS,Real Estate Services,Small,Business Banking,Sharjah,2020-06-05,B,N,,4911000.0,24,FZ-LLC,RM-14
+CIF501005,Silver Dune Retail LLC,SME,,BUSINESS,Retail,Small,Business Banking,Ras Al Khaimah,2016-07-06,A,N,,13294000.0,13,LLC,RM-18
+CIF501006,Oasis Trading Co. LLC,SME,,BUSINESS,General Trading,Small,Business Banking,Sharjah,2023-09-07,C,N,,4479000.0,19,Sole Establishment,RM-23
+CIF501007,Al Bustan Metal Works LLC,SME,,BUSINESS,Manufacturing,Medium,Business Banking,Sharjah,2020-12-08,B,N,,33944000.0,14,LLC,RM-24
+CIF501008,Summit Civil Works LLC,SME,,BUSINESS,Construction & Contracting,Small,Business Banking,Sharjah,2024-07-09,B,N,,9451000.0,9,Sole Establishment,RM-16
+CIF501009,Al Bustan Retail LLC,SME,,BUSINESS,Retail,Micro,Business Banking,Sharjah,2024-01-10,C,N,,2248000.0,7,LLC,RM-16
+CIF501010,Coral Electronics LLC,SME,,BUSINESS,Retail,Small,Business Banking,Ajman,2015-08-11,A,N,,6624000.0,11,LLC,RM-23
+CIF501011,Al Noor Hospitality LLC,SME,,BUSINESS,Restaurants & Hospitality,Small,Business Banking,Sharjah,2017-09-12,C,N,,4217000.0,8,LLC,RM-22
+CIF501012,Al Bustan Cafe & Bistro,SME,,BUSINESS,Restaurants & Hospitality,Small,Business Banking,Ajman,2022-12-13,C,N,,11320000.0,21,FZE,RM-15
+CIF501013,Blue Coast General Trading LLC,SME,,BUSINESS,General Trading,Micro,Business Banking,Abu Dhabi,2023-04-14,A,N,,2647000.0,4,LLC,RM-20
+CIF501014,Al Noor Medical Centre LLC,SME,,BUSINESS,Healthcare Services,Micro,Business Banking,Ajman,2026-08-15,A,N,,1040000.0,0,Sole Establishment,RM-17
+CIF501015,Dune Ridge Industries LLC,SME,,BUSINESS,Manufacturing,Micro,Business Banking,Ajman,2026-05-16,B,N,,1228000.0,1,Sole Establishment,RM-21
+CIF501016,Pearl Bay Civil Works LLC,SME,,BUSINESS,Construction & Contracting,Small,Business Banking,Dubai,2020-08-17,D,N,,3023000.0,5,FZ-LLC,RM-17
+CIF501017,Crescent Medical Centre LLC,SME,,BUSINESS,Healthcare Services,Micro,Business Banking,Ras Al Khaimah,2023-08-18,C,N,,1128000.0,2,LLC,RM-21
+CIF501018,Emirates Link Import & Export LLC,SME,,BUSINESS,General Trading,Micro,Business Banking,Sharjah,2022-08-19,C,N,,1988000.0,12,LLC,RM-23
+CIF501019,Marina Logistics LLC,SME,,BUSINESS,Logistics & Transport,Micro,Business Banking,Dubai,2018-05-20,B,N,,1087000.0,16,LLC,RM-24
+CIF501020,Crescent Contracting Co.,SME,,BUSINESS,Construction & Contracting,Medium,Business Banking,Dubai,2019-05-21,A,N,,20315000.0,7,LLC,RM-22
+CIF501021,Palm Crest Restaurant LLC,SME,,BUSINESS,Restaurants & Hospitality,Small,Business Banking,Abu Dhabi,2017-10-22,B,N,,15989000.0,23,LLC,RM-19
+CIF501022,Oasis Building Contracting LLC,SME,,BUSINESS,Construction & Contracting,Small,Business Banking,Dubai,2024-07-23,B,N,,2996000.0,22,LLC,RM-23
+CIF501023,Red Sea Logistics LLC,SME,,BUSINESS,Logistics & Transport,Micro,Business Banking,Ras Al Khaimah,2015-12-24,D,N,,802000.0,16,FZE,RM-19
+CIF501024,Red Sea Property Management LLC,SME,,BUSINESS,Real Estate Services,Micro,Business Banking,Sharjah,2021-07-25,B,N,,1212000.0,4,LLC,RM-16
+CIF501025,Coral Plastics Factory LLC,SME,,BUSINESS,Manufacturing,Small,Business Banking,Ajman,2020-05-26,C,N,,3428000.0,9,LLC,RM-17
+CIF501026,Silver Dune Civil Works LLC,SME,,BUSINESS,Construction & Contracting,Micro,Business Banking,Sharjah,2024-04-27,B,N,,1568000.0,16,LLC,RM-18
+CIF501027,Pearl Bay Technical Services LLC,SME,,BUSINESS,Construction & Contracting,Small,Business Banking,Dubai,2023-09-01,A,N,,2489000.0,7,FZ-LLC,RM-22
+CIF501028,Golden Sands Retail LLC,SME,,BUSINESS,Retail,Medium,Business Banking,Dubai,2016-07-02,D,N,,42370000.0,9,FZE,RM-14
+CIF501029,Pearl Bay Building Contracting LLC,SME,,BUSINESS,Construction & Contracting,Small,Business Banking,Sharjah,2021-02-03,D,N,,2579000.0,13,Sole Establishment,RM-15
+CIF501030,Marina Stores LLC,SME,,BUSINESS,Retail,Small,Business Banking,Ras Al Khaimah,2016-01-04,D,N,,7716000.0,15,FZE,RM-15
+CIF501031,Arabian Gate Contracting Co.,SME,,BUSINESS,Construction & Contracting,Small,Business Banking,Ajman,2026-07-05,B,N,,3797000.0,1,LLC,RM-22
+CIF501032,Palm Crest Contracting Co.,SME,,BUSINESS,Construction & Contracting,Small,Business Banking,Fujairah,2019-03-06,A,N,,3769000.0,11,FZE,RM-22
+CIF501033,Silver Dune Logistics LLC,SME,,BUSINESS,Logistics & Transport,Micro,Business Banking,Sharjah,2020-07-07,A,N,,2317000.0,10,Sole Establishment,RM-20
+CIF501034,Summit Hospitality LLC,SME,,BUSINESS,Restaurants & Hospitality,Micro,Business Banking,Sharjah,2022-05-08,D,N,,2324000.0,13,LLC,RM-15
+CIF501035,Oasis Hospitality LLC,SME,,BUSINESS,Restaurants & Hospitality,Micro,Business Banking,Dubai,2021-11-09,A,N,,2058000.0,11,FZE,RM-14
+CIF501036,Al Noor Industries LLC,SME,,BUSINESS,Manufacturing,Micro,Business Banking,Dubai,2021-11-10,A,N,,949000.0,6,FZ-LLC,RM-23
+CIF501037,Red Sea Import & Export LLC,SME,,BUSINESS,General Trading,Micro,Business Banking,Ajman,2016-08-11,C,N,,1725000.0,20,LLC,RM-14
+CIF501038,Emirates Link Real Estate Brokers,SME,,BUSINESS,Real Estate Services,Small,Business Banking,Ajman,2020-09-12,B,N,,6471000.0,10,LLC,RM-19
+CIF501039,Coral General Trading LLC,SME,,BUSINESS,General Trading,Medium,Business Banking,Ajman,2018-09-13,B,N,,43187000.0,20,LLC,RM-23
+CIF501040,Palm Crest Dental Clinic,SME,,BUSINESS,Healthcare Services,Small,Business Banking,Ajman,2022-12-14,C,N,,8182000.0,14,LLC,RM-22
+CIF501041,Al Noor Pharmacy LLC,SME,,BUSINESS,Healthcare Services,Small,Business Banking,Sharjah,2024-06-15,B,N,,7195000.0,14,LLC,RM-13
+CIF501042,Dune Ridge Cargo Services LLC,SME,,BUSINESS,Logistics & Transport,Small,Business Banking,Umm Al Quwain,2020-05-16,C,N,,5500000.0,5,FZE,RM-21
+CIF501043,Al Noor Industries LLC,SME,,BUSINESS,Manufacturing,Micro,Business Banking,Sharjah,2021-11-17,B,N,,1828000.0,3,Sole Establishment,RM-13
+CIF501044,Desert Rose Electronics LLC,SME,,BUSINESS,Retail,Micro,Business Banking,Sharjah,2026-05-18,C,N,,1107000.0,0,LLC,RM-18
+CIF501045,Palm Crest Restaurant LLC,SME,,BUSINESS,Restaurants & Hospitality,Micro,Business Banking,Sharjah,2023-04-19,B,N,,1494000.0,23,Sole Establishment,RM-17
+CIF501046,Red Sea Logistics LLC,SME,,BUSINESS,Logistics & Transport,Small,Business Banking,Ajman,2026-06-20,A,N,,2977000.0,1,LLC,RM-23
+CIF501047,Arabian Gate Cafe & Bistro,SME,,BUSINESS,Restaurants & Hospitality,Small,Business Banking,Sharjah,2017-12-21,B,N,,2677000.0,11,LLC,RM-19
+CIF501048,Horizon Hospitality LLC,SME,,BUSINESS,Restaurants & Hospitality,Micro,Business Banking,Abu Dhabi,2023-01-22,C,N,,1983000.0,14,LLC,RM-20
+CIF501049,Dune Ridge Electronics LLC,SME,,BUSINESS,Retail,Small,Business Banking,Sharjah,2026-07-23,D,N,,12375000.0,0,LLC,RM-22
+CIF501050,Blue Coast Hospitality LLC,SME,,BUSINESS,Restaurants & Hospitality,Small,Business Banking,Ajman,2018-03-24,B,N,,5404000.0,14,FZE,RM-15
+CIF501051,Desert Rose Transport LLC,SME,,BUSINESS,Logistics & Transport,Micro,Business Banking,Ajman,2026-05-25,A,N,,771000.0,1,LLC,RM-14
+CIF501052,Summit Cargo Services LLC,SME,,BUSINESS,Logistics & Transport,Small,Business Banking,Dubai,2026-05-26,B,N,,12800000.0,0,FZ-LLC,RM-16
+CIF501053,Horizon Cafe & Bistro,SME,,BUSINESS,Restaurants & Hospitality,Micro,Business Banking,Ajman,2016-06-27,E,N,,1781000.0,9,LLC,RM-18
+CIF501054,Arabian Gate Logistics LLC,SME,,BUSINESS,Logistics & Transport,Micro,Business Banking,Ajman,2015-10-01,D,N,,750000.0,20,LLC,RM-13
+CIF501055,Oasis Restaurant LLC,SME,,BUSINESS,Restaurants & Hospitality,Micro,Business Banking,Ras Al Khaimah,2018-10-02,B,N,,727000.0,9,LLC,RM-24
+CIF501056,Red Sea Import & Export LLC,SME,,BUSINESS,General Trading,Micro,Business Banking,Sharjah,2017-09-03,C,N,,611000.0,18,Sole Establishment,RM-16
+CIF501057,Summit Plastics Factory LLC,SME,,BUSINESS,Manufacturing,Micro,Business Banking,Dubai,2026-06-04,D,N,,2379000.0,0,FZE,RM-21
+CIF501058,Oasis Fashion LLC,SME,,BUSINESS,Retail,Micro,Business Banking,Sharjah,2024-05-05,C,N,,2243000.0,24,LLC,RM-17
+CIF501059,Pearl Bay Transport LLC,SME,,BUSINESS,Logistics & Transport,Micro,Business Banking,Sharjah,2024-01-06,A,N,,1316000.0,22,LLC,RM-18
+CIF501060,Pearl Bay Import & Export LLC,SME,,BUSINESS,General Trading,Micro,Business Banking,Dubai,2021-11-07,B,N,,811000.0,4,LLC,RM-13
+CIF501061,Blue Coast Property Management LLC,SME,,BUSINESS,Real Estate Services,Small,Business Banking,Ajman,2021-11-08,B,N,,9111000.0,21,FZ-LLC,RM-22
+CIF501062,Horizon Building Contracting LLC,SME,,BUSINESS,Construction & Contracting,Small,Business Banking,Sharjah,2024-08-09,A,N,,3522000.0,12,LLC,RM-22
+CIF501063,Emirates Link Cafe & Bistro,SME,,BUSINESS,Restaurants & Hospitality,Small,Business Banking,Ras Al Khaimah,2018-12-10,C,N,,8345000.0,22,FZE,RM-23
+CIF501064,Al Noor Logistics LLC,SME,,BUSINESS,Logistics & Transport,Small,Business Banking,Sharjah,2024-07-11,C,N,,4811000.0,8,LLC,RM-21
+CIF501065,Falcon Medical Centre LLC,SME,,BUSINESS,Healthcare Services,Micro,Business Banking,Dubai,2020-03-12,A,N,,1293000.0,21,FZE,RM-20
+CIF501066,Silver Dune Hospitality LLC,SME,,BUSINESS,Restaurants & Hospitality,Small,Business Banking,Dubai,2016-03-13,B,N,,4293000.0,9,Sole Establishment,RM-20
+CIF501067,Blue Coast Cargo Services LLC,SME,,BUSINESS,Logistics & Transport,Micro,Business Banking,Ras Al Khaimah,2018-01-14,B,N,,1092000.0,13,LLC,RM-24
+CIF501068,Al Noor Restaurant LLC,SME,,BUSINESS,Restaurants & Hospitality,Micro,Business Banking,Ras Al Khaimah,2023-11-15,B,N,,739000.0,10,FZE,RM-19
+CIF501069,Crescent Hospitality LLC,SME,,BUSINESS,Restaurants & Hospitality,Micro,Business Banking,Sharjah,2015-05-16,A,N,,966000.0,12,LLC,RM-13
+CIF501070,Al Noor General Trading LLC,SME,,BUSINESS,General Trading,Micro,Business Banking,Umm Al Quwain,2020-10-17,B,N,,2221000.0,16,LLC,RM-16
+CIF501071,Coral Hospitality LLC,SME,,BUSINESS,Restaurants & Hospitality,Small,Business Banking,Ajman,2021-09-18,A,N,,4261000.0,6,LLC,RM-18
+CIF501072,Summit Trading Co. LLC,SME,,BUSINESS,General Trading,Micro,Business Banking,Sharjah,2021-03-19,A,N,,647000.0,7,LLC,RM-21
+CIF501073,Marina Dental Clinic,SME,,BUSINESS,Healthcare Services,Small,Business Banking,Ajman,2023-03-20,C,N,,13581000.0,17,LLC,RM-15
+CIF501074,Gulf Star Building Contracting LLC,SME,,BUSINESS,Construction & Contracting,Small,Business Banking,Ras Al Khaimah,2017-08-21,C,N,,4035000.0,8,LLC,RM-20
+CIF501075,Arabian Gate Import & Export LLC,SME,,BUSINESS,General Trading,Micro,Business Banking,Ras Al Khaimah,2020-12-22,A,N,,829000.0,8,FZE,RM-15
+CIF501076,Coral Electronics LLC,SME,,BUSINESS,Retail,Small,Business Banking,Ras Al Khaimah,2016-01-23,C,N,,2853000.0,15,LLC,RM-19
+CIF501077,Blue Coast Real Estate Brokers,SME,,BUSINESS,Real Estate Services,Micro,Business Banking,Sharjah,2017-10-24,D,N,,831000.0,24,LLC,RM-22
+CIF501078,Silver Dune Hospitality LLC,SME,,BUSINESS,Restaurants & Hospitality,Micro,Business Banking,Sharjah,2016-05-25,C,N,,1624000.0,9,LLC,RM-24
+CIF501079,Oasis General Trading LLC,SME,,BUSINESS,General Trading,Medium,Business Banking,Sharjah,2016-02-26,C,N,,19972000.0,10,LLC,RM-22
+CIF501080,Al Noor Import & Export LLC,SME,,BUSINESS,General Trading,Micro,Business Banking,Ajman,2019-08-27,B,N,,870000.0,22,LLC,RM-15
+CIF501081,Coral Hospitality LLC,SME,,BUSINESS,Restaurants & Hospitality,Small,Business Banking,Sharjah,2019-08-01,B,N,,7180000.0,6,LLC,RM-13
+CIF501082,Al Noor Transport LLC,SME,,BUSINESS,Logistics & Transport,Medium,Business Banking,Dubai,2020-03-02,B,N,,17778000.0,8,LLC,RM-21
+CIF501083,Al Noor Dental Clinic,SME,,BUSINESS,Healthcare Services,Micro,Business Banking,Dubai,2017-07-03,B,N,,1917000.0,8,LLC,RM-20
+CIF501084,Golden Sands Medical Centre LLC,SME,,BUSINESS,Healthcare Services,Small,Business Banking,Sharjah,2015-01-04,A,N,,5214000.0,18,LLC,RM-21
+CIF501085,Arabian Gate Industries LLC,SME,,BUSINESS,Manufacturing,Small,Business Banking,Ras Al Khaimah,2024-08-05,C,N,,9910000.0,8,LLC,RM-23
+CIF501086,Red Sea Import & Export LLC,SME,,BUSINESS,General Trading,Small,Business Banking,Ajman,2017-08-06,B,N,,3232000.0,8,LLC,RM-21
+CIF501087,Silver Dune General Trading LLC,SME,,BUSINESS,General Trading,Micro,Business Banking,Ajman,2026-06-07,C,N,,1523000.0,0,FZE,RM-19
+CIF501088,Red Sea Pharmacy LLC,SME,,BUSINESS,Healthcare Services,Small,Business Banking,Ajman,2019-01-08,A,N,,5638000.0,6,LLC,RM-14
+CIF501089,Marina Fashion LLC,SME,,BUSINESS,Retail,Small,Business Banking,Fujairah,2020-05-09,A,N,,11431000.0,14,FZE,RM-22
+CIF501090,Emirates Link Real Estate Brokers,SME,,BUSINESS,Real Estate Services,Micro,Business Banking,Ajman,2020-02-10,B,N,,1962000.0,17,LLC,RM-18
+CIF501091,Gulf Star Retail LLC,SME,,BUSINESS,Retail,Micro,Business Banking,Dubai,2015-11-11,D,N,,1930000.0,9,FZE,RM-19
+CIF501092,Arabian Gate Property Management LLC,SME,,BUSINESS,Real Estate Services,Micro,Business Banking,Dubai,2023-06-12,B,N,,2712000.0,5,LLC,RM-21
+CIF501093,Coral Contracting Co.,SME,,BUSINESS,Construction & Contracting,Micro,Business Banking,Sharjah,2018-07-13,B,N,,862000.0,21,LLC,RM-20
+CIF501094,Horizon General Trading LLC,SME,,BUSINESS,General Trading,Small,Business Banking,Ajman,2015-03-14,A,N,,4171000.0,15,Sole Establishment,RM-17
+CIF501095,Blue Coast Import & Export LLC,SME,,BUSINESS,General Trading,Small,Business Banking,Sharjah,2022-04-15,A,N,,10978000.0,21,LLC,RM-19
+CIF501096,Crescent Transport LLC,SME,,BUSINESS,Logistics & Transport,Small,Business Banking,Umm Al Quwain,2023-10-16,C,N,,4954000.0,6,FZE,RM-24
+CIF501097,Emirates Link Stores LLC,SME,,BUSINESS,Retail,Micro,Business Banking,Sharjah,2024-08-17,A,N,,1069000.0,2,LLC,RM-16
+CIF501098,Gulf Star Hospitality LLC,SME,,BUSINESS,Restaurants & Hospitality,Small,Business Banking,Umm Al Quwain,2016-06-18,D,N,,4267000.0,23,LLC,RM-16
+CIF501099,Marina IT Solutions FZE,SME,,BUSINESS,IT & Professional Services,Micro,Business Banking,Umm Al Quwain,2016-04-19,B,N,,2380000.0,9,LLC,RM-22
+CIF501100,Gulf Star Consultancy FZ-LLC,SME,,BUSINESS,IT & Professional Services,Micro,Business Banking,Dubai,2021-11-01,B,N,,914000.0,24,LLC,RM-17
+CIF501101,Marina Contracting Co.,SME,,BUSINESS,Construction & Contracting,Micro,Business Banking,Sharjah,2019-02-02,D,N,,807000.0,6,Sole Establishment,RM-24
+CIF501102,Golden Sands General Trading LLC,SME,,BUSINESS,General Trading,Small,Business Banking,Dubai,2021-07-03,C,N,,2765000.0,4,Sole Establishment,RM-16
+CIF501103,Al Noor Technical Services LLC,SME,,BUSINESS,Construction & Contracting,Medium,Business Banking,Dubai,2023-02-04,C,N,,27882000.0,17,LLC,RM-13
+CIF501104,Al Noor General Trading LLC,SME,,BUSINESS,General Trading,Micro,Business Banking,Abu Dhabi,2018-03-05,E,N,,2244000.0,7,LLC,RM-15
+CIF501105,Golden Sands Import & Export LLC,SME,,BUSINESS,General Trading,Micro,Business Banking,Dubai,2021-03-06,C,N,,2337000.0,10,Sole Establishment,RM-16
+CIF501106,Gulf Star Restaurant LLC,SME,,BUSINESS,Restaurants & Hospitality,Micro,Business Banking,Ras Al Khaimah,2019-10-07,C,N,,1358000.0,13,FZE,RM-15
+CIF501107,Palm Crest Plastics Factory LLC,SME,,BUSINESS,Manufacturing,Small,Business Banking,Ajman,2022-08-08,B,N,,12687000.0,5,LLC,RM-19
+CIF501108,Red Sea Cargo Services LLC,SME,,BUSINESS,Logistics & Transport,Micro,Business Banking,Ras Al Khaimah,2016-05-09,B,N,,2642000.0,10,LLC,RM-23
+CIF501109,Falcon Plastics Factory LLC,SME,,BUSINESS,Manufacturing,Small,Business Banking,Ras Al Khaimah,2022-08-10,A,N,,8872000.0,21,FZE,RM-24
+CIF501110,Palm Crest Real Estate Brokers,SME,,BUSINESS,Real Estate Services,Micro,Business Banking,Ajman,2018-12-11,A,N,,721000.0,10,LLC,RM-22
+CIF501111,Crescent Hospitality LLC,SME,,BUSINESS,Restaurants & Hospitality,Micro,Business Banking,Dubai,2022-10-12,C,N,,2549000.0,14,Sole Establishment,RM-13
+CIF501112,Crescent Electronics LLC,SME,,BUSINESS,Retail,Micro,Business Banking,Ras Al Khaimah,2024-04-13,B,N,,1347000.0,21,FZE,RM-24
+CIF501113,Silver Dune Real Estate Brokers,SME,,BUSINESS,Real Estate Services,Micro,Business Banking,Ajman,2022-01-14,C,N,,2260000.0,15,Sole Establishment,RM-14
+CIF501114,Falcon Civil Works LLC,SME,,BUSINESS,Construction & Contracting,Micro,Business Banking,Dubai,2022-11-15,D,N,,2630000.0,24,LLC,RM-24
+CIF501115,Pearl Bay Technical Services LLC,SME,,BUSINESS,Construction & Contracting,Micro,Business Banking,Ajman,2023-04-16,A,N,,1668000.0,24,LLC,RM-21
+CIF501116,Pearl Bay General Trading LLC,SME,,BUSINESS,General Trading,Small,Business Banking,Ras Al Khaimah,2022-02-17,A,N,,3756000.0,6,LLC,RM-19
+CIF501117,Crescent Metal Works LLC,SME,,BUSINESS,Manufacturing,Small,Business Banking,Ajman,2020-02-18,A,N,,9543000.0,12,Sole Establishment,RM-14
+CIF501118,Red Sea Cargo Services LLC,SME,,BUSINESS,Logistics & Transport,Micro,Business Banking,Fujairah,2019-01-19,A,N,,1179000.0,20,FZE,RM-15
+CIF501119,Arabian Gate Hospitality LLC,SME,,BUSINESS,Restaurants & Hospitality,Small,Business Banking,Sharjah,2023-07-20,A,N,,2932000.0,21,LLC,RM-21
+CIF501120,Palm Crest Civil Works LLC,SME,,BUSINESS,Construction & Contracting,Micro,Business Banking,Sharjah,2016-03-21,D,N,,1252000.0,25,Sole Establishment,RM-22
+CIF501121,Pearl Bay Fashion LLC,SME,,BUSINESS,Retail,Small,Business Banking,Sharjah,2022-07-22,D,N,,7768000.0,17,Sole Establishment,RM-16
+CIF501122,Marina Restaurant LLC,SME,,BUSINESS,Restaurants & Hospitality,Micro,Business Banking,Dubai,2022-09-23,A,N,,966000.0,4,FZ-LLC,RM-13
+CIF501123,Al Bustan Contracting Co.,SME,,BUSINESS,Construction & Contracting,Micro,Business Banking,Sharjah,2026-08-24,B,N,,877000.0,0,LLC,RM-22
+CIF501124,Blue Coast Fashion LLC,SME,,BUSINESS,Retail,Micro,Business Banking,Dubai,2022-12-25,A,N,,810000.0,6,LLC,RM-20
+CIF501125,Crescent Building Contracting LLC,SME,,BUSINESS,Construction & Contracting,Micro,Business Banking,Ras Al Khaimah,2026-05-26,C,N,,1915000.0,1,Sole Establishment,RM-13
+CIF501126,Crescent Contracting Co.,SME,,BUSINESS,Construction & Contracting,Micro,Business Banking,Sharjah,2023-04-27,B,N,,2151000.0,6,LLC,RM-23
+CIF501127,Gulf Star Logistics LLC,SME,,BUSINESS,Logistics & Transport,Micro,Business Banking,Ras Al Khaimah,2023-03-01,A,N,,759000.0,5,LLC,RM-16
+CIF501128,Silver Dune Stores LLC,SME,,BUSINESS,Retail,Medium,Business Banking,Dubai,2021-10-02,D,N,,24043000.0,22,LLC,RM-17
+CIF501129,Golden Sands Transport LLC,SME,,BUSINESS,Logistics & Transport,Small,Business Banking,Sharjah,2016-08-03,A,N,,2961000.0,9,LLC,RM-24
+CIF501130,Desert Rose Consultancy FZ-LLC,SME,,BUSINESS,IT & Professional Services,Small,Business Banking,Umm Al Quwain,2023-06-04,C,N,,2952000.0,9,FZE,RM-20
+CIF501131,Summit Cargo Services LLC,SME,,BUSINESS,Logistics & Transport,Medium,Business Banking,Umm Al Quwain,2026-06-05,C,N,,17600000.0,0,LLC,RM-24
+CIF501132,Coral Metal Works LLC,SME,,BUSINESS,Manufacturing,Medium,Business Banking,Umm Al Quwain,2024-01-06,E,N,,34302000.0,2,FZ-LLC,RM-14
+CIF501133,Gulf Star Restaurant LLC,SME,,BUSINESS,Restaurants & Hospitality,Micro,Business Banking,Dubai,2024-08-07,C,N,,1282000.0,2,Sole Establishment,RM-17
+CIF501134,Emirates Link Cafe & Bistro,SME,,BUSINESS,Restaurants & Hospitality,Micro,Business Banking,Sharjah,2016-10-08,C,N,,2628000.0,8,LLC,RM-13
+CIF501135,Oasis Civil Works LLC,SME,,BUSINESS,Construction & Contracting,Micro,Business Banking,Ajman,2018-12-09,B,N,,1175000.0,21,LLC,RM-18
+CIF501136,Silver Dune Consultancy FZ-LLC,SME,,BUSINESS,IT & Professional Services,Small,Business Banking,Ras Al Khaimah,2021-09-10,B,N,,6217000.0,19,LLC,RM-15
+CIF501137,Falcon Stores LLC,SME,,BUSINESS,Retail,Micro,Business Banking,Ras Al Khaimah,2024-05-11,C,N,,1001000.0,18,FZ-LLC,RM-13
+CIF501138,Coral Building Contracting LLC,SME,,BUSINESS,Construction & Contracting,Micro,Business Banking,Ajman,2024-04-12,A,N,,1350000.0,23,LLC,RM-13
+CIF501139,Al Bustan Cafe & Bistro,SME,,BUSINESS,Restaurants & Hospitality,Micro,Business Banking,Ajman,2026-08-13,A,N,,1006000.0,2,Sole Establishment,RM-18
+CIF501140,Crescent Import & Export LLC,SME,,BUSINESS,General Trading,Micro,Business Banking,Dubai,2023-09-14,B,N,,2476000.0,22,LLC,RM-21
+CIF501141,Horizon Plastics Factory LLC,SME,,BUSINESS,Manufacturing,Small,Business Banking,Sharjah,2022-10-15,B,N,,9046000.0,14,Sole Establishment,RM-24
+CIF501142,Gulf Star Logistics LLC,SME,,BUSINESS,Logistics & Transport,Micro,Business Banking,Dubai,2022-11-16,D,N,,854000.0,8,LLC,RM-22
+CIF501143,Golden Sands Digital Services FZE,SME,,BUSINESS,IT & Professional Services,Micro,Business Banking,Sharjah,2021-07-17,B,N,,2411000.0,16,FZE,RM-22
+CIF501144,Horizon Import & Export LLC,SME,,BUSINESS,General Trading,Micro,Business Banking,Fujairah,2019-10-18,C,N,,603000.0,5,LLC,RM-17
+CIF501145,Emirates Link IT Solutions FZE,SME,,BUSINESS,IT & Professional Services,Micro,Business Banking,Sharjah,2019-02-19,B,N,,1056000.0,19,FZE,RM-22
+CIF501146,Al Noor Industries LLC,SME,,BUSINESS,Manufacturing,Micro,Business Banking,Abu Dhabi,2015-10-20,D,N,,1872000.0,9,LLC,RM-19
+CIF501147,Marina Restaurant LLC,SME,,BUSINESS,Restaurants & Hospitality,Medium,Business Banking,Dubai,2016-10-21,B,N,,48104000.0,12,FZ-LLC,RM-23
+CIF501148,Crescent Technical Services LLC,SME,,BUSINESS,Construction & Contracting,Small,Business Banking,Ajman,2016-07-22,C,N,,15599000.0,9,LLC,RM-15
+CIF501149,Red Sea Restaurant LLC,SME,,BUSINESS,Restaurants & Hospitality,Medium,Business Banking,Sharjah,2024-07-23,B,N,,18841000.0,19,LLC,RM-19
+CIF501150,Golden Sands Real Estate Brokers,SME,,BUSINESS,Real Estate Services,Micro,Business Banking,Dubai,2021-10-24,C,N,,2143000.0,3,LLC,RM-19
+CIF501151,Falcon Pharmacy LLC,SME,,BUSINESS,Healthcare Services,Micro,Business Banking,Umm Al Quwain,2024-06-25,B,N,,2426000.0,6,LLC,RM-19
+CIF501152,Arabian Gate Restaurant LLC,SME,,BUSINESS,Restaurants & Hospitality,Micro,Business Banking,Dubai,2016-04-26,C,N,,1025000.0,9,Sole Establishment,RM-13
+CIF501153,Pearl Bay Retail LLC,SME,,BUSINESS,Retail,Small,Business Banking,Sharjah,2018-12-27,E,N,,7287000.0,6,LLC,RM-15
+CIF501154,Falcon Fashion LLC,SME,,BUSINESS,Retail,Small,Business Banking,Ras Al Khaimah,2024-06-01,B,N,,5458000.0,9,LLC,RM-22
+CIF501155,Dune Ridge Hospitality LLC,SME,,BUSINESS,Restaurants & Hospitality,Small,Business Banking,Sharjah,2023-10-02,B,N,,7924000.0,17,LLC,RM-18
+CIF501156,Al Bustan Import & Export LLC,SME,,BUSINESS,General Trading,Micro,Business Banking,Dubai,2026-05-03,D,N,,2466000.0,1,LLC,RM-17
+CIF501157,Al Bustan Digital Services FZE,SME,,BUSINESS,IT & Professional Services,Micro,Business Banking,Sharjah,2016-10-04,B,N,,810000.0,23,LLC,RM-22
+CIF501158,Arabian Gate General Trading LLC,SME,,BUSINESS,General Trading,Micro,Business Banking,Fujairah,2021-01-05,B,N,,2218000.0,9,LLC,RM-13
+CIF501159,Blue Coast Trading Co. LLC,SME,,BUSINESS,General Trading,Micro,Business Banking,Ras Al Khaimah,2024-02-06,E,N,,1416000.0,24,LLC,RM-19
+CIF501160,Al Bustan Contracting Co.,SME,,BUSINESS,Construction & Contracting,Micro,Business Banking,Ras Al Khaimah,2026-07-07,A,N,,2209000.0,2,LLC,RM-19
+CIF501161,Pearl Bay Building Contracting LLC,SME,,BUSINESS,Construction & Contracting,Small,Business Banking,Sharjah,2019-08-08,C,N,,6087000.0,6,LLC,RM-13
+CIF501162,Coral Restaurant LLC,SME,,BUSINESS,Restaurants & Hospitality,Micro,Business Banking,Dubai,2018-08-09,C,N,,1172000.0,18,Sole Establishment,RM-21
+CIF501163,Summit Restaurant LLC,SME,,BUSINESS,Restaurants & Hospitality,Small,Business Banking,Ras Al Khaimah,2015-03-10,A,N,,7884000.0,12,Sole Establishment,RM-16
+CIF501164,Desert Rose Stores LLC,SME,,BUSINESS,Retail,Micro,Business Banking,Dubai,2024-05-11,D,N,,697000.0,18,Sole Establishment,RM-17
+CIF501165,Coral Technical Services LLC,SME,,BUSINESS,Construction & Contracting,Small,Business Banking,Sharjah,2023-02-12,A,N,,7344000.0,3,FZ-LLC,RM-19
+CIF501166,Dune Ridge Building Contracting LLC,SME,,BUSINESS,Construction & Contracting,Micro,Business Banking,Sharjah,2026-08-13,B,N,,2121000.0,0,FZ-LLC,RM-21
+CIF501167,Blue Coast Restaurant LLC,SME,,BUSINESS,Restaurants & Hospitality,Micro,Business Banking,Sharjah,2020-12-14,B,N,,1695000.0,14,Sole Establishment,RM-15
+CIF501168,Silver Dune Electronics LLC,SME,,BUSINESS,Retail,Small,Business Banking,Sharjah,2024-07-15,D,N,,7884000.0,4,FZE,RM-22
+CIF501169,Golden Sands General Trading LLC,SME,,BUSINESS,General Trading,Micro,Business Banking,Dubai,2026-06-16,C,N,,1288000.0,2,LLC,RM-17
+CIF501170,Golden Sands Import & Export LLC,SME,,BUSINESS,General Trading,Micro,Business Banking,Ajman,2019-11-17,B,N,,2209000.0,18,Sole Establishment,RM-20
+CIF501171,Dune Ridge Logistics LLC,SME,,BUSINESS,Logistics & Transport,Micro,Business Banking,Fujairah,2024-08-18,B,N,,1950000.0,17,LLC,RM-13
+CIF501172,Marina General Trading LLC,SME,,BUSINESS,General Trading,Small,Business Banking,Dubai,2023-11-19,D,N,,5865000.0,17,FZ-LLC,RM-20
+CIF501173,Falcon Cargo Services LLC,SME,,BUSINESS,Logistics & Transport,Medium,Business Banking,Fujairah,2021-09-20,B,N,,44875000.0,15,Sole Establishment,RM-16
+CIF501174,Desert Rose Import & Export LLC,SME,,BUSINESS,General Trading,Micro,Business Banking,Dubai,2014-10-21,C,N,,708000.0,19,FZ-LLC,RM-15
+CIF501175,Silver Dune Dental Clinic,SME,,BUSINESS,Healthcare Services,Micro,Business Banking,Fujairah,2020-07-22,A,N,,759000.0,5,LLC,RM-24
+CIF501176,Horizon Cargo Services LLC,SME,,BUSINESS,Logistics & Transport,Micro,Business Banking,Sharjah,2022-05-23,B,N,,812000.0,18,FZ-LLC,RM-20
+CIF501177,Oasis Fashion LLC,SME,,BUSINESS,Retail,Small,Business Banking,Dubai,2023-08-24,A,N,,11840000.0,22,LLC,RM-15
+CIF501178,Palm Crest Fashion LLC,SME,,BUSINESS,Retail,Small,Business Banking,Ajman,2020-02-25,A,N,,6519000.0,11,LLC,RM-24
+CIF501179,Emirates Link Fashion LLC,SME,,BUSINESS,Retail,Micro,Business Banking,Sharjah,2021-11-26,A,N,,2315000.0,3,FZE,RM-24
+CIF501180,Al Bustan Plastics Factory LLC,SME,,BUSINESS,Manufacturing,Medium,Business Banking,Sharjah,2015-05-27,B,N,,35241000.0,13,LLC,RM-24
+CIF501181,Al Noor Medical Centre LLC,SME,,BUSINESS,Healthcare Services,Micro,Business Banking,Sharjah,2014-10-01,C,N,,651000.0,10,LLC,RM-17
+CIF501182,Golden Sands Stores LLC,SME,,BUSINESS,Retail,Micro,Business Banking,Sharjah,2018-10-02,C,N,,2416000.0,13,LLC,RM-20
+CIF501183,Red Sea Stores LLC,SME,,BUSINESS,Retail,Micro,Business Banking,Sharjah,2017-07-03,C,N,,1035000.0,17,LLC,RM-19
+CIF501184,Desert Rose Dental Clinic,SME,,BUSINESS,Healthcare Services,Micro,Business Banking,Umm Al Quwain,2019-02-04,D,N,,976000.0,24,FZE,RM-13
+CIF501185,Gulf Star Retail LLC,SME,,BUSINESS,Retail,Micro,Business Banking,Sharjah,2018-02-05,D,N,,1674000.0,24,Sole Establishment,RM-21
+CIF501186,Summit Civil Works LLC,SME,,BUSINESS,Construction & Contracting,Micro,Business Banking,Ajman,2021-07-06,C,N,,2339000.0,21,LLC,RM-16
+CIF501187,Red Sea Cargo Services LLC,SME,,BUSINESS,Logistics & Transport,Micro,Business Banking,Dubai,2022-07-07,C,N,,829000.0,17,LLC,RM-24
+CIF501188,Emirates Link Technical Services LLC,SME,,BUSINESS,Construction & Contracting,Small,Business Banking,Sharjah,2026-05-08,A,N,,14384000.0,2,LLC,RM-19
+CIF501189,Palm Crest Contracting Co.,SME,,BUSINESS,Construction & Contracting,Micro,Business Banking,Sharjah,2014-12-09,B,N,,1850000.0,10,LLC,RM-20
+CIF501190,Desert Rose Trading Co. LLC,SME,,BUSINESS,General Trading,Micro,Business Banking,Ajman,2023-01-10,C,N,,2462000.0,9,LLC,RM-22
+CIF501191,Falcon Transport LLC,SME,,BUSINESS,Logistics & Transport,Small,Business Banking,Dubai,2017-04-11,D,N,,10628000.0,20,FZE,RM-16
+CIF501192,Horizon Import & Export LLC,SME,,BUSINESS,General Trading,Small,Business Banking,Dubai,2018-06-12,E,N,,13206000.0,14,LLC,RM-19
+CIF501193,Coral Technical Services LLC,SME,,BUSINESS,Construction & Contracting,Micro,Business Banking,Sharjah,2026-07-13,C,N,,794000.0,1,LLC,RM-15
+CIF501194,Crescent Stores LLC,SME,,BUSINESS,Retail,Micro,Business Banking,Ras Al Khaimah,2015-09-14,C,N,,1220000.0,10,LLC,RM-13
+CIF501195,Al Noor Industries LLC,SME,,BUSINESS,Manufacturing,Small,Business Banking,Sharjah,2026-05-15,C,N,,11926000.0,1,LLC,RM-19
+CIF501196,Arabian Gate Technical Services LLC,SME,,BUSINESS,Construction & Contracting,Micro,Business Banking,Sharjah,2015-01-16,B,N,,706000.0,13,Sole Establishment,RM-20
+CIF501197,Crescent Import & Export LLC,SME,,BUSINESS,General Trading,Micro,Business Banking,Dubai,2022-08-17,A,N,,1520000.0,22,FZE,RM-20
+CIF501198,Marina Real Estate Brokers,SME,,BUSINESS,Real Estate Services,Micro,Business Banking,Ajman,2014-10-18,A,N,,1088000.0,20,LLC,RM-19
+CIF501199,Arabian Gate General Trading LLC,SME,,BUSINESS,General Trading,Small,Business Banking,Sharjah,2021-11-19,A,N,,13879000.0,10,LLC,RM-21
+CIF501200,Falcon Technical Services LLC,SME,,BUSINESS,Construction & Contracting,Micro,Business Banking,Ras Al Khaimah,2016-06-01,B,N,,736000.0,9,Sole Establishment,RM-14

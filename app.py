@@ -14,17 +14,28 @@ import altair as alt
 import pandas as pd
 import streamlit as st
 
-from sentinel import (ingest, insights, llm, metrics, ml, scoring, store,
-                      correlation, interventions as interv, priority, rbi)
+from sentinel import (correlation, forecast, ingest, insights, interventions as interv, llm,
+                      metrics, ml, priority, rbi, scoring, store, trends)
 
 ROOT = Path(__file__).parent
-SOURCES = {"Sample portfolio (clean)": ROOT / "data/sample/csv",
-           "Sample portfolio (dirty, for validation)": ROOT / "data/dirty/csv"}
+# Bundled portfolios: label -> (folder of CSVs, ground-truth labels or None).
+SOURCES = {
+    "Synthetic Gulf Bank · 600 customers (clean)":
+        (ROOT / "data/sample/csv", ROOT / "data/_ground_truth/customer_labels.csv"),
+    "Synthetic Gulf Bank · dirty (validation test)":
+        (ROOT / "data/dirty/csv", None),
+    "Northern Emirates Commercial Bank · 1,200 customers, SME-heavy (clean)":
+        (ROOT / "data/northern_sme/sample/csv",
+         ROOT / "data/northern_sme/_ground_truth/customer_labels.csv"),
+    "Northern Emirates Commercial Bank · dirty (validation test)":
+        (ROOT / "data/northern_sme/dirty/csv", None),
+}
+SOURCES = {k: v for k, v in SOURCES.items() if v[0].exists()}
 RULES_PATH = ROOT / "data/sample/rules/risk_signal_definitions.json"
-TRUTH_PATH = ROOT / "data/_ground_truth/customer_labels.csv"
 TIER_COLORS = {"Green": "#2e7d32", "Watch": "#f9a825", "Amber": "#ef6c00", "Red": "#c62828"}
 TIERS = list(TIER_COLORS)
-PAGES = ["Upload & Validate", "Portfolio Dashboard", "Watchlist", "Customer",
+SMA_COLORS = ["#2e7d32", "#f9a825", "#ef6c00", "#c62828", "#4a148c"]
+PAGES = ["Home", "Upload & Validate", "Portfolio Dashboard", "Watchlist", "Customer",
          "Investigation", "Review", "Rules", "RBI Reporting", "AI Assistant"]
 
 st.set_page_config(page_title="Sentinel EWS", page_icon="🛡️", layout="wide")
@@ -50,8 +61,38 @@ def get_roll(data_key: str, as_of: str, _t):
     return insights.roll_rates(_t, as_of)
 
 
+@st.cache_resource(show_spinner="Training delinquency forecast (point-in-time, ~5 s)…")
+def get_forecast(data_key: str, params_json: str, _t):
+    """Forecast models + validation, or None if LightGBM is unavailable / data too thin."""
+    p = json.loads(params_json)
+    try:
+        return forecast.train(forecast.build_panel(_t, p, p["as_of_date"]))
+    except Exception:  # noqa: BLE001 - forecasting is optional; the rest of the app still works
+        return None
+
+
+@st.cache_data(show_spinner=False)
+def get_predictions(data_key: str, params_json: str, _t, _m):
+    models = get_forecast(data_key, params_json, _t)
+    if models is None:
+        return None
+    pred = forecast.predict(models, _m, _t["customers"], _m.current_dpd)
+    pred["forecast_drivers"] = forecast.drivers(models, _m, _t["customers"]).map(", ".join)
+    return pred
+
+
 def rules_key(rules) -> str:
     return hashlib.md5(json.dumps(rules, sort_keys=True).encode()).hexdigest()[:8]
+
+
+@st.cache_data(show_spinner="Scoring the last 12 months…")
+def get_history(data_key: str, rkey: str, as_of: str, _t, _rules):
+    return trends.compute_history(_t, _rules, as_of, months_back=12, step_months=3)
+
+
+@st.cache_data(show_spinner="Building RBI EWS report…")
+def get_report(data_key: str, rkey: str, as_of: str, _t, _view, _rules):
+    return rbi.generate_report(_t, _view, as_of, _rules)
 
 
 def build_view(t, rules, data_key):
@@ -80,6 +121,7 @@ def build_view(t, rules, data_key):
     v["dpd_bucket"] = insights.bucket(v.current_dpd)
     v["trajectory"] = scoring.trajectory(now, prev)
     v["prev_score"] = prev.risk_score
+    v["prev_tier"] = prev.tier
     v["roll_prob"] = roll.reindex(v.index).fillna(0)
     v["recovery_profile"] = insights.recovery_profiles(t, as_of).reindex(v.index).fillna("Clean")
     v["exposure_at_risk"] = v.outstanding * v.roll_prob
@@ -93,7 +135,11 @@ def build_view(t, rules, data_key):
         v["ml_prob"] = ml.predict_proba(ml_model, m_now, ml_features).reindex(v.index)
     else:
         v["ml_prob"] = pd.Series(dtype=float, index=v.index)
-    # Phase 2: correlation, priority, recommendations, SMA
+    # Delinquency forecast: P(30+ DPD) next month / next quarter for customers below 30 DPD.
+    pred = get_predictions(data_key, pj, t, m_now)
+    for col in ("p_1m", "p_3m", "forecast_drivers"):
+        v[col] = pred[col].reindex(v.index) if pred is not None else None
+    # Phase 2: cross-module correlation, composite priority, recommendations, SMA class.
     corr = correlation.detect_correlations(v)
     v["correlation_patterns"] = corr["correlation_names"]
     v["n_modules_stressed"] = corr["n_modules_stressed"]
@@ -110,9 +156,9 @@ def build_view(t, rules, data_key):
 def ensure_data():
     if "tables" not in ss:
         name = next(iter(SOURCES))
-        ss.tables, ss.issues, ss.summary = load_folder(str(SOURCES[name]))
-        ss.source = name
-        ss.data_key = name
+        ss.tables, ss.issues, ss.summary = load_folder(str(SOURCES[name][0]))
+        ss.source = ss.data_key = name
+        ss.truth = SOURCES[name][1]
     if "rules" not in ss:
         ss.rules = scoring.load_rules(RULES_PATH)
 
@@ -144,16 +190,235 @@ def tier_badge(t):
 # ======================================================================================
 # 1. Upload & Validate
 # ======================================================================================
-if page == "Upload & Validate":
+FORECAST_FLAG = 0.20  # P(30+ DPD next quarter) at which a performing customer is red-flagged
+
+
+def open_customer(cid):
+    ss.customer = cid
+    ss.page = "Customer"
+
+
+def flag_table(df, cols, key, config=None):
+    """Selectable table with an Open-customer button (used by the Home red-flag tabs)."""
+    ev = st.dataframe(df.reset_index()[cols], hide_index=True, use_container_width=True,
+                      on_select="rerun", selection_mode="single-row", key=key,
+                      column_config=config or {}, height=min(38 * (len(df) + 1) + 3, 360))
+    rows = ev.selection.rows if ev and ev.selection else []
+    if rows:
+        cid = df.index[rows[0]]
+        st.button(f"Open {cid} →", type="primary", key=f"{key}_open",
+                  on_click=open_customer, args=(cid,))
+
+
+if page == "Home":
+    st.header("Early warning briefing")
+    st.caption(f"As of {AS_OF.date()} · {ss.source} · {len(view)} customers monitored")
+    has_fc = view.p_3m.notna().any()
+    alerts_df = store.alerts()
+    alerts_df = alerts_df[alerts_df.customer_id.isin(view.index)]  # this dataset only
+    open_alerts = int(alerts_df.latest_decision.isna().sum()) if len(alerts_df) else 0
+    red = view.tier == "Red"
+    amber = view.tier == "Amber"
+    exp_1m = float(view.p_1m.sum()) if has_fc else None
+    exp_3m = float(view.p_3m.sum()) if has_fc else None
+    ear_3m = float((view.outstanding * view.p_3m.fillna(0)).sum()) if has_fc else None
+
+    k = st.columns(3)
+    k[0].metric("Red today", int(red.sum()), f"AED {view[red].outstanding.sum() / 1e6:,.1f}M",
+                delta_color="off")
+    k[1].metric("Amber today", int(amber.sum()),
+                f"AED {view[amber].outstanding.sum() / 1e6:,.1f}M", delta_color="off")
+    k[2].metric("Open alerts", open_alerts, help="Published alerts without an analyst decision")
+    k = st.columns(3)
+    k[0].metric("New 30+ DPD · 1m", f"{exp_1m:.1f}" if has_fc else "n/a",
+                help="Expected customers newly reaching 30+ DPD next month: sum of forecast "
+                     "probabilities for customers currently below 30 DPD")
+    k[1].metric("New 30+ DPD · 3m", f"{exp_3m:.1f}" if has_fc else "n/a",
+                help="Expected customers newly reaching 30+ DPD within the next quarter")
+    k[2].metric("At-risk AED · 3m", f"{ear_3m / 1e6:,.1f}M" if has_fc else "n/a",
+                help="Expected exposure at risk next quarter: Σ outstanding × P(30+ DPD "
+                     "within 3 months), AED")
+
+    # ------------------------------------------------------------------ red flags
+    likely = view[(view.current_dpd < 30) & (view.p_3m >= FORECAST_FLAG)].sort_values(
+        "p_3m", ascending=False) if has_fc else view.iloc[0:0]
+    rank = {t: i for i, t in enumerate(TIERS)}
+    escalated = view[(view.tier.map(rank) > view.prev_tier.map(rank))
+                     & view.tier.isin(["Amber", "Red"])].sort_values("risk_score",
+                                                                     ascending=False)
+    triggered = view[view.trigger != ""].sort_values("current_dpd", ascending=False)
+    clusters = insights.clusters(view, PREV_RISK)
+    emerging = clusters[clusters.emerging] if len(clusters) else clusters
+    recovering = view[view.trajectory == "Recovering"]
+
+    # ------------------------------------------------------------------ AI briefing
+    def pct(x):
+        return f"{100 * x:.0f}%"
+    facts = dict(
+        as_of=str(AS_OF.date()),
+        kpis=dict(red=int(red.sum()), amber=int(amber.sum()),
+                  expected_new_30dpd_next_month=round(exp_1m or 0, 1),
+                  expected_new_30dpd_next_quarter=round(exp_3m or 0, 1),
+                  expected_exposure_at_risk_next_quarter_m=round((ear_3m or 0) / 1e6, 1),
+                  open_alerts=open_alerts, hard_trigger_count=len(triggered),
+                  likely_to_hit_30dpd_count=len(likely), newly_escalated_count=len(escalated),
+                  emerging_segment_count=len(emerging), recovering_count=len(recovering)),
+        predicted_to_default=[dict(customer=c, p_next_month=pct(r.p_1m),
+                                   p_next_quarter=pct(r.p_3m), tier=r.tier,
+                                   current_dpd=int(r.current_dpd), drivers=r.forecast_drivers)
+                              for c, r in likely.head(5).iterrows()],
+        newly_escalated=[dict(customer=c, from_tier=r.prev_tier, to_tier=r.tier,
+                              score=int(r.risk_score)) for c, r in escalated.head(5).iterrows()],
+        hard_triggers=[dict(customer=c, trigger=r.trigger, current_dpd=int(r.current_dpd))
+                       for c, r in triggered.head(5).iterrows()],
+        emerging_segments=[dict(segment=r.segment, at_risk_rate_pct=r.at_risk_rate,
+                                portfolio_rate_pct=r.portfolio_rate, lift=r.lift)
+                           for _, r in emerging.head(3).iterrows()],
+    )
+    st.subheader("🧠 AI risk briefing")
+    model = llm.pick_model(models)
+    bkey = f"brief_{ss.data_key}_{rules_key(ss.rules)}_{model}"
+    if st.button("Generate briefing" + (f" ({model})" if model else " (template)")):
+        if model:
+            with st.spinner(f"Running {model} locally…"):
+                try:
+                    ss[bkey] = llm.briefing(facts, model)
+                except Exception as e:  # noqa: BLE001
+                    ss[bkey] = dict(text=llm.template_briefing(facts), model=None, error=str(e))
+        else:
+            ss[bkey] = dict(text=llm.template_briefing(facts), model=None)
+    out = ss.get(bkey)
+    with st.container(border=True):
+        if out and out.get("model") and out["grounded"]:
+            st.markdown(out["text"])
+            st.caption(f"Source: {out['model']} · numbers verified against the dashboard · "
+                       f"{out['prompt_tokens']} in / {out['output_tokens']} out tokens · "
+                       f"{out['seconds']} s")
+        else:
+            if out and out.get("model"):
+                st.warning(f"LLM briefing contained numbers not on the dashboard "
+                           f"{out['ungrounded_numbers']}; showing the template briefing.")
+            st.markdown(llm.template_briefing(facts))
+            st.caption("Source: deterministic template · press the button for an AI briefing"
+                       if not out else "Source: deterministic template")
+
+    # ------------------------------------------------------------------ red flag tabs
+    st.subheader("🚩 Red flags")
+    tabs = st.tabs([f"🔮 Likely to hit 30+ DPD ({len(likely)})",
+                    f"🔺 Newly escalated ({len(escalated)})",
+                    f"⛔ Hard triggers ({len(triggered)})",
+                    f"🧩 Emerging segments ({len(emerging)})",
+                    f"🔁 Recovering ({len(recovering)})"])
+    pcfg = {"p_1m": st.column_config.ProgressColumn("P(30+ DPD) 1m", min_value=0, max_value=1,
+                                                    format="percent"),
+            "p_3m": st.column_config.ProgressColumn("P(30+ DPD) 3m", min_value=0, max_value=1,
+                                                    format="percent"),
+            "outstanding": st.column_config.NumberColumn("Outstanding (AED)", format="%,.0f"),
+            "forecast_drivers": st.column_config.TextColumn("Why (model drivers)",
+                                                            width="large")}
+    with tabs[0]:
+        st.caption(f"Customers **below 30 DPD today** with ≥ {FORECAST_FLAG:.0%} forecast "
+                   "probability of reaching 30+ DPD within 3 months: act before they miss.")
+        if has_fc and len(likely):
+            flag_table(likely, ["customer_id", "customer_name", "tier", "current_dpd", "p_1m",
+                                "p_3m", "outstanding", "forecast_drivers"], "hf_likely", pcfg)
+        else:
+            st.info("No forecast available." if not has_fc else "None above the threshold.")
+    with tabs[1]:
+        st.caption("Tier moved up into Amber or Red compared with 3 months ago.")
+        flag_table(escalated, ["customer_id", "customer_name", "prev_tier", "tier",
+                               "risk_score", "top_indicators"], "hf_esc")
+    with tabs[2]:
+        st.caption("Overrides applied: 90+ DPD → Red; 30+ DPD or 2+ consecutive missed "
+                   "months → at least Amber.")
+        flag_table(triggered, ["customer_id", "customer_name", "tier", "trigger",
+                               "current_dpd", "outstanding"], "hf_trig", pcfg)
+    with tabs[3]:
+        st.caption("Segments with an Amber/Red rate significantly above the portfolio.")
+        if len(emerging):
+            st.dataframe(emerging[["segment", "customers", "at_risk", "at_risk_rate",
+                                   "portfolio_rate", "lift", "momentum_pp",
+                                   "exposure_at_risk"]], hide_index=True,
+                         use_container_width=True)
+        else:
+            st.info("No emerging segments.")
+    with tabs[4]:
+        st.caption("Were Amber/Red 3 months ago, now Green/Watch. Candidates to de-escalate.")
+        flag_table(recovering, ["customer_id", "customer_name", "prev_tier", "tier",
+                                "risk_score"], "hf_rec")
+
+    # ------------------------------------------------------------------ forecast charts
+    if has_fc:
+        st.subheader("📈 Delinquency outlook")
+        c1, c2 = st.columns(2)
+        with c1:
+            hist = forecast.history(ss.tables, AS_OF).tail(12)
+            hist["kind"] = "Actual"
+            nxt = pd.DataFrame([dict(month_end=AS_OF + pd.offsets.MonthEnd(1),
+                                     new_30plus=round(exp_1m, 1), kind="Forecast")])
+            d = pd.concat([hist, nxt])
+            st.caption("Customers newly reaching 30+ DPD per month: last 12 months and the "
+                       "next-month forecast")
+            st.altair_chart(alt.Chart(d).mark_bar().encode(
+                x=alt.X("yearmonth(month_end):O", title=None),
+                y=alt.Y("new_30plus:Q", title="Customers"),
+                color=alt.Color("kind:N", scale=alt.Scale(domain=["Actual", "Forecast"],
+                                                          range=["#90a4ae", "#ef6c00"])),
+                tooltip=["yearmonth(month_end)", "new_30plus", "kind"]),
+                use_container_width=True)
+        with c2:
+            seg = view.groupby("primary_product").agg(expected=("p_3m", "sum"),
+                                                      exposure=("outstanding", "sum"))
+            seg["exposure_at_risk"] = (view.outstanding * view.p_3m.fillna(0)).groupby(
+                view.primary_product).sum()
+            seg = seg.reset_index().sort_values("expected", ascending=False)
+            st.caption("Expected new 30+ DPD customers next quarter, by primary product")
+            st.altair_chart(alt.Chart(seg).mark_bar(color="#ef6c00").encode(
+                x=alt.X("expected:Q", title="Expected customers"),
+                y=alt.Y("primary_product:N", sort="-x", title=None),
+                tooltip=["primary_product", alt.Tooltip("expected:Q", format=".1f"),
+                         alt.Tooltip("exposure_at_risk:Q", format=",.0f")]),
+                use_container_width=True)
+        fc = get_forecast(ss.data_key, json.dumps(ss.rules["parameters"], sort_keys=True),
+                          ss.tables)
+        with st.expander("Model card: how the forecast works and how well it performed"):
+            st.markdown(
+                "- **Target:** customer reaches **30+ DPD** within 1 month / 3 months. Only "
+                "customers below 30 DPD are scored; those already 30+ are covered by roll "
+                "rates.\n- **Model:** LightGBM on the same 21 behavioural metrics as the "
+                "rules engine, recomputed **point-in-time** at each past month-end and "
+                "labelled with what happened next.\n- **Validation:** trained on earlier "
+                "months, tested on the most recent months it never saw (out-of-time).\n"
+                "- **Drivers:** SHAP values: the features pushing each customer's "
+                "probability up.\n- The forecast is **advisory**: it never changes the "
+                "rule-based score or tier.")
+            vt = pd.DataFrame({h: fc[h]["validation"] for h in fc}).T
+            vt.index = ["Next month", "Next quarter"]
+            st.dataframe(vt.rename(columns={
+                "auc": "AUC", "pr_auc": "PR-AUC", "top_decile_capture":
+                "Top-10% capture (%)", "base_rate": "Event rate (%)",
+                "predicted_events": "Predicted events (test)",
+                "actual_events": "Actual events (test)"}), use_container_width=True)
+            st.caption("AUC: probability a customer who went 30+ DPD was ranked above one who "
+                       "didn't (0.5 = random). Top-10% capture: share of actual events found "
+                       "in the 10% highest-scored customers. In back-testing the model "
+                       "under-predicted the total count (recent months saw more new "
+                       "delinquencies than the training period); use rankings first and "
+                       "treat totals as a floor.")
+
+elif page == "Upload & Validate":
     st.header("Upload & Validate")
     st.write("Load the 8 portfolio tables as CSV, Excel (one sheet per table) or JSON. "
              "Rows with errors are rejected; warnings are normalised and kept.")
     c1, c2 = st.columns([1, 1])
     with c1:
-        choice = st.selectbox("Bundled dataset", list(SOURCES))
+        names = list(SOURCES)
+        choice = st.selectbox("Bundled dataset", names,
+                              index=names.index(ss.source) if ss.source in names else 0)
         if st.button("Load bundled dataset", type="primary"):
-            ss.tables, ss.issues, ss.summary = load_folder(str(SOURCES[choice]))
+            ss.tables, ss.issues, ss.summary = load_folder(str(SOURCES[choice][0]))
             ss.source = ss.data_key = choice
+            ss.truth = SOURCES[choice][1]
             st.rerun()
     with c2:
         files = st.file_uploader("…or upload files", type=["csv", "xlsx", "json"],
@@ -164,6 +429,7 @@ if page == "Upload & Validate":
                 raw.update(ingest.read_any(f.name, f.getvalue()))
             ss.tables, ss.issues, ss.summary = ingest.validate(raw)
             ss.source = f"Upload ({len(files)} files)"
+            ss.truth = None
             ss.data_key = ss.source + hashlib.md5(b"".join(f.getvalue()[:2000] for f in files)
                                                   ).hexdigest()
             st.rerun()
@@ -252,65 +518,82 @@ elif page == "Portfolio Dashboard":
                                         text=alt.Text("pct:Q", format=".1f")),
         use_container_width=True)
 
-    # --- Phase 2: pre-delinquent vs delinquent split ---
     st.subheader("Pre-delinquent vs delinquent")
+    st.caption("Pre-delinquent customers are still paying on time but already show warning "
+               "signals — the population the EWS exists to catch.")
     pre_del = view[(view.current_dpd == 0) & view.tier.isin(["Watch", "Amber", "Red"])]
     already_del = view[view.current_dpd > 0]
     pc1, pc2 = st.columns(2)
-    pc1.metric("Pre-delinquent (DPD=0, Watch+)", f"{len(pre_del)}",
-               f"AED {pre_del.outstanding.sum() / 1e6:,.1f}M exposure")
-    pc2.metric("Already delinquent (DPD>0)", f"{len(already_del)}",
-               f"AED {already_del.outstanding.sum() / 1e6:,.1f}M exposure")
+    pc1.metric("Pre-delinquent (DPD 0, Watch+)", f"{len(pre_del)}",
+               f"AED {pre_del.outstanding.sum() / 1e6:,.1f}M exposure", delta_color="off")
+    pc2.metric("Already delinquent (DPD > 0)", f"{len(already_del)}",
+               f"AED {already_del.outstanding.sum() / 1e6:,.1f}M exposure", delta_color="off")
 
-    # --- Score movers ---
-    st.subheader("Top score movers vs 3 months ago")
-    view["score_delta"] = view.risk_score - view.prev_score
-    movers = view[view.score_delta.abs() > 0].sort_values("score_delta", ascending=False)
-    top_worse = movers.head(10).reset_index()[["customer_id", "customer_name", "risk_score",
-                                                "score_delta", "tier", "trajectory"]]
-    top_better = movers.tail(10).sort_values("score_delta").reset_index()[
-        ["customer_id", "customer_name", "risk_score", "score_delta", "tier", "trajectory"]]
+    st.subheader("Biggest score movers vs 3 months ago")
+    movers = view.assign(score_delta=view.risk_score - view.prev_score)
+    movers = movers[movers.score_delta.abs() > 0]
     mc1, mc2 = st.columns(2)
     with mc1:
         st.caption("Top 10 deteriorating")
-        if not top_worse.empty:
-            st.altair_chart(alt.Chart(top_worse).mark_bar(color="#c62828").encode(
+        worse = movers.nlargest(10, "score_delta").reset_index()
+        if len(worse):
+            st.altair_chart(alt.Chart(worse).mark_bar(color="#c62828").encode(
                 x=alt.X("score_delta:Q", title="Score change"),
-                y=alt.Y("customer_name:N", sort="-x")), use_container_width=True)
+                y=alt.Y("customer_name:N", sort="-x", title=None),
+                tooltip=["customer_id", "customer_name", "risk_score", "score_delta", "tier"]),
+                use_container_width=True)
     with mc2:
         st.caption("Top 10 improving")
-        if not top_better.empty:
-            st.altair_chart(alt.Chart(top_better).mark_bar(color="#2e7d32").encode(
+        better = movers.nsmallest(10, "score_delta").reset_index()
+        if len(better):
+            st.altair_chart(alt.Chart(better).mark_bar(color="#2e7d32").encode(
                 x=alt.X("score_delta:Q", title="Score change"),
-                y=alt.Y("customer_name:N", sort="x")), use_container_width=True)
+                y=alt.Y("customer_name:N", sort="x", title=None),
+                tooltip=["customer_id", "customer_name", "risk_score", "score_delta", "tier"]),
+                use_container_width=True)
 
-    # --- Intervention dashboard ---
-    st.subheader("Intervention status")
+    st.subheader("Intervention workload")
     inv_sum = store.intervention_summary()
     ic = st.columns(4)
-    ic[0].metric("Open", inv_sum["by_status"].get("OPEN", 0))
-    ic[1].metric("In Progress", inv_sum["by_status"].get("IN_PROGRESS", 0))
-    ic[2].metric("Overdue", inv_sum["overdue"])
-    ic[3].metric("Completed", inv_sum["by_status"].get("COMPLETED", 0))
+    ic[0].metric("Open", int(inv_sum["by_status"].get("OPEN", 0)))
+    ic[1].metric("In progress", int(inv_sum["by_status"].get("IN_PROGRESS", 0)))
+    ic[2].metric("Overdue", int(inv_sum["overdue"]))
+    ic[3].metric("Completed", int(inv_sum["by_status"].get("COMPLETED", 0)))
+    if not inv_sum["by_owner"].empty:
+        st.caption("By owner")
+        st.dataframe(inv_sum["by_owner"], hide_index=True, use_container_width=True)
+    else:
+        st.caption("No interventions recorded yet — create them from the Investigation page.")
 
-    # --- Priority matrix ---
     st.subheader("Priority matrix")
-    st.caption("X = P(deterioration) · Y = Outstanding · Color = Tier · Size = Priority score")
+    st.caption("X = probability of deterioration · Y = outstanding · colour = tier · "
+               "size = composite priority score. Top-right needs attention first.")
     pm = view[view.tier != "Green"].copy()
-    if not pm.empty:
-        st.altair_chart(alt.Chart(pm.reset_index()).mark_circle().encode(
-            x=alt.X("roll_prob:Q", title="P(deterioration)", scale=alt.Scale(domain=[0, 1])),
+    pm["prob"] = pm.p_3m if pm.p_3m.notna().any() else pm.roll_prob
+    if len(pm):
+        st.altair_chart(alt.Chart(pm.reset_index()).mark_circle(opacity=0.7).encode(
+            x=alt.X("prob:Q", title="P(deterioration)", scale=alt.Scale(domain=[0, 1])),
             y=alt.Y("outstanding:Q", title="Outstanding (AED)"),
             color=alt.Color("tier:N", scale=alt.Scale(domain=TIERS,
                                                        range=list(TIER_COLORS.values()))),
-            size=alt.Size("priority_score:Q", scale=alt.Scale(range=[30, 500])),
+            size=alt.Size("priority_score:Q", scale=alt.Scale(range=[30, 500]),
+                          title="Priority"),
             tooltip=["customer_id", "customer_name", "tier", "risk_score", "priority_score",
-                     "roll_prob", "outstanding"]
-        ).interactive(), use_container_width=True)
+                     "prob", "outstanding", "primary_recommendation"]).interactive(),
+            use_container_width=True)
 
-    if TRUTH_PATH.exists() and ss.source.startswith("Sample portfolio (clean)"):
+    corr_sum = correlation.correlation_summary(view)
+    if corr_sum.customer_count.sum() > 0:
+        st.subheader("Multi-signal correlation patterns")
+        st.caption("Customers whose stress spans several modules at once — these combinations "
+                   "mean more than the individual signals do separately.")
+        st.dataframe(corr_sum.reset_index().rename(columns={"index": "pattern_id"}),
+                     hide_index=True, use_container_width=True)
+
+    truth = ss.get("truth")
+    if truth is not None and truth.exists():
         st.subheader("Accuracy vs planted ground truth")
-        ev = insights.evaluate(view, pd.read_csv(TRUTH_PATH))
+        ev = insights.evaluate(view, pd.read_csv(truth))
         k = st.columns(4)
         k[0].metric("High/Critical caught (Amber+)", f"{ev['catch_rate']}%")
         k[1].metric("False alarms on low-risk", f"{ev['false_alarm_rate']}%")
@@ -337,7 +620,7 @@ elif page == "Watchlist":
     emir = g[1].multiselect("Emirate", sorted(view.emirate.dropna().unique()))
     traj = g[2].multiselect("Trajectory", sorted(view.trajectory.unique()))
     conf = g[3].multiselect("Confidence", ["High", "Medium", "Low"])
-    sma_f = g[4].multiselect("SMA Category", rbi.SMA_CATEGORIES)
+    sma_f = g[4].multiselect("SMA category", rbi.SMA_CATEGORIES)
     w = view
     for col, sel in [("tier", tiers), ("customer_segment", seg), ("portfolio", port),
                      ("dpd_bucket", dpdb), ("emirate", emir), ("trajectory", traj),
@@ -347,7 +630,7 @@ elif page == "Watchlist":
     if prod:
         w = w[w.products.fillna("").apply(lambda s: any(p in s for p in prod))]
     w = w.sort_values(["priority_score", "tier_rank", "risk_score"], ascending=False)
-    st.caption(f"{len(w)} customers · sorted by priority score, tier, risk score")
+    st.caption(f"{len(w)} customers · sorted by composite priority, then tier and score")
     cols = ["customer_id", "customer_name", "products", "outstanding",
             "risk_score", "tier", "priority_score", "sma_category", "confidence",
             "trajectory", "top_indicators", "primary_recommendation",
@@ -355,6 +638,8 @@ elif page == "Watchlist":
             "monitoring_status", "review_status", "customer_segment", "portfolio"]
     if "ml_prob" in w.columns and w.ml_prob.notna().any():
         cols.insert(cols.index("roll_prob") + 1, "ml_prob")
+    if w.p_3m.notna().any():
+        cols.insert(cols.index("risk_score") + 1, "p_3m")
     table = w.reset_index()[cols]
     ev = st.dataframe(
         table, hide_index=True, use_container_width=True, height=520, on_select="rerun",
@@ -367,15 +652,24 @@ elif page == "Watchlist":
                                                           width="large"),
             "roll_prob": st.column_config.NumberColumn("Roll Prob (30d)", format="%.0%%"),
             "ml_prob": st.column_config.NumberColumn("ML P(det.)", format="%.0%%"),
+            "p_3m": st.column_config.ProgressColumn("P(30+ DPD) 3m", min_value=0, max_value=1,
+                                                    format="percent"),
             "priority_score": st.column_config.ProgressColumn("Priority", min_value=0,
-                                                               max_value=100, format="%d")})
+                                                              max_value=100, format="%d"),
+            "primary_recommendation": st.column_config.TextColumn("Recommended intervention",
+                                                                  width="medium")})
     rows = ev.selection.rows if ev and ev.selection else []
     if rows:
         cid = table.iloc[rows[0]].customer_id
+        b1, b2 = st.columns(2)
         def _open(c=cid):
             ss.customer = c
             ss.page = "Customer"
-        st.button(f"Open {cid} →", type="primary", on_click=_open)
+        def _investigate(c=cid):
+            ss.customer = c
+            ss.page = "Investigation"
+        b1.button(f"Open {cid} →", type="primary", on_click=_open)
+        b2.button(f"Investigate {cid} →", on_click=_investigate)
     st.download_button("Download watchlist (CSV)", table.to_csv(index=False),
                        "watchlist.csv", "text/csv")
 
@@ -469,16 +763,29 @@ elif page == "Customer":
                           f"{out['output_tokens']} out tokens · {out['seconds']} s"
                           if out.get("model") else ""))
 
+    # Delinquency forecast (advisory; never changes the rule-based score or tier)
+    if pd.notna(r.get("p_3m")):
+        st.subheader("🔮 Delinquency forecast")
+        f1, f2, f3 = st.columns([1, 1, 3])
+        f1.metric("P(30+ DPD) next month", f"{100 * r.p_1m:.0f}%")
+        f2.metric("P(30+ DPD) next quarter", f"{100 * r.p_3m:.0f}%")
+        f3.markdown(f"**Why:** {r.forecast_drivers or 'no strong drivers'}")
+        f3.caption("LightGBM trained point-in-time on past month-ends; drivers are the "
+                   "features pushing this customer's probability up (SHAP). See the model "
+                   "card on Home.")
+        if r.p_3m >= FORECAST_FLAG and r.tier in ("Green", "Watch"):
+            st.warning("Silent stress: the rules rate this customer "
+                       f"{r.tier}, but the forecast puts a {100 * r.p_3m:.0f}% chance on "
+                       "30+ DPD within 3 months. Consider early contact.")
+    elif r.current_dpd >= 30:
+        st.caption("🔮 Forecast not shown: customer is already 30+ DPD (see roll-forward "
+                   "probability).")
+
     # ML second opinion
     if ML_MODEL is not None and pd.notna(r.get("ml_prob")):
         st.subheader("ML second opinion")
         mc1, mc2 = st.columns([1, 2])
         mc1.metric("P(deterioration 90d)", f"{100 * r.ml_prob:.0f}%")
-        ml_scores = ml.get_scores(ML_MODEL)
-        if ml_scores:
-            mc1.caption(f"Model: CV AUC {ml_scores['cv_auc']:.3f} · "
-                        f"CV F1 {ml_scores['cv_f1']:.3f} · "
-                        f"threshold {ml_scores['threshold']:.2f}")
         sv = ml.shap_values(ML_MODEL, M, ML_FEATURES, cid)
         if sv:
             mc2.caption("SHAP top drivers (positive = pushes toward at-risk)")
@@ -542,6 +849,7 @@ elif page == "Review":
         n = store.publish_alerts(view, run_id, AS_OF)
         st.success(f"{n} new alerts frozen")
     al = store.alerts()
+    al = al[al.customer_id.isin(view.index)]  # alerts for the loaded dataset only
     if al.empty:
         st.info("No alerts yet. Publish a run first.")
         st.stop()
@@ -632,256 +940,318 @@ elif page == "Rules":
                      use_container_width=True)
 
 # ======================================================================================
-# 7. Investigation Workspace
+# 7. Investigation workspace
 # ======================================================================================
 elif page == "Investigation":
-    st.header("Investigation Workspace")
+    st.header("Investigation workspace")
+    st.caption("Everything needed to act on one early warning: how the risk built up, which "
+               "signals reinforce each other, what to do, and a record of what was done.")
     ids = view.sort_values("priority_score", ascending=False).index.tolist()
     default = ids.index(ss.get("customer", ids[0])) if ss.get("customer") in ids else 0
-    cid = st.selectbox("Customer", ids, index=default, key="inv_customer",
-                       format_func=lambda c: f"{c} · {view.at[c, 'customer_name']} · "
-                                             f"{view.at[c, 'tier']} · Priority #{view.at[c, 'priority_rank']:.0f}")
+    cid = st.selectbox(
+        "Customer", ids, index=default, key="inv_customer",
+        format_func=lambda c: f"#{view.at[c, 'priority_rank']:.0f} · {c} · "
+                              f"{view.at[c, 'customer_name']} · {view.at[c, 'tier']}")
     ss.customer = cid
     r = view.loc[cid]
     evd = r.evidence
 
-    st.markdown(f"### {r.customer_name} &nbsp; {tier_badge(r.tier)} &nbsp; "
-                f"SMA: **{r.sma_category}** &nbsp; Priority: **{r.priority_score:.0f}**",
-                unsafe_allow_html=True)
-    st.caption(f"{cid} · {r.customer_type} · {r.customer_segment} · "
-               f"{r.products} · Outstanding AED {r.outstanding:,.0f}")
+    st.markdown(f"### {r.customer_name} &nbsp; {tier_badge(r.tier)}", unsafe_allow_html=True)
+    st.caption(f"{cid} · {r.customer_type} · {r.employment_or_business_category} · "
+               f"{r.customer_segment} · {r.emirate} · {r.products}")
 
     k = st.columns(6)
-    k[0].metric("Risk Score", f"{r.risk_score:.0f}", f"{r.risk_score - r.prev_score:+.0f}")
-    k[1].metric("Trajectory", r.trajectory)
-    k[2].metric("Current DPD", f"{r.current_dpd:.0f}")
-    k[3].metric("Roll Prob", f"{100 * r.roll_prob:.0f}%")
-    k[4].metric("Recovery Profile", r.recovery_profile)
-    k[5].metric("Modules Stressed", int(r.n_modules_stressed))
+    k[0].metric("Priority", f"{r.priority_score:.0f}", f"rank #{r.priority_rank:.0f}",
+                delta_color="off")
+    k[1].metric("Risk score", f"{r.risk_score:.0f}",
+                f"{r.risk_score - r.prev_score:+.0f} vs 3m", delta_color="inverse")
+    k[2].metric("SMA category", r.sma_category)
+    k[3].metric("Trajectory", r.trajectory)
+    k[4].metric("Outstanding", f"AED {r.outstanding:,.0f}")
+    k[5].metric("Modules stressed", f"{int(r.n_modules_stressed)} / 4")
+    if r.trigger:
+        st.error(f"Hard trigger: {r.trigger}")
+    if r.insufficient_evidence:
+        st.info("Insufficient evidence: limited history or data. Missing information is not "
+                "treated as risk; tier is capped at Watch unless hard evidence appears.")
 
-    # --- Correlation patterns ---
-    if r.correlation_patterns:
-        st.subheader("Correlation patterns detected")
-        for pat_name in r.correlation_patterns:
-            st.warning(f"**{pat_name}**")
+    # --- Why this is correlated, and what to do about it ---
+    c1, c2 = st.columns(2)
+    with c1:
+        st.subheader("Correlated deterioration")
+        if r.correlation_patterns:
+            corr_row = correlation.detect_correlations(view.loc[[cid]]).iloc[0]
+            for name in r.correlation_patterns:
+                st.warning(f"**{name}**")
+            st.caption(corr_row.narrative)
+        else:
+            st.success("No multi-module correlation pattern detected.")
         overlap = correlation.overlap_warning(evd)
         if overlap:
-            st.caption(f"⚠️ Overlap advisory: {overlap}")
-
-    # --- Recommendations ---
-    recs = r.recommendations
-    if recs:
-        st.subheader("Intervention recommendations")
-        for rec in recs:
-            urgency_color = {"CRITICAL": "🔴", "HIGH": "🟠", "MEDIUM": "🟡", "LOW": "🟢"}.get(
-                rec["urgency"], "⚪")
-            with st.expander(f"{urgency_color} {rec['name']} — {rec['urgency']}", expanded=(rec["urgency"] == "CRITICAL")):
-                st.write("**Actions:**")
-                for action in rec["actions"]:
-                    st.markdown(f"- {action}")
-                st.caption(f"Supporting indicators: {', '.join(rec['supporting_indicators'])}")
-
-    # --- Module indices over time ---
-    st.subheader("Module index breakdown")
-    idx = pd.DataFrame([dict(module=k, index=v) for k, v in evd["indices"].items()])
-    c1, c2 = st.columns([1, 2])
-    c1.dataframe(idx, hide_index=True, use_container_width=True)
-    with c2:
-        if not idx.empty:
+            st.caption(f"Double-counting advisory: {overlap}. These signals describe the same "
+                       f"underlying problem, so treat the combined score with care.")
+        st.subheader("Module indices")
+        idx = pd.DataFrame([dict(module=mk, index=mv) for mk, mv in evd["indices"].items()
+                            if mv is not None])
+        if len(idx):
             st.altair_chart(alt.Chart(idx).mark_bar().encode(
                 x=alt.X("index:Q", scale=alt.Scale(domain=[0, 100]), title="Stress %"),
-                y=alt.Y("module:N", sort="-x"),
-                color=alt.condition("datum.index > 50", alt.value("#c62828"), alt.value("#f9a825"))),
+                y=alt.Y("module:N", sort="-x", title=None),
+                color=alt.condition("datum.index > 50", alt.value("#c62828"),
+                                    alt.value("#f9a825"))), use_container_width=True)
+    with c2:
+        st.subheader("Recommended interventions")
+        recs = r.recommendations
+        if not recs:
+            st.success("No specific intervention scenario matched. Continue monitoring.")
+        for rec in recs:
+            mark = {"CRITICAL": "🔴", "HIGH": "🟠", "MEDIUM": "🟡", "LOW": "🟢"}[rec["urgency"]]
+            with st.expander(f"{mark} {rec['name']} · {rec['urgency']}",
+                             expanded=rec["urgency"] in ("CRITICAL", "HIGH")):
+                for action in rec["actions"]:
+                    st.markdown(f"- {action}")
+                st.caption(f"Triggered by: {', '.join(rec['supporting_indicators'])}")
+
+    # --- How the risk built up ---
+    st.subheader("How the risk built up")
+    if st.checkbox("Score the last 12 months (re-scores the portfolio at 5 dates, ~10 s)",
+                   key=f"hist_{cid}"):
+        hist = get_history(ss.data_key, rules_key(ss.rules), str(AS_OF.date()), ss.tables,
+                           ss.rules)
+        deltas = trends.score_deltas(hist, cid)
+        if len(deltas):
+            d = deltas.reset_index()
+            hc1, hc2 = st.columns(2)
+            hc1.caption("Risk score over time")
+            hc1.altair_chart(alt.Chart(d).mark_line(point=True, color="#c62828").encode(
+                x=alt.X("period_date:T", title=None),
+                y=alt.Y("risk_score:Q", scale=alt.Scale(domain=[0, 100]))),
                 use_container_width=True)
+            mod_cols = [m for m in scoring.MODULES.values() if m in d.columns]
+            if mod_cols:
+                hc2.caption("Module indices over time")
+                long = d.melt(id_vars="period_date", value_vars=mod_cols,
+                              var_name="module", value_name="index")
+                hc2.altair_chart(alt.Chart(long.dropna()).mark_line(point=True).encode(
+                    x=alt.X("period_date:T", title=None),
+                    y=alt.Y("index:Q", scale=alt.Scale(domain=[0, 100])),
+                    color="module:N"), use_container_width=True)
+            st.caption(f"Multi-period trajectory: "
+                       f"**{trends.extended_trajectory(hist).get(cid, 'n/a')}**")
+            st.dataframe(d, hide_index=True, use_container_width=True)
 
-    # --- Indicator sparklines ---
-    from sentinel import trends as trend_mod
-    m_row = M.loc[cid] if cid in M.index else None
-    if m_row is not None:
-        timeline = trend_mod.indicator_timeline(m_row)
-        if not timeline.empty:
-            st.subheader("12-month indicator trends")
-            timeline["month"] = range(len(timeline))
-            long = timeline.melt(id_vars="month", var_name="indicator", value_name="value")
-            st.altair_chart(alt.Chart(long.dropna()).mark_line(point=True).encode(
-                x=alt.X("month:O", title="Month (0=oldest)"),
-                y=alt.Y("value:Q"), color="indicator:N",
-            ).properties(height=200), use_container_width=True)
+    timeline = trends.indicator_timeline(M.loc[cid]) if cid in M.index else pd.DataFrame()
+    if len(timeline):
+        st.caption("Underlying indicators, last 12 months (0 = oldest)")
+        tl = timeline.assign(month=range(len(timeline))).melt(
+            id_vars="month", var_name="indicator", value_name="value")
+        st.altair_chart(alt.Chart(tl.dropna()).mark_line(point=True).encode(
+            x=alt.X("month:O", title=None), y=alt.Y("value:Q", title=None),
+            color="indicator:N").properties(height=160).facet(
+            facet=alt.Facet("indicator:N", title=None), columns=4).resolve_scale(y="independent"),
+            use_container_width=True)
 
-    # --- Tabs: interventions, notes, facilities ---
-    inv_tabs = st.tabs(["Open Interventions", "Investigation Notes", "Create Intervention", "Add Note"])
-    with inv_tabs[0]:
-        existing = store.get_interventions(customer_id=cid)
-        if existing.empty:
-            st.info("No interventions recorded for this customer.")
+    # --- Case file ---
+    st.subheader("Case file")
+    tabs = st.tabs(["Interventions", "Notes", "New intervention", "New note", "Evidence"])
+
+    with tabs[0]:
+        mine = store.get_interventions(customer_id=cid)
+        if mine.empty:
+            st.info("No interventions recorded for this customer yet.")
         else:
-            st.dataframe(existing[["intervention_id", "warning_category", "status",
-                                   "priority", "assigned_owner", "target_date", "notes"]],
+            st.dataframe(mine[["intervention_id", "warning_category", "status", "priority",
+                               "assigned_owner", "target_date", "notes", "outcome"]],
                          hide_index=True, use_container_width=True)
-            sel_int = st.selectbox("Update intervention", existing.intervention_id.tolist())
-            if sel_int:
-                with st.form("update_int", clear_on_submit=True):
-                    new_status = st.selectbox("New status", store.INTERVENTION_STATUSES)
-                    upd_notes = st.text_area("Notes")
-                    upd_by = st.text_input("Changed by", value=ss.get("analyst", ""))
-                    if st.form_submit_button("Update", type="primary"):
-                        updates = {"status": new_status}
-                        if upd_notes.strip():
-                            updates["notes"] = upd_notes.strip()
-                        store.update_intervention(sel_int, upd_by, **updates)
+            pick_int = st.selectbox("Update an intervention", mine.intervention_id.tolist())
+            with st.form("update_int", clear_on_submit=True):
+                u1, u2 = st.columns(2)
+                new_status = u1.selectbox("Status", store.INTERVENTION_STATUSES)
+                changed_by = u2.text_input("Changed by", value=ss.get("analyst", ""))
+                new_outcome = st.text_input("Outcome (optional)")
+                if st.form_submit_button("Record update", type="primary"):
+                    if not changed_by.strip():
+                        st.error("Changed by is required — updates are attributed.")
+                    else:
+                        fields = {"status": new_status}
+                        if new_outcome.strip():
+                            fields["outcome"] = new_outcome.strip()
+                        store.update_intervention(pick_int, changed_by.strip(), **fields)
+                        ss.analyst = changed_by.strip()
                         st.rerun()
+            hist_df = store.intervention_history(pick_int)
+            if not hist_df.empty:
+                st.caption("Change history (append-only)")
+                st.dataframe(hist_df[["field_changed", "old_value", "new_value", "changed_by",
+                                      "changed_at"]], hide_index=True, use_container_width=True)
 
-    with inv_tabs[1]:
+    with tabs[1]:
         notes = store.investigation_notes(cid)
         if notes.empty:
             st.info("No investigation notes yet.")
-        else:
-            for _, note in notes.iterrows():
-                st.markdown(f"**{note.note_type}** by {note.analyst_id} "
-                            f"— {note.created_at}")
-                st.write(note.content)
-                st.divider()
+        for _, n in notes.iterrows():
+            st.markdown(f"**{n.note_type}** · {n.analyst_id} · {n.created_at:%Y-%m-%d %H:%M}")
+            st.write(n.content)
+            st.divider()
 
-    with inv_tabs[2]:
+    with tabs[2]:
+        primary = interv.primary_recommendation(r.recommendations)
         with st.form("create_int", clear_on_submit=True):
-            st.subheader("Create intervention")
-            cat = st.text_input("Warning category", value=r.primary_recommendation or "")
-            owner = st.text_input("Assigned owner", value=ss.get("analyst", ""))
-            pri_level = st.selectbox("Priority", ["CRITICAL", "HIGH", "MEDIUM", "LOW"])
-            target = st.date_input("Target date")
-            int_notes = st.text_area("Notes")
+            f1, f2 = st.columns(2)
+            cat = f1.text_input("Warning category", value=primary.get("name", ""))
+            owner = f2.text_input("Assign to", value=ss.get("analyst", ""))
+            f3, f4 = st.columns(2)
+            pri_level = f3.selectbox("Priority", ["CRITICAL", "HIGH", "MEDIUM", "LOW"],
+                                     index=["CRITICAL", "HIGH", "MEDIUM", "LOW"].index(
+                                         primary.get("urgency", "MEDIUM")))
+            target = f4.date_input("Target date",
+                                   value=(AS_OF + pd.Timedelta(days=30)).date())
+            note_text = st.text_area("Notes", placeholder="What is being done and why")
             if st.form_submit_button("Create intervention", type="primary"):
-                if owner.strip():
-                    indicators = [rec["id"] for rec in recs] if recs else []
+                if not owner.strip():
+                    st.error("An owner is required — interventions must be accountable.")
+                else:
                     iid = store.create_intervention(
                         cid, None, None, f"{AS_OF.date()}-{rules_key(ss.rules)}",
-                        cat, indicators,
-                        r.primary_recommendation, owner.strip(), pri_level, target, int_notes)
+                        cat, [s["id"] for s in r.recommendations],
+                        primary.get("name", ""), owner.strip(), pri_level, target, note_text)
                     ss.analyst = owner.strip()
-                    st.success(f"Intervention {iid} created")
-                else:
-                    st.error("Owner is required.")
+                    st.success(f"Created {iid}, owned by {owner.strip()}, due {target}.")
 
-    with inv_tabs[3]:
+    with tabs[3]:
         with st.form("add_note", clear_on_submit=True):
-            st.subheader("Add investigation note")
-            note_type = st.selectbox("Type", store.NOTE_TYPES)
-            content = st.text_area("Content")
-            analyst = st.text_input("Analyst", value=ss.get("analyst", ""), key="note_analyst")
+            n1, n2 = st.columns(2)
+            note_type = n1.selectbox("Type", store.NOTE_TYPES)
+            analyst = n2.text_input("Analyst", value=ss.get("analyst", ""))
+            content = st.text_area("Note")
+            st.caption("Use RECLASSIFICATION to record that a signal was a data or processing "
+                       "issue. Published alerts stay frozen; the note is the audit trail.")
             if st.form_submit_button("Add note", type="primary"):
-                if content.strip() and analyst.strip():
-                    store.add_investigation_note(cid, None, None, note_type,
-                                                 content, analyst)
+                if not content.strip() or not analyst.strip():
+                    st.error("Note text and analyst are both required.")
+                else:
+                    store.add_investigation_note(cid, None, None, note_type, content, analyst)
                     ss.analyst = analyst.strip()
                     st.rerun()
-                else:
-                    st.error("Content and analyst are required.")
+
+    with tabs[4]:
+        for reason in r.reasons:
+            st.markdown(f"- {reason}")
+        sig = pd.DataFrame(evd["signals"])
+        sig["status"] = sig.strength.map(
+            lambda s: "not evaluated (no data)" if pd.isna(s) else ("fired" if s > 0 else "ok"))
+        st.dataframe(sig[["id", "name", "category", "value", "operator", "threshold",
+                          "strength", "points", "status"]], hide_index=True,
+                     use_container_width=True)
 
 # ======================================================================================
-# 8. RBI Reporting
+# 9. RBI reporting
 # ======================================================================================
 elif page == "RBI Reporting":
-    st.header("RBI Credit Risk EWS Reporting")
-    st.caption("SMA classification per RBI norms · Currency: AED · Thresholds configurable in Rules")
-    report = rbi.generate_report(ss.tables, view, AS_OF, ss.rules)
-
-    # --- Compliance KPIs ---
+    st.header("RBI credit risk EWS reporting")
+    cfg = rbi.config(ss.rules)
+    st.caption(f"SMA classification by days past due · amounts in AED · "
+               f"alert examination TAT {cfg['alert_examination_tat_days']} days · "
+               f"escalation {cfg['escalation_deadline_days']} days · "
+               f"resolution {cfg['resolution_deadline_days']} days. "
+               f"Thresholds are configuration, editable in the rules file.")
+    report = get_report(ss.data_key, rules_key(ss.rules), str(AS_OF.date()), ss.tables, view,
+                        ss.rules)
     comp = report["compliance"]
+
     k = st.columns(5)
-    k[0].metric("Total Customers", comp["total_customers"])
-    k[1].metric("At Risk (Amber/Red)", comp["at_risk_count"])
-    k[2].metric("Pre-Delinquent EWS", comp["pre_delinquent_count"])
-    k[3].metric("Already Delinquent", comp["already_delinquent_count"])
-    k[4].metric("High Exposure at Risk", comp["high_exposure_at_risk"])
-    st.caption(f"TAT: {comp['tat_days']} days · High exposure threshold: "
-               f"AED {comp['exposure_threshold']:,.0f}")
+    k[0].metric("Customers", comp["total_customers"])
+    k[1].metric("At risk (Amber/Red)", comp["at_risk_count"],
+                f"AED {comp['at_risk_exposure'] / 1e6:,.1f}M", delta_color="off")
+    k[2].metric("Pre-delinquent", comp["pre_delinquent_count"],
+                f"AED {comp['pre_delinquent_exposure'] / 1e6:,.1f}M", delta_color="off")
+    k[3].metric("Already delinquent", comp["already_delinquent_count"],
+                f"AED {comp['already_delinquent_exposure'] / 1e6:,.1f}M", delta_color="off")
+    k[4].metric(f"At risk over AED {comp['exposure_threshold'] / 1e6:,.1f}M",
+                comp["high_exposure_at_risk"],
+                f"AED {comp['high_exposure_amount'] / 1e6:,.1f}M", delta_color="off")
 
     c1, c2 = st.columns(2)
-    # --- SMA Distribution ---
     with c1:
         st.subheader("SMA distribution")
         dist = report["distribution"]
-        st.dataframe(dist, hide_index=True, use_container_width=True,
-                     column_config={
-                         "outstanding_amount": st.column_config.NumberColumn("Outstanding (AED)",
-                                                                             format="%,.0f"),
-                         "pct_of_portfolio": st.column_config.NumberColumn("% of Portfolio",
-                                                                           format="%.1f%%")})
+        st.dataframe(dist, hide_index=True, use_container_width=True, column_config={
+            "sma_category": "SMA category",
+            "facility_count": "Facilities",
+            "customer_count": "Customers",
+            "outstanding_amount": st.column_config.NumberColumn("Outstanding (AED)",
+                                                                format="%,.0f"),
+            "pct_of_portfolio": st.column_config.NumberColumn("% of book", format="%.1f%%")})
         st.altair_chart(alt.Chart(dist).mark_bar().encode(
-            x=alt.X("sma_category:N", sort=rbi.SMA_CATEGORIES, title="SMA Category"),
+            x=alt.X("sma_category:N", sort=rbi.SMA_CATEGORIES, title=None),
             y=alt.Y("facility_count:Q", title="Facilities"),
-            color=alt.Color("sma_category:N", scale=alt.Scale(
-                domain=rbi.SMA_CATEGORIES,
-                range=["#2e7d32", "#f9a825", "#ef6c00", "#c62828", "#4a148c"]))),
-            use_container_width=True)
-
-    # --- SMA by Portfolio ---
+            color=alt.Color("sma_category:N", sort=rbi.SMA_CATEGORIES, legend=None,
+                            scale=alt.Scale(domain=rbi.SMA_CATEGORIES, range=SMA_COLORS)),
+            tooltip=["sma_category", "facility_count", "customer_count",
+                     "outstanding_amount"]), use_container_width=True)
     with c2:
-        st.subheader("SMA by portfolio")
+        st.subheader("SMA mix by portfolio")
         by_port = report["distribution_by_portfolio"]
-        if not by_port.empty:
+        if len(by_port):
             st.altair_chart(alt.Chart(by_port).mark_bar().encode(
-                x=alt.X("outstanding:Q", title="Outstanding (AED)"),
-                y=alt.Y("portfolio:N"),
+                x=alt.X("outstanding:Q", title="Outstanding (AED)", stack="normalize"),
+                y=alt.Y("portfolio:N", title=None),
                 color=alt.Color("sma_category:N", sort=rbi.SMA_CATEGORIES,
-                                scale=alt.Scale(domain=rbi.SMA_CATEGORIES,
-                                                range=["#2e7d32", "#f9a825", "#ef6c00",
-                                                        "#c62828", "#4a148c"])),
-                order="sma_category:N"), use_container_width=True)
+                                scale=alt.Scale(domain=rbi.SMA_CATEGORIES, range=SMA_COLORS)),
+                order=alt.Order("sma_category:N"),
+                tooltip=["portfolio", "sma_category", "facility_count", "outstanding"]),
+                use_container_width=True)
 
-    # --- Migration Matrix ---
-    st.subheader("SMA migration matrix (month-to-month transitions)")
-    mig = report["migration_matrix"]
-    mig_pct = (mig * 100).round(1)
-    mm = mig_pct.reset_index().melt(id_vars="sma", var_name="to", value_name="pct").rename(
+    st.subheader("SMA migration matrix")
+    st.caption("Share of facilities moving from each SMA category (rows) to the next "
+               "month's category (columns). The upper-right triangle is deterioration.")
+    mig = (report["migration_matrix"] * 100).round(1)
+    mm = mig.reset_index().melt(id_vars="sma", var_name="to", value_name="pct").rename(
         columns={"sma": "from"})
     st.altair_chart(alt.Chart(mm).mark_rect().encode(
-        x=alt.X("to:N", sort=rbi.SMA_CATEGORIES, title="Next Period"),
-        y=alt.Y("from:N", sort=rbi.SMA_CATEGORIES, title="Current Period"),
-        color=alt.Color("pct:Q", scale=alt.Scale(scheme="oranges"))) +
+        x=alt.X("to:N", sort=rbi.SMA_CATEGORIES, title="Next month"),
+        y=alt.Y("from:N", sort=rbi.SMA_CATEGORIES, title="This month"),
+        color=alt.Color("pct:Q", scale=alt.Scale(scheme="oranges"), title="%")) +
         alt.Chart(mm).mark_text(fontSize=11).encode(
             x=alt.X("to:N", sort=rbi.SMA_CATEGORIES),
             y=alt.Y("from:N", sort=rbi.SMA_CATEGORIES),
-            text=alt.Text("pct:Q", format=".1f")),
-        use_container_width=True)
+            text=alt.Text("pct:Q", format=".1f")), use_container_width=True)
 
-    # --- SMA Trend ---
-    st.subheader("SMA trend over time")
-    trend_data = report["trend"]
-    if not trend_data.empty:
-        st.altair_chart(alt.Chart(trend_data).mark_area().encode(
-            x=alt.X("month:T", title="Month"),
+    st.subheader("SMA trend")
+    tr = report["trend"]
+    if len(tr):
+        st.altair_chart(alt.Chart(tr).mark_area().encode(
+            x=alt.X("month:T", title=None),
             y=alt.Y("count:Q", title="Facilities", stack=True),
             color=alt.Color("sma_category:N", sort=rbi.SMA_CATEGORIES,
-                            scale=alt.Scale(domain=rbi.SMA_CATEGORIES,
-                                            range=["#2e7d32", "#f9a825", "#ef6c00",
-                                                    "#c62828", "#4a148c"]))),
+                            scale=alt.Scale(domain=rbi.SMA_CATEGORIES, range=SMA_COLORS)),
+            order=alt.Order("sma_category:N"),
+            tooltip=["month:T", "sma_category", "count", "outstanding"]),
             use_container_width=True)
 
-    # --- NPA accounts ---
-    npa = view[view.sma_category == "NPA"].sort_values("outstanding", ascending=False)
-    if not npa.empty:
-        st.subheader(f"NPA accounts ({len(npa)})")
-        st.dataframe(npa.reset_index()[["customer_id", "customer_name", "outstanding",
-                                         "current_dpd", "risk_score", "tier", "trajectory",
-                                         "primary_recommendation"]],
-                     hide_index=True, use_container_width=True,
-                     column_config={"outstanding": st.column_config.NumberColumn(
-                         "Outstanding (AED)", format="%,.0f")})
+    npa = view[view.sma_category.isin(["SMA-2", "NPA"])].sort_values("outstanding",
+                                                                     ascending=False)
+    if len(npa):
+        st.subheader(f"SMA-2 and NPA accounts ({len(npa)})")
+        st.dataframe(npa.reset_index()[["customer_id", "customer_name", "sma_category",
+                                        "current_dpd", "outstanding", "risk_score", "tier",
+                                        "trajectory", "primary_recommendation"]],
+                     hide_index=True, use_container_width=True, column_config={
+                         "outstanding": st.column_config.NumberColumn("Outstanding (AED)",
+                                                                      format="%,.0f")})
 
-    # --- Download ---
     st.divider()
-    c1, c2 = st.columns(2)
-    c1.download_button("📥 Download Full Report (Excel)",
-                       rbi.report_to_excel(report),
-                       "rbi_ews_report.xlsx",
-                       "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet")
-    c2.download_button("📥 Download SMA Distribution (CSV)",
+    d1, d2 = st.columns(2)
+    d1.download_button("Download full report (Excel)", rbi.report_to_excel(report),
+                       f"rbi_ews_report_{AS_OF.date()}.xlsx",
+                       "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+                       type="primary")
+    d2.download_button("Download SMA distribution (CSV)",
                        report["distribution"].to_csv(index=False),
-                       "sma_distribution.csv", "text/csv")
+                       f"sma_distribution_{AS_OF.date()}.csv", "text/csv")
 
 # ======================================================================================
-# 9. AI Assistant
+# 8. AI Assistant
 # ======================================================================================
 elif page == "AI Assistant":
     st.header("AI Assistant")

@@ -246,7 +246,7 @@ def _exposure(c: Customer, fstates, onus_dpd, rng):
             card_lim += round(I * rng.uniform(1, 2), -3)
     ext_dpd = np.zeros(n)
     leaders = ("REPAYMENT_DETERIORATION", "ROLL_FORWARD", "SME_CASHFLOW_STRESS",
-               "SME_REPAYMENT_DETERIORATION")
+               "SME_REPAYMENT_DETERIORATION", "LEGACY_NPL", "SME_LEGACY_NPL")
     if (c.archetype in leaders and rng.random() < 0.4) or \
             (c.subtype == "JOB_LOSS" and rng.random() < 0.3):
         # Off-us delinquency often shows up a month or two before ours does.
@@ -434,6 +434,8 @@ NOTES = {
     "SME_OVER_LEVERAGED": "Additional term/equipment debt on-us and off-us.",
     "SME_REPAYMENT_DETERIORATION": "Business repayments deteriorating, mild receipts decline.",
     "SME_THIN_FILE": "New business / new-to-bank, little history.",
+    "LEGACY_NPL": "Defaulted early in (or before) the window; 90+ DPD, token payments only.",
+    "SME_LEGACY_NPL": "Business in default since early in the window; collections stage.",
 }
 
 

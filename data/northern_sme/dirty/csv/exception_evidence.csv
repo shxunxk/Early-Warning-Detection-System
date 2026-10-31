@@ -1,0 +1,121 @@
+evidence_id,customer_id,facility_id,event_date,exception_type,description,evidence_source,verified_flag,recorded_date,recorded_by
+EV00001,CIF500481,PF0400093,2025-06-01,HOLIDAY_PERIOD,Customer travelling during Eid holidays,CUSTOMER_CALL,Y,2025-06-06,rm.desk
+EV00002,CIF500571,CC0400750,2025-06-02,HOLIDAY_PERIOD,Customer travelling during Eid holidays,CUSTOMER_CALL,Y,2025-06-06,rm.desk
+EV00003,CIF500282,PF0402035,2025-06-02,TEMPORARY_HARDSHIP,Hospitalisation; medical certificate provided,MEDICAL_CERTIFICATE,Y,2025-06-05,rm.desk
+EV00004,CIF500194,CC0401727,2025-06-02,SALARY_DELAY,Employer letter confirming payroll delay,EMPLOYER_LETTER,Y,2025-06-09,ops.team
+EV00005,CIF500077,PF0400204,2025-06-05,HOLIDAY_PERIOD,Customer travelling during Eid holidays,CUSTOMER_CALL,Y,2025-06-11,rm.desk
+EV00006,CIF500003,PF0400871,2025-06-20,TEMPORARY_HARDSHIP,Hospitalisation; medical certificate provided,MEDICAL_CERTIFICATE,Y,2025-06-26,ops.team
+EV00007,CIF500623,CC0400486,2025-06-30,SALARY_DELAY,Employer letter confirming payroll delay,EMPLOYER_LETTER,Y,2025-07-04,rm.desk
+EV00008,CIF500097,PF0401334,2025-07-01,SALARY_DELAY,Employer letter confirming payroll delay,EMPLOYER_LETTER,N,2025-07-11,ops.team
+EV00009,CIF500443,PF0400555,2025-07-02,TEMPORARY_HARDSHIP,Hospitalisation; medical certificate provided,MEDICAL_CERTIFICATE,N,2025-07-11,ops.team
+EV00010,CIF500335,PF0402077,2025-07-07,SALARY_DELAY,Employer letter confirming payroll delay,EMPLOYER_LETTER,Y,2025-07-08,ops.team
+EV00011,CIF500394,PF0401144,2025-07-07,TEMPORARY_HARDSHIP,Hospitalisation; medical certificate provided,MEDICAL_CERTIFICATE,Y,2025-07-15,ops.team
+EV00012,CIF500035,CC0400099,2025-07-28,TEMPORARY_HARDSHIP,Hospitalisation; medical certificate provided,MEDICAL_CERTIFICATE,N,2025-08-03,ops.team
+EV00013,CIF500478,PF0400242,2025-08-01,SALARY_DELAY,Employer letter confirming payroll delay,EMPLOYER_LETTER,Y,2025-08-04,ops.team
+EV00014,CIF500112,PF0400786,2025-08-01,TEMPORARY_HARDSHIP,Hospitalisation; medical certificate provided,MEDICAL_CERTIFICATE,Y,2025-08-06,ops.team
+EV00015,CIF500274,HF0400169,2025-08-05,PROCESSING_DELAY,Cheque clearing / payment gateway incident,BANK_OPERATIONS_LOG,Y,2025-08-15,rm.desk
+EV00016,CIF500075,PF0401073,2025-09-01,HOLIDAY_PERIOD,Customer travelling during Eid holidays,CUSTOMER_CALL,N,2025-09-05,collections.agent
+EV00017,CIF500159,PF0400620,2025-09-01,SALARY_DELAY,Employer letter confirming payroll delay,EMPLOYER_LETTER,Y,2025-09-09,collections.agent
+EV00018,CIF500217,PF0400972,2025-09-01,HOLIDAY_PERIOD,Customer travelling during Eid holidays,CUSTOMER_CALL,N,2025-09-10,collections.agent
+EV00019,CIF500020,PF0401954,2025-09-05,SALARY_DELAY,Employer letter confirming payroll delay,EMPLOYER_LETTER,Y,2025-09-06,rm.desk
+EV00020,CIF500537,CC0400601,2025-09-15,PROCESSING_DELAY,Cheque clearing / payment gateway incident,BANK_OPERATIONS_LOG,Y,2025-09-16,ops.team
+EV00021,CIF500276,PF0400016,2025-09-29,TEMPORARY_HARDSHIP,Hospitalisation; medical certificate provided,MEDICAL_CERTIFICATE,N,2025-10-07,collections.agent
+EV00022,CIF500186,PF0400744,2025-10-01,SALARY_DELAY,Employer letter confirming payroll delay,EMPLOYER_LETTER,Y,2025-10-03,collections.agent
+EV00023,CIF500325,PF0401905,2025-10-04,SALARY_DELAY,Customer states payment was delayed and will be regularised,CUSTOMER_CALL,N,2025-10-04,collections.agent
+EV00024,CIF500727,TL0400312,2025-10-15,CUSTOMER_PAYMENT_DELAY,Customer states payment was delayed and will be regularised,CUSTOMER_CALL,N,2025-10-16,rm.desk
+EV00025,CIF500066,PF0401617,2025-10-20,SALARY_DELAY,Employer letter confirming payroll delay,EMPLOYER_LETTER,Y,2025-10-27,ops.team
+EV00026,CIF500782,TL0400733,2025-10-20,CUSTOMER_PAYMENT_DELAY,Customer states payment was delayed and will be regularised,CUSTOMER_CALL,N,2025-10-20,collections.agent
+EV00027,CIF500056,PF0400266,2025-10-20,SALARY_DELAY,Employer letter confirming payroll delay,EMPLOYER_LETTER,Y,2025-10-29,collections.agent
+EV00028,CIF500631,PF0400690,2025-10-28,SALARY_DELAY,Employer letter confirming payroll delay,EMPLOYER_LETTER,Y,2025-10-30,collections.agent
+EV00029,CIF500585,CC0400843,2025-10-28,PROCESSING_DELAY,Cheque clearing / payment gateway incident,BANK_OPERATIONS_LOG,Y,2025-11-04,rm.desk
+EV00030,CIF500615,PF0400382,2025-11-01,SALARY_DELAY,Employer letter confirming payroll delay,EMPLOYER_LETTER,Y,2025-11-06,ops.team
+EV00031,CIF501161,TL0400872,2025-11-05,CUSTOMER_PAYMENT_DELAY,Customer states payment was delayed and will be regularised,CUSTOMER_CALL,N,2025-11-08,collections.agent
+EV00032,CIF501141,EF0402137,2025-11-06,CUSTOMER_PAYMENT_DELAY,Customer states payment was delayed and will be regularised,CUSTOMER_CALL,N,2025-11-06,collections.agent
+EV00033,CIF500440,CC0400411,2025-11-09,SALARY_DELAY,Customer states payment was delayed and will be regularised,CUSTOMER_CALL,N,2025-11-10,collections.agent
+EV00034,CIF500128,PF0401276,2025-11-09,SALARY_DELAY,Customer states payment was delayed and will be regularised,CUSTOMER_CALL,N,2025-11-12,collections.agent
+EV00035,CIF500709,TL0401322,2025-11-16,CUSTOMER_PAYMENT_DELAY,Customer states payment was delayed and will be regularised,CUSTOMER_CALL,N,2025-11-17,rm.desk
+EV00036,CIF500454,CC0401433,2025-11-25,TEMPORARY_HARDSHIP,Hospitalisation; medical certificate provided,MEDICAL_CERTIFICATE,N,2025-11-28,collections.agent
+EV00037,CIF500431,PF0400939,2025-12-01,SALARY_DELAY,Employer letter confirming payroll delay,EMPLOYER_LETTER,Y,2025-12-04,rm.desk
+EV00038,CIF500368,CC0400224,2025-12-05,SALARY_DELAY,Customer states payment was delayed and will be regularised,CUSTOMER_CALL,N,2025-12-08,rm.desk
+EV00039,CIF500930,TL0401519,2025-12-06,CUSTOMER_PAYMENT_DELAY,Customer states payment was delayed and will be regularised,CUSTOMER_CALL,N,2025-12-07,ops.team
+EV00040,CIF500277,CC0400722,2025-12-07,SALARY_DELAY,Customer states payment was delayed and will be regularised,CUSTOMER_CALL,N,2025-12-10,collections.agent
+EV00041,CIF500367,PF0400137,2025-12-09,SALARY_DELAY,Customer states payment was delayed and will be regularised,CUSTOMER_CALL,N,2025-12-09,ops.team
+EV00042,CIF500040,PF0400585,2025-12-11,SALARY_DELAY,Customer states payment was delayed and will be regularised,CUSTOMER_CALL,N,2025-12-13,rm.desk
+EV00043,CIF500702,WC0400759,2025-12-13,CUSTOMER_PAYMENT_DELAY,Customer states payment was delayed and will be regularised,CUSTOMER_CALL,N,2025-12-16,collections.agent
+EV00044,CIF500428,PF0401758,2025-12-18,SALARY_DELAY,Customer states payment was delayed and will be regularised,CUSTOMER_CALL,N,2025-12-21,ops.team
+EV00045,CIF500369,CC0400180,2026-01-02,SALARY_DELAY,Employer letter confirming payroll delay,EMPLOYER_LETTER,Y,2026-01-03,rm.desk
+EV00046,CIF500439,PF0400213,2026-01-08,SALARY_DELAY,Customer states payment was delayed and will be regularised,CUSTOMER_CALL,N,2026-01-11,rm.desk
+EV00047,CIF500243,CC0401095,2026-01-08,SALARY_DELAY,Customer states payment was delayed and will be regularised,CUSTOMER_CALL,N,2026-01-09,collections.agent
+EV00048,CIF500119,CC0401856,2026-01-11,SALARY_DELAY,Customer states payment was delayed and will be regularised,CUSTOMER_CALL,N,2026-01-11,rm.desk
+EV00049,CIF500321,PF0401756,2026-01-12,SALARY_DELAY,Customer states payment was delayed and will be regularised,CUSTOMER_CALL,N,2026-01-14,collections.agent
+EV00050,CIF500025,PF0402016,2026-01-15,SALARY_DELAY,Employer letter confirming payroll delay,EMPLOYER_LETTER,Y,2026-01-19,collections.agent
+EV00051,CIF501170,TL0400106,2026-01-18,CUSTOMER_PAYMENT_DELAY,Customer states payment was delayed and will be regularised,CUSTOMER_CALL,N,2026-01-19,rm.desk
+EV00052,CIF500134,CC0400003,2026-01-20,PROCESSING_DELAY,Cheque clearing / payment gateway incident,BANK_OPERATIONS_LOG,Y,2026-01-26,rm.desk
+EV00053,CIF500270,CC0401589,2026-01-28,PROCESSING_DELAY,Cheque clearing / payment gateway incident,BANK_OPERATIONS_LOG,Y,2026-02-03,rm.desk
+EV00054,CIF500245,HF0401963,2026-01-28,PROCESSING_DELAY,Cheque clearing / payment gateway incident,BANK_OPERATIONS_LOG,Y,2026-02-01,collections.agent
+EV00055,CIF500299,PF0401389,2026-02-01,PROCESSING_DELAY,Cheque clearing / payment gateway incident,BANK_OPERATIONS_LOG,Y,2026-02-06,collections.agent
+EV00056,CIF500605,PF0400922,2026-02-01,TEMPORARY_HARDSHIP,Hospitalisation; medical certificate provided,MEDICAL_CERTIFICATE,Y,2026-02-05,collections.agent
+EV00057,CIF500423,PF0400904,2026-02-01,SALARY_DELAY,Employer letter confirming payroll delay,EMPLOYER_LETTER,Y,2026-02-03,collections.agent
+EV00058,CIF500484,PF0401117,2026-02-02,SALARY_DELAY,Employer letter confirming payroll delay,EMPLOYER_LETTER,Y,2026-02-05,ops.team
+EV00059,CIF500053,PF0401215,2026-02-04,SALARY_DELAY,Customer states payment was delayed and will be regularised,CUSTOMER_CALL,N,2026-02-07,collections.agent
+EV00060,CIF501064,TL0401285,2026-02-08,CUSTOMER_PAYMENT_DELAY,Customer states payment was delayed and will be regularised,CUSTOMER_CALL,N,2026-02-11,collections.agent
+EV00061,CIF500263,PF0400569,2026-02-10,TEMPORARY_HARDSHIP,Hospitalisation; medical certificate provided,MEDICAL_CERTIFICATE,Y,2026-02-20,collections.agent
+EV00062,CIF500083,PF0401153,2026-02-10,SALARY_DELAY,Customer states payment was delayed and will be regularised,CUSTOMER_CALL,N,2026-02-11,ops.team
+EV00063,CIF500898,EF0401632,2026-02-14,CUSTOMER_PAYMENT_DELAY,Customer states payment was delayed and will be regularised,CUSTOMER_CALL,N,2026-02-16,collections.agent
+EV00064,CIF500058,CC0401877,2026-02-21,SALARY_DELAY,Customer states payment was delayed and will be regularised,CUSTOMER_CALL,N,2026-02-22,rm.desk
+EV00065,CIF500126,PF0400568,2026-03-01,PROCESSING_DELAY,Cheque clearing / payment gateway incident,BANK_OPERATIONS_LOG,Y,2026-03-04,collections.agent
+EV00066,CIF500626,CC0402078,2026-03-02,HOLIDAY_PERIOD,Customer travelling during Eid holidays,CUSTOMER_CALL,N,2026-03-11,rm.desk
+EV00067,CIF500362,CC0401853,2026-03-02,HOLIDAY_PERIOD,Customer travelling during Eid holidays,CUSTOMER_CALL,N,2026-03-12,collections.agent
+EV00068,CIF500376,PF0400853,2026-03-05,SALARY_DELAY,Employer letter confirming payroll delay,EMPLOYER_LETTER,Y,2026-03-08,collections.agent
+EV00069,CIF500456,PF0400994,2026-03-18,SALARY_DELAY,Customer states payment was delayed and will be regularised,CUSTOMER_CALL,N,2026-03-19,rm.desk
+EV00070,CIF500634,HF0402010,2026-03-25,PROCESSING_DELAY,Cheque clearing / payment gateway incident,BANK_OPERATIONS_LOG,Y,2026-03-30,ops.team
+EV00071,CIF500215,PF0400891,2026-04-01,SALARY_DELAY,Employer letter confirming payroll delay,EMPLOYER_LETTER,Y,2026-04-09,rm.desk
+EV00072,CIF500476,AF0400988,2026-04-01,TEMPORARY_HARDSHIP,Hospitalisation; medical certificate provided,MEDICAL_CERTIFICATE,N,2026-04-04,collections.agent
+EV00073,CIF500154,PF0402024,2026-04-01,SALARY_DELAY,Employer letter confirming payroll delay,EMPLOYER_LETTER,N,2026-04-06,collections.agent
+EV00074,CIF500007,PF0400878,2026-04-02,SALARY_DELAY,Employer letter confirming payroll delay,EMPLOYER_LETTER,N,2026-04-04,rm.desk
+EV00075,CIF500124,PF0400258,2026-04-06,PROCESSING_DELAY,Cheque clearing / payment gateway incident,BANK_OPERATIONS_LOG,Y,2026-04-15,collections.agent
+EV00076,CIF500127,CC0400125,2026-04-07,SALARY_DELAY,Customer states payment was delayed and will be regularised,CUSTOMER_CALL,N,2026-04-07,rm.desk
+EV00077,CIF500214,PF0401716,2026-04-07,SALARY_DELAY,Customer states payment was delayed and will be regularised,CUSTOMER_CALL,N,2026-04-10,collections.agent
+EV00078,CIF500061,CC0401134,2026-04-09,SALARY_DELAY,Customer states payment was delayed and will be regularised,CUSTOMER_CALL,N,2026-04-10,ops.team
+EV00079,CIF500228,CC0400957,2026-04-10,SALARY_DELAY,Customer states payment was delayed and will be regularised,CUSTOMER_CALL,N,2026-04-10,rm.desk
+EV00080,CIF500627,CC0400635,2026-04-20,PROCESSING_DELAY,Cheque clearing / payment gateway incident,BANK_OPERATIONS_LOG,Y,2026-04-26,ops.team
+EV00081,CIF500100,PF0401596,2026-04-20,SALARY_DELAY,Customer states payment was delayed and will be regularised,CUSTOMER_CALL,N,2026-04-20,rm.desk
+EV00082,CIF500815,TL0401736,2026-04-20,CUSTOMER_PAYMENT_DELAY,Customer states payment was delayed and will be regularised,CUSTOMER_CALL,N,2026-04-20,ops.team
+EV00083,CIF500331,PF0401807,2026-05-01,HOLIDAY_PERIOD,Customer travelling during Eid holidays,CUSTOMER_CALL,Y,2026-05-02,collections.agent
+EV00084,CIF501092,TL0400791,2026-05-04,CUSTOMER_PAYMENT_DELAY,Customer states payment was delayed and will be regularised,CUSTOMER_CALL,N,2026-05-07,ops.team
+EV00085,CIF500738,TL0401477,2026-05-04,CUSTOMER_PAYMENT_DELAY,Customer states payment was delayed and will be regularised,CUSTOMER_CALL,N,2026-05-05,collections.agent
+EV00086,CIF500427,CC0400330,2026-05-04,PROCESSING_DELAY,Cheque clearing / payment gateway incident,BANK_OPERATIONS_LOG,Y,2026-05-08,ops.team
+EV00087,CIF500297,PF0400524,2026-05-11,SALARY_DELAY,Customer states payment was delayed and will be regularised,CUSTOMER_CALL,N,2026-05-14,rm.desk
+EV00088,CIF500271,CC0400937,2026-05-11,SALARY_DELAY,Customer states payment was delayed and will be regularised,CUSTOMER_CALL,N,2026-05-11,collections.agent
+EV00089,CIF501047,WC0401875,2026-05-13,CUSTOMER_PAYMENT_DELAY,Customer states payment was delayed and will be regularised,CUSTOMER_CALL,N,2026-05-13,ops.team
+EV00090,CIF501150,TL0400949,2026-05-17,CUSTOMER_PAYMENT_DELAY,Customer states payment was delayed and will be regularised,CUSTOMER_CALL,N,2026-05-20,collections.agent
+EV00091,CIF500601,PF0401206,2026-05-19,SALARY_DELAY,Customer states payment was delayed and will be regularised,CUSTOMER_CALL,N,2026-05-19,rm.desk
+EV00092,CIF500612,AF0401403,2026-05-20,SALARY_DELAY,Customer states payment was delayed and will be regularised,CUSTOMER_CALL,N,2026-05-21,collections.agent
+EV00093,CIF500502,PF0401253,2026-06-01,HOLIDAY_PERIOD,Customer travelling during Eid holidays,CUSTOMER_CALL,Y,2026-06-10,rm.desk
+EV00094,CIF500235,PF0400811,2026-06-01,HOLIDAY_PERIOD,Customer travelling during Eid holidays,CUSTOMER_CALL,Y,2026-06-09,rm.desk
+EV00095,CIF500405,PF0400794,2026-06-01,PROCESSING_DELAY,Cheque clearing / payment gateway incident,BANK_OPERATIONS_LOG,Y,2026-06-11,collections.agent
+EV00096,CIF500412,AF0401166,2026-06-01,TEMPORARY_HARDSHIP,Hospitalisation; medical certificate provided,MEDICAL_CERTIFICATE,Y,2026-06-10,rm.desk
+EV00097,CIF500192,PF0402118,2026-06-05,SALARY_DELAY,Customer states payment was delayed and will be regularised,CUSTOMER_CALL,N,2026-06-07,collections.agent
+EV00098,CIF500500,PF0401869,2026-06-05,SALARY_DELAY,Customer states payment was delayed and will be regularised,CUSTOMER_CALL,N,2026-06-05,collections.agent
+EV00099,CIF500736,TL0400589,2026-06-09,CUSTOMER_PAYMENT_DELAY,Customer states payment was delayed and will be regularised,CUSTOMER_CALL,N,2026-06-09,collections.agent
+EV00100,CIF500731,TL0401263,2026-06-09,CUSTOMER_PAYMENT_DELAY,Customer states payment was delayed and will be regularised,CUSTOMER_CALL,N,2026-06-12,collections.agent
+EV00101,CIF500463,CC0400457,2026-06-10,SALARY_DELAY,Customer states payment was delayed and will be regularised,CUSTOMER_CALL,N,2026-06-10,ops.team
+EV00102,CIF500591,AF0401906,2026-06-10,SALARY_DELAY,Employer letter confirming payroll delay,EMPLOYER_LETTER,Y,2026-06-17,collections.agent
+EV00103,CIF501023,TL0400802,2026-06-11,CUSTOMER_PAYMENT_DELAY,Customer states payment was delayed and will be regularised,CUSTOMER_CALL,N,2026-06-13,collections.agent
+EV00104,CIF500880,TL0401605,2026-06-12,CUSTOMER_PAYMENT_DELAY,Customer states payment was delayed and will be regularised,CUSTOMER_CALL,N,2026-06-12,collections.agent
+EV00105,CIF500875,TL0400967,2026-06-12,CUSTOMER_PAYMENT_DELAY,Customer states payment was delayed and will be regularised,CUSTOMER_CALL,N,2026-06-13,rm.desk
+EV00106,CIF500418,CC0400246,2026-06-12,SALARY_DELAY,Customer states payment was delayed and will be regularised,CUSTOMER_CALL,N,2026-06-12,rm.desk
+EV00107,CIF501007,TL0401392,2026-06-16,CUSTOMER_PAYMENT_DELAY,Customer states payment was delayed and will be regularised,CUSTOMER_CALL,N,2026-06-18,collections.agent
+EV00108,CIF501167,TL0401089,2026-06-21,CUSTOMER_PAYMENT_DELAY,Customer states payment was delayed and will be regularised,CUSTOMER_CALL,N,2026-06-22,rm.desk
+EV00109,CIF500254,CC0400901,2026-06-25,PROCESSING_DELAY,Cheque clearing / payment gateway incident,BANK_OPERATIONS_LOG,Y,2026-07-01,collections.agent
+EV00110,CIF500244,PF0400103,2026-06-29,HOLIDAY_PERIOD,Customer travelling during Eid holidays,CUSTOMER_CALL,N,2026-07-09,ops.team
+EV00111,CIF500573,CC0401510,2026-07-02,PROCESSING_DELAY,Cheque clearing / payment gateway incident,BANK_OPERATIONS_LOG,Y,2026-07-08,rm.desk
+EV00112,CIF500357,CC0400953,2026-07-10,SALARY_DELAY,Customer states payment was delayed and will be regularised,CUSTOMER_CALL,N,2026-07-10,rm.desk
+EV00113,CIF500429,CC0400410,2026-07-13,SALARY_DELAY,Customer states payment was delayed and will be regularised,CUSTOMER_CALL,N,2026-07-14,rm.desk
+EV00114,CIF500363,PF0401482,2026-07-13,SALARY_DELAY,Customer states payment was delayed and will be regularised,CUSTOMER_CALL,N,2026-07-13,rm.desk
+EV00115,CIF500135,PF0400679,2026-07-20,PROCESSING_DELAY,Cheque clearing / payment gateway incident,BANK_OPERATIONS_LOG,Y,2026-07-29,collections.agent
+EV00116,CIF500565,PF0401518,2026-07-28,SALARY_DELAY,Employer letter confirming payroll delay,EMPLOYER_LETTER,Y,2026-07-29,ops.team
+EV00117,CIF500576,PF0400798,2026-07-28,SALARY_DELAY,Employer letter confirming payroll delay,EMPLOYER_LETTER,Y,2026-08-01,ops.team
+EV00118,CIF500319,CC0402136,2026-08-14,SALARY_DELAY,Customer states payment was delayed and will be regularised,CUSTOMER_CALL,N,2026-08-15,collections.agent
+EV00119,CIF500240,PF0400329,2026-08-14,SALARY_DELAY,Customer states payment was delayed and will be regularised,CUSTOMER_CALL,N,2026-08-14,collections.agent
+EV00120,CIF500645,CC0400769,2026-08-19,SALARY_DELAY,Customer states payment was delayed and will be regularised,CUSTOMER_CALL,N,2026-08-22,collections.agent

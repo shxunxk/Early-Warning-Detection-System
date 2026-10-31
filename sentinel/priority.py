@@ -41,9 +41,15 @@ def composite_priority(
     q95 = view.outstanding.quantile(0.95)
     out["exposure_component"] = (view.outstanding / q95).clip(0, 1) if q95 > 0 else 0
 
-    prob = view.get("ml_prob")
-    if prob is None or prob.isna().all():
-        prob = view.get("roll_prob", pd.Series(0, index=view.index))
+    # Prefer the purpose-built delinquency forecast, then the ML second opinion, then roll rates.
+    prob = None
+    for col in ("p_3m", "ml_prob", "roll_prob"):
+        cand = view.get(col)
+        if cand is not None and pd.to_numeric(cand, errors="coerce").notna().any():
+            prob = pd.to_numeric(cand, errors="coerce")
+            break
+    if prob is None:
+        prob = pd.Series(0.0, index=view.index)
     out["probability_component"] = prob.fillna(0).clip(0, 1)
 
     out["trajectory_component"] = view.trajectory.map(TRAJECTORY_WEIGHTS).fillna(0.5)

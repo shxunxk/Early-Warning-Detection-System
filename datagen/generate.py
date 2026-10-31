@@ -61,8 +61,22 @@ def write_set(tables: dict, folder: Path, xlsx_name: str, json_too: bool):
             df.to_excel(xw, sheet_name=name[:31], index=False)
 
 
+def apply_profile(name: str) -> dict:
+    """Override config constants for an alternative institution (see config.PROFILES)."""
+    profile = C.PROFILES[name]
+    for key, value in profile.items():
+        if key != "label":
+            setattr(C, key, value)
+    return profile
+
+
 def main():
-    ap = argparse.ArgumentParser(description=__doc__)
+    pre = argparse.ArgumentParser(add_help=False)
+    pre.add_argument("--profile", default="default", choices=sorted(C.PROFILES))
+    profile_name = pre.parse_known_args()[0].profile
+    profile = apply_profile(profile_name)
+
+    ap = argparse.ArgumentParser(description=__doc__, parents=[pre])
     ap.add_argument("--customers", type=int, default=C.DEFAULT_CUSTOMERS)
     ap.add_argument("--seed", type=int, default=C.SEED)
     ap.add_argument("--out", type=Path, default=Path(__file__).resolve().parent.parent / "data")
@@ -102,6 +116,18 @@ def main():
     (out / "_ground_truth").mkdir(parents=True)
     tables["ground_truth"].to_csv(out / "_ground_truth" / "customer_labels.csv", index=False)
 
+    gt = tables["ground_truth"]
+    (out / "PROFILE.md").write_text(
+        f"# {C.BANK_NAME}\n\n{profile['label']}\n\n"
+        f"- Generated with: `uv run python datagen/generate.py --profile {profile_name} "
+        f"--customers {args.customers} --seed {args.seed} --out {args.out}`\n"
+        f"- As-of date: {C.AS_OF_DATE} · history {C.HISTORY_MONTHS} months · currency "
+        f"{C.CURRENCY}\n"
+        f"- Customers: {len(gt)} ({(gt.customer_type == 'SME').sum()} SME)\n"
+        f"- Clusters: " + "; ".join(f"{c['cluster_id']} ({c['note']})" for c in C.CLUSTERS)
+        + "\n\nSee `data/README.md` for the table dictionary (same schema as the default "
+        "sample).\n")
+    print(f"Profile: {profile_name} · {C.BANK_NAME}")
     print(f"Generated {args.customers} customers (seed {args.seed}, as-of "
           f"{C.AS_OF_DATE}) in {time.time() - t0:.1f}s -> {out}")
     for k, v in inputs.items():

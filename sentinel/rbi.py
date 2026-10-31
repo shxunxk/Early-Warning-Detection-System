@@ -31,7 +31,7 @@ DEFAULT_CONFIG = {
 }
 
 
-def _config(rules: dict | None) -> dict:
+def config(rules: dict | None) -> dict:
     if rules and "rbi_ews_config" in rules:
         cfg = {**DEFAULT_CONFIG, **rules["rbi_ews_config"]}
     else:
@@ -39,16 +39,16 @@ def _config(rules: dict | None) -> dict:
     return cfg
 
 
-def sma_classify(dpd: pd.Series, config: dict | None = None) -> pd.Series:
+def sma_classify(dpd: pd.Series, cfg_in: dict | None = None) -> pd.Series:
     """Map DPD values to SMA categories."""
-    cfg = _config(config)
+    cfg = config(cfg_in)
     buckets = cfg["sma_buckets"]
     cuts = [-1] + [b[1] for b in buckets]
     labels = [b[2] for b in buckets]
     return pd.cut(dpd.fillna(0).clip(lower=0), bins=cuts, labels=labels, right=True).astype(str)
 
 
-def sma_distribution(t: dict, as_of, config: dict | None = None) -> pd.DataFrame:
+def sma_distribution(t: dict, as_of, cfg_in: dict | None = None) -> pd.DataFrame:
     """Portfolio SMA distribution: facility count, customer count, outstanding by SMA category."""
     dl = t["delinquency"]
     dl = dl[dl.snapshot_date <= pd.Timestamp(as_of)]
@@ -56,7 +56,7 @@ def sma_distribution(t: dict, as_of, config: dict | None = None) -> pd.DataFrame
     fa = t["facilities"][["facility_id", "customer_id", "outstanding_balance", "portfolio"]].copy()
     fa["outstanding"] = pd.to_numeric(fa["outstanding_balance"], errors="coerce").fillna(0)
     merged = last[["facility_id", "days_past_due"]].merge(fa, on="facility_id", how="left")
-    merged["sma"] = sma_classify(merged.days_past_due, config)
+    merged["sma"] = sma_classify(merged.days_past_due, cfg_in)
     agg = merged.groupby("sma").agg(
         facility_count=("facility_id", "nunique"),
         customer_count=("customer_id", "nunique"),
@@ -67,14 +67,14 @@ def sma_distribution(t: dict, as_of, config: dict | None = None) -> pd.DataFrame
     return agg.reset_index().rename(columns={"sma": "sma_category"})
 
 
-def sma_distribution_by_portfolio(t: dict, as_of, config: dict | None = None) -> pd.DataFrame:
+def sma_distribution_by_portfolio(t: dict, as_of, cfg_in: dict | None = None) -> pd.DataFrame:
     """SMA distribution broken down by portfolio."""
     dl = t["delinquency"][t["delinquency"].snapshot_date <= pd.Timestamp(as_of)]
     last = dl.sort_values("snapshot_date").groupby("facility_id").tail(1)
     fa = t["facilities"][["facility_id", "customer_id", "outstanding_balance", "portfolio"]].copy()
     fa["outstanding"] = pd.to_numeric(fa["outstanding_balance"], errors="coerce").fillna(0)
     merged = last[["facility_id", "days_past_due"]].merge(fa, on="facility_id", how="left")
-    merged["sma"] = sma_classify(merged.days_past_due, config)
+    merged["sma"] = sma_classify(merged.days_past_due, cfg_in)
     return merged.groupby(["portfolio", "sma"]).agg(
         facility_count=("facility_id", "nunique"),
         outstanding=("outstanding", "sum"),
@@ -82,7 +82,7 @@ def sma_distribution_by_portfolio(t: dict, as_of, config: dict | None = None) ->
 
 
 def sma_migration_matrix(t: dict, as_of, period_months: int = 1,
-                         config: dict | None = None) -> pd.DataFrame:
+                         cfg_in: dict | None = None) -> pd.DataFrame:
     """Month-to-month SMA category transition matrix.
 
     Rows = SMA this period, Columns = SMA next period.
@@ -90,7 +90,7 @@ def sma_migration_matrix(t: dict, as_of, period_months: int = 1,
     """
     dl = t["delinquency"][t["delinquency"].snapshot_date <= pd.Timestamp(as_of)].copy()
     dl = dl.sort_values(["facility_id", "snapshot_date"])
-    dl["sma"] = sma_classify(dl.days_past_due, config)
+    dl["sma"] = sma_classify(dl.days_past_due, cfg_in)
     dl["sma_next"] = dl.groupby("facility_id").sma.shift(-1)
     tr = dl.dropna(subset=["sma_next"])
     matrix = pd.crosstab(tr.sma, tr.sma_next, normalize="index").reindex(
@@ -99,7 +99,7 @@ def sma_migration_matrix(t: dict, as_of, period_months: int = 1,
 
 
 def sma_trend(t: dict, as_of, months_back: int = 12,
-              config: dict | None = None) -> pd.DataFrame:
+              cfg_in: dict | None = None) -> pd.DataFrame:
     """Monthly SMA distribution over time for trend charts."""
     as_of = pd.Timestamp(as_of)
     dl = t["delinquency"].copy()
@@ -107,7 +107,7 @@ def sma_trend(t: dict, as_of, months_back: int = 12,
     fa["outstanding"] = pd.to_numeric(fa["outstanding_balance"], errors="coerce").fillna(0)
     dl = dl[dl.snapshot_date <= as_of]
     dl = dl[dl.snapshot_date > as_of - pd.DateOffset(months=months_back)]
-    dl["sma"] = sma_classify(dl.days_past_due, config)
+    dl["sma"] = sma_classify(dl.days_past_due, cfg_in)
     dl = dl[["facility_id", "snapshot_date", "sma"]].merge(fa, on="facility_id", how="left")
     dl["month"] = dl.snapshot_date.dt.to_period("M").dt.to_timestamp()
     agg = dl.groupby(["month", "sma"]).agg(
@@ -117,9 +117,9 @@ def sma_trend(t: dict, as_of, months_back: int = 12,
     return agg
 
 
-def ews_compliance_summary(view: pd.DataFrame, as_of, config: dict | None = None) -> dict:
+def ews_compliance_summary(view: pd.DataFrame, as_of, cfg_in: dict | None = None) -> dict:
     """EWS compliance metrics: TAT status, red-flag candidates, overdue alerts."""
-    cfg = _config(config)
+    cfg = config(cfg_in)
     as_of = pd.Timestamp(as_of)
     tat_days = cfg["alert_examination_tat_days"]
     threshold = cfg["high_exposure_threshold_aed"]
@@ -148,13 +148,13 @@ def ews_compliance_summary(view: pd.DataFrame, as_of, config: dict | None = None
 def generate_report(t: dict, view: pd.DataFrame, as_of,
                     rules: dict | None = None) -> dict:
     """Compile full RBI EWS report data for rendering or export."""
-    cfg = _config(rules)
+    cfg = config(rules)
     as_of_ts = pd.Timestamp(as_of)
     return dict(
         distribution=sma_distribution(t, as_of_ts, cfg),
         distribution_by_portfolio=sma_distribution_by_portfolio(t, as_of_ts, cfg),
-        migration_matrix=sma_migration_matrix(t, as_of_ts, config=cfg),
-        trend=sma_trend(t, as_of_ts, config=cfg),
+        migration_matrix=sma_migration_matrix(t, as_of_ts, cfg_in=cfg),
+        trend=sma_trend(t, as_of_ts, cfg_in=cfg),
         compliance=ews_compliance_summary(view, as_of_ts, cfg),
         metadata=dict(
             report_date=datetime.now().isoformat(),

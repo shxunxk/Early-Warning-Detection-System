@@ -75,6 +75,7 @@ and at as-of minus 3 months for the trajectory.
 | `sentinel/ingest.py` | 312 | File reading, header mapping, validation, relationship checks |
 | `sentinel/metrics.py` | 257 | Per-customer metrics at an as-of date |
 | `sentinel/scoring.py` | 155 | Signals → points → mitigation → triggers → confidence → tier, reasons, evidence |
+| `sentinel/forecast.py` | ~150 | Point-in-time LightGBM forecast of 30+ DPD in 1/3 months, out-of-time validation, SHAP drivers |
 | `sentinel/insights.py` | 116 | Roll-rate matrix, cluster detection, ground-truth evaluation |
 | `sentinel/store.py` | 80 | DuckDB persistence for alerts and decisions |
 | `sentinel/llm.py` | 112 | Ollama client, prompt, grounding check, template fallback |
@@ -305,6 +306,32 @@ Compare the score now with the score at as-of − 3 months (same rules):
 
 ---
 
+### Delinquency forecast (`sentinel/forecast.py`)
+Predicts a **real future outcome**: will a customer currently **below 30 DPD** reach
+**30+ DPD within 1 month / 3 months**? This differs from `ml.py` (Pranav's second-opinion
+model), which predicts the rule tier.
+
+| Step | Detail |
+|---|---|
+| Panel | For every past month-end from month 6 onwards (17 snapshots), recompute all metrics **as they stood then** (`metrics.compute(t, d)`), keep customers below 30 DPD at `d`, and label each row with whether the customer's max DPD reached 30 in the next 1 / 3 months. About 8.8k rows. Exception evidence is also filtered to what was recorded by `d` |
+| Features | The 20 behavioural metrics from `ml.FEATURE_COLS` + `is_sme` |
+| Model | LightGBM (300 trees, depth 4, learning rate 0.03, min 40 rows/leaf), one per horizon |
+| Validation | Out-of-time: last 3 labelled snapshots held out, then refit on all rows for scoring |
+| Output | `p_1m`, `p_3m` per customer (NaN if already 30+ DPD), top-3 SHAP drivers, monthly history of new 30+ DPD customers |
+| Cost | ~1.5 s panel + ~3.5 s training, cached per dataset (`st.cache_resource`) |
+
+**Back-test (sample data):**
+
+| Horizon | AUC | PR-AUC | Top-10% capture | Predicted vs actual events |
+|---|---|---|---|---|
+| Next month | 0.959 | 0.229 | 90.5% | 12 vs 21 |
+| Next quarter | 0.887 | 0.427 | 66.7% | 40 vs 54 |
+
+The model ranks well but **under-predicts totals**, because recent months had more new
+delinquencies than training months. Use rankings first and treat expected counts as a floor.
+
+**Red-flag rule:** below 30 DPD and P(30+ DPD in 3m) ≥ 20% (`FORECAST_FLAG` in `app.py`).
+
 ## 7. Alerts and review (`sentinel/store.py`)
 
 DuckDB file: `data/app/sentinel.duckdb` (git-ignored).
@@ -335,6 +362,13 @@ DuckDB file: `data/app/sentinel.duckdb` (git-ignored).
   sent (sign-insensitive, within 1% or 0.6). Otherwise the UI shows a warning and the template summary.
 - **Caching:** per customer + rules version + model in the Streamlit session; the caption shows tokens and latency.
 - **The LLM never computes or changes a score, tier or decision.**
+
+**Portfolio briefing (Home page):** `llm.briefing(facts, model)` sends the dashboard
+facts (KPI counts, top 5 forecast customers with drivers, escalations, hard triggers,
+emerging segments). The system prompt forbids invented numbers and requires calling
+forecasts "30+ DPD" probabilities, not default probabilities. The same grounding check
+applies, with `template_briefing` as the fallback. Typical cost: ~1,300 tokens in / ~330 out,
+~5 s.
 
 **Bake-off** (20 customers across all tiers, Apple M5 Pro):
 

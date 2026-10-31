@@ -99,14 +99,65 @@ def llm_summary(cid: str, ev: dict, reasons: list[str], model: str, action: str 
     prompt = ("Write 3-5 sentences explaining this customer's risk position and what is "
               "driving it, then a final line starting 'Suggested action:' based on "
               "policy_action_for_tier.\n\nFACTS:\n" + json.dumps(facts, indent=1))
-    body = json.dumps(dict(model=model, system=SYSTEM, prompt=prompt, stream=False, think=False,
-                           options=dict(temperature=0.1, num_predict=300))).encode()
+    return _generate(model, SYSTEM, prompt, {"cid": cid, **facts}, reasons, num_predict=300)
+
+
+def _generate(model: str, system: str, prompt: str, facts: dict, extra: list[str],
+              num_predict: int) -> dict:
+    body = json.dumps(dict(model=model, system=system, prompt=prompt, stream=False, think=False,
+                           options=dict(temperature=0.1, num_predict=num_predict))).encode()
     req = urllib.request.Request(f"{OLLAMA}/api/generate", data=body,
                                  headers={"Content-Type": "application/json"})
     with urllib.request.urlopen(req, timeout=120) as r:
         res = json.load(r)
     text = re.sub(r"<think>.*?</think>", "", res.get("response", ""), flags=re.S).strip()
-    ok, bad = grounded(text, {"cid": cid, **facts}, reasons)
+    ok, bad = grounded(text, facts, extra)
     return dict(text=text, grounded=ok, ungrounded_numbers=bad, model=model,
                 prompt_tokens=res.get("prompt_eval_count"), output_tokens=res.get("eval_count"),
                 seconds=round(res.get("total_duration", 0) / 1e9, 1))
+
+
+# ======================================================================================
+# Portfolio briefing (Home page)
+# ======================================================================================
+
+BRIEFING_SYSTEM = (
+    "You write a short daily early-warning briefing for a bank's credit risk team. "
+    "Forecast probabilities are the chance of reaching 30+ days past due (DPD); never call "
+    "them default probabilities. Use only the facts given. Never invent numbers, names, causes or dates. Copy numbers "
+    "exactly. Refer to customers by their ID. Plain text, no headings, no markdown.")
+
+
+def briefing(facts: dict, model: str) -> dict:
+    prompt = ("Write 4-6 bullet points (each starting with '- ') summarising the most "
+              "important risks for the team today: the forecast for next month and quarter, "
+              "the highest-priority customers and why, any emerging segment, and the review "
+              "backlog. End with one line starting 'Focus today:'.\n\nFACTS:\n"
+              + json.dumps(facts, indent=1, default=str))
+    return _generate(model, BRIEFING_SYSTEM, prompt, facts, [], num_predict=400)
+
+
+def template_briefing(f: dict) -> str:
+    k = f["kpis"]
+    lines = [f"- Forecast: about {k['expected_new_30dpd_next_month']} customers are expected to "
+             f"reach 30+ DPD next month and {k['expected_new_30dpd_next_quarter']} next quarter "
+             f"(AED {k['expected_exposure_at_risk_next_quarter_m']}M exposure)."]
+    if f["predicted_to_default"]:
+        c = f["predicted_to_default"][0]
+        lines.append(f"- {k['likely_to_hit_30dpd_count']} customers below 30 DPD are likely to "
+                     f"reach 30+ DPD within 3 months; highest is {c['customer']} "
+                     f"({c['p_next_quarter']} chance; {c['drivers']}).")
+    if f["newly_escalated"]:
+        lines.append(f"- {k['newly_escalated_count']} customers escalated to Amber/Red in the "
+                     f"last 3 months, led by {f['newly_escalated'][0]['customer']}.")
+    if f["hard_triggers"]:
+        lines.append(f"- {k['hard_trigger_count']} customers hit a hard trigger "
+                     f"(e.g. {f['hard_triggers'][0]['customer']}: "
+                     f"{f['hard_triggers'][0]['trigger']}).")
+    if f["emerging_segments"]:
+        s = f["emerging_segments"][0]
+        lines.append(f"- Emerging segment: {s['segment']} at {s['at_risk_rate_pct']}% at-risk vs "
+                     f"{s['portfolio_rate_pct']}% portfolio.")
+    lines.append(f"- Review backlog: {k['open_alerts']} open alerts.")
+    lines.append("\nFocus today: contact the top forecast customers before they miss a payment.")
+    return "\n".join(lines)
