@@ -20,14 +20,14 @@ from sentinel import (correlation, forecast, ingest, insights, interventions as 
 ROOT = Path(__file__).parent
 # Bundled portfolios: label -> (folder of CSVs, ground-truth labels or None).
 SOURCES = {
-    "Synthetic Gulf Bank · 600 customers (clean)":
+    "Synthetic Bharat Commercial Bank · 600 customers (clean)":
         (ROOT / "data/sample/csv", ROOT / "data/_ground_truth/customer_labels.csv"),
-    "Synthetic Gulf Bank · dirty (validation test)":
+    "Synthetic Bharat Commercial Bank · dirty (validation test)":
         (ROOT / "data/dirty/csv", None),
-    "Northern Emirates Commercial Bank · 1,200 customers, SME-heavy (clean)":
+    "Northern Plains Commercial Bank · 1,200 customers, MSME-heavy (clean)":
         (ROOT / "data/northern_sme/sample/csv",
          ROOT / "data/northern_sme/_ground_truth/customer_labels.csv"),
-    "Northern Emirates Commercial Bank · dirty (validation test)":
+    "Northern Plains Commercial Bank · dirty (validation test)":
         (ROOT / "data/northern_sme/dirty/csv", None),
 }
 SOURCES = {k: v for k, v in SOURCES.items() if v[0].exists()}
@@ -112,7 +112,7 @@ def build_view(t, rules, data_key):
         "customer_id").product_name
     _, p_worse = get_roll(data_key, str(as_of.date()), t)
     roll = insights.customer_roll_prob(t, as_of, p_worse)
-    v = cu[["customer_name", "customer_type", "customer_segment", "portfolio", "emirate",
+    v = cu[["customer_name", "customer_type", "customer_segment", "portfolio", "region",
             "employment_or_business_category"]].join(now)
     v["products"] = prods
     v["primary_product"] = primary
@@ -187,6 +187,37 @@ def tier_badge(t):
            f"border-radius:10px;font-weight:600'>{t}</span>"
 
 
+def inr(x, dp: int = 2) -> str:
+    """Amount in crore / lakh, the units an Indian credit team actually reads."""
+    if x is None or pd.isna(x):
+        return "n/a"
+    x = float(x)
+    sign, a = ("-" if x < 0 else ""), abs(x)
+    if a >= 1e7:
+        return f"{sign}₹{a / 1e7:,.{dp}f} Cr"
+    if a >= 1e5:
+        return f"{sign}₹{a / 1e5:,.{dp}f} L"
+    return f"{sign}₹{a:,.0f}"
+
+
+def inr_exact(x) -> str:
+    """Exact amount with Indian digit grouping: ₹1,06,00,000 rather than ₹10,600,000."""
+    if x is None or pd.isna(x):
+        return "n/a"
+    n = int(round(float(x)))
+    sign, s = ("-" if n < 0 else ""), str(abs(n))
+    if len(s) > 3:
+        head, tail = s[:-3], s[-3:]
+        parts = []
+        while len(head) > 2:
+            parts.insert(0, head[-2:])
+            head = head[:-2]
+        if head:
+            parts.insert(0, head)
+        s = ",".join(parts + [tail])
+    return f"{sign}₹{s}"
+
+
 # ======================================================================================
 # 1. Upload & Validate
 # ======================================================================================
@@ -224,10 +255,10 @@ if page == "Home":
     ear_3m = float((view.outstanding * view.p_3m.fillna(0)).sum()) if has_fc else None
 
     k = st.columns(3)
-    k[0].metric("Red today", int(red.sum()), f"AED {view[red].outstanding.sum() / 1e6:,.1f}M",
+    k[0].metric("Red today", int(red.sum()), inr(view[red].outstanding.sum(), 1),
                 delta_color="off")
     k[1].metric("Amber today", int(amber.sum()),
-                f"AED {view[amber].outstanding.sum() / 1e6:,.1f}M", delta_color="off")
+                inr(view[amber].outstanding.sum(), 1), delta_color="off")
     k[2].metric("Open alerts", open_alerts, help="Published alerts without an analyst decision")
     k = st.columns(3)
     k[0].metric("New 30+ DPD · 1m", f"{exp_1m:.1f}" if has_fc else "n/a",
@@ -235,9 +266,9 @@ if page == "Home":
                      "probabilities for customers currently below 30 DPD")
     k[1].metric("New 30+ DPD · 3m", f"{exp_3m:.1f}" if has_fc else "n/a",
                 help="Expected customers newly reaching 30+ DPD within the next quarter")
-    k[2].metric("At-risk AED · 3m", f"{ear_3m / 1e6:,.1f}M" if has_fc else "n/a",
+    k[2].metric("At-risk exposure · 3m", inr(ear_3m, 1) if has_fc else "n/a",
                 help="Expected exposure at risk next quarter: Σ outstanding × P(30+ DPD "
-                     "within 3 months), AED")
+                     "within 3 months)")
 
     # ------------------------------------------------------------------ red flags
     likely = view[(view.current_dpd < 30) & (view.p_3m >= FORECAST_FLAG)].sort_values(
@@ -259,7 +290,7 @@ if page == "Home":
         kpis=dict(red=int(red.sum()), amber=int(amber.sum()),
                   expected_new_30dpd_next_month=round(exp_1m or 0, 1),
                   expected_new_30dpd_next_quarter=round(exp_3m or 0, 1),
-                  expected_exposure_at_risk_next_quarter_m=round((ear_3m or 0) / 1e6, 1),
+                  expected_exposure_at_risk_next_quarter_cr=round((ear_3m or 0) / 1e7, 1),
                   open_alerts=open_alerts, hard_trigger_count=len(triggered),
                   likely_to_hit_30dpd_count=len(likely), newly_escalated_count=len(escalated),
                   emerging_segment_count=len(emerging), recovering_count=len(recovering)),
@@ -313,7 +344,7 @@ if page == "Home":
                                                     format="percent"),
             "p_3m": st.column_config.ProgressColumn("P(30+ DPD) 3m", min_value=0, max_value=1,
                                                     format="percent"),
-            "outstanding": st.column_config.NumberColumn("Outstanding (AED)", format="%,.0f"),
+            "outstanding": st.column_config.NumberColumn("Outstanding (₹)", format="%,.0f"),
             "forecast_drivers": st.column_config.TextColumn("Why (model drivers)",
                                                             width="large")}
     with tabs[0]:
@@ -479,7 +510,7 @@ elif page == "Portfolio Dashboard":
     k[1].metric("Red", int((view.tier == "Red").sum()))
     k[2].metric("Amber", int((view.tier == "Amber").sum()))
     k[3].metric("Watch", int((view.tier == "Watch").sum()))
-    k[4].metric("Outstanding at Amber/Red", f"AED {view[at_risk].outstanding.sum() / 1e6:,.1f}M")
+    k[4].metric("Outstanding at Amber/Red", inr(view[at_risk].outstanding.sum(), 1))
 
     c1, c2 = st.columns(2)
     with c1:
@@ -525,9 +556,9 @@ elif page == "Portfolio Dashboard":
     already_del = view[view.current_dpd > 0]
     pc1, pc2 = st.columns(2)
     pc1.metric("Pre-delinquent (DPD 0, Watch+)", f"{len(pre_del)}",
-               f"AED {pre_del.outstanding.sum() / 1e6:,.1f}M exposure", delta_color="off")
+               f"{inr(pre_del.outstanding.sum(), 1)} exposure", delta_color="off")
     pc2.metric("Already delinquent (DPD > 0)", f"{len(already_del)}",
-               f"AED {already_del.outstanding.sum() / 1e6:,.1f}M exposure", delta_color="off")
+               f"{inr(already_del.outstanding.sum(), 1)} exposure", delta_color="off")
 
     st.subheader("Biggest score movers vs 3 months ago")
     movers = view.assign(score_delta=view.risk_score - view.prev_score)
@@ -573,7 +604,7 @@ elif page == "Portfolio Dashboard":
     if len(pm):
         st.altair_chart(alt.Chart(pm.reset_index()).mark_circle(opacity=0.7).encode(
             x=alt.X("prob:Q", title="P(deterioration)", scale=alt.Scale(domain=[0, 1])),
-            y=alt.Y("outstanding:Q", title="Outstanding (AED)"),
+            y=alt.Y("outstanding:Q", title="Outstanding (₹)"),
             color=alt.Color("tier:N", scale=alt.Scale(domain=TIERS,
                                                        range=list(TIER_COLORS.values()))),
             size=alt.Size("priority_score:Q", scale=alt.Scale(range=[30, 500]),
@@ -617,13 +648,13 @@ elif page == "Watchlist":
     port = f[3].multiselect("Portfolio", sorted(view.portfolio.dropna().unique()))
     g = st.columns(5)
     dpdb = g[0].multiselect("Delinquency status", insights.BUCKETS)
-    emir = g[1].multiselect("Emirate", sorted(view.emirate.dropna().unique()))
+    emir = g[1].multiselect("Region", sorted(view.region.dropna().unique()))
     traj = g[2].multiselect("Trajectory", sorted(view.trajectory.unique()))
     conf = g[3].multiselect("Confidence", ["High", "Medium", "Low"])
     sma_f = g[4].multiselect("SMA category", rbi.SMA_CATEGORIES)
     w = view
     for col, sel in [("tier", tiers), ("customer_segment", seg), ("portfolio", port),
-                     ("dpd_bucket", dpdb), ("emirate", emir), ("trajectory", traj),
+                     ("dpd_bucket", dpdb), ("region", emir), ("trajectory", traj),
                      ("confidence", conf), ("sma_category", sma_f)]:
         if sel:
             w = w[w[col].isin(sel)]
@@ -645,7 +676,7 @@ elif page == "Watchlist":
         table, hide_index=True, use_container_width=True, height=520, on_select="rerun",
         selection_mode="single-row",
         column_config={
-            "outstanding": st.column_config.NumberColumn("Outstanding (AED)", format="%,.0f"),
+            "outstanding": st.column_config.NumberColumn("Outstanding (₹)", format="%,.0f"),
             "risk_score": st.column_config.ProgressColumn("Score", min_value=0, max_value=100,
                                                           format="%d"),
             "top_indicators": st.column_config.TextColumn("Contributing indicators",
@@ -687,7 +718,7 @@ elif page == "Customer":
     evd = r.evidence
     st.markdown(f"### {r.customer_name} &nbsp; {tier_badge(r.tier)}", unsafe_allow_html=True)
     st.caption(f"{cid} · {r.customer_type} · {r.employment_or_business_category} · "
-               f"{r.customer_segment} · {r.emirate} · {r.products}")
+               f"{r.customer_segment} · {r.region} · {r.products}")
     k = st.columns(7)
     k[0].metric("Risk score", f"{r.risk_score:.0f}", f"{r.risk_score - r.prev_score:+.0f} vs 3m",
                 delta_color="inverse")
@@ -695,7 +726,7 @@ elif page == "Customer":
     k[2].metric("Trajectory", r.trajectory)
     k[3].metric("Current DPD", f"{r.current_dpd:.0f}")
     k[4].metric("Roll-forward prob.", f"{100 * r.roll_prob:.0f}%")
-    k[5].metric("Outstanding", f"AED {r.outstanding:,.0f}")
+    k[5].metric("Outstanding", inr_exact(r.outstanding))
     k[6].metric("Recovery profile", r.recovery_profile)
     if r.insufficient_evidence:
         st.info("Insufficient evidence: limited history or data. Missing information is not "
@@ -811,7 +842,7 @@ elif page == "Customer":
     fi["income"] = fi.salary_credit.fillna(fi.business_receipts)
     long = fi.melt(id_vars="month_end_date", value_vars=["income", "total_inflows",
                                                          "average_balance"])
-    h2.caption("Income / inflows / average balance (AED)")
+    h2.caption("Income / inflows / average balance (₹)")
     h2.altair_chart(alt.Chart(long.dropna()).mark_line(point=True).encode(
         x="month_end_date:T", y="value:Q", color="variable:N"), use_container_width=True)
     h3, h4 = st.columns(2)
@@ -820,7 +851,7 @@ elif page == "Customer":
     h3.altair_chart(alt.Chart(ex.melt(id_vars="snapshot_date", value_vars=[
         "revolving_utilisation_pct"]).dropna()).mark_line(point=True).encode(
         x="snapshot_date:T", y="value:Q"), use_container_width=True)
-    h4.caption("Obligations: on-us vs other lenders (AED / month)")
+    h4.caption("Obligations: on-us vs other lenders (₹ / month)")
     h4.altair_chart(alt.Chart(ex.melt(id_vars="snapshot_date", value_vars=[
         "onus_monthly_obligation", "bureau_external_monthly_obligation"]).dropna()).mark_area(
         opacity=0.6).encode(x="snapshot_date:T", y=alt.Y("value:Q", stack=True),
@@ -958,7 +989,7 @@ elif page == "Investigation":
 
     st.markdown(f"### {r.customer_name} &nbsp; {tier_badge(r.tier)}", unsafe_allow_html=True)
     st.caption(f"{cid} · {r.customer_type} · {r.employment_or_business_category} · "
-               f"{r.customer_segment} · {r.emirate} · {r.products}")
+               f"{r.customer_segment} · {r.region} · {r.products}")
 
     k = st.columns(6)
     k[0].metric("Priority", f"{r.priority_score:.0f}", f"rank #{r.priority_rank:.0f}",
@@ -967,7 +998,7 @@ elif page == "Investigation":
                 f"{r.risk_score - r.prev_score:+.0f} vs 3m", delta_color="inverse")
     k[2].metric("SMA category", r.sma_category)
     k[3].metric("Trajectory", r.trajectory)
-    k[4].metric("Outstanding", f"AED {r.outstanding:,.0f}")
+    k[4].metric("Outstanding", inr_exact(r.outstanding))
     k[5].metric("Modules stressed", f"{int(r.n_modules_stressed)} / 4")
     if r.trigger:
         st.error(f"Hard trigger: {r.trigger}")
@@ -1150,7 +1181,7 @@ elif page == "Investigation":
 elif page == "RBI Reporting":
     st.header("RBI credit risk EWS reporting")
     cfg = rbi.config(ss.rules)
-    st.caption(f"SMA classification by days past due · amounts in AED · "
+    st.caption(f"SMA classification by days past due · amounts in INR · "
                f"alert examination TAT {cfg['alert_examination_tat_days']} days · "
                f"escalation {cfg['escalation_deadline_days']} days · "
                f"resolution {cfg['resolution_deadline_days']} days. "
@@ -1162,14 +1193,14 @@ elif page == "RBI Reporting":
     k = st.columns(5)
     k[0].metric("Customers", comp["total_customers"])
     k[1].metric("At risk (Amber/Red)", comp["at_risk_count"],
-                f"AED {comp['at_risk_exposure'] / 1e6:,.1f}M", delta_color="off")
+                inr(comp['at_risk_exposure'], 1), delta_color="off")
     k[2].metric("Pre-delinquent", comp["pre_delinquent_count"],
-                f"AED {comp['pre_delinquent_exposure'] / 1e6:,.1f}M", delta_color="off")
+                inr(comp['pre_delinquent_exposure'], 1), delta_color="off")
     k[3].metric("Already delinquent", comp["already_delinquent_count"],
-                f"AED {comp['already_delinquent_exposure'] / 1e6:,.1f}M", delta_color="off")
-    k[4].metric(f"At risk over AED {comp['exposure_threshold'] / 1e6:,.1f}M",
+                inr(comp['already_delinquent_exposure'], 1), delta_color="off")
+    k[4].metric(f"At risk over {inr(comp['exposure_threshold'], 1)}",
                 comp["high_exposure_at_risk"],
-                f"AED {comp['high_exposure_amount'] / 1e6:,.1f}M", delta_color="off")
+                inr(comp['high_exposure_amount'], 1), delta_color="off")
 
     c1, c2 = st.columns(2)
     with c1:
@@ -1179,7 +1210,7 @@ elif page == "RBI Reporting":
             "sma_category": "SMA category",
             "facility_count": "Facilities",
             "customer_count": "Customers",
-            "outstanding_amount": st.column_config.NumberColumn("Outstanding (AED)",
+            "outstanding_amount": st.column_config.NumberColumn("Outstanding (₹)",
                                                                 format="%,.0f"),
             "pct_of_portfolio": st.column_config.NumberColumn("% of book", format="%.1f%%")})
         st.altair_chart(alt.Chart(dist).mark_bar().encode(
@@ -1194,7 +1225,7 @@ elif page == "RBI Reporting":
         by_port = report["distribution_by_portfolio"]
         if len(by_port):
             st.altair_chart(alt.Chart(by_port).mark_bar().encode(
-                x=alt.X("outstanding:Q", title="Outstanding (AED)", stack="normalize"),
+                x=alt.X("outstanding:Q", title="Outstanding (₹)", stack="normalize"),
                 y=alt.Y("portfolio:N", title=None),
                 color=alt.Color("sma_category:N", sort=rbi.SMA_CATEGORIES,
                                 scale=alt.Scale(domain=rbi.SMA_CATEGORIES, range=SMA_COLORS)),
@@ -1237,7 +1268,7 @@ elif page == "RBI Reporting":
                                         "current_dpd", "outstanding", "risk_score", "tier",
                                         "trajectory", "primary_recommendation"]],
                      hide_index=True, use_container_width=True, column_config={
-                         "outstanding": st.column_config.NumberColumn("Outstanding (AED)",
+                         "outstanding": st.column_config.NumberColumn("Outstanding (₹)",
                                                                       format="%,.0f")})
 
     st.divider()
@@ -1289,7 +1320,7 @@ elif page == "AI Assistant":
         facts["customer_name"] = r.customer_name
         facts["customer_type"] = r.customer_type
         facts["products"] = r.products
-        facts["outstanding"] = f"AED {r.outstanding:,.0f}"
+        facts["outstanding"] = inr_exact(r.outstanding)
         facts["trajectory"] = r.trajectory
         facts["recovery_profile"] = r.recovery_profile
         facts["roll_forward_prob"] = f"{100 * r.roll_prob:.0f}%"

@@ -141,7 +141,7 @@ def template_briefing(f: dict) -> str:
     k = f["kpis"]
     lines = [f"- Forecast: about {k['expected_new_30dpd_next_month']} customers are expected to "
              f"reach 30+ DPD next month and {k['expected_new_30dpd_next_quarter']} next quarter "
-             f"(AED {k['expected_exposure_at_risk_next_quarter_m']}M exposure)."]
+             f"(₹{k['expected_exposure_at_risk_next_quarter_cr']} Cr exposure)."]
     if f["predicted_to_default"]:
         c = f["predicted_to_default"][0]
         lines.append(f"- {k['likely_to_hit_30dpd_count']} customers below 30 DPD are likely to "

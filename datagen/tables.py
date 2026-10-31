@@ -200,7 +200,7 @@ def _customer_row(c: Customer) -> dict:
         date_of_birth=a["date_of_birth"], employment_type=a["employment_type"],
         employment_or_business_category=a["employment_or_business_category"],
         customer_segment=a["customer_segment"], portfolio=a["portfolio"],
-        emirate=a["emirate"], customer_since=month_start(c.onboard_month) +
+        region=a["region"], customer_since=month_start(c.onboard_month) +
         timedelta(days=int(c.customer_id[-2:]) % 27),
         onboarding_risk_grade=c.grade,
         salary_transfer_flag="Y" if c.salary_transfer else "N",
@@ -317,7 +317,7 @@ def _financials(c: Customer, rng) -> list[dict]:
             m = month_index(when)
             if 0 <= m < n:
                 pay_m[m] += amt
-        if f.channel in ("DIRECT_DEBIT", "CHEQUE"):
+        if f.channel in ("NACH_DEBIT", "CHEQUE"):
             for inst in f.instalments:
                 if inst.paid_by(inst.due_date + timedelta(days=5)) < inst.amount_due - 0.5:
                     missed_dd[inst.month] += 1

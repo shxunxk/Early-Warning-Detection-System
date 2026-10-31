@@ -41,7 +41,7 @@ for name, bad in coerced.items():
     check(name, bad)
 check("customers: missing customer_type", cu.customer_type.isna())
 check("customers: invalid customer_type", ~cu.customer_type.dropna().isin(["INDIVIDUAL", "SME"]))
-check("facilities: currency != AED", fa.currency != "AED")
+check("facilities: currency != INR", fa.currency != "INR")
 cust = set(cu.customer_id)
 fac_owner = dict(zip(fa.facility_id, fa.customer_id))
 check("customers: duplicate ids", cu.customer_id.duplicated())

@@ -252,7 +252,7 @@ def _cross_checks(t: dict[str, pd.DataFrame], issues: list):
              "Unknown customer")
         f = t["facilities"]
         if "currency" in f:
-            drop("facilities", f.currency.notna() & (f.currency != "AED"), "currency",
+            drop("facilities", f.currency.notna() & (f.currency != "INR"), "currency",
                  "CURRENCY_MISMATCH", "Non-portfolio currency", "WARNING")
         if {"facility_status", "outstanding_balance"} <= set(f.columns):
             drop("facilities", (f.facility_status == "CLOSED") & (f.outstanding_balance > 0),

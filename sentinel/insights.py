@@ -93,8 +93,8 @@ def wilson_low(k, n, z=1.96):
     return (centre - spread) / den
 
 
-SEGMENTS = [("employment_or_business_category", "emirate"),
-            ("primary_product", "emirate"),
+SEGMENTS = [("employment_or_business_category", "region"),
+            ("primary_product", "region"),
             ("employment_or_business_category",),
             ("customer_segment", "portfolio")]
 

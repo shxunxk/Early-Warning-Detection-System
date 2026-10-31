@@ -8,7 +8,7 @@ SMA (Special Mention Account) categories per RBI norms:
   NPA:      DPD 91+
 
 Thresholds are configurable via the rbi_ews_config section in the rules file.
-Currency stays AED (dataset native); exposure thresholds are configurable.
+Amounts are INR, matching the dataset.
 """
 
 from __future__ import annotations
@@ -25,7 +25,7 @@ DEFAULT_CONFIG = {
     "alert_examination_tat_days": 30,
     "escalation_deadline_days": 7,
     "resolution_deadline_days": 180,
-    "high_exposure_threshold_aed": 1_000_000,
+    "high_exposure_threshold_inr": 25_000_000,
     "sma_buckets": [[0, 0, "Standard"], [1, 30, "SMA-0"], [31, 60, "SMA-1"],
                      [61, 90, "SMA-2"], [91, 999_999, "NPA"]],
 }
@@ -122,7 +122,7 @@ def ews_compliance_summary(view: pd.DataFrame, as_of, cfg_in: dict | None = None
     cfg = config(cfg_in)
     as_of = pd.Timestamp(as_of)
     tat_days = cfg["alert_examination_tat_days"]
-    threshold = cfg["high_exposure_threshold_aed"]
+    threshold = cfg["high_exposure_threshold_inr"]
 
     at_risk = view[view.tier.isin(["Amber", "Red"])]
     high_exposure = at_risk[at_risk.outstanding >= threshold]
