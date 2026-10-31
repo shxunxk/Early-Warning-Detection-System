@@ -77,6 +77,20 @@ def _repayment_metrics(t, as_of, grace, params, m):
     m["partial_payments"] = m.partial_payments.fillna(0).where(m._months_with_dues.notna())
     m["isolated_delay_recovered"] = m.isolated_delay_recovered.fillna(0)
 
+    # Consecutive missed months (for hard trigger: 2+ consecutive → ≥ Amber).
+    def _consec_missed(grp):
+        months = grp.sort_values("month")
+        vals = months.irregular.values
+        run = 0
+        for v in vals[::-1]:
+            if v:
+                run += 1
+            else:
+                break
+        return run
+    cm = mon.groupby("customer_id").apply(_consec_missed)
+    m["_consecutive_missed_months"] = cm.reindex(m.index).fillna(0)
+
     # Evidence near the irregular month (verified documents strengthen the mitigation).
     ev = t.get("exception_evidence")
     if ev is not None and len(ev):
