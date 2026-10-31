@@ -42,6 +42,7 @@ means and a demo walkthrough, see **[docs/UI_GUIDE.md](docs/UI_GUIDE.md)**.
 ## Pages
 | Page | What it shows |
 |---|---|
+| Home | Today's Red/Amber, forecast of new 30+ DPD customers next month/quarter, AI briefing, red-flag tabs (silent stress, escalations, triggers, clusters, recovering), outlook charts, model card |
 | Upload & Validate | CSV / Excel / JSON upload or bundled sample; accepted vs rejected rows; validation issues |
 | Portfolio | Tier mix, trajectory, emerging risk clusters, roll-rate matrix, accuracy vs ground truth |
 | Watchlist | Filterable customer list with score, tier, confidence, trajectory and contributing indicators |

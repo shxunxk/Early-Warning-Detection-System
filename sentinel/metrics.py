@@ -94,8 +94,11 @@ def _repayment_metrics(t, as_of, grace, params, m):
     # Evidence near the irregular month (verified documents strengthen the mitigation).
     ev = t.get("exception_evidence")
     if ev is not None and len(ev):
+        # Only evidence already on file at the as-of date (keeps past snapshots point-in-time).
+        known = ev.recorded_date if "recorded_date" in ev else ev.event_date
+        ev = ev[known.fillna(ev.event_date) <= as_of]
         irr = rp[rp.irregular].groupby("customer_id").due_date.max()
-        e = ev.merge(irr.rename("irr_date"), left_on="customer_id", right_index=True)
+        e = ev.merge(irr.rename("irr_date").reset_index(), on="customer_id")
         near = e[(e.event_date - e.irr_date).dt.days.abs() <= 45]
         m["_evidence_verified"] = near.groupby("customer_id").verified_flag.apply(
             lambda s: (s == "Y").any())

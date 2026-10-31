@@ -10,16 +10,17 @@ Start the app with `uv run streamlit run app.py` and open http://localhost:8501.
 ## Contents
 1. [Layout and conventions](#1-layout-and-conventions)
 2. [Sidebar](#2-sidebar)
-3. [Upload & Validate](#3-upload--validate)
-4. [Portfolio](#4-portfolio)
-5. [Watchlist](#5-watchlist)
-6. [Customer](#6-customer)
-7. [Review](#7-review)
-8. [Rules](#8-rules)
-9. [Common interactions](#9-common-interactions)
-10. [Suggested demo walkthrough](#10-suggested-demo-walkthrough)
-11. [Glossary](#11-glossary)
-12. [Known UI quirks](#12-known-ui-quirks)
+3. [Home](#3-home)
+4. [Upload & Validate](#4-upload--validate)
+5. [Portfolio](#5-portfolio)
+6. [Watchlist](#6-watchlist)
+7. [Customer](#7-customer)
+8. [Review](#8-review)
+9. [Rules](#9-rules)
+10. [Common interactions](#10-common-interactions)
+11. [Suggested demo walkthrough](#11-suggested-demo-walkthrough)
+12. [Glossary](#12-glossary)
+13. [Known UI quirks](#13-known-ui-quirks)
 
 ---
 
@@ -52,7 +53,7 @@ Start the app with `uv run streamlit run app.py` and open http://localhost:8501.
 |---|---|---|
 | **🛡️ Sentinel EWS** | Title | App name |
 | *Early Warning System · prototype* | Caption | — |
-| **Navigate** | Radio buttons | Switches between the 6 pages. The Watchlist's **Open customer** button also changes it |
+| **Navigate** | Radio buttons | Switches between pages (Home first). The Watchlist's **Open customer** button also changes it |
 | **Data:** | Text | Which dataset is loaded: *Sample portfolio (clean)*, *Sample portfolio (dirty, for validation)*, or *Upload (N files)* |
 | **As-of date:** | Text | The analysis date from the rules file parameters |
 | **Rules version:** | Code tag (e.g. `a6ea3bc9`) | Short fingerprint of the rules in use. It changes when rules are edited on the Rules page. It's part of the alert run ID and the AI summary cache key, so you can tell which rules produced a result |
@@ -61,12 +62,74 @@ Start the app with `uv run streamlit run app.py` and open http://localhost:8501.
 
 ---
 
-## 3. Upload & Validate
+## 3. Home
+
+**Purpose:** the landing page. In one screen, the team sees how many customers are in
+trouble today, how many are **forecast** to get into trouble, which red flags need action,
+and an AI-written briefing.
+
+### 3.1 Headline metrics (two rows)
+| Metric | Meaning |
+|---|---|
+| **Red today** / **Amber today** | Customers in each tier now; the grey tag below is their outstanding balance (AED M) |
+| **Open alerts** | Published alerts with no analyst decision yet (the review backlog) |
+| **New 30+ DPD · 1m** | Expected number of customers, currently below 30 DPD, who will reach 30+ DPD **next month**: the sum of their forecast probabilities |
+| **New 30+ DPD · 3m** | The same for the **next quarter** (3 months) |
+| **At-risk AED · 3m** | Expected exposure at risk next quarter: Σ outstanding × P(30+ DPD within 3 months), in AED millions |
+
+Hover the ⓘ icons for definitions. Forecast tiles show *n/a* if LightGBM isn't available.
+
+### 3.2 🧠 AI risk briefing
+| Element | Behaviour |
+|---|---|
+| Bordered box | By default shows a **deterministic template briefing** built from the numbers on the page, so it's always available |
+| **Generate briefing (model)** | Sends the dashboard facts (KPIs, top 5 forecast customers with drivers, top escalations, hard triggers, emerging segments) to the local LLM, which writes 4–6 bullets and a *Focus today* line |
+| Source caption | Model, *"numbers verified against the dashboard"*, tokens and seconds. If the model writes a number that isn't on the dashboard, a warning appears and the template is shown instead |
+
+Briefings are cached per dataset + rules version + model. Typical cost on qwen3:4b-instruct:
+about 1,300 tokens in, 330 out, 5 seconds.
+
+### 3.3 🚩 Red flags (tabs)
+Each tab title shows its count. Select a row and press **Open CIFxxxxx →** to jump to the Customer page.
+
+| Tab | Who is listed | Why it matters |
+|---|---|---|
+| **🔮 Likely to hit 30+ DPD** | Customers **below 30 DPD today** with ≥ 20% forecast probability of reaching 30+ DPD within 3 months, highest first. Columns: tier, current DPD, **P(30+ DPD) 1m / 3m** bars, outstanding, **Why (model drivers)** | Catches **silent stress**: customers the rules still rate Green/Watch who are likely to miss payments. Act before they miss |
+| **🔺 Newly escalated** | Tier moved up into Amber/Red vs 3 months ago (`prev_tier` → `tier`), with top indicators | Fresh deterioration needing a first review |
+| **⛔ Hard triggers** | Customers where an override applied: 90+ DPD → Red; 30+ DPD or 2+ consecutive missed months → at least Amber | Non-negotiable escalations |
+| **🧩 Emerging segments** | Segments whose Amber/Red rate is significantly above the portfolio (same test as the Portfolio page) | Concentration risk across many customers |
+| **🔁 Recovering** | Were Amber/Red 3 months ago, now Green/Watch | Candidates to de-escalate or close alerts |
+
+### 3.4 📈 Delinquency outlook
+| Chart | Shows |
+|---|---|
+| **Customers newly reaching 30+ DPD per month** | Grey bars: actual counts for the last 12 months. Orange bar: the **next-month forecast**. Puts the forecast in historical context |
+| **Expected new 30+ DPD customers next quarter, by primary product** | Where the forecast risk is concentrated; hover for expected count and exposure at risk |
+
+### 3.5 Model card (expander)
+How the forecast works (target, model, point-in-time training, out-of-time validation,
+SHAP drivers) and a table of back-test results per horizon:
+
+| Column | Meaning |
+|---|---|
+| `train_rows` / `test_rows` | Customer-month rows used for training / testing |
+| `train_period` / `test_period` | Snapshot dates in each set; the test months come after training |
+| `Event rate (%)` | Share of test rows that reached 30+ DPD |
+| `AUC` | Chance a customer who went 30+ DPD was ranked above one who didn't (0.5 = random, 1 = perfect) |
+| `PR-AUC` | Precision-recall area; meaningful when events are rare |
+| `Top-10% capture (%)` | Share of actual events found in the 10% highest-scored customers |
+| `Predicted / Actual events (test)` | Calibration check: summed probabilities vs what happened |
+
+The forecast is **advisory** and never changes the rule-based score or tier.
+
+---
+
+## 4. Upload & Validate
 
 **Purpose:** load portfolio data and show what was accepted, rejected and why
 (required capability 1). This is the landing page.
 
-### 3.1 Loading data
+### 4.1 Loading data
 | Element | Type | Behaviour |
 |---|---|---|
 | **Bundled dataset** | Dropdown | *Sample portfolio (clean)*: the 600-customer synthetic portfolio. *Sample portfolio (dirty, for validation)*: the same data with 72 deliberate defects |
@@ -74,7 +137,7 @@ Start the app with `uv run streamlit run app.py` and open http://localhost:8501.
 | **…or upload files** | File drop zone | Accepts multiple `.csv`, `.xlsx` or `.json` files (200 MB each). Tables are recognised by file or sheet name (e.g. `customers.csv`, a workbook with a `repayments` sheet, `loans.json` → facilities) |
 | **Validate uploaded files** | Button (appears after files are chosen) | Reads, maps headers, validates and replaces the current dataset. The sidebar then shows *Upload (N files)* |
 
-### 3.2 Summary metrics
+### 4.2 Summary metrics
 | Metric | Meaning |
 |---|---|
 | **Records received** | Total rows read across all tables, including rejected ones |
@@ -82,7 +145,7 @@ Start the app with `uv run streamlit run app.py` and open http://localhost:8501.
 | **Rejected (errors)** | Rows dropped because of an ERROR (blank mandatory field, bad date, negative amount, orphan reference, duplicate key…) |
 | **Warnings** | Issues that were corrected or flagged, with the row kept |
 
-### 3.3 Per table
+### 4.3 Per table
 A table with one row per input table:
 
 | Column | Meaning |
@@ -92,7 +155,7 @@ A table with one row per input table:
 | `rejected` | Rows dropped (including knock-on orphans) |
 | `accepted` | Rows kept |
 
-### 3.4 Relationships
+### 4.4 Relationships
 Shows that the tables are linked to each other:
 
 | Column | Meaning |
@@ -103,7 +166,7 @@ Shows that the tables are linked to each other:
 
 For example, *facilities → repayments, 1037 of 1037* means every facility has repayment records.
 
-### 3.5 Validation issues (N)
+### 4.5 Validation issues (N)
 Shown when there are issues. With the clean sample it shows a green
 *"No issues found. All records accepted and linked."* box instead.
 
@@ -128,23 +191,23 @@ Issues table columns:
 
 ---
 
-## 4. Portfolio
+## 5. Portfolio
 
 **Purpose:** a management view of portfolio risk, emerging concentrations and model accuracy.
 
-### 4.1 Headline metrics
+### 5.1 Headline metrics
 | Metric | Meaning |
 |---|---|
 | **Customers** | Customers scored |
 | **Red / Amber / Watch** | Customers in each tier (Green = the rest) |
 | **Outstanding at Amber/Red** | Sum of current on-us outstanding balance for Amber and Red customers, in AED millions |
 
-### 4.2 Tier mix by portfolio
+### 5.2 Tier mix by portfolio
 - **Chart:** horizontal stacked bar, one bar per portfolio (Consumer Banking, Business Banking).
 - **Reading it:** segment length is the number of customers in each tier, coloured by tier.
   A bigger orange and red share means a riskier portfolio. Hover for exact counts.
 
-### 4.3 Trajectory (vs 3 months ago)
+### 5.3 Trajectory (vs 3 months ago)
 - **Chart:** horizontal bar of customers per trajectory.
 - **Categories:**
   - **Stable:** score within ±10 points
@@ -153,7 +216,7 @@ Issues table columns:
   - **Recovering:** was Amber or Red, now Green or Watch
   - **New:** no score 3 months ago
 
-### 4.4 Emerging risk clusters
+### 5.4 Emerging risk clusters
 - **Caption:** the rule used. A segment is emerging when its Amber/Red rate is significantly
   above the portfolio rate (Wilson 95% lower bound above the portfolio rate, with at least 3
   at-risk customers).
@@ -173,7 +236,7 @@ Issues table columns:
 | `exposure_at_risk` | Outstanding balance of the segment's Amber/Red customers, AED |
 | **Emerging** | ☑ when the segment meets the emerging rule |
 
-### 4.5 Roll-rate matrix
+### 5.5 Roll-rate matrix
 - **Chart:** heatmap with text labels.
 - **Rows:** this month's DPD bucket. **Columns:** next month's bucket.
 - **Cells:** the percentage of facilities in the row bucket that moved to the column bucket
@@ -182,7 +245,7 @@ Issues table columns:
   (getting worse); cells left of it are **cures**. For example, *1-30 → Current 60%* means
   60% of early-delinquent facilities cure the next month.
 
-### 4.6 Accuracy vs planted ground truth
+### 5.6 Accuracy vs planted ground truth
 Shown **only for the clean sample**, which has planted answers. Hidden for the dirty set and uploads.
 
 | Metric | Meaning |
@@ -199,11 +262,11 @@ Shown **only for the clean sample**, which has planted answers. Hidden for the d
 
 ---
 
-## 5. Watchlist
+## 6. Watchlist
 
 **Purpose:** the working list of customers needing attention (required capability 4).
 
-### 5.1 Filters
+### 6.1 Filters
 Two rows of multi-select filters. Empty means no filter, and filters combine with AND.
 
 | Filter | Options | Default |
@@ -220,7 +283,7 @@ Two rows of multi-select filters. Empty means no filter, and filters combine wit
 The caption under the filters shows the number of matching customers and the sort order:
 **tier (Red first) → score → exposure at risk**.
 
-### 5.2 Table columns
+### 6.2 Table columns
 | Column | Meaning |
 |---|---|
 | (checkbox) | Select a row to enable **Open customer** |
@@ -229,6 +292,7 @@ The caption under the filters shows the number of matching customers and the sor
 | `products` | Active products, comma-separated |
 | **Outstanding (AED)** | Current on-us outstanding balance |
 | **Score** | Risk score as a 0–100 progress bar |
+| **P(30+ DPD) 3m** | Forecast probability of reaching 30+ DPD within 3 months (blank for customers already 30+ DPD) |
 | `tier` | Green / Watch / Amber / Red |
 | `confidence` | High / Medium / Low, from data completeness. Low means "limited data", not "low risk" |
 | `trajectory` | Change vs 3 months ago |
@@ -238,7 +302,7 @@ The caption under the filters shows the number of matching customers and the sor
 | `review_status` | Latest analyst decision on the customer's most recent alert. **OPEN** = alert published but not decided; **—** = no alert published |
 | `customer_segment`, `portfolio` | Segment attributes |
 
-### 5.3 Actions
+### 6.3 Actions
 | Element | Behaviour |
 |---|---|
 | **Open CIFxxxxx →** | Appears after selecting a row. Goes to the Customer page for that customer |
@@ -246,19 +310,19 @@ The caption under the filters shows the number of matching customers and the sor
 
 ---
 
-## 6. Customer
+## 7. Customer
 
 **Purpose:** explain one customer's score and show the evidence behind it (required
 capabilities 3 and 4).
 
-### 6.1 Header
+### 7.1 Header
 | Element | Meaning |
 |---|---|
 | **Customer** dropdown | All customers, highest score first, shown as `ID · name · tier score`. Type to search. Defaults to the last opened customer |
 | **Name + tier badge** | Customer name with a coloured tier pill |
 | Caption line | ID · type (INDIVIDUAL/SME) · employer sector or industry · segment · emirate · active products |
 
-### 6.2 Headline metrics
+### 7.2 Headline metrics
 | Metric | Meaning |
 |---|---|
 | **Risk score** | Current 0–100 score. The small delta below is the change vs 3 months ago; **an increase shows red, a decrease green** |
@@ -268,14 +332,14 @@ capabilities 3 and 4).
 | **Roll-forward prob.** | Historical probability that a facility in this customer's current bucket and portfolio moves to a worse bucket next month (from the roll-rate matrix) |
 | **Outstanding** | On-us outstanding balance, AED |
 
-### 6.3 Banners
+### 7.3 Banners
 | Banner | When it appears |
 |---|---|
 | 🔵 **Insufficient evidence…** (info) | Confidence is Low and there's no hard evidence (no arrears, no repeated lateness). The tier is capped at Watch, because missing data is not treated as risk |
 | 🔴 **Hard trigger: DPD ≥ 90 / DPD ≥ 30** (error) | An override forced the tier up: 90+ days → Red, 30+ days → at least Amber |
 | **Recommended action:** | Policy action for the tier, from the rules file |
 
-### 6.4 How the score was calculated (left column)
+### 7.4 How the score was calculated (left column)
 | Element | Meaning |
 |---|---|
 | **Points bar chart** | One bar per signal that contributed. **Orange** bars add risk; **green** bars (negative) are mitigation. Hover for the metric value, operator, threshold, strength (0–1) and points |
@@ -283,7 +347,7 @@ capabilities 3 and 4).
 | **Reason bullets** | Each fired signal in plain English with its value vs threshold, largest effect first, e.g. *"Delinquency at other lenders: 120 days (threshold ≥ 30 days)"* |
 | **All signals (incl. not evaluated)** expander | Every rule for this customer: `id`, `name`, `category`, `value`, `operator`, `threshold`, `strength`, `points` and **status**: *fired* (earned points), *ok* (evaluated, below threshold) or *not evaluated (no data)* (e.g. no salary visibility, bureau no-hit) |
 
-### 6.5 Module indices (right column)
+### 7.5 Module indices (right column)
 A small table showing how stressed each area is, from 0 to 100: the share of available
 points earned among signals that could be evaluated.
 
@@ -296,7 +360,7 @@ points earned among signals that could be evaluated.
 
 A blank index means none of that module's signals could be evaluated (no data).
 
-### 6.6 AI risk summary (right column)
+### 7.6 AI risk summary (right column)
 | Element | Behaviour |
 |---|---|
 | **Generate summary (model)** button | Shows the model to be used, e.g. *(qwen3:4b-instruct)*, or *(template)* when Ollama is off. Click to generate |
@@ -309,15 +373,25 @@ Summaries are kept per customer + rules version + model. Revisiting a customer s
 stored summary without calling the model again; press the button to regenerate. **The AI
 never changes the score or tier.**
 
-### 6.7 History charts
+### 7.6a 🔮 Delinquency forecast
+Shown for customers below 30 DPD.
+
+| Element | Meaning |
+|---|---|
+| **P(30+ DPD) next month / next quarter** | Forecast probabilities from the point-in-time LightGBM model |
+| **Why** | Top SHAP drivers pushing the probability up, e.g. *utilisation spike, current arrears, high utilisation* |
+| ⚠️ **Silent stress** warning | Shown when the rules rate the customer Green or Watch but the 3-month forecast is ≥ 20%. Suggests early contact |
+| *Forecast not shown…* caption | Customer is already 30+ DPD; use the roll-forward probability instead |
+
+### 7.7 History charts
 | Chart | Shows |
 |---|---|
 | **Max days past due (month-end)** | Red area chart of the worst facility's DPD at each month-end over 24 months. A rising area is deterioration; a drop to zero is a cure |
 | **Income / inflows / average balance (AED)** | Monthly lines: `income` (salary credit, or business receipts for SMEs), `total_inflows`, `average_balance`. Gaps are missing months; there's no income line if salary isn't credited to this bank |
-| **Revolving utilisation %** (captioned *"…and bureau score"*, see §12) | Monthly card / working-capital utilisation. Above 85% is high; above 100% is over limit |
+| **Revolving utilisation %** (captioned *"…and bureau score"*, see §13) | Monthly card / working-capital utilisation. Above 85% is high; above 100% is over limit |
 | **Obligations: on-us vs other lenders (AED / month)** | Stacked area: `onus_monthly_obligation` (this bank) and `bureau_external_monthly_obligation` (other lenders). A growing top layer means new borrowing elsewhere |
 
-### 6.8 Detail tabs
+### 7.8 Detail tabs
 | Tab | Contents |
 |---|---|
 | **Repayments** | Every instalment in the window, newest first: due date, amount due, payment date, amount paid, days late, status (PAID_ON_TIME / PAID_LATE / PARTIALLY_PAID / UNPAID), channel |
@@ -327,12 +401,12 @@ never changes the score or tier.**
 
 ---
 
-## 7. Review
+## 8. Review
 
 **Purpose:** analyst triage with an audit trail, preserving the original score and
 evidence (required capability 5).
 
-### 7.1 Publishing alerts
+### 8.1 Publishing alerts
 | Element | Behaviour |
 |---|---|
 | Explanation text | Publishing freezes score, tier and evidence; decisions never change the frozen alert |
@@ -340,14 +414,14 @@ evidence (required capability 5).
 | ✅ *N new alerts frozen* | Confirmation after publishing |
 | ℹ️ *No alerts yet. Publish a run first.* | Shown until the first publish |
 
-### 7.2 Alert list
+### 8.2 Alert list
 | Element | Meaning |
 |---|---|
 | **Status** filter | OPEN (no decision yet) or any decision type. Defaults to OPEN; clear it to see all |
 | Alerts table | `alert_id` (AL-xxxxxxxx), `customer_id`, `original_tier`, `original_score`, `confidence`, `status` (latest decision or OPEN), `decisions` (count), `run_id`, `created_at`. Sorted by original score, highest first |
 | **Alert** dropdown | Choose the alert to review (`ID · customer · original tier`) |
 
-### 7.3 Alert detail
+### 8.3 Alert detail
 | Element | Meaning |
 |---|---|
 | **Original (frozen)** + badge | Tier, score and confidence when the alert was published. Never changes |
@@ -356,7 +430,7 @@ evidence (required capability 5).
 | **Live (current rules)** + badge | The customer's score now, under the current rules and data |
 | *Live score differs…* caption | Shown when live ≠ frozen (e.g. after a rules edit), confirming the original is preserved |
 
-### 7.4 Decision form
+### 8.4 Decision form
 | Element | Behaviour |
 |---|---|
 | **Decision** radio | Continue Monitoring · Requires Investigation · False Positive · Escalate For Review |
@@ -364,18 +438,18 @@ evidence (required capability 5).
 | **Analyst** | Name or ID; remembered for the session |
 | **Record decision** | Appends the decision. If reason or analyst is missing, shows *"Reason and analyst are required."* and saves nothing. On success the form clears, and with the OPEN filter active the decided alert drops out of the list |
 
-### 7.5 Decision history (append-only)
+### 8.5 Decision history (append-only)
 Every decision ever recorded for the selected alert, newest first: `decision`, `reason`,
 `analyst_id`, `decided_at`. Reclassifying adds a new row; nothing is edited or deleted.
 
 ---
 
-## 8. Rules
+## 9. Rules
 
 **Purpose:** show that thresholds and weights are configuration, and let you test changes
 live across the whole portfolio.
 
-### 8.1 Signal table (editable)
+### 9.1 Signal table (editable)
 | Column | Editable | Meaning |
 |---|---|---|
 | `signal_id` | — | RS01–RS18 risk signals, DQ01–DQ03 data-quality flags |
@@ -390,16 +464,16 @@ live across the whole portfolio.
 
 Double-click a cell to edit it; press Enter to confirm.
 
-### 8.2 Score band table (editable)
+### 9.2 Score band table (editable)
 | Column | Editable | Meaning |
 |---|---|---|
 | `band` | — | Green, Watch, Amber, Red |
 | `min_score` | ✅ | Lowest score in the band. **This is what assigns tiers** |
-| `max_score` | ✅ | Informational only (see §12) |
+| `max_score` | ✅ | Informational only (see §13) |
 | `monitoring_status` | ✅ | Label shown on the watchlist |
 | `recommended_action` | ✅ | Text shown on the Customer page and sent to the AI summary |
 
-### 8.3 Buttons and results
+### 9.3 Buttons and results
 | Element | Behaviour |
 |---|---|
 | **Apply and re-score** | Applies the edited table to the session and re-scores all customers (under 1 s). The sidebar rules version changes |
@@ -412,7 +486,7 @@ edit `datagen/rules.py` and regenerate.
 
 ---
 
-## 9. Common interactions
+## 10. Common interactions
 
 | Task | How |
 |---|---|
@@ -429,10 +503,15 @@ edit `datagen/rules.py` and regenerate.
 
 ---
 
-## 10. Suggested demo walkthrough
+## 11. Suggested demo walkthrough
 
-About 6 minutes:
+About 7 minutes:
 
+0. **Home**
+   - Read the KPI rows: today's Red/Amber vs the 1m/3m forecast.
+   - Press **Generate briefing** and point to the verified-numbers caption.
+   - Open the **🔮 Likely to hit 30+ DPD** tab and pick a *Green* or *Watch* customer:
+     silent stress the rules haven't caught yet.
 1. **Upload & Validate**
    - Load the **dirty** set: 516 rows rejected, 42 warnings. Filter to `ORPHAN_REFERENCE` and `INVALID_DATE`.
    - Reload the **clean** set.
@@ -465,7 +544,7 @@ rm data/app/sentinel.duckdb
 
 ---
 
-## 11. Glossary
+## 12. Glossary
 
 | Term | Meaning |
 |---|---|
@@ -485,12 +564,15 @@ rm data/app/sentinel.duckdb
 | **Confidence** | How much data supports the score (High ≥ 75, Medium ≥ 40, Low < 40 DCS) |
 | **RBDI / CFSI / LPI** | Repayment-behaviour, cash-flow-stress and leverage-pressure module indices |
 | **Trajectory** | Score change vs 3 months ago |
+| **Forecast / P(30+ DPD)** | Model probability that a customer below 30 DPD reaches 30+ DPD within 1 or 3 months |
+| **Silent stress** | Customer rated Green/Watch by rules but with a high forecast probability |
+| **SHAP drivers** | Features that pushed a customer's forecast up the most |
 | **Alert / run** | Frozen snapshot of a customer's score and evidence for a given as-of date and rules version |
 | **Lift / Wilson lower bound** | Segment risk ÷ portfolio risk / conservative estimate of the segment's risk rate |
 
 ---
 
-## 12. Known UI quirks
+## 13. Known UI quirks
 
 | Where | Quirk | Impact |
 |---|---|---|
