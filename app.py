@@ -402,6 +402,11 @@ elif page == "Customer":
         st.subheader("ML second opinion")
         mc1, mc2 = st.columns([1, 2])
         mc1.metric("P(deterioration 90d)", f"{100 * r.ml_prob:.0f}%")
+        ml_scores = ml.get_scores(ML_MODEL)
+        if ml_scores:
+            mc1.caption(f"Model: CV AUC {ml_scores['cv_auc']:.3f} · "
+                        f"CV F1 {ml_scores['cv_f1']:.3f} · "
+                        f"threshold {ml_scores['threshold']:.2f}")
         sv = ml.shap_values(ML_MODEL, M, ML_FEATURES, cid)
         if sv:
             mc2.caption("SHAP top drivers (positive = pushes toward at-risk)")
